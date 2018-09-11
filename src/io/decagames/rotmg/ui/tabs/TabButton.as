@@ -47,8 +47,6 @@ public class TabButton extends SliceScalingButton
 				this.defaultBitmap = "tab_button_borderless_idle";
 				this.selectedBitmap = "tab_button_borderless";
 		}
-		this.defaultBitmap = this.defaultBitmap;
-		this.selectedBitmap = this.selectedBitmap;
 		var _local_2:SliceScalingBitmap = TextureParser.instance.getSliceScalingBitmap("UI", this.defaultBitmap);
 		super(_local_2);
 		bitmap.name = "TabButton";

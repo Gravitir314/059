@@ -16,6 +16,8 @@ import kabam.rotmg.ui.view.HUDView;
 
 import org.osflash.signals.Signal;
 
+import zfn.Hit;
+
 public class AGameSprite extends Sprite
 {
 
@@ -32,6 +34,11 @@ public class AGameSprite extends Sprite
 	public var camera_:Camera = new Camera();
 	public var gsc_:GameServerConnection;
 
+	public var statsStart:int = 0;
+	public var statsFrameNumber:int = 0;
+	public var statsFPS:int = 0;
+	public var hitQueue:Vector.<Hit> = new Vector.<Hit>();
+
 
 	public function initialize():void
 	{
@@ -42,6 +49,10 @@ public class AGameSprite extends Sprite
 	}
 
 	public function applyMapInfo(_arg_1:MapInfo):void
+	{
+	}
+
+	public function showDailyLoginCalendar():void
 	{
 	}
 

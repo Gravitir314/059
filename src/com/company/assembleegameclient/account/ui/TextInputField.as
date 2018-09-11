@@ -29,7 +29,6 @@ public class TextInputField extends Sprite
 
 	public function TextInputField(_arg_1:String, _arg_2:Boolean = false, _arg_3:Number = 238, _arg_4:Number = 30, _arg_5:Number = 18, _arg_6:int = -1, _arg_7:Boolean = false)
 	{
-		this.textInputFieldWidth = this.textInputFieldWidth;
 		this.nameText_ = new TextFieldDisplayConcrete().setSize(18).setColor(0xB3B3B3);
 		this.inputText_ = new BaseSimpleText(_arg_5, 0xB3B3B3, true, _arg_3, _arg_4);
 		if (_arg_1 != "")

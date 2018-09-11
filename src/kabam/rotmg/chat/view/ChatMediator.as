@@ -2,6 +2,8 @@
 
 package kabam.rotmg.chat.view
 {
+import com.company.assembleegameclient.parameters.Parameters;
+
 import flash.display.Sprite;
 import flash.display.Stage;
 import flash.events.Event;
@@ -199,7 +201,7 @@ public class ChatMediator extends Mediator
 					{
 						if (_arg_1 == this.shortcuts.getTellShortcut())
 						{
-							this.triggerOrPromptRegistration((("/tell " + this.tellModel.getNext()) + " "));
+							this.triggerOrPromptRegistration(((((Parameters.ssmode) ? "/tell " : "/t ") + this.tellModel.getNext()) + " "));
 						}
 					}
 				}

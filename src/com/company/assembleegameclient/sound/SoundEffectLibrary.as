@@ -15,6 +15,8 @@ import flash.utils.Dictionary;
 import kabam.rotmg.application.api.ApplicationSetup;
 import kabam.rotmg.core.StaticInjectorContext;
 
+import zfn.sound.SoundCustom;
+
 public class SoundEffectLibrary
 {
 
@@ -66,6 +68,10 @@ public class SoundEffectLibrary
 		var trans:SoundTransform;
 		var channel:SoundChannel;
 		var sound:Sound = load(name);
+		if (!sound)
+		{
+			sound = SoundCustom.grab(name);
+		}
 		var volume:Number = (Parameters.data_.SFXVolume * volumeMultiplier);
 		try
 		{

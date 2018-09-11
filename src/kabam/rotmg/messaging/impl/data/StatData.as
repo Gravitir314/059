@@ -141,8 +141,9 @@ public class StatData
 				return (TextKey.STAT_MODEL_WISDOM_LONG);
 			case DEXTERITY_STAT:
 				return (TextKey.STAT_MODEL_DEXTERITY_LONG);
+			default:
+				return (TextKey.STAT_DATA_UNKNOWN_STAT);
 		}
-		return (TextKey.STAT_DATA_UNKNOWN_STAT);
 	}
 
 
@@ -156,8 +157,9 @@ public class StatData
 			case ACCOUNT_ID_STAT:
 			case OWNER_ACCOUNT_ID_STAT:
 				return (true);
+			default:
+				return (false);
 		}
-		return (false);
 	}
 
 	public function parseFromInput(_arg_1:IDataInput):void

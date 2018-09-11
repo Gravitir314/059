@@ -2,6 +2,7 @@
 
 package com.company.assembleegameclient.util
 {
+import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
 import com.company.util.AssetLibrary;
 import com.company.util.PointUtil;
@@ -194,7 +195,7 @@ public class TextureRedrawer
 		return (_local_3);
 	}
 
-	private static function retexture(_arg_1:BitmapData, _arg_2:BitmapData, _arg_3:int, _arg_4:int):BitmapData
+	public static function retexture(_arg_1:BitmapData, _arg_2:BitmapData, _arg_3:int, _arg_4:int):BitmapData
 	{
 		var _local_5:Matrix = new Matrix();
 		_local_5.scale(5, 5);
@@ -202,14 +203,17 @@ public class TextureRedrawer
 		_local_6.draw(_arg_1, _local_5);
 		var _local_7:BitmapData = getTexture(((_arg_3 >= 0) ? _arg_3 : 0), colorTexture1);
 		var _local_8:BitmapData = getTexture(((_arg_4 >= 0) ? _arg_4 : 0), colorTexture2);
-		var _local_9:Shader = new Shader(textureShaderData_);
-		_local_9.data.src.input = _local_6;
-		_local_9.data.mask.input = _arg_2;
-		_local_9.data.texture1.input = _local_7;
-		_local_9.data.texture2.input = _local_8;
-		_local_9.data.texture1Size.value = [((_arg_3 == 0) ? 0 : _local_7.width)];
-		_local_9.data.texture2Size.value = [((_arg_4 == 0) ? 0 : _local_8.width)];
-		_local_6.applyFilter(_local_6, _local_6.rect, PointUtil.ORIGIN, new ShaderFilter(_local_9));
+		if (Parameters.ssmode || !Parameters.data_.evenLowerGraphics)
+		{
+			var _local_9:Shader = new Shader(textureShaderData_);
+			_local_9.data.src.input = _local_6;
+			_local_9.data.mask.input = _arg_2;
+			_local_9.data.texture1.input = _local_7;
+			_local_9.data.texture2.input = _local_8;
+			_local_9.data.texture1Size.value = [((_arg_3 == 0) ? 0 : _local_7.width)];
+			_local_9.data.texture2Size.value = [((_arg_4 == 0) ? 0 : _local_8.width)];
+			_local_6.applyFilter(_local_6, _local_6.rect, PointUtil.ORIGIN, new ShaderFilter(_local_9));
+		}
 		return (_local_6);
 	}
 

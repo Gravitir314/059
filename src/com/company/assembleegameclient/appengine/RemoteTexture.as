@@ -28,7 +28,7 @@ public class RemoteTexture
 	public var callback_:Function;
 	private var logger:ILogger;
 
-	public function RemoteTexture(_arg_1:String, _arg_2:String, _arg_3:Function):void
+	public function RemoteTexture(_arg_1:String, _arg_2:String, _arg_3:Function)
 	{
 		this.id_ = _arg_1;
 		this.instance_ = _arg_2;

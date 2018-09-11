@@ -24,9 +24,9 @@ public class TitleMenuOption extends Sprite
 	private static const DROP_SHADOW_FILTER:DropShadowFilter = new DropShadowFilter(0, 0, 0, 0.5, 12, 12);
 
 	public const clicked:Signal = new Signal();
-	public const textField:TextFieldDisplayConcrete = makeTextFieldDisplayConcrete();
-	public const changed:Signal = textField.textChanged;
 
+	public var textField:TextFieldDisplayConcrete = makeTextFieldDisplayConcrete();
+	public var changed:Signal = textField.textChanged;
 	private var colorTransform:ColorTransform;
 	private var size:int;
 	private var isPulse:Boolean;
@@ -45,6 +45,30 @@ public class TitleMenuOption extends Sprite
 		this.originalWidth = width;
 		this.originalHeight = height;
 		this.activate();
+	}
+
+	public function enable():void
+	{
+		this.setColorTransform(null);
+		addEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
+		addEventListener(MouseEvent.MOUSE_OUT, this.onMouseOut);
+		addEventListener(MouseEvent.CLICK, this.onMouseClick);
+		addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
+		addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
+		this.active = true;
+	}
+
+	public function disable():void
+	{
+		var _local_1:ColorTransform = new ColorTransform();
+		_local_1.color = 0x767676;
+		this.setColorTransform(_local_1);
+		removeEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
+		removeEventListener(MouseEvent.MOUSE_OUT, this.onMouseOut);
+		removeEventListener(MouseEvent.CLICK, this.onMouseClick);
+		removeEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
+		removeEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
+		this.active = false;
 	}
 
 	public function activate():void

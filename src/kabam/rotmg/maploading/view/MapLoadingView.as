@@ -2,6 +2,7 @@
 
 package kabam.rotmg.maploading.view
 {
+import com.company.assembleegameclient.parameters.Parameters;
 import com.gskinner.motion.GTween;
 
 import flash.display.DisplayObject;
@@ -35,9 +36,12 @@ public class MapLoadingView extends Sprite
 	private var difficulty:int;
 	private var animation:Animation;
 
-	public function MapLoadingView():void
+	public function MapLoadingView()
 	{
-		this.addBackground();
+		if (Parameters.ssmode) // TODO need this?
+		{
+			this.addBackground();
+		}
 		this.makeLoadingScreen();
 		addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
 	}

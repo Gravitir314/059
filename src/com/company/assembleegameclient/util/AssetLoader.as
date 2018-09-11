@@ -22,6 +22,8 @@ import flash.utils.getQualifiedClassName;
 import kabam.rotmg.assets.EmbeddedAssets;
 import kabam.rotmg.assets.EmbeddedData;
 
+import zfn.sound.SoundCustom;
+
 public class AssetLoader
 {
 
@@ -44,6 +46,7 @@ public class AssetLoader
 		Options.refreshCursor();
 		this.music.load();
 		SFX.load();
+		SoundCustom.load();
 	}
 
 	private function addImages():void

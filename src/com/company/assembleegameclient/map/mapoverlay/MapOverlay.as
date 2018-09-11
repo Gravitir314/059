@@ -3,6 +3,7 @@
 package com.company.assembleegameclient.map.mapoverlay
 {
 import com.company.assembleegameclient.map.Camera;
+import com.company.assembleegameclient.parameters.Parameters;
 
 import flash.display.Sprite;
 
@@ -35,11 +36,19 @@ public class MapOverlay extends Sprite
 
 	public function addStatusText(_arg_1:CharacterStatusText):void
 	{
+		if (Parameters.lowCPUMode && !Parameters.ssmode && _arg_1.go_ != _arg_1.go_.map_.player_)
+		{
+			return;
+		}
 		addChild(_arg_1);
 	}
 
 	public function addQueuedText(_arg_1:QueuedStatusText):void
 	{
+		if (Parameters.lowCPUMode && !Parameters.ssmode && _arg_1.go_ != _arg_1.go_.map_.player_)
+		{
+			return;
+		}
 		var _local_2:int = _arg_1.go_.objectId_;
 		var _local_3:QueuedStatusTextList = (this.queuedText[_local_2] = ((this.queuedText[_local_2]) || (this.makeQueuedStatusTextList())));
 		_local_3.append(_arg_1);

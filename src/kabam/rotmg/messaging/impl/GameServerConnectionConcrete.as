@@ -237,7 +237,6 @@ public class GameServerConnectionConcrete extends GameServerConnection
 
 	private var petUpdater:PetUpdater;
 	private var messages:MessageProvider;
-	private var playerId_:int = -1;
 	private var player:Player;
 	private var retryConnection_:Boolean = true;
 	private var rand_:Random = null;

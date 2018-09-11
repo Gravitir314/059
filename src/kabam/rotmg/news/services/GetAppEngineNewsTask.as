@@ -46,10 +46,6 @@ public class GetAppEngineNewsTask extends BaseTask implements GetNewsTask
 			completeTask(true);
 			reset();
 		}
-		if ((((!("production".toLowerCase() == "dev")) && (!(this.updateCooldown == 0))) && (this.numUpdateAttempts >= 2)))
-		{
-			this.updateCooldown = 0;
-		}
 	}
 
 	private function onComplete(_arg_1:Boolean, _arg_2:*):void

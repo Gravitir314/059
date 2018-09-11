@@ -63,6 +63,19 @@ public class TabStripMediator extends Mediator
 		this.notifyActivePetUpdated.add(this.onNotifyActivePetUpdated);
 	}
 
+	override public function destroy():void
+	{
+		this.view.imageFactory = null;
+		this.view.iconButtonFactory = null;
+		this.view.tabSelected.remove(this.onTabSelected);
+		this.updateHUD.remove(this.addTabs);
+		this.statsUndocked.remove(this.onStatsUndocked);
+		this.statsDocked.remove(this.onStatsDocked);
+		this.statsTabHotKeyInput.remove(this.onTabHotkey);
+		this.notifyActivePetUpdated.remove(this.onNotifyActivePetUpdated);
+		this.updateBackpack.remove(this.onUpdateBackPack);
+	}
+
 	private function onStatsUndocked(_arg_1:StatsView):void
 	{
 		this.doShowStats = false;
@@ -83,12 +96,6 @@ public class TabStripMediator extends Mediator
 		var _local_1:int = (this.view.currentTabIndex + 1);
 		_local_1 = (_local_1 % this.view.tabs.length);
 		this.view.setSelectedTab(_local_1);
-	}
-
-	override public function destroy():void
-	{
-		this.view.tabSelected.remove(this.onTabSelected);
-		this.updateBackpack.remove(this.onUpdateBackPack);
 	}
 
 	private function addTabs(_arg_1:Player):void

@@ -103,6 +103,11 @@ public class FetchPlayerCalendarTask extends BaseTask
 			if (_local_4.hasOwnProperty("key"))
 			{
 				_local_5.claimKey = _local_4.key;
+				if (Parameters.data_.autoClaimCalendar)
+				{
+					Parameters.dailyCalendar1RunOnce = true;
+					Parameters.dailyCalendar2RunOnce = true;
+				}
 			}
 			this.dailyLoginModel.addDay(_local_5, _arg_2);
 		}

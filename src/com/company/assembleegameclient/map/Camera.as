@@ -6,6 +6,8 @@ import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.util.RandomUtil;
 
+import flash.display.StageScaleMode;
+
 import flash.geom.Matrix3D;
 import flash.geom.PerspectiveProjection;
 import flash.geom.Rectangle;
@@ -56,20 +58,8 @@ public class Camera
 
 	public function configureCamera(_arg_1:GameObject, _arg_2:Boolean):void
 	{
-		var _local_3:Rectangle = ((Parameters.data_.centerOnPlayer) ? CENTER_SCREEN_RECT : OFFSET_SCREEN_RECT);
-		if (Parameters.screenShotMode_)
-		{
-			if (!Parameters.screenShotSlimMode_)
-			{
-				_local_3 = SCREENSHOT_SCREEN_RECT;
-			}
-			else
-			{
-				_local_3 = SLIM_SCREENSHOT_SCREEN_RECT;
-			}
-		}
-		var _local_4:Number = Parameters.data_.cameraAngle;
-		this.configure(_arg_1.x_, _arg_1.y_, 12, _local_4, _local_3);
+		var _local_3:Rectangle = this.correctViewingArea(Parameters.data_.centerOnPlayer);
+		this.configure(_arg_1.x_, _arg_1.y_, _arg_1.z_, Parameters.data_.cameraAngle, _local_3);
 		this.isHallucinating_ = _arg_2;
 	}
 
@@ -137,6 +127,31 @@ public class Camera
 		var _local_7:Number = (this.clipRect_.height / (2 * 50));
 		this.maxDist_ = (Math.sqrt(((_local_6 * _local_6) + (_local_7 * _local_7))) + 1);
 		this.maxDistSq_ = (this.maxDist_ * this.maxDist_);
+	}
+
+	public function correctViewingArea(_arg_1:Boolean):Rectangle
+	{
+		var _local_2:Number;
+		var _local_3:Number;
+		var _local_4:Number;
+		var _local_5:Number;
+		if (Parameters.data_.stageScale == StageScaleMode.NO_SCALE)
+		{
+			_local_2 = ((Parameters.ssmode) ? 1 : Parameters.data_.mscale);
+			_local_3 = (ROTMG.sWidth / _local_2);
+			_local_4 = (ROTMG.sHeight / _local_2);
+			_local_5 = (((!(Parameters.ssmode)) && (Parameters.data_.uiscale)) ? (((200 * ROTMG.sHeight) / 600) / _local_2) : (200 / _local_2));
+			if (_arg_1)
+			{
+				return (new Rectangle(-((_local_3 - _local_5) * 0.5), -((_local_4 * 13) / 24), _local_3, _local_4));
+			}
+			return (new Rectangle(-((_local_3 - _local_5) * 0.5), -((_local_4 * 3) / 4), _local_3, _local_4));
+		}
+		if (_arg_1)
+		{
+			return (CENTER_SCREEN_RECT);
+		}
+		return (OFFSET_SCREEN_RECT);
 	}
 
 

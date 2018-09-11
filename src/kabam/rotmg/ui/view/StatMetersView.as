@@ -3,6 +3,7 @@
 package kabam.rotmg.ui.view
 {
 import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.ExperienceBoostTimerPopup;
 import com.company.assembleegameclient.ui.StatusBar;
 
@@ -17,6 +18,7 @@ public class StatMetersView extends Sprite
 	private var expBar_:StatusBar;
 	private var fameBar_:StatusBar;
 	private var hpBar_:StatusBar;
+	public var clientHpBar_:StatusBar;
 	private var mpBar_:StatusBar;
 	private var areTempXpListenersAdded:Boolean;
 	private var curXPBoost:int;
@@ -24,18 +26,53 @@ public class StatMetersView extends Sprite
 
 	public function StatMetersView()
 	{
-		this.expBar_ = new StatusBar(176, 16, 5931045, 0x545454, TextKey.EXP_BAR_LEVEL, false, true);
-		this.fameBar_ = new StatusBar(176, 16, 0xE25F00, 0x545454, TextKey.CURRENCY_FAME, false, true);
-		this.hpBar_ = new StatusBar(176, 16, 14693428, 0x545454, TextKey.STATUS_BAR_HEALTH_POINTS);
-		this.mpBar_ = new StatusBar(176, 16, 6325472, 0x545454, TextKey.STATUS_BAR_MANA_POINTS);
-		this.hpBar_.y = 24;
-		this.mpBar_.y = 48;
-		this.expBar_.visible = true;
-		this.fameBar_.visible = false;
+		init();
+	}
+
+	public function init():void // TODO minimize this
+	{
+		if (!Parameters.ssmode && Parameters.data_.showCHbar)
+		{
+			this.expBar_ = new StatusBar(176, 15, 5931045, 0x545454, TextKey.EXP_BAR_LEVEL, false, true);
+			this.expBar_ = new StatusBar(176, 16, 5931045, 0x545454, TextKey.EXP_BAR_LEVEL, false, true);
+			this.fameBar_ = new StatusBar(176, 15, 0xE25F00, 0x545454, TextKey.CURRENCY_FAME, false, true);
+			this.hpBar_ = new StatusBar(176, 15, 14693428, 0x545454, TextKey.STATUS_BAR_HEALTH_POINTS);
+			this.clientHpBar_ = new StatusBar(176, 15, 14693428, 0x545454, "CH");
+			this.mpBar_ = new StatusBar(176, 15, 6325472, 0x545454, TextKey.STATUS_BAR_MANA_POINTS);
+			this.hpBar_.y = 16;
+			this.clientHpBar_.y = 32;
+			this.mpBar_.y = 48;
+			this.expBar_.visible = true;
+			this.fameBar_.visible = false;
+			this.clientHpBar_.visible = true;
+		}
+		else
+		{
+			this.expBar_ = new StatusBar(176, 16, 5931045, 0x545454, TextKey.EXP_BAR_LEVEL, false, true);
+			this.fameBar_ = new StatusBar(176, 16, 0xE25F00, 0x545454, TextKey.CURRENCY_FAME, false, true);
+			this.hpBar_ = new StatusBar(176, 16, 14693428, 0x545454, TextKey.STATUS_BAR_HEALTH_POINTS);
+			this.clientHpBar_ = new StatusBar(176, 15, 14693428, 0x545454, "CH");
+			this.mpBar_ = new StatusBar(176, 16, 6325472, 0x545454, TextKey.STATUS_BAR_MANA_POINTS);
+			this.hpBar_.y = 24;
+			this.clientHpBar_.y = 32;
+			this.mpBar_.y = 48;
+			this.expBar_.visible = true;
+			this.fameBar_.visible = false;
+			this.clientHpBar_.visible = false;
+		}
 		addChild(this.expBar_);
 		addChild(this.fameBar_);
 		addChild(this.hpBar_);
+		addChild(this.clientHpBar_);
 		addChild(this.mpBar_);
+	}
+
+	public function dispose():void
+	{
+		while (this.numChildren > 0)
+		{
+			this.removeChildAt(0);
+		}
 	}
 
 	public function update(_arg_1:Player):void
@@ -97,6 +134,10 @@ public class StatMetersView extends Sprite
 				this.expBar_.visible = false;
 			}
 			this.fameBar_.draw(_arg_1.currFame_, _arg_1.nextClassQuestFame_, 0);
+		}
+		if (!Parameters.ssmode && Parameters.data_.showCHbar)
+		{
+			this.clientHpBar_.draw(_arg_1.clientHp, _arg_1.maxHP_, _arg_1.maxHPBoost_, _arg_1.maxHPMax_, _arg_1.level_);
 		}
 		this.hpBar_.draw(_arg_1.hp_, _arg_1.maxHP_, _arg_1.maxHPBoost_, _arg_1.maxHPMax_, _arg_1.level_);
 		this.mpBar_.draw(_arg_1.mp_, _arg_1.maxMP_, _arg_1.maxMPBoost_, _arg_1.maxMPMax_, _arg_1.level_);

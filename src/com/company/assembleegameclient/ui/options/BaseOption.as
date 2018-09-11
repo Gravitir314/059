@@ -14,6 +14,7 @@ import kabam.rotmg.text.view.stringBuilder.StringBuilder;
 
 public class BaseOption extends Option
 {
+	public static const DROPSHADOW_FILTER:DropShadowFilter = new DropShadowFilter(0, 0, 0, 1, 4, 4, 2);
 
 	public var paramName_:String;
 	private var tooltipText_:String;
@@ -26,7 +27,7 @@ public class BaseOption extends Option
 		this.tooltipText_ = _arg_3;
 		this.desc_ = new TextFieldDisplayConcrete().setSize(18).setColor(0xB3B3B3);
 		this.desc_.setStringBuilder(new LineBuilder().setParams(_arg_2));
-		this.desc_.filters = [new DropShadowFilter(0, 0, 0, 1, 4, 4, 2)];
+		this.desc_.filters = [DROPSHADOW_FILTER];
 		this.desc_.x = (KeyCodeBox.WIDTH + 24);
 		this.desc_.mouseEnabled = true;
 		this.desc_.addEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
@@ -64,6 +65,8 @@ public class BaseOption extends Option
 	private function onRemovedFromStage(_arg_1:Event):void
 	{
 		this.removeToolTip();
+		this.desc_.removeEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
+		this.desc_.removeEventListener(MouseEvent.ROLL_OVER, this.onRollOut);
 	}
 
 	private function removeToolTip():void

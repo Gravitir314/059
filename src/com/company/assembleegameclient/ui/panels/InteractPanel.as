@@ -34,6 +34,16 @@ public class InteractPanel extends Sprite
 		this.partyPanel_ = new PartyPanel(_arg_1);
 	}
 
+	public function dispose():void
+	{
+		this.gs_ = null;
+		this.player_ = null;
+		this.currObj_ = null;
+		this.partyPanel_.dispose();
+		this.partyPanel_ = null;
+		this.overridePanel_ = null;
+	}
+
 	public function setOverride(_arg_1:Panel):void
 	{
 		if (this.overridePanel_ != null)

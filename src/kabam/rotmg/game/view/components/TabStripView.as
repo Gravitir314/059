@@ -45,6 +45,13 @@ public class TabStripView extends Sprite
 		this.containerSprite.y = TabConstants.TAB_TOP_OFFSET;
 	}
 
+	public function dispose():void
+	{
+		this.tabSprite.removeEventListener(MouseEvent.CLICK, this.onTabClicked);
+		this.tabs.length = 0;
+		this.contents.length = 0;
+	}
+
 	private function onTabClicked(_arg_1:MouseEvent):void
 	{
 		this.selectTab((_arg_1.target.parent as TabView));

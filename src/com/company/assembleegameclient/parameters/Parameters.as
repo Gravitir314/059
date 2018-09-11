@@ -16,13 +16,17 @@ import flash.utils.Dictionary;
 
 public class Parameters
 {
-	// CookieLanguageModel.as
-	// 1113 - 383 = 730 files checked
+	// CalendarView.as
+	// 1113 - 211 = 902 files checked
 	// Add saving security questions to text file
 	// Instant DEFAULT_FILTER's
 	// Check MapEditor.as
-	public static const BUILD_VERSION:String = "X28.0";
-	public static const MINOR_VERSION:String = "6";
+	// Delete analytic service || monitors
+	// Update from X28.0.6 to X28.1.0
+	// Check StatusBar.as
+	// Use AIR to build with SoundCustom
+	public static const BUILD_VERSION:String = "X28.1";
+	public static const MINOR_VERSION:String = "0";
 	public static const ENABLE_ENCRYPTION:Boolean = true;
 	public static const PORT:int = 2050;
 	public static const ALLOW_SCREENSHOT_MODE:Boolean = false;
@@ -72,6 +76,9 @@ public class Parameters
 	public static var ignoringSecurityQuestions:Boolean = false;
 	public static var Cache_CHARLIST_valid:Boolean = false;
 	public static var lowCPUMode:Boolean = false;
+	public static var dailyCalendar1RunOnce:Boolean = false;
+	public static var dailyCalendar2RunOnce:Boolean = false;
+	public static var announcedBags:Vector.<int> = new Vector.<int>(0);
 
 
 	public static function load():void

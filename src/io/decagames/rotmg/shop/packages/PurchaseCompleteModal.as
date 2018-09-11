@@ -15,7 +15,7 @@ public class PurchaseCompleteModal extends TextModal
 	{
 		var _local_2:Vector.<BaseButton> = new Vector.<BaseButton>();
 		_local_2.push(new ClosePopupButton("OK"));
-		var _local_3:* = "";
+		var _local_3:String;
 		switch (_arg_1)
 		{
 			case PackageInfo.PURCHASE_TYPE_SLOTS_ONLY:

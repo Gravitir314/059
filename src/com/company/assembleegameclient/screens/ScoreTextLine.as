@@ -39,7 +39,7 @@ public class ScoreTextLine extends Sprite implements TooltipAble
 	private var numberText_:TextFieldDisplayConcrete;
 	private var unitIcon_:DisplayObject;
 
-	public function ScoreTextLine(_arg_1:int, _arg_2:uint, _arg_3:uint, _arg_4:String, _arg_5:String, _arg_6:int, _arg_7:int, _arg_8:String, _arg_9:String, _arg_10:DisplayObject):void
+	public function ScoreTextLine(_arg_1:int, _arg_2:uint, _arg_3:uint, _arg_4:String, _arg_5:String, _arg_6:int, _arg_7:int, _arg_8:String, _arg_9:String, _arg_10:DisplayObject)
 	{
 		this.name = _arg_4;
 		this.description = _arg_5;

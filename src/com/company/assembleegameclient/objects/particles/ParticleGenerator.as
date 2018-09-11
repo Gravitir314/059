@@ -18,7 +18,6 @@ public class ParticleGenerator extends ParticleEffect
 	private var totalTime:Number = 0;
 	private var effectProps:EffectProperties;
 	private var bitmapData:BitmapData;
-	private var friction:Number;
 
 	public function ParticleGenerator(_arg_1:EffectProperties, _arg_2:GameObject)
 	{

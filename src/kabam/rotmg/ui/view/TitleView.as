@@ -58,7 +58,7 @@ public class TitleView extends Sprite
 		this.menuOptionsBar = this.makeMenuOptionsBar();
 		this.optionalButtonsAdded = new Signal();
 		super();
-		addChild(new TitleScreenBackground());
+		//addChild(new TitleScreenBackground()); TODO need this?
 		addChild(new DarkLayer());
 		addChild(new TitleScreenGraphic());
 		addChild(this.menuOptionsBar);

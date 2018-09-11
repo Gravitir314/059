@@ -67,6 +67,8 @@ public class ROTMG extends Sprite
 
 	public static var STAGE:Stage;
 	public static var USER_AGENT:String = "None";
+	public static var sWidth:Number = 800;
+	public static var sHeight:Number = 600;
 
 	protected var context:IContext;
 
@@ -74,6 +76,7 @@ public class ROTMG extends Sprite
 	{
 		if (stage)
 		{
+			addEventListener(Event.RESIZE, this.onStageResize);
 			this.setup();
 		}
 		else
@@ -86,6 +89,26 @@ public class ROTMG extends Sprite
 	{
 		removeEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
 		this.setup();
+	}
+
+	public function onStageResize(_arg_1:Event):void
+	{
+		if (stage.scaleMode == StageScaleMode.NO_SCALE)
+		{
+			this.scaleX = (stage.stageWidth / 800);
+			this.scaleY = (stage.stageHeight / 600);
+			this.x = ((800 - stage.stageWidth) >> 1);
+			this.y = ((600 - stage.stageHeight) >> 1);
+		}
+		else
+		{
+			this.scaleX = 1;
+			this.scaleY = 1;
+			this.x = 0;
+			this.y = 0;
+		}
+		sWidth = stage.stageWidth;
+		sHeight = stage.stageHeight;
 	}
 
 	private function setup():void

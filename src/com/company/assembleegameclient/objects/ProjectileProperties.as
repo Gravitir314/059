@@ -13,6 +13,7 @@ public class ProjectileProperties
 	public var objectId_:String;
 	public var lifetime_:int;
 	public var speed_:int;
+	public var maxProjTravel_:Number;
 	public var size_:int;
 	public var minDamage_:int;
 	public var maxDamage_:int;
@@ -42,6 +43,7 @@ public class ProjectileProperties
 		this.objectId_ = _arg_1.ObjectId;
 		this.lifetime_ = int(_arg_1.LifetimeMS);
 		this.speed_ = int(_arg_1.Speed);
+		this.maxProjTravel_ = (this.speed_ * this.lifetime_);
 		this.size_ = ((_arg_1.hasOwnProperty("Size")) ? Number(_arg_1.Size) : -1);
 		if (_arg_1.hasOwnProperty("Damage"))
 		{

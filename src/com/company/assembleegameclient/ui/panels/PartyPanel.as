@@ -37,6 +37,15 @@ public class PartyPanel extends Panel
 		addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
 	}
 
+	public function dispose():void
+	{
+		this.menuLayer = null;
+		this.menu = null;
+		this.memberPanels = null;
+		removeEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
+		removeEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
+	}
+
 	private function createPartyMemberPanel(_arg_1:int, _arg_2:int):PlayerGameObjectListItem
 	{
 		var _local_3:PlayerGameObjectListItem;

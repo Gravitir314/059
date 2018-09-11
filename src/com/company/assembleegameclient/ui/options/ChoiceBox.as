@@ -57,6 +57,7 @@ public class ChoiceBox extends Sprite
 		addEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
 		addEventListener(MouseEvent.ROLL_OUT, this.onRollOut);
 		addEventListener(MouseEvent.CLICK, this.onClick);
+		addEventListener(MouseEvent.RIGHT_CLICK, this.onRightClick);
 	}
 
 	public function setValue(_arg_1:*, _arg_2:Boolean = true):void
@@ -102,6 +103,12 @@ public class ChoiceBox extends Sprite
 	private function onClick(_arg_1:MouseEvent):void
 	{
 		this.setSelected(((this.selectedIndex_ + 1) % this.values_.length));
+		dispatchEvent(new Event(Event.CHANGE));
+	}
+
+	private function onRightClick(_arg_1:MouseEvent):void
+	{
+		this.setSelected((((this.selectedIndex_ - 1) < 0) ? (this.values_.length - 1) : (this.selectedIndex_ - 1)));
 		dispatchEvent(new Event(Event.CHANGE));
 	}
 

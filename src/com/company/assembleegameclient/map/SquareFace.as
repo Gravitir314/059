@@ -12,6 +12,9 @@ import kabam.rotmg.stage3D.GraphicsFillExtra;
 
 public class SquareFace
 {
+	private const NO_ANIMATE:int = 0; // TODO find usages
+	private const WAVE_ANIMATE:int = 1;
+	private const FLOW_ANIMATE:int = 2;
 
 	public var animate_:int;
 	public var face_:Face3D;
@@ -48,7 +51,12 @@ public class SquareFace
 	{
 		var _local_4:Number;
 		var _local_5:Number;
-		if (this.animate_ != AnimateProperties.NO_ANIMATE)
+		if (this.animate_ == AnimateProperties.NO_ANIMATE || !Parameters.ssmode && Parameters.data_.evenLowerGraphics)
+		{
+			_local_4 = this.xOffset_;
+			_local_5 = this.yOffset_;
+		}
+		else
 		{
 			switch (this.animate_)
 			{
@@ -62,18 +70,13 @@ public class SquareFace
 					break;
 			}
 		}
-		else
-		{
-			_local_4 = this.xOffset_;
-			_local_5 = this.yOffset_;
-		}
 		if (Parameters.isGpuRender())
 		{
 			GraphicsFillExtra.setOffsetUV(this.face_.bitmapFill_, _local_4, _local_5);
 			_local_4 = (_local_5 = 0);
 		}
 		this.face_.uvt_.length = 0;
-		this.face_.uvt_.push((0 + _local_4), (0 + _local_5), 0, (1 + _local_4), (0 + _local_5), 0, (1 + _local_4), (1 + _local_5), 0, (0 + _local_4), (1 + _local_5), 0);
+		this.face_.uvt_.push((_local_4), (_local_5), 0, (1 + _local_4), (_local_5), 0, (1 + _local_4), (1 + _local_5), 0, (_local_4), (1 + _local_5), 0);
 		this.face_.setUVT(this.face_.uvt_);
 		return (this.face_.draw(_arg_1, _arg_2));
 	}

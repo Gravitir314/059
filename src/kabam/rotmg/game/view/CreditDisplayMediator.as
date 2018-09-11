@@ -83,6 +83,7 @@ public class CreditDisplayMediator extends Mediator
 	{
 		this.model.creditsChanged.remove(this.onCreditsChanged);
 		this.model.fameChanged.remove(this.onFameChanged);
+		this.model.tokensChanged.remove(this.onTokensChanged);
 		this.view.openAccountDialog.remove(this.onOpenAccountDialog);
 		if (((this.view.fameButton) && ((!(this.view.gs == null)) && (this.view.gs.map.name_ == Map.NEXUS))))
 		{

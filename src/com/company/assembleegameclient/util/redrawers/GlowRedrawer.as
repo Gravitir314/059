@@ -44,17 +44,20 @@ public class GlowRedrawer
 		TextureRedrawer.OUTLINE_FILTER.blurY = _arg_3;
 		TextureRedrawer.OUTLINE_FILTER.color = _arg_5;
 		_local_7.applyFilter(_local_7, _local_7.rect, PointUtil.ORIGIN, TextureRedrawer.OUTLINE_FILTER);
-		if (_arg_2 != 0xFFFFFFFF)
+		if (Parameters.ssmode || !Parameters.data_.evenLowerGraphics)
 		{
-			if (((Parameters.isGpuRender()) && (!(_arg_2 == 0))))
+			if (_arg_2 != 0xFFFFFFFF)
 			{
-				GLOW_FILTER_ALT.color = _arg_2;
-				_local_7.applyFilter(_local_7, _local_7.rect, PointUtil.ORIGIN, GLOW_FILTER_ALT);
-			}
-			else
-			{
-				GLOW_FILTER.color = _arg_2;
-				_local_7.applyFilter(_local_7, _local_7.rect, PointUtil.ORIGIN, GLOW_FILTER);
+				if (((Parameters.isGpuRender()) && (!(_arg_2 == 0))))
+				{
+					GLOW_FILTER_ALT.color = _arg_2;
+					_local_7.applyFilter(_local_7, _local_7.rect, PointUtil.ORIGIN, GLOW_FILTER_ALT);
+				}
+				else
+				{
+					GLOW_FILTER.color = _arg_2;
+					_local_7.applyFilter(_local_7, _local_7.rect, PointUtil.ORIGIN, GLOW_FILTER);
+				}
 			}
 		}
 		if (_arg_4)
@@ -62,6 +65,11 @@ public class GlowRedrawer
 			cache(_arg_1, _arg_2, _arg_3, _local_7, _arg_5);
 		}
 		return (_local_7);
+	}
+
+	public static function clearCache():void
+	{
+		glowHashes.length = 0;
 	}
 
 	private static function cache(_arg_1:BitmapData, _arg_2:uint, _arg_3:Number, _arg_4:BitmapData, _arg_5:int):void

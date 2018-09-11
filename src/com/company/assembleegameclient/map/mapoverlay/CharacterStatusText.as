@@ -17,6 +17,7 @@ import kabam.rotmg.text.view.stringBuilder.StringBuilder;
 
 public class CharacterStatusText extends Sprite implements IMapOverlayElement
 {
+	private const GLOW_FILTER:GlowFilter = new GlowFilter(0, 1, 4, 4, 2, 1);
 
 	public const MAX_DRIFT:int = 40;
 
@@ -36,7 +37,9 @@ public class CharacterStatusText extends Sprite implements IMapOverlayElement
 		this.lifetime_ = _arg_3;
 		this.offsetTime_ = _arg_4;
 		this.textDisplay = new TextFieldDisplayConcrete().setSize(24).setColor(_arg_2).setBold(true);
-		this.textDisplay.filters = [new GlowFilter(0, 1, 4, 4, 2, 1)];
+		this.textDisplay.filters = [GLOW_FILTER];
+		this.textDisplay.x = (-(this.textDisplay.width) * 0.5);
+		this.textDisplay.y = (-(this.textDisplay.height) * 0.5);
 		addChild(this.textDisplay);
 		visible = false;
 	}
@@ -76,7 +79,11 @@ public class CharacterStatusText extends Sprite implements IMapOverlayElement
 
 	public function dispose():void
 	{
-		parent.removeChild(this);
+		this.go_ = null;
+		if (parent != null)
+		{
+			parent.removeChild(this);
+		}
 	}
 
 	public function setStringBuilder(_arg_1:StringBuilder):void

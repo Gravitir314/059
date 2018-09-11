@@ -151,6 +151,8 @@ public class Player extends Character
 	private var breathFill_:GraphicsSolidFill = null;
 	private var breathPath_:GraphicsPath = null;
 
+	public var clientHp:int = 100;
+
 	public function Player(_arg_1:XML)
 	{
 		var _local_2:Injector = StaticInjectorContext.getInjector();
@@ -1474,6 +1476,20 @@ public class Player extends Character
 	public function getTex2():int
 	{
 		return (tex2Id_);
+	}
+
+	public function textNotification(_arg_1:String, _arg_2:int=0xFFFFFF, _arg_3:int=2000, _arg_4:Boolean=false):void
+	{
+		if (!Parameters.ssmode)
+		{
+			if (_arg_4)
+			{
+				map_.addObj(new LevelUpEffect(this, (_arg_2 | 0x7F000000), 20), x_, y_);
+			}
+			var _local_5:CharacterStatusText = new CharacterStatusText(this, _arg_2, _arg_3);
+			_local_5.setStringBuilder(new StaticStringBuilder(_arg_1));
+			map_.mapOverlay_.addStatusText(_local_5);
+		}
 	}
 
 

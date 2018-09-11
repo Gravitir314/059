@@ -125,7 +125,7 @@ public class ConditionEffect
 	private static var conditionEffectFromName_:Object = null;
 	private static var effectIconCache:Object = null;
 	private static var bitToIcon_:Object = null;
-	private static const GLOW_FILTER:GlowFilter = new GlowFilter(0, 0.3, 6, 6, 2, BitmapFilterQuality.LOW, false, false);
+	public static const GLOW_FILTER:GlowFilter = new GlowFilter(0, 0.3, 6, 6, 2, BitmapFilterQuality.LOW, false, false);
 	private static var bitToIcon2_:Object = null;
 
 	public var name_:String;

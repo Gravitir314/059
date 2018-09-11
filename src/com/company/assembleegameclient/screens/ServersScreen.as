@@ -35,7 +35,6 @@ public class ServersScreen extends Sprite
 
 	public function ServersScreen()
 	{
-		addChild(new ScreenBase());
 		this.gotoTitle = new Signal();
 		addChild(new ScreenBase());
 		addChild(new AccountScreen());

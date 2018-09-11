@@ -4,12 +4,15 @@ package com.company.assembleegameclient.objects
 {
 import com.company.assembleegameclient.objects.animation.AnimationsData;
 import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.util.ConditionEffect;
 import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
 import com.company.util.AssetLibrary;
 import com.company.util.ConversionUtil;
+import com.company.util.PointUtil;
 
 import flash.display.BitmapData;
+import flash.geom.Matrix;
 import flash.utils.Dictionary;
 import flash.utils.getDefinitionByName;
 
@@ -242,6 +245,51 @@ public class ObjectLibrary
 		}
 		var typeClass:Class = ((TYPE_MAP[typeReference]) || (makeClass(typeReference)));
 		return (new (typeClass)(objectXML));
+	}
+
+	public static function getItemIcon(_arg_1:int):BitmapData
+	{
+		var _local_7:BitmapData;
+		var _local_3:BitmapData;
+		var _local_5:Matrix = new Matrix();
+		var _local_2:XML = xmlLibrary_[_arg_1];
+		var _local_4:BitmapData = getTextureFromType(_arg_1);
+		var _local_8:TextureData = typeToTextureData_[_arg_1];
+		var _local_10:BitmapData = ((_local_8) ? _local_8.mask_ : null);
+		var _local_6:int = ((_local_2.hasOwnProperty("Tex1")) ? _local_2.Tex1 : 0);
+		var _local_9:int = ((_local_2.hasOwnProperty("Tex2")) ? _local_2.Tex2 : 0);
+		if (_arg_1 == -1)
+		{
+			_local_7 = scaleBitmapData(AssetLibrary.getImageFromSet("lofiInterface", 7), 2);
+			_local_5.translate(4, 4);
+			_local_3 = new BitmapData(22, 22, true, 0);
+			_local_3.draw(_local_7, _local_5);
+			return (_local_3);
+		}
+		if ((_local_6 != 0 || _local_9 != 0) && _arg_1 != 317 && _arg_1 != 318)
+		{
+			_local_4 = TextureRedrawer.retexture(_local_4, _local_10, _local_6, _local_9);
+			_local_5.scale(0.2, 0.2);
+		}
+		_local_7 = scaleBitmapData(_local_4, 2);
+		_local_5.translate(4, 4);
+		_local_3 = new BitmapData(22, 22, true, 0);
+		_local_3.draw(_local_7, _local_5);
+		_local_3 = GlowRedrawer.outlineGlow(_local_3, 0);
+		_local_3.applyFilter(_local_3, _local_3.rect, PointUtil.ORIGIN, ConditionEffect.GLOW_FILTER);
+		return (_local_3);
+	}
+
+	public static function scaleBitmapData(_arg_1:BitmapData, _arg_2:Number):BitmapData
+	{
+		_arg_2 = Math.abs(_arg_2);
+		var _local_4:int = ((_arg_1.width * _arg_2) || (1));
+		var _local_6:int = ((_arg_1.height * _arg_2) || (1));
+		var _local_3:BitmapData = new BitmapData(_local_4, _local_6, true, 0);
+		var _local_5:Matrix = new Matrix();
+		_local_5.scale(_arg_2, _arg_2);
+		_local_3.draw(_arg_1, _local_5);
+		return (_local_3);
 	}
 
 	private static function makeClass(_arg_1:String):Class

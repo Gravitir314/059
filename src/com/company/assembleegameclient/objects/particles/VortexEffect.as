@@ -17,7 +17,6 @@ public class VortexEffect extends ParticleEffect
 	{
 		this.go_ = _arg_1;
 		this.color_ = _arg_2.color;
-		this.color_ = _arg_2.color;
 		this.rad_ = _arg_2.minRadius;
 	}
 
