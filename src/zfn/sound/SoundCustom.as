@@ -11,13 +11,76 @@ package zfn.sound
     {
 		[Embed(source="EmbeddedSound_ding.mp3", mimeType="application/octet-stream")]
         private static const dingEmbed:Class;
+		[Embed(source="EmbeddedSound_treasure.mp3", mimeType="application/octet-stream")]
+		private static const treasureEmbed:Class;
+		[Embed(source="EmbeddedSound_mslevel.mp3", mimeType="application/octet-stream")]
+		private static const msLevelEmbed:Class;
+		[Embed(source="EmbeddedSound_tomscream.mp3", mimeType="application/octet-stream")]
+		private static const tomScreamEmbed:Class;
+		[Embed(source="EmbeddedSound_inbox.mp3", mimeType="application/octet-stream")]
+		private static const inboxEmbed:Class;
+		[Embed(source="EmbeddedSound_nuke.mp3", mimeType="application/octet-stream")]
+		private static const nukeEmbed:Class;
+		[Embed(source="EmbeddedSound_skullshrine.mp3", mimeType="application/octet-stream")]
+		private static const eventSkullShrine:Class;
+		[Embed(source="EmbeddedSound_cubegod.mp3", mimeType="application/octet-stream")]
+		private static const eventCubeGod:Class;
+		[Embed(source="EmbeddedSound_pentaract.mp3", mimeType="application/octet-stream")]
+		private static const eventPentaract:Class;
+		[Embed(source="EmbeddedSound_grandsphinx.mp3", mimeType="application/octet-stream")]
+		private static const eventGrandSphinx:Class;
+		[Embed(source="EmbeddedSound_hermit.mp3", mimeType="application/octet-stream")]
+		private static const eventHermitGod:Class;
+		[Embed(source="EmbeddedSound_lotll.mp3", mimeType="application/octet-stream")]
+		private static const eventLordoftheLostLands:Class;
+		[Embed(source="EmbeddedSound_ghostship.mp3", mimeType="application/octet-stream")]
+		private static const eventGhostShip:Class;
+		[Embed(source="EmbeddedSound_avatar.mp3", mimeType="application/octet-stream")]
+		private static const eventAvataroftheForgottenKing:Class;
+		[Embed(source="EmbeddedSound_statues.mp3", mimeType="application/octet-stream")]
+		private static const eventJadeandGarnetStatues:Class;
+		[Embed(source="EmbeddedSound_dragon.mp3", mimeType="application/octet-stream")]
+		private static const eventRockDragon:Class;
+		[Embed(source="EmbeddedSound_thanks_for_nrelay.mp3", mimeType="application/octet-stream")]
+		private static const eventKillerBeeNest:Class;
+		[Embed(source="EmbeddedSound_sentry.mp3", mimeType="application/octet-stream")]
+		private static const eventLostSentry:Class;
+		[Embed(source="EmbeddedSound_pumpkin.mp3", mimeType="application/octet-stream")]
+		private static const eventPumpkinShrine:Class;
+		[Embed(source="EmbeddedSound_zombiehorde.mp3", mimeType="application/octet-stream")]
+		private static const eventZombieHorde:Class;
+		[Embed(source="EmbeddedSound_turkeygod.mp3", mimeType="application/octet-stream")]
+		private static const eventTurkeyGod:Class;
+		[Embed(source="EmbeddedSound_beachbum.mp3", mimeType="application/octet-stream")]
+		private static const eventBeachBum:Class;
 
         private static var sounds_:Dictionary = new Dictionary();
 
 
         public static function load():void
         {
-            addSound("ding", (new dingEmbed() as Sound));
+			addSound("ding", (new dingEmbed() as Sound));
+			addSound("treasure", (new treasureEmbed() as Sound));
+			addSound("mslevel", (new msLevelEmbed() as Sound));
+			addSound("tomscream", (new tomScreamEmbed() as Sound));
+			addSound("inbox", (new inboxEmbed() as Sound));
+			addSound("nuke", (new nukeEmbed() as Sound));
+			addSound("eventSkullShrine", (new eventSkullShrine() as Sound));
+			addSound("eventCubeGod", (new eventCubeGod() as Sound));
+			addSound("eventPentaract", (new eventPentaract() as Sound));
+			addSound("eventGrandSphinx", (new eventGrandSphinx() as Sound));
+			addSound("eventHermitGod", (new eventHermitGod() as Sound));
+			addSound("eventLordoftheLostLands", (new eventLordoftheLostLands() as Sound));
+			addSound("eventGhostShip", (new eventGhostShip() as Sound));
+			addSound("eventAvataroftheForgottenKing", (new eventAvataroftheForgottenKing() as Sound));
+			addSound("eventJadeandGarnetStatues", (new eventJadeandGarnetStatues() as Sound));
+			addSound("eventRockDragon", (new eventRockDragon() as Sound));
+			addSound("eventKillerBeeNest", (new eventKillerBeeNest() as Sound));
+			addSound("eventLostSentry", (new eventLostSentry() as Sound));
+			addSound("eventPumpkinShrine", (new eventPumpkinShrine() as Sound));
+			addSound("eventZombieHorde", (new eventZombieHorde() as Sound));
+			addSound("eventTurkeyGod", (new eventTurkeyGod() as Sound));
+			addSound("eventBeachBum", (new eventBeachBum() as Sound));
         }
 
         public static function addSound(_arg_1:String, _arg_2:Sound):void

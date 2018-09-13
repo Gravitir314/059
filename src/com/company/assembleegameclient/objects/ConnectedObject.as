@@ -6,6 +6,7 @@ import com.company.assembleegameclient.engine3d.Object3D;
 import com.company.assembleegameclient.engine3d.ObjectFace3D;
 import com.company.assembleegameclient.map.Camera;
 import com.company.assembleegameclient.map.Square;
+import com.company.assembleegameclient.parameters.Parameters;
 
 import flash.display.BitmapData;
 import flash.display.IGraphicsData;
@@ -86,6 +87,10 @@ public class ConnectedObject extends GameObject
 		var _local_6:int;
 		var _local_7:BitmapData;
 		var _local_8:Square;
+		if (!Parameters.ssmode && Parameters.lowCPUMode)
+		{
+			return;
+		}
 		if (obj3D_ == null)
 		{
 			this.rebuild3D();

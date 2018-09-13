@@ -15,6 +15,7 @@ public class ObjectProperties
 	public var shadowSize_:int;
 	public var isPlayer_:Boolean = false;
 	public var isEnemy_:Boolean = false;
+	public var isItem_:Boolean = false;
 	public var drawOnGround_:Boolean = false;
 	public var drawUnder_:Boolean = false;
 	public var occupySquare_:Boolean = false;
@@ -46,6 +47,11 @@ public class ObjectProperties
 	public var projectiles_:Dictionary = new Dictionary();
 	public var angleCorrection_:Number = 0;
 	public var rotation_:Number = 0;
+
+	public var ignored:Boolean;
+	public var excepted:Boolean;
+	public var desiredLoot_:Boolean;
+	public var isPotion_:Boolean;
 
 	public function ObjectProperties(_arg_1:XML)
 	{

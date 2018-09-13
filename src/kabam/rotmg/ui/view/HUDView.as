@@ -38,13 +38,13 @@ public class HUDView extends Sprite implements UnFocusAble
 	private const INTERACT_PANEL_POSITION:Point = new Point(0, 500);
 
 	private var background:CharacterWindowBackground;
-	private var miniMap:MiniMapImp;
 	private var newClassUnlockNotification:NewClassUnlockNotification;
 	private var equippedGrid:EquippedGrid;
-	private var statMeters:StatMetersView;
-	private var characterDetails:CharacterDetailsView;
 	private var equippedGridBG:Sprite;
 	private var player:Player;
+	public var statMeters:StatMetersView;
+	public var characterDetails:CharacterDetailsView;
+	public var miniMap:MiniMapImp;
 	public var tabStrip:TabStripView;
 	public var interactPanel:InteractPanel;
 	public var tradePanel:TradePanel;
@@ -54,6 +54,16 @@ public class HUDView extends Sprite implements UnFocusAble
 		this.createAssets();
 		this.addAssets();
 		this.positionAssets();
+	}
+
+	public function dispose():void
+	{
+		this.background = null;
+		this.player = null;
+		((this.statMeters) && (this.statMeters.dispose()));
+		((this.miniMap) && (this.miniMap.dispose()));
+		((this.tabStrip) && (this.tabStrip.dispose()));
+		((this.interactPanel) && (this.interactPanel.dispose()));
 	}
 
 	private function createAssets():void

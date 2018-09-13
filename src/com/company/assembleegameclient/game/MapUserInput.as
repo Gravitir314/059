@@ -5,6 +5,7 @@ package com.company.assembleegameclient.game
 import com.company.assembleegameclient.map.Square;
 import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.assembleegameclient.objects.ObjectProperties;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.tutorial.Tutorial;
@@ -108,6 +109,87 @@ public class MapUserInput
 		var _local_3:ApplicationSetup = _local_2.getInstance(ApplicationSetup);
 		this.areFKeysAvailable = _local_3.areDeveloperHotkeysEnabled();
 		this.gs_.map.signalRenderSwitch.add(this.onRenderSwitch);
+	}
+
+	public static function addIgnore(_arg_1:int):String
+	{
+		for each (var _local_3:int in Parameters.data_.AAIgnore)
+		{
+			if (_local_3 == _arg_1)
+			{
+				return (_arg_1 + " already exists in Ignore list");
+			}
+		}
+		if ((_arg_1 in ObjectLibrary.propsLibrary_))
+		{
+			Parameters.data_.AAIgnore.push(_arg_1);
+			var _local_2:ObjectProperties = ObjectLibrary.propsLibrary_[_arg_1];
+			_local_2.ignored = true;
+			return (("Successfully added " + _arg_1) + " to Ignore list");
+		}
+		return (("Failed to add " + _arg_1) + " to Ignore list (no known object with this itemType)");
+	}
+
+	public static function remIgnore(_arg_1:int):String
+	{
+		var _local_4:uint = Parameters.data_.AAIgnore.length;
+		var _local_3:int;
+		while (_local_3 < _local_4)
+		{
+			if (Parameters.data_.AAIgnore[_local_3] == _arg_1)
+			{
+				Parameters.data_.AAIgnore.splice(_local_3, 1);
+				if ((_arg_1 in ObjectLibrary.propsLibrary_))
+				{
+					var _local_2:ObjectProperties = ObjectLibrary.propsLibrary_[_arg_1];
+					_local_2.ignored = false;
+				}
+				return (("Successfully removed " + _arg_1) + " from Ignore list");
+			}
+			_local_3++;
+		}
+		return (_arg_1 + " not found in Ignore list");
+	}
+
+	public static function addException(_arg_1:int):String
+	{
+		for each (var _local_2:int in Parameters.data_.AAException)
+		{
+			if (_local_2 == _arg_1)
+			{
+				return (_arg_1 + " already exists in Exception list");
+			}
+		}
+		if ((_arg_1 in ObjectLibrary.propsLibrary_))
+		{
+			Parameters.data_.AAException.push(_arg_1);
+			var _local_3:ObjectProperties = ObjectLibrary.propsLibrary_[_arg_1];
+			_local_3.excepted = true;
+			return (("Successfully added " + _arg_1) + " to Exception list");
+		}
+		return (("Failed to add " + _arg_1) + " to Exception list (no known object with this itemType)");
+	}
+
+	public static function remException(_arg_1:int):String
+	{
+		var _local_2:uint;
+		var _local_3:uint = Parameters.data_.AAException.length;
+		_local_2 = 0;
+		while (_local_2 < _local_3)
+		{
+			if (Parameters.data_.AAException[_local_2] == _arg_1)
+			{
+				Parameters.data_.AAException.splice(_local_2, 1);
+				if ((_arg_1 in ObjectLibrary.propsLibrary_))
+				{
+					var _local_4:ObjectProperties = ObjectLibrary.propsLibrary_[_arg_1];
+					_local_4.excepted = false;
+				}
+				return (("Successfully removed " + _arg_1) + " from Exception list");
+			}
+			_local_2++;
+		}
+		return (_arg_1 + " not found in Exception list");
 	}
 
 	public function onRenderSwitch(_arg_1:Boolean):void

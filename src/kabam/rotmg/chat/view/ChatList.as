@@ -2,13 +2,17 @@
 
 package kabam.rotmg.chat.view
 {
+import com.company.assembleegameclient.parameters.Parameters;
+
 import flash.display.Sprite;
 import flash.events.TimerEvent;
 import flash.utils.Timer;
 
 import kabam.rotmg.chat.model.ChatModel;
 
-public class ChatList extends Sprite
+import zfn.IDisposable;
+
+public class ChatList extends Sprite implements IDisposable
 {
 
 	private const timer:Timer = new Timer(1000);
@@ -22,13 +26,20 @@ public class ChatList extends Sprite
 	private var ignoreTimeOuts:Boolean = false;
 	private var maxLength:int;
 
-	public function ChatList(_arg_1:int = 7, _arg_2:uint = 150)
+	public function ChatList(_arg_1:int = 5, _arg_2:uint = 150)
 	{
 		mouseEnabled = true;
 		mouseChildren = true;
 		this.listItems = new Vector.<ChatListItem>();
 		this.visibleItems = new Vector.<ChatListItem>();
-		this.visibleItemCount = _arg_1;
+		if (!Parameters.ssmode)
+		{
+			this.visibleItemCount = Parameters.data_.chatLength;
+		}
+		else
+		{
+			this.visibleItemCount = _arg_1;
+		}
 		this.maxLength = _arg_2;
 		this.index = 0;
 		this.isCurrent = true;
@@ -229,6 +240,14 @@ public class ChatList extends Sprite
 		}
 	}
 
+	public function removeOldestExcessVisible():void
+	{
+		while (this.visibleItems.length > this.visibleItemCount)
+		{
+			removeChild(this.visibleItems.shift());
+		}
+	}
+
 	private function canScrollUp():Boolean
 	{
 		return (this.index > this.visibleItemCount);
@@ -265,9 +284,21 @@ public class ChatList extends Sprite
 
 	private function removeNewestVisibleIfNeeded():void
 	{
-		if (this.visibleItems.length > this.visibleItemCount)
+		while (this.visibleItems.length > this.visibleItemCount)
 		{
 			removeChild(this.visibleItems.pop());
+		}
+	}
+
+	public function setVisibleItemCount():void
+	{
+		if (!Parameters.ssmode)
+		{
+			this.visibleItemCount = Parameters.data_.chatLength;
+		}
+		else
+		{
+			this.visibleItemCount = 5;
 		}
 	}
 

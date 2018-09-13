@@ -5,6 +5,7 @@ package com.company.assembleegameclient.objects
 import com.company.assembleegameclient.engine3d.Face3D;
 import com.company.assembleegameclient.map.Camera;
 import com.company.assembleegameclient.map.Square;
+import com.company.assembleegameclient.parameters.Parameters;
 import com.company.util.BitmapUtil;
 
 import flash.display.BitmapData;
@@ -46,13 +47,17 @@ public class Wall extends GameObject
 		var _local_6:BitmapData;
 		var _local_7:Face3D;
 		var _local_8:Square;
+		if (!Parameters.ssmode && Parameters.lowCPUMode)
+		{
+			return;
+		}
 		if (texture_ == null)
 		{
 			return;
 		}
 		if (this.faces_.length == 0)
 		{
-			this.rebuild3D();
+			this.rebuild3D_clean();
 		}
 		var _local_4:BitmapData = texture_;
 		if (animations_ != null)
@@ -80,25 +85,37 @@ public class Wall extends GameObject
 					_local_7.setTexture(_local_4);
 				}
 			}
-			_local_7.draw(_arg_1, _arg_2);
+			_local_7.draw(_arg_1, _arg_2, this.animations_ != null);
 			_local_5++;
 		}
-		this.topFace_.draw(_arg_1, _arg_2);
+		this.topFace_.draw(_arg_1, _arg_2, this.animations_ != null);
 	}
 
-	public function rebuild3D():void
+	public function rebuild3D_clean():void
 	{
-		this.faces_.length = 0;
-		var _local_1:int = x_;
-		var _local_2:int = y_;
-		var _local_3:Vector.<Number> = new <Number>[_local_1, _local_2, 1, (_local_1 + 1), _local_2, 1, (_local_1 + 1), (_local_2 + 1), 1, _local_1, (_local_2 + 1), 1];
+		var _local_3:int = x_;
+		var _local_1:int = y_;
+		var _local_2:Vector.<Number> = new <Number>[_local_3, _local_1, 1, (_local_3 + 1), _local_1, 1, (_local_3 + 1), (_local_1 + 1), 1, _local_3, (_local_1 + 1), 1];
+		this.topFace_ = new Face3D(this.topTexture_, _local_2, UVT, false, true);
+		this.topFace_.bitmapFill_.repeat = true;
+		this.addWall(_local_3, _local_1, 1, (_local_3 + 1), _local_1, 1);
+		this.addWall((_local_3 + 1), _local_1, 1, (_local_3 + 1), (_local_1 + 1), 1);
+		this.addWall((_local_3 + 1), (_local_1 + 1), 1, _local_3, (_local_1 + 1), 1);
+		this.addWall(_local_3, (_local_1 + 1), 1, _local_3, _local_1, 1);
+	}
+
+	/*public function rebuild3D_2():void TODO unused function
+	{
+		var _local_2:int = (x_ + 1);
+		var _local_1:int = (y_ + 1);
+		var _local_3:Vector.<Number> = new <Number>[x_, y_, 1, _local_2, y_, 1, _local_2, _local_1, 1, x_, _local_1, 1];
 		this.topFace_ = new Face3D(this.topTexture_, _local_3, UVT, false, true);
 		this.topFace_.bitmapFill_.repeat = true;
-		this.addWall(_local_1, _local_2, 1, (_local_1 + 1), _local_2, 1);
-		this.addWall((_local_1 + 1), _local_2, 1, (_local_1 + 1), (_local_2 + 1), 1);
-		this.addWall((_local_1 + 1), (_local_2 + 1), 1, _local_1, (_local_2 + 1), 1);
-		this.addWall(_local_1, (_local_2 + 1), 1, _local_1, _local_2, 1);
-	}
+		this.addWall(x_, y_, 1, _local_2, y_, 1);
+		this.addWall(_local_2, y_, 1, _local_2, _local_1, 1);
+		this.addWall(_local_2, _local_1, 1, x_, _local_1, 1);
+		this.addWall(x_, _local_1, 1, x_, y_, 1);
+	}*/
 
 	private function addWall(_arg_1:Number, _arg_2:Number, _arg_3:Number, _arg_4:Number, _arg_5:Number, _arg_6:Number):void
 	{

@@ -29,6 +29,11 @@ public class GUID
 		return (binb2hex(core_sha1(str2binb(_arg_1), (_arg_1.length * 8))));
 	}
 
+	public static function str_b64(_arg_1:String):String
+	{
+		return (binb2b64(str2binb(_arg_1)));
+	}
+
 	private static function core_sha1(_arg_1:Array, _arg_2:Number):Array
 	{
 		var _local_10:Number;
@@ -139,6 +144,35 @@ public class GUID
 		{
 			_local_2 = (_local_2 + (_local_3.charAt(((_arg_1[(_local_4 >> 2)] >> (((3 - (_local_4 % 4)) * 8) + 4)) & 0x0F)) + _local_3.charAt(((_arg_1[(_local_4 >> 2)] >> ((3 - (_local_4 % 4)) * 8)) & 0x0F))));
 			_local_4++;
+		}
+		return (_local_2);
+	}
+
+	private static function binb2b64(_arg_1:Array):String
+	{
+		var _local_5:int;
+		var _local_3:int;
+		var _local_6:int;
+		var _local_4:String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+		var _local_2:String = "";
+		_local_5 = 0;
+		while (_local_5 < (_arg_1.length * 4))
+		{
+			_local_3 = (((((_arg_1[(_local_5 >> 2)] >> (8 * (3 - (_local_5 % 4)))) & 0xFF) << 16) | (((_arg_1[((_local_5 + 1) >> 2)] >> (8 * (3 - ((_local_5 + 1) % 4)))) & 0xFF) << 8)) | ((_arg_1[((_local_5 + 2) >> 2)] >> (8 * (3 - ((_local_5 + 2) % 4)))) & 0xFF));
+			_local_6 = 0;
+			while (_local_6 < 4)
+			{
+				if (((_local_5 * 8) + (_local_6 * 6)) > (_arg_1.length * 32))
+				{
+					_local_2 = (_local_2 + "=");
+				}
+				else
+				{
+					_local_2 = (_local_2 + _local_4.charAt(((_local_3 >> (6 * (3 - _local_6))) & 0x3F)));
+				}
+				_local_6++;
+			}
+			_local_5 = (_local_5 + 3);
 		}
 		return (_local_2);
 	}

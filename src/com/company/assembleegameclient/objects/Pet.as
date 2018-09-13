@@ -3,12 +3,17 @@
 package com.company.assembleegameclient.objects
 {
 import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.map.Camera;
+import com.company.assembleegameclient.map.Map;
+import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.panels.Panel;
 import com.company.assembleegameclient.ui.tooltip.TextToolTip;
 import com.company.assembleegameclient.ui.tooltip.ToolTip;
 import com.company.assembleegameclient.util.AnimatedChar;
 import com.company.assembleegameclient.util.AnimatedChars;
 import com.company.assembleegameclient.util.MaskedImage;
+
+import flash.display.IGraphicsData;
 
 import io.decagames.rotmg.pets.data.PetsModel;
 import io.decagames.rotmg.pets.data.vo.PetVO;
@@ -43,19 +48,33 @@ public class Pet extends GameObject implements IInteractiveObject
 		return (new TextToolTip(0x363636, 0x9B9B9B, TextKey.CLOSEDGIFTCHEST_TITLE, TextKey.TEXTPANEL_GIFTCHESTISEMPTY, 200));
 	}
 
+	override public function addTo(_arg_1:Map, _arg_2:Number, _arg_3:Number):Boolean
+	{
+		if (!super.addTo(_arg_1, _arg_2, _arg_3))
+		{
+			return (false);
+		}
+		var _local_4:GameObject = this.map_.goDict_[(this.objectId_ - 1)];
+		if (((_local_4) && (_local_4 == this.map_.player_)))
+		{
+			myPet = true;
+		}
+		return (true);
+	}
+
 	public function getPanel(_arg_1:GameSprite):Panel
 	{
 		return (new PetPanel(_arg_1, this.vo));
 	}
 
-	public function setSkin(_arg_1:int):void
+	public function setSkin(_arg_1:int, _arg_2:Boolean = false):void
 	{
 		var _local_5:MaskedImage;
 		this.skinId = _arg_1;
 		var _local_2:XML = ObjectLibrary.getXMLfromId(ObjectLibrary.getIdFromType(_arg_1));
 		var _local_3:String = _local_2.AnimatedTexture.File;
 		var _local_4:int = _local_2.AnimatedTexture.Index;
-		if (this.skin == null)
+		if (this.skin == null || _arg_2)
 		{
 			this.isDefaultAnimatedChar = true;
 			this.skin = AnimatedChars.getAnimatedChar(_local_3, _local_4);
@@ -77,6 +96,14 @@ public class Pet extends GameObject implements IInteractiveObject
 			props_.whileMoving_ = _local_6.whileMoving_;
 			flying_ = props_.flying_;
 			z_ = props_.z_;
+		}
+	}
+
+	override public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void
+	{
+		if (Parameters.ssmode || myPet || map_.isPetYard || !Parameters.data_.hidePets && !Parameters.lowCPUMode)
+		{
+			super.draw(_arg_1, _arg_2, _arg_3);
 		}
 	}
 

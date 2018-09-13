@@ -2,6 +2,8 @@
 
 package kabam.rotmg.messaging.impl
 {
+import com.company.assembleegameclient.parameters.Parameters;
+
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.filters.DropShadowFilter;
@@ -81,7 +83,11 @@ public class JitterWatcher extends Sprite
 		{
 			_local_3 = (_local_3 + ((_local_4 - _local_2) * (_local_4 - _local_2)));
 		}
-		return (Math.sqrt((_local_3 / _local_1)));
+		if (Parameters.ssmode)
+		{
+			return (Math.sqrt((_local_3 / _local_1)));
+		}
+		return (int(Math.sqrt((_local_3 / _local_1))));
 	}
 
 

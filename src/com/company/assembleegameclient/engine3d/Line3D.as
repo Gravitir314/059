@@ -103,11 +103,7 @@ class UnitTest
 
 	public static function run():Boolean
 	{
-		if (!testCrossZ())
-		{
-			return (false);
-		}
-		return (true);
+		return (testCrossZ());
 	}
 
 

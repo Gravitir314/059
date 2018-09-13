@@ -37,7 +37,7 @@ public class MysteryBoxSelectModal extends Sprite
 	private var titleString:String = "MysteryBoxSelectModal.titleString";
 	private var selectEntries:Vector.<MysteryBoxSelectEntry>;
 
-	public function MysteryBoxSelectModal():void
+	public function MysteryBoxSelectModal()
 	{
 		modalWidth = 385;
 		modalHeight = 60;

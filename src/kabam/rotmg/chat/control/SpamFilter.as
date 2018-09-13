@@ -2,6 +2,8 @@
 
 package kabam.rotmg.chat.control
 {
+import com.company.assembleegameclient.parameters.Parameters;
+
 public class SpamFilter
 {
 
@@ -46,6 +48,13 @@ public class SpamFilter
 
 	public function isSpam(_arg_1:String):Boolean
 	{
+		for each (var _local_4:String in Parameters.data_.spamFilter)
+		{
+			if (_arg_1.toLowerCase().indexOf(_local_4) != -1)
+			{
+				return (false);
+			}
+		}
 		this.regex.lastIndex = 0;
 		var _local_2:String = this.applyFilterOn(_arg_1);
 		return (this.regex.test(_local_2));

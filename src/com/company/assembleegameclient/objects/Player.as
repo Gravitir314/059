@@ -152,6 +152,11 @@ public class Player extends Character
 	private var breathPath_:GraphicsPath = null;
 
 	public var clientHp:int = 100;
+	public var autoNexusNumber:int = 0;
+	public var autoHealNumber:int = 0;
+	public var autoHpPotNumber:int = 0;
+	public var followPos:Point = new Point(0, 0);
+	public var followLanded:Boolean = false;
 
 	public function Player(_arg_1:XML)
 	{
@@ -1490,6 +1495,13 @@ public class Player extends Character
 			_local_5.setStringBuilder(new StaticStringBuilder(_arg_1));
 			map_.mapOverlay_.addStatusText(_local_5);
 		}
+	}
+
+	public function calcHealthPercent():void
+	{
+		this.autoHpPotNumber = ((Parameters.data_.autoHPPercent * 0.01) * this.maxHP_);
+		this.autoNexusNumber = ((Parameters.data_.AutoNexus * 0.01) * this.maxHP_);
+		this.autoHealNumber = ((Parameters.data_.AutoHealPercentage * 0.01) * this.maxHP_);
 	}
 
 

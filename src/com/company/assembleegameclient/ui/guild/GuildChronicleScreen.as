@@ -52,7 +52,7 @@ public class GuildChronicleScreen extends Sprite
 			this.container.removeChild(this.guildPlayerList_);
 		}
 		var _local_1:Player = this.gs_.map.player_;
-		this.guildPlayerList_ = new GuildPlayerList(50, 0, ((_local_1 == null) ? "" : _local_1.name_), _local_1.guildRank_);
+		this.guildPlayerList_ = new GuildPlayerList(500, 0, ((_local_1 == null) ? "" : _local_1.name_), _local_1.guildRank_);
 		this.guildPlayerList_.addEventListener(GuildPlayerListEvent.SET_RANK, this.onSetRank);
 		this.guildPlayerList_.addEventListener(GuildPlayerListEvent.REMOVE_MEMBER, this.onRemoveMember);
 		this.container.addChild(this.guildPlayerList_);
@@ -127,7 +127,7 @@ public class GuildChronicleScreen extends Sprite
 
 	private function onAddedToStage(_arg_1:Event):void
 	{
-		this.continueButton_.x = (stage.stageWidth / 2);
+		this.continueButton_.x = (400 - this.continueButton_.width);//(stage.stageWidth / 2) TODO need this?
 		this.continueButton_.y = 550;
 		stage.addEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown, false, 1);
 		stage.addEventListener(KeyboardEvent.KEY_UP, this.onKeyUp, false, 1);

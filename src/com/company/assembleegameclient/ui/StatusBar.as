@@ -2,6 +2,7 @@
 
 package com.company.assembleegameclient.ui
 {
+import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.parameters.Parameters;
 
 import flash.display.Sprite;
@@ -20,6 +21,8 @@ public class StatusBar extends Sprite
 
 	public static var barTextSignal:Signal = new Signal(int);
 
+	public const DEFAULT_FILTER:DropShadowFilter = new DropShadowFilter(0, 0, 0);
+
 	public var w_:int;
 	public var h_:int;
 	public var color_:uint;
@@ -33,6 +36,8 @@ public class StatusBar extends Sprite
 	public var level_:int = 0;
 	private var labelText_:TextFieldDisplayConcrete;
 	private var labelTextStringBuilder_:LineBuilder;
+	private var rightLabelText_:TextFieldDisplayConcrete;
+	private var rightLabelTextStringBuilder_:LineBuilder;
 	private var valueText_:TextFieldDisplayConcrete;
 	private var valueTextStringBuilder_:StaticStringBuilder;
 	private var boostText_:TextFieldDisplayConcrete;
@@ -48,10 +53,11 @@ public class StatusBar extends Sprite
 	private var repetitions:int;
 	private var direction:int = -1;
 	private var speed:Number = 0.1;
+	public var quest:GameObject;
 
-	public function StatusBar(_arg_1:int, _arg_2:int, _arg_3:uint, _arg_4:uint, _arg_5:String = null, _arg_6:Boolean = false, _arg_7:Boolean = false)
+	public function StatusBar(_arg_1:int, _arg_2:int, _arg_3:uint, _arg_4:uint, _arg_5:String = null, _arg_6:Boolean = false, _arg_7:GameObject = null, _arg_8:Boolean = false, _arg_9:Boolean = false)
 	{
-		this.isProgressBar_ = _arg_7;
+		this.isProgressBar_ = _arg_9;
 		addChild(this.colorSprite);
 		this.w_ = _arg_1;
 		this.h_ = _arg_2;
@@ -59,26 +65,36 @@ public class StatusBar extends Sprite
 		this.defaultForegroundColor = (this.color_ = _arg_3);
 		this.defaultBackgroundColor = (this.backColor_ = _arg_4);
 		this.textColor_ = 0xFFFFFF;
-		if (((!(_arg_5 == null)) && (!(_arg_5.length == 0))))
+		if (_arg_5 != null && _arg_5.length != 0)
 		{
 			this.labelText_ = new TextFieldDisplayConcrete().setSize(14).setColor(this.textColor_);
 			this.labelText_.setBold(true);
 			this.labelTextStringBuilder_ = new LineBuilder().setParams(_arg_5);
 			this.labelText_.setStringBuilder(this.labelTextStringBuilder_);
 			this.centerVertically(this.labelText_);
-			this.labelText_.filters = [new DropShadowFilter(0, 0, 0)];
+			this.labelText_.filters = [DEFAULT_FILTER];
 			addChild(this.labelText_);
+		}
+		if (_arg_8)
+		{
+			this.rightLabelText_ = new TextFieldDisplayConcrete().setSize(14).setColor(this.textColor_);
+			this.rightLabelText_.setBold(true);
+			this.rightLabelTextStringBuilder_ = new LineBuilder().setParams("0%");
+			this.rightLabelText_.setStringBuilder(this.labelTextStringBuilder_);
+			this.centerVertically(this.rightLabelText_);
+			this.rightLabelText_.filters = [DEFAULT_FILTER];
+			addChild(this.rightLabelText_);
 		}
 		this.valueText_ = new TextFieldDisplayConcrete().setSize(14).setColor(0xFFFFFF);
 		this.valueText_.setBold(true);
-		this.valueText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.valueText_.filters = [DEFAULT_FILTER];
 		this.centerVertically(this.valueText_);
 		this.valueTextStringBuilder_ = new StaticStringBuilder();
 		this.boostText_ = new TextFieldDisplayConcrete().setSize(14).setColor(this.textColor_);
 		this.boostText_.setBold(true);
 		this.boostText_.alpha = 0.6;
 		this.centerVertically(this.boostText_);
-		this.boostText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.boostText_.filters = [DEFAULT_FILTER];
 		this.multiplierIcon = new Sprite();
 		this.multiplierIcon.x = (this.w_ - 25);
 		this.multiplierIcon.y = -3;
@@ -89,13 +105,14 @@ public class StatusBar extends Sprite
 		this.multiplierText = new TextFieldDisplayConcrete().setSize(14).setColor(9493531);
 		this.multiplierText.setBold(true);
 		this.multiplierText.setStringBuilder(new StaticStringBuilder("x2"));
-		this.multiplierText.filters = [new DropShadowFilter(0, 0, 0)];
+		this.multiplierText.filters = [DEFAULT_FILTER];
 		this.multiplierIcon.addChild(this.multiplierText);
 		if (!this.bTextEnabled(Parameters.data_.toggleBarText))
 		{
 			addEventListener(MouseEvent.ROLL_OVER, this.onMouseOver);
 			addEventListener(MouseEvent.ROLL_OUT, this.onMouseOut);
 		}
+		quest = _arg_7;
 		barTextSignal.add(this.setBarText);
 	}
 

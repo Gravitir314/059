@@ -89,10 +89,6 @@ public class TitleMediator extends Mediator
 		{
 			this.openDialog.dispatch(new SecurityQuestionsInfoDialog());
 		}
-		if (!Parameters.sessionStarted)
-		{
-			Parameters.sessionStarted = true;
-		}
 	}
 
 	private function openSupportPage():void

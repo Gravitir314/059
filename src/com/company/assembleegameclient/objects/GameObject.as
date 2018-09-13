@@ -141,6 +141,7 @@ public class GameObject extends BasicObject
 	protected var shadowPath_:GraphicsPath = null;
 
 	public var hasShock:Boolean;
+	public var myPet:Boolean;
 
 	public function GameObject(_arg_1:XML)
 	{

@@ -53,6 +53,20 @@ public class StarBackground extends Background
 		this.stars_.push(_local_2);
 	}
 
+	override public function dispose():void
+	{
+		super.dispose();
+		for each (var _local_1:Star in this.stars_)
+		{
+			if (_local_1)
+			{
+				_local_1.dispose();
+			}
+		}
+		this.stars_ = null;
+		this.graphicsData_ = null;
+	}
+
 
 }
 }//package com.company.assembleegameclient.background
@@ -82,7 +96,7 @@ class Star
 	protected var bitmapFill_:GraphicsBitmapFill = new GraphicsBitmapFill(null, new Matrix(), false, false);
 	protected var path_:GraphicsPath = new GraphicsPath(sqCommands, new Vector.<Number>());
 
-	public function Star(_arg_1:Number, _arg_2:Number, _arg_3:Number, _arg_4:BitmapData):void
+	public function Star(_arg_1:Number, _arg_2:Number, _arg_3:Number, _arg_4:BitmapData)
 	{
 		this.x_ = _arg_1;
 		this.y_ = _arg_2;
@@ -105,10 +119,18 @@ class Star
 		this.path_.data.length = 0;
 		var _local_7:Number = (_local_4 - (this.w_ / 2));
 		var _local_8:Number = (_local_5 - (this.h_ / 2));
-		this.path_.data.push(_local_7, _local_8, (_local_7 + this.w_), _local_8, (_local_7 + this.w_), (_local_8 + this.h_), _local_7, (_local_8 + this.h_));
+		(this.path_.data as Vector.<Number>).push(_local_7, _local_8, (_local_7 + this.w_), _local_8, (_local_7 + this.w_), (_local_8 + this.h_), _local_7, (_local_8 + this.h_));
 		_arg_1.push(this.bitmapFill_);
 		_arg_1.push(this.path_);
 		_arg_1.push(END_FILL);
+	}
+
+	public function dispose():void
+	{
+		this.bitmap_.dispose();
+		this.bitmapFill_ = null;
+		this.bitmap_ = null;
+		this.path_ = null;
 	}
 
 

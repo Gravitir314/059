@@ -21,6 +21,8 @@ public class AgeVerificationDialog extends Dialog
 
 	private static const WIDTH:int = 300;
 
+	private const DEFAULT_FILTER_0:DropShadowFilter = new DropShadowFilter(0, 0, 0, 1, 6, 6, 1);
+	private const DEFAULT_FILTER_1:DropShadowFilter = new DropShadowFilter(0, 0, 0, 0.5, 12, 12);
 	private const BIRTH_DATE_BELOW_MINIMUM_ERROR:String = "AgeVerificationDialog.tooYoung";
 	private const BIRTH_DATE_INVALID_ERROR:String = "AgeVerificationDialog.invalidBirthDate";
 	private const MINIMUM_AGE:uint = 16;
@@ -63,7 +65,7 @@ public class AgeVerificationDialog extends Dialog
 		textText_.setMultiLine(true).setWordWrap(true).setHTML(true);
 		textText_.setAutoSize(TextFieldAutoSize.LEFT);
 		textText_.mouseEnabled = true;
-		textText_.filters = [new DropShadowFilter(0, 0, 0, 1, 6, 6, 1)];
+		textText_.filters = [DEFAULT_FILTER_0];
 		this.setText();
 	}
 
@@ -95,7 +97,7 @@ public class AgeVerificationDialog extends Dialog
 	{
 		this.errorLabel = new TextFieldDisplayConcrete().setSize(12).setColor(16549442);
 		this.errorLabel.setMultiLine(true);
-		this.errorLabel.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
+		this.errorLabel.filters = [DEFAULT_FILTER_1];
 	}
 
 	private function onCancel(_arg_1:Event):void

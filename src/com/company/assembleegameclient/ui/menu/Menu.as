@@ -2,10 +2,13 @@
 
 package com.company.assembleegameclient.ui.menu
 {
+import com.company.assembleegameclient.game.GameSprite;
+import com.company.assembleegameclient.parameters.Parameters;
 import com.company.util.GraphicsUtil;
 import com.company.util.RectangleUtil;
 
 import flash.display.CapsStyle;
+import flash.display.DisplayObject;
 import flash.display.GraphicsPath;
 import flash.display.GraphicsSolidFill;
 import flash.display.GraphicsStroke;
@@ -61,6 +64,8 @@ public class Menu extends Sprite implements UnFocusAble
 
 	protected function onRemovedFromStage(_arg_1:Event):void
 	{
+		this.parent.scaleX = 1;
+		this.parent.scaleY = 1;
 		removeEventListener(Event.ENTER_FRAME, this.onEnterFrame);
 		removeEventListener(MouseEvent.ROLL_OUT, this.onRollOut);
 	}
@@ -71,9 +76,8 @@ public class Menu extends Sprite implements UnFocusAble
 		{
 			return;
 		}
-		var _local_2:Rectangle = getRect(stage);
-		var _local_3:Number = RectangleUtil.pointDist(_local_2, stage.mouseX, stage.mouseY);
-		if (_local_3 > 40)
+		this.scaleParent(!Parameters.ssmode && Parameters.data_.uiscale);
+		if (RectangleUtil.pointDistSquared(getRect(stage), stage.mouseX, stage.mouseY) > 1600)
 		{
 			this.remove();
 		}
@@ -85,25 +89,69 @@ public class Menu extends Sprite implements UnFocusAble
 		{
 			return;
 		}
-		if (stage.mouseX < (stage.stageWidth / 2))
+		this.positionFixed();
+	}
+
+	public function scaleParent(_arg_1:Boolean):void
+	{
+		var _local_2:DisplayObject;
+		if (this.parent is GameSprite)
 		{
-			x = (stage.mouseX + 12);
+			_local_2 = this;
 		}
 		else
 		{
-			x = ((stage.mouseX - width) - 1);
+			_local_2 = this.parent;
+		}
+		var _local_3:Number = (800 / stage.stageWidth);
+		var _local_4:Number = (600 / stage.stageHeight);
+		if (_arg_1 == true)
+		{
+			_local_2.scaleX = (_local_3 / _local_4);
+			_local_2.scaleY = 1;
+		}
+		else
+		{
+			_local_2.scaleX = _local_3;
+			_local_2.scaleY = _local_4;
+		}
+	}
+
+	public function positionFixed():void
+	{
+		var _local_3:Boolean = (!Parameters.ssmode && Parameters.data_.uiscale);
+		var _local_1:Number = (((stage.stageWidth - 800) / 2) + stage.mouseX);
+		var _local_2:Number = (((stage.stageHeight - 600) / 2) + stage.mouseY);
+		var _local_4:Number = (600 / stage.stageHeight);
+		this.scaleParent(_local_3);
+		if (_local_3)
+		{
+			_local_1 = (_local_1 * _local_4);
+			_local_2 = (_local_2 * _local_4);
+		}
+		if (stage == null)
+		{
+			return;
+		}
+		if (((stage.mouseX + (stage.stageWidth / 2)) - 400) < (stage.stageWidth / 2))
+		{
+			x = (_local_1 + 12);
+		}
+		else
+		{
+			x = ((_local_1 - width) - 1);
 		}
 		if (x < 12)
 		{
 			x = 12;
 		}
-		if (stage.mouseY < (stage.stageHeight / 3))
+		if (((stage.mouseY + (stage.stageHeight / 2)) - 300) < (stage.stageHeight / 3))
 		{
-			y = (stage.mouseY + 12);
+			y = (_local_2 + 12);
 		}
 		else
 		{
-			y = ((stage.mouseY - height) - 1);
+			y = ((_local_2 - height) - 1);
 		}
 		if (y < 12)
 		{

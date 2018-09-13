@@ -43,7 +43,7 @@ public class NexusBackground extends Background
 		this.graphicsData_.push(this.bitmapFill_);
 		this.path_.data.length = 0;
 		var _local_4:Rectangle = _arg_1.clipRect_;
-		this.path_.data.push(_local_4.left, _local_4.top, _local_4.right, _local_4.top, _local_4.right, _local_4.bottom, _local_4.left, _local_4.bottom);
+		(this.path_.data as Vector.<Number>).push(_local_4.left, _local_4.top, _local_4.right, _local_4.top, _local_4.right, _local_4.bottom, _local_4.left, _local_4.bottom);
 		this.graphicsData_.push(this.path_);
 		this.graphicsData_.push(GraphicsUtil.END_FILL);
 		this.drawIslands(_arg_1, _arg_2);
@@ -61,6 +61,24 @@ public class NexusBackground extends Background
 			_local_4.draw(_arg_1, _arg_2, this.graphicsData_);
 			_local_3++;
 		}
+	}
+
+	override public function dispose():void
+	{
+		super.dispose();
+		this.water_.dispose();
+		for each (var _local_1:Island in this.islands_)
+		{
+			if (_local_1)
+			{
+				_local_1.dispose();
+			}
+		}
+		this.islands_ = null;
+		this.graphicsData_ = null;
+		this.water_ = null;
+		this.path_ = null;
+		this.bitmapFill_ = null;
 	}
 
 
@@ -88,7 +106,7 @@ class Island
 	private var bitmapFill_:GraphicsBitmapFill = new GraphicsBitmapFill(null, new Matrix(), true, false);
 	private var path_:GraphicsPath = new GraphicsPath(GraphicsUtil.QUAD_COMMANDS, new Vector.<Number>());
 
-	public function Island(_arg_1:Number, _arg_2:Number, _arg_3:int):void
+	public function Island(_arg_1:Number, _arg_2:Number, _arg_3:int)
 	{
 		this.center_ = new Point(_arg_1, _arg_2);
 		this.startTime_ = _arg_3;
@@ -109,9 +127,19 @@ class Island
 		this.path_.data.length = 0;
 		var _local_8:Point = _local_7.transformPoint(new Point(_local_5, _local_6));
 		var _local_9:Point = _local_7.transformPoint(new Point((_local_5 + this.bitmapData_.width), (_local_6 + this.bitmapData_.height)));
-		this.path_.data.push(_local_8.x, _local_8.y, _local_9.x, _local_8.y, _local_9.x, _local_9.y, _local_8.x, _local_9.y);
+		(this.path_.data as Vector.<Number>).push(_local_8.x, _local_8.y, _local_9.x, _local_8.y, _local_9.x, _local_9.y, _local_8.x, _local_9.y);
 		_arg_3.push(this.path_);
 		_arg_3.push(GraphicsUtil.END_FILL);
+	}
+
+	public function dispose():void
+	{
+		this.bitmapData_.dispose();
+		this.bitmapFill_.bitmapData.dispose();
+		this.bitmapFill_.bitmapData = null;
+		this.bitmapFill_ = null;
+		this.bitmapData_ = null;
+		this.path_.data = null;
 	}
 
 

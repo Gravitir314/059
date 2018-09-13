@@ -102,7 +102,7 @@ public class Face3D
 		return (_local_1);
 	}
 
-	public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera):Boolean
+	public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:Boolean):Boolean
 	{
 		var _local_10:Vector.<Number>;
 		var _local_11:Number;
@@ -153,7 +153,7 @@ public class Face3D
 		}
 		if (this.needGen_)
 		{
-			this.generateTextureMatrix();
+			this.generateTextureMatrix(_arg_3);
 		}
 		this.textureMatrix_.calculateTextureMatrix(this.vout_);
 		this.bitmapFill_.bitmapData = this.textureMatrix_.texture_;
@@ -177,7 +177,7 @@ public class Face3D
 		return (false);
 	}
 
-	private function generateTextureMatrix():void
+	private function generateTextureMatrix(_arg_1:Boolean):void
 	{
 		var _local_1:BitmapData = TextureRedrawer.redrawFace(this.origTexture_, this.shade_);
 		if (this.textureMatrix_ == null)
@@ -187,7 +187,10 @@ public class Face3D
 		else
 		{
 			this.textureMatrix_.texture_ = _local_1;
-			this.textureMatrix_.calculateUVMatrix(this.uvt_);
+			if (this.textureMatrix_.uvMatrix_ == null || _arg_1)
+			{
+				this.textureMatrix_.calculateUVMatrix(this.uvt_);
+			}
 		}
 		this.needGen_ = false;
 	}

@@ -49,6 +49,22 @@ public class TradePanel extends Sprite
 		addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
 	}
 
+	private function onAddedToStage(_arg_1:Event):void
+	{
+		stage.addEventListener(Event.ACTIVATE, this.onActivate);
+	}
+
+	private function onRemovedFromStage(_arg_1:Event):void
+	{
+		removeEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
+		removeEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
+		this.myInv_.removeEventListener(Event.CHANGE, this.onMyInvChange);
+		this.cancelButton_.removeEventListener(MouseEvent.CLICK, this.onCancelClick);
+		this.cancelButton_.textChanged.removeAll();
+		this.tradeButton_.removeEventListener(MouseEvent.CLICK, this.onTradeClick);
+		stage.removeEventListener(Event.ACTIVATE, this.onActivate);
+	}
+
 	private function onCancelTextChanged():void
 	{
 		this.cancelButton_.x = ((WIDTH / 4) - (this.cancelButton_.bWidth / 2));
@@ -68,16 +84,6 @@ public class TradePanel extends Sprite
 		{
 			this.yourInv_.setMessage(TradeInventory.TRADEACCEPTED_MESSAGE);
 		}
-	}
-
-	private function onAddedToStage(_arg_1:Event):void
-	{
-		stage.addEventListener(Event.ACTIVATE, this.onActivate);
-	}
-
-	private function onRemovedFromStage(_arg_1:Event):void
-	{
-		stage.removeEventListener(Event.ACTIVATE, this.onActivate);
 	}
 
 	private function onActivate(_arg_1:Event):void
@@ -102,6 +108,24 @@ public class TradePanel extends Sprite
 		this.gs_.gsc_.acceptTrade(this.myInv_.getOffer(), this.yourInv_.getOffer());
 		this.myInv_.setMessage(TradeInventory.TRADEACCEPTED_MESSAGE);
 	}
+
+	/*private function onTradeRightClick(_arg_1:MouseEvent):void TODO unused function
+	{
+		var _local_2:int;
+		var _local_3:Vector.<Boolean> = new Vector.<Boolean>(12);
+		_local_3[0] = false;
+		_local_3[1] = false;
+		_local_3[2] = false;
+		_local_3[3] = false;
+		_local_2 = 0;
+		while (_local_2 < 8)
+		{
+			_local_3[(_local_2 + 4)] = (!(this.gs_.map.player_.equipment_[(_local_2 + 4)] == -1));
+			_local_2++;
+		}
+		this.myInv_.setOffer(_local_3);
+		onMyInvChange(null);
+	}*/
 
 	public function checkTrade():void
 	{

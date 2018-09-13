@@ -14,7 +14,11 @@ import com.company.assembleegameclient.sound.SoundEffectLibrary;
 import com.company.assembleegameclient.ui.options.Options;
 import com.company.util.AssetLibrary;
 
+import flash.display.Bitmap;
+
 import flash.display.BitmapData;
+import flash.display.Loader;
+import flash.events.Event;
 
 import flash.utils.ByteArray;
 import flash.utils.getQualifiedClassName;
@@ -28,7 +32,58 @@ public class AssetLoader
 {
 
 	public static var currentXmlIsTesting:Boolean = false;
+	public static var realmMaps:Vector.<BitmapData>;
+	public static var nexusMaps:Vector.<BitmapData>;
+	public static var castleMap:BitmapData;
+	public static var chamberMap:BitmapData;
+	public static var wcMap:BitmapData;
+	public static var vaultMap:BitmapData;
+	public static var shattersMap:BitmapData;
 
+	[Embed(source="AssetLoader_W1.dat", mimeType="application/octet-stream")]
+	private var w1:Class;
+	[Embed(source="AssetLoader_W2.dat", mimeType="application/octet-stream")]
+	private var w2:Class;
+	[Embed(source="AssetLoader_W3.dat", mimeType="application/octet-stream")]
+	private var w3:Class;
+	[Embed(source="AssetLoader_W4.dat", mimeType="application/octet-stream")]
+	private var w4:Class;
+	[Embed(source="AssetLoader_W5.dat", mimeType="application/octet-stream")]
+	private var w5:Class;
+	[Embed(source="AssetLoader_W6.dat", mimeType="application/octet-stream")]
+	private var w6:Class;
+	[Embed(source="AssetLoader_W7.dat", mimeType="application/octet-stream")]
+	private var w7:Class;
+	[Embed(source="AssetLoader_W8.dat", mimeType="application/octet-stream")]
+	private var w8:Class;
+	[Embed(source="AssetLoader_W9.dat", mimeType="application/octet-stream")]
+	private var w9:Class;
+	[Embed(source="AssetLoader_W10.dat", mimeType="application/octet-stream")]
+	private var w10:Class;
+	[Embed(source="AssetLoader_W11.dat", mimeType="application/octet-stream")]
+	private var w11:Class;
+	[Embed(source="AssetLoader_W12.dat", mimeType="application/octet-stream")]
+	private var w12:Class;
+	[Embed(source="AssetLoader_W13.dat", mimeType="application/octet-stream")]
+	private var w13:Class;
+	[Embed(source="AssetLoader_Nexus_Day.dat", mimeType="application/octet-stream")]
+	private var nexus_day:Class;
+	[Embed(source="AssetLoader_Nexus_Night.dat", mimeType="application/octet-stream")]
+	private var nexus_night:Class;
+	[Embed(source="AssetLoader_Nexus_Sunrise.dat", mimeType="application/octet-stream")]
+	private var nexus_sunrise:Class;
+	[Embed(source="AssetLoader_Nexus_Sunset.dat", mimeType="application/octet-stream")]
+	private var nexus_sunset:Class;
+	[Embed(source="AssetLoader_Shatters.dat", mimeType="application/octet-stream")]
+	private var shatters:Class;
+	[Embed(source="AssetLoader_Castle.dat", mimeType="application/octet-stream")]
+	private var castle:Class;
+	[Embed(source="AssetLoader_Chamber.dat", mimeType="application/octet-stream")]
+	private var chamber:Class;
+	[Embed(source="AssetLoader_WC.dat", mimeType="application/octet-stream")]
+	private var wc:Class;
+	[Embed(source="AssetLoader_Vault.dat", mimeType="application/octet-stream")]
+	private var vault:Class;
 	public var music:IMusic = new MusicProxy();
 
 
@@ -47,6 +102,7 @@ public class AssetLoader
 		this.music.load();
 		SFX.load();
 		SoundCustom.load();
+		this.loadMaps();
 	}
 
 	private function addImages():void
@@ -203,6 +259,87 @@ public class AssetLoader
 		SoundEffectLibrary.load("use_potion");
 	}
 
+	private function loadMaps():void
+	{
+		realmMaps = new Vector.<BitmapData>(13);
+		nexusMaps = new Vector.<BitmapData>(4);
+		this.loadMap(new this.w13(), 12);
+		this.loadMap(new this.w12(), 11);
+		this.loadMap(new this.w11(), 10);
+		this.loadMap(new this.w10(), 9);
+		this.loadMap(new this.w9(), 8);
+		this.loadMap(new this.w8(), 7);
+		this.loadMap(new this.w7(), 6);
+		this.loadMap(new this.w6(), 5);
+		this.loadMap(new this.w5(), 4);
+		this.loadMap(new this.w4(), 3);
+		this.loadMap(new this.w3(), 2);
+		this.loadMap(new this.w2(), 1);
+		this.loadMap(new this.w1(), 0);
+		this.loadMap(new this.nexus_day(), 18);
+		this.loadMap(new this.nexus_night(), 19);
+		this.loadMap(new this.nexus_sunrise(), 20);
+		this.loadMap(new this.nexus_sunset(), 21);
+		this.loadMap(new this.shatters(), 17);
+		this.loadMap(new this.castle(), 13);
+		this.loadMap(new this.chamber(), 14);
+		this.loadMap(new this.wc(), 15);
+		this.loadMap(new this.vault(), 16);
+	}
+
+	private function loadMap(_arg_1:*, _arg_2:int):void
+	{
+		var _local_5:ByteArray = (_arg_1 as ByteArray);
+		var _local_4:Loader = new Loader();
+		var _local_3:ParameterizedHandlerContainer = new ParameterizedHandlerContainer();
+		_local_3.registerHandler(_local_4.contentLoaderInfo, "complete", this.getBitmapData, _arg_2, _local_3);
+		_local_4.loadBytes(_local_5);
+	}
+
+	private function getBitmapData(_arg_1:Event, _arg_2:int, _arg_3:ParameterizedHandlerContainer):void
+	{
+		_arg_3.destroyHandler(this.getBitmapData, _arg_1);
+		var _local_4:BitmapData = Bitmap(_arg_1.target.content).bitmapData;
+		if (_arg_2 < 13)
+		{
+			realmMaps[_arg_2] = _local_4;
+		}
+		else
+		{
+			switch (_arg_2)
+			{
+				case 13:
+					castleMap = _local_4;
+					return;
+				case 14:
+					chamberMap = _local_4;
+					return;
+				case 15:
+					wcMap = _local_4;
+					return;
+				case 16:
+					vaultMap = _local_4;
+					return;
+				case 17:
+					shattersMap = _local_4;
+					return;
+				case 18:
+					nexusMaps[0] = _local_4;
+					return;
+				case 19:
+					nexusMaps[1] = _local_4;
+					return;
+				case 20:
+					nexusMaps[2] = _local_4;
+					return;
+				case 21:
+					nexusMaps[3] = _local_4;
+					return;
+				default:
+			}
+		}
+	}
+
 	private function parse3DModels():void
 	{
 		var _local_1:String;
@@ -249,6 +386,22 @@ public class AssetLoader
 		}
 		currentXmlIsTesting = false;
 	}
+
+	/*private function outputTags():void TODO unused function
+	{
+		var _local_3:uint = EmbeddedData.objectFiles.length;
+		var _local_4:int;
+		while (_local_4 < _local_3)
+		{
+			var _local_2:XML = XML(EmbeddedData.objectFiles[_local_4]);
+			var _local_6:XMLList = _local_2.descendants();
+			for each (var _local_1:XMLList in _local_6)
+			{
+				(trace(_local_1.localName()));
+			}
+			_local_4++;
+		}
+	}*/
 
 	private function parseRegionFiles():void
 	{

@@ -67,14 +67,35 @@ public class GetCharListTask extends BaseTask
 	private function sendRequest():void
 	{
 		this.client.complete.addOnce(this.onComplete);
-		this.client.sendRequest("/char/list", this.requestData);
+		if (Parameters.Cache_CHARLIST_valid && Parameters.data_.cacheCharList)
+		{
+			this.onComplete(true, Parameters.Cache_CHARLIST_data);
+		}
+		else
+		{
+			this.client.sendRequest("/char/list", this.requestData);
+		}
 	}
 
 	private function onComplete(_arg_1:Boolean, _arg_2:*):void
 	{
+		if (_arg_2.indexOf("rror>Internal Error") != -1 || _arg_2.indexOf("rror>Internal error") != -1)
+		{
+			if (Parameters.Cache_CHARLIST_valid && Parameters.data_.cacheCharList)
+			{
+				_arg_2 = Parameters.Cache_CHARLIST_data;
+				_arg_1 = true;
+			}
+			else
+			{
+				Parameters.preload = true;
+			}
+		}
 		if (_arg_1)
 		{
 			this.onListComplete(_arg_2);
+			Parameters.Cache_CHARLIST_valid = true;
+			Parameters.Cache_CHARLIST_data = _arg_2;
 		}
 		else
 		{
@@ -90,6 +111,7 @@ public class GetCharListTask extends BaseTask
 		_local_1.play_platform = this.account.playPlatform();
 		_local_1.do_login = Parameters.sendLogin_;
 		MoreObjectUtil.addToObject(_local_1, this.account.getCredentials());
+		MoreObjectUtil.addToObject(_local_1, this.account.getVaults());
 		return (_local_1);
 	}
 
@@ -127,7 +149,7 @@ public class GetCharListTask extends BaseTask
 				}
 				if (_local_2.Account[0].hasOwnProperty("SecurityQuestions"))
 				{
-					this.securityQuestionsModel.showSecurityQuestionsOnStartup = (_local_2.Account[0].SecurityQuestions[0].ShowSecurityQuestionsDialog[0] == "1");
+					this.securityQuestionsModel.showSecurityQuestionsOnStartup = (!Parameters.data_.skipPopups && !Parameters.ignoringSecurityQuestions && _local_2.Account[0].SecurityQuestions[0].ShowSecurityQuestionsDialog[0] == "1");
 					this.securityQuestionsModel.clearQuestionsList();
 					for each (_local_5 in _local_2.Account[0].SecurityQuestions[0].SecurityQuestionsKeys[0].SecurityQuestionsKey)
 					{
@@ -177,6 +199,7 @@ public class GetCharListTask extends BaseTask
 	{
 		this.logger.info("GetUserDataTask invalid credentials");
 		this.account.clear();
+		Parameters.Cache_CHARLIST_valid = false;
 		this.client.complete.addOnce(this.onComplete);
 		this.requestData = this.makeRequestData();
 		this.client.sendRequest("/char/list", this.requestData);

@@ -43,6 +43,39 @@ public class RectangleUtil
 		return (PointUtil.distanceXY(_local_4, _local_5, _arg_2, _arg_3));
 	}
 
+	public static function pointDistSquared(_arg_1:Rectangle, _arg_2:Number, _arg_3:Number):Number
+	{
+		var _local_4:Number = _arg_2;
+		var _local_5:Number = _arg_3;
+		if (_local_4 < _arg_1.x)
+		{
+			_local_4 = _arg_1.x;
+		}
+		else
+		{
+			if (_local_4 > _arg_1.right)
+			{
+				_local_4 = _arg_1.right;
+			}
+		}
+		if (_local_5 < _arg_1.y)
+		{
+			_local_5 = _arg_1.y;
+		}
+		else
+		{
+			if (_local_5 > _arg_1.bottom)
+			{
+				_local_5 = _arg_1.bottom;
+			}
+		}
+		if (((_local_4 == _arg_2) && (_local_5 == _arg_3)))
+		{
+			return (0);
+		}
+		return (PointUtil.distanceSquaredXY(_local_4, _local_5, _arg_2, _arg_3));
+	}
+
 	public static function closestPoint(_arg_1:Rectangle, _arg_2:Number, _arg_3:Number):Point
 	{
 		var _local_4:Number = _arg_2;

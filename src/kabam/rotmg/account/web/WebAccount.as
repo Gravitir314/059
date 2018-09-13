@@ -89,7 +89,7 @@ public class WebAccount implements Account
 
 	public function isRegistered():Boolean
 	{
-		return ((!(this.getPassword() == "")) || (!(this.getToken() == "")));
+		return (this.getPassword() != "" || this.getSecret() != "" || this.getToken() != "");
 	}
 
 	public function updateUser(_arg_1:String, _arg_2:String, _arg_3:String, _arg_4:String):void

@@ -78,7 +78,7 @@ public class SquareFace
 		this.face_.uvt_.length = 0;
 		this.face_.uvt_.push((_local_4), (_local_5), 0, (1 + _local_4), (_local_5), 0, (1 + _local_4), (1 + _local_5), 0, (_local_4), (1 + _local_5), 0);
 		this.face_.setUVT(this.face_.uvt_);
-		return (this.face_.draw(_arg_1, _arg_2));
+		return (this.face_.draw(_arg_1, _arg_2, this.animate_ != AnimateProperties.NO_ANIMATE));
 	}
 
 

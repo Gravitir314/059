@@ -5,6 +5,7 @@ package com.company.assembleegameclient.objects
 import com.company.assembleegameclient.engine3d.Face3D;
 import com.company.assembleegameclient.map.Camera;
 import com.company.assembleegameclient.map.Square;
+import com.company.assembleegameclient.parameters.Parameters;
 import com.company.util.BitmapUtil;
 
 import flash.display.BitmapData;
@@ -44,6 +45,10 @@ public class DoubleWall extends GameObject
 
 	override public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void
 	{
+		if (!Parameters.ssmode && Parameters.lowCPUMode)
+		{
+			return;
+		}
 		var _local_6:BitmapData;
 		var _local_7:Face3D;
 		var _local_8:Square;
@@ -81,10 +86,10 @@ public class DoubleWall extends GameObject
 					_local_7.setTexture(_local_4);
 				}
 			}
-			_local_7.draw(_arg_1, _arg_2);
+			_local_7.draw(_arg_1, _arg_2, this.animations_ != null);
 			_local_5++;
 		}
-		this.topFace_.draw(_arg_1, _arg_2);
+		this.topFace_.draw(_arg_1, _arg_2, this.animations_ != null);
 	}
 
 	public function rebuild3D():void
