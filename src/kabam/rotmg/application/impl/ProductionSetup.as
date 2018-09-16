@@ -13,7 +13,7 @@ public class ProductionSetup implements ApplicationSetup
 	private const UNENCRYPTED:String = ("http://" + SERVER);
 	private const ENCRYPTED:String = ("https://" + SERVER);
 	private const ANALYTICS:String = "UA-101960510-3";
-	private const BUILD_LABEL:String = "RotMG #{VERSION}.{MINOR}";
+	private const BUILD_LABEL:String = "RotMG #{VERSION}";
 
 
 	public function getAppEngineUrl(_arg_1:Boolean = false):String
@@ -28,7 +28,7 @@ public class ProductionSetup implements ApplicationSetup
 
 	public function getBuildLabel():String
 	{
-		return (this.BUILD_LABEL.replace("{VERSION}", Parameters.BUILD_VERSION).replace("{MINOR}", Parameters.MINOR_VERSION));
+		return (this.BUILD_LABEL.replace("{VERSION}", Parameters.data_.gameVersion));
 	}
 
 	public function useLocalTextures():Boolean

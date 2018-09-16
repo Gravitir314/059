@@ -13,7 +13,7 @@ public class ChatMessage
 	public var isToMe:Boolean;
 	public var isWhisper:Boolean;
 	public var tokens:Object;
-	public var bad:Boolean = false; // TODO what this mean?
+	public var bad:Boolean;
 
 
 	public static function make(_arg_1:String, _arg_2:String, _arg_3:int = -1, _arg_4:int = -1, _arg_5:String = "", _arg_6:Boolean = false, _arg_7:Object = null, _arg_8:Boolean = false, _arg_9:Boolean = false):ChatMessage

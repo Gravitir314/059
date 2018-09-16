@@ -4487,7 +4487,7 @@
       <ActivateOnEquip stat="3" amount="100">IncrementStat</ActivateOnEquip>
       <BagType>6</BagType>
       <FameBonus>5</FameBonus>
-      <feedPower>700</feedPower>
+      <feedPower>900</feedPower>
       <Soulbound/>
    </Object>
    <Object type="0xba1" id="Ring of the Nile">

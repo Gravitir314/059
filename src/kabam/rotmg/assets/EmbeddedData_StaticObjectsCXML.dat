@@ -6548,7 +6548,6 @@
       </Texture>
       <ShadowSize>55</ShadowSize>
       <Z>-0.1</Z>
-      <OccupySquare/>
       <Static/>
    </Object>
    <Object type="0x1913" id="Tailor">

@@ -41,7 +41,6 @@ public class Portal extends GameObject implements IInteractiveObject
 
 	override protected function makeNameBitmapData():BitmapData
 	{
-		//var _local_1:Array = name_.match(NAME_PARSER); TODO need this?
 		var _local_2:StringBuilder = new PortalNameParser().makeBuilder(name_);
 		var _local_3:BitmapTextFactory = StaticInjectorContext.getInjector().getInstance(BitmapTextFactory);
 		return (_local_3.make(_local_2, 16, 0xFFFFFF, true, IDENTITY_MATRIX, true));

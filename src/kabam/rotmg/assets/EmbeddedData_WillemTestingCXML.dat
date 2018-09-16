@@ -207,6 +207,7 @@
          <Id>4798003</Id>
          <Right/>
       </RemoteTexture>
+      <Enemy/>
       <Animation prob="1" period="0">
          <Frame time="0.2">
             <RemoteTexture>

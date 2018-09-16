@@ -68,6 +68,7 @@ public class GameObject extends BasicObject
 	private static const NEGATIVE_ZERO_LIMIT:Number = -(ZERO_LIMIT);
 	public static const ATTACK_PERIOD:int = 300;
 	private static const DEFAULT_HP_BAR_Y_OFFSET:int = 6;
+	public static const radius_:Number = 0.5;
 
 	public var nameBitmapData_:BitmapData = null;
 	private var nameFill_:GraphicsBitmapFill = null;
@@ -79,7 +80,6 @@ public class GameObject extends BasicObject
 	private var isChargingTransformSet:Boolean = false;
 	public var props_:ObjectProperties = ObjectLibrary.defaultProps_;
 	public var name_:String;
-	public var radius_:Number = 0.5;
 	public var facing_:Number = 0;
 	public var flying_:Boolean = false;
 	public var attackAngle_:Number = 0;
@@ -115,16 +115,15 @@ public class GameObject extends BasicObject
 	public var hallucinatingTexture_:BitmapData = null;
 	public var flash_:FlashDescription = null;
 	public var connectType_:int = -1;
-	private var isStunImmune_:Boolean = false;
-	private var isParalyzeImmune_:Boolean = false;
-	private var isDazedImmune_:Boolean = false;
+
+	private var isStunImmuneVar_:Boolean = false;
+	private var isParalyzeImmuneVar_:Boolean = false;
+	private var isDazedImmuneVar_:Boolean = false;
+
 	private var isStasisImmune_:Boolean = false;
-	private var ishpScaleSet:Boolean = false;
 	protected var lastTickUpdateTime_:int = 0;
 	protected var myLastTickId_:int = -1;
 	protected var posAtTick_:Point = new Point();
-	protected var tickPosition_:Point = new Point();
-	protected var moveVec_:Vector3D = new Vector3D();
 	protected var bitmapFill_:GraphicsBitmapFill = new GraphicsBitmapFill(null, null, false, false);
 	protected var path_:GraphicsPath = new GraphicsPath(GraphicsUtil.QUAD_COMMANDS, null);
 	protected var vS_:Vector.<Number> = new Vector.<Number>();
@@ -140,8 +139,57 @@ public class GameObject extends BasicObject
 	protected var shadowGradientFill_:GraphicsGradientFill = null;
 	protected var shadowPath_:GraphicsPath = null;
 
+	private var lastCon1:uint = 0;
+	private var lastCon2:uint = 0;
+	public var fakeBag_:Boolean;
 	public var hasShock:Boolean;
+	public var isQuiet:Boolean;
+	public var isWeak:Boolean;
+	public var isSlowed:Boolean;
+	public var isSick:Boolean;
+	public var isDazed:Boolean;
+	public var isStunned:Boolean;
+	public var isBlind:Boolean;
+	public var isDrunk:Boolean;
+	public var isBleeding:Boolean;
+	public var isConfused:Boolean;
+	public var isStunImmune:Boolean;
+	public var isInvisible:Boolean;
+	public var isParalyzed:Boolean;
+	public var isSpeedy:Boolean;
+	public var isNinjaSpeedy:Boolean;
+	public var isHallucinating:Boolean;
+	public var isHealing:Boolean;
+	public var isDamaging:Boolean;
+	public var isBerserk:Boolean;
+	public var isPaused:Boolean;
+	public var isStasis:Boolean;
+	public var isInvincible:Boolean;
+	public var isInvulnerable:Boolean;
+	public var isArmored:Boolean;
+	public var isArmorBroken:Boolean;
+	public var isArmorBrokenImmune:Boolean;
+	public var isSlowedImmune:Boolean;
+	public var isUnstable:Boolean;
+	public var isShowPetEffectIcon:Boolean;
+	public var isDarkness:Boolean;
+	public var isParalyzeImmune:Boolean;
+	public var isDazedImmune:Boolean;
+	public var isPetrified:Boolean;
+	public var isPetrifiedImmune:Boolean;
+	public var isCursed:Boolean;
+	public var isCursedImmune:Boolean;
+	public var isSilenced:Boolean;
+	public var isExposed:Boolean;
+	public var mobInfoShown:Boolean;
+	public var footer_:Boolean;
+	public var lastPercent_:int;
 	public var myPet:Boolean;
+	public var jittery:Boolean = false;
+
+	public var iconCache:Vector.<BitmapData> = new Vector.<BitmapData>();
+	public var tickPosition_:Point = new Point();
+	public var moveVec_:Vector3D = new Vector3D();
 
 	public function GameObject(_arg_1:XML)
 	{
@@ -213,15 +261,15 @@ public class GameObject extends BasicObject
 		}
 		if (_arg_1.hasOwnProperty("StunImmune"))
 		{
-			this.isStunImmune_ = true;
+			this.isStunImmuneVar_ = true;
 		}
 		if (_arg_1.hasOwnProperty("ParalyzeImmune"))
 		{
-			this.isParalyzeImmune_ = true;
+			this.isParalyzeImmuneVar_ = true;
 		}
 		if (_arg_1.hasOwnProperty("DazedImmune"))
 		{
-			this.isDazedImmune_ = true;
+			this.isDazedImmuneVar_ = true;
 		}
 		if (_arg_1.hasOwnProperty("StasisImmune"))
 		{
@@ -230,26 +278,50 @@ public class GameObject extends BasicObject
 		this.props_.loadSounds();
 	}
 
+	public static function outputPositions(_arg_1:GameObject):String
+	{
+		return ((((((((((("X: " + int(_arg_1.x_)) + ", Y: ") + int(_arg_1.y_)) + ", pX: ") + int(_arg_1.posAtTick_.x)) + ", pY: ") + int(_arg_1.posAtTick_.y)) + ", tX: ") + int(_arg_1.tickPosition_.x)) + ", tY: ") + int(_arg_1.tickPosition_.y));
+	}
+
+	public function updateStatuses():void
+	{
+		isPaused = isPaused_();
+		isStasis = isStasis_();
+		isInvincible = isInvincible_();
+		isInvulnerable = isInvulnerable_();
+		isArmored = isArmored_();
+		isArmorBroken = isArmorBroken_();
+		isArmorBrokenImmune = isArmorBrokenImmune_();
+		isStunImmune = isStunImmune_();
+		isSlowedImmune = isSlowedImmune_();
+		isShowPetEffectIcon = isShowPetEffectIcon_();
+		isParalyzeImmune = isParalyzeImmune_();
+		isDazedImmune = isDazedImmune_();
+		isPetrified = isPetrified_();
+		isPetrifiedImmune = isPetrifiedImmune_();
+		isCursed = isCursed_();
+		isCursedImmune = isCursedImmune_();
+	}
+
 	public static function damageWithDefense(_arg_1:int, _arg_2:int, _arg_3:Boolean, _arg_4:Vector.<uint>):int
 	{
-		var _local_5:int = _arg_2;
 		if (((_arg_3) || (!((_arg_4[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.ARMORBROKEN_BIT) == 0))))
 		{
-			_local_5 = 0;
+			_arg_2 = 0;
 		}
 		else
 		{
 			if ((_arg_4[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.ARMORED_BIT) != 0)
 			{
-				_local_5 = (_local_5 * 2);
+				_arg_2 = (_arg_2 * 2);
 			}
 		}
 		if ((_arg_4[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.EXPOSED_BIT) != 0)
 		{
-			_local_5 = (_local_5 - 20);
+			_arg_2 = (_arg_2 - 20);
 		}
 		var _local_6:int = int(((_arg_1 * 3) / 20));
-		var _local_7:int = Math.max(_local_6, (_arg_1 - _local_5));
+		var _local_7:int = Math.max(_local_6, (_arg_1 - _arg_2));
 		if ((_arg_4[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.INVULNERABLE_BIT) != 0)
 		{
 			_local_7 = 0;
@@ -374,6 +446,7 @@ public class GameObject extends BasicObject
 				if (_local_2 != null)
 				{
 					_local_2.dispose();
+					_local_2 = null;
 				}
 				else
 				{
@@ -384,6 +457,7 @@ public class GameObject extends BasicObject
 						if (_local_5 != null)
 						{
 							_local_5.dispose();
+							_local_5 = null;
 						}
 					}
 				}
@@ -426,104 +500,126 @@ public class GameObject extends BasicObject
 			this.shadowPath_.data = null;
 			this.shadowPath_ = null;
 		}
+		this.footer_ = false;
 	}
 
-	public function isQuiet():Boolean
+	public function isQuiet_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.QUIET_BIT) == 0));
 	}
 
-	public function isWeak():Boolean
+	public function isWeak_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.WEAK_BIT) == 0));
 	}
 
-	public function isSlowed():Boolean
+	public function isSlowed_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.SLOWED_BIT) == 0));
 	}
 
-	public function isSick():Boolean
+	public function isSick_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.SICK_BIT) == 0));
 	}
 
-	public function isDazed():Boolean
+	public function isDazed_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.DAZED_BIT) == 0));
 	}
 
-	public function isStunned():Boolean
+	public function isStunned_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.STUNNED_BIT) == 0));
 	}
 
-	public function isBlind():Boolean
+	public function isBlind_():Boolean
 	{
+		if (!Parameters.ssmode && (1 << 8 & Parameters.data_.ccdebuffBitmask) > 0)
+		{
+			return (false);
+		}
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.BLIND_BIT) == 0));
 	}
 
-	public function isDrunk():Boolean
+	public function isDrunk_():Boolean
 	{
+		if (!Parameters.ssmode && (1 << 10 & Parameters.data_.ccdebuffBitmask) > 0)
+		{
+			return (false);
+		}
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.DRUNK_BIT) == 0));
 	}
 
-	public function isConfused():Boolean
+	public function isBleeding_():Boolean
 	{
+		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.BLEEDING_BIT) == 0));
+	}
+
+	public function isConfused_():Boolean
+	{
+		if (!Parameters.ssmode && (1 << 11 & Parameters.data_.ccdebuffBitmask) > 0)
+		{
+			return (false);
+		}
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.CONFUSED_BIT) == 0));
 	}
 
-	public function isStunImmune():Boolean
+	public function isStunImmune_():Boolean
 	{
-		return ((!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.STUN_IMMUNE_BIT) == 0)) || (this.isStunImmune_));
+		return ((!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.STUN_IMMUNE_BIT) == 0)) || (this.isStunImmuneVar_));
 	}
 
-	public function isInvisible():Boolean
+	public function isInvisible_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.INVISIBLE_BIT) == 0));
 	}
 
-	public function isParalyzed():Boolean
+	public function isParalyzed_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.PARALYZED_BIT) == 0));
 	}
 
-	public function isSpeedy():Boolean
+	public function isSpeedy_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.SPEEDY_BIT) == 0));
 	}
 
-	public function isNinjaSpeedy():Boolean
+	public function isNinjaSpeedy_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.NINJA_SPEEDY_BIT) == 0));
 	}
 
-	public function isHallucinating():Boolean
+	public function isHallucinating_():Boolean
 	{
+		if (!Parameters.ssmode && (1 << 9 & Parameters.data_.ccdebuffBitmask) > 0)
+		{
+			return (false);
+		}
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.HALLUCINATING_BIT) == 0));
 	}
 
-	public function isHealing():Boolean
+	public function isHealing_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.HEALING_BIT) == 0));
 	}
 
-	public function isDamaging():Boolean
+	public function isDamaging_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.DAMAGING_BIT) == 0));
 	}
 
-	public function isBerserk():Boolean
+	public function isBerserk_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.BERSERK_BIT) == 0));
 	}
 
-	public function isPaused():Boolean
+	public function isPaused_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.PAUSED_BIT) == 0));
 	}
 
-	public function isStasis():Boolean
+	public function isStasis_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.STASIS_BIT) == 0));
 	}
@@ -533,87 +629,95 @@ public class GameObject extends BasicObject
 		return ((this.isStasisImmune_) || (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.STASIS_IMMUNE_BIT) == 0)));
 	}
 
-	public function isInvincible():Boolean
+	public function isInvincible_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.INVINCIBLE_BIT) == 0));
 	}
 
-	public function isInvulnerable():Boolean
+	public function isInvulnerable_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.INVULNERABLE_BIT) == 0));
 	}
 
-	public function isArmored():Boolean
+	public function isArmored_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.ARMORED_BIT) == 0));
 	}
 
-	public function isArmorBroken():Boolean
+	public function isArmorBroken_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.ARMORBROKEN_BIT) == 0));
 	}
 
-	public function isArmorBrokenImmune():Boolean
+	public function isArmorBrokenImmune_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.ARMORBROKEN_IMMUNE_BIT) == 0));
 	}
 
-	public function isSlowedImmune():Boolean
+	public function isSlowedImmune_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.SLOWED_IMMUNE_BIT) == 0));
 	}
 
-	public function isUnstable():Boolean
+	public function isUnstable_():Boolean
 	{
+		if (!Parameters.ssmode && (1 << 30 & Parameters.data_.ccdebuffBitmask) > 0)
+		{
+			return (false);
+		}
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.UNSTABLE_BIT) == 0));
 	}
 
-	public function isShowPetEffectIcon():Boolean
+	public function isShowPetEffectIcon_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.PET_EFFECT_ICON) == 0));
 	}
 
-	public function isDarkness():Boolean
+	public function isDarkness_():Boolean
 	{
+		if (!Parameters.ssmode && (1 << 31 & Parameters.data_.ccdebuffBitmask) > 0)
+		{
+			return (false);
+		}
 		return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.DARKNESS_BIT) == 0));
 	}
 
-	public function isParalyzeImmune():Boolean
+	public function isParalyzeImmune_():Boolean
 	{
-		return ((this.isParalyzeImmune_) || (!((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.PARALYZED_IMMUNE_BIT) == 0)));
+		return ((this.isParalyzeImmuneVar_) || (!((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.PARALYZED_IMMUNE_BIT) == 0)));
 	}
 
-	public function isDazedImmune():Boolean
+	public function isDazedImmune_():Boolean
 	{
-		return ((this.isDazedImmune_) || (!((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.DAZED_IMMUNE_BIT) == 0)));
+		return ((this.isDazedImmuneVar_) || (!((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.DAZED_IMMUNE_BIT) == 0)));
 	}
 
-	public function isPetrified():Boolean
+	public function isPetrified_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.PETRIFIED_BIT) == 0));
 	}
 
-	public function isPetrifiedImmune():Boolean
+	public function isPetrifiedImmune_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.PETRIFIED_IMMUNE_BIT) == 0));
 	}
 
-	public function isCursed():Boolean
+	public function isCursed_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.CURSE_BIT) == 0));
 	}
 
-	public function isCursedImmune():Boolean
+	public function isCursedImmune_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.CURSE_IMMUNE_BIT) == 0));
 	}
 
-	public function isSilenced():Boolean
+	public function isSilenced_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.SILENCED_BIT) == 0));
 	}
 
-	public function isExposed():Boolean
+	public function isExposed_():Boolean
 	{
 		return (!((this.condition_[ConditionEffect.CE_SECOND_BATCH] & ConditionEffect.EXPOSED_BIT) == 0));
 	}
@@ -711,7 +815,7 @@ public class GameObject extends BasicObject
 
 	override public function removeFromMap():void
 	{
-		if (((this.props_.static_) && (!(square_ == null))))
+		if (this.props_.static_ && square_ != null)
 		{
 			if (square_.obj_ == this)
 			{
@@ -756,13 +860,40 @@ public class GameObject extends BasicObject
 		return (true);
 	}
 
+	public function footer(_arg_1:String):void
+	{
+		var _local_2:CharacterStatusText = new CharacterStatusText(this, 0xFFFFFF, -1);
+		_local_2.setStringBuilder(new StaticStringBuilder(_arg_1));
+		map_.mapOverlay_.addStatusText(_local_2);
+		this.footer_ = _local_2;
+	}
+
+	public function mobInfo(_arg_1:String):void
+	{
+		var _local_2:CharacterStatusText = new CharacterStatusText(this, 0xFFFFFF, int.MAX_VALUE);
+		_local_2.setStringBuilder(new StaticStringBuilder(_arg_1));
+		map_.mapOverlay_.addStatusText(_local_2);
+	}
+
 	override public function update(_arg_1:int, _arg_2:int):Boolean
 	{
+		if (!Parameters.ssmode && Parameters.data_.showMobInfo)
+		{
+			if (!this.mobInfoShown && this.props_.isEnemy_)
+			{
+				this.mobInfo(("" + this.objectType_));
+				this.mobInfoShown = true;
+			}
+		}
+		else
+		{
+			this.mobInfoShown = false;
+		}
 		var _local_4:int;
 		var _local_5:Number;
 		var _local_6:Number;
 		var _local_3:Boolean;
-		if (!((this.moveVec_.x == 0) && (this.moveVec_.y == 0)))
+		if (this.moveVec_.x != 0 && this.moveVec_.y != 0)
 		{
 			if (this.myLastTickId_ < map_.gs_.gsc_.lastTickId_)
 			{
@@ -821,6 +952,9 @@ public class GameObject extends BasicObject
 		this.moveVec_.x = ((this.tickPosition_.x - this.posAtTick_.x) / _arg_3);
 		this.moveVec_.y = ((this.tickPosition_.y - this.posAtTick_.y) / _arg_3);
 		this.myLastTickId_ = _arg_4;
+		_arg_1 = Math.atan2(this.moveVec_.y, this.moveVec_.x);
+		_arg_2 = _arg_1;
+		this.jittery = ((_arg_2 > (_arg_1 + (Math.PI / 4))) || (_arg_2 < (_arg_1 - (Math.PI / 4))));
 	}
 
 	public function damage(_arg_1:Boolean, _arg_2:int, _arg_3:Vector.<uint>, _arg_4:Boolean, _arg_5:Projectile, _arg_6:Boolean = false):void
@@ -843,6 +977,7 @@ public class GameObject extends BasicObject
 		{
 			if (_arg_3 != null)
 			{
+				_arg_4 = (Parameters.ssmode || !Parameters.data_.ignoreStatusText);
 				_local_8 = 0;
 				for each (_local_9 in _arg_3)
 				{
@@ -854,7 +989,10 @@ public class GameObject extends BasicObject
 						if (_local_13 != null)
 						{
 							_local_10 = ConditionEffect.effects_[_local_9];
-							this.showConditionEffectPet(_local_8, _local_10.name_);
+							if (_arg_4)
+							{
+								this.showConditionEffectPet(_local_8, _local_10.name_);
+							}
 							_local_8 = (_local_8 + 500);
 						}
 					}
@@ -892,9 +1030,12 @@ public class GameObject extends BasicObject
 							case ConditionEffect.STASIS:
 								if (this.isStasisImmune())
 								{
-									_local_11 = new CharacterStatusText(this, 0xFF0000, 3000);
-									_local_11.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
-									map_.mapOverlay_.addStatusText(_local_11);
+									if (_arg_4)
+									{
+										_local_11 = new CharacterStatusText(this, 0xFF0000, 3000);
+										_local_11.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
+										map_.mapOverlay_.addStatusText(_local_11);
+									}
 								}
 								else
 								{
@@ -902,11 +1043,14 @@ public class GameObject extends BasicObject
 								}
 								break;
 							case ConditionEffect.SLOWED:
-								if (this.isSlowedImmune())
+								if (this.isSlowedImmune)
 								{
-									_local_11 = new CharacterStatusText(this, 0xFF0000, 3000);
-									_local_11.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
-									map_.mapOverlay_.addStatusText(_local_11);
+									if (_arg_4)
+									{
+										_local_11 = new CharacterStatusText(this, 0xFF0000, 3000);
+										_local_11.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
+										map_.mapOverlay_.addStatusText(_local_11);
+									}
 								}
 								else
 								{
@@ -914,11 +1058,14 @@ public class GameObject extends BasicObject
 								}
 								break;
 							case ConditionEffect.ARMORBROKEN:
-								if (this.isArmorBrokenImmune())
+								if (this.isArmorBrokenImmune)
 								{
-									_local_11 = new CharacterStatusText(this, 0xFF0000, 3000);
-									_local_11.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
-									map_.mapOverlay_.addStatusText(_local_11);
+									if (_arg_4)
+									{
+										_local_11 = new CharacterStatusText(this, 0xFF0000, 3000);
+										_local_11.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
+										map_.mapOverlay_.addStatusText(_local_11);
+									}
 								}
 								else
 								{
@@ -926,59 +1073,78 @@ public class GameObject extends BasicObject
 								}
 								break;
 							case ConditionEffect.STUNNED:
-								if (this.isStunImmune())
+								if (this.isStunImmune)
 								{
-									_local_11 = new CharacterStatusText(this, 0xFF0000, 3000);
-									_local_11.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
-									map_.mapOverlay_.addStatusText(_local_11);
+									if (_arg_4)
+									{
+										_local_11 = new CharacterStatusText(this, 0xFF0000, 3000);
+										_local_11.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
+										map_.mapOverlay_.addStatusText(_local_11);
+									}
 								}
 								else
 								{
 									_local_10 = ConditionEffect.effects_[_local_9];
+									this.isStunned = true;
 								}
 								break;
 							case ConditionEffect.DAZED:
-								if (this.isDazedImmune())
+								if (this.isDazedImmune)
 								{
-									_local_11 = new CharacterStatusText(this, 0xFF0000, 3000);
-									_local_11.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
-									map_.mapOverlay_.addStatusText(_local_11);
+									if (_arg_4)
+									{
+										_local_11 = new CharacterStatusText(this, 0xFF0000, 3000);
+										_local_11.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
+										map_.mapOverlay_.addStatusText(_local_11);
+									}
 								}
 								else
 								{
 									_local_10 = ConditionEffect.effects_[_local_9];
+									this.isDazed = true;
 								}
 								break;
 							case ConditionEffect.PARALYZED:
-								if (this.isParalyzeImmune())
+								if (this.isParalyzeImmune)
 								{
-									_local_11 = new CharacterStatusText(this, 0xFF0000, 3000);
-									_local_11.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
-									map_.mapOverlay_.addStatusText(_local_11);
+									if (_arg_4)
+									{
+										_local_11 = new CharacterStatusText(this, 0xFF0000, 3000);
+										_local_11.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
+										map_.mapOverlay_.addStatusText(_local_11);
+									}
 								}
 								else
 								{
 									_local_10 = ConditionEffect.effects_[_local_9];
+									this.isParalyzed = true;
 								}
 								break;
 							case ConditionEffect.PETRIFIED:
-								if (this.isPetrifiedImmune())
+								if (this.isPetrifiedImmune)
 								{
-									_local_11 = new CharacterStatusText(this, 0xFF0000, 3000);
-									_local_11.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
-									map_.mapOverlay_.addStatusText(_local_11);
+									if (_arg_4)
+									{
+										_local_11 = new CharacterStatusText(this, 0xFF0000, 3000);
+										_local_11.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
+										map_.mapOverlay_.addStatusText(_local_11);
+									}
 								}
 								else
 								{
 									_local_10 = ConditionEffect.effects_[_local_9];
+									this.isPetrified = true;
 								}
 								break;
 							case ConditionEffect.CURSE:
-								if (this.isCursedImmune())
+								if (this.isCursedImmune)
 								{
-									_local_11 = new CharacterStatusText(this, 0xFF0000, 3000);
-									_local_11.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
-									map_.mapOverlay_.addStatusText(_local_11);
+									if (_arg_4)
+									{
+										_local_11 = new CharacterStatusText(this, 0xFF0000, 3000);
+										_local_11.setStringBuilder(new LineBuilder().setParams(TextKey.GAMEOBJECT_IMMUNE));
+										map_.mapOverlay_.addStatusText(_local_11);
+									}
 								}
 								else
 								{
@@ -1002,63 +1168,90 @@ public class GameObject extends BasicObject
 								this.condition_[ConditionEffect.CE_SECOND_BATCH] = (this.condition_[ConditionEffect.CE_SECOND_BATCH] | _local_10.bit_);
 							}
 							_local_14 = _local_10.localizationKey_;
-							this.showConditionEffect(_local_8, _local_14);
+							if (!Parameters.ssmode && !Parameters.data_.ignoreStatusText)
+							{
+								this.showConditionEffect(_local_8, _local_14);
+							}
 							_local_8 = (_local_8 + 500);
 						}
 					}
 				}
 			}
 		}
-		if (((!((this.props_.isEnemy_) && (Parameters.data_.disableEnemyParticles))) && (!((!(this.props_.isEnemy_)) && (Parameters.data_.disablePlayersHitParticles)))))
+		if (!(this.props_.isEnemy_ && Parameters.data_.disableEnemyParticles) && (!(!this.props_.isEnemy_) && Parameters.data_.disablePlayersHitParticles) && this.texture_ != null)
 		{
-			_local_15 = BloodComposition.getBloodComposition(this.objectType_, this.texture_, this.props_.bloodProb_, this.props_.bloodColor_);
-			if (this.dead_)
+			if (!Parameters.data_.liteParticle || !Parameters.ssmode)
 			{
-				map_.addObj(new ExplosionEffect(_local_15, this.size_, 30), x_, y_);
-			}
-			else
-			{
-				if (_arg_5 != null)
+				_local_15 = BloodComposition.getBloodComposition(this.objectType_, this.texture_, this.props_.bloodProb_, this.props_.bloodColor_);
+				if (this.dead_)
 				{
-					map_.addObj(new HitEffect(_local_15, this.size_, 10, _arg_5.angle_, _arg_5.projProps_.speed_), x_, y_);
+					map_.addObj(new ExplosionEffect(_local_15, this.size_, 30), x_, y_);
 				}
 				else
 				{
-					map_.addObj(new ExplosionEffect(_local_15, this.size_, 10), x_, y_);
+					if (_arg_5)
+					{
+						map_.addObj(new HitEffect(_local_15, this.size_, 10, _arg_5.angle_, _arg_5.projProps_.speed_), x_, y_);
+					}
+					else
+					{
+						map_.addObj(new ExplosionEffect(_local_15, this.size_, 10), x_, y_);
+					}
 				}
 			}
 		}
-		if (((!(_arg_1)) && (((Parameters.data_.noEnemyDamage) && (this.props_.isEnemy_)) || ((Parameters.data_.noAllyDamage) && (this.props_.isPlayer_)))))
+		if (!_arg_1 && (Parameters.data_.noEnemyDamage && this.props_.isEnemy_ || Parameters.data_.noAllyDamage && this.props_.isPlayer_))
 		{
 			return;
 		}
-		if (_arg_2 > 0)
+		if (_arg_2 > 0 && !this.dead_ && this.map_ != null)
 		{
-			_local_16 = ((((this.isArmorBroken()) || ((!(_arg_5 == null)) && (_arg_5.projProps_.armorPiercing_))) || (_local_7)) || (_arg_6));
+			if (Parameters.data_.autoDecrementHP && this != this.map_.player_)
+			{
+				this.hp_ = (this.hp_ - _arg_2);
+			}
+			_local_16 = (this.isArmorBroken || _arg_5 != null && _arg_5.projProps_.armorPiercing_ || _local_7 || _arg_6);
 			this.showDamageText(_arg_2, _local_16);
 		}
 	}
 
 	public function showConditionEffect(_arg_1:int, _arg_2:String):void
 	{
-		var _local_3:CharacterStatusText = new CharacterStatusText(this, 0xFF0000, 3000, _arg_1);
-		_local_3.setStringBuilder(new LineBuilder().setParams(_arg_2));
-		map_.mapOverlay_.addStatusText(_local_3);
+		if (this.texture_ != null)
+		{
+			var _local_3:CharacterStatusText = new CharacterStatusText(this, 0xFF0000, 3000, _arg_1);
+			_local_3.setStringBuilder(new LineBuilder().setParams(_arg_2));
+			map_.mapOverlay_.addStatusText(_local_3);
+		}
 	}
 
 	public function showConditionEffectPet(_arg_1:int, _arg_2:String):void
 	{
-		var _local_3:CharacterStatusText = new CharacterStatusText(this, 0xFF0000, 3000, _arg_1);
-		_local_3.setStringBuilder(new StaticStringBuilder(("Pet " + _arg_2)));
-		map_.mapOverlay_.addStatusText(_local_3);
+		if (this.texture_ != null)
+		{
+			var _local_3:CharacterStatusText = new CharacterStatusText(this, 0xFF0000, 3000, _arg_1);
+			_local_3.setStringBuilder(new StaticStringBuilder(("Pet " + _arg_2)));
+			map_.mapOverlay_.addStatusText(_local_3);
+		}
 	}
 
 	public function showDamageText(_arg_1:int, _arg_2:Boolean):void
 	{
-		var _local_3:String = ("-" + _arg_1);
-		var _local_4:CharacterStatusText = new CharacterStatusText(this, ((_arg_2) ? 0x9000FF : 0xFF0000), 1000);
-		_local_4.setStringBuilder(new StaticStringBuilder(_local_3));
-		map_.mapOverlay_.addStatusText(_local_4);
+		if (this.texture_ != null)
+		{
+			var _local_3:String = ("-" + _arg_1);
+			var _local_4:CharacterStatusText;
+			if (Parameters.ssmode || !Parameters.data_.dynamicHPcolor)
+			{
+				_local_4 = new CharacterStatusText(this, ((_arg_2) ? 0x9000FF : 0xFF0000), 1000);
+			}
+			else
+			{
+				_local_4 = new CharacterStatusText(this, ((_arg_2) ? 0x9000FF : uint(Character.green2red((((this.hp_ - _arg_1) * 100) / this.maxHP_)))), 1000);
+			}
+			_local_4.setStringBuilder(new StaticStringBuilder(_local_3));
+			map_.mapOverlay_.addStatusText(_local_4);
+		}
 	}
 
 	protected function makeNameBitmapData():BitmapData
@@ -1070,6 +1263,10 @@ public class GameObject extends BasicObject
 
 	public function drawName(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:Boolean):void
 	{
+		if (!Parameters.ssmode && Parameters.lowCPUMode)
+		{
+			return;
+		}
 		if (this.nameBitmapData_ == null)
 		{
 			this.nameBitmapData_ = this.makeNameBitmapData();
@@ -1119,7 +1316,7 @@ public class GameObject extends BasicObject
 		if ((this is Pet))
 		{
 			_local_6 = Pet(this);
-			if (((!(this.condition_[ConditionEffect.CE_FIRST_BATCH] == 0)) && (!(this.isPaused()))))
+			if (this.condition_[ConditionEffect.CE_FIRST_BATCH] != 0 && !this.isPaused)
 			{
 				if (_local_6.skinId != 32912)
 				{
@@ -1137,6 +1334,10 @@ public class GameObject extends BasicObject
 		var _local_3:BitmapData = this.texture_;
 		var _local_4:int = this.size_;
 		var _local_5:BitmapData;
+		if (this is Container && !Parameters.ssmode && Parameters.data_.bigLootBags && (this as Container).drawMeBig_)
+		{
+			_local_4 = 200;
+		}
 		if (this.animatedChar_ != null)
 		{
 			_local_7 = 0;
@@ -1199,14 +1400,14 @@ public class GameObject extends BasicObject
 		}
 		if (!(this is Pet))
 		{
-			if (((this.isStasis()) || (this.isPetrified())))
+			if (this.isStasis || this.isPetrified)
 			{
 				_local_3 = CachingColorTransformer.filterBitmapData(_local_3, PAUSED_FILTER);
 			}
 		}
 		if (((this.tex1Id_ == 0) && (this.tex2Id_ == 0)))
 		{
-			if (((this.isCursed()) && (Parameters.data_.curseIndication)))
+			if (this.isCursed && Parameters.data_.curseIndication)
 			{
 				_local_3 = TextureRedrawer.redraw(_local_3, _local_4, false, 0xFF0000);
 			}
@@ -1233,6 +1434,10 @@ public class GameObject extends BasicObject
 				this.texturingCache_[_local_3] = _local_13;
 			}
 			_local_3 = _local_13;
+		}
+		if (!Parameters.ssmode && _local_6 != null && !this.myPet && Parameters.data_.alphaOnOthers && !map_.isPetYard)
+		{
+			_local_3 = CachingColorTransformer.alphaBitmapData(_local_3, Parameters.data_.alphaMan);
 		}
 		return (_local_3);
 	}
@@ -1295,13 +1500,21 @@ public class GameObject extends BasicObject
 		_arg_1.push(this.hpbarBackFill_);
 		_arg_1.push(this.hpbarBackPath_);
 		_arg_1.push(GraphicsUtil.END_FILL);
-		if (this.hp_ > 0)
+		var _local_8:int = ((this == this.map_.player_) ? this.map_.player_.clientHp : this.hp_);
+		if (_local_8 > 0)
 		{
-			_local_6 = (this.hp_ / this.maxHP_);
+			_local_6 = (_local_8 / this.maxHP_);
 			_local_7 = ((_local_6 * 2) * _local_3);
 			this.hpbarPath_.data.length = 0;
 			(this.hpbarPath_.data as Vector.<Number>).push((posS_[0] - _local_3), (posS_[1] + _arg_2), ((posS_[0] - _local_3) + _local_7), (posS_[1] + _arg_2), ((posS_[0] - _local_3) + _local_7), ((posS_[1] + _arg_2) + _local_4), (posS_[0] - _local_3), ((posS_[1] + _arg_2) + _local_4));
-			this.hpbarFill_.color = ((_local_6 < 0.5) ? ((_local_6 < 0.2) ? 14684176 : 16744464) : 0x10FF00);
+			if (Parameters.ssmode)
+			{
+				this.hpbarFill_.color = ((_local_8 < 0.5) ? ((_local_8 < 0.2) ? 14684176 : 16744464) : 0x10FF00);
+			}
+			else
+			{
+				this.hpbarFill_.color = uint(Character.green2red(_local_8 * 100));
+			}
 			_arg_1.push(this.hpbarFill_);
 			_arg_1.push(this.hpbarPath_);
 			_arg_1.push(GraphicsUtil.END_FILL);
@@ -1319,6 +1532,10 @@ public class GameObject extends BasicObject
 		var _local_4:BitmapData = this.getTexture(_arg_2, _arg_3);
 		if (this.props_.drawOnGround_)
 		{
+			if (!Parameters.ssmode && Parameters.lowCPUMode)
+			{
+				return;
+			}
 			if (square_.faces_.length == 0)
 			{
 				return;
@@ -1332,7 +1549,34 @@ public class GameObject extends BasicObject
 			_arg_1.push(GraphicsUtil.END_FILL);
 			return;
 		}
-		var _local_5:Boolean = (((((this.props_) && ((this.props_.isEnemy_) || (this.props_.isPlayer_))) && (!(this.isInvincible()))) && ((this.props_.isPlayer_) || (!(this.isInvulnerable())))) && (!(this.props_.noMiniMap_)));
+		var _local_5:Boolean = (((((this.props_) && ((this.props_.isEnemy_) || (this.props_.isPlayer_))) && (!(this.isInvincible))) && ((this.props_.isPlayer_) || (!(this.isInvulnerable)))) && (!(this.props_.noMiniMap_)));
+		if (!Parameters.ssmode)
+		{
+			if (this.props_ && !this.isInvincible)
+			{
+				if (this.props_.isEnemy_ && !this.props_.noMiniMap_)
+				{
+					_local_5 = true;
+				}
+				else
+				{
+					if (this.props_.isPlayer_)
+					{
+						if (this == this.map_.player_)
+						{
+							_local_5 = true;
+						}
+						else
+						{
+							if (Parameters.data_.showHPBarOnAlly)
+							{
+								_local_5 = true;
+							}
+						}
+					}
+				}
+			}
+		}
 		if (this.obj3D_ != null)
 		{
 			if ((((_local_5) && (this.bHPBarParamCheck())) && (this.props_.healthBar_)))
@@ -1429,7 +1673,7 @@ public class GameObject extends BasicObject
 		_arg_1.push(this.bitmapFill_);
 		_arg_1.push(this.path_);
 		_arg_1.push(GraphicsUtil.END_FILL);
-		if (((((!(this.isPaused())) && ((this.condition_[ConditionEffect.CE_FIRST_BATCH]) || (this.condition_[ConditionEffect.CE_SECOND_BATCH]))) && (!(Parameters.screenShotMode_))) && (!(this is Pet))))
+		if (((((!(this.isPaused)) && ((this.condition_[ConditionEffect.CE_FIRST_BATCH]) || (this.condition_[ConditionEffect.CE_SECOND_BATCH]))) && (!(Parameters.screenShotMode_))) && (!(this is Pet))))
 		{
 			this.drawConditionIcons(_arg_1, _arg_2, _arg_3);
 		}
@@ -1455,6 +1699,43 @@ public class GameObject extends BasicObject
 				hasShadow_ = false;
 			}
 		}
+		if (!Parameters.ssmode)
+		{
+			if (!this.dead_ && Parameters.data_.showDamageOnEnemy)
+			{
+				if (this.footer_)
+				{
+					_local_11 = Parameters.dmgCounter[this.objectId_];
+					if (_local_11 != this.lastPercent_)
+					{
+						_local_11 = int(((_local_11 / this.maxHP_) * 100));
+						this.name_ = (_local_11 + "%");
+						this.lastPercent_ = _local_11;
+						this.nameBitmapData_ = null;
+						this.drawName(_arg_1, _arg_2, true);
+					}
+				}
+				else
+				{
+					_local_11 = Parameters.dmgCounter[this.objectId_];
+					if (!isNaN(_local_11) && _local_11 > 0)
+					{
+						_local_11 = int(((_local_11 / this.maxHP_) * 100));
+						this.name_ = (_local_11 + "%");
+						this.lastPercent_ = _local_11;
+						this.drawName(_arg_1, _arg_2, true);
+						this.footer_ = true;
+					}
+				}
+			}
+		}
+		else
+		{
+			if (this.footer_)
+			{
+				this.nameBitmapData_ = null;
+			}
+		}
 	}
 
 	private function bHPBarParamCheck():Boolean
@@ -1470,16 +1751,38 @@ public class GameObject extends BasicObject
 		var _local_12:Number;
 		var _local_13:Number;
 		var _local_14:Matrix;
+		if (!Parameters.ssmode)
+		{
+			if (this is Player && this != map_.player_ && Parameters.data_.alphaOnOthers && !(this as Player).starred_)
+			{
+				if (this.icons_)
+				{
+					this.icons_.length = 0;
+					return;
+				}
+			}
+		}
+		var _local_4:int = int((_arg_3 / 500));
 		if (this.icons_ == null)
 		{
 			this.icons_ = new Vector.<BitmapData>();
 			this.iconFills_ = new Vector.<GraphicsBitmapFill>();
 			this.iconPaths_ = new Vector.<GraphicsPath>();
+			this.icons_.length = 0;
+			ConditionEffect.getConditionEffectIcons(this.condition_[ConditionEffect.CE_FIRST_BATCH], this.icons_, _local_4);
+			ConditionEffect.getConditionEffectIcons2(this.condition_[ConditionEffect.CE_SECOND_BATCH], this.icons_, _local_4);
 		}
-		this.icons_.length = 0;
-		var _local_4:int = int((_arg_3 / 500));
-		ConditionEffect.getConditionEffectIcons(this.condition_[ConditionEffect.CE_FIRST_BATCH], this.icons_, _local_4);
-		ConditionEffect.getConditionEffectIcons2(this.condition_[ConditionEffect.CE_SECOND_BATCH], this.icons_, _local_4);
+		else
+		{
+			if (this.lastCon1 != this.condition_[ConditionEffect.CE_FIRST_BATCH] || this.lastCon2 != this.condition_[ConditionEffect.CE_SECOND_BATCH])
+			{
+				this.lastCon1 = this.condition_[ConditionEffect.CE_FIRST_BATCH];
+				this.lastCon2 = this.condition_[ConditionEffect.CE_SECOND_BATCH];
+				this.icons_.length = 0;
+				ConditionEffect.getConditionEffectIcons(this.condition_[ConditionEffect.CE_FIRST_BATCH], this.icons_, _local_4);
+				ConditionEffect.getConditionEffectIcons2(this.condition_[ConditionEffect.CE_SECOND_BATCH], this.icons_, _local_4);
+			}
+		}
 		var _local_5:Number = posS_[3];
 		var _local_6:Number = this.vS_[1];
 		var _local_7:int = this.icons_.length;
@@ -1511,6 +1814,10 @@ public class GameObject extends BasicObject
 
 	override public function drawShadow(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void
 	{
+		if (!Parameters.ssmode && Parameters.lowCPUMode)
+		{
+			return;
+		}
 		if (this.shadowGradientFill_ == null)
 		{
 			this.shadowGradientFill_ = new GraphicsGradientFill(GradientType.RADIAL, [this.props_.shadowColor_, this.props_.shadowColor_], [0.5, 0], null, new Matrix());
@@ -1530,6 +1837,17 @@ public class GameObject extends BasicObject
 	public function clearTextureCache():void
 	{
 		this.texturingCache_ = new Dictionary();
+	}
+
+	public function setSize(_arg_1:int):void
+	{
+		if (_arg_1 == this.size_)
+		{
+			return;
+		}
+		this.size_ = _arg_1;
+		this.texturingCache_ = new Dictionary();
+		this.portrait_ = null;
 	}
 
 	public function toString():String

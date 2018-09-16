@@ -612,6 +612,15 @@
          <Index>0x8d</Index>
       </Texture>
    </Object>
+   <Object type="0x6dc" id="Oryx Portal Helper">
+      <DisplayId>Oryx the Mad God</DisplayId>
+      <Class>Character</Class>
+      <Size>100</Size>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x0c</Index>
+      </Texture>
+   </Object>
    <Object type="0x744F" id="Event Chest MotMG">
       <DisplayId>Event Chest</DisplayId>
       <Class>Character</Class>

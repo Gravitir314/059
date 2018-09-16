@@ -4,6 +4,8 @@ package kabam.rotmg.minimap.view
 {
 import com.company.assembleegameclient.map.AbstractMap;
 import com.company.assembleegameclient.map.GroundLibrary;
+import com.company.assembleegameclient.map.Map;
+import com.company.assembleegameclient.map.Square;
 import com.company.assembleegameclient.objects.Character;
 import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.GuildHallPortal;
@@ -12,6 +14,7 @@ import com.company.assembleegameclient.objects.Portal;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.menu.PlayerGroupMenu;
 import com.company.assembleegameclient.ui.tooltip.PlayerGroupToolTip;
+import com.company.assembleegameclient.util.AssetLoader;
 import com.company.util.AssetLibrary;
 import com.company.util.PointUtil;
 import com.company.util.RectangleUtil;
@@ -56,6 +59,10 @@ public class MiniMapImp extends MiniMap
 	private var tempPoint:Point = new Point();
 	private var _rotateEnableFlag:Boolean;
 
+	public var hackmapData:BitmapData;
+	public var slayermapData:BitmapData;
+	private var scores:Vector.<int>;
+
 	public function MiniMapImp(_arg_1:int, _arg_2:int)
 	{
 		this._width = _arg_1;
@@ -80,6 +87,17 @@ public class MiniMapImp extends MiniMap
 	{
 		this.map = _arg_1;
 		this.makeViewModel();
+		if (map.name_ == "Realm of the Mad God")
+		{
+			scores = new Vector.<int>(13);
+		}
+		else
+		{
+			if (map.name_ == "Nexus")
+			{
+				scores = new Vector.<int>(4);
+			}
+		}
 	}
 
 	override public function setFocus(_arg_1:GameObject):void
@@ -92,6 +110,10 @@ public class MiniMapImp extends MiniMap
 		this.windowRect_ = new Rectangle((-(this._width) / 2), (-(this._height) / 2), this._width, this._height);
 		this.maxWH_ = new Point(map.width_, map.height_);
 		this.miniMapData_ = new BitmapData(this.maxWH_.x, this.maxWH_.y, false, 0);
+		if (Parameters.data_.mapHack)
+		{
+			this.hackmapData = new BitmapData(this.maxWH_.x, this.maxWH_.y, false, 0);
+		}
 		var _local_1:Number = Math.max((this._width / this.maxWH_.x), (this._height / this.maxWH_.y));
 		var _local_2:Number = 4;
 		while (_local_2 > _local_1)
@@ -147,8 +169,13 @@ public class MiniMapImp extends MiniMap
 
 	public function dispose():void
 	{
-		this.miniMapData_.dispose();
-		this.miniMapData_ = null;
+		for each (var _local_1:Player in this.players_)
+		{
+			(_local_1 && _local_1.dispose());
+			_local_1 = null;
+		}
+		this.mapMatrix_ = null;
+		this.arrowMatrix_ = null;
 		this.removeDecorations();
 	}
 
@@ -169,7 +196,10 @@ public class MiniMapImp extends MiniMap
 
 	private function onMapRightClick(_arg_1:MouseEvent):void
 	{
-		this._rotateEnableFlag = ((!(this._rotateEnableFlag)) && (Parameters.data_.allowMiniMapRotation));
+		if (this.players_.length != 0)
+		{
+			this.players_[0].map_.gs_.gsc_.teleport(this.players_[0].objectId_);
+		}
 	}
 
 	private function onMapClick(_arg_1:MouseEvent):void
@@ -191,16 +221,106 @@ public class MiniMapImp extends MiniMap
 		menuLayer.addChild(this.menu);
 	}
 
+	private function abs(_arg_1:int):int
+	{
+		return ((_arg_1 + (_arg_1 >> 31)) ^ (_arg_1 >> 31));
+	}
+
+	override public function checkForMap(_arg_1:Vector.<BitmapData>):Boolean
+	{
+		var _local_8:int;
+		var _local_10:uint;
+		var _local_4:uint;
+		var _local_9:int;
+		var _local_5:int;
+		var _local_11:int;
+		var _local_6:int;
+		var _local_12:uint;
+		var _local_3:int;
+		var _local_7:uint = _arg_1.length;
+		for each (var _local_2:Square in this.map.squareList_)
+		{
+			if (_local_2 != null)
+			{
+				_local_4 = GroundLibrary.getColor(_local_2.tileType_);
+				_local_9 = int.MAX_VALUE;
+				_local_5 = (_local_4 & 0xFF);
+				_local_11 = ((_local_4 >> 8) & 0xFF);
+				_local_6 = ((_local_4 >> 16) & 0xFF);
+				_local_12 = 0;
+				while (_local_12 < _local_7)
+				{
+					_local_10 = _arg_1[_local_12].getPixel32(_local_2.x_, _local_2.y_);
+					var _local_13:* = _local_12;
+					var _local_14:* = (this.scores[_local_13] + ((this.abs((_local_5 - (_local_10 & 0xFF))) + this.abs((_local_11 - ((_local_10 >> 8) & 0xFF)))) + this.abs((_local_6 - ((_local_10 >> 16) & 0xFF)))));
+					this.scores[_local_13] = _local_14;
+					_local_12++;
+				}
+				if (++_local_3 >= 250)
+				{
+					_local_12 = 0;
+					while (_local_12 < this.scores.length)
+					{
+						if (this.scores[_local_12] < _local_9)
+						{
+							_local_8 = _local_12;
+							_local_9 = this.scores[_local_12];
+						}
+						_local_12++;
+					}
+					this.hackmapData = _arg_1[_local_8];
+					if (this.map.name_ != Map.NEXUS)
+					{
+						Parameters.worldMessage = (((("World " + ++_local_8) + " (") + _local_9) + " uncertainty)");
+					}
+					return (true);
+				}
+			}
+		}
+		return (false);
+	}
+
 	override public function setGroundTile(_arg_1:int, _arg_2:int, _arg_3:uint):void
 	{
 		var _local_4:uint = GroundLibrary.getColor(_arg_3);
 		this.miniMapData_.setPixel(_arg_1, _arg_2, _local_4);
+		if (Parameters.data_.mapHack)
+		{
+			this.hackmapData.setPixel(_arg_1, _arg_2, _local_4);
+		}
 	}
 
 	override public function setGameObjectTile(_arg_1:int, _arg_2:int, _arg_3:GameObject):void
 	{
 		var _local_4:uint = gameObjectToColor(_arg_3);
 		this.miniMapData_.setPixel(_arg_1, _arg_2, _local_4);
+		if (Parameters.data_.mapHack)
+		{
+			this.hackmapData.setPixel(_arg_1, _arg_2, _local_4);
+		}
+	}
+
+	override public function setFullMap(_arg_1:String):void
+	{
+		switch (_arg_1)
+		{
+			case "Vault":
+				this.hackmapData = AssetLoader.vaultMap;
+				Parameters.needsMapCheck = 0;
+				return;
+			case "Oryx's Castle":
+				this.hackmapData = AssetLoader.castleMap;
+				Parameters.needsMapCheck = 0;
+				return;
+			case "Oryx's Chamber":
+				this.hackmapData = AssetLoader.chamberMap;
+				Parameters.needsMapCheck = 0;
+				return;
+			case "Wine Cellar":
+				this.hackmapData = AssetLoader.wcMap;
+				Parameters.needsMapCheck = 0;
+				return;
+		}
 	}
 
 	private function removeDecorations():void
@@ -302,6 +422,24 @@ public class MiniMapImp extends MiniMap
 		_local_7.beginBitmapFill(this.miniMapData_, this.mapMatrix_, false);
 		_local_7.drawRect(_local_6.x, _local_6.y, _local_6.width, _local_6.height);
 		_local_7.endFill();
+		if (!Parameters.ssmode)
+		{
+			if (slayermapData)
+			{
+				_local_7.beginBitmapFill(this.slayermapData, this.mapMatrix_, false);
+				_local_7.drawRect(_local_6.x, _local_6.y, _local_6.width, _local_6.height);
+				_local_7.endFill();
+			}
+			else
+			{
+				if (Parameters.data_.mapHack)
+				{
+					_local_7.beginBitmapFill(this.hackmapData, this.mapMatrix_, false);
+					_local_7.drawRect(_local_6.x, _local_6.y, _local_6.width, _local_6.height);
+					_local_7.endFill();
+				}
+			}
+		}
 		_local_7 = this.characterLayer_.graphics;
 		_local_8 = this.enemyLayer_.graphics;
 		var _local_9:Number = (mouseX - (this._width / 2));
@@ -314,7 +452,7 @@ public class MiniMapImp extends MiniMap
 				_local_17 = (_local_11 as Player);
 				if (_local_17 != null)
 				{
-					if (_local_17.isPaused())
+					if (_local_17.isPaused)
 					{
 						_local_16 = 0x7F7F7F;
 					}

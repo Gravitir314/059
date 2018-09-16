@@ -43,7 +43,7 @@ public class TextureProxy
 	public function dispose():void
 	{
 		this.texture.dispose();
-		//this.texture = null; TODO need this?
+		this.texture = null;
 	}
 
 

@@ -213,8 +213,9 @@ public class ParseChatMessageCommand
 				Parameters.data_.ignoreIce = !Parameters.data_.ignoreIce;
 				this.hudModel.gameSprite.map.player_.textNotification(("Ignoring Ice: " + Parameters.data_.ignoreIce));
 				return (true);
+			case "/f":
 			case "/follow":
-				Parameters.data_.following = !Parameters.data_.following;
+				Parameters.followingName = !Parameters.followingName;
 				this.hudModel.gameSprite.map.player_.textNotification(("Following: " + Parameters.data_.following));
 				return (true);
 			case "/tut":
@@ -354,6 +355,14 @@ public class ParseChatMessageCommand
 			case "/blend":
 				Parameters.blendType_ = (Parameters.blendType_ == 0 ? 1 : 0);
 				this.addTextLine.dispatch(ChatMessage.make("BlendType", Parameters.blendType_.toString()));
+				return (true);
+			case "/abi":
+				Parameters.abi = !Parameters.abi;
+				this.addTextLine.dispatch(ChatMessage.make("@Auto Ability", ((Parameters.abi) ? "On" : "Off")));
+				return (true);
+			case "/lowcpu":
+				Parameters.lowCPUMode = !Parameters.lowCPUMode;
+				player.textNotification(((Parameters.lowCPUMode) ? "Low CPU on" : "Low CPU off"));
 				return (true);
 			default:
 				command = (this.data.match("^/tp (\\w+)") || this.data.match("^/teleport (\\w+)"));
@@ -526,15 +535,17 @@ public class ParseChatMessageCommand
 				command = (this.data.match("^/follow (\\w+)") || this.data.match("/f (\\w+)"));
 				if (command != null)
 				{
-					Parameters.followName = command[1];
-					for each (object in this.hudModel.gameSprite.map.goDict_)
+					object = player.getPlayer(command[1]);
+					if (object != null)
 					{
-						if (object is Player && object.name_ == Parameters.followName)
-						{
-							Parameters.followPlayer = object;
-							Parameters.followName = Parameters.followName.toUpperCase();
-							Parameters.followingName = true;
-						}
+						Parameters.followPlayer = object;
+						Parameters.followName = object.name_;
+						Parameters.followingName = true;
+						this.hudModel.gameSprite.map.player_.textNotification(("Following to " + object.name_));
+					}
+					else
+					{
+						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, "Player with name \"" + command[1] + "\" not found."));
 					}
 					return (true);
 				}
@@ -568,6 +579,48 @@ public class ParseChatMessageCommand
 					this.hudModel.gameSprite.hudView.characterDetails.setName(command[1]);
 					return (true);
 				}
+				command = this.data.match("^/tdist (\\d+)");
+				if (command != null)
+				{
+					Parameters.data_.teleDistance = Math.sqrt(command[1]);
+					this.addTextLine.dispatch(ChatMessage.make("Teleport Distance", Parameters.data_.teleDistance));
+					return (true);
+				}
+					command = this.data.match("/sbthreshold (\\d+)");
+					if (command != null)
+					{
+						Parameters.data_.spellbombHPThreshold = command[1];
+						this.addTextLine.dispatch(ChatMessage.make("Spellbomb Threshold", Parameters.data_.spellbombHPThreshold));
+						return (true);
+					}
+					command = this.data.match("^/aathreshold (\\d+)");
+					if (command != null)
+					{
+						Parameters.data_.skullHPThreshold = command[1];
+						this.addTextLine.dispatch(ChatMessage.make("Skull Threshold", Parameters.data_.skullHPThreshold));
+						return (true);
+					}
+					command = this.data.match("^/aatargets (\\d+)");
+					if (command != null)
+					{
+						Parameters.data_.skullTargets = command[1];
+						this.addTextLine.dispatch(ChatMessage.make("Skull Targets", Parameters.data_.skullTargets));
+						return (true);
+					}
+					command = this.data.match("^/vol (\\d+)");
+					if (command != null)
+					{
+						Parameters.data_.SFXVolume = command[1];
+						Parameters.save();
+						this.addTextLine.dispatch(ChatMessage.make("@Volume", Parameters.data_.SFXVolume));
+						return (true);
+					}
+					command = (this.data.match("^/spd (\\d+)") || this.data.match("^/setspd (\\d+)"));
+					if (command != null)
+					{
+						this.hudModel.gameSprite.map.player_.speed_ = command[1];
+						return (true);
+					}
 				return (false);
 		}
 	}
@@ -750,8 +803,8 @@ public class ParseChatMessageCommand
 		var _local_4:GameObject;
 		var _local_5:String;
 		var _local_6:String;
-		/*if (!Parameters.ssmode)
-		{*/
+		if (!Parameters.ssmode)
+		{
 			if (this.cheatCommands())
 			{
 				return;
@@ -760,7 +813,7 @@ public class ParseChatMessageCommand
 			{
 				return;
 			}
-		//}
+		}
 		switch (this.data)
 		{
 			case "/resetDailyQuests":

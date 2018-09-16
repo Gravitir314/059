@@ -28,7 +28,7 @@ public class TestingSetup implements ApplicationSetup
 
 	public function getBuildLabel():String
 	{
-		var _local_1:String = ((Parameters.BUILD_VERSION + ".") + Parameters.MINOR_VERSION);
+		var _local_1:String = Parameters.data_.gameVersion;
 		return (this.BUILD_LABEL.replace("{VERSION}", _local_1));
 	}
 

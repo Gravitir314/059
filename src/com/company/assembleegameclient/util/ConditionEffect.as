@@ -117,6 +117,8 @@ public class ConditionEffect
 	public static const SILENCED_BIT:uint = (1 << (SILENCED - NEW_CON_THREASHOLD));
 	public static const EXPOSED_BIT:uint = (1 << (EXPOSED - NEW_CON_THREASHOLD));
 	public static const MAP_FILTER_BITMASK:uint = ((DRUNK_BIT | BLIND_BIT) | PAUSED_BIT);
+	public static const CLEAN_IGNORE_PROJECTILE_BITMASK:uint = 0xB00000;
+	public static const IGNORE_PROJECTILE_NOINVULN_BITMASK:uint = 0xA00000;
 	public static const CE_FIRST_BATCH:uint = 0;
 	public static const CE_SECOND_BATCH:uint = 1;
 	public static const NUMBER_CE_BATCHES:uint = 2;

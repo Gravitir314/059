@@ -6077,7 +6077,7 @@
          <Index>148</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>This cute manatee is ready to shoot your enemies with 10 billion guns!\n\nSprite Credits: Lovens\n\nUnlocks Mini Leviathan Skin of the Reptile family. The skin will be added to your Pet Wardrobe in the Pet Yard and can be used to change the appearance of your pet!</Description>
+      <Description>This cute manatee is ready to shoot your enemies with 10 billion guns!\n\nSprite Credits: Lovens\n\nUnlocks Baby Leviathan Skin of the Reptile family. The skin will be added to your Pet Wardrobe in the Pet Yard and can be used to change the appearance of your pet!</Description>
       <Activate skinType="19521">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
@@ -11966,6 +11966,249 @@
       <SlotType>10</SlotType>
       <Description>Game... over...\n\nUnlocks Evil Mask Spirit Skin of the Exotic family. The skin will be added to your Pet Wardrobe in the Pet Yard and can be used to change the appearance of your pet!</Description>
       <Activate skinType="15715">UnlockPetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Little Fox" type="0x260c">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Canine</Family>
+      <Rarity>Rare</Rarity>
+      <DefaultSkin>Little Fox Pet Skin</DefaultSkin>
+      <Size>80</Size>
+      <NoHatchOrFuse/>
+   </Object>
+   <Object type="0x260d" id="Little Fox Pet Skin">
+      <PetSkin/>
+      <DisplayId>Little Fox</DisplayId>
+      <Class>PetSkin</Class>
+      <Family>Canine</Family>
+      <Rarity>Rare</Rarity>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>242</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x260e" id="Little Fox Pet Stone">
+      <DisplayId>Little Fox Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>242</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>You become responsible, forever, for what you have tamed.\n\nSprite Credits: Lovens\n\nUnlocks Little Fox Skin of the Canine family. The skin will be added to your Pet Wardrobe in the Pet Yard and can be used to change the appearance of your pet!</Description>
+      <Activate skinType="9741">UnlockPetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Mini Beer God" type="0x260f">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Humanoid</Family>
+      <Rarity>Rare</Rarity>
+      <DefaultSkin>Mini Beer God Pet Skin</DefaultSkin>
+      <Size>80</Size>
+      <NoHatchOrFuse/>
+   </Object>
+   <Object type="0x2610" id="Mini Beer God Pet Skin">
+      <PetSkin/>
+      <DisplayId>Mini Beer God</DisplayId>
+      <Class>PetSkin</Class>
+      <Family>Humanoid</Family>
+      <Rarity>Rare</Rarity>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>243</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x2611" id="Mini Beer God Pet Stone">
+      <DisplayId>Mini Beer God Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>243</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Comes with a free pint of beer!\n\nSprite Credits: Lovens\n\nUnlocks Mini Beer God Skin of the Humanoid family. The skin will be added to your Pet Wardrobe in the Pet Yard and can be used to change the appearance of your pet!</Description>
+      <Activate skinType="9744">UnlockPetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Titanium Rex" type="0x2612">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Automaton</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Titanium Rex</DefaultSkin>
+      <Size>80</Size>
+      <NoHatchOrFuse/>
+   </Object>
+   <Object type="0x2613" id="Titanium Rex Pet Skin">
+      <PetSkin/>
+      <DisplayId>Titanium Rex</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>88</Index>
+      </AnimatedTexture>
+      <Family>Automaton</Family>
+      <Rarity>Divine</Rarity>
+   </Object>
+   <Object type="0x2614" id="Titanium Rex Pet Stone">
+      <DisplayId>Titanium Rex Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>88</Index>
+      </AnimatedTexture>
+      <ScaleValue>10</ScaleValue>
+      <SlotType>10</SlotType>
+      <Description>A fossil of an extinct race of prehistoric predators, reanimated through means of metal and wires.\n\nSprite Credits: Piggby\n\nUnlocks Titanium Rex Skin of the Automaton family. The skin will be added to your Pet Wardrobe in the Pet Yard and can be used to change the appearance of your pet!</Description>
+      <Activate skinType="9747">UnlockPetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Red Panda" type="0x2615">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Exotic</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Red Panda</DefaultSkin>
+      <Size>80</Size>
+      <NoHatchOrFuse/>
+   </Object>
+   <Object type="0x2616" id="Red Panda Pet Skin">
+      <PetSkin/>
+      <DisplayId>Red Panda</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>89</Index>
+      </AnimatedTexture>
+      <Family>Exotic</Family>
+      <Rarity>Divine</Rarity>
+   </Object>
+   <Object type="0x2617" id="Red Panda Pet Stone">
+      <DisplayId>Red Panda Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>89</Index>
+      </AnimatedTexture>
+      <ScaleValue>10</ScaleValue>
+      <SlotType>10</SlotType>
+      <Description>The red teddy bear of the east, ready to play with its new chewtoys: the minions of Oryx.\n\nSprite Credits: Piggby\n\nUnlocks Red Panda Skin of the Exotic family. The skin will be added to your Pet Wardrobe in the Pet Yard and can be used to change the appearance of your pet!</Description>
+      <Activate skinType="9750">UnlockPetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Gargantua" type="0x2618">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Reptile</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Gargantua</DefaultSkin>
+      <Size>80</Size>
+      <NoHatchOrFuse/>
+   </Object>
+   <Object type="0x2619" id="Gargantua Pet Skin">
+      <PetSkin/>
+      <DisplayId>Gargantua</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>90</Index>
+      </AnimatedTexture>
+      <Family>Reptile</Family>
+      <Rarity>Divine</Rarity>
+   </Object>
+   <Object type="0x261a" id="Gargantua Pet Stone">
+      <DisplayId>Gargantua Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>90</Index>
+      </AnimatedTexture>
+      <ScaleValue>10</ScaleValue>
+      <SlotType>10</SlotType>
+      <Description>These primal behemoths of legend are believed to have shaped the mountains of Earth. They are known as harbingers of earthquakes, ancient as the Earth itself.\n\nSprite Credits: Piggby\n\nUnlocks Gargantua Skin of the Reptile family. The skin will be added to your Pet Wardrobe in the Pet Yard and can be used to change the appearance of your pet!</Description>
+      <Activate skinType="9753">UnlockPetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Maneki-neko" type="0x5b1b">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Feline</Family>
+      <Rarity>Rare</Rarity>
+      <DefaultSkin>Maneki-neko Pet Skin</DefaultSkin>
+      <Size>80</Size>
+      <NoHatchOrFuse/>
+   </Object>
+   <Object type="0x5b1c" id="Maneki-neko Pet Skin">
+      <PetSkin/>
+      <DisplayId>Maneki-neko</DisplayId>
+      <Class>PetSkin</Class>
+      <Family>Feline</Family>
+      <Rarity>Rare</Rarity>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>244</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x5b1d" id="Maneki-neko Pet Stone">
+      <DisplayId>Maneki-neko Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>244</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>I bring you good fortune, adventurer!\n\nUnlocks Maneki-neko Skin of the Feline family. The skin will be added to your Pet Wardrobe in the Pet Yard and can be used to change the appearance of your pet!</Description>
+      <Activate skinType="23324">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
       <BagType>8</BagType>

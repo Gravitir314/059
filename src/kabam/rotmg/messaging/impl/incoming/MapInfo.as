@@ -31,11 +31,6 @@ public class MapInfo extends IncomingMessage
 		this.parseXML(_arg_1);
 	}
 
-	/*public function createHash():ByteArray TODO unused function
-	{
-		return (new ByteArray());
-	}*/
-
 	private function parseProperties(_arg_1:IDataInput):void
 	{
 		this.width_ = _arg_1.readInt();

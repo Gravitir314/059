@@ -109,24 +109,6 @@ public class TradePanel extends Sprite
 		this.myInv_.setMessage(TradeInventory.TRADEACCEPTED_MESSAGE);
 	}
 
-	/*private function onTradeRightClick(_arg_1:MouseEvent):void TODO unused function
-	{
-		var _local_2:int;
-		var _local_3:Vector.<Boolean> = new Vector.<Boolean>(12);
-		_local_3[0] = false;
-		_local_3[1] = false;
-		_local_3[2] = false;
-		_local_3[3] = false;
-		_local_2 = 0;
-		while (_local_2 < 8)
-		{
-			_local_3[(_local_2 + 4)] = (!(this.gs_.map.player_.equipment_[(_local_2 + 4)] == -1));
-			_local_2++;
-		}
-		this.myInv_.setOffer(_local_3);
-		onMyInvChange(null);
-	}*/
-
 	public function checkTrade():void
 	{
 		var _local_1:int = this.myInv_.numIncluded();

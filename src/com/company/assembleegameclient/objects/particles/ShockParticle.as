@@ -45,7 +45,7 @@ public class ShockParticle extends BitmapParticle
 	override public function update(_arg_1:int, _arg_2:int):Boolean
 	{
 		this.numFramesRemaining--;
-		if (this.numFramesRemaining <= 0)
+		if (this.numFramesRemaining <= 0 || map_ == null)
 		{
 			return (false);
 		}

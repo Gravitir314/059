@@ -36,6 +36,10 @@ public class Particle extends BasicObject
 	public function moveTo(_arg_1:Number, _arg_2:Number):Boolean
 	{
 		var _local_3:Square;
+		if (map_ == null)
+		{
+			return (false);
+		}
 		_local_3 = map_.getSquare(_arg_1, _arg_2);
 		if (_local_3 == null)
 		{

@@ -10,9 +10,6 @@ import kabam.rotmg.messaging.impl.outgoing.OutgoingMessage;
 public class PetUpgradeRequest extends OutgoingMessage
 {
 
-	public static const UPGRADE_YARD_TYPE:int = 1; // TODO find usages
-	public static const FEED_PET_TYPE:int = 2;
-	public static const FUSE_PET_TYPE:int = 3;
 	public static const GOLD_PAYMENT_TYPE:int = 0;
 	public static const FAME_PAYMENT_TYPE:int = 1;
 

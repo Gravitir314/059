@@ -726,11 +726,6 @@ public class TextKey
 		return ((_local_2) ? _arg_1.substr(1, (_arg_1.length - 2)) : _arg_1);
 	}
 
-	/*public static function stripCurlyBracketsRaw(_arg_1:String):String TODO unused function
-	{
-		return (_arg_1.substr(1, (_arg_1.length - 2)));
-	}*/
-
 
 }
 }//package kabam.rotmg.text.model

@@ -2,6 +2,7 @@
 
 package com.company.assembleegameclient.parameters
 {
+import com.company.assembleegameclient.game.events.ReconnectEvent;
 import com.company.assembleegameclient.map.Map;
 import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.ObjectLibrary;
@@ -19,22 +20,22 @@ import flash.utils.Dictionary;
 
 public class Parameters
 {
-	// ParseChatMessageCommand.as
+	// EditBoard.as
 	// 1113 - 117 = 996 files checked
 	// Add saving security questions to text file
 	// Instant DEFAULT_FILTER's
 	// Check MapEditor.as
 	// Delete analytic service || monitors
-	// Update from X28.0.6 to X29.0.0
+	// Update from X28.0.6 to X29.0.1
 	// Check StatusBar.as
 	// Use AIR to build with SoundCustom
 	// QuestArrow need to be fixed
 	// Create good /con
 	// Add custom messages
-	// Add getPlayer || levenshtein distance to following
-	public static const BUILD_VERSION:String = "X29.0";
-	public static const MINOR_VERSION:String = "0";
-	public static const ENABLE_ENCRYPTION:Boolean = true;
+	// Add reconnects keys
+	// Check teleport cooldown
+	// Fix typo || clean code
+	// Finish fullscreen
 	public static const PORT:int = 2050;
 	public static const ALLOW_SCREENSHOT_MODE:Boolean = false;
 	public static const USE_NEW_FRIENDS_UI:Boolean = true;
@@ -63,6 +64,7 @@ public class Parameters
 	public static const TUTORIAL_GAMEID:int = -1;
 	public static const NEXUS_GAMEID:int = -2;
 	public static const RANDOM_REALM_GAMEID:int = -3;
+	public static const VAULT_GAMEID:int = -5;
 	public static const MAPTEST_GAMEID:int = -6;
 	public static const MAX_SINK_LEVEL:Number = 18;
 	public static const TERMS_OF_USE_URL:String = "http://legal.decagames.com/tos/";
@@ -76,6 +78,7 @@ public class Parameters
 	public static const itemTypes16:Vector.<int> = new <int>[5473, 5474, 5475, 5476, 10939, 19494, 19531, 6347];
 	private static var keyNames_:Dictionary = new Dictionary();
 
+	private static var ctrlrInputNames_:Dictionary = new Dictionary();
 	public static var fameBotPortalId:int;
 	public static var fameBotPortal:Portal;
 	public static var fameBotPortalPoint:Point;
@@ -102,7 +105,7 @@ public class Parameters
 	public static var VHSRecordLength:int = -1;
 	public static var VHSIndex:int = -1;
 	public static var VHSNext:Point = new Point();
-	public static var followName:String = "";
+	public static var followName:String;
 	public static var followPlayer:GameObject;
 	public static var followingName:Boolean = false;
 	public static var timerActive:Boolean;
@@ -116,6 +119,43 @@ public class Parameters
 	public static const mpPotions:Vector.<int> = new <int>[2595, 2634, 2797, 2798, 2840, 2841, 2842, 2843, 2796, 2869, 2871, 2873, 2875, 2877, 3098];
 	public static const lmPotions:Vector.<int> = new <int>[2793, 9070, 5471, 9730, 2794, 9071, 5472, 9731];
 	public static const raPotions:Vector.<int> = new <int>[2591, 5465, 9064, 9729, 2592, 5466, 9065, 9727, 2593, 5467, 9066, 9726, 2612, 5468, 9067, 9724, 2613, 5469, 9068, 9725, 2636, 5470, 9069, 0x2600];
+	public static var abi:Boolean = true;
+	public static var syncFollowing:Boolean = false;
+	public static var questFollow:Boolean = false;
+	public static var famePoint:Point = new Point(0, 0);
+	public static var SPOOKYBOINEAR:Boolean;
+	public static var DrownAmount:int = 94;
+	public static var reconRealm:ReconnectEvent = null;
+	public static var reconDung:ReconnectEvent = null;
+	public static var reconVault:ReconnectEvent = null;
+	public static var reconNexus:ReconnectEvent = null;
+	public static var reconOryx:ReconnectEvent = null;
+	public static var reconDaily:ReconnectEvent = null;
+	public static var givingPotions:Boolean;
+	public static var receivingPots:Boolean;
+	public static var potionsToTrade:Vector.<Boolean> = new <Boolean>[false, false, false, false, false, false, false, false, false, false, false, false];
+	public static var emptyOffer:Vector.<Boolean> = new <Boolean>[false, false, false, false, false, false, false, false, false, false, false, false];
+	public static var recvrName:String;
+	public static var dmgCounter:Array = [];
+	public static const spamFilter:Vector.<String> = new <String>["oryxsh0p.net", "wh!tebag,net", "wh!tebag.net", "realmshop.info", "rotmgmarket.c", "rotmg.sh0p", "rotmg.shop", "rpgstash,com", "rpgstash.com", "realmitems", "reaimitems", "reaimltems", "realmltems", "realmpower,net", "reaimpower.net", "realmpower.net", "reaimpower,net", "rea!mkings.xyz", "buyrotmg.c", "lifepot. org", "-----|", "rotmg,org", "rotmgmax.me", "rotmgmax,me"];
+	public static var lockRecon:Boolean = false;
+	public static var usingPortal:Boolean;
+	public static var portalID:int;
+	public static var portalSpamRate:int = 80;
+	public static var watchInv:Boolean;
+	public static var famePointOffset:Number = 0;
+	public static var needsMapCheck:int = 0;
+	public static var needToRecalcDesireables:Boolean = false;
+	public static var fameWaitStartTime:int = 0;
+	public static var fameWaitNTTime:int = 0;
+	public static var fameWalkSleep_toFountainOrHall:int = 0;
+	public static var fameWalkSleep_toRealms:int = 0;
+	public static var fameWalkSleep2:int = 0;
+	public static var fameWalkSleepStart:int = 0;
+	public static var realmJoining:Boolean;
+	public static var forceCharId:int = -1;
+	public static var ignoredShotCount:int = 0;
+	public static var statsChar:String = "◘";
 
 	public static function setAutolootDesireables():void
 	{
@@ -125,94 +165,94 @@ public class Parameters
 		{
 			_local_4 = int(_local_3.@type);
 			var _local_2:ObjectProperties = ObjectLibrary.propsLibrary_[_local_4];
-			if (((_local_2) && (_local_2.isItem_)))
+			if (_local_2 != null && _local_2.isItem_)
 			{
 				_local_2.desiredLoot_ = false;
-				if (((_local_2.isPotion_) && (desiredPotion(_local_4))))
+				if (_local_2.isPotion_ && desiredPotion(_local_4))
 				{
 					_local_2.desiredLoot_ = true;
 				}
 				else
 				{
-					if (((!(Parameters.data_.autoLootWeaponTier == 999)) && (desiredWeapon(_local_3, _local_4, Parameters.data_.autoLootWeaponTier))))
+					if (Parameters.data_.autoLootWeaponTier != 999 && desiredWeapon(_local_3, _local_4, Parameters.data_.autoLootWeaponTier))
 					{
 						_local_2.desiredLoot_ = true;
 					}
 					else
 					{
-						if (((!(Parameters.data_.autoLootAbilityTier == 999)) && (desiredAbility(_local_3, _local_4, Parameters.data_.autoLootAbilityTier))))
+						if (Parameters.data_.autoLootAbilityTier != 999 && desiredAbility(_local_3, _local_4, Parameters.data_.autoLootAbilityTier))
 						{
 							_local_2.desiredLoot_ = true;
 						}
 						else
 						{
-							if (((!(Parameters.data_.autoLootArmorTier == 999)) && (desiredArmor(_local_3, _local_4, Parameters.data_.autoLootArmorTier))))
+							if (Parameters.data_.autoLootArmorTier != 999 && desiredArmor(_local_3, _local_4, Parameters.data_.autoLootArmorTier))
 							{
 								_local_2.desiredLoot_ = true;
 							}
 							else
 							{
-								if (((!(Parameters.data_.autoLootRingTier == 999)) && (desiredRing(_local_3, _local_4, Parameters.data_.autoLootRingTier))))
+								if (Parameters.data_.autoLootRingTier != 999 && desiredRing(_local_3, _local_4, Parameters.data_.autoLootRingTier))
 								{
 									_local_2.desiredLoot_ = true;
 								}
 								else
 								{
-									if (((Parameters.data_.autoLootUTs) && (desiredUT(_local_3))))
+									if (Parameters.data_.autoLootUTs && desiredUT(_local_3))
 									{
 										_local_2.desiredLoot_ = true;
 									}
 									else
 									{
-										if (((Parameters.data_.autoLootSkins) && (desiredSkin(_local_3, _local_3.@id))))
+										if (Parameters.data_.autoLootSkins && desiredSkin(_local_3, _local_3.@id))
 										{
 											_local_2.desiredLoot_ = true;
 										}
 										else
 										{
-											if (((Parameters.data_.autoLootPetSkins) && (desiredPetSkin(_local_3, _local_3.@id, int(_local_3.@type)))))
+											if (Parameters.data_.autoLootPetSkins && desiredPetSkin(_local_3, _local_3.@id, int(_local_3.@type)))
 											{
 												_local_2.desiredLoot_ = true;
 											}
 											else
 											{
-												if (((Parameters.data_.autoLootKeys) && (desiredKey(_local_3, _local_3.@id))))
+												if (Parameters.data_.autoLootKeys && desiredKey(_local_3, _local_3.@id))
 												{
 													_local_2.desiredLoot_ = true;
 												}
 												else
 												{
-													if (((Parameters.data_.autoLootMarks) && String(_local_3.@id).indexOf("Mark of ") != -1))
+													if (Parameters.data_.autoLootMarks && String(_local_3.@id).indexOf("Mark of ") != -1)
 													{
 														_local_2.desiredLoot_ = true;
 													}
 													else
 													{
-														if (((Parameters.data_.autoLootConsumables) && (_local_3.hasOwnProperty("Consumable"))))
+														if (Parameters.data_.autoLootConsumables && _local_3.hasOwnProperty("Consumable"))
 														{
 															_local_2.desiredLoot_ = true;
 														}
 														else
 														{
-															if (((Parameters.data_.autoLootSoulbound) && (_local_3.hasOwnProperty("Soulbound"))))
+															if (!Parameters.data_.autoLootSoulbound && _local_3.hasOwnProperty("Soulbound"))
 															{
 																_local_2.desiredLoot_ = true;
 															}
 															else
 															{
-																if (((!(Parameters.data_.autoLootEggs == -1)) && (desiredEgg(_local_3, Parameters.data_.autoLootEggs))))
+																if (Parameters.data_.autoLootEggs != -1 && desiredEgg(_local_3, Parameters.data_.autoLootEggs))
 																{
 																	_local_2.desiredLoot_ = true;
 																}
 																else
 																{
-																	if (((!(Parameters.data_.autoLootFeedPower == -1)) && (desiredFeedPower(_local_3, Parameters.data_.autoLootFeedPower))))
+																	if (Parameters.data_.autoLootFeedPower != -1 && desiredFeedPower(_local_3, Parameters.data_.autoLootFeedPower))
 																	{
 																		_local_2.desiredLoot_ = true;
 																	}
 																	else
 																	{
-																		if (((!(Parameters.data_.autoLootFameBonus == -1)) && (desiredFameBonus(_local_3, Parameters.data_.autoLootFameBonus))))
+																		if (Parameters.data_.autoLootFameBonus != -1 && desiredFameBonus(_local_3, Parameters.data_.autoLootFameBonus))
 																		{
 																			_local_2.desiredLoot_ = true;
 																		}
@@ -253,13 +293,13 @@ public class Parameters
 	public static function handleLootInListCommand():String
 	{
 		var _local_4:String = "AutoLoot Inclusion List: \n";
-		var _local_2:String = "";
 		for each (var _local_3:int in Parameters.data_.autoLootIncludes)
 		{
 			var _local_1:XML = ObjectLibrary.xmlLibrary_[_local_3];
 			if (_local_1)
 			{
-				if ((_local_1.hasOwnProperty("DisplayId")))
+				var _local_2:String;
+				if (_local_1.hasOwnProperty("DisplayId"))
 				{
 					_local_2 = _local_1.DisplayId;
 				}
@@ -267,11 +307,11 @@ public class Parameters
 				{
 					_local_2 = _local_1.@id;
 				}
-				_local_4 = (_local_4 + (((("(" + _local_3) + ") ") + _local_2) + ", "));
+				_local_4 = (_local_4 + "(" + _local_3 + ") " + _local_2 + ", ");
 			}
 			else
 			{
-				_local_4 = (_local_4 + (("(" + _local_3) + "), "));
+				_local_4 = (_local_4 + "(" + _local_3 + "), ");
 			}
 		}
 		return (_local_4);
@@ -281,8 +321,8 @@ public class Parameters
 	{
 		var _local_4:int = int(_arg_1);
 		var _local_2:XML = ObjectLibrary.xmlLibrary_[_local_4];
-		var _local_3:String = "";
-		if ((_local_2.hasOwnProperty("DisplayId")))
+		var _local_3:String;
+		if (_local_2.hasOwnProperty("DisplayId"))
 		{
 			_local_3 = _local_2.DisplayId;
 		}
@@ -297,15 +337,15 @@ public class Parameters
 		Parameters.data_.autoLootIncludes.push(_local_4);
 		Parameters.setAutolootDesireables();
 		Parameters.save();
-		return (("Added " + _local_3) + " to inclusions list");
+		return ("Added " + _local_3 + " to inclusions list");
 	}
 
 	public static function handleLootInRemCommand(_arg_1:String):String
 	{
 		var _local_5:int = int(_arg_1);
 		var _local_2:XML = ObjectLibrary.xmlLibrary_[_local_5];
-		var _local_3:String = "";
-		if ((_local_2.hasOwnProperty("DisplayId")))
+		var _local_3:String;
+		if (_local_2.hasOwnProperty("DisplayId"))
 		{
 			_local_3 = _local_2.DisplayId;
 		}
@@ -327,13 +367,13 @@ public class Parameters
 	public static function handleLootExListCommand():String
 	{
 		var _local_4:String = "AutoLoot Exclusion List: \n";
-		var _local_2:String = "";
 		for each (var _local_3:int in Parameters.data_.autoLootExcludes)
 		{
 			var _local_1:XML = ObjectLibrary.xmlLibrary_[_local_3];
 			if (_local_1)
 			{
-				if ((_local_1.hasOwnProperty("DisplayId")))
+				var _local_2:String;
+				if (_local_1.hasOwnProperty("DisplayId"))
 				{
 					_local_2 = _local_1.DisplayId;
 				}
@@ -341,11 +381,11 @@ public class Parameters
 				{
 					_local_2 = _local_1.@id;
 				}
-				_local_4 = (_local_4 + (((("(" + _local_3) + ") ") + _local_2) + ", "));
+				_local_4 = (_local_4 + "(" + _local_3 + ") " + _local_2 + ", ");
 			}
 			else
 			{
-				_local_4 = (_local_4 + (("(" + _local_3) + "), "));
+				_local_4 = (_local_4 + "(" + _local_3 + "), ");
 			}
 		}
 		return (_local_4);
@@ -355,8 +395,8 @@ public class Parameters
 	{
 		var _local_4:int = int(_arg_1);
 		var _local_2:XML = ObjectLibrary.xmlLibrary_[_local_4];
-		var _local_3:String = "";
-		if ((_local_2.hasOwnProperty("DisplayId")))
+		var _local_3:String;
+		if (_local_2.hasOwnProperty("DisplayId"))
 		{
 			_local_3 = _local_2.DisplayId;
 		}
@@ -371,15 +411,15 @@ public class Parameters
 		Parameters.data_.autoLootExcludes.push(_local_4);
 		Parameters.setAutolootDesireables();
 		Parameters.save();
-		return (("Added " + _local_3) + " to exclusions list");
+		return ("Added " + _local_3 + " to exclusions list");
 	}
 
 	public static function handleLootExRemCommand(_arg_1:String):String
 	{
 		var _local_5:int = int(_arg_1);
 		var _local_2:XML = ObjectLibrary.xmlLibrary_[_local_5];
-		var _local_3:String = "";
-		if ((_local_2.hasOwnProperty("DisplayId")))
+		var _local_3:String;
+		if (_local_2.hasOwnProperty("DisplayId"))
 		{
 			_local_3 = _local_2.DisplayId;
 		}
@@ -393,7 +433,7 @@ public class Parameters
 			Parameters.data_.autoLootExcludes.splice(_local_4, 1);
 			Parameters.setAutolootDesireables();
 			Parameters.save();
-			return (("Removed " + _local_3) + " from exclusions list");
+			return ("Removed " + _local_3 + " from exclusions list");
 		}
 		return (_local_3 + " not in exclusions list");
 	}
@@ -433,41 +473,41 @@ public class Parameters
 
 	public static function desiredWeapon(_arg_1:XML, _arg_2:int, _arg_3:int):Boolean
 	{
-		if (!((_arg_1.hasOwnProperty("SlotType")) && (_arg_1.hasOwnProperty("Tier"))))
+		if (!(_arg_1.hasOwnProperty("SlotType") && _arg_1.hasOwnProperty("Tier")))
 		{
 			return (false);
 		}
 		var _local_4:Vector.<int> = new <int>[3, 2, 24, 17, 1, 8];
-		return ((_arg_1.Tier >= _arg_3) && (_local_4.indexOf(_arg_1.SlotType) >= 0));
+		return (_arg_1.Tier >= _arg_3 && _local_4.indexOf(_arg_1.SlotType) != -1);
 	}
 
 	public static function desiredAbility(_arg_1:XML, _arg_2:int, _arg_3:int):Boolean
 	{
-		if (!((_arg_1.hasOwnProperty("SlotType")) && (_arg_1.hasOwnProperty("Tier"))))
+		if (!(_arg_1.hasOwnProperty("SlotType") && _arg_1.hasOwnProperty("Tier")))
 		{
 			return (false);
 		}
 		var _local_4:Vector.<int> = new <int>[13, 16, 21, 18, 22, 15, 23, 12, 5, 25, 19, 11, 4, 20];
-		return ((_arg_1.Tier >= _arg_3) && (_local_4.indexOf(_arg_1.SlotType) >= 0));
+		return (_arg_1.Tier >= _arg_3 && _local_4.indexOf(_arg_1.SlotType) != -1);
 	}
 
 	public static function desiredArmor(_arg_1:XML, _arg_2:int, _arg_3:int):Boolean
 	{
-		if (!((_arg_1.hasOwnProperty("SlotType")) && (_arg_1.hasOwnProperty("Tier"))))
+		if (!(_arg_1.hasOwnProperty("SlotType") && _arg_1.hasOwnProperty("Tier")))
 		{
 			return (false);
 		}
 		var _local_4:Vector.<int> = new <int>[6, 7, 14];
-		return ((_arg_1.Tier >= _arg_3) && (_local_4.indexOf(_arg_1.SlotType) >= 0));
+		return (_arg_1.Tier >= _arg_3 && _local_4.indexOf(_arg_1.SlotType) != -1);
 	}
 
 	public static function desiredRing(_arg_1:XML, _arg_2:int, _arg_3:int):Boolean
 	{
-		if (!((_arg_1.hasOwnProperty("SlotType")) && (_arg_1.hasOwnProperty("Tier"))))
+		if (!(_arg_1.hasOwnProperty("SlotType") && _arg_1.hasOwnProperty("Tier")))
 		{
 			return (false);
 		}
-		return ((_arg_1.Tier >= _arg_3) && (_arg_1.SlotType == 9));
+		return (_arg_1.Tier >= _arg_3 && _arg_1.SlotType == 9);
 	}
 
 	public static function desiredUT(_arg_1:XML):Boolean
@@ -477,7 +517,7 @@ public class Parameters
 		{
 			return (false);
 		}
-		if (("BagType" in _arg_1))
+		if (_arg_1.hasOwnProperty("BagType"))
 		{
 			_local_2 = _arg_1.BagType;
 		}
@@ -485,7 +525,7 @@ public class Parameters
 		{
 			return (false);
 		}
-		return ((_local_2 == 6) || (_local_2 == 9));
+		return (_local_2 == 6 || _local_2 == 9);
 	}
 
 	public static function desiredSkin(_arg_1:XML, _arg_2:String):Boolean
@@ -531,7 +571,7 @@ public class Parameters
 	public static function desiredEgg(_arg_1:XML, _arg_2:int):Boolean
 	{
 		var _local_3:int;
-		if ((_arg_1.hasOwnProperty("Rarity")))
+		if (_arg_1.hasOwnProperty("Rarity"))
 		{
 			if (_arg_1.Rarity == "Common")
 			{
@@ -565,12 +605,12 @@ public class Parameters
 
 	public static function desiredFeedPower(_arg_1:XML, _arg_2:int):Boolean
 	{
-		return ((_arg_1.hasOwnProperty("feedPower")) && (_arg_1.feedPower >= _arg_2));
+		return (_arg_1.hasOwnProperty("feedPower") && _arg_1.feedPower >= _arg_2);
 	}
 
 	public static function desiredFameBonus(_arg_1:XML, _arg_2:int):Boolean
 	{
-		return ((_arg_1.hasOwnProperty("FameBonus")) && (_arg_1.FameBonus >= _arg_2));
+		return (_arg_1.hasOwnProperty("FameBonus") && _arg_1.FameBonus >= _arg_2);
 	}
 
 
@@ -610,6 +650,15 @@ public class Parameters
 			data_[_arg_1] = _arg_2;
 		}
 		keyNames_[_arg_1] = true;
+	}
+
+	private static function setDefaultControllerInput(_arg_1:String, _arg_2:uint):void
+	{
+		if (!(_arg_1 in data_))
+		{
+			data_[_arg_1] = _arg_2;
+		}
+		ctrlrInputNames_[_arg_1] = true;
 	}
 
 	public static function setKey(_arg_1:String, _arg_2:uint):void
@@ -812,6 +861,223 @@ public class Parameters
 					return;
 			}
 		}
+		setDefault("gameVersion", "X29.0.1");
+		setDefault("lastTab", "Options.Controls");
+		setDefault("ssdebuffBitmask", 0);
+		setDefault("ssdebuffBitmask2", 0);
+		setDefault("ccdebuffBitmask", 0);
+		setDefault("spamFilter", spamFilter);
+		setDefault("AutoLootOn", false);
+		setDefault("AutoHealPercentage", 99);
+		setDefault("AAOn", true);
+		setDefault("AATargetLead", true);
+		setDefault("AABoundingDist", 4);
+		setDefault("aimMode", 2);
+		setDefault("AutoAbilityOn", false);
+		setDefault("showQuestBar", false);
+		setDefault("AutoNexus", 25);
+		setDefault("AutoHeal", 65);
+		setDefault("autoHPPercent", 40);
+		setDefault("TombCycleBoss", 3368);
+		setDefault("XYZdistance", 1);
+		setDefaultKey("XYZleftHotkey", 0);
+		setDefaultKey("XYZupHotkey", 0);
+		setDefaultKey("XYZdownHotkey", 0);
+		setDefaultKey("XYZrightHotkey", 0);
+		setDefaultKey("TombCycleKey", 0);
+		setDefaultKey("anchorTeleport", 0);
+		setDefaultKey("DrinkAllHotkey", 0);
+		setDefaultKey("SelfTPHotkey", 0);
+		setDefaultKey("syncLeadHotkey", 118);
+		setDefaultKey("syncFollowHotkey", 119);
+		setDefaultKey("FindKeys", 75);
+		setDefault("disableNexus", false);
+		setDefault("AutoResponder", false);
+		setDefault("FocusFPS", false);
+		setDefault("bgFPS", 10);
+		setDefault("fgFPS", 60);
+		setDefault("hideLockList", false);
+		setDefault("hidePets", false);
+		setDefault("hideOtherDamage", false);
+		setDefault("mscale", 1);
+		setDefault("stageScale", "noScale");
+		setDefault("uiscale", true);
+		setDefault("offsetVoidBow", false);
+		setDefault("offsetColossus", false);
+		setDefault("coloOffset", 0.225);
+		setDefault("ethDisable", false);
+		setDefault("cultiststaffDisable", false);
+		setDefault("alphaOnOthers", false);
+		setDefault("alphaMan", 0.4);
+		setDefault("lootPreview", true);
+		setDefault("showQuestBar", false);
+		setDefaultKey("tradeNearestPlayerKey", 0);
+		setDefaultKey("LowCPUModeHotKey", 0);
+		setDefaultKey("Cam45DegInc", 0);
+		setDefaultKey("Cam45DegDec", 0);
+		setDefaultKey("QuestTeleport", 0);
+		setDefaultKey("ReconRealm", 97);
+		setDefaultKey("RandomRealm", 101);
+		setDefaultKey("ReconVault", 99);
+		setDefaultKey("ReconDaily", 100);
+		setDefaultKey("PassesCoverHotkey", 0);
+		setDefaultKey("AAHotkey", 0);
+		setDefaultKey("AAModeHotkey", 0);
+		setDefaultKey("AutoAbilityHotkey", 0);
+		setDefaultKey("AutoLootHotkey", 0);
+		setDefault("requestHealPercent", 55);
+		setDefault("damageIgnored", false);
+		setDefault("AntiSpookiBoiDecoi", false);
+		setDefault("ignoreIce", false);
+		setDefaultKey("TextPause", 113);
+		setDefaultKey("TextThessal", 114);
+		setDefaultKey("TextDraconis", 115);
+		setDefaultKey("TextCem", 112);
+		setDefault("AAException", DefaultAAException);
+		setDefault("AAIgnore", DefaultAAIgnore);
+		setDefault("passThroughInvuln", false);
+		setDefault("autoaimAtInvulnerable", false);
+		setDefault("showDamageOnEnemy", false);
+		setDefault("fameBlockTP", false);
+		setDefault("fameBlockAbility", false);
+		setDefault("fameBlockCubes", false);
+		setDefault("fameBlockGodsOnly", false);
+		setDefault("fameBlockThirsty", false);
+		setDefault("spellbombHPThreshold", 3000);
+		setDefault("skullHPThreshold", 800);
+		setDefault("skullTargets", 5);
+		setDefault("liteMonitor", false);
+		setDefaultKey("TogglePlayerFollow", 120);
+		setDefaultKey("resetClientHP", 0);
+		setDefaultKey("famebotToggleHotkey", 0);
+		setDefault("addMoveRecPoint", false);
+		setDefault("trainOffset", 500);
+		setDefault("densityThreshold", 625);
+		setDefault("teleDistance", 64);
+		setDefault("WalkAroundRocks", false);
+		setDefault("famebotContinue", 0);
+		setDefault("fameTpCdTime", 5000);
+		setDefault("famePointOffset", 1.5);
+		setDefault("skipPopups", false);
+		setDefault("autoClaimCalendar", true);
+		setDefault("TradeDelay", true);
+		setDefault("showHPBarOnAlly", true);
+		setDefault("showEXPFameOnAlly", true);
+		setDefault("showClientStat", false);
+		setDefault("liteParticle", false);
+		setDefault("onlyAimAtExcepted", false);
+		setDefault("ignoreStatusText", false);
+		setDefault("ignoreQuiet", false);
+		setDefault("ignoreWeak", false);
+		setDefault("ignoreSlowed", false);
+		setDefault("ignoreSick", false);
+		setDefault("ignoreDazed", false);
+		setDefault("ignoreStunned", false);
+		setDefault("ignoreParalyzed", false);
+		setDefault("ignoreBleeding", false);
+		setDefault("ignoreArmorBroken", false);
+		setDefault("ignorePetStasis", false);
+		setDefault("ignorePetrified", false);
+		setDefault("ignoreSilenced", false);
+		setDefault("ignoreBlind", true);
+		setDefault("ignoreHallucinating", true);
+		setDefault("ignoreDrunk", true);
+		setDefault("ignoreConfused", true);
+		setDefault("ignoreUnstable", false);
+		setDefault("ignoreDarkness", true);
+		setDefault("autoDecrementHP", false);
+		setDefault("bigLootBags", false);
+		setDefault("replaceCon", false);
+		setDefault("AutoSyncClientHP", false);
+		setDefault("extraPlayerMenu", true);
+		setDefault("safeWalk", false);
+		setDefault("evenLowerGraphics", false);
+		setDefault("showCHbar", true);
+		setDefault("rightClickOption", 0);
+		setDefaultKey("sskey", 8);
+		setDefault("dynamicHPcolor", true);
+		setDefault("keyList", false);
+		setDefault("uiTextSize", 15);
+		setDefault("mobNotifier", true);
+		setDefault("showMobInfo", false);
+		setDefault("aaDistance", 1);
+		setDefault("hideLowCPUModeChat", false);
+		setDefault("fameOryx", false);
+		setDefault("tiltCam", false);
+		setDefault("showBG", true);
+		setDefault("BossPriority", true);
+		setDefaultKey("sayCustom1", 0);
+		setDefaultKey("sayCustom2", 0);
+		setDefaultKey("sayCustom3", 0);
+		setDefault("customMessage1", "We are impervious to non-mystic attacks!");
+		setDefault("customMessage2", "Forget this... run for it!");
+		setDefault("customMessage3", "Engaging Super-Mode!!!");
+		setDefault("autoLootExcludes", Parameters.defaultExclusions);
+		setDefault("autoLootIncludes", Parameters.defaultInclusions);
+		setDefault("autoLootUpgrades", false);
+		setDefault("autoLootWeaponTier", 11);
+		setDefault("autoLootAbilityTier", 5);
+		setDefault("autoLootArmorTier", 12);
+		setDefault("autoLootRingTier", 5);
+		setDefault("autoLootSkins", true);
+		setDefault("autoLootPetSkins", true);
+		setDefault("autoLootKeys", true);
+		setDefault("autoLootHPPots", true);
+		setDefault("autoLootMPPots", true);
+		setDefault("autoLootHPPotsInv", true);
+		setDefault("autoLootMPPotsInv", false);
+		setDefault("autoLootLifeManaPots", true);
+		setDefault("autoLootRainbowPots", true);
+		setDefault("autoLootUTs", true);
+		setDefault("autoLootFameBonus", 5);
+		setDefault("autoLootFeedPower", -1);
+		setDefault("autoLootMarks", false);
+		setDefault("autoLootConsumables", false);
+		setDefault("autoLootSoulbound", false);
+		setDefault("autoLootEggs", 1);
+		setDefault("showFameGoldRealms", false);
+		setDefault("showEnemyCounter", true);
+		setDefault("showTimers", true);
+		setDefault("showAOGuildies", false);
+		setDefault("autoDrinkFromBags", false);
+		setDefault("cacheCharList", false);
+		setDefault("PassesCover", false);
+		setDefault("chatLength", 10);
+		setDefault("autohpPotDelay", 400);
+		setDefault("mapHack", false);
+		setDefault("fixTabHotkeys", true);
+		setDefault("noRotate", false);
+		setDefault("customSounds", false);
+		setDefault("customVolume", 1);
+		setDefault("aimAtQuest", 0);
+		setDefault("followIntoPortals", false);
+		setDefaultControllerInput("ctrlEnterPortal", 4);
+		setDefaultControllerInput("ctrlTeleQuest", 7);
+		setDefaultControllerInput("ctrlNexus", 5);
+		setDefaultControllerInput("ctrlAbility", 6);
+		setDefaultControllerInput("ctrlItemMenu", 14);
+		setDefault("allowController", true);
+		setDefault("useControllerNumber", 0);
+		setDefault("selectedItemColor", 0);
+		setDefault("cNameBypass", false);
+		setDefault("eventNotifier", false);
+		setDefault("eventNotifierVolume", 1);
+		setDefault("notifySkull", true);
+		setDefault("notifyCube", true);
+		setDefault("notifyPentaract", true);
+		setDefault("notifySphinx", true);
+		setDefault("notifyHermit", true);
+		setDefault("notifyLotLL", true);
+		setDefault("notifyGhostShip", false);
+		setDefault("notifyAvatar", false);
+		setDefault("notifyStatues", false);
+		setDefault("notifyRockDragon", false);
+		setDefault("notifyNest", false);
+		setDefault("notifyLostSentry", false);
+		setDefault("notifyPumpkinShrine", false);
+		setDefault("notifyZombieHorde", false);
+		setDefault("notifyTurkeyGod", false);
+		setDefault("notifyBeachBum", true);
 	}
 
 

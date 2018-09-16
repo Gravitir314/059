@@ -104,19 +104,6 @@ public class Wall extends GameObject
 		this.addWall(_local_3, (_local_1 + 1), 1, _local_3, _local_1, 1);
 	}
 
-	/*public function rebuild3D_2():void TODO unused function
-	{
-		var _local_2:int = (x_ + 1);
-		var _local_1:int = (y_ + 1);
-		var _local_3:Vector.<Number> = new <Number>[x_, y_, 1, _local_2, y_, 1, _local_2, _local_1, 1, x_, _local_1, 1];
-		this.topFace_ = new Face3D(this.topTexture_, _local_3, UVT, false, true);
-		this.topFace_.bitmapFill_.repeat = true;
-		this.addWall(x_, y_, 1, _local_2, y_, 1);
-		this.addWall(_local_2, y_, 1, _local_2, _local_1, 1);
-		this.addWall(_local_2, _local_1, 1, x_, _local_1, 1);
-		this.addWall(x_, _local_1, 1, x_, y_, 1);
-	}*/
-
 	private function addWall(_arg_1:Number, _arg_2:Number, _arg_3:Number, _arg_4:Number, _arg_5:Number, _arg_6:Number):void
 	{
 		var _local_7:Vector.<Number> = new <Number>[_arg_1, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_4, _arg_5, (_arg_6 - 1), _arg_1, _arg_2, (_arg_3 - 1)];

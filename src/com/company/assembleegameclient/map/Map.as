@@ -191,14 +191,20 @@ public class Map extends AbstractMap
 		{
 			if (!_local_3.update(_arg_1, _arg_2))
 			{
-				this.idsToRemove_.push(_local_3.objectId_);
+				if (this.idsToRemove_ != null)
+				{
+					this.idsToRemove_.push(_local_3.objectId_);
+				}
 			}
 		}
 		for each (_local_3 in boDict_)
 		{
 			if (!_local_3.update(_arg_1, _arg_2))
 			{
-				this.idsToRemove_.push(_local_3.objectId_);
+				if (this.idsToRemove_ != null)
+				{
+					this.idsToRemove_.push(_local_3.objectId_);
+				}
 			}
 		}
 		this.inUpdate_ = false;
@@ -206,13 +212,22 @@ public class Map extends AbstractMap
 		{
 			this.internalAddObj(_local_3);
 		}
-		this.objsToAdd_.length = 0;
+		if (this.objsToAdd_ != null)
+		{
+			this.objsToAdd_.length = 0;
+		}
 		for each (_local_4 in this.idsToRemove_)
 		{
 			this.internalRemoveObj(_local_4);
 		}
-		this.idsToRemove_.length = 0;
-		party_.update(_arg_1, _arg_2);
+		if (this.idsToRemove_ != null)
+		{
+			this.idsToRemove_.length = 0;
+		}
+		if (party_ != null)
+		{
+			party_.update(_arg_1, _arg_2);
+		}
 	}
 
 	override public function pSTopW(_arg_1:Number, _arg_2:Number):Point
@@ -416,20 +431,23 @@ public class Map extends AbstractMap
 			_local_15 = _local_10;
 			while (_local_15 <= _local_11)
 			{
-				_local_6 = squares_[(_local_12 + (_local_15 * width_))];
-				if (_local_6 != null)
+				if (squares_ != null)
 				{
-					_local_16 = (_local_5.x - _local_6.center_.x);
-					_local_17 = (_local_5.y - _local_6.center_.y);
-					_local_18 = ((_local_16 * _local_16) + (_local_17 * _local_17));
-					if (_local_18 <= _arg_1.maxDistSq_)
+					_local_6 = squares_[(_local_12 + (_local_15 * width_))];
+					if (_local_6 != null)
 					{
-						_local_6.lastVisible_ = _arg_2;
-						_local_6.draw(this.graphicsData_, _arg_1, _arg_2);
-						this.visibleSquares_.push(_local_6);
-						if (_local_6.topFace_ != null)
+						_local_16 = (_local_5.x - _local_6.center_.x);
+						_local_17 = (_local_5.y - _local_6.center_.y);
+						_local_18 = ((_local_16 * _local_16) + (_local_17 * _local_17));
+						if (_local_18 <= _arg_1.maxDistSq_)
 						{
-							this.topSquares_.push(_local_6);
+							_local_6.lastVisible_ = _arg_2;
+							_local_6.draw(this.graphicsData_, _arg_1, _arg_2);
+							this.visibleSquares_.push(_local_6);
+							if (_local_6.topFace_ != null)
+							{
+								this.topSquares_.push(_local_6);
+							}
 						}
 					}
 				}
@@ -522,7 +540,10 @@ public class Map extends AbstractMap
 		}
 		else
 		{
-			hurtOverlay_.visible = false;
+			if (hurtOverlay_ != null)
+			{
+				hurtOverlay_.visible = false;
+			}
 		}
 		if (((!(player_ == null)) && (!(Parameters.screenShotMode_))))
 		{
@@ -532,7 +553,10 @@ public class Map extends AbstractMap
 		}
 		else
 		{
-			gradientOverlay_.visible = false;
+			if (gradientOverlay_ != null)
+			{
+				gradientOverlay_.visible = false;
+			}
 		}
 		if (((Parameters.isGpuRender()) && (Renderer.inGame)))
 		{
@@ -590,12 +614,12 @@ public class Map extends AbstractMap
 		if (((!(player_ == null)) && (!((player_.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.MAP_FILTER_BITMASK) == 0))))
 		{
 			_local_24 = [];
-			if (player_.isDrunk())
+			if (player_.isDrunk)
 			{
 				_local_25 = (20 + (10 * Math.sin((_arg_2 / 1000))));
 				_local_24.push(new BlurFilter(_local_25, _local_25));
 			}
-			if (player_.isBlind())
+			if (player_.isBlind)
 			{
 				_local_24.push(BLIND_FILTER);
 			}
@@ -610,7 +634,7 @@ public class Map extends AbstractMap
 		}
 		mapOverlay_.draw(_arg_1, _arg_2);
 		partyOverlay_.draw(_arg_1, _arg_2);
-		if (((player_) && (player_.isDarkness())))
+		if (((player_) && (player_.isDarkness)))
 		{
 			this.darkness.x = -300;
 			this.darkness.y = ((Parameters.data_.centerOnPlayer) ? -525 : -515);
@@ -631,19 +655,19 @@ public class Map extends AbstractMap
 		var _local_1:uint;
 		if (((!(player_ == null)) && (!((player_.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.MAP_FILTER_BITMASK) == 0))))
 		{
-			if (player_.isPaused())
+			if (player_.isPaused)
 			{
 				_local_1 = Renderer.STAGE3D_FILTER_PAUSE;
 			}
 			else
 			{
-				if (player_.isBlind())
+				if (player_.isBlind)
 				{
 					_local_1 = Renderer.STAGE3D_FILTER_BLIND;
 				}
 				else
 				{
-					if (player_.isDrunk())
+					if (player_.isDrunk)
 					{
 						_local_1 = Renderer.STAGE3D_FILTER_DRUNK;
 					}

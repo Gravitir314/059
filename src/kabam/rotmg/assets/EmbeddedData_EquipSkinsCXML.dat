@@ -1706,7 +1706,7 @@
       <Item/>
       <AnimatedTexture>
          <File>playerskins</File>
-         <Index>130</Index>
+         <Index>401</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
       <Description>Our biggest thanks to our Community Dungeon Creators!\n\nSprite Credits: Beige</Description>
@@ -1949,10 +1949,10 @@
       <Item/>
       <AnimatedTexture>
          <File>playerskins</File>
-         <Index>138</Index>
+         <Index>398</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>Testers assemble! Seek the bugs of tomorrow!\n\nSprite Credits: Beige</Description>
+      <Description>Testers assemble! Seek the bugs of tomorrow!\n\nSprite Credits: Piggby</Description>
       <Activate skinType="10936">UnlockSkin</Activate>
       <Consumable/>
       <Soulbound/>
@@ -6661,6 +6661,108 @@
       <Consumable/>
       <BagType>8</BagType>
       <Soulbound/>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x2605" id="Masked Samurai Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>396</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Always prepared to shred through his enemies.\n\nSkin Class: Samurai\nSprite Credits: Lovens</Description>
+      <Activate skinType="9732">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>8</BagType>
+      <Soulbound/>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x2607" id="Little Prince Rogue Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>397</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>It is only with the heart that one can see rightly. What is essential is invisible to the eye.\n\nSkin Class: Rogue\nSprite Credits: Lovens</Description>
+      <Activate skinType="9734">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x2609" id="Samurai - Future Seeker Tester Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>398</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Testers assemble! Seek the bugs of tomorrow!\n\nSprite Credits: Piggby</Description>
+      <Activate skinType="9736">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x260b" id="Silent Samurai Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>399</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Despite his flashy looks he rarely says anything.\n\nSprite Credits: Squzavvvv</Description>
+      <Activate skinType="9738">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x73a1" id="Samurai - Artist Extraordinaire Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>400</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Our biggest thanks to our Community Artists!\n\nSprite Credits: Beige</Description>
+      <Activate skinType="29600">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x73a3" id="Samurai - Dungeon Mastermind Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>401</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Our biggest thanks to our Community Dungeon Creators!\n\nSprite Credits: Beige</Description>
+      <Activate skinType="29602">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x73a5" id="Shogun Samurai Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>402</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Customize your Samurai with the Shogun Skin.\n\nSprite Credits: HadesIV</Description>
+      <Activate skinType="29604">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
       <feedPower>2000</feedPower>
    </Object>
 </Objects>

@@ -41,28 +41,10 @@ public class Random
 		return ((_arg_1 == _arg_2) ? _arg_1 : (_arg_1 + (this.gen() % (_arg_2 - _arg_1))));
 	}
 
-	/*public function peekIntRange(_arg_1:uint, _arg_2:uint):uint TODO unused function | need this?
-	{
-		return ((_arg_1 == _arg_2) ? _arg_1 : (_arg_1 + (this.genPeek() % (_arg_2 - _arg_1))));
-	}*/
-
 	public function nextDoubleRange(_arg_1:Number, _arg_2:Number):Number
 	{
 		return (_arg_1 + ((_arg_2 - _arg_1) * this.nextDouble()));
 	}
-
-	/*private function genPeek():uint TODO unused function | need this?
-	{
-		var _local_2:uint = (16807 * (this.seed & 0xFFFF));
-		var _local_1:uint = (16807 * (this.seed >> 16));
-		_local_2 = (_local_2 + ((_local_1 & 0x7FFF) << 16));
-		_local_2 = (_local_2 + (_local_1 >> 15));
-		if (_local_2 > 2147483647)
-		{
-			_local_2 = (_local_2 - 2147483647);
-		}
-		return (_local_2);
-	}*/
 
 	private function gen():uint
 	{

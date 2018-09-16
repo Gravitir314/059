@@ -52,6 +52,12 @@ public class ObjectProperties
 	public var excepted:Boolean;
 	public var desiredLoot_:Boolean;
 	public var isPotion_:Boolean;
+	public var isGod_:Boolean;
+	public var isCube_:Boolean;
+	public var slotType_:int = int.MIN_VALUE;
+	public var tier:int = int.MIN_VALUE;
+	public var boss_:Boolean = false;
+	public var rateOfFire_:Number;
 
 	public function ObjectProperties(_arg_1:XML)
 	{

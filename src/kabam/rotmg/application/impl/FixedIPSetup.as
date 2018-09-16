@@ -41,7 +41,7 @@ public class FixedIPSetup implements ApplicationSetup
 
 	public function getBuildLabel():String
 	{
-		var _local_1:String = ((Parameters.BUILD_VERSION + ".") + Parameters.MINOR_VERSION);
+		var _local_1:String = Parameters.data_.gameVersion;
 		return (this.BUILD_LABEL.replace("{IP}", this.ipAddress).replace("{VERSION}", _local_1));
 	}
 

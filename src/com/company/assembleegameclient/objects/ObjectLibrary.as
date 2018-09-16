@@ -224,6 +224,11 @@ public class ObjectLibrary
 		return (propsLibrary_[_local_2]);
 	}
 
+	public static function getPropsFromType(_arg_1:int):ObjectProperties
+	{
+		return (propsLibrary_[_arg_1]);
+	}
+
 	public static function getXMLfromId(_arg_1:String):XML
 	{
 		var _local_2:int = idToType_[_arg_1];

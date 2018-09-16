@@ -1518,7 +1518,7 @@
       <Class>Skin</Class>
       <AnimatedTexture>
          <File>playerskins</File>
-         <Index>130</Index>
+         <Index>401</Index>
       </AnimatedTexture>
       <PlayerClassType>0x0326</PlayerClassType>
       <NoSkinSelect/>
@@ -1638,7 +1638,7 @@
       <Class>Skin</Class>
       <AnimatedTexture>
          <File>playerskins</File>
-         <Index>138</Index>
+         <Index>398</Index>
       </AnimatedTexture>
       <PlayerClassType>0x0326</PlayerClassType>
       <NoSkinSelect/>
@@ -4330,6 +4330,76 @@
       <AnimatedTexture>
          <File>playerskins</File>
          <Index>395</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0311</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x2604" id="Masked Samurai">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>396</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0311</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x2606" id="Little Prince Rogue">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>397</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0300</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x2608" id="Samurai - Future Seeker Tester">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>398</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0311</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x260a" id="Silent Samurai">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>399</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0311</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x73a0" id="Samurai - Artist Extraordinaire">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>400</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0311</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x73a2" id="Samurai - Dungeon Mastermind">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>401</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0311</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x73a4" id="Shogun Samurai">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>402</Index>
       </AnimatedTexture>
       <PlayerClassType>0x0311</PlayerClassType>
       <NoSkinSelect/>

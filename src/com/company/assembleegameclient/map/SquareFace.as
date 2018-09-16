@@ -12,9 +12,6 @@ import kabam.rotmg.stage3D.GraphicsFillExtra;
 
 public class SquareFace
 {
-	private const NO_ANIMATE:int = 0; // TODO find usages
-	private const WAVE_ANIMATE:int = 1;
-	private const FLOW_ANIMATE:int = 2;
 
 	public var animate_:int;
 	public var face_:Face3D;

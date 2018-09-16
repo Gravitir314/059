@@ -1549,7 +1549,7 @@
          <File>lofiChar8x8</File>
          <Index>0xb5</Index>
       </Texture>
-      <MaxHitPoints>10000</MaxHitPoints>
+      <MaxHitPoints>1000000</MaxHitPoints>
       <Size>0</Size>
       <Hero/>
       <Quest/>

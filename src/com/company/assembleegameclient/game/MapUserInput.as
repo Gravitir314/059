@@ -7,6 +7,7 @@ import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.objects.ObjectProperties;
 import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.objects.Portal;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.tutorial.Tutorial;
 import com.company.assembleegameclient.tutorial.doneAction;
@@ -19,7 +20,9 @@ import flash.display.StageDisplayState;
 import flash.events.Event;
 import flash.events.KeyboardEvent;
 import flash.events.MouseEvent;
+import flash.geom.Vector3D;
 import flash.system.Capabilities;
+import flash.utils.getTimer;
 
 import io.decagames.rotmg.social.SocialPopupView;
 import io.decagames.rotmg.ui.popups.signals.CloseAllPopupsSignal;
@@ -52,6 +55,9 @@ import net.hires.debug.Stats;
 
 import org.swiftsuspenders.Injector;
 
+import zfn.xinput.ControllerEvent;
+import zfn.xinput.ControllerHandler;
+
 public class MapUserInput
 {
 
@@ -59,6 +65,8 @@ public class MapUserInput
 	private static const MOUSE_DOWN_WAIT_PERIOD:uint = 175;
 	private static var arrowWarning_:Boolean = false;
 
+	public var autofire_:Boolean = false;
+	public var mouseDown_:Boolean = false;
 	public var gs_:GameSprite;
 	private var moveLeft_:Boolean = false;
 	private var moveRight_:Boolean = false;
@@ -66,8 +74,6 @@ public class MapUserInput
 	private var moveDown_:Boolean = false;
 	private var rotateLeft_:Boolean = false;
 	private var rotateRight_:Boolean = false;
-	private var mouseDown_:Boolean = false;
-	private var autofire_:Boolean = false;
 	private var currentString:String = "";
 	private var specialKeyDown_:Boolean = false;
 	private var enablePlayerInput_:Boolean = true;
@@ -76,7 +82,7 @@ public class MapUserInput
 	private var setTextBoxVisibility:SetTextBoxVisibilitySignal;
 	private var statsTabHotKeyInputSignal:StatsTabHotKeyInputSignal;
 	private var miniMapZoom:MiniMapZoomSignal;
-	private var useBuyPotionSignal:UseBuyPotionSignal;
+	public var useBuyPotionSignal:UseBuyPotionSignal;
 	private var potionInventoryModel:PotionInventoryModel;
 	private var openDialogSignal:OpenDialogSignal;
 	private var closeDialogSignal:CloseDialogsSignal;
@@ -86,6 +92,14 @@ public class MapUserInput
 	private var exitGame:ExitGameSignal;
 	private var areFKeysAvailable:Boolean;
 	private var isFriendsListOpen:Boolean;
+
+	private var ch_:ControllerHandler;
+	private var rightStickVec:Vector3D;
+	private var rightStickAngle:Number = 0;
+	public var held:Boolean = false;
+	public var heldX:int = 0;
+	public var heldY:int = 0;
+	public var heldAngle:Number = 0;
 
 	public function MapUserInput(_arg_1:GameSprite)
 	{
@@ -220,6 +234,10 @@ public class MapUserInput
 		this.rotateRight_ = false;
 		this.mouseDown_ = false;
 		this.autofire_ = false;
+		if (gs_.map.player_ != null)
+		{
+			gs_.map.player_.setControllerMovementXY(0, 0);
+		}
 		this.setPlayerMovement();
 	}
 
@@ -317,7 +335,7 @@ public class MapUserInput
 			{
 				return;
 			}
-			if (_local_2.isUnstable())
+			if (_local_2.isUnstable)
 			{
 				_local_6 = ((Math.random() * 600) - 300);
 				_local_7 = ((Math.random() * 600) - 325);
@@ -356,7 +374,7 @@ public class MapUserInput
 			_local_3 = Math.atan2(this.gs_.map.mouseY, this.gs_.map.mouseX);
 		}
 		doneAction(this.gs_, Tutorial.ATTACK_ACTION);
-		if (_local_2.isUnstable())
+		if (_local_2.isUnstable)
 		{
 			_local_2.attemptAttackAngle((Math.random() * 360));
 		}
@@ -400,7 +418,7 @@ public class MapUserInput
 			_local_2 = this.gs_.map.player_;
 			if (_local_2 != null)
 			{
-				if (_local_2.isUnstable())
+				if (_local_2.isUnstable)
 				{
 					_local_2.attemptAttackAngle((Math.random() * 360));
 				}
@@ -408,6 +426,133 @@ public class MapUserInput
 				{
 					_local_3 = Math.atan2(this.gs_.map.mouseY, this.gs_.map.mouseX);
 					_local_2.attemptAttackAngle(_local_3);
+				}
+			}
+		}
+	}
+
+	private function fixJoystick(_arg_1:Vector3D):Vector3D
+	{
+		var _local_2:Number = _arg_1.length;
+		if (_local_2 < 0.2)
+		{
+			_arg_1.x = 0;
+			_arg_1.y = 0;
+		}
+		else
+		{
+			_arg_1.normalize();
+			_arg_1.scaleBy(((_local_2 - 0.2) / (1 - 0.2)));
+		}
+		return (_arg_1);
+	}
+
+	private function controller(_arg_1:Player):void
+	{
+		var _local_6:* = null;
+		var _local_2:int;
+		var _local_5:Vector.<Number>;
+		var _local_7:Number;
+		var _local_4:Number;
+		if (_arg_1 && _arg_1.relMoveVec_ && ch_ && ch_.controller)
+		{
+			_local_6 = ch_.controller;
+			_local_2 = _local_6.numControls;
+			_local_5 = new Vector.<Number>(_local_2, true);
+			_local_2--;
+			while (_local_2 <= 4)
+			{
+				_local_7 = _local_6.getControlAt(_local_2).value;
+				_local_5[_local_2] = _local_7;
+				if (_local_7 != ch_.controls[_local_2])
+				{
+					ch_.inputEvent(_local_2, _local_7);
+				}
+				_local_5.push(_local_7);
+				_local_2++;
+			}
+			var _local_3:Vector3D = fixJoystick(new Vector3D(_local_5[0], _local_5[1]));
+			_arg_1.setControllerMovementV3D(_local_3);
+			_local_3 = fixJoystick(new Vector3D(_local_5[2], _local_5[3]));
+			if (_local_3.x != 0 && _local_3.y != 0)
+			{
+				_local_4 = Math.atan2(-(_local_3.y), _local_3.x);
+				_arg_1.attemptAttackAngle(_local_4);
+				rightStickAngle = _local_4;
+			}
+			rightStickVec = _local_3;
+			ch_.controls = _local_5;
+		}
+	}
+
+	private function onControllerInput(_arg_1:ControllerEvent):void
+	{
+		var _local_2:int;
+		if (_arg_1.inputValue == 1)
+		{
+			_local_2 = _arg_1.inputCode;
+			var player:Player = this.gs_.map.player_;
+			if (_local_2 == Parameters.data_.ctrlEnterPortal)
+			{
+				_local_2 = this.gs_.mapModel.currentInteractiveTargetObjectId;
+				if (_local_2 != -1)
+				{
+					var _local_3:GameObject = this.gs_.map.goDict_[_local_2];
+					if (_local_3 != null)
+					{
+						if (_local_3 is Portal)
+						{
+							this.gs_.gsc_.usePortal(_local_2);
+						}
+					}
+				}
+			}
+			else
+			{
+				if (_local_2 == Parameters.data_.ctrlTeleQuest)
+				{
+					if (player)
+					{
+						teleQuest(player);
+					}
+				}
+				else
+				{
+					if (_local_2 == Parameters.data_.ctrlNexus)
+					{
+						if (player != null)
+						{
+							this.gs_.gsc_.escape();
+							this.gs_.dispatchEvent(Parameters.reconNexus);
+						}
+						Parameters.data_.needsRandomRealm = false;
+						Parameters.save();
+					}
+					else
+					{
+						if (_local_2 == Parameters.data_.ctrlAbility)
+						{
+							if (player != null)
+							{
+								rightStickVec.scaleBy(7.5);
+								player.useAltWeapon((player.x_ + (Math.cos(rightStickAngle) * Number.abs(rightStickVec.x))), (player.y_ + (Math.sin(rightStickAngle) * Number.abs(rightStickVec.y))), 1, -1, true);
+							}
+						}
+						else
+						{
+							if (_local_2 == Parameters.data_.ctrlHpPot)
+							{
+								useHPPot(player);
+							}
+							else
+							{
+								if (_local_2 == Parameters.data_.ctrlMpPot)
+								{
+									useMPPot(player);
+								}
+							}
+						}
+					}
 				}
 			}
 		}
@@ -505,7 +650,7 @@ public class MapUserInput
 				if (_local_7 == null) break;
 				if (!this.specialKeyDown_)
 				{
-					if (_local_3.isUnstable())
+					if (_local_3.isUnstable)
 					{
 						_local_8 = ((Math.random() * 600) - 300);
 						_local_9 = ((Math.random() * 600) - 325);
@@ -692,6 +837,88 @@ public class MapUserInput
 		this.setPlayerMovement();
 	}
 
+	public function useHPPot(_arg_1:Player):void
+	{
+		var _local_2:int;
+		if (_arg_1.hp_ != _arg_1.maxHP_)
+		{
+			if (_arg_1.healthPotionCount_ == 0 && !Parameters.data_.fameBlockThirsty)
+			{
+				_local_2 = _arg_1.findItems(_arg_1.equipment_, Parameters.hpPotions, 4);
+				if (_local_2 != -1)
+				{
+					this.gs_.gsc_.useItem(getTimer(), _arg_1.objectId_, _local_2, _arg_1.equipment_[_local_2], _arg_1.x_, _arg_1.y_, 1);
+				}
+			}
+			else
+			{
+				this.useBuyPotionSignal.dispatch(new UseBuyPotionVO(2594, UseBuyPotionVO.CONTEXTBUY));
+			}
+		}
+	}
+
+	public function useMPPot(_arg_1:Player):void
+	{
+		var _local_2:int;
+		if (_arg_1.mp_ != _arg_1.maxMP_)
+		{
+			if (_arg_1.magicPotionCount_ == 0 && !Parameters.data_.fameBlockThirsty)
+			{
+				_local_2 = _arg_1.findItems(_arg_1.equipment_, Parameters.mpPotions, 4);
+				if (_local_2 != -1)
+				{
+					this.gs_.gsc_.useItem(getTimer(), _arg_1.objectId_, _local_2, _arg_1.equipment_[_local_2], _arg_1.x_, _arg_1.y_, 1);
+				}
+			}
+			else
+			{
+				this.useBuyPotionSignal.dispatch(new UseBuyPotionVO(2595, UseBuyPotionVO.CONTEXTBUY));
+			}
+		}
+	}
+
+	public function teleQuest(_arg_1:Player):void
+	{
+		var _local_6:Number;
+		var _local_3:int;
+		var _local_7:Number;
+		var _local_2:int = gs_.map.quest_.objectId_;
+		if (_local_2 > 0)
+		{
+			var _local_4:GameObject = gs_.map.quest_.getObject(_local_2);
+			if (_local_4 != null)
+			{
+				_local_6 = Number.MAX_VALUE;
+				_local_3 = -1;
+				for each (var _local_5:GameObject in this.gs_.map.goDict_)
+				{
+					if (_local_5 is Player && !_local_5.isInvisible && !_local_5.isPaused)
+					{
+						_local_7 = (((_local_5.x_ - _local_4.x_) * (_local_5.x_ - _local_4.x_)) + ((_local_5.y_ - _local_4.y_) * (_local_5.y_ - _local_4.y_)));
+						if (_local_7 < _local_6)
+						{
+							_local_6 = _local_7;
+							_local_3 = _local_5.objectId_;
+						}
+					}
+				}
+				if (_local_3 == _arg_1.objectId_)
+				{
+					_arg_1.textNotification("You are closest!", 0xFFFFFF, 1500, false);
+				}
+				else
+				{
+					this.gs_.gsc_.teleport(_local_3);
+					_arg_1.textNotification(("Teleporting to " + this.gs_.map.goDict_[_local_3].name_), 0xFFFFFF, 1500, false);
+				}
+			}
+		}
+		else
+		{
+			_arg_1.textNotification("You have no quest!", 0xFFFFFF, 1500, false);
+		}
+	}
+
 	private function onKeyUp(_arg_1:KeyboardEvent):void
 	{
 		var _local_2:Number;
@@ -720,7 +947,7 @@ public class MapUserInput
 				if (this.specialKeyDown_)
 				{
 					this.specialKeyDown_ = false;
-					if (this.gs_.map.player_.isUnstable())
+					if (this.gs_.map.player_.isUnstable)
 					{
 						_local_2 = ((Math.random() * 600) - 300);
 						_local_3 = ((Math.random() * 600) - 325);

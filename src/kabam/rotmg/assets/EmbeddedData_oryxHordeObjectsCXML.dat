@@ -1013,7 +1013,7 @@
       <Size>200</Size>
       <ShadowSize>100</ShadowSize>
       <Terrain>Mountains</Terrain>
-      <SpawnProb>1.0</SpawnProb>
+      <SpawnProb>0.0</SpawnProb>
       <PerRealmMax>1</PerRealmMax>
       <Quest/>
       <God/>

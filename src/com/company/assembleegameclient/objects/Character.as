@@ -31,15 +31,6 @@ public class Character extends GameObject
 		return (0xFFFF00 - (0x0500 * (50 - _arg_1)));
 	}
 
-	public static function green2redu(_arg_1:uint):uint // TODO need this?
-	{
-		if (_arg_1 > 50)
-		{
-			return (0xFF00 + (0x50000 * (100 - _arg_1)));
-		}
-		return (0xFFFF00 - (0x0500 * (50 - _arg_1)));
-	}
-
 	override public function damage(_arg_1:Boolean, _arg_2:int, _arg_3:Vector.<uint>, _arg_4:Boolean, _arg_5:Projectile, _arg_6:Boolean = false):void
 	{
 		super.damage(_arg_1, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6);
@@ -55,21 +46,6 @@ public class Character extends GameObject
 			}
 		}
 	}
-
-	/*public function barLength(_arg_1:int, _arg_2:int, _arg_3:int, _arg_4:Boolean, _arg_5:Boolean):int TODO unused function
-	{
-		var _local_6:int;
-		if (_arg_4)
-		{
-			_local_6 = ((_arg_3 * _arg_1) * 0.01);
-			if (_arg_5)
-			{
-				return ((_local_6 > _arg_2) ? _local_6 : _arg_2);
-			}
-			return (_local_6);
-		}
-		return (_arg_1);
-	}*/
 
 	override public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void
 	{
