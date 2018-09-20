@@ -38,6 +38,9 @@ public class CurrentCharacterRect extends CharacterRect
 	private static var toolTip_:MyPlayerToolTip = null;
 	private static var fameToolTip:TextToolTip = null;
 
+	public static var charnames:Vector.<String> = new Vector.<String>(0);
+	public static var charids:Vector.<int> = new Vector.<int>(0);
+
 	public const selected:Signal = new Signal();
 	public const deleteCharacter:Signal = new Signal();
 	public const showToolTip:Signal = new Signal(Sprite);
@@ -64,8 +67,10 @@ public class CurrentCharacterRect extends CharacterRect
 		var _local_5:String = _arg_2.name;
 		var _local_6:int = _arg_3.charXML_.Level;
 		super.className = new LineBuilder().setParams(TextKey.CURRENT_CHARACTER_DESCRIPTION, {
-			"className": _local_5, "level": _local_6
+			"className": _local_5,
+			"level": _local_6
 		});
+		this.setCharCon(_local_5.toLowerCase(), this.char.charId());
 		super.color = 0x5C5C5C;
 		super.overColor = 0x7F7F7F;
 		super.init();
@@ -109,6 +114,34 @@ public class CurrentCharacterRect extends CharacterRect
 		this.icon.x = CharacterRectConstants.ICON_POS_X;
 		this.icon.y = CharacterRectConstants.ICON_POS_Y;
 		((this.icon) && (selectContainer.addChild(this.icon)));
+	}
+
+	private function setCharCon(_arg_1:String, _arg_2:int):void
+	{
+		var _local_3:int;
+		while (_local_3 < charnames.length)
+		{
+			if (charnames[_local_3] == _arg_1)
+			{
+				if (charids[_local_3] < _arg_2)
+				{
+					_arg_1 = (_arg_1 + "2");
+					charnames.push(_arg_1);
+					charids.push(_arg_2);
+				}
+				else
+				{
+					_arg_1 = (_arg_1 + "2");
+					charnames.push(_arg_1);
+					charids.push(charids[_local_3]);
+					charids[_local_3] = _arg_2;
+				}
+				return;
+			}
+			_local_3++;
+		}
+		charnames.push(_arg_1);
+		charids.push(_arg_2);
 	}
 
 	private function makePetIcon():void

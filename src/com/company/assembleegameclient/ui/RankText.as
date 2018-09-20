@@ -3,6 +3,7 @@
 package com.company.assembleegameclient.ui
 {
 import com.company.assembleegameclient.util.FameUtil;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Sprite;
 import flash.filters.DropShadowFilter;
@@ -30,7 +31,7 @@ public class RankText extends Sprite
 		{
 			this.prefix_ = this.makeText();
 			this.prefix_.setStringBuilder(new LineBuilder().setParams(TextKey.RANK_TEXT_RANK));
-			this.prefix_.filters = [new DropShadowFilter(0, 0, 0)];
+			this.prefix_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 			this.prefix_.textChanged.addOnce(this.position);
 			addChild(this.prefix_);
 		}

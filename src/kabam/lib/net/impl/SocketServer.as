@@ -15,6 +15,7 @@ import flash.utils.ByteArray;
 import flash.utils.Timer;
 
 import kabam.lib.net.api.MessageProvider;
+import kabam.rotmg.messaging.impl.GameServerConnection;
 
 import org.osflash.signals.Signal;
 
@@ -97,9 +98,12 @@ public class SocketServer
 
 	public function disconnect():void
 	{
-		this.socket.close();
-		this.removeListeners();
-		this.closed.dispatch();
+		if (this.socket.connected)
+		{
+			this.socket.close();
+			this.removeListeners();
+			this.closed.dispatch();
+		}
 	}
 
 	private function removeListeners():void
@@ -113,6 +117,18 @@ public class SocketServer
 
 	public function sendMessage(_arg_1:Message):void
 	{
+		if (Parameters.data_.traceMessage)
+		{
+			switch (_arg_1.id)
+			{
+				case GameServerConnection.PONG:
+				case GameServerConnection.UPDATEACK:
+				case GameServerConnection.ESCAPE:
+					break;
+				default:
+					trace(_arg_1);
+			}
+		}
 		this.tail.next = _arg_1;
 		this.tail = _arg_1;
 		((this.socket.connected) && (this.sendPendingMessages()));
@@ -120,8 +136,7 @@ public class SocketServer
 
 	private function sendPendingMessages():void
 	{
-		var _local_1:Message = this.head.next;
-		var _local_2:Message = _local_1;
+		var _local_2:Message = this.head.next;
 		while (_local_2)
 		{
 			this.data.clear();
@@ -165,6 +180,10 @@ public class SocketServer
 	private function onSecurityError(_arg_1:SecurityErrorEvent):void
 	{
 		var _local_2:String = this.parseString((("Socket-Server Security: {0}. Please open port " + Parameters.PORT) + " in your firewall and/or router settings and try again"), [_arg_1.text]);
+		if (!Parameters.ssmode)
+		{
+			_local_2 = this.parseString("Socket-Server Security Error: {0}", [_arg_1.text]);
+		}
 		this.error.dispatch(_local_2);
 		this.closed.dispatch();
 	}
@@ -222,6 +241,17 @@ public class SocketServer
 				logErrorAndClose("Socket-Server Protocol Error: {0}", [error.toString()]);
 				return;
 			}
+			if (Parameters.data_.traceMessage)
+			{
+				switch (message.id)
+				{
+					case GameServerConnection.PING:
+					case GameServerConnection.NEWTICK:
+						break;
+					default:
+						trace(message);
+				}
+			}
 			message.consume();
 		}
 	}
@@ -229,6 +259,7 @@ public class SocketServer
 	private function logErrorAndClose(_arg_1:String, _arg_2:Array = null):void
 	{
 		this.error.dispatch(this.parseString(_arg_1, _arg_2));
+		trace(this.parseString(_arg_1, _arg_2));
 		this.disconnect();
 	}
 

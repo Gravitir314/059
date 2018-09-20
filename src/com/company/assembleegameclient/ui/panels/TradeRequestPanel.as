@@ -5,12 +5,12 @@ package com.company.assembleegameclient.ui.panels
 import com.company.assembleegameclient.game.AGameSprite;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.DeprecatedTextButton;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.events.Event;
 import flash.events.KeyboardEvent;
 import flash.events.MouseEvent;
 import flash.events.TimerEvent;
-import flash.filters.DropShadowFilter;
 import flash.text.TextFieldAutoSize;
 import flash.utils.Timer;
 
@@ -37,7 +37,7 @@ public class TradeRequestPanel extends Panel
 		this.title_.setBold(true);
 		this.title_.setWordWrap(true).setMultiLine(true);
 		this.title_.setAutoSize(TextFieldAutoSize.CENTER);
-		this.title_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.title_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.title_.y = 0;
 		addChild(this.title_);
 		this.rejectButton_ = new DeprecatedTextButton(16, TextKey.TRADE_REJECT);

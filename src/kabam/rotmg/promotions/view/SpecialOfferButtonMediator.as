@@ -2,11 +2,9 @@
 
 package kabam.rotmg.promotions.view
 {
-import io.decagames.rotmg.shop.packages.startupPackage.StartupPackage;
 import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
 import kabam.rotmg.packages.services.PackageModel;
-
 import kabam.rotmg.promotions.model.BeginnersPackageModel;
 import kabam.rotmg.promotions.signals.PackageStatusUpdateSignal;
 import kabam.rotmg.promotions.signals.ShowBeginnersPackageSignal;

@@ -6,10 +6,10 @@ import com.company.assembleegameclient.game.AGameSprite;
 import com.company.assembleegameclient.objects.ArenaPortal;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.util.Currency;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Sprite;
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 import flash.text.TextFieldAutoSize;
 
 import kabam.rotmg.text.model.TextKey;
@@ -64,7 +64,7 @@ public class ArenaPortalPanel extends Panel
 		this.closedText = new StaticTextDisplay();
 		this.closedText.setSize(18).setColor(0xFF0000).setTextWidth(WIDTH).setWordWrap(true).setMultiLine(true).setAutoSize(TextFieldAutoSize.CENTER).setBold(true).setHTML(true);
 		this.closedText.setStringBuilder(new LineBuilder().setParams(TextKey.PORTAL_PANEL_FULL).setPrefix('<p align="center">').setPostfix("</p>"));
-		this.closedText.filters = [new DropShadowFilter(0, 0, 0)];
+		this.closedText.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.closedText.y = (HEIGHT - 45);
 		this.closeContainer.addChild(this.closedText);
 		this.closeNameText = this.makeTitle();
@@ -101,7 +101,7 @@ public class ArenaPortalPanel extends Panel
 		_local_1 = new StaticTextDisplay();
 		_local_1.setSize(18).setColor(0xFFFFFF).setTextWidth(WIDTH).setWordWrap(true).setMultiLine(true).setAutoSize(TextFieldAutoSize.CENTER).setBold(true).setHTML(true);
 		_local_1.setStringBuilder(new LineBuilder().setParams(TextKey.ARENA_PORTAL_PANEL_TITLE).setPrefix('<p align="center">').setPostfix("</p>"));
-		_local_1.filters = [new DropShadowFilter(0, 0, 0)];
+		_local_1.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		_local_1.y = 6;
 		return (_local_1);
 	}

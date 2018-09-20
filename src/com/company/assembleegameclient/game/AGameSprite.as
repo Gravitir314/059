@@ -5,6 +5,7 @@ package com.company.assembleegameclient.game
 import com.company.assembleegameclient.map.AbstractMap;
 import com.company.assembleegameclient.map.Camera;
 import com.company.assembleegameclient.objects.GameObject;
+import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.tutorial.Tutorial;
 
 import flash.display.Sprite;
@@ -32,6 +33,7 @@ public class AGameSprite extends Sprite
 	public var model:PlayerModel;
 	public var hudView:HUDView;
 	public var camera_:Camera = new Camera();
+	public var player_:Player;
 	public var gsc_:GameServerConnection;
 
 	public var statsStart:int = 0;

@@ -9,12 +9,12 @@ import com.company.assembleegameclient.ui.DeprecatedTextButton;
 import com.company.assembleegameclient.ui.RankText;
 import com.company.assembleegameclient.ui.panels.Panel;
 import com.company.assembleegameclient.util.Currency;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.KeyboardEvent;
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 import flash.text.TextFormatAlign;
 
 import kabam.rotmg.text.model.TextKey;
@@ -82,7 +82,7 @@ public class NameChangerPanel extends Panel
 		_local_1 = gs_.model.getName();
 		this.title_ = new TextFieldDisplayConcrete().setSize(18).setColor(0xFFFFFF).setTextWidth(WIDTH);
 		this.title_.setBold(true).setWordWrap(true).setMultiLine(true).setHorizontalAlign(TextFormatAlign.CENTER);
-		this.title_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.title_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		return (_local_1);
 	}
 
@@ -146,7 +146,7 @@ public class NameChangerPanel extends Panel
 		_local_3 = new TextFieldDisplayConcrete().setSize(16).setColor(0xFFFFFF);
 		_local_3.setBold(true);
 		_local_3.setStringBuilder(new LineBuilder().setParams(TextKey.NAME_CHANGER_REQUIRE_RANK));
-		_local_3.filters = [new DropShadowFilter(0, 0, 0)];
+		_local_3.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		_local_2.addChild(_local_3);
 		_local_4 = new RankText(_arg_1, false, false);
 		_local_4.x = (_local_3.width + 4);

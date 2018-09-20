@@ -4,10 +4,10 @@ package com.company.assembleegameclient.ui
 {
 import com.company.assembleegameclient.util.GuildUtil;
 import com.company.util.SpriteUtil;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Bitmap;
 import flash.display.Sprite;
-import flash.filters.DropShadowFilter;
 import flash.text.TextFieldAutoSize;
 
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
@@ -15,8 +15,6 @@ import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
 public class GuildText extends Sprite
 {
-	private const DEFAULT_FILTER:DropShadowFilter = new DropShadowFilter(0, 0, 0);
-
 	private var name_:String;
 	private var rank_:int;
 	private var icon_:Bitmap;
@@ -31,7 +29,7 @@ public class GuildText extends Sprite
 		this.guildName_ = new TextFieldDisplayConcrete().setSize(16).setColor(0xFFFFFF).setTextWidth(_local_4);
 		this.guildName_.mouseChildren = false;
 		this.guildName_.setAutoSize(TextFieldAutoSize.LEFT);
-		this.guildName_.filters = [DEFAULT_FILTER];
+		this.guildName_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.guildName_.x = 24;
 		this.guildName_.y = 2;
 		this.draw(_arg_1, _arg_2);

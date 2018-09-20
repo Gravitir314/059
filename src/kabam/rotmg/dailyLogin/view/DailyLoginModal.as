@@ -5,12 +5,12 @@ package kabam.rotmg.dailyLogin.view
 import com.company.assembleegameclient.ui.DeprecatedTextButtonStatic;
 import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.util.AssetLibrary;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Bitmap;
 import flash.display.BitmapData;
 import flash.display.DisplayObject;
 import flash.display.Sprite;
-import flash.filters.DropShadowFilter;
 import flash.geom.Rectangle;
 import flash.text.TextFieldAutoSize;
 import flash.text.TextFormatAlign;
@@ -185,7 +185,7 @@ public class DailyLoginModal extends Sprite
 		_local_5.setMultiLine(true);
 		_local_5.setAutoSize(TextFieldAutoSize.CENTER);
 		_local_5.setHorizontalAlign(TextFormatAlign.CENTER);
-		_local_5.filters = [new DropShadowFilter(0, 0, 0)];
+		_local_5.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		_local_5.x = _arg_2;
 		_local_5.y = _arg_3;
 		return (_local_5);

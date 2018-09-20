@@ -3,10 +3,10 @@
 package com.company.assembleegameclient.ui
 {
 import com.company.assembleegameclient.sound.SoundEffectLibrary;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Sprite;
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.LineBuilder;
@@ -23,7 +23,7 @@ public class ClickableTextBase extends Sprite
 		this.text_.setBold(_arg_2);
 		this.text_.setStringBuilder(new LineBuilder().setParams(_arg_3));
 		addChild(this.text_);
-		this.text_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.text_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
 		addEventListener(MouseEvent.MOUSE_OUT, this.onMouseOut);
 		addEventListener(MouseEvent.CLICK, this.onMouseClick);

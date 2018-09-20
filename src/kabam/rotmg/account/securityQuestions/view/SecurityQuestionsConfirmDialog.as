@@ -3,8 +3,7 @@
 package kabam.rotmg.account.securityQuestions.view
 {
 import com.company.assembleegameclient.account.ui.Frame;
-
-import flash.filters.DropShadowFilter;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import kabam.rotmg.text.model.TextKey;
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
@@ -42,7 +41,7 @@ public class SecurityQuestionsConfirmDialog extends Frame
 		this.infoText.setSize(12).setColor(0xB3B3B3).setBold(true);
 		this.infoText.setTextWidth(250);
 		this.infoText.setMultiLine(true).setWordWrap(true).setHTML(true);
-		this.infoText.filters = [new DropShadowFilter(0, 0, 0)];
+		this.infoText.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addChild(this.infoText);
 		this.infoText.y = 40;
 		this.infoText.x = 17;

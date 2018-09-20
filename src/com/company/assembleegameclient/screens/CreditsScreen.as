@@ -6,11 +6,11 @@ import com.company.assembleegameclient.constants.ScreenConstants;
 import com.company.rotmg.graphics.KabamLogo;
 import com.company.rotmg.graphics.ScreenGraphic;
 import com.company.rotmg.graphics.StackedLogoR;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 import flash.net.URLRequest;
 import flash.net.navigateToURL;
 import flash.text.TextFieldAutoSize;
@@ -83,7 +83,7 @@ public class CreditsScreen extends Sprite
 		this.creditsText = new TextFieldDisplayConcrete();
 		this.creditsText.setColor(0xB3B3B3).setSize(16).setBold(true);
 		this.creditsText.setStringBuilder(new LineBuilder().setParams(TextKey.CREDITS_DEVELOPED));
-		this.creditsText.filters = [new DropShadowFilter(0, 0, 0)];
+		this.creditsText.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.creditsText.setAutoSize(TextFieldAutoSize.CENTER);
 		return (this.creditsText);
 	}

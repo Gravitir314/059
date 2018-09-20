@@ -36,6 +36,35 @@ public class LiveServerModel implements ServerModel
 		return (this.servers);
 	}
 
+	public function getAbbreviations():Vector.<String>
+	{
+		var servers:Vector.<Server> = this.servers;
+		var counter:int = 0;
+		var abbreviations:Vector.<String> = new Vector.<String>(0);
+		while (counter < servers.length)
+		{
+			var name:String = servers[counter].name;
+			name = name.replace(/([a-z])/g, "");
+			abbreviations.push(name);
+			counter++;
+		}
+		return (abbreviations);
+	}
+
+	public function getServerByName(_arg_1:String):Server
+	{
+		var _local_2:Server;
+		var _local_3:Vector.<Server> = this.getServers();
+		for each (_local_2 in _local_3)
+		{
+			if (_local_2.name == _arg_1)
+			{
+				return (_local_2);
+			}
+		}
+		return (null);
+	}
+
 	public function getServer():Server
 	{
 		var _local_6:Server;

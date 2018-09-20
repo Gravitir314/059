@@ -27,6 +27,7 @@ public class WebLoginDialog extends Frame
 	public var register:Signal;
 	private var email:TextInputField;
 	private var password:TextInputField;
+	private var secret:TextInputField;
 	private var forgotText:DeprecatedClickableText;
 	private var registerText:DeprecatedClickableText;
 	private var rememberMeCheckbox:CheckBoxField;
@@ -47,13 +48,15 @@ public class WebLoginDialog extends Frame
 		addTextInputField(this.email);
 		this.password = new TextInputField(TextKey.WEB_LOGIN_DIALOG_PASSWORD, true);
 		addTextInputField(this.password);
+		this.secret = new TextInputField("Secret (Kong/Steam)", true);
+		addTextInputField(this.secret);
 		this.rememberMeCheckbox = new CheckBoxField("Remember me", false);
 		this.rememberMeCheckbox.text_.y = 4;
 		this.forgotText = new DeprecatedClickableText(12, false, TextKey.WEB_LOGIN_DIALOG_FORGOT);
-		h_ = (h_ + 12);
 		addNavigationText(this.forgotText);
 		this.registerText = new DeprecatedClickableText(12, false, TextKey.WEB_LOGIN_DIALOG_REGISTER);
 		addNavigationText(this.registerText);
+		h_ = (h_ + 12);
 		rightButton_.addEventListener(MouseEvent.CLICK, this.onSignIn);
 		addEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown);
 		addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
@@ -86,23 +89,47 @@ public class WebLoginDialog extends Frame
 			_local_1 = new AccountData();
 			_local_1.username = this.email.text();
 			_local_1.password = this.password.text();
+			_local_1.secret = this.secret.text();
 			this.signIn.dispatch(_local_1);
+		}
+		else
+		{
+			if (this.password.text() == "" && this.email.text().indexOf(":") != -1)
+			{
+				_local_1 = new AccountData();
+				if (this.email.text().split(":").length == 2)
+				{
+					_local_1.username = this.email.text().split(":")[0];
+					_local_1.password = this.email.text().split(":")[1];
+					_local_1.secret = "";
+					this.signIn.dispatch(_local_1);
+				}
+			}
 		}
 	}
 
 	private function isPasswordValid():Boolean
 	{
-		var _local_1:* = (!(this.password.text() == ""));
+		var _local_1:Boolean = this.password.text() != "";
+		var _local_2:Boolean = this.secret.text() != "";
+		if (_local_1)
+		{
+			return (true);
+		}
+		if (_local_2)
+		{
+			return (true);
+		}
 		if (!_local_1)
 		{
 			this.password.setError(TextKey.WEB_LOGIN_DIALOG_PASSWORD_ERROR);
 		}
-		return (_local_1);
+		return (false);
 	}
 
 	private function isEmailValid():Boolean
 	{
-		var _local_1:* = (!(this.email.text() == ""));
+		var _local_1:Boolean = this.email.text() != "";
 		if (!_local_1)
 		{
 			this.email.setError(TextKey.WEBLOGINDIALOG_EMAIL_ERROR);

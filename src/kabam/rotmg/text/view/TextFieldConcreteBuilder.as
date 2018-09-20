@@ -2,7 +2,8 @@
 
 package kabam.rotmg.text.view
 {
-import flash.filters.DropShadowFilter;
+import com.greensock.plugins.DropShadowFilterPlugin;
+
 import flash.text.TextFieldAutoSize;
 import flash.text.TextFormatAlign;
 
@@ -60,7 +61,7 @@ public class TextFieldConcreteBuilder
 		_arg_1.setMultiLine(true);
 		_arg_1.setAutoSize(TextFieldAutoSize.CENTER);
 		_arg_1.setHorizontalAlign(TextFormatAlign.CENTER);
-		_arg_1.filters = [new DropShadowFilter(0, 0, 0)];
+		_arg_1.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		if (_arg_2 != -1)
 		{
 			_arg_1.x = _arg_2;

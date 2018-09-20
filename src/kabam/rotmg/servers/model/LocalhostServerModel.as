@@ -22,6 +22,16 @@ public class LocalhostServerModel implements ServerModel
 		return (new <Server>[this.localhost]);
 	}
 
+	public function getAbbreviations():Vector.<String>
+	{
+		return (new <String>[this.localhost.name])
+	}
+
+	public function getServerByName(_arg_1:String):Server
+	{
+		return (this.localhost);
+	}
+
 	public function getServer():Server
 	{
 		return (this.localhost);

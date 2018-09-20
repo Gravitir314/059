@@ -4,8 +4,7 @@ package com.company.assembleegameclient.ui.tooltip
 {
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.ui.GameObjectListItem;
-
-import flash.filters.DropShadowFilter;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import kabam.rotmg.text.model.TextKey;
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
@@ -23,7 +22,7 @@ public class PlayerGroupToolTip extends ToolTip
 		super(0x363636, 0.5, 0xFFFFFF, 1, _arg_2);
 		this.clickMessage_ = new TextFieldDisplayConcrete().setSize(12).setColor(0xB3B3B3);
 		this.clickMessage_.setStringBuilder(new LineBuilder().setParams(TextKey.PLAYER_TOOL_TIP_CLICK_MESSAGE));
-		this.clickMessage_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.clickMessage_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addChild(this.clickMessage_);
 		this.setPlayers(_arg_1);
 		if (!_arg_2)

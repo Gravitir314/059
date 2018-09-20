@@ -5,7 +5,6 @@ package com.company.assembleegameclient.sound
 import com.company.assembleegameclient.parameters.Parameters;
 
 import flash.events.IOErrorEvent;
-
 import flash.media.Sound;
 import flash.media.SoundChannel;
 import flash.media.SoundTransform;
@@ -13,7 +12,6 @@ import flash.net.URLRequest;
 
 import kabam.rotmg.application.api.ApplicationSetup;
 import kabam.rotmg.core.StaticInjectorContext;
-import kabam.rotmg.core.service.GoogleAnalytics;
 
 public class Music
 {
@@ -42,10 +40,6 @@ public class Music
 
 	public static function setPlayMusic(_arg_1:Boolean):void
 	{
-		var _local_2:GoogleAnalytics = StaticInjectorContext.getInjector().getInstance(GoogleAnalytics);
-		if (_local_2)
-		{
-		}
 		Parameters.data_.playMusic = _arg_1;
 		Parameters.save();
 		musicVolumeTransform.volume = ((Parameters.data_.playMusic) ? volume : 0);

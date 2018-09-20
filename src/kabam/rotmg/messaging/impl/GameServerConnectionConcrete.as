@@ -51,7 +51,6 @@ import com.company.assembleegameclient.ui.panels.GuildInvitePanel;
 import com.company.assembleegameclient.ui.panels.TradeRequestPanel;
 import com.company.assembleegameclient.util.AssetLoader;
 import com.company.assembleegameclient.util.ConditionEffect;
-import com.company.assembleegameclient.util.ConditionEffect;
 import com.company.assembleegameclient.util.Currency;
 import com.company.assembleegameclient.util.FreeList;
 import com.company.assembleegameclient.util.RandomUtil;
@@ -63,8 +62,6 @@ import com.hurlant.crypto.rsa.RSAKey;
 import com.hurlant.crypto.symmetric.ICipher;
 import com.hurlant.util.Base64;
 import com.hurlant.util.der.PEM;
-
-import flash.display.Bitmap;
 
 import flash.display.BitmapData;
 import flash.events.Event;
@@ -109,7 +106,6 @@ import kabam.rotmg.classes.model.ClassesModel;
 import kabam.rotmg.constants.GeneralConstants;
 import kabam.rotmg.constants.ItemConstants;
 import kabam.rotmg.core.StaticInjectorContext;
-import kabam.rotmg.core.service.GoogleAnalytics;
 import kabam.rotmg.dailyLogin.message.ClaimDailyRewardMessage;
 import kabam.rotmg.dailyLogin.message.ClaimDailyRewardResponse;
 import kabam.rotmg.dailyLogin.signal.ClaimDailyRewardResponseSignal;
@@ -1543,10 +1539,41 @@ public class GameServerConnectionConcrete extends GameServerConnection
 				}
 			}
 		}
-
 		if (_local_3.props_.static_ && _local_3.props_.occupySquare_ && !_local_3.props_.noMiniMap_)
 		{
 			this.updateGameObjectTileSignal.dispatch(new UpdateGameObjectTileVO(_local_3.x_, _local_3.y_, _local_3));
+		}
+		switch (_local_3.objectType_)
+		{
+			case 1825:
+				Parameters.timerActive = true;
+				Parameters.phaseChangeAt = (getTimer() + (120 * 1000));
+				Parameters.phaseName = "Wine Cellar";
+				break;
+			case 3368:
+			case 32694:
+			case 29003:
+			case 29021:
+			case 29039:
+				player.questMob1 = _local_3;
+				break;
+			case 3366:
+			case 32692:
+			case 29341:
+				player.questMob2 = _local_3;
+				break;
+			case 3367:
+			case 32693:
+			case 29342:
+				player.questMob3 = _local_3;
+				break;
+			case 29466:
+			case 29563:
+			case 29564:
+				player.questMob1 = null;
+				player.questMob2 = null;
+				player.questMob3 = null;
+				break;
 		}
 	}
 
@@ -2388,6 +2415,12 @@ public class GameServerConnectionConcrete extends GameServerConnection
 
 	private function onReconnect(_arg_1:Reconnect):void
 	{
+		if (player != null)
+		{
+			player.questMob1 = null;
+			player.questMob2 = null;
+			player.questMob3 = null;
+		}
 		var _local_2:Server = new Server().setName(_arg_1.name_).setAddress(((_arg_1.host_ != "") ? _arg_1.host_ : server_.address)).setPort(((_arg_1.host_ != "") ? _arg_1.port_ : server_.port));
 		var _local_3:int = _arg_1.gameId_;
 		if (_local_3 == Parameters.NEXUS_GAMEID && Parameters.data_.disableNexus)
@@ -2879,12 +2912,10 @@ public class GameServerConnectionConcrete extends GameServerConnection
 
 	private function onClosed():void
 	{
-		var _local_1:GoogleAnalytics;
 		var _local_2:HideMapLoadingSignal;
 		if (this.playerId_ != -1)
 		{
-			_local_1 = StaticInjectorContext.getInjector().getInstance(GoogleAnalytics);
-			_local_1.trackEvent("error", "disconnect", gs_.map.name_);
+			this.logger.error("Closerino");
 			gs_.closed.dispatch();
 		}
 		else

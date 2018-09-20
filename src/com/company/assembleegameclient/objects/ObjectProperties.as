@@ -48,6 +48,8 @@ public class ObjectProperties
 	public var angleCorrection_:Number = 0;
 	public var rotation_:Number = 0;
 
+	internal const unlistedBosses:Vector.<int> = new <int>[1337, 0x0800, 2340, 2349, 3448, 3449, 3452, 3613, 3622, 4312, 4324, 4325, 4326, 5943, 8200, 24092, 24327, 24351, 24363, 24587, 29003, 29021, 29039, 29341, 29342, 29723, 29764, 30026, 45104, 45371, 45076, 28618, 28619, 32751, 29793];
+
 	public var ignored:Boolean;
 	public var excepted:Boolean;
 	public var desiredLoot_:Boolean;
@@ -79,6 +81,20 @@ public class ObjectProperties
 		this.shadowSize_ = ((_arg_1.hasOwnProperty("ShadowSize")) ? _arg_1.ShadowSize : 100);
 		this.isPlayer_ = _arg_1.hasOwnProperty("Player");
 		this.isEnemy_ = _arg_1.hasOwnProperty("Enemy");
+		this.isItem_ = _arg_1.hasOwnProperty("Item");
+		if (_arg_1.hasOwnProperty("SlotType"))
+		{
+			this.slotType_ = _arg_1.SlotType;
+		}
+		if (_arg_1.hasOwnProperty("Tier"))
+		{
+			this.tier = _arg_1.Tier;
+		}
+		this.boss_ = _arg_1.hasOwnProperty("Quest");
+		if (this.unlistedBosses.indexOf(this.type_) >= 0)
+		{
+			this.boss_ = true;
+		}
 		this.drawOnGround_ = _arg_1.hasOwnProperty("DrawOnGround");
 		if (((this.drawOnGround_) || (_arg_1.hasOwnProperty("DrawUnder"))))
 		{
@@ -99,6 +115,9 @@ public class ObjectProperties
 		this.showName_ = _arg_1.hasOwnProperty("ShowName");
 		this.dontFaceAttacks_ = _arg_1.hasOwnProperty("DontFaceAttacks");
 		this.dontFaceMovement_ = _arg_1.hasOwnProperty("DontFaceMovement");
+		this.isGod_ = _arg_1.hasOwnProperty("God");
+		this.isCube_ = _arg_1.hasOwnProperty("Cube");
+		this.isPotion_ = _arg_1.hasOwnProperty("Potion");
 		if (_arg_1.hasOwnProperty("Z"))
 		{
 			this.z_ = Number(_arg_1.Z);
@@ -109,6 +128,10 @@ public class ObjectProperties
 		}
 		if (_arg_1.hasOwnProperty("Size"))
 		{
+			if (_arg_1.Size == 0)
+			{
+				_arg_1.Size = 100;
+			}
 			this.minSize_ = (this.maxSize_ = _arg_1.Size);
 		}
 		else

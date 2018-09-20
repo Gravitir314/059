@@ -11,7 +11,9 @@ import flash.display.Sprite;
 import flash.display.Stage;
 import flash.display.StageScaleMode;
 import flash.events.Event;
+import flash.events.GameInputEvent;
 import flash.system.Capabilities;
+import flash.ui.GameInput;
 
 import io.decagames.rotmg.dailyQuests.config.DailyQuestsConfig;
 import io.decagames.rotmg.pets.config.PetsConfig;
@@ -62,6 +64,8 @@ import robotlegs.bender.extensions.signalCommandMap.SignalCommandMapExtension;
 import robotlegs.bender.framework.api.IContext;
 import robotlegs.bender.framework.api.LogLevel;
 
+import zfn.xinput.ControllerHandler;
+
 public class ROTMG extends Sprite
 {
 
@@ -69,6 +73,7 @@ public class ROTMG extends Sprite
 	public static var USER_AGENT:String = "None";
 	public static var sWidth:Number = 800;
 	public static var sHeight:Number = 600;
+	public static var focus:Boolean = true;
 
 	protected var context:IContext;
 
@@ -117,10 +122,45 @@ public class ROTMG extends Sprite
 		this.hackParameters();
 		this.createContext();
 		new AssetLoader().load();
+		//setupController();
 		stage.scaleMode = StageScaleMode.EXACT_FIT;
 		this.context.injector.getInstance(StartupSignal).dispatch();
 		this.configureForAirIfDesktopPlayer();
 		UIUtils.toggleQuality(Parameters.data_.uiQuality);
+		addFocusListeners();
+	}
+
+	private function setupController():void
+	{
+		ControllerHandler.instance = new ControllerHandler();
+		ControllerHandler.instance.gameInput = new GameInput();
+		ControllerHandler.instance.gameInput.addEventListener(GameInputEvent.DEVICE_ADDED, ControllerHandler.instance.deviceAdded);
+		ControllerHandler.instance.gameInput.addEventListener(GameInputEvent.DEVICE_REMOVED, ControllerHandler.instance.deviceRemoved);
+		if (Parameters.data_.useControllerNumber > GameInput.numDevices)
+		{
+			Parameters.data_.useControllerNumber = 0;
+		}
+		if (GameInput.numDevices > 0)
+		{
+			ControllerHandler.instance.controller = GameInput.getDeviceAt(0);
+			ControllerHandler.instance.controls = new Vector.<Number>();
+		}
+	}
+
+	private function addFocusListeners():void
+	{
+		stage.addEventListener(Event.ACTIVATE, this.onActivate);
+		stage.addEventListener(Event.DEACTIVATE, this.onDeactivate);
+	}
+
+	private function onActivate(_arg_1:Event):void
+	{
+		focus = true;
+	}
+
+	private function onDeactivate(_arg_1:Event):void
+	{
+		focus = false;
 	}
 
 	private function hackParameters():void

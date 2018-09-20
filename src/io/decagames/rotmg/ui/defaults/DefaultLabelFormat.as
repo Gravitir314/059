@@ -2,6 +2,8 @@
 
 package io.decagames.rotmg.ui.defaults
 {
+import com.greensock.plugins.DropShadowFilterPlugin;
+
 import flash.filters.BitmapFilterQuality;
 import flash.filters.DropShadowFilter;
 import flash.text.TextFormat;
@@ -63,7 +65,7 @@ public class DefaultLabelFormat
 	public static function characterViewNameLabel(_arg_1:UILabel, _arg_2:int = 18):void
 	{
 		var _local_3:TextFormat = createTextFormat(_arg_2, 0xB3B3B3, TextFormatAlign.LEFT, true);
-		_arg_1.filters = [new DropShadowFilter(0, 0, 0)];
+		_arg_1.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		applyTextFromat(_local_3, _arg_1);
 	}
 

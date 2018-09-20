@@ -8,16 +8,15 @@ import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.DeprecatedTextButton;
 import com.company.assembleegameclient.ui.panels.Panel;
 import com.company.assembleegameclient.util.Currency;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Bitmap;
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.KeyboardEvent;
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 import flash.text.TextFieldAutoSize;
 
-import io.decagames.rotmg.shop.ShopConfiguration;
 import io.decagames.rotmg.shop.ShopPopupView;
 import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
@@ -26,7 +25,6 @@ import kabam.rotmg.account.core.view.RegisterPromptDialog;
 import kabam.rotmg.arena.util.ArenaViewAssetFactory;
 import kabam.rotmg.core.StaticInjectorContext;
 import kabam.rotmg.dialogs.control.OpenDialogSignal;
-import kabam.rotmg.mysterybox.components.MysteryBoxSelectModal;
 import kabam.rotmg.mysterybox.services.GetMysteryBoxesTask;
 import kabam.rotmg.mysterybox.services.MysteryBoxModel;
 import kabam.rotmg.text.model.TextKey;
@@ -62,15 +60,15 @@ public class MysteryBoxPanel extends Panel
 		this.nameText_.setWordWrap(true);
 		this.nameText_.setMultiLine(true);
 		this.nameText_.setAutoSize(TextFieldAutoSize.CENTER);
-		this.nameText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.nameText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addChild(this.nameText_);
 		this.icon_ = new Sprite();
 		addChild(this.icon_);
 		this.bitmap_ = new Bitmap(null);
 		this.icon_.addChild(this.bitmap_);
-		var _local_5:* = "MysteryBoxPanel.open";
-		var _local_6:* = "MysteryBoxPanel.checkBackLater";
-		var _local_7:* = "MysteryBoxPanel.mysteryBoxShop";
+		var _local_5:String = "MysteryBoxPanel.open";
+		var _local_6:String = "MysteryBoxPanel.checkBackLater";
+		var _local_7:String = "MysteryBoxPanel.mysteryBoxShop";
 		var _local_8:MysteryBoxModel = _local_3.getInstance(MysteryBoxModel);
 		var _local_9:Account = _local_3.getInstance(Account);
 		if (((_local_8.isInitialized()) || (!(_local_9.isRegistered()))))
@@ -129,17 +127,10 @@ public class MysteryBoxPanel extends Panel
 		var _local_2:MysteryBoxModel = _local_1.getInstance(MysteryBoxModel);
 		var _local_3:Account = _local_1.getInstance(Account);
 		var _local_4:OpenDialogSignal = _local_1.getInstance(OpenDialogSignal);
-		if (((_local_2.isInitialized()) && (_local_3.isRegistered())))
+		if (_local_2.isInitialized() && _local_3.isRegistered())
 		{
-			if (ShopConfiguration.USE_NEW_SHOP)
-			{
-				_local_5 = _local_1.getInstance(ShowPopupSignal);
-				_local_5.dispatch(new ShopPopupView());
-			}
-			else
-			{
-				_local_4.dispatch(new MysteryBoxSelectModal());
-			}
+			_local_5 = _local_1.getInstance(ShowPopupSignal);
+			_local_5.dispatch(new ShopPopupView());
 		}
 		else
 		{

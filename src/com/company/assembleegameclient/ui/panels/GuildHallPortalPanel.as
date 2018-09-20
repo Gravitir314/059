@@ -8,11 +8,11 @@ import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.DeprecatedTextButton;
 import com.company.assembleegameclient.util.StageProxy;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.events.Event;
 import flash.events.KeyboardEvent;
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 import flash.text.TextFieldAutoSize;
 
 import kabam.rotmg.text.model.TextKey;
@@ -44,7 +44,7 @@ public class GuildHallPortalPanel extends Panel
 		_local_3 = gs_.map.player_;
 		this.nameText_ = new TextFieldDisplayConcrete().setSize(18).setColor(0xFFFFFF).setTextWidth(WIDTH).setWordWrap(true).setMultiLine(true).setAutoSize(TextFieldAutoSize.CENTER).setBold(true).setHTML(true);
 		this.nameText_.setStringBuilder(new LineBuilder().setParams(TextKey.GUILD_HALL_PORTAL_TITLE).setPrefix('<p align="center">').setPostfix("</p>"));
-		this.nameText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.nameText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.nameText_.y = 6;
 		addChild(this.nameText_);
 		if (((!(_local_3.guildName_ == null)) && (_local_3.guildName_.length > 0)))
@@ -59,7 +59,7 @@ public class GuildHallPortalPanel extends Panel
 		{
 			this.noGuildText_ = new TextFieldDisplayConcrete().setSize(18).setColor(0xFF0000).setTextWidth(WIDTH).setAutoSize(TextFieldAutoSize.CENTER).setHTML(true).setBold(true);
 			this.noGuildText_.setStringBuilder(new LineBuilder().setParams(TextKey.GUILD_HALL_PORTAL_NO_GUILD).setPrefix('<p align="center">').setPostfix("</p>"));
-			this.noGuildText_.filters = [new DropShadowFilter(0, 0, 0)];
+			this.noGuildText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 			this.waiter.push(this.noGuildText_.textChanged);
 			addChild(this.noGuildText_);
 		}

@@ -3,10 +3,10 @@
 package kabam.rotmg.account.kabam.view
 {
 import com.company.assembleegameclient.account.ui.Frame;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Sprite;
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 
 import kabam.rotmg.text.model.TextKey;
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
@@ -35,7 +35,7 @@ public class KabamAccountDetailDialog extends Sprite
 		this.loginText_ = new TextFieldDisplayConcrete().setSize(18).setColor(0xB3B3B3);
 		this.loginText_.setBold(true);
 		this.loginText_.setStringBuilder(new LineBuilder().setParams(TextKey.KABAMACCOUNTDETAILDIALOG_LOGINTEXT));
-		this.loginText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.loginText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.loginText_.y = (_local_2.h_ - 60);
 		this.loginText_.x = 17;
 		_local_2.addChild(this.loginText_);

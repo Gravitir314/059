@@ -5,10 +5,10 @@ package kabam.rotmg.ui.view
 import com.company.assembleegameclient.screens.AccountScreen;
 import com.company.assembleegameclient.screens.TitleMenuOption;
 import com.company.assembleegameclient.ui.SoundIcon;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Sprite;
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 import flash.text.TextFieldAutoSize;
 
 import kabam.rotmg.account.transfer.view.KabamLoginView;
@@ -101,7 +101,7 @@ public class TitleView extends Sprite
 		addChild(this.versionText);
 		this.copyrightText = this.makeText().setAutoSize(TextFieldAutoSize.RIGHT).setVerticalAlign(TextFieldDisplayConcrete.MIDDLE);
 		this.copyrightText.setStringBuilder(new LineBuilder().setParams(TextKey.COPYRIGHT));
-		this.copyrightText.filters = [new DropShadowFilter(0, 0, 0)];
+		this.copyrightText.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.copyrightText.x = 800;
 		this.copyrightText.y = MIDDLE_OF_BOTTOM_BAND;
 		addChild(this.copyrightText);
@@ -110,7 +110,7 @@ public class TitleView extends Sprite
 	public function makeText():TextFieldDisplayConcrete
 	{
 		var _local_1:TextFieldDisplayConcrete = new TextFieldDisplayConcrete().setSize(12).setColor(0x7F7F7F);
-		_local_1.filters = [new DropShadowFilter(0, 0, 0)];
+		_local_1.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		return (_local_1);
 	}
 

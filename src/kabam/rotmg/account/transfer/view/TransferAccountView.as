@@ -6,6 +6,7 @@ import com.company.assembleegameclient.account.ui.CheckBoxField;
 import com.company.assembleegameclient.account.ui.Frame;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.util.EmailValidator;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.events.MouseEvent;
 import flash.filters.DropShadowFilter;
@@ -54,7 +55,7 @@ public class TransferAccountView extends Frame
 	{
 		this.headerText = new TextFieldDisplayConcrete().setSize(13).setColor(0xB3B3B3);
 		this.headerText.setStringBuilder(new StaticStringBuilder("This will be used for future logins."));
-		this.headerText.filters = [new DropShadowFilter(0, 0, 0)];
+		this.headerText.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.headerText.x = 5;
 		this.headerText.y = 3;
 		this.headerText.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
@@ -62,7 +63,7 @@ public class TransferAccountView extends Frame
 		positionText(this.headerText);
 		this.headerText2 = new TextFieldDisplayConcrete().setSize(13).setColor(0xB3B3B3);
 		this.headerText2.setStringBuilder(new StaticStringBuilder("Your account data is safe and will remain the same."));
-		this.headerText2.filters = [new DropShadowFilter(0, 0, 0)];
+		this.headerText2.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.headerText2.x = 5;
 		this.headerText2.y = 3;
 		this.headerText2.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
@@ -95,7 +96,7 @@ public class TransferAccountView extends Frame
 		_arg_1.setSize(12).setColor(0xB3B3B3).setBold(true);
 		_arg_1.setTextWidth(275);
 		_arg_1.setMultiLine(true).setWordWrap(true).setHTML(true);
-		_arg_1.filters = [new DropShadowFilter(0, 0, 0)];
+		_arg_1.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addChild(_arg_1);
 		positionText(_arg_1);
 	}

@@ -15,17 +15,16 @@ import com.company.assembleegameclient.ui.options.Options;
 import com.company.util.AssetLibrary;
 
 import flash.display.Bitmap;
-
 import flash.display.BitmapData;
 import flash.display.Loader;
 import flash.events.Event;
-
 import flash.utils.ByteArray;
 import flash.utils.getQualifiedClassName;
 
 import kabam.rotmg.assets.EmbeddedAssets;
 import kabam.rotmg.assets.EmbeddedData;
 
+import zfn.sound.SoundAssets;
 import zfn.sound.SoundCustom;
 
 public class AssetLoader
@@ -102,6 +101,7 @@ public class AssetLoader
 		this.music.load();
 		SFX.load();
 		SoundCustom.load();
+		SoundAssets.load();
 		this.loadMaps();
 	}
 

@@ -6,6 +6,7 @@ import com.company.assembleegameclient.account.ui.Frame;
 import com.company.assembleegameclient.account.ui.TextInputField;
 import com.company.util.EmailValidator;
 import com.company.util.MoreObjectUtil;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.events.MouseEvent;
 import flash.filters.DropShadowFilter;
@@ -126,7 +127,7 @@ public class ConfirmEmailModal extends Frame
 		removeChild(titleText_);
 		titleText_ = new TextFieldDisplayConcrete().setSize(12).setColor(0xB3B3B3);
 		titleText_.setStringBuilder(new LineBuilder().setParams("WebAccountDetailDialog.sent"));
-		titleText_.filters = [new DropShadowFilter(0, 0, 0)];
+		titleText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		titleText_.x = 5;
 		titleText_.y = 3;
 		titleText_.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];
@@ -138,7 +139,7 @@ public class ConfirmEmailModal extends Frame
 		removeChild(titleText_);
 		titleText_ = new TextFieldDisplayConcrete().setSize(12).setColor(16549442);
 		titleText_.setStringBuilder(new LineBuilder().setParams(_arg_1));
-		titleText_.filters = [new DropShadowFilter(0, 0, 0)];
+		titleText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		titleText_.x = 5;
 		titleText_.y = 3;
 		titleText_.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];

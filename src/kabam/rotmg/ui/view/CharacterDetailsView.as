@@ -4,6 +4,7 @@ package kabam.rotmg.ui.view
 {
 import com.company.assembleegameclient.objects.ImageFactory;
 import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.BoostPanelButton;
 import com.company.assembleegameclient.ui.ExperienceBoostTimerPopup;
 import com.company.assembleegameclient.ui.icons.IconButton;
@@ -176,6 +177,10 @@ public class CharacterDetailsView extends Sprite
 	public function setName(_arg_1:String):void
 	{
 		this.nameText_.text = _arg_1;
+		if (Parameters.data_.fakeName != null)
+		{
+			this.nameText_.text = Parameters.data_.fakeName;
+		}
 		DefaultLabelFormat.characterViewNameLabel(this.nameText_);
 	}
 

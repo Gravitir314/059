@@ -138,7 +138,7 @@ public class TileRedrawer
 			_local_4[_local_3] = null;
 			return (null);
 		}
-		var _local_10:BitmapData = GroundLibrary.getBitmapData(_arg_1.tileType_);
+		var _local_10:BitmapData = _arg_1.bmpRect_;
 		if (_arg_2)
 		{
 			_local_5 = _local_10.clone();

@@ -4,6 +4,7 @@ package kabam.rotmg.game.view.components
 {
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Sprite;
 import flash.events.MouseEvent;
@@ -21,8 +22,6 @@ public class StatView extends Sprite
 {
 
 	public static var toMaxTextSignal:Signal = new Signal(Boolean);
-
-	public const DEFAULT_FILTER:DropShadowFilter = new DropShadowFilter(0, 0, 0);
 
 	public var fullName_:String;
 	public var description_:String;
@@ -57,7 +56,7 @@ public class StatView extends Sprite
 	public function configureTextAndAdd(_arg_1:TextFieldDisplayConcrete):void
 	{
 		_arg_1.setAutoSize(TextFieldAutoSize.LEFT);
-		_arg_1.filters = [DEFAULT_FILTER];
+		_arg_1.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addChild(_arg_1);
 	}
 

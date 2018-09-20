@@ -8,13 +8,13 @@ import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.DeprecatedTextButton;
 import com.company.assembleegameclient.ui.panels.Panel;
 import com.company.assembleegameclient.util.Currency;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Bitmap;
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.KeyboardEvent;
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 import flash.text.TextFieldAutoSize;
 
 import kabam.rotmg.account.core.Account;
@@ -63,15 +63,15 @@ public class FortuneGroundPanel extends Panel
 		this.nameText_.setWordWrap(true);
 		this.nameText_.setMultiLine(true);
 		this.nameText_.setAutoSize(TextFieldAutoSize.CENTER);
-		this.nameText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.nameText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addChild(this.nameText_);
 		this.icon_ = new Sprite();
 		addChild(this.icon_);
 		this.bitmap_ = new Bitmap(null);
 		this.icon_.addChild(this.bitmap_);
-		var _local_5:* = "FortuneGroundPanel.play";
-		var _local_6:* = "MysteryBoxPanel.checkBackLater";
-		var _local_7:* = "FortuneGroundPanel.alchemist";
+		var _local_5:String = "FortuneGroundPanel.play";
+		var _local_6:String = "MysteryBoxPanel.checkBackLater";
+		var _local_7:String = "FortuneGroundPanel.alchemist";
 		var _local_8:FortuneModel = _local_3.getInstance(FortuneModel);
 		var _local_9:Account = _local_3.getInstance(Account);
 		if (((FortuneModel.HAS_FORTUNES) && (_local_9.isRegistered())))

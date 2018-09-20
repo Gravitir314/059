@@ -7,7 +7,6 @@ import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.util.RandomUtil;
 
 import flash.display.StageScaleMode;
-
 import flash.geom.Matrix3D;
 import flash.geom.PerspectiveProjection;
 import flash.geom.Rectangle;

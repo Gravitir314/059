@@ -28,7 +28,6 @@ import flash.display.BitmapData;
 import flash.display.GraphicsPath;
 import flash.display.GraphicsSolidFill;
 import flash.display.IGraphicsData;
-import flash.display.Sprite;
 import flash.geom.ColorTransform;
 import flash.geom.Matrix;
 import flash.geom.Point;
@@ -37,15 +36,11 @@ import flash.utils.Dictionary;
 import flash.utils.getTimer;
 
 import io.decagames.rotmg.ui.popups.signals.CloseAllPopupsSignal;
-import io.decagames.rotmg.ui.popups.signals.ClosePopupByClassSignal;
 
 import kabam.rotmg.assets.services.CharacterFactory;
 import kabam.rotmg.chat.model.ChatMessage;
-import kabam.rotmg.constants.ActivationType;
 import kabam.rotmg.constants.GeneralConstants;
-import kabam.rotmg.constants.UseType;
 import kabam.rotmg.core.StaticInjectorContext;
-import kabam.rotmg.dialogs.control.CloseDialogsSignal;
 import kabam.rotmg.game.model.PotionInventoryModel;
 import kabam.rotmg.game.model.UseBuyPotionVO;
 import kabam.rotmg.game.signals.AddTextLineSignal;
@@ -174,6 +169,10 @@ public class Player extends Character
 	public var lastHpPotTime:int = 0;
 	public var lastTpTime_:int = 0;
 	public var ticksHPLastOff:int = 0;
+	public var questMob:GameObject;
+	public var questMob1:GameObject;
+	public var questMob2:GameObject;
+	public var questMob3:GameObject;
 
 	public function Player(_arg_1:XML)
 	{
@@ -892,11 +891,15 @@ public class Player extends Character
 				}
 			}
 		}
-		this.attemptAutoAbility(_arg_1, _local_3, this.equipment_[1]);
+		//this.attemptAutoAbility(_arg_1, _local_3, this.equipment_[1]);
 	}
 
 	public function attemptAutoAbility(_arg_1:Number, _arg_2:int=-1, _arg_3:int=0):void
 	{
+		if (this.equipment_ == null)
+		{
+			return;
+		}
 		if (_arg_3 == 0)
 		{
 			_arg_3 = this.equipment_[1];
@@ -913,8 +916,9 @@ public class Player extends Character
 
 	public function shootAutoAimWeaponAngle(_arg_1:int, _arg_2:int):Boolean
 	{
+		var _local_8:* = null;
 		var _local_6:Number;
-		if (this.isStunned_() || this.isPaused_() || this.isPetrified_())
+		if ((((this.isStunned_()) || (this.isPaused_())) || (this.isPetrified_())))
 		{
 			return (false);
 		}
@@ -931,12 +935,12 @@ public class Player extends Character
 		if (this.isUnstable)
 		{
 			this.attackStart_ = _arg_2;
-			this.attackAngle_ = (Math.random() * (Math.PI * 2));
+			this.attackAngle_ = (Math.random() * 6.28318530717959);
 			this.doShoot(_arg_2, _arg_1, ObjectLibrary.xmlLibrary_[_arg_1], this.attackAngle_, true);
 			return (true);
 		}
-		var _local_8:Vector3D = this.calcAimAngle(_local_7.speed_, (_local_7.maxProjTravel_ + Parameters.data_.aaDistance), _local_5, _local_3);
-		if (_local_8 != null)
+		_local_8 = this.calcAimAngle(_local_7.speed_, (_local_7.maxProjTravel_ + Parameters.data_.aaDistance), _local_5, _local_3);
+		if (_local_8)
 		{
 			_local_6 = Math.atan2((_local_8.y - this.y_), (_local_8.x - this.x_));
 			this.attackStart_ = _arg_2;
@@ -2028,6 +2032,19 @@ public class Player extends Character
 			if (!map_.isVault && !isPaused && Parameters.data_.AutoLootOn)
 			{
 				this.autoLoot();
+			}
+			var questId:int = -1;
+			if (map_.quest_.getObject() != null)
+			{
+				questId = map_.quest_.getObject().objectType_;
+			}
+			if (questId != 3366 && questId != 3367 && questId != 3368)
+			{
+				this.questMob = map_.quest_.getObject();
+			}
+			else
+			{
+				this.questMob = null;
 			}
 		}
 		if (this.tierBoost && !isPaused)

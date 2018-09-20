@@ -4,6 +4,7 @@ package com.company.assembleegameclient.map
 {
 import com.company.assembleegameclient.engine3d.TextureMatrix;
 import com.company.assembleegameclient.objects.GameObject;
+import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.util.TileRedrawer;
 
 import flash.display.BitmapData;
@@ -32,6 +33,10 @@ public class Square
 	public var baseTexMatrix_:TextureMatrix = null;
 	public var lastVisible_:int;
 
+	public var bmpRect_:BitmapData;
+	public var textureW_:int;
+	public var textureH_:int;
+
 	public function Square(_arg_1:Map, _arg_2:int, _arg_3:int)
 	{
 		this.map_ = _arg_1;
@@ -55,12 +60,14 @@ public class Square
 		var _local_1:SquareFace;
 		this.map_ = null;
 		this.center_ = null;
+		this.vin_.length = 0;
 		this.vin_ = null;
 		this.obj_ = null;
 		this.texture_ = null;
 		for each (_local_1 in this.faces_)
 		{
 			_local_1.dispose();
+			_local_1 = null;
 		}
 		this.faces_.length = 0;
 		if (this.topFace_ != null)
@@ -77,6 +84,9 @@ public class Square
 		this.tileType_ = _arg_1;
 		this.props_ = GroundLibrary.propsLibrary_[this.tileType_];
 		this.texture_ = GroundLibrary.getBitmapData(this.tileType_, hash(this.x_, this.y_));
+		this.bmpRect_ = GroundLibrary.getBitmapData(this.tileType_);
+		this.textureW_ = this.texture_.width;
+		this.textureH_ = this.texture_.height;
 		this.baseTexMatrix_ = new TextureMatrix(this.texture_, UVT);
 		this.faces_.length = 0;
 	}
@@ -89,6 +99,13 @@ public class Square
 	public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void
 	{
 		var _local_4:SquareFace;
+		if (!Parameters.ssmode && Parameters.lowCPUMode)
+		{
+			if (this.map_ != null && this.map_.player_ != null && this.props_.minDamage_ > 0)
+			{
+				return;
+			}
+		}
 		if (this.texture_ == null)
 		{
 			return;
@@ -143,8 +160,8 @@ public class Square
 			{
 				if (this.props_.randomOffset_)
 				{
-					_local_2 = (int((this.texture_.width * Math.random())) / this.texture_.width);
-					_local_3 = (int((this.texture_.height * Math.random())) / this.texture_.height);
+					_local_2 = (int((this.textureW_ * Math.random())) / textureW_);
+					_local_3 = (int((this.textureH_ * Math.random())) / textureH_);
 				}
 				else
 				{

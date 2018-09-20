@@ -6,8 +6,8 @@ import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.ui.LineBreakDesign;
 import com.company.assembleegameclient.util.FameUtil;
 import com.company.rotmg.graphics.StarGraphic;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
-import flash.filters.DropShadowFilter;
 import flash.geom.ColorTransform;
 import flash.geom.Rectangle;
 
@@ -32,14 +32,14 @@ public class RankToolTip extends ToolTip
 		this.earnedText_ = new TextFieldDisplayConcrete().setSize(13).setColor(0xB3B3B3).setBold(true);
 		this.earnedText_.setVerticalAlign(TextFieldDisplayConcrete.BOTTOM);
 		this.earnedText_.setStringBuilder(new LineBuilder().setParams(TextKey.RANK_TOOL_TIP_EARNED, {"numStars": _arg_1}));
-		this.earnedText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.earnedText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.earnedText_.x = PADDING_LEFT;
 		addChild(this.earnedText_);
 		this.howToText_ = new TextFieldDisplayConcrete().setSize(13).setColor(0xB3B3B3);
 		this.howToText_.setTextWidth(174);
 		this.howToText_.setMultiLine(true).setWordWrap(true);
 		this.howToText_.setStringBuilder(new LineBuilder().setParams(((_arg_1 >= FameUtil.MAX_STARS) ? TextKey.RANK_TOOL_TIP_COMPLETED_ALL_CLASS_QUESTS : TextKey.RANK_TOOL_TIP_COMPLETING_CLASS_QUESTS)));
-		this.howToText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.howToText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.howToText_.x = PADDING_LEFT;
 		this.howToText_.y = 30;
 		addChild(this.howToText_);
@@ -90,9 +90,9 @@ public class RankToolTip extends ToolTip
 }//package com.company.assembleegameclient.ui.tooltip
 
 import com.company.rotmg.graphics.StarGraphic;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Sprite;
-import flash.filters.DropShadowFilter;
 import flash.geom.ColorTransform;
 
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
@@ -125,7 +125,7 @@ class LegendLine extends Sprite
 		this.rangeText_.setVerticalAlign(TextFieldDisplayConcrete.BOTTOM);
 		this.rangeText_.setStringBuilder(new StaticStringBuilder((": " + ((_arg_1 == _arg_2) ? _arg_1.toString() : ((_arg_1 + " - ") + _arg_2)))));
 		this.rangeText_.setBold(true);
-		filters = [new DropShadowFilter(0, 0, 0)];
+		filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.rangeText_.x = this.coloredStar_.width;
 		this.rangeText_.y = this.coloredStar_.getBounds(this).bottom;
 		this.rangeText_.textChanged.addOnce(this.positionGreyStar);

@@ -75,6 +75,10 @@ public class ParticleField extends BitmapParticle
 			}
 			_local_3++;
 		}
+		if (_bitmapData != null)
+		{
+			_bitmapData.dispose();
+		}
 		_bitmapData = new BitmapData(this.width, this.height, true, 0);
 		_bitmapData.draw(this.spriteSource);
 		return (true);
@@ -126,6 +130,11 @@ public class ParticleField extends BitmapParticle
 			this.timer.removeEventListener(TimerEvent.TIMER, this.onTimer);
 			this.timer.stop();
 			this.timer = null;
+		}
+		if (this._bitmapData != null)
+		{
+			this._bitmapData.dispose();
+			this._bitmapData = null;
 		}
 		this.spriteSource = null;
 		this.squares = [];

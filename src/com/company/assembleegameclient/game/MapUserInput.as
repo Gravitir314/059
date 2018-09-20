@@ -14,14 +14,17 @@ import com.company.assembleegameclient.tutorial.doneAction;
 import com.company.assembleegameclient.ui.options.Options;
 import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.util.KeyCodes;
+import com.company.util.PointUtil;
 
 import flash.display.Stage;
 import flash.display.StageDisplayState;
 import flash.events.Event;
 import flash.events.KeyboardEvent;
 import flash.events.MouseEvent;
+import flash.geom.Point;
 import flash.geom.Vector3D;
 import flash.system.Capabilities;
+import flash.ui.GameInputDevice;
 import flash.utils.getTimer;
 
 import io.decagames.rotmg.social.SocialPopupView;
@@ -30,6 +33,7 @@ import io.decagames.rotmg.ui.popups.signals.ClosePopupByClassSignal;
 import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
 import kabam.rotmg.application.api.ApplicationSetup;
+import kabam.rotmg.chat.control.ParseChatMessageSignal;
 import kabam.rotmg.chat.model.ChatMessage;
 import kabam.rotmg.constants.GeneralConstants;
 import kabam.rotmg.constants.UseType;
@@ -100,6 +104,8 @@ public class MapUserInput
 	public var heldX:int = 0;
 	public var heldY:int = 0;
 	public var heldAngle:Number = 0;
+	[Inject]
+	public var pcmc:ParseChatMessageSignal;
 
 	public function MapUserInput(_arg_1:GameSprite)
 	{
@@ -123,6 +129,11 @@ public class MapUserInput
 		var _local_3:ApplicationSetup = _local_2.getInstance(ApplicationSetup);
 		this.areFKeysAvailable = _local_3.areDeveloperHotkeysEnabled();
 		this.gs_.map.signalRenderSwitch.add(this.onRenderSwitch);
+		this.pcmc = _local_2.getInstance(ParseChatMessageSignal);
+		/*if (Parameters.data_.allowController)
+		{
+			setController();
+		}*/
 	}
 
 	public static function addIgnore(_arg_1:int):String
@@ -134,14 +145,14 @@ public class MapUserInput
 				return (_arg_1 + " already exists in Ignore list");
 			}
 		}
-		if ((_arg_1 in ObjectLibrary.propsLibrary_))
+		if (_arg_1 in ObjectLibrary.propsLibrary_)
 		{
 			Parameters.data_.AAIgnore.push(_arg_1);
 			var _local_2:ObjectProperties = ObjectLibrary.propsLibrary_[_arg_1];
 			_local_2.ignored = true;
-			return (("Successfully added " + _arg_1) + " to Ignore list");
+			return ("Successfully added " + _arg_1 + " to Ignore list");
 		}
-		return (("Failed to add " + _arg_1) + " to Ignore list (no known object with this itemType)");
+		return ("Failed to add " + _arg_1 + " to Ignore list (no known object with this itemType)");
 	}
 
 	public static function remIgnore(_arg_1:int):String
@@ -153,12 +164,12 @@ public class MapUserInput
 			if (Parameters.data_.AAIgnore[_local_3] == _arg_1)
 			{
 				Parameters.data_.AAIgnore.splice(_local_3, 1);
-				if ((_arg_1 in ObjectLibrary.propsLibrary_))
+				if (_arg_1 in ObjectLibrary.propsLibrary_)
 				{
 					var _local_2:ObjectProperties = ObjectLibrary.propsLibrary_[_arg_1];
 					_local_2.ignored = false;
 				}
-				return (("Successfully removed " + _arg_1) + " from Ignore list");
+				return ("Successfully removed " + _arg_1 + " from Ignore list");
 			}
 			_local_3++;
 		}
@@ -174,14 +185,14 @@ public class MapUserInput
 				return (_arg_1 + " already exists in Exception list");
 			}
 		}
-		if ((_arg_1 in ObjectLibrary.propsLibrary_))
+		if (_arg_1 in ObjectLibrary.propsLibrary_)
 		{
 			Parameters.data_.AAException.push(_arg_1);
 			var _local_3:ObjectProperties = ObjectLibrary.propsLibrary_[_arg_1];
 			_local_3.excepted = true;
-			return (("Successfully added " + _arg_1) + " to Exception list");
+			return ("Successfully added " + _arg_1 + " to Exception list");
 		}
-		return (("Failed to add " + _arg_1) + " to Exception list (no known object with this itemType)");
+		return ("Failed to add " + _arg_1 + " to Exception list (no known object with this itemType)");
 	}
 
 	public static function remException(_arg_1:int):String
@@ -194,16 +205,24 @@ public class MapUserInput
 			if (Parameters.data_.AAException[_local_2] == _arg_1)
 			{
 				Parameters.data_.AAException.splice(_local_2, 1);
-				if ((_arg_1 in ObjectLibrary.propsLibrary_))
+				if (_arg_1 in ObjectLibrary.propsLibrary_)
 				{
 					var _local_4:ObjectProperties = ObjectLibrary.propsLibrary_[_arg_1];
 					_local_4.excepted = false;
 				}
-				return (("Successfully removed " + _arg_1) + " from Exception list");
+				return ("Successfully removed " + _arg_1 + " from Exception list");
 			}
 			_local_2++;
 		}
 		return (_arg_1 + " not found in Exception list");
+	}
+
+	public function setController():void
+	{
+		if (ControllerHandler.instance)
+		{
+			ch_ = ControllerHandler.instance;
+		}
 	}
 
 	public function onRenderSwitch(_arg_1:Boolean):void
@@ -267,12 +286,54 @@ public class MapUserInput
 		{
 			this.gs_.map.addEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
 			this.gs_.map.addEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
+			this.gs_.map.addEventListener(MouseEvent.RIGHT_MOUSE_DOWN, this.onRightMouseDown_forWorld);
+			this.gs_.map.addEventListener(MouseEvent.RIGHT_MOUSE_UP, this.onRightMouseUp_forWorld);
 		}
 		_local_2.addEventListener(Event.ENTER_FRAME, this.onEnterFrame);
-		_local_2.addEventListener(MouseEvent.RIGHT_CLICK, this.disableRightClick);
+		_local_2.addEventListener(MouseEvent.RIGHT_MOUSE_DOWN, this.onRightMouseDown);
+		_local_2.addEventListener(MouseEvent.RIGHT_MOUSE_UP, this.onRightMouseUp);
+		/*if (Parameters.data_.allowController)
+		{
+			_local_2.addEventListener(ControllerEvent.BUTTON_DOWN, this.onControllerInput);
+		}*/
 	}
 
-	public function disableRightClick(_arg_1:MouseEvent):void
+	public function onRightMouseDown_forWorld(_arg_1:MouseEvent):void
+	{
+		if (Parameters.data_.rightClickOption == "Quest")
+		{
+			Parameters.questFollow = true;
+		}
+		else
+		{
+			if (Parameters.data_.rightClickOption == "Ability")
+			{
+				this.gs_.map.player_.sbAssist(this.gs_.map.mouseX, this.gs_.map.mouseY);
+			}
+			else
+			{
+				if (Parameters.data_.rightClickOption == "Camera")
+				{
+					held = true;
+					heldX = ROTMG.STAGE.mouseX;
+					heldY = ROTMG.STAGE.mouseY;
+					heldAngle = Parameters.data_.cameraAngle;
+				}
+			}
+		}
+	}
+
+	public function onRightMouseUp_forWorld(_arg_1:MouseEvent):void
+	{
+		Parameters.questFollow = false;
+		held = false;
+	}
+
+	public function onRightMouseDown(_arg_1:MouseEvent):void
+	{
+	}
+
+	public function onRightMouseUp(_arg_1:MouseEvent):void
 	{
 	}
 
@@ -293,9 +354,45 @@ public class MapUserInput
 		{
 			this.gs_.map.removeEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
 			this.gs_.map.removeEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
+			this.gs_.map.removeEventListener(MouseEvent.RIGHT_MOUSE_DOWN, this.onRightMouseDown_forWorld);
+			this.gs_.map.removeEventListener(MouseEvent.RIGHT_MOUSE_UP, this.onRightMouseUp_forWorld);
 		}
 		_local_2.removeEventListener(Event.ENTER_FRAME, this.onEnterFrame);
-		_local_2.removeEventListener(MouseEvent.RIGHT_CLICK, this.disableRightClick);
+		_local_2.removeEventListener(MouseEvent.RIGHT_MOUSE_DOWN, this.onRightMouseDown);
+		_local_2.removeEventListener(MouseEvent.RIGHT_MOUSE_UP, this.onRightMouseUp);
+		/*if (Parameters.data_.allowController)
+		{
+			_local_2.removeEventListener(ControllerEvent.BUTTON_DOWN, this.onControllerInput);
+		}*/
+	}
+
+	public function onMiddleClick(_arg_1:MouseEvent):void
+	{
+		var _local_2:Point;
+		var _local_5:Number;
+		var _local_4:Number;
+		var _local_6:GameObject;
+		if (this.gs_.map != null)
+		{
+			_local_2 = this.gs_.map.player_.sToW(this.gs_.map.mouseX, this.gs_.map.mouseY);
+			_local_5 = Number.MAX_VALUE;
+			for each (var _local_3:GameObject in this.gs_.map.goDict_)
+			{
+				if (_local_3.props_.isEnemy_)
+				{
+					_local_4 = PointUtil.distanceSquaredXY(_local_3.x_, _local_3.y_, _local_2.x, _local_2.y);
+					if (_local_4 < _local_5)
+					{
+						_local_5 = _local_4;
+						_local_6 = _local_3;
+					}
+				}
+			}
+			if (_local_6 != null)
+			{
+				this.gs_.map.quest_.setObject(_local_6.objectId_);
+			}
+		}
 	}
 
 	private function onActivate(_arg_1:Event):void
@@ -315,6 +412,7 @@ public class MapUserInput
 		var _local_6:Number;
 		var _local_7:Number;
 		var _local_2:Player = this.gs_.map.player_;
+		this.mouseDown_ = true;
 		if (_local_2 == null)
 		{
 			return;
@@ -337,8 +435,8 @@ public class MapUserInput
 			}
 			if (_local_2.isUnstable)
 			{
-				_local_6 = ((Math.random() * 600) - 300);
-				_local_7 = ((Math.random() * 600) - 325);
+				_local_6 = ((Math.random() * 600) - this.gs_.map.x);
+				_local_7 = ((Math.random() * 600) - this.gs_.map.y);
 			}
 			else
 			{
@@ -376,13 +474,12 @@ public class MapUserInput
 		doneAction(this.gs_, Tutorial.ATTACK_ACTION);
 		if (_local_2.isUnstable)
 		{
-			_local_2.attemptAttackAngle((Math.random() * 360));
+			_local_2.attemptAttackAngle((Math.random() * (Math.PI * 2)));
 		}
 		else
 		{
 			_local_2.attemptAttackAngle(_local_3);
 		}
-		this.mouseDown_ = true;
 	}
 
 	public function onMouseUp(_arg_1:MouseEvent):void
@@ -410,24 +507,50 @@ public class MapUserInput
 
 	private function onEnterFrame(_arg_1:Event):void
 	{
-		var _local_2:Player;
-		var _local_3:Number;
+		var _local_2:Number;
+		var _local_3:Player = this.gs_.map.player_;
 		doneAction(this.gs_, Tutorial.UPDATE_ACTION);
-		if (((this.enablePlayerInput_) && ((this.mouseDown_) || (this.autofire_))))
+		if (_local_3 != null)
 		{
-			_local_2 = this.gs_.map.player_;
-			if (_local_2 != null)
+			_local_3.mousePos_.x = this.gs_.map.mouseX;
+			_local_3.mousePos_.y = this.gs_.map.mouseY;
+			if (this.enablePlayerInput_)
 			{
-				if (_local_2.isUnstable)
+				if (this.mouseDown_)
 				{
-					_local_2.attemptAttackAngle((Math.random() * 360));
+					if (!_local_3.isUnstable)
+					{
+						_local_2 = Math.atan2(this.gs_.map.mouseY, this.gs_.map.mouseX);
+						_local_3.attemptAttackAngle(_local_2);
+						_local_3.attemptAutoAbility(_local_2);
+					}
+					else
+					{
+						_local_2 = (Math.random() * 6.28318530717959);
+						_local_3.attemptAttackAngle(_local_2);
+						_local_3.attemptAutoAbility(_local_2);
+					}
 				}
 				else
 				{
-					_local_3 = Math.atan2(this.gs_.map.mouseY, this.gs_.map.mouseX);
-					_local_2.attemptAttackAngle(_local_3);
+					if ((((Parameters.data_.AAOn) || (this.autofire_)) || (Parameters.data_.AutoAbilityOn)))
+					{
+						if (!_local_3.isUnstable)
+						{
+							_local_2 = Math.atan2(this.gs_.map.mouseY, this.gs_.map.mouseX);
+							_local_3.attemptAutoAim(_local_2);
+						}
+						else
+						{
+							_local_3.attemptAutoAim((Math.random() * 6.28318530717959));
+						}
+					}
 				}
 			}
+			/*if (ROTMG.focus && _local_3.conMoveVec)
+			{
+				controller(_local_3);
+			}*/
 		}
 	}
 
@@ -449,7 +572,7 @@ public class MapUserInput
 
 	private function controller(_arg_1:Player):void
 	{
-		var _local_6:* = null;
+		var _local_6:GameInputDevice;
 		var _local_2:int;
 		var _local_5:Vector.<Number>;
 		var _local_7:Number;
@@ -885,7 +1008,7 @@ public class MapUserInput
 		var _local_2:int = gs_.map.quest_.objectId_;
 		if (_local_2 > 0)
 		{
-			var _local_4:GameObject = gs_.map.quest_.getObject(_local_2);
+			var _local_4:GameObject = gs_.map.quest_.getObject();
 			if (_local_4 != null)
 			{
 				_local_6 = Number.MAX_VALUE;

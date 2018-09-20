@@ -6,7 +6,6 @@ import com.company.assembleegameclient.map.AbstractMap;
 import com.company.assembleegameclient.objects.GameObject;
 
 import flash.display.BitmapData;
-
 import flash.display.DisplayObjectContainer;
 import flash.display.Sprite;
 

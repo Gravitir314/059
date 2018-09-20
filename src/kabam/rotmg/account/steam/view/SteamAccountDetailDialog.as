@@ -4,10 +4,10 @@ package kabam.rotmg.account.steam.view
 {
 import com.company.assembleegameclient.account.ui.Frame;
 import com.company.assembleegameclient.ui.DeprecatedClickableText;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Sprite;
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 
 import kabam.rotmg.text.model.TextKey;
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
@@ -42,7 +42,7 @@ public class SteamAccountDetailDialog extends Sprite
 		this.loginText_ = new TextFieldDisplayConcrete().setSize(18).setColor(0xB3B3B3);
 		this.loginText_.setBold(true);
 		this.loginText_.setStringBuilder(new LineBuilder().setParams(TextKey.STEAM_ACCOUNT_DETAIL_DIALOG_STEAMWORKS_USER));
-		this.loginText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.loginText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.loginText_.y = (_local_4.h_ - 60);
 		this.loginText_.x = 17;
 		_local_4.addChild(this.loginText_);
@@ -59,7 +59,7 @@ public class SteamAccountDetailDialog extends Sprite
 			this.webLoginText_ = new TextFieldDisplayConcrete().setSize(18).setColor(0xB3B3B3);
 			this.webLoginText_.setBold(true);
 			this.webLoginText_.setStringBuilder(new LineBuilder().setParams(TextKey.STEAM_ACCOUNT_DETAIL_DIALOG_LINKWEB));
-			this.webLoginText_.filters = [new DropShadowFilter(0, 0, 0)];
+			this.webLoginText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 			this.webLoginText_.y = (_local_4.h_ - 60);
 			this.webLoginText_.x = 17;
 			_local_4.addChild(this.webLoginText_);

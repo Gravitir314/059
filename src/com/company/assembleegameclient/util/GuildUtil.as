@@ -2,6 +2,7 @@
 
 package com.company.assembleegameclient.util
 {
+import com.company.assembleegameclient.parameters.Parameters;
 import com.company.util.AssetLibrary;
 
 import flash.display.BitmapData;
@@ -33,8 +34,9 @@ public class GuildUtil
 				return (wrapInBraces(TextKey.GUILD_RANK_LEADER));
 			case FOUNDER:
 				return (wrapInBraces(TextKey.GUILD_RANK_FOUNDER));
+			default:
+				return (wrapInBraces(TextKey.GUILD_RANK_UNKNOWN));
 		}
-		return (wrapInBraces(TextKey.GUILD_RANK_UNKNOWN));
 	}
 
 	private static function wrapInBraces(_arg_1:String):String
@@ -45,6 +47,7 @@ public class GuildUtil
 	public static function rankToIcon(_arg_1:int, _arg_2:int):BitmapData
 	{
 		var _local_3:BitmapData;
+		var invalid:Boolean;
 		switch (_arg_1)
 		{
 			case INITIATE:
@@ -62,8 +65,12 @@ public class GuildUtil
 			case FOUNDER:
 				_local_3 = AssetLibrary.getImageFromSet("lofiInterfaceBig", 16);
 				break;
+			default:
+				_local_3 = AssetLibrary.getImageFromSet("lofiInterfaceBig", 20);
+				invalid = true;
+				break;
 		}
-		return (TextureRedrawer.redraw(_local_3, _arg_2, true, 0, true));
+		return (TextureRedrawer.redraw(_local_3, _arg_2, true, ((Parameters.ssmode) ? 0 : ((invalid) ? 0xFF0000 : 0)), true));
 	}
 
 	public static function guildFameIcon(_arg_1:int):BitmapData
@@ -103,8 +110,9 @@ public class GuildUtil
 				return (OFFICER);
 			case OFFICER:
 				return (LEADER);
+			default:
+				return (FOUNDER);
 		}
-		return (FOUNDER);
 	}
 
 	public static function canPromote(_arg_1:int, _arg_2:int):Boolean
@@ -123,8 +131,9 @@ public class GuildUtil
 				return (OFFICER);
 			case FOUNDER:
 				return (LEADER);
+			default:
+				return (INITIATE);
 		}
-		return (INITIATE);
 	}
 
 	public static function canDemote(_arg_1:int, _arg_2:int):Boolean

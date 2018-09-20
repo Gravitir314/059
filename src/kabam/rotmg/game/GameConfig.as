@@ -73,6 +73,8 @@ import kabam.rotmg.game.view.components.StatsView;
 import kabam.rotmg.game.view.components.TabStripMediator;
 import kabam.rotmg.game.view.components.TabStripView;
 import kabam.rotmg.ui.model.TabStripModel;
+import kabam.rotmg.ui.view.QuestHealthBar;
+import kabam.rotmg.ui.view.QuestHealthBarMediator;
 
 import org.swiftsuspenders.Injector;
 
@@ -154,6 +156,7 @@ public class GameConfig implements IConfig
 		this.mediatorMap.map(CreditDisplay).toMediator(CreditDisplayMediator);
 		this.mediatorMap.map(MoneyChangerPanel).toMediator(MoneyChangerPanelMediator);
 		this.mediatorMap.map(SellableObjectPanel).toMediator(SellableObjectPanelMediator);
+		this.mediatorMap.map(QuestHealthBar).toMediator(QuestHealthBarMediator);
 	}
 
 	private function mapLoopMonitor():void

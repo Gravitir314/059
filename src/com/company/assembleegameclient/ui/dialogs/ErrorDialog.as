@@ -21,8 +21,6 @@ import flash.events.MouseEvent;
 import flash.filters.DropShadowFilter;
 import flash.text.TextFieldAutoSize;
 
-import kabam.rotmg.core.StaticInjectorContext;
-import kabam.rotmg.core.service.GoogleAnalytics;
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 import kabam.rotmg.ui.view.SignalWaiter;
@@ -41,7 +39,6 @@ public class ErrorDialog extends Sprite
 	public var titleText_:TextFieldDisplayConcrete = null;
 	public var button1_:DeprecatedTextButton = null;
 	public var button2_:DeprecatedTextButton = null;
-	public var analyticsPageName_:String = null;
 	public var offsetX:Number = 0;
 	public var offsetY:Number = 0;
 	public var stageProxy:StageProxy;
@@ -59,7 +56,6 @@ public class ErrorDialog extends Sprite
 	{
 		var _local_2:String = ["An error has occured:", _arg_1].join("\n");
 		this.stageProxy = new StageProxy(this);
-		this.analyticsPageName_ = "/error";
 		this._makeUIAndAdd(_local_2, "D'oh, this isn't good", "ErrorWindow.buttonOK", null);
 		this.makeUIAndAdd();
 		this.uiWaiter.complete.addOnce(this.onComplete);
@@ -134,26 +130,6 @@ public class ErrorDialog extends Sprite
 	{
 		this.box_.x = ((this.offsetX + (this.stageProxy.getStageWidth() / 2)) - (this.box_.width / 2));
 		this.box_.y = ((this.offsetY + (this.stageProxy.getStageHeight() / 2)) - (this.getBoxHeight() / 2));
-		if (this.analyticsPageName_ != null)
-		{
-			this.tryAnalytics();
-		}
-	}
-
-	private function tryAnalytics():void
-	{
-		var _local_1:GoogleAnalytics;
-		try
-		{
-			_local_1 = StaticInjectorContext.getInjector().getInstance(GoogleAnalytics);
-			if (_local_1)
-			{
-				_local_1.trackPageView(this.analyticsPageName_);
-			}
-		}
-		catch (error:Error)
-		{
-		}
 	}
 
 	private function draw():void

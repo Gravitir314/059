@@ -10,15 +10,14 @@ import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.tutorial.Tutorial;
 import com.company.assembleegameclient.tutorial.doneAction;
 import com.company.assembleegameclient.ui.DeprecatedTextButton;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.events.Event;
 import flash.events.KeyboardEvent;
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 import flash.text.TextFieldAutoSize;
 import flash.text.TextFormatAlign;
 
-import kabam.rotmg.core.service.GoogleAnalytics;
 import kabam.rotmg.text.model.TextKey;
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.LineBuilder;
@@ -39,14 +38,14 @@ public class PortalPanel extends Panel
 	private var nameText_:TextFieldDisplayConcrete;
 	private var enterButton_:DeprecatedTextButton;
 	private var fullText_:TextFieldDisplayConcrete;
-	public var googleAnalytics:GoogleAnalytics;
+	private var warned:Boolean = false;
 
 	public function PortalPanel(_arg_1:GameSprite, _arg_2:Portal)
 	{
 		super(_arg_1);
 		this.owner_ = _arg_2;
 		this.nameText_ = new TextFieldDisplayConcrete().setSize(18).setColor(0xFFFFFF).setBold(true).setTextWidth(WIDTH).setWordWrap(true).setHorizontalAlign(TextFormatAlign.CENTER);
-		this.nameText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.nameText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addChild(this.nameText_);
 		this.waiter.push(this.nameText_.textChanged);
 		this.enterButton_ = new DeprecatedTextButton(16, TextKey.PANEL_ENTER);
@@ -55,7 +54,7 @@ public class PortalPanel extends Panel
 		this.fullText_ = new TextFieldDisplayConcrete().setSize(18).setColor(0xFF0000).setHTML(true).setBold(true).setAutoSize(TextFieldAutoSize.CENTER);
 		var _local_3:String = ((this.owner_.lockedPortal_) ? TextKey.PORTAL_PANEL_LOCKED : TextKey.PORTAL_PANEL_FULL);
 		this.fullText_.setStringBuilder(new LineBuilder().setParams(_local_3).setPrefix('<p align="center">').setPostfix("</p>"));
-		this.fullText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.fullText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.fullText_.textChanged.addOnce(this.alignUI);
 		addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
 		addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
@@ -89,7 +88,7 @@ public class PortalPanel extends Panel
 
 	private function onKeyDown(_arg_1:KeyboardEvent):void
 	{
-		if (((_arg_1.keyCode == Parameters.data_.interact) && (stage.focus == null)))
+		if (_arg_1.keyCode == Parameters.data_.interact && stage.focus == null && !this.owner_.lockedPortal_)
 		{
 			this.enterPortal();
 		}
@@ -98,9 +97,11 @@ public class PortalPanel extends Panel
 	private function enterPortal():void
 	{
 		var _local_1:String = ObjectLibrary.typeToDisplayId_[this.owner_.objectType_];
-		if (((this.googleAnalytics) && ((((_local_1 == "Kitchen Portal") || (_local_1 == "Vault Explanation")) || (_local_1 == "Guild Explanation")) || (_local_1 == "Nexus Explanation"))))
+		if (Parameters.data_.fameBlockTP && this.owner_.objectType_ == 3873 && !this.warned)
 		{
-			this.googleAnalytics.trackEvent("enterPortal", _local_1);
+			this.gs_.map.player_.textNotification("MGM forces you to teleport and ruins Boots on the Ground, BE WARNED!", 0xE25F00);
+			this.warned = true;
+			return;
 		}
 		doneAction(gs_, Tutorial.ENTER_PORTAL_ACTION);
 		gs_.gsc_.usePortal(this.owner_.objectId_);

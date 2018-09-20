@@ -5,12 +5,12 @@ package com.company.assembleegameclient.ui
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.util.AssetLibrary;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Bitmap;
 import flash.display.BitmapData;
 import flash.display.Sprite;
 import flash.events.TimerEvent;
-import flash.filters.DropShadowFilter;
 import flash.utils.Timer;
 
 import kabam.rotmg.text.model.TextKey;
@@ -90,7 +90,7 @@ public class BoostPanel extends Sprite
 		_local_3.setStringBuilder(new LineBuilder().setParams(TextKey.BOOSTPANEL_ACTIVEBOOSTS));
 		_local_3.setMultiLine(true);
 		_local_3.mouseEnabled = true;
-		_local_3.filters = [new DropShadowFilter(0, 0, 0)];
+		_local_3.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		_local_3.x = 20;
 		_local_3.y = 4;
 		addChild(_local_3);

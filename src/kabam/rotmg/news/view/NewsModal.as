@@ -6,6 +6,7 @@ import com.company.assembleegameclient.sound.SoundEffectLibrary;
 import com.company.util.AssetLibrary;
 import com.company.util.KeyCodes;
 import com.company.util.MoreColorUtil;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Bitmap;
 import flash.display.BitmapData;
@@ -42,7 +43,7 @@ public class NewsModal extends EmptyFrame
 	public static var modalWidth:int = MODAL_WIDTH;//440
 	public static var modalHeight:int = MODAL_HEIGHT;//400
 	private static const OVER_COLOR_TRANSFORM:ColorTransform = new ColorTransform(1, (220 / 0xFF), (133 / 0xFF));
-	private static const DROP_SHADOW_FILTER:DropShadowFilter = new DropShadowFilter(0, 0, 0);
+	private static const DROP_SHADOW_FILTER:DropShadowFilter = DropShadowFilterPlugin.DEFAULT_FILTER;
 	private static const GLOW_FILTER:GlowFilter = new GlowFilter(0xFF0000, 1, 11, 5);
 	private static const filterWithGlow:Array = [DROP_SHADOW_FILTER, GLOW_FILTER];
 	private static const filterNoGlow:Array = [DROP_SHADOW_FILTER];
@@ -96,7 +97,7 @@ public class NewsModal extends EmptyFrame
 		_local_5.setMultiLine(true);
 		_local_5.setAutoSize(TextFieldAutoSize.CENTER);
 		_local_5.setHorizontalAlign(TextFormatAlign.CENTER);
-		_local_5.filters = [new DropShadowFilter(0, 0, 0)];
+		_local_5.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		_local_5.x = _arg_2;
 		_local_5.y = _arg_3;
 		return (_local_5);

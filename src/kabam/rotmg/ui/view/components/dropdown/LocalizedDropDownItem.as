@@ -2,9 +2,10 @@
 
 package kabam.rotmg.ui.view.components.dropdown
 {
+import com.greensock.plugins.DropShadowFilterPlugin;
+
 import flash.display.Sprite;
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.LineBuilder;
@@ -28,7 +29,7 @@ public class LocalizedDropDownItem extends Sprite
 		mouseChildren = false;
 		this.nameText_ = new TextFieldDisplayConcrete().setSize(16).setColor(0xB3B3B3).setBold(true);
 		this.nameText_.setStringBuilder(this.nameLineBuilder_.setParams(_arg_1));
-		this.nameText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.nameText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addChild(this.nameText_);
 		this.drawBackground(0x363636);
 		addEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);

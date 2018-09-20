@@ -40,6 +40,7 @@ import kabam.rotmg.stage3D.graphic3D.TextureFactory;
 public class Map extends AbstractMap
 {
 
+	public static const REALMS:Vector.<String> = new <String>["Medusa", "Beholder", "Cyclops", "Djinn", "Ogre", "Flayer", "Sprite", "Golem"];
 	public static const CLOTH_BAZAAR:String = "Cloth Bazaar";
 	public static const NEXUS:String = "Nexus";
 	public static const DAILY_QUEST_ROOM:String = "Daily Quest Room";

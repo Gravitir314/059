@@ -3,9 +3,9 @@
 package kabam.rotmg.arena.util
 {
 import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Bitmap;
-import flash.filters.DropShadowFilter;
 
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 
@@ -18,7 +18,7 @@ public class ArenaViewAssetFactory
 		var _local_5:TextFieldDisplayConcrete = new TextFieldDisplayConcrete();
 		_local_5.setSize(_arg_2).setColor(_arg_1).setBold(_arg_3);
 		_local_5.setVerticalAlign(TextFieldDisplayConcrete.BOTTOM);
-		_local_5.filters = ((_arg_4) ? [new DropShadowFilter(0, 0, 0)] : []);
+		_local_5.filters = ((_arg_4) ? [DropShadowFilterPlugin.DEFAULT_FILTER] : []);
 		return (_local_5);
 	}
 

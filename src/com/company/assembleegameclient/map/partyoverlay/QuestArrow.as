@@ -76,7 +76,7 @@ public class QuestArrow extends GameObjectArrow
 	{
 		var _local_4:Boolean;
 		var _local_5:Boolean;
-		var _local_3:GameObject = this.map_.quest_.getObject(_arg_1);
+		var _local_3:GameObject = this.map_.quest_.getObject();
 		if (_local_3 != go_)
 		{
 			setGameObject(_local_3);
@@ -84,7 +84,10 @@ public class QuestArrow extends GameObjectArrow
 			if (!this.questArrowTween)
 			{
 				this.questArrowTween = TweenMax.to(this, 0.5, {
-					"scaleX": 2, "scaleY": 2, "yoyo": true, "repeat": 1
+					"scaleX": 2,
+					"scaleY": 2,
+					"yoyo": true,
+					"repeat": 1
 				});
 			}
 			else

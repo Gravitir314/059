@@ -105,7 +105,6 @@ public class CreditDisplay extends Sprite
 			this.displayFortune_ = false;
 		}
 		this.draw(0, 0, 0);
-		mouseEnabled = true;
 		waiter.complete.add(this.onAlignHorizontal);
 	}
 
@@ -151,11 +150,11 @@ public class CreditDisplay extends Sprite
 			this.coinIcon_.x = -(this.coinIcon_.width);
 			this.creditsText_.x = ((this.coinIcon_.x - this.creditsText_.width) + 8);
 			this.creditsText_.y = ((this.coinIcon_.y + (this.coinIcon_.height / 2)) - (this.creditsText_.height / 2));
-			if (this._creditsButton)
-			{
-				this._creditsButton.x = ((this.coinIcon_.x - this.creditsText_.width) - 16);
-				this._creditsButton.y = 7;
-			}
+		}
+		if (this._creditsButton)
+		{
+			this._creditsButton.x = ((this.coinIcon_.x - this.creditsText_.width) - 16);
+			this._creditsButton.y = 7;
 		}
 		if (this.displayFame_)
 		{
@@ -194,6 +193,7 @@ public class CreditDisplay extends Sprite
 	{
 		var _local_2:TextFieldDisplayConcrete = new TextFieldDisplayConcrete().setSize(FONT_SIZE).setColor(_arg_1).setTextHeight(16);
 		_local_2.filters = [new DropShadowFilter(0, 0, 0, 1, 4, 4, 2)];
+		_local_2.mouseChildren = false;
 		return (_local_2);
 	}
 

@@ -79,9 +79,9 @@ public class SpeechBalloon extends Sprite implements IMapOverlayElement
 		graphics.clear();
 		GraphicsUtil.clearPath(this.path_);
 		GraphicsUtil.drawCutEdgeRect(-6, -6, (_local_15 + 12), (height + 12), 4, [1, 1, 1, 1], this.path_);
-		this.path_.commands.splice(6, 0, GraphicsPathCommand.LINE_TO, GraphicsPathCommand.LINE_TO, GraphicsPathCommand.LINE_TO);
+		(this.path_.commands as Vector.<int>).splice(6, 0, GraphicsPathCommand.LINE_TO, GraphicsPathCommand.LINE_TO, GraphicsPathCommand.LINE_TO);
 		var _local_16:int = height;
-		this.path_.data.splice(12, 0, ((_local_15 / 2) + 8), (_local_16 + 6), (_local_15 / 2), (_local_16 + 18), ((_local_15 / 2) - 8), (_local_16 + 6));
+		(this.path_.data as Vector.<Number>).splice(12, 0, ((_local_15 / 2) + 8), (_local_16 + 6), (_local_15 / 2), (_local_16 + 18), ((_local_15 / 2) - 8), (_local_16 + 6));
 		graphics.drawGraphicsData(this.graphicsData_);
 		filters = [new DropShadowFilter(0, 0, 0, 1, 16, 16)];
 		this.offset_.y = ((-(height) - ((this.go_.texture_.height * (_arg_1.size_ / 100)) * 5)) - 2);
@@ -97,20 +97,20 @@ public class SpeechBalloon extends Sprite implements IMapOverlayElement
 		try
 		{
 			hmod = StaticInjectorContext.getInjector().getInstance(HUDModel);
-			if ((((!(hmod.gameSprite.map.goDict_[playerObjectId] == null)) && (hmod.gameSprite.map.goDict_[playerObjectId] is Player)) && (!(hmod.gameSprite.map.player_.objectId_ == playerObjectId))))
+			if (hmod.gameSprite.map.goDict_[playerObjectId] != null && hmod.gameSprite.map.goDict_[playerObjectId] is Player && hmod.gameSprite.map.player_.objectId_ != playerObjectId)
 			{
 				aPlayer = (hmod.gameSprite.map.goDict_[playerObjectId] as Player);
 				hmod.gameSprite.addChatPlayerMenu(aPlayer, e.stageX, e.stageY);
 			}
 			else
 			{
-				if (((((!(this.isTrade)) && (!(this.senderName == null))) && (!(this.senderName == ""))) && (!(hmod.gameSprite.map.player_.name_ == this.senderName))))
+				if (!this.isTrade && this.senderName != null && this.senderName != "" && hmod.gameSprite.map.player_.name_ != this.senderName)
 				{
 					hmod.gameSprite.addChatPlayerMenu(null, e.stageX, e.stageY, this.senderName, this.isGuild);
 				}
 				else
 				{
-					if (((((this.isTrade) && (!(this.senderName == null))) && (!(this.senderName == ""))) && (!(hmod.gameSprite.map.player_.name_ == this.senderName))))
+					if (this.isTrade && this.senderName != null && this.senderName != "" && hmod.gameSprite.map.player_.name_ != this.senderName)
 					{
 						hmod.gameSprite.addChatPlayerMenu(null, e.stageX, e.stageY, this.senderName, false, true);
 					}

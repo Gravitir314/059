@@ -6,10 +6,10 @@ import com.company.assembleegameclient.account.ui.CheckBoxField;
 import com.company.assembleegameclient.account.ui.Frame;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.util.EmailValidator;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.events.MouseEvent;
 import flash.events.TextEvent;
-import flash.filters.DropShadowFilter;
 
 import kabam.rotmg.account.ui.components.DateField;
 import kabam.rotmg.account.web.model.AccountData;
@@ -91,7 +91,7 @@ public class WebRegisterDialog extends Frame
 		_arg_1.setSize(12).setColor(0xB3B3B3).setBold(true);
 		_arg_1.setTextWidth(275);
 		_arg_1.setMultiLine(true).setWordWrap(true).setHTML(true);
-		_arg_1.filters = [new DropShadowFilter(0, 0, 0)];
+		_arg_1.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addChild(_arg_1);
 		positionText(_arg_1);
 	}

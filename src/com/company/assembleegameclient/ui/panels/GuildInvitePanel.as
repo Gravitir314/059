@@ -4,11 +4,11 @@ package com.company.assembleegameclient.ui.panels
 {
 import com.company.assembleegameclient.game.AGameSprite;
 import com.company.assembleegameclient.ui.DeprecatedTextButton;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.events.Event;
 import flash.events.MouseEvent;
 import flash.events.TimerEvent;
-import flash.filters.DropShadowFilter;
 import flash.text.TextFieldAutoSize;
 import flash.utils.Timer;
 
@@ -38,12 +38,12 @@ public class GuildInvitePanel extends Panel
 		this.guildName_ = _arg_3;
 		this.title_ = new TextFieldDisplayConcrete().setSize(16).setColor(0xFFFFFF).setTextWidth(WIDTH).setBold(true).setAutoSize(TextFieldAutoSize.CENTER).setHTML(true);
 		this.title_.setStringBuilder(new LineBuilder().setParams(TextKey.GUILD_INVITATION, {"playerName": _arg_2}).setPrefix('<p align="center">').setPostfix("</p>"));
-		this.title_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.title_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.title_.y = 0;
 		addChild(this.title_);
 		this.guildNameText_ = new TextFieldDisplayConcrete().setSize(16).setColor(0xFFFFFF).setTextWidth(WIDTH).setAutoSize(TextFieldAutoSize.CENTER).setBold(true).setHTML(true);
 		this.guildNameText_.setStringBuilder(new StaticStringBuilder((('<p align="center">' + this.guildName_) + "</p>")));
-		this.guildNameText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.guildNameText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.guildNameText_.y = 20;
 		addChild(this.guildNameText_);
 		this.rejectButton_ = new DeprecatedTextButton(16, TextKey.GUILD_REJECTION);

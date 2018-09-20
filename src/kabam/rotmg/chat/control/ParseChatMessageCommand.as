@@ -4,24 +4,19 @@ package kabam.rotmg.chat.control
 {
 import com.company.assembleegameclient.appengine.SavedCharacter;
 import com.company.assembleegameclient.game.MapUserInput;
+import com.company.assembleegameclient.game.events.ReconnectEvent;
+import com.company.assembleegameclient.map.Map;
 import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.screens.charrects.CurrentCharacterRect;
 import com.company.util.MoreObjectUtil;
 
-import flash.display.Bitmap;
-
-import flash.display.BitmapData;
-import flash.display.Sprite;
-
 import flash.display.StageScaleMode;
-
 import flash.events.Event;
 import flash.geom.Point;
-import flash.net.FileReference;
 import flash.utils.ByteArray;
-
 import flash.utils.getTimer;
 
 import kabam.rotmg.account.core.Account;
@@ -29,13 +24,14 @@ import kabam.rotmg.appengine.api.AppEngineClient;
 import kabam.rotmg.build.api.BuildData;
 import kabam.rotmg.chat.model.ChatMessage;
 import kabam.rotmg.core.model.PlayerModel;
-import kabam.rotmg.core.service.GoogleAnalytics;
 import kabam.rotmg.dailyLogin.model.DailyLoginModel;
 import kabam.rotmg.dialogs.model.PopupNamesConfig;
+import kabam.rotmg.game.commands.PlayGameCommand;
 import kabam.rotmg.game.model.GameInitData;
 import kabam.rotmg.game.signals.AddTextLineSignal;
 import kabam.rotmg.game.signals.PlayGameSignal;
 import kabam.rotmg.servers.api.Server;
+import kabam.rotmg.servers.api.ServerModel;
 import kabam.rotmg.text.model.TextKey;
 import kabam.rotmg.ui.model.HUDModel;
 import kabam.rotmg.ui.signals.EnterGameSignal;
@@ -62,17 +58,19 @@ public class ParseChatMessageCommand
 	[Inject]
 	public var player:PlayerModel;
 	[Inject]
-	public var tracking:GoogleAnalytics;
-	[Inject]
 	public var enterGame:EnterGameSignal;
 	[Inject]
 	public var playGame:PlayGameSignal;
+	[Inject]
+	public var serverModel:ServerModel;
 
 	private function cheatCommands():Boolean
 	{
 		var command:Array;
 		var player:Player = this.hudModel.gameSprite.map.player_;
 		var object:GameObject;
+		var array:Array;
+		var counter:int;
 		switch (this.data.toLowerCase())
 		{
 			case "/l2m":
@@ -82,7 +80,7 @@ public class ParseChatMessageCommand
 				var maxed:Boolean = true;
 				var statsValues:Array = [int(((((player.maxHPMax_ - player.maxHP_) + player.maxHPBoost_) / 5) + (((((player.maxHPMax_ - player.maxHP_) + player.maxHPBoost_) % 5) > 0) ? 1 : 0))), int(((((player.maxMPMax_ - player.maxMP_) + player.maxMPBoost_) / 5) + (((((player.maxMPMax_ - player.maxMP_) + player.maxMPBoost_) % 5) > 0) ? 1 : 0))), ((player.attackMax_ - player.attack_) + player.attackBoost_), ((player.defenseMax_ - player.defense_) + player.defenseBoost_), ((player.speedMax_ - player.speed_) + player.speedBoost_), ((player.dexterityMax_ - player.dexterity_) + player.dexterityBoost_), ((player.vitalityMax_ - player.vitality_) + player.vitalityBoost_), ((player.wisdomMax_ - player.wisdom_) + player.wisdomBoost_)];
 				var stats:Array = ["LIFE", "MANA", "ATT", "DEF", "SPD", "DEX", "VIT", "WIS"];
-				var counter:int;
+				counter = 0;
 				while (counter < statsValues.length)
 				{
 					if (statsValues[counter] > 0)
@@ -349,7 +347,7 @@ public class ParseChatMessageCommand
 					player.followPos.x = Parameters.VHSNext.x;
 					player.followPos.y = Parameters.VHSNext.y;
 					player.clearTextureCache();
-					(trace(player.followPos.x, player.followPos.y));
+					trace(player.followPos.x, player.followPos.y);
 				}
 				return (true);
 			case "/blend":
@@ -363,6 +361,14 @@ public class ParseChatMessageCommand
 			case "/lowcpu":
 				Parameters.lowCPUMode = !Parameters.lowCPUMode;
 				player.textNotification(((Parameters.lowCPUMode) ? "Low CPU on" : "Low CPU off"));
+				return (true);
+			case "/name":
+				Parameters.data_.fakeName = null;
+				this.hudModel.gameSprite.hudView.characterDetails.setName(this.hudModel.gameSprite.player_.name_);
+				return (true);
+			case "/trace":
+				Parameters.data_.traceMessage = !Parameters.data_.traceMessage;
+				player.textNotification(((Parameters.data_.traceMessage) ? "Tracing message" : "Tracing disabled"));
 				return (true);
 			default:
 				command = (this.data.match("^/tp (\\w+)") || this.data.match("^/teleport (\\w+)"));
@@ -576,7 +582,8 @@ public class ParseChatMessageCommand
 				command = this.data.match("^/name (\\w+)");
 				if (command != null)
 				{
-					this.hudModel.gameSprite.hudView.characterDetails.setName(command[1]);
+					Parameters.data_.fakeName = command[1];
+					this.hudModel.gameSprite.hudView.characterDetails.setName(Parameters.data_.fakeName);
 					return (true);
 				}
 				command = this.data.match("^/tdist (\\d+)");
@@ -586,41 +593,176 @@ public class ParseChatMessageCommand
 					this.addTextLine.dispatch(ChatMessage.make("Teleport Distance", Parameters.data_.teleDistance));
 					return (true);
 				}
-					command = this.data.match("/sbthreshold (\\d+)");
-					if (command != null)
+				command = this.data.match("/sbthreshold (\\d+)");
+				if (command != null)
+				{
+					Parameters.data_.spellbombHPThreshold = command[1];
+					this.addTextLine.dispatch(ChatMessage.make("Spellbomb Threshold", Parameters.data_.spellbombHPThreshold));
+					return (true);
+				}
+				command = this.data.match("^/aathreshold (\\d+)");
+				if (command != null)
+				{
+					Parameters.data_.skullHPThreshold = command[1];
+					this.addTextLine.dispatch(ChatMessage.make("Skull Threshold", Parameters.data_.skullHPThreshold));
+					return (true);
+				}
+				command = this.data.match("^/aatargets (\\d+)");
+				if (command != null)
+				{
+					Parameters.data_.skullTargets = command[1];
+					this.addTextLine.dispatch(ChatMessage.make("Skull Targets", Parameters.data_.skullTargets));
+					return (true);
+				}
+				command = this.data.match("^/vol (\\d+)");
+				if (command != null)
+				{
+					Parameters.data_.SFXVolume = command[1];
+					Parameters.save();
+					this.addTextLine.dispatch(ChatMessage.make("@Volume", Parameters.data_.SFXVolume));
+					return (true);
+				}
+				command = (this.data.match("^/spd (\\d+)") || this.data.match("^/setspd (\\d+)"));
+				if (command != null)
+				{
+					this.hudModel.gameSprite.map.player_.speed_ = command[1];
+					return (true);
+				}
+				command = this.data.toLowerCase().match("^/con ?(\\w*) ?(\\w*) ?(\\w*)");
+				if (command != null)
+				{
+					var realm:Array;
+					var isRealm:Boolean;
+					var needServer:Boolean;
+
+					var server:Server;
+					var gameId:int = Parameters.NEXUS_GAMEID;
+					var charId:int = this.player.currentCharId;
+					var abbreviations:Vector.<String> = this.serverModel.getAbbreviations();
+					var servers:Vector.<Server> = this.serverModel.getServers();
+					var argumentCounter:int = 1;
+					while (argumentCounter < 4)
 					{
-						Parameters.data_.spellbombHPThreshold = command[1];
-						this.addTextLine.dispatch(ChatMessage.make("Spellbomb Threshold", Parameters.data_.spellbombHPThreshold));
-						return (true);
+						var argument:* = command[argumentCounter];
+						if (argument != "")
+						{
+							if (argumentCounter > 1)
+							{
+								needServer = false;
+							}
+							if (argument.substr(0, 1) == "v")
+							{
+								gameId = Parameters.VAULT_GAMEID;
+							}
+							else
+							{
+								if (argument.substr(0, 1) == "p")
+								{
+									Parameters.data_.preferredServer = "Proxy";
+									Parameters.save();
+								}
+								else
+								{
+									if (abbreviations.toString().toLowerCase().indexOf(argument) != -1)
+									{
+										counter = 0;
+										while (counter < abbreviations.length)
+										{
+											if (argument == abbreviations[counter].toLowerCase())
+											{
+												Parameters.data_.preferredServer = servers[counter].name;
+												Parameters.save();
+												needServer = false;
+												break;
+											}
+											counter++;
+										}
+									}
+									else
+									{
+										counter = 0;
+										while (counter < CurrentCharacterRect.charnames.length)
+										{
+											var characters:String = CurrentCharacterRect.charnames[counter];
+											if (argument.substr(argument.length - 1, 1) == "2" && characters.substr(characters.length - 1, 1) == "2")
+											{
+												if (characters.substring(0, (argument.length - 1)) == argument.substr(0, (argument.length - 1)))
+												{
+													argument = CurrentCharacterRect.charids[counter];
+													break;
+												}
+											}
+											else
+											{
+												if (characters.substring(0, argument.length) == argument)
+												{
+													argument = CurrentCharacterRect.charids[counter];
+													break;
+												}
+											}
+											counter++;
+										}
+										if (parseInt(argument) > 0)
+										{
+											charId = parseInt(argument);
+											if (argumentCounter == 1)
+											{
+												needServer = true;
+											}
+										}
+										else
+										{
+											counter = 0;
+											while (counter < Map.REALMS.length)
+											{
+												if (argument == Map.REALMS[counter].substring(0, argument.length).toLowerCase())
+												{
+													for each (var visited:String in PlayGameCommand.visited)
+													{
+														realm = visited.split(" ");
+														if (realm[1] == Parameters.data_.preferredServer && realm[2] == Map.REALMS[counter])
+														{
+															gameId = 0;
+															isRealm = true;
+															break;
+														}
+													}
+													break;
+												}
+												counter++;
+											}
+										}
+									}
+								}
+							}
+						}
+						argumentCounter++;
 					}
-					command = this.data.match("^/aathreshold (\\d+)");
-					if (command != null)
+					if (needServer)
 					{
-						Parameters.data_.skullHPThreshold = command[1];
-						this.addTextLine.dispatch(ChatMessage.make("Skull Threshold", Parameters.data_.skullHPThreshold));
-						return (true);
+						server = new Server();
+						server.name = "";
+						server.address = PlayGameCommand.curip;
+						server.port = 2050;
+						gameId = 0;
 					}
-					command = this.data.match("^/aatargets (\\d+)");
-					if (command != null)
+					else
 					{
-						Parameters.data_.skullTargets = command[1];
-						this.addTextLine.dispatch(ChatMessage.make("Skull Targets", Parameters.data_.skullTargets));
-						return (true);
+						if (!isRealm)
+						{
+							server = this.serverModel.getServerByName(Parameters.data_.preferredServer);
+						}
+						else
+						{
+							server = new Server();
+							server.name = realm[1] + " " + realm[2];
+							server.address = realm[0];
+							server.port = 2050;
+						}
 					}
-					command = this.data.match("^/vol (\\d+)");
-					if (command != null)
-					{
-						Parameters.data_.SFXVolume = command[1];
-						Parameters.save();
-						this.addTextLine.dispatch(ChatMessage.make("@Volume", Parameters.data_.SFXVolume));
-						return (true);
-					}
-					command = (this.data.match("^/spd (\\d+)") || this.data.match("^/setspd (\\d+)"));
-					if (command != null)
-					{
-						this.hudModel.gameSprite.map.player_.speed_ = command[1];
-						return (true);
-					}
+					this.hudModel.gameSprite.gsc_.gs_.dispatchEvent(new ReconnectEvent(server, gameId, false, charId, -1, new ByteArray(), false));
+					return (true);
+				}
 				return (false);
 		}
 	}

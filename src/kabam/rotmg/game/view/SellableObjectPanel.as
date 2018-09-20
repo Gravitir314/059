@@ -12,13 +12,13 @@ import com.company.assembleegameclient.ui.RankText;
 import com.company.assembleegameclient.ui.panels.Panel;
 import com.company.assembleegameclient.util.Currency;
 import com.company.assembleegameclient.util.GuildUtil;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Bitmap;
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.KeyboardEvent;
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 import flash.text.TextFieldAutoSize;
 
 import kabam.rotmg.account.core.Account;
@@ -60,7 +60,7 @@ public class SellableObjectPanel extends Panel implements TooltipAble
 		this.nameText_.setWordWrap(true);
 		this.nameText_.setMultiLine(true);
 		this.nameText_.setAutoSize(TextFieldAutoSize.CENTER);
-		this.nameText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.nameText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addChild(this.nameText_);
 		this.icon_ = new Sprite();
 		addChild(this.icon_);
@@ -82,7 +82,7 @@ public class SellableObjectPanel extends Panel implements TooltipAble
 		var rankText:Sprite;
 		var rankReqText:Sprite = new Sprite();
 		requiredText = new TextFieldDisplayConcrete().setSize(16).setColor(0xFFFFFF).setBold(true).setAutoSize(TextFieldAutoSize.CENTER);
-		requiredText.filters = [new DropShadowFilter(0, 0, 0)];
+		requiredText.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		rankReqText.addChild(requiredText);
 		rankText = new RankText(rankReq, false, false);
 		rankReqText.addChild(rankText);
@@ -101,7 +101,7 @@ public class SellableObjectPanel extends Panel implements TooltipAble
 		_local_2 = new TextFieldDisplayConcrete().setSize(16).setColor(0xFF0000).setBold(true).setAutoSize(TextFieldAutoSize.CENTER);
 		var _local_3:String = GuildUtil.rankToString(_arg_1);
 		_local_2.setStringBuilder(new LineBuilder().setParams(TextKey.SELLABLE_OBJECT_PANEL_GUILD_RANK, {"amount": _local_3}));
-		_local_2.filters = [new DropShadowFilter(0, 0, 0)];
+		_local_2.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		return (_local_2);
 	}
 

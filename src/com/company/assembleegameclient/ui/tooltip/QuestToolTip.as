@@ -4,8 +4,7 @@ package com.company.assembleegameclient.ui.tooltip
 {
 import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.ui.GameObjectListItem;
-
-import flash.filters.DropShadowFilter;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.LineBuilder;
@@ -28,7 +27,7 @@ public class QuestToolTip extends ToolTip
 		var _local_1:TextFieldDisplayConcrete;
 		_local_1 = new TextFieldDisplayConcrete().setSize(22).setColor(16549442).setBold(true);
 		_local_1.setStringBuilder(new LineBuilder().setParams("Bounty!"));
-		_local_1.filters = [new DropShadowFilter(0, 0, 0)];
+		_local_1.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		_local_1.x = 0;
 		_local_1.y = 0;
 		waiter.push(_local_1.textChanged);

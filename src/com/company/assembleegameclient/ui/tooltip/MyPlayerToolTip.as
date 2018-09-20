@@ -11,8 +11,7 @@ import com.company.assembleegameclient.ui.StatusBar;
 import com.company.assembleegameclient.ui.panels.itemgrids.EquippedGrid;
 import com.company.assembleegameclient.ui.panels.itemgrids.InventoryGrid;
 import com.company.assembleegameclient.util.FameUtil;
-
-import flash.filters.DropShadowFilter;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import kabam.rotmg.assets.services.CharacterFactory;
 import kabam.rotmg.classes.model.CharacterClass;
@@ -125,7 +124,7 @@ public class MyPlayerToolTip extends ToolTip
 		this.nextClassQuest_.setStringBuilder(new LineBuilder().setParams(TextKey.MY_PLAYER_TOOL_TIP_NEXT_CLASS_QUEST, {
 			"nextStarFame": _arg_1, "character": ClassToolTip.getDisplayId(_arg_2)
 		}));
-		this.nextClassQuest_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.nextClassQuest_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addChild(this.nextClassQuest_);
 		waiter.push(this.nextClassQuest_.textChanged);
 	}
@@ -139,7 +138,7 @@ public class MyPlayerToolTip extends ToolTip
 		this.bestLevel_.setStringBuilder(new LineBuilder().setParams(TextKey.BESTLEVEL__STATS, {
 			"numStars": _local_1, "bestLevel": _local_2, "fame": _local_3
 		}));
-		this.bestLevel_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.bestLevel_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addChild(this.bestLevel_);
 		waiter.push(this.bestLevel_.textChanged);
 	}

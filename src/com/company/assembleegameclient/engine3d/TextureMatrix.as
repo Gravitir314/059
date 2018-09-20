@@ -11,7 +11,7 @@ public class TextureMatrix
 	public var texture_:BitmapData = null;
 	public var tToS_:Matrix = new Matrix();
 	public var uvMatrix_:Matrix = null;
-	private var tempMatrix_:Matrix = new Matrix();
+	public var tempMatrix_:Matrix = new Matrix();
 
 	public function TextureMatrix(_arg_1:BitmapData, _arg_2:Vector.<Number>)
 	{

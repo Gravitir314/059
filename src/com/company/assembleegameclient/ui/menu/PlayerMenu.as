@@ -4,13 +4,14 @@ package com.company.assembleegameclient.ui.menu
 {
 import com.company.assembleegameclient.game.AGameSprite;
 import com.company.assembleegameclient.objects.Player;
+import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.GameObjectListItem;
 import com.company.assembleegameclient.util.GuildUtil;
 import com.company.util.AssetLibrary;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.events.Event;
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 
 import io.decagames.rotmg.social.config.FriendsActions;
 import io.decagames.rotmg.social.model.FriendRequestVO;
@@ -44,7 +45,7 @@ public class PlayerMenu extends Menu
 		this.player_ = null;
 		this.namePlate_ = new TextFieldDisplayConcrete().setSize(13).setColor(0xFCDF00).setHTML(true);
 		this.namePlate_.setStringBuilder(new LineBuilder().setParams(this.playerName_));
-		this.namePlate_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.namePlate_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addChild(this.namePlate_);
 		this.yOffset = (this.yOffset - 13);
 		_local_5 = new MenuOption(AssetLibrary.getImageFromSet("lofiInterfaceBig", 21), 0xFFFFFF, TextKey.PLAYERMENU_PM);
@@ -139,9 +140,48 @@ public class PlayerMenu extends Menu
 			_local_3.addEventListener(MouseEvent.CLICK, this.onUnignore);
 			addOption(_local_3);
 		}
+		if (!Parameters.ssmode && Parameters.data_.extraPlayerMenu)
+		{
+			_local_3 = new MenuOption(AssetLibrary.getImageFromSet("lofiInterfaceBig", 5), 0xFFFFFF, "Anchor");
+			_local_3.addEventListener(MouseEvent.CLICK, this.onSetAnchor);
+			addOption(_local_3);
+			if (Parameters.followName == this.player_.name_)
+			{
+				_local_3 = new MenuOption(AssetLibrary.getImageFromSet("lofiInterfaceBig", 19), 0xFF0000, "Stop Follow");
+			}
+			else
+			{
+				_local_3 = new MenuOption(AssetLibrary.getImageFromSet("lofiInterfaceBig", 19), 0xFFFFFF, "Follow");
+			}
+			_local_3.addEventListener(MouseEvent.CLICK, this.onSetFollow);
+			addOption(_local_3);
+		}
 		_local_3 = new MenuOption(AssetLibrary.getImageFromSet("lofiInterfaceBig", 18), 0xFFFFFF, "Add Friend");
 		_local_3.addEventListener(MouseEvent.CLICK, this.onAddFriend);
 		addOption(_local_3);
+	}
+
+	private function onSetAnchor(_arg_1:Event):void
+	{
+		Parameters.data_.anchorName = this.player_.name_;
+		remove();
+	}
+
+	private function onSetFollow(_arg_1:Event):void
+	{
+		if (Parameters.followName == this.player_.name_)
+		{
+			Parameters.followName = null;
+			Parameters.followingName = false;
+			Parameters.followPlayer = null;
+		}
+		else
+		{
+			Parameters.followName = this.player_.name_;
+			Parameters.followingName = true;
+			Parameters.followPlayer = this.player_;
+		}
+		remove();
 	}
 
 	private function onKickMultiBox(_arg_1:Event):void
@@ -185,13 +225,6 @@ public class PlayerMenu extends Menu
 	{
 		var _local_2:FriendActionSignal = StaticInjectorContext.getInjector().getInstance(FriendActionSignal);
 		_local_2.dispatch(new FriendRequestVO(FriendsActions.INVITE, this.playerName_));
-		remove();
-	}
-
-	private function onTradeMessage(_arg_1:Event):void
-	{
-		var _local_2:ShowChatInputSignal = StaticInjectorContext.getInjector().getInstance(ShowChatInputSignal);
-		_local_2.dispatch(true, ("/trade " + this.playerName_));
 		remove();
 	}
 

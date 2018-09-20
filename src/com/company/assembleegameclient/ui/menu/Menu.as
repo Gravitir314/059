@@ -19,7 +19,6 @@ import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.MouseEvent;
 import flash.filters.DropShadowFilter;
-import flash.geom.Rectangle;
 
 import kabam.rotmg.ui.view.UnFocusAble;
 

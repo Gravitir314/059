@@ -3,10 +3,10 @@
 package kabam.rotmg.messaging.impl
 {
 import com.company.assembleegameclient.parameters.Parameters;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Sprite;
 import flash.events.Event;
-import flash.filters.DropShadowFilter;
 import flash.text.TextFieldAutoSize;
 import flash.utils.getTimer;
 
@@ -28,7 +28,7 @@ public class JitterWatcher extends Sprite
 	{
 		this.text_ = new TextFieldDisplayConcrete().setSize(14).setColor(0xFFFFFF);
 		this.text_.setAutoSize(TextFieldAutoSize.LEFT);
-		this.text_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.text_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addChild(this.text_);
 		addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
 		addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);

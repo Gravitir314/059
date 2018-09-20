@@ -2,6 +2,7 @@
 
 package com.company.assembleegameclient.ui
 {
+import com.company.assembleegameclient.parameters.Parameters;
 import com.company.util.GraphicsUtil;
 
 import flash.display.CapsStyle;
@@ -97,6 +98,10 @@ public class TradeButton extends BackgroundFilledText
 
 	private function setEnabled(_arg_1:Boolean):void
 	{
+		if (Parameters.data_.TradeDelay)
+		{
+			_arg_1 = true;
+		}
 		if (_arg_1 == mouseEnabled)
 		{
 			return;
@@ -117,6 +122,11 @@ public class TradeButton extends BackgroundFilledText
 	private function onRemovedFromStage(_arg_1:Event):void
 	{
 		removeEventListener(Event.ENTER_FRAME, this.onEnterFrame);
+		removeEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
+		removeEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
+		removeEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
+		removeEventListener(MouseEvent.ROLL_OUT, this.onRollOut);
+		removeEventListener(MouseEvent.CLICK, this.onClick);
 	}
 
 	private function onEnterFrame(_arg_1:Event):void

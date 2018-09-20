@@ -5,12 +5,12 @@ package com.company.assembleegameclient.ui.menu
 import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.util.CachingColorTransformer;
 import com.company.util.MoreColorUtil;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Bitmap;
 import flash.display.BitmapData;
 import flash.display.Sprite;
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 import flash.geom.ColorTransform;
 
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
@@ -32,14 +32,14 @@ public class MenuOption extends Sprite
 		this.origIconBitmapData_ = _arg_1;
 		this.iconBitmapData_ = TextureRedrawer.redraw(_arg_1, this.redrawSize(), true, 0);
 		this.icon_ = new Bitmap(this.iconBitmapData_);
-		this.icon_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.icon_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.icon_.x = -12;
 		this.icon_.y = -15;
 		addChild(this.icon_);
 		this.text_ = new TextFieldDisplayConcrete().setSize(18).setColor(_arg_2);
 		this.text_.setBold(true);
 		this.text_.setStringBuilder(new LineBuilder().setParams(_arg_3));
-		this.text_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.text_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.text_.x = 20;
 		this.text_.y = -6;
 		addChild(this.text_);

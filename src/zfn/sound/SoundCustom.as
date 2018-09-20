@@ -2,12 +2,13 @@
 
 package zfn.sound
 {
-    import flash.utils.Dictionary;
-    import flash.media.Sound;
-    import com.company.assembleegameclient.sound.SoundEffectLibrary;
-    import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.sound.SoundEffectLibrary;
 
-    public class SoundCustom 
+import flash.media.Sound;
+import flash.utils.Dictionary;
+
+public class SoundCustom 
     {
 		[Embed(source="EmbeddedSound_ding.mp3", mimeType="application/octet-stream")]
         private static const dingEmbed:Class;
@@ -83,7 +84,7 @@ package zfn.sound
 			addSound("eventBeachBum", (new eventBeachBum() as Sound));
         }
 
-        public static function addSound(_arg_1:String, _arg_2:Sound):void
+        private static function addSound(_arg_1:String, _arg_2:Sound):void
         {
             if (sounds_[_arg_1] == null)
             {

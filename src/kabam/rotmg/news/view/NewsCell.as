@@ -2,13 +2,14 @@
 
 package kabam.rotmg.news.view
 {
+import com.greensock.plugins.DropShadowFilterPlugin;
+
 import flash.display.Loader;
 import flash.display.Shape;
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.IOErrorEvent;
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 import flash.net.URLRequest;
 import flash.text.TextFieldAutoSize;
 
@@ -115,7 +116,7 @@ public class NewsCell extends Sprite
 		this.resizeTextField();
 		this.textField.x = (this.w / 2);
 		this.textField.y = (this.h - (25 / 2));
-		this.textField.filters = [new DropShadowFilter(0, 0, 0)];
+		this.textField.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 	}
 
 	private function resizeTextField():void

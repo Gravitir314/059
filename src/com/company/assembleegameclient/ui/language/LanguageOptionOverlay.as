@@ -4,6 +4,7 @@ package com.company.assembleegameclient.ui.language
 {
 import com.company.assembleegameclient.screens.TitleMenuOption;
 import com.company.rotmg.graphics.ScreenGraphic;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Shape;
 import flash.events.Event;
@@ -80,7 +81,7 @@ public class LanguageOptionOverlay extends ScreenBase
 		_local_1.setBold(true);
 		_local_1.setStringBuilder(new LineBuilder().setParams(TextKey.LANGUAGES_SCREEN_TITLE));
 		_local_1.setAutoSize(TextFieldAutoSize.CENTER);
-		_local_1.filters = [new DropShadowFilter(0, 0, 0)];
+		_local_1.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		_local_1.x = ((800 / 2) - (_local_1.width / 2));
 		_local_1.y = 16;
 		return (_local_1);

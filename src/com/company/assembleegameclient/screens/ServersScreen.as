@@ -10,8 +10,6 @@ import flash.display.Sprite;
 import flash.events.Event;
 import flash.filters.DropShadowFilter;
 
-import kabam.rotmg.core.StaticInjectorContext;
-import kabam.rotmg.core.service.GoogleAnalytics;
 import kabam.rotmg.servers.api.Server;
 import kabam.rotmg.text.model.TextKey;
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
@@ -54,11 +52,6 @@ public class ServersScreen extends Sprite
 		this.makeServerBoxes();
 		((this.serverBoxes_.height > 400) && (this.makeScrollbar()));
 		this.makeMenuBar();
-		var _local_2:GoogleAnalytics = StaticInjectorContext.getInjector().getInstance(GoogleAnalytics);
-		if (_local_2)
-		{
-			_local_2.trackPageView("/serversScreen");
-		}
 	}
 
 	private function makeMenuBar():void

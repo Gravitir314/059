@@ -17,12 +17,12 @@ import com.company.rotmg.graphics.StarGraphic;
 import com.company.util.AssetLibrary;
 import com.company.util.CachingColorTransformer;
 import com.company.util.ConversionUtil;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Bitmap;
 import flash.display.BitmapData;
 import flash.display.Graphics;
 import flash.display.Sprite;
-import flash.filters.DropShadowFilter;
 import flash.geom.ColorTransform;
 
 import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
@@ -178,12 +178,12 @@ public class ClassToolTip extends ToolTip
 		this.nameText_ = new TextFieldDisplayConcrete().setSize(13).setColor(0xFFFFFF);
 		this.nameText_.setBold(true);
 		this.nameText_.setStringBuilder(new LineBuilder().setParams(getDisplayId(this._playerXML)));
-		this.nameText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.nameText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		waiter.push(this.nameText_.textChanged);
 		addChild(this.nameText_);
 		this.descriptionText_ = new TextFieldDisplayConcrete().setSize(13).setColor(0xB3B3B3).setWordWrap(true).setMultiLine(true).setTextWidth(174);
 		this.descriptionText_.setStringBuilder(new LineBuilder().setParams(this._playerXML.Description));
-		this.descriptionText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.descriptionText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		waiter.push(this.descriptionText_.textChanged);
 		addChild(this.descriptionText_);
 	}
@@ -193,7 +193,7 @@ public class ClassToolTip extends ToolTip
 		this.classQuestText_ = new TextFieldDisplayConcrete().setSize(13).setColor(0xFFFFFF);
 		this.classQuestText_.setBold(true);
 		this.classQuestText_.setStringBuilder(new LineBuilder().setParams("Class Quest"));
-		this.classQuestText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.classQuestText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		waiter.push(this.classQuestText_.textChanged);
 		addChild(this.classQuestText_);
 	}
@@ -214,7 +214,7 @@ public class ClassToolTip extends ToolTip
 			{
 				this.nextClassQuest_.setStringBuilder(new LineBuilder().setParams("Earn 20 Fame with {typeToDisplay} to unlock the first star", {"typeToDisplay": getDisplayId(this._playerXML)}));
 			}
-			this.nextClassQuest_.filters = [new DropShadowFilter(0, 0, 0)];
+			this.nextClassQuest_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 			waiter.push(this.nextClassQuest_.textChanged);
 			addChild(this.nextClassQuest_);
 		}
@@ -323,7 +323,7 @@ public class ClassToolTip extends ToolTip
 		this.classUnlockText_ = new TextFieldDisplayConcrete().setSize(13).setColor(0xFFFFFF);
 		this.classUnlockText_.setBold(true);
 		this.classUnlockText_.setStringBuilder(new LineBuilder().setParams("Class Unlocks"));
-		this.classUnlockText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.classUnlockText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		waiter.push(this.classUnlockText_.textChanged);
 		this.classUnlockText_.visible = false;
 		addChild(this.classUnlockText_);
@@ -377,7 +377,7 @@ public class ClassToolTip extends ToolTip
 		var _local_4:int;
 		this.toUnlockText_ = new TextFieldDisplayConcrete().setSize(13).setColor(0xB3B3B3).setTextWidth(174).setBold(true);
 		this.toUnlockText_.setStringBuilder(new LineBuilder().setParams(TextKey.TO_UNLOCK));
-		this.toUnlockText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.toUnlockText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		waiter.push(this.toUnlockText_.textChanged);
 		addChild(this.toUnlockText_);
 		this.unlockText_ = new TextFieldDisplayConcrete().setSize(13).setColor(16549442).setTextWidth(174).setWordWrap(false).setMultiLine(true);
@@ -394,7 +394,7 @@ public class ClassToolTip extends ToolTip
 			}
 		}
 		this.unlockText_.setStringBuilder(_local_1);
-		this.unlockText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.unlockText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		waiter.push(this.unlockText_.textChanged);
 		addChild(this.unlockText_);
 	}

@@ -8,6 +8,7 @@ import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.objects.ObjectProperties;
 import com.company.assembleegameclient.objects.Portal;
+import com.company.assembleegameclient.ui.options.Options;
 import com.company.util.KeyCodes;
 import com.company.util.MoreDateUtil;
 
@@ -18,24 +19,20 @@ import flash.net.SharedObject;
 import flash.system.Capabilities;
 import flash.utils.Dictionary;
 
+import zfn.xinput.ControllerHandler;
+
 public class Parameters
 {
-	// EditBoard.as
+	// Parameters.as
 	// 1113 - 117 = 996 files checked
 	// Add saving security questions to text file
-	// Instant DEFAULT_FILTER's
-	// Check MapEditor.as
-	// Delete analytic service || monitors
 	// Update from X28.0.6 to X29.0.1
-	// Check StatusBar.as
-	// Use AIR to build with SoundCustom
-	// QuestArrow need to be fixed
-	// Create good /con
 	// Add custom messages
 	// Add reconnects keys
 	// Check teleport cooldown
 	// Fix typo || clean code
 	// Finish fullscreen
+	// Fix QuestHealthBar
 	public static const PORT:int = 2050;
 	public static const ALLOW_SCREENSHOT_MODE:Boolean = false;
 	public static const USE_NEW_FRIENDS_UI:Boolean = true;
@@ -61,6 +58,7 @@ public class Parameters
 	public static var screenShotMode_:Boolean = false;
 	public static var screenShotSlimMode_:Boolean = false;
 	public static var sendLogin_:Boolean = true;
+	public static const REALM_GAMEID:int = 0;
 	public static const TUTORIAL_GAMEID:int = -1;
 	public static const NEXUS_GAMEID:int = -2;
 	public static const RANDOM_REALM_GAMEID:int = -3;
@@ -82,7 +80,7 @@ public class Parameters
 	public static var fameBotPortalId:int;
 	public static var fameBotPortal:Portal;
 	public static var fameBotPortalPoint:Point;
-	public static var ssmode:Boolean = false
+	public static var ssmode:Boolean = false;
 	public static var ignoringSecurityQuestions:Boolean = false;
 	public static var Cache_CHARLIST_valid:Boolean = false;
 	public static var Cache_CHARLIST_data:String;
@@ -156,6 +154,18 @@ public class Parameters
 	public static var forceCharId:int = -1;
 	public static var ignoredShotCount:int = 0;
 	public static var statsChar:String = "◘";
+	public static var timerPhaseTimes:Dictionary = new Dictionary();
+	public static var timerPhaseNames:Dictionary = new Dictionary();
+
+	public static function setTimerPhases():void
+	{
+		timerPhaseTimes['{"key":"server.oryx_closed_realm"}'] = 120000;
+		timerPhaseTimes['{"key":"server.oryx_minions_failed"}'] = 12000;
+		timerPhaseTimes["DIE! DIE! DIE!!!"] = 23000;
+		timerPhaseNames['{"key":"server.oryx_closed_realm"}'] = "Realm Closed";
+		timerPhaseNames['{"key":"server.oryx_minions_failed"}'] = "Oryx Shake";
+		timerPhaseNames["DIE! DIE! DIE!!!"] = "Vulnerable";
+	}
 
 	public static function setAutolootDesireables():void
 	{
@@ -626,7 +636,40 @@ public class Parameters
 			data_ = {};
 		}
 		setDefaults();
+		setIgnores();
+		Options.calculateIgnoreBitmask();
+		setTimerPhases();
+		setAutolootDesireables();
 		save();
+	}
+
+	public static function setIgnores():void
+	{
+		var _local_3:ObjectProperties;
+		for each (var _local_1:int in Parameters.data_.AAIgnore)
+		{
+			if (_local_1 in ObjectLibrary.propsLibrary_)
+			{
+				_local_3 = ObjectLibrary.propsLibrary_[_local_1];
+				_local_3.ignored = true;
+			}
+			if (_local_1 in ObjectLibrary.xmlLibrary_)
+			{
+				ObjectLibrary.xmlLibrary_[_local_1].props_.ignored = true;
+			}
+		}
+		for each (var _local_2:int in Parameters.data_.AAException)
+		{
+			if (_local_2 in ObjectLibrary.propsLibrary_)
+			{
+				_local_3 = ObjectLibrary.propsLibrary_[_local_2];
+				_local_3.excepted = true;
+			}
+			if (_local_2 in ObjectLibrary.xmlLibrary_)
+			{
+				ObjectLibrary.xmlLibrary_[_local_2].props_.excepted = true;
+			}
+		}
 	}
 
 	public static function save():void
@@ -748,7 +791,7 @@ public class Parameters
 		setDefault("centerOnPlayer", true);
 		setDefault("preferredServer", null);
 		setDefault("bestServer", null);
-		setDefault("needsTutorial", true);
+		setDefault("needsTutorial", false);
 		setDefault("needsRandomRealm", true);
 		setDefault("cameraAngle", 0);
 		setDefault("defaultCameraAngle", 0);
@@ -869,28 +912,26 @@ public class Parameters
 		setDefault("spamFilter", spamFilter);
 		setDefault("AutoLootOn", false);
 		setDefault("AutoHealPercentage", 99);
-		setDefault("AAOn", true);
+		setDefault("AAOn", false);
 		setDefault("AATargetLead", true);
 		setDefault("AABoundingDist", 4);
 		setDefault("aimMode", 2);
 		setDefault("AutoAbilityOn", false);
-		setDefault("showQuestBar", false);
 		setDefault("AutoNexus", 25);
 		setDefault("AutoHeal", 65);
 		setDefault("autoHPPercent", 40);
 		setDefault("TombCycleBoss", 3368);
 		setDefault("XYZdistance", 1);
-		setDefaultKey("XYZleftHotkey", 0);
-		setDefaultKey("XYZupHotkey", 0);
-		setDefaultKey("XYZdownHotkey", 0);
-		setDefaultKey("XYZrightHotkey", 0);
-		setDefaultKey("TombCycleKey", 0);
-		setDefaultKey("anchorTeleport", 0);
-		setDefaultKey("DrinkAllHotkey", 0);
-		setDefaultKey("SelfTPHotkey", 0);
-		setDefaultKey("syncLeadHotkey", 118);
-		setDefaultKey("syncFollowHotkey", 119);
-		setDefaultKey("FindKeys", 75);
+		setDefaultKey("XYZleftHotkey", KeyCodes.UNSET);
+		setDefaultKey("XYZupHotkey", KeyCodes.UNSET);
+		setDefaultKey("XYZdownHotkey", KeyCodes.UNSET);
+		setDefaultKey("XYZrightHotkey", KeyCodes.UNSET);
+		setDefaultKey("TombCycleKey", KeyCodes.UNSET);
+		setDefaultKey("anchorTeleport", KeyCodes.UNSET);
+		setDefaultKey("DrinkAllHotkey", KeyCodes.UNSET);
+		setDefaultKey("SelfTPHotkey", KeyCodes.UNSET);
+		setDefaultKey("syncLeadHotkey", KeyCodes.UNSET);
+		setDefaultKey("syncFollowHotkey", KeyCodes.UNSET);
 		setDefault("disableNexus", false);
 		setDefault("AutoResponder", false);
 		setDefault("FocusFPS", false);
@@ -910,29 +951,28 @@ public class Parameters
 		setDefault("alphaOnOthers", false);
 		setDefault("alphaMan", 0.4);
 		setDefault("lootPreview", true);
-		setDefault("showQuestBar", false);
-		setDefaultKey("tradeNearestPlayerKey", 0);
-		setDefaultKey("LowCPUModeHotKey", 0);
-		setDefaultKey("Cam45DegInc", 0);
-		setDefaultKey("Cam45DegDec", 0);
-		setDefaultKey("QuestTeleport", 0);
-		setDefaultKey("ReconRealm", 97);
-		setDefaultKey("RandomRealm", 101);
-		setDefaultKey("ReconVault", 99);
-		setDefaultKey("ReconDaily", 100);
-		setDefaultKey("PassesCoverHotkey", 0);
-		setDefaultKey("AAHotkey", 0);
-		setDefaultKey("AAModeHotkey", 0);
-		setDefaultKey("AutoAbilityHotkey", 0);
-		setDefaultKey("AutoLootHotkey", 0);
+		setDefaultKey("tradeNearestPlayerKey", KeyCodes.UNSET);
+		setDefaultKey("LowCPUModeHotKey", KeyCodes.UNSET);
+		setDefaultKey("Cam45DegInc", KeyCodes.UNSET);
+		setDefaultKey("Cam45DegDec", KeyCodes.UNSET);
+		setDefaultKey("QuestTeleport", KeyCodes.UNSET);
+		setDefaultKey("ReconRealm", KeyCodes.P);
+		setDefaultKey("RandomRealm", KeyCodes.LEFTBRACKET);
+		setDefaultKey("ReconVault", KeyCodes.RIGHTBRACKET);
+		setDefaultKey("ReconDaily", KeyCodes.UNSET);
+		setDefaultKey("PassesCoverHotkey", KeyCodes.UNSET);
+		setDefaultKey("AAHotkey", KeyCodes.UNSET);
+		setDefaultKey("AAModeHotkey", KeyCodes.UNSET);
+		setDefaultKey("AutoAbilityHotkey", KeyCodes.UNSET);
+		setDefaultKey("AutoLootHotkey", KeyCodes.UNSET);
 		setDefault("requestHealPercent", 55);
 		setDefault("damageIgnored", false);
 		setDefault("AntiSpookiBoiDecoi", false);
 		setDefault("ignoreIce", false);
-		setDefaultKey("TextPause", 113);
-		setDefaultKey("TextThessal", 114);
-		setDefaultKey("TextDraconis", 115);
-		setDefaultKey("TextCem", 112);
+		setDefaultKey("TextCem", KeyCodes.F1);
+		setDefaultKey("TextPause", KeyCodes.F2);
+		setDefaultKey("TextThessal", KeyCodes.F3);
+		setDefaultKey("TextDraconis", KeyCodes.F4);
 		setDefault("AAException", DefaultAAException);
 		setDefault("AAIgnore", DefaultAAIgnore);
 		setDefault("passThroughInvuln", false);
@@ -947,9 +987,9 @@ public class Parameters
 		setDefault("skullHPThreshold", 800);
 		setDefault("skullTargets", 5);
 		setDefault("liteMonitor", false);
-		setDefaultKey("TogglePlayerFollow", 120);
-		setDefaultKey("resetClientHP", 0);
-		setDefaultKey("famebotToggleHotkey", 0);
+		setDefaultKey("TogglePlayerFollow", KeyCodes.F9);
+		setDefaultKey("resetClientHP", KeyCodes.UNSET);
+		setDefaultKey("famebotToggleHotkey", KeyCodes.UNSET);
 		setDefault("addMoveRecPoint", false);
 		setDefault("trainOffset", 500);
 		setDefault("densityThreshold", 625);
@@ -961,6 +1001,7 @@ public class Parameters
 		setDefault("skipPopups", false);
 		setDefault("autoClaimCalendar", true);
 		setDefault("TradeDelay", true);
+		setDefault("traceMessage", false);
 		setDefault("showHPBarOnAlly", true);
 		setDefault("showEXPFameOnAlly", true);
 		setDefault("showClientStat", false);
@@ -994,21 +1035,22 @@ public class Parameters
 		setDefault("evenLowerGraphics", false);
 		setDefault("showCHbar", true);
 		setDefault("rightClickOption", 0);
-		setDefaultKey("sskey", 8);
+		setDefaultKey("sskey", KeyCodes.DELETE);
 		setDefault("dynamicHPcolor", true);
 		setDefault("keyList", false);
 		setDefault("uiTextSize", 15);
 		setDefault("mobNotifier", true);
 		setDefault("showMobInfo", false);
+		setDefault("questHUD", true);
 		setDefault("aaDistance", 1);
 		setDefault("hideLowCPUModeChat", false);
 		setDefault("fameOryx", false);
 		setDefault("tiltCam", false);
 		setDefault("showBG", true);
 		setDefault("BossPriority", true);
-		setDefaultKey("sayCustom1", 0);
-		setDefaultKey("sayCustom2", 0);
-		setDefaultKey("sayCustom3", 0);
+		setDefaultKey("sayCustom1", KeyCodes.UNSET);
+		setDefaultKey("sayCustom2", KeyCodes.UNSET);
+		setDefaultKey("sayCustom3", KeyCodes.UNSET);
 		setDefault("customMessage1", "We are impervious to non-mystic attacks!");
 		setDefault("customMessage2", "Forget this... run for it!");
 		setDefault("customMessage3", "Engaging Super-Mode!!!");
@@ -1051,11 +1093,11 @@ public class Parameters
 		setDefault("customVolume", 1);
 		setDefault("aimAtQuest", 0);
 		setDefault("followIntoPortals", false);
-		setDefaultControllerInput("ctrlEnterPortal", 4);
-		setDefaultControllerInput("ctrlTeleQuest", 7);
-		setDefaultControllerInput("ctrlNexus", 5);
-		setDefaultControllerInput("ctrlAbility", 6);
-		setDefaultControllerInput("ctrlItemMenu", 14);
+		setDefaultControllerInput("ctrlEnterPortal", ControllerHandler.A_num_4);
+		setDefaultControllerInput("ctrlTeleQuest", ControllerHandler.Y_num_7);
+		setDefaultControllerInput("ctrlNexus", ControllerHandler.B_num_5);
+		setDefaultControllerInput("ctrlAbility", ControllerHandler.X_num_6);
+		setDefaultControllerInput("ctrlItemMenu", ControllerHandler.LSTICK_CLICK_num_14);
 		setDefault("allowController", true);
 		setDefault("useControllerNumber", 0);
 		setDefault("selectedItemColor", 0);

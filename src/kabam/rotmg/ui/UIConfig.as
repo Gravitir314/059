@@ -275,7 +275,7 @@ public class UIConfig implements IConfig
 		this.setupKeyUI();
 		this.mapNoServersDialogFactory();
 		this.setupCharacterWindow();
-		this.startup.addSignal(ShowLoadingUISignal, -1);
+		this.startup.addSignal(ShowLoadingUISignal);
 		this.startup.addTask(LoadAccountTask);
 		this.startup.addTask(GetCharListTask);
 		this.startup.addTask(FetchPlayerCalendarTask);

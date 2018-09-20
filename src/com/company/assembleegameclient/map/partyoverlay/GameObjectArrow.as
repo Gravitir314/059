@@ -4,6 +4,7 @@ package com.company.assembleegameclient.map.partyoverlay
 {
 import com.company.assembleegameclient.map.Camera;
 import com.company.assembleegameclient.objects.GameObject;
+import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.menu.Menu;
 import com.company.assembleegameclient.ui.tooltip.ToolTip;
 import com.company.util.RectangleUtil;
@@ -13,6 +14,7 @@ import flash.display.DisplayObjectContainer;
 import flash.display.Graphics;
 import flash.display.Shape;
 import flash.display.Sprite;
+import flash.display.StageScaleMode;
 import flash.events.MouseEvent;
 import flash.filters.DropShadowFilter;
 import flash.geom.Point;
@@ -129,6 +131,41 @@ public class GameObjectArrow extends Sprite
 		this.extraGOs_.push(_arg_1);
 	}
 
+	public function correctQuestNote(_arg_1:Rectangle):Rectangle
+	{
+		var _local_2:Rectangle = _arg_1.clone();
+		if (Parameters.ssmode)
+		{
+			this.scaleX = 1;
+			this.scaleY = 1;
+		}
+		else
+		{
+			if (stage.scaleMode == StageScaleMode.NO_SCALE)
+			{
+				if (Parameters.data_.uiscale)
+				{
+					var _local_3:* = ((((stage.stageWidth < stage.stageHeight) ? stage.stageWidth : stage.stageHeight) / Parameters.data_.mscale) / 600);
+					this.scaleX = _local_3;
+					this.scaleY = _local_3;
+				}
+				else
+				{
+					this.scaleX = 1;
+					this.scaleY = 1;
+				}
+				_local_2.right = (_local_2.right - ((((800 - this.go_.map_.gs_.hudView.x) * stage.stageWidth) / Parameters.data_.mscale) / 800));
+			}
+			else
+			{
+				_local_3 = 1;
+				this.scaleY = _local_3;
+				this.scaleX = _local_3;
+			}
+		}
+		return (_local_2);
+	}
+
 	public function draw(_arg_1:int, _arg_2:Camera):void
 	{
 		var _local_3:Rectangle;
@@ -140,10 +177,10 @@ public class GameObjectArrow extends Sprite
 			return;
 		}
 		this.go_.computeSortVal(_arg_2);
-		_local_3 = _arg_2.clipRect_;
+		_local_3 = this.correctQuestNote(_arg_2.clipRect_);
 		_local_4 = this.go_.posS_[0];
 		_local_5 = this.go_.posS_[1];
-		if (!RectangleUtil.lineSegmentIntersectXY(_arg_2.clipRect_, 0, 0, _local_4, _local_5, this.tempPoint))
+		if (!RectangleUtil.lineSegmentIntersectXY(_local_3, 0, 0, _local_4, _local_5, this.tempPoint))
 		{
 			this.go_ = null;
 			visible = false;

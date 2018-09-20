@@ -9,8 +9,6 @@ import kabam.rotmg.account.core.signals.SendConfirmEmailSignal;
 import kabam.rotmg.account.core.signals.UpdateAccountInfoSignal;
 import kabam.rotmg.appengine.api.AppEngineClient;
 import kabam.rotmg.core.StaticInjectorContext;
-import kabam.rotmg.core.service.TrackingData;
-import kabam.rotmg.core.signals.TrackEventSignal;
 import kabam.rotmg.dialogs.control.CloseDialogsSignal;
 import kabam.rotmg.dialogs.control.OpenDialogSignal;
 
@@ -23,8 +21,6 @@ public class WebAccountDetailMediator extends Mediator
 	public var view:WebAccountDetailDialog;
 	[Inject]
 	public var account:Account;
-	[Inject]
-	public var track:TrackEventSignal;
 	[Inject]
 	public var verify:SendConfirmEmailSignal;
 	[Inject]
@@ -59,19 +55,10 @@ public class WebAccountDetailMediator extends Mediator
 
 	private function onLogout():void
 	{
-		this.trackLoggedOut();
 		this.account.clear();
 		Parameters.Cache_CHARLIST_valid = false;
 		this.updateAccount.dispatch();
 		this.openDialog.dispatch(new WebLoginDialog());
-	}
-
-	private function trackLoggedOut():void
-	{
-		var _local_1:TrackingData = new TrackingData();
-		_local_1.category = "account";
-		_local_1.action = "loggedOut";
-		//this.track.dispatch(_local_1); TODO need this?
 	}
 
 	private function onDone():void
@@ -88,27 +75,10 @@ public class WebAccountDetailMediator extends Mediator
 
 	private function onComplete(_arg_1:Boolean, _arg_2:*):void
 	{
-		if (_arg_1)
-		{
-			this.onSent();
-		}
-		else
+		if (!_arg_1)
 		{
 			this.onError(_arg_2);
 		}
-	}
-
-	private function onSent():void
-	{
-		//this.trackEmailSent(); TODO need this?
-	}
-
-	private function trackEmailSent():void
-	{
-		var _local_1:TrackingData = new TrackingData();
-		_local_1.category = "account";
-		_local_1.action = "verifyEmailSent";
-		//this.track.dispatch(_local_1); TODO need this?
 	}
 
 	private function onError(_arg_1:String):void

@@ -3,8 +3,7 @@
 package kabam.rotmg.account.web.view
 {
 import com.company.ui.BaseSimpleText;
-
-import flash.filters.DropShadowFilter;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.LineBuilder;
@@ -23,7 +22,7 @@ public class LabeledField extends FormField
 		this.nameText_ = new TextFieldDisplayConcrete().setSize(18).setColor(TEXT_COLOR);
 		this.nameText_.setBold(true);
 		this.nameText_.setStringBuilder(new LineBuilder().setParams(_arg_1));
-		this.nameText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.nameText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addChild(this.nameText_);
 		this.inputText_ = new BaseSimpleText(20, TEXT_COLOR, true, _arg_3, _arg_4);
 		this.inputText_.y = 30;

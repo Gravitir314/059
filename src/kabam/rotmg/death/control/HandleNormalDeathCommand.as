@@ -2,7 +2,6 @@
 
 package kabam.rotmg.death.control
 {
-import com.company.assembleegameclient.appengine.SavedCharacter;
 import com.company.assembleegameclient.parameters.Parameters;
 
 import kabam.lib.tasks.DispatchSignalTask;
@@ -10,8 +9,6 @@ import kabam.lib.tasks.TaskMonitor;
 import kabam.lib.tasks.TaskSequence;
 import kabam.rotmg.account.core.services.GetCharListTask;
 import kabam.rotmg.core.model.PlayerModel;
-import kabam.rotmg.core.service.TrackingData;
-import kabam.rotmg.core.signals.TrackEventSignal;
 import kabam.rotmg.fame.control.ShowFameViewSignal;
 import kabam.rotmg.fame.model.FameVO;
 import kabam.rotmg.fame.model.SimpleFameVO;
@@ -25,8 +22,6 @@ public class HandleNormalDeathCommand
 	[Inject]
 	public var player:PlayerModel;
 	[Inject]
-	public var track:TrackEventSignal;
-	[Inject]
 	public var task:GetCharListTask;
 	[Inject]
 	public var showFame:ShowFameViewSignal;
@@ -38,20 +33,8 @@ public class HandleNormalDeathCommand
 	public function execute():void
 	{
 		this.fameVO = new SimpleFameVO(this.death.accountId_, this.death.charId_);
-		this.trackDeath();
 		this.updateParameters();
 		this.gotoFameView();
-	}
-
-	private function trackDeath():void
-	{
-		var _local_1:SavedCharacter = this.player.getCharById(this.death.charId_);
-		var _local_2:int = ((_local_1) ? _local_1.level() : 0);
-		var _local_3:TrackingData = new TrackingData();
-		_local_3.category = "killedBy";
-		_local_3.action = this.death.killedBy_;
-		_local_3.value = _local_2;
-		//this.track.dispatch(_local_3); TODO need this?
 	}
 
 	private function updateParameters():void

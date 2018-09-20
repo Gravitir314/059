@@ -2,10 +2,11 @@
 
 package kabam.rotmg.mysterybox.components
 {
+import com.greensock.plugins.DropShadowFilterPlugin;
+
 import flash.display.DisplayObject;
 import flash.display.Sprite;
 import flash.events.Event;
-import flash.filters.DropShadowFilter;
 import flash.text.TextFieldAutoSize;
 import flash.text.TextFormatAlign;
 
@@ -75,7 +76,7 @@ public class MysteryBoxSelectModal extends Sprite
 		_local_4.setMultiLine(true);
 		_local_4.setAutoSize(TextFieldAutoSize.CENTER);
 		_local_4.setHorizontalAlign(TextFormatAlign.CENTER);
-		_local_4.filters = [new DropShadowFilter(0, 0, 0)];
+		_local_4.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		_local_4.x = _arg_2;
 		_local_4.y = _arg_3;
 		return (_local_4);

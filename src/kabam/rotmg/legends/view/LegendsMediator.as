@@ -2,7 +2,6 @@
 
 package kabam.rotmg.legends.view
 {
-import kabam.rotmg.core.signals.TrackPageViewSignal;
 import kabam.rotmg.death.model.DeathModel;
 import kabam.rotmg.fame.control.ShowFameViewSignal;
 import kabam.rotmg.legends.control.ExitLegendsSignal;
@@ -31,13 +30,10 @@ public class LegendsMediator extends Mediator
 	public var update:FameListUpdateSignal;
 	[Inject]
 	public var exit:ExitLegendsSignal;
-	[Inject]
-	public var track:TrackPageViewSignal;
 
 
 	override public function initialize():void
 	{
-		this.track.dispatch("/legendsScreen");
 		this.view.close.add(this.onClose);
 		this.view.timespanChanged.add(this.onTimespanChanged);
 		this.view.showDetail.add(this.onShowCharacter);

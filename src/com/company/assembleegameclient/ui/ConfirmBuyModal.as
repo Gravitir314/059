@@ -45,7 +45,7 @@ public class ConfirmBuyModal extends Sprite
 	public var open:Boolean;
 	public var buttonWidth:int;
 
-	public function ConfirmBuyModal(_arg_1:Signal, _arg_2:SellableObject, _arg_3:Number, _arg_4:int):void
+	public function ConfirmBuyModal(_arg_1:Signal, _arg_2:SellableObject, _arg_3:Number, _arg_4:int)
 	{
 		var _local_6:TextFieldConcreteBuilder;
 		var _local_8:ItemWithTooltip;

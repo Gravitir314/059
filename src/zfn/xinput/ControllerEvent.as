@@ -2,9 +2,9 @@
 
 package zfn.xinput
 {
-    import flash.events.Event;
+import flash.events.Event;
 
-    public class ControllerEvent extends Event 
+public class ControllerEvent extends Event
     {
 
         public static const AXIS_MOVE:String = "axisMove";

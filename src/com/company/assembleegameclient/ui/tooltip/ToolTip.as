@@ -2,6 +2,9 @@
 
 package com.company.assembleegameclient.ui.tooltip
 {
+import com.company.assembleegameclient.map.partyoverlay.PlayerArrow;
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.ui.options.Options;
 import com.company.util.GraphicsUtil;
 
 import flash.display.CapsStyle;
@@ -17,6 +20,7 @@ import flash.events.Event;
 import flash.events.MouseEvent;
 import flash.filters.DropShadowFilter;
 
+import kabam.rotmg.tooltips.view.TooltipsView;
 import kabam.rotmg.ui.view.SignalWaiter;
 
 public class ToolTip extends Sprite
@@ -133,29 +137,58 @@ public class ToolTip extends Sprite
 
 	protected function position():void
 	{
+		var _local_3:Number;
+		var _local_1:Number;
+		var _local_2:Number = (800 / stage.stageWidth);
+		var _local_4:Number = (600 / stage.stageHeight);
+		if ((this.parent is Options))
+		{
+			_local_3 = ((((stage.mouseX + (stage.stageWidth / 2)) - 400) / stage.stageWidth) * 800);
+			_local_1 = ((((stage.mouseY + (stage.stageHeight / 2)) - 300) / stage.stageHeight) * 600);
+		}
+		else
+		{
+			_local_3 = (((stage.stageWidth - 800) / 2) + stage.mouseX);
+			_local_1 = (((stage.stageHeight - 600) / 2) + stage.mouseY);
+			if (((this.parent is TooltipsView) || ((this is PlayerGroupToolTip) && (!(this.parent is PlayerArrow)))))
+			{
+				if (((!(Parameters.ssmode)) && (Parameters.data_.uiscale)))
+				{
+					this.parent.scaleX = (_local_2 / _local_4);
+					this.parent.scaleY = 1;
+					_local_3 = (_local_3 * _local_4);
+					_local_1 = (_local_1 * _local_4);
+				}
+				else
+				{
+					this.parent.scaleX = _local_2;
+					this.parent.scaleY = _local_4;
+				}
+			}
+		}
 		if (stage == null)
 		{
 			return;
 		}
-		if ((((!(this.forcePositionLeft_)) && (stage.mouseX < (stage.stageWidth / 2))) || (this.forcePositionRight_)))
+		if (((stage.mouseX + (0.5 * stage.stageWidth)) - 400) < (stage.stageWidth / 2))
 		{
-			x = (stage.mouseX + 12);
+			x = (_local_3 + 12);
 		}
 		else
 		{
-			x = ((stage.mouseX - width) - 1);
+			x = ((_local_3 - width) - 1);
 		}
 		if (x < 12)
 		{
 			x = 12;
 		}
-		if ((((!(this.forcePositionLeft_)) && (stage.mouseY < (stage.stageHeight / 3))) || (this.forcePositionRight_)))
+		if (((stage.mouseY + (0.5 * stage.stageHeight)) - 300) < (stage.stageHeight / 3))
 		{
-			y = (stage.mouseY + 12);
+			y = (_local_1 + 12);
 		}
 		else
 		{
-			y = ((stage.mouseY - height) - 1);
+			y = ((_local_1 - height) - 1);
 		}
 		if (y < 12)
 		{

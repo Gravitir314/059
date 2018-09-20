@@ -21,8 +21,6 @@ import flash.events.MouseEvent;
 import flash.filters.DropShadowFilter;
 import flash.text.TextFieldAutoSize;
 
-import kabam.rotmg.core.StaticInjectorContext;
-import kabam.rotmg.core.service.GoogleAnalytics;
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 import kabam.rotmg.text.view.stringBuilder.StringBuilder;
@@ -38,7 +36,6 @@ public class StaticDialog extends Sprite
 
 	public var textText_:TextFieldDisplayConcrete;
 	public var titleText_:TextFieldDisplayConcrete = null;
-	public var analyticsPageName_:String = null;
 	public var offsetX:Number = 0;
 	public var offsetY:Number = 0;
 	public var stageProxy:StageProxy;
@@ -61,13 +58,12 @@ public class StaticDialog extends Sprite
 	protected const graphicsData_:Vector.<IGraphicsData> = new <IGraphicsData>[lineStyle_, backgroundFill_, path_, GraphicsUtil.END_FILL, GraphicsUtil.END_STROKE];
 	protected var uiWaiter:SignalWaiter = new SignalWaiter();
 
-	public function StaticDialog(_arg_1:String, _arg_2:String, _arg_3:String, _arg_4:String, _arg_5:String)
+	public function StaticDialog(_arg_1:String, _arg_2:String, _arg_3:String, _arg_4:String, _arg_5:String) // TODO delete _arg_5(analytic)
 	{
 		this.leftButtonKey = _arg_3;
 		this.rightButtonKey = _arg_4;
 		super();
 		this.stageProxy = new StageProxy(this);
-		this.analyticsPageName_ = _arg_5;
 		this._makeUIAndAdd(_arg_2, _arg_1);
 		this.makeUIAndAdd();
 		this.uiWaiter.complete.addOnce(this.onComplete);
@@ -167,26 +163,6 @@ public class StaticDialog extends Sprite
 	{
 		this.box_.x = ((this.offsetX + (this.stageProxy.getStageWidth() / 2)) - (this.box_.width / 2));
 		this.box_.y = ((this.offsetY + (this.stageProxy.getStageHeight() / 2)) - (this.getBoxHeight() / 2));
-		if (this.analyticsPageName_ != null)
-		{
-			this.tryAnalytics();
-		}
-	}
-
-	private function tryAnalytics():void
-	{
-		var _local_1:GoogleAnalytics;
-		try
-		{
-			_local_1 = StaticInjectorContext.getInjector().getInstance(GoogleAnalytics);
-			if (_local_1)
-			{
-				_local_1.trackPageView(this.analyticsPageName_);
-			}
-		}
-		catch (error:Error)
-		{
-		}
 	}
 
 	private function draw():void

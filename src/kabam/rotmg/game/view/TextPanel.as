@@ -4,8 +4,8 @@ package kabam.rotmg.game.view
 {
 import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.ui.panels.Panel;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
-import flash.filters.DropShadowFilter;
 import flash.text.TextFieldAutoSize;
 
 import kabam.rotmg.text.model.TextKey;
@@ -38,7 +38,7 @@ public class TextPanel extends Panel
 		this.textField = new TextFieldDisplayConcrete().setSize(16).setColor(0xFFFFFF);
 		this.textField.setBold(true);
 		this.textField.setStringBuilder(new LineBuilder().setParams(TextKey.TEXTPANEL_GIFTCHESTISEMPTY));
-		this.textField.filters = [new DropShadowFilter(0, 0, 0)];
+		this.textField.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addChild(this.textField);
 	}
 

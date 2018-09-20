@@ -7,7 +7,6 @@ import com.company.assembleegameclient.util.TimeUtil;
 import flash.display.DisplayObject;
 import flash.events.Event;
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 
 import kabam.rotmg.text.model.TextKey;
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
@@ -36,7 +35,7 @@ public class PackageButton extends BasePackageButton
 	{
 		var _local_1:TextFieldDisplayConcrete;
 		_local_1 = new TextFieldDisplayConcrete().setSize(16).setColor(0xFFFFFF);
-		_local_1.filters = [new DropShadowFilter(0, 0, 0)];
+		_local_1.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		return (_local_1);
 	}
 

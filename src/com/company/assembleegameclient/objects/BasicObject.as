@@ -5,9 +5,6 @@ package com.company.assembleegameclient.objects
 import com.company.assembleegameclient.map.Camera;
 import com.company.assembleegameclient.map.Map;
 import com.company.assembleegameclient.map.Square;
-import com.company.assembleegameclient.util.BloodComposition;
-
-import flash.display.BitmapData;
 
 import flash.display.IGraphicsData;
 

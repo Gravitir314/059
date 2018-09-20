@@ -8,12 +8,12 @@ import com.company.assembleegameclient.util.TextureRedrawer;
 import com.company.assembleegameclient.util.offer.Offer;
 import com.company.util.AssetLibrary;
 import com.company.util.BitmapUtil;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Bitmap;
 import flash.display.BitmapData;
 import flash.display.Sprite;
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 
 import kabam.rotmg.account.core.model.MoneyConfig;
 import kabam.rotmg.text.model.TextKey;
@@ -123,7 +123,7 @@ public class OfferRadioButton extends Sprite implements Selectable
 	{
 		this.goldText = new TextFieldDisplayConcrete().setSize(18).setColor(0xFFFFFF).setBold(true);
 		this.goldText.setStringBuilder(new LineBuilder().setParams(TextKey.PAYMENTS_GOLD_AMOUNT, {"amount": this.offer.realmGold_}));
-		this.goldText.filters = [new DropShadowFilter(0, 0, 0)];
+		this.goldText.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.waiter.push(this.goldText.textChanged);
 		this.container.addChild(this.goldText);
 	}
@@ -132,7 +132,7 @@ public class OfferRadioButton extends Sprite implements Selectable
 	{
 		this.costText = new TextFieldDisplayConcrete().setSize(18).setColor(0xFFFFFF).setBold(true);
 		this.costText.setStringBuilder(this.config.parseOfferPrice(this.offer));
-		this.costText.filters = [new DropShadowFilter(0, 0, 0)];
+		this.costText.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.waiter.push(this.costText.textChanged);
 		this.container.addChild(this.costText);
 	}
@@ -145,7 +145,7 @@ public class OfferRadioButton extends Sprite implements Selectable
 		}
 		this.bonusText = new TextFieldDisplayConcrete().setSize(18).setColor(0xFFFFFF).setBold(true);
 		this.bonusText.setStringBuilder(new LineBuilder().setParams(TextKey.PAYMENTS_GOLD_BONUS, {"percent": this.offer.bonus}));
-		this.bonusText.filters = [new DropShadowFilter(0, 0, 0)];
+		this.bonusText.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.waiter.push(this.bonusText.textChanged);
 		this.container.addChild(this.bonusText);
 	}
@@ -162,7 +162,7 @@ public class OfferRadioButton extends Sprite implements Selectable
 	{
 		this.taglineText = new TextFieldDisplayConcrete().setSize(18).setColor(8891485);
 		this.taglineText.setStringBuilder(new LineBuilder().setParams(this.offer.tagline));
-		this.taglineText.filters = [new DropShadowFilter(0, 0, 0)];
+		this.taglineText.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.waiter.push(this.taglineText.textChanged);
 		this.container.addChild(this.taglineText);
 	}

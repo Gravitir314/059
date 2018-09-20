@@ -19,7 +19,6 @@ import zfn.sound.SoundCustom;
 
 public class SoundEffectLibrary
 {
-
 	private static var urlBase:String;
 	private static const URL_PATTERN:String = "{URLBASE}/sfx/{NAME}.mp3";
 	public static var nameMap_:Dictionary = new Dictionary();
@@ -33,6 +32,7 @@ public class SoundEffectLibrary
 
 	public static function makeSound(_arg_1:String):Sound
 	{
+		//return (SoundAssets.grab(_arg_1)); TODO need this?
 		var _local_2:Sound = new Sound();
 		_local_2.addEventListener(IOErrorEvent.IO_ERROR, onIOError);
 		_local_2.load(makeSoundRequest(_arg_1));
@@ -84,6 +84,15 @@ public class SoundEffectLibrary
 		catch (error:Error)
 		{
 		}
+	}
+
+	public static function playCustom(_arg_1:Sound, _arg_2:String, _arg_3:Boolean):void
+	{
+		var volume:Number = Parameters.data_.SFXVolume;
+		var _local_6:SoundTransform = new SoundTransform(volume);
+		var channel:SoundChannel = _arg_1.play(0, 0, _local_6);
+		channel.addEventListener(Event.SOUND_COMPLETE, onSoundComplete, false, 0, true);
+		activeSfxList_[channel] = volume;
 	}
 
 	private static function onSoundComplete(_arg_1:Event):void

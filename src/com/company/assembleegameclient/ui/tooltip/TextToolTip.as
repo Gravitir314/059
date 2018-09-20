@@ -2,7 +2,8 @@
 
 package com.company.assembleegameclient.ui.tooltip
 {
-import flash.filters.DropShadowFilter;
+import com.greensock.plugins.DropShadowFilterPlugin;
+
 import flash.text.TextFieldAutoSize;
 
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
@@ -40,7 +41,7 @@ public class TextToolTip extends ToolTip
 		_arg_1.setAutoSize(TextFieldAutoSize.LEFT);
 		_arg_1.setWordWrap(true).setTextWidth(_arg_2);
 		_arg_1.setStringBuilder(new LineBuilder().setParams(_arg_3, _arg_4));
-		_arg_1.filters = [new DropShadowFilter(0, 0, 0)];
+		_arg_1.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		waiter.push(_arg_1.textChanged);
 		addChild(_arg_1);
 	}

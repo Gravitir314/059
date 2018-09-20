@@ -2,24 +2,27 @@
 
 package zfn.screens.vault
 {
-    import flash.display.Sprite;
-    import flash.geom.Matrix;
-    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-    import flash.display.Bitmap;
-    import kabam.rotmg.text.view.BitmapTextFactory;
-    import io.decagames.rotmg.ui.labels.UILabel;
-    import kabam.rotmg.core.StaticInjectorContext;
-    import io.decagames.rotmg.ui.texture.TextureParser;
-    import flash.display.BitmapData;
-    import com.company.assembleegameclient.objects.ObjectLibrary;
-    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-    import com.company.util.PointUtil;
-    import kabam.rotmg.ui.view.components.PotionSlotView;
-    import com.company.assembleegameclient.util.TierUtil;
-    import com.company.assembleegameclient.util.FilterUtil;
-    import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.objects.ObjectLibrary;
+import com.company.assembleegameclient.parameters.Parameters;
+import com.company.assembleegameclient.util.FilterUtil;
+import com.company.assembleegameclient.util.TierUtil;
+import com.company.util.PointUtil;
 
-    public class VaultSlot extends Sprite 
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.Sprite;
+import flash.geom.Matrix;
+
+import io.decagames.rotmg.ui.labels.UILabel;
+import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+import io.decagames.rotmg.ui.texture.TextureParser;
+
+import kabam.rotmg.core.StaticInjectorContext;
+import kabam.rotmg.text.view.BitmapTextFactory;
+import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+import kabam.rotmg.ui.view.components.PotionSlotView;
+
+public class VaultSlot extends Sprite 
     {
 
         private static const IDENTITY_MATRIX:Matrix = new Matrix();

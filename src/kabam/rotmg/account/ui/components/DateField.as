@@ -3,6 +3,7 @@
 package kabam.rotmg.account.ui.components
 {
 import com.company.ui.BaseSimpleText;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.CapsStyle;
 import flash.display.JointStyle;
@@ -11,7 +12,6 @@ import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.FocusEvent;
 import flash.events.TextEvent;
-import flash.filters.DropShadowFilter;
 import flash.text.TextFieldAutoSize;
 
 import kabam.lib.util.DateValidator;
@@ -48,7 +48,7 @@ public class DateField extends Sprite
 		this.label = new TextFieldDisplayConcrete().setSize(18).setColor(0xB3B3B3);
 		this.label.setBold(true);
 		this.label.setStringBuilder(new LineBuilder().setParams(name));
-		this.label.filters = [new DropShadowFilter(0, 0, 0)];
+		this.label.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addChild(this.label);
 		this.months = new BaseSimpleText(20, TEXT_COLOR, true, 35, 30);
 		this.months.restrict = INPUT_RESTRICTION;

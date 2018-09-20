@@ -16,11 +16,9 @@ import kabam.rotmg.account.core.services.LoginTask;
 import kabam.rotmg.account.core.signals.UpdateAccountInfoSignal;
 import kabam.rotmg.account.web.model.AccountData;
 import kabam.rotmg.core.model.ScreenModel;
-import kabam.rotmg.core.service.TrackingData;
 import kabam.rotmg.core.signals.InvalidateDataSignal;
 import kabam.rotmg.core.signals.SetScreenWithValidDataSignal;
 import kabam.rotmg.core.signals.TaskErrorSignal;
-import kabam.rotmg.core.signals.TrackEventSignal;
 import kabam.rotmg.dialogs.control.CloseDialogsSignal;
 import kabam.rotmg.mysterybox.services.GetMysteryBoxesTask;
 import kabam.rotmg.packages.services.GetPackagesTask;
@@ -40,8 +38,6 @@ public class WebLoginCommand
 	public var loginError:TaskErrorSignal;
 	[Inject]
 	public var updateLogin:UpdateAccountInfoSignal;
-	[Inject]
-	public var track:TrackEventSignal;
 	[Inject]
 	public var invalidate:InvalidateDataSignal;
 	[Inject]
@@ -94,14 +90,6 @@ public class WebLoginCommand
 			_local_1 = CharacterSelectionAndNewsScreen;
 		}
 		return (new (_local_1)());
-	}
-
-	private function getTrackingData():TrackingData
-	{
-		var _local_1:TrackingData = new TrackingData();
-		_local_1.category = "account";
-		_local_1.action = "signedIn";
-		return (_local_1);
 	}
 
 

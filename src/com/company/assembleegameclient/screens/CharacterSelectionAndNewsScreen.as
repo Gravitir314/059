@@ -47,6 +47,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite
 	private var creditDisplay:CreditDisplay;
 	private var openCharactersText:TextFieldDisplayConcrete;
 	private var openGraveyardText:TextFieldDisplayConcrete;
+	private var openVaultsText:TextFieldDisplayConcrete;
 	private var newsText:TextFieldDisplayConcrete;
 	private var characterList:CharacterList;
 	private var characterListType:int = 1;
@@ -97,6 +98,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite
 			this.openCharactersText.setColor(TAB_SELECTED);
 			this.createOpenGraveyardText();
 		}
+		this.createVaultsText();
 		this.createCharacterListChar();
 		this.makeMenuOptionsBar();
 		if (!_arg_1.isNameChosen())
@@ -173,6 +175,20 @@ public class CharacterSelectionAndNewsScreen extends Sprite
 		addChild(this.characterList);
 	}
 
+	private function createCharacterListVault():void
+	{
+		this.characterListType = CharacterList.TYPE_VAULT_SELECT;
+		this.characterList = new CharacterList(this.model, CharacterList.TYPE_VAULT_SELECT);
+		this.characterList.x = this.CHARACTER_LIST_X_POS;
+		this.characterList.y = this.CHARACTER_LIST_Y_POS;
+		this.characterListHeight = this.characterList.height;
+		if (this.characterListHeight > 400)
+		{
+			this.createScrollbar();
+		}
+		addChild(this.characterList);
+	}
+
 	private function removeCharacterList():void
 	{
 		if (this.characterList != null)
@@ -205,7 +221,8 @@ public class CharacterSelectionAndNewsScreen extends Sprite
 		{
 			this.removeCharacterList();
 			this.openCharactersText.setColor(TAB_SELECTED);
-			this.openGraveyardText.setColor(TAB_UNSELECTED);
+			((this.openGraveyardText) && (this.openGraveyardText.setColor(TAB_UNSELECTED)));
+			this.openVaultsText.setColor(TAB_UNSELECTED);
 			this.createCharacterListChar();
 		}
 	}
@@ -229,7 +246,32 @@ public class CharacterSelectionAndNewsScreen extends Sprite
 			this.removeCharacterList();
 			this.openCharactersText.setColor(TAB_UNSELECTED);
 			this.openGraveyardText.setColor(TAB_SELECTED);
+			this.openVaultsText.setColor(TAB_UNSELECTED);
 			this.createCharacterListGrave();
+		}
+	}
+
+	private function createVaultsText():void
+	{
+		this.openVaultsText = new TextFieldDisplayConcrete().setSize(18).setColor(TAB_UNSELECTED);
+		this.openVaultsText.setBold(true);
+		this.openVaultsText.setStringBuilder(new LineBuilder().setParams("Vaults"));
+		this.openVaultsText.filters = [this.DROP_SHADOW];
+		this.openVaultsText.x = ((this.openGraveyardText) ? (this.openGraveyardText.x + 150) : (18 + 150));
+		this.openVaultsText.y = 79;
+		this.openVaultsText.addEventListener(MouseEvent.CLICK, this.onOpenVaults);
+		addChild(this.openVaultsText);
+	}
+
+	private function onOpenVaults(_arg_1:MouseEvent):void
+	{
+		if (this.characterListType != 3)
+		{
+			this.removeCharacterList();
+			this.openCharactersText.setColor(TAB_UNSELECTED);
+			((this.openGraveyardText) && (this.openGraveyardText.setColor(TAB_UNSELECTED)));
+			this.openVaultsText.setColor(TAB_SELECTED);
+			this.createCharacterListVault();
 		}
 	}
 

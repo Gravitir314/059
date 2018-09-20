@@ -4,10 +4,8 @@ package com.company.assembleegameclient.game
 {
 import com.company.assembleegameclient.game.events.MoneyChangedEvent;
 import com.company.assembleegameclient.map.Map;
-import com.company.assembleegameclient.objects.Character;
 import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.objects.IInteractiveObject;
-import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.objects.Pet;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.objects.Projectile;
@@ -15,7 +13,6 @@ import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.tutorial.Tutorial;
 import com.company.assembleegameclient.ui.GuildText;
 import com.company.assembleegameclient.ui.RankText;
-import com.company.assembleegameclient.ui.StatusBar;
 import com.company.assembleegameclient.ui.menu.PlayerMenu;
 import com.company.assembleegameclient.util.AssetLoader;
 import com.company.assembleegameclient.util.RandomUtil;
@@ -24,6 +21,7 @@ import com.company.util.CachingColorTransformer;
 import com.company.util.MoreColorUtil;
 import com.company.util.MoreObjectUtil;
 import com.company.util.PointUtil;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.DisplayObject;
 import flash.display.Sprite;
@@ -32,8 +30,6 @@ import flash.events.Event;
 import flash.events.MouseEvent;
 import flash.external.ExternalInterface;
 import flash.filters.ColorMatrixFilter;
-import flash.filters.DropShadowFilter;
-import flash.geom.Point;
 import flash.geom.Vector3D;
 import flash.system.System;
 import flash.utils.ByteArray;
@@ -51,7 +47,6 @@ import kabam.rotmg.constants.GeneralConstants;
 import kabam.rotmg.core.StaticInjectorContext;
 import kabam.rotmg.core.model.MapModel;
 import kabam.rotmg.core.model.PlayerModel;
-import kabam.rotmg.core.service.GoogleAnalytics;
 import kabam.rotmg.core.view.Layers;
 import kabam.rotmg.dailyLogin.signal.ShowDailyCalendarPopupSignal;
 import kabam.rotmg.dailyLogin.view.DailyLoginModal;
@@ -82,6 +77,7 @@ import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 import kabam.rotmg.ui.UIUtils;
 import kabam.rotmg.ui.view.HUDView;
+import kabam.rotmg.ui.view.QuestHealthBar;
 
 import org.osflash.signals.Signal;
 
@@ -130,12 +126,8 @@ public class GameSprite extends AGameSprite
 	private var currentPackage:DisplayObject = new Sprite();
 	private var packageY:Number;
 	public var chatPlayerMenu:PlayerMenu;
-	private var googleAnalytics:GoogleAnalytics;
 	private var specialOfferButton:SpecialOfferButton;
 
-	protected const EMPTY_FILTER:DropShadowFilter = new DropShadowFilter(0, 0, 0);
-
-	public var questBar:StatusBar;
 	private var timerCounter:TextFieldDisplayConcrete;
 	private var timerCounterStringBuilder:StaticStringBuilder;
 	private var enemyCounter:TextFieldDisplayConcrete;
@@ -145,6 +137,7 @@ public class GameSprite extends AGameSprite
 	public var packageOffer:BeginnersPackageButton;
 	private var lastUpdateInteractiveTime:int = 0;
 	private var lastCalcTime:int = int.MIN_VALUE;
+	public var questBar:QuestHealthBar;
 
 	public function GameSprite(_arg_1:Server, _arg_2:int, _arg_3:Boolean, _arg_4:int, _arg_5:int, _arg_6:ByteArray, _arg_7:PlayerModel, _arg_8:String, _arg_9:Boolean)
 	{
@@ -280,33 +273,6 @@ public class GameSprite extends AGameSprite
 		}
 	}
 
-	private function addQuestBar():void
-	{
-		this.questBar = new StatusBar(600, 15, 0xFFFFFFFF, 4284226845, "Quest!", true);
-		this.questBar.x = 0;
-		this.questBar.y = 0;
-		this.questBar.visible = false;
-		addChild(this.questBar);
-	}
-
-	private function updateQuestBar():void
-	{
-		var _local_1:GameObject = this.map.quest_.getObject(0);
-		if (_local_1 == null)
-		{
-			this.questBar.visible = false;
-			return;
-		}
-		this.questBar.visible = true;
-		if (this.questBar.quest == null || _local_1.objectId_ != this.questBar.quest.objectId_)
-		{
-			this.questBar.quest = _local_1;
-		}
-		this.questBar.setLabelText(((("(" + int(((Parameters.dmgCounter[_local_1.objectId_] / _local_1.maxHP_) * 100))) + "%) ") + ObjectLibrary.typeToDisplayId_[_local_1.objectType_]));
-		this.questBar.color_ = Character.green2red(((this.questBar.quest.hp_ * 100) / this.questBar.quest.maxHP_));
-		this.questBar.draw(_local_1.hp_, _local_1.maxHP_, 0);
-	}
-
 	private function addTimer():void
 	{
 		if (this.timerCounter == null)
@@ -317,7 +283,7 @@ public class GameSprite extends AGameSprite
 			this.timerCounter.setBold(true);
 			this.timerCounterStringBuilder = new StaticStringBuilder("0:00");
 			this.timerCounter.setStringBuilder(this.timerCounterStringBuilder);
-			this.timerCounter.filters = [EMPTY_FILTER];
+			this.timerCounter.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 			this.timerCounter.x = 3;
 			this.timerCounter.y = 180;
 			addChild(this.timerCounter);
@@ -335,7 +301,7 @@ public class GameSprite extends AGameSprite
 			this.enemyCounter.setBold(true);
 			this.enemyCounterStringBuilder = new StaticStringBuilder("0");
 			this.enemyCounter.setStringBuilder(this.enemyCounterStringBuilder);
-			this.enemyCounter.filters = [EMPTY_FILTER];
+			this.enemyCounter.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 			this.enemyCounter.x = 3;
 			this.enemyCounter.y = 160;
 			addChild(this.enemyCounter);
@@ -352,14 +318,14 @@ public class GameSprite extends AGameSprite
 			this.stats.mouseEnabled = false;
 			this.statsStringBuilder = new StaticStringBuilder("FPS -1\nLAT -1\nMEM -1");
 			this.stats.setStringBuilder(this.statsStringBuilder);
-			this.stats.filters = [EMPTY_FILTER];
+			this.stats.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 			this.stats.setBold(true);
 			this.stats.x = 5;
 			this.stats.y = 5;
 			addChild(this.stats);
 			if (this.map.player_ != null)
 			{
-				//this.gsc_.playerText(Parameters.statsChar); TODO need this?
+				this.gsc_.playerText(Parameters.statsChar);
 				this.gsc_.pingSentAt = this.lastUpdate_;
 			}
 			stage.dispatchEvent(new Event(Event.RESIZE));
@@ -377,7 +343,7 @@ public class GameSprite extends AGameSprite
 			statsFrameNumber = 0;
 			if (this.gsc_.pingSentAt == -1)
 			{
-				//this.gsc_.playerText(Parameters.statsChar); TODO need this?
+				this.gsc_.playerText(Parameters.statsChar);
 				this.gsc_.pingSentAt = _arg_1;
 			}
 			this.stats.setText(((((("FPS " + statsFPS) + "\nLAT ") + this.gsc_.pingReceivedAt) + "\nMEM ") + (1E-6 * System.totalMemoryNumber)));
@@ -444,17 +410,15 @@ public class GameSprite extends AGameSprite
 				Parameters.dailyCalendar1RunOnce = false;
 			}
 		}
-		else
-		{
-			this.addQuestBar();
-		}
 		if (mapName == "Arena")
 		{
 			this.showTimer();
 			this.showWaveCounter();
 		}
-		_local_1 = StaticInjectorContext.getInjector().getInstance(Account);
-		this.googleAnalytics = StaticInjectorContext.getInjector().getInstance(GoogleAnalytics);
+		this.questBar = new QuestHealthBar();
+		this.questBar.x = 4;
+		this.questBar.y = 16;
+		addChild(this.questBar);
 		if (isNexus_)
 		{
 			this.addToQueueSignal.dispatch(PopupNamesConfig.DAILY_LOGIN_POPUP, this.openDailyCalendarPopupSignal, -1, null);
@@ -479,44 +443,6 @@ public class GameSprite extends AGameSprite
 		this.creditDisplay_.x = 594;
 		this.creditDisplay_.y = 0;
 		addChild(this.creditDisplay_);
-		var _local_2:AppEngineClient = StaticInjectorContext.getInjector().getInstance(AppEngineClient);
-		var _local_3:Object = {
-			"game_net_user_id": _local_1.gameNetworkUserId(),
-			"game_net": _local_1.gameNetwork(),
-			"play_platform": _local_1.playPlatform()
-		};
-		MoreObjectUtil.addToObject(_local_3, _local_1.getCredentials());
-		if (mapName!= "Kitchen" && mapName != "Tutorial" && mapName != "Nexus Explanation" && Parameters.data_.watchForTutorialExit == true)
-		{
-			Parameters.data_.watchForTutorialExit = false;
-			this.callTracking('rotmg.Marketing.track("tutorialComplete")');
-			_local_3["fteStepCompleted"] = 9900;
-			_local_2.sendRequest("/log/logFteStep", _local_3);
-		}
-		if (mapName == "Kitchen")
-		{
-			_local_3["fteStepCompleted"] = 200;
-			_local_2.sendRequest("/log/logFteStep", _local_3);
-		}
-		if (mapName == "Tutorial")
-		{
-			if (Parameters.data_.needsTutorial == true)
-			{
-				Parameters.data_.watchForTutorialExit = true;
-				this.callTracking('rotmg.Marketing.track("install")');
-				_local_3["fteStepCompleted"] = 100;
-				_local_2.sendRequest("/log/logFteStep", _local_3);
-			}
-			this.startTutorial();
-		}
-		else
-		{
-			if (mapName != "Arena" && mapName != "Kitchen" && mapName != "Nexus Explanation" && mapName != "Vault Explanation" && mapName != "Guild Explanation" && !this.evalIsNotInCombatMapArea() && Parameters.data_.showProtips)
-			{
-				_local_4 = StaticInjectorContext.getInjector().getInstance(ShowProTipSignal);
-				(_local_4 && _local_4.dispatch());
-			}
-		}
 		if (mapName == Map.DAILY_QUEST_ROOM)
 		{
 			gsc_.questFetch();
@@ -557,7 +483,7 @@ public class GameSprite extends AGameSprite
 			this.map.scaleX = (_local_3 * _local_5);
 			this.map.scaleY = (_local_6 * _local_5);
 		}
-		if (this.timerCounter)
+		if (this.timerCounter != null)
 		{
 			if (_local_2)
 			{
@@ -571,7 +497,7 @@ public class GameSprite extends AGameSprite
 				this.timerCounter.scaleY = _local_6;
 			}
 		}
-		if (this.enemyCounter)
+		if (this.enemyCounter != null)
 		{
 			if (_local_2)
 			{
@@ -585,7 +511,20 @@ public class GameSprite extends AGameSprite
 				this.enemyCounter.scaleY = _local_6;
 			}
 		}
-		if (this.stats)
+		if (this.questBar != null)
+		{
+			if (_local_2)
+			{
+				this.questBar.scaleX = _local_7;
+				this.questBar.scaleY = 1;
+			}
+			else
+			{
+				this.questBar.scaleX = _local_3;
+				this.questBar.scaleY = _local_6;
+			}
+		}
+		if (this.stats != null)
 		{
 			if (_local_2)
 			{
@@ -601,20 +540,7 @@ public class GameSprite extends AGameSprite
 			this.stats.x = (5 * this.stats.scaleX);
 			this.stats.y = (5 * this.stats.scaleY);
 		}
-		if (this.questBar)
-		{
-			if (_local_2)
-			{
-				this.questBar.scaleX = _local_7;
-				this.questBar.scaleY = 1;
-			}
-			else
-			{
-				this.questBar.scaleX = _local_3;
-				this.questBar.scaleY = _local_6;
-			}
-		}
-		if (this.hudView)
+		if (this.hudView != null)
 		{
 			if (_local_2)
 			{
@@ -629,12 +555,12 @@ public class GameSprite extends AGameSprite
 				this.hudView.y = (300 * (1 - _local_6));
 			}
 			this.hudView.x = (800 - (200 * this.hudView.scaleX));
-			if (this.creditDisplay_)
+			if (this.creditDisplay_ != null)
 			{
 				this.creditDisplay_.x = (this.hudView.x - (6 * this.creditDisplay_.scaleX));
 			}
 		}
-		if (this.chatBox_)
+		if (this.chatBox_ != null)
 		{
 			if (_local_2)
 			{
@@ -648,7 +574,7 @@ public class GameSprite extends AGameSprite
 			}
 			this.chatBox_.y = (300 + (300 * (1 - this.chatBox_.scaleY)));
 		}
-		if (this.rankText_)
+		if (this.rankText_ != null)
 		{
 			if (_local_2)
 			{
@@ -663,7 +589,7 @@ public class GameSprite extends AGameSprite
 			this.rankText_.x = (8 * this.rankText_.scaleX);
 			this.rankText_.y = (2 * this.rankText_.scaleY);
 		}
-		if (this.guildText_)
+		if (this.guildText_ != null)
 		{
 			if (_local_2)
 			{
@@ -678,7 +604,7 @@ public class GameSprite extends AGameSprite
 			this.guildText_.x = (64 * this.guildText_.scaleX);
 			this.guildText_.y = (2 * this.guildText_.scaleY);
 		}
-		if (this.creditDisplay_)
+		if (this.creditDisplay_ != null)
 		{
 			if (_local_2)
 			{
@@ -691,7 +617,7 @@ public class GameSprite extends AGameSprite
 				this.creditDisplay_.scaleY = _local_6;
 			}
 		}
-		if (this.shopDisplay)
+		if (this.shopDisplay != null)
 		{
 			if (_local_2)
 			{
@@ -706,7 +632,7 @@ public class GameSprite extends AGameSprite
 			this.shopDisplay.x = (6 * this.shopDisplay.scaleX);
 			this.shopDisplay.y = (34 * this.shopDisplay.scaleY);
 		}
-		if (this.packageOffer)
+		if (this.packageOffer != null)
 		{
 			if (_local_2)
 			{
@@ -721,7 +647,7 @@ public class GameSprite extends AGameSprite
 			this.packageOffer.x = (6 * this.packageOffer.scaleX);
 			this.packageOffer.y = (31 * this.packageOffer.scaleY);
 		}
-		if (this.giftStatusDisplay)
+		if (this.giftStatusDisplay != null)
 		{
 			if (_local_2)
 			{
@@ -737,7 +663,7 @@ public class GameSprite extends AGameSprite
 			this.giftStatusDisplay.y = (66 * this.giftStatusDisplay.scaleY);
 		}
 		var _local_4:int = 98;
-		if (this.newsModalButton)
+		if (this.newsModalButton != null)
 		{
 			if (_local_2)
 			{
@@ -753,7 +679,7 @@ public class GameSprite extends AGameSprite
 			this.newsModalButton.y = (_local_4 * this.newsModalButton.scaleY);
 			_local_4 = 130;
 		}
-		if (this.specialOfferButton)
+		if (this.specialOfferButton != null)
 		{
 			if (_local_2)
 			{
@@ -947,21 +873,6 @@ public class GameSprite extends AGameSprite
 		addChild(this.rankText_);
 	}
 
-	private function callTracking(_arg_1:String):void
-	{
-		if (ExternalInterface.available == false)
-		{
-			return;
-		}
-		try
-		{
-			ExternalInterface.call(_arg_1);
-		}
-		catch (err:Error)
-		{
-		}
-	}
-
 	private function startTutorial():void
 	{
 		tutorial_ = new Tutorial(this);
@@ -1021,7 +932,6 @@ public class GameSprite extends AGameSprite
 			this.isGameStarted = true;
 			Renderer.inGame = true;
 			this.newsModalButton = null;
-			this.questBar = null;
 			gsc_.connect();
 			this.idleWatcher_.start(this);
 			lastUpdate_ = getTimer();
@@ -1064,7 +974,6 @@ public class GameSprite extends AGameSprite
 			TextureRedrawer.clearCache();
 			Projectile.dispose();
 			this.newsModalButton = null;
-			this.questBar = null;
 			if (this.timerCounter != null && Parameters.phaseName != "Realm Closed" && Parameters.phaseName != "Oryx Shake")
 			{
 				Parameters.timerActive = false;
@@ -1143,17 +1052,6 @@ public class GameSprite extends AGameSprite
 		this.camera_.update(_local_2);
 		if (!Parameters.ssmode)
 		{
-			if (Parameters.data_.showQuestBar && this.questBar != null)
-			{
-				updateQuestBar();
-			}
-			else
-			{
-				if (this.questBar != null)
-				{
-					this.questBar.visible = false;
-				}
-			}
 			if (Parameters.timerActive && Parameters.data_.showTimers)
 			{
 				if (this.timerCounter == null)
@@ -1185,10 +1083,6 @@ public class GameSprite extends AGameSprite
 		}
 		else
 		{
-			if (this.questBar != null)
-			{
-				this.questBar.visible = false;
-			}
 			if (this.timerCounter != null)
 			{
 				this.timerCounter.visible = false;

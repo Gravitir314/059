@@ -114,6 +114,11 @@ public class TextureRedrawer
 		return (_local_4);
 	}
 
+	public static function clearCache2():void
+	{
+		redrawCaches.length = 0;
+	}
+
 	public static function clearCache():void
 	{
 		var _local_1:BitmapData;

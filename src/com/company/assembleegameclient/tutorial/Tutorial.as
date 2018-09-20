@@ -16,8 +16,6 @@ import flash.filters.BlurFilter;
 import flash.utils.getTimer;
 
 import kabam.rotmg.assets.EmbeddedData;
-import kabam.rotmg.core.StaticInjectorContext;
-import kabam.rotmg.core.service.GoogleAnalytics;
 
 public class Tutorial extends Sprite
 {
@@ -47,7 +45,6 @@ public class Tutorial extends Sprite
 	private var boxesBack_:Shape = new Shape();
 	private var boxes_:Shape = new Shape();
 	private var tutorialMessage_:TutorialMessage = null;
-	private var tracker:GoogleAnalytics;
 	private var trackingStep:int = -1;
 	private var lastTrackingStepTimestamp:uint;
 
@@ -62,8 +59,6 @@ public class Tutorial extends Sprite
 		{
 			this.steps_.push(new Step(_local_2));
 		}
-		this.tracker = StaticInjectorContext.getInjector().getInstance(GoogleAnalytics);
-		this.tracker.trackEvent("tutorial", "started");
 		addChild(this.boxesBack_);
 		addChild(this.boxes_);
 		_local_3 = this.darkBox_.graphics;
@@ -148,7 +143,6 @@ public class Tutorial extends Sprite
 					{
 						if (!_local_4.trackingSent)
 						{
-							this.tracker.trackEvent("tutorial", "step", _local_3.toString(), (_local_4.satisfiedSince_ - this.lastTrackingStepTimestamp));
 							this.lastTrackingStepTimestamp = getTimer();
 						}
 						this.trackingStep = _local_3;

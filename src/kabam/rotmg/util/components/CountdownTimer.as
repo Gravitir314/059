@@ -2,11 +2,11 @@
 
 package kabam.rotmg.util.components
 {
+import com.greensock.plugins.DropShadowFilterPlugin;
 import com.gskinner.motion.GTween;
 
 import flash.display.Sprite;
 import flash.events.TimerEvent;
-import flash.filters.DropShadowFilter;
 import flash.filters.GlowFilter;
 import flash.utils.Timer;
 
@@ -30,7 +30,7 @@ public class CountdownTimer extends Sprite
 	public function CountdownTimer()
 	{
 		this.text = new TextFieldDisplayConcrete().setSize(40).setColor(0xFFFFFF).setBold(true);
-		this.text.filters = [new DropShadowFilter(0, 0, 0), new GlowFilter(0xFFFF00, 1, 1.5, 1.5, 4.5, 1)];
+		this.text.filters = [DropShadowFilterPlugin.DEFAULT_FILTER, new GlowFilter(0xFFFF00, 1, 1.5, 1.5, 4.5, 1)];
 		this.text.setStringBuilder(new StaticStringBuilder(("" + this.countdownSeconds)));
 		addChild(this.text);
 		this.text.visible = false;

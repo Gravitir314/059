@@ -14,9 +14,7 @@ import kabam.rotmg.account.core.services.BuyCharacterSlotTask;
 import kabam.rotmg.account.core.view.BuyingDialog;
 import kabam.rotmg.account.core.view.PurchaseConfirmationDialog;
 import kabam.rotmg.core.model.PlayerModel;
-import kabam.rotmg.core.service.TrackingData;
 import kabam.rotmg.core.signals.SetScreenSignal;
-import kabam.rotmg.core.signals.TrackEventSignal;
 import kabam.rotmg.dialogs.control.CloseDialogsSignal;
 import kabam.rotmg.dialogs.control.OpenDialogSignal;
 import kabam.rotmg.ui.view.CharacterSlotNeedGoldDialog;
@@ -40,8 +38,6 @@ public class BuyCharacterSlotCommand
 	public var model:PlayerModel;
 	[Inject]
 	public var account:Account;
-	[Inject]
-	public var track:TrackEventSignal;
 
 
 	public function execute():void
@@ -85,17 +81,6 @@ public class BuyCharacterSlotCommand
 	{
 		var _local_1:TaskSequence = new TaskSequence();
 		_local_1.add(new DispatchSignalTask(this.setScreen, new CharacterSelectionAndNewsScreen()));
-		//_local_1.add(new DispatchSignalTask(this.track, this.makeTrackingData())); TODO need this?
-		return (_local_1);
-	}
-
-	private function makeTrackingData():TrackingData
-	{
-		var _local_1:TrackingData = new TrackingData();
-		_local_1.category = "credits";
-		_local_1.action = "buyConverted";
-		_local_1.label = "Character Slot";
-		_local_1.value = this.price;
 		return (_local_1);
 	}
 

@@ -47,11 +47,11 @@ public class Face3D
 			Plane3D.computeNormalVec(_arg_2, _local_7);
 			this.shade_ = Lighting3D.shadeValue(_local_7, 0.75);
 		}
-		this.path_.commands.push(GraphicsPathCommand.MOVE_TO);
+		(this.path_.commands as Vector.<int>).push(GraphicsPathCommand.MOVE_TO);
 		var _local_6:int = 3;
 		while (_local_6 < this.vin_.length)
 		{
-			this.path_.commands.push(GraphicsPathCommand.LINE_TO);
+			(this.path_.commands as Vector.<int>).push(GraphicsPathCommand.LINE_TO);
 			_local_6 = (_local_6 + 3);
 		}
 		this.path_.data = this.vout_;
@@ -60,9 +60,18 @@ public class Face3D
 	public function dispose():void
 	{
 		this.origTexture_ = null;
+		this.vin_.length = 0;
 		this.vin_ = null;
+		this.uvt_.length = 0;
 		this.uvt_ = null;
+		this.vout_.length = 0;
 		this.vout_ = null;
+		if (this.textureMatrix_ != null)
+		{
+			this.textureMatrix_.uvMatrix_ = null;
+			this.textureMatrix_.tToS_ = null;
+			this.textureMatrix_.tempMatrix_ = null;
+		}
 		this.textureMatrix_ = null;
 		this.bitmapFill_ = null;
 		this.path_.commands = null;
@@ -170,11 +179,7 @@ public class Face3D
 		{
 			return (true);
 		}
-		if (((this.vout_.length == 8) && (Triangle.containsXY(this.vout_[0], this.vout_[1], this.vout_[4], this.vout_[5], this.vout_[6], this.vout_[7], _arg_1, _arg_2))))
-		{
-			return (true);
-		}
-		return (false);
+		return (this.vout_.length == 8 && Triangle.containsXY(this.vout_[0], this.vout_[1], this.vout_[4], this.vout_[5], this.vout_[6], this.vout_[7], _arg_1, _arg_2))
 	}
 
 	private function generateTextureMatrix(_arg_1:Boolean):void

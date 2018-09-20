@@ -4,6 +4,7 @@ package com.company.assembleegameclient.ui
 {
 import com.company.assembleegameclient.objects.GameObject;
 import com.company.assembleegameclient.parameters.Parameters;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Sprite;
 import flash.events.Event;
@@ -20,8 +21,6 @@ public class StatusBar extends Sprite
 {
 
 	public static var barTextSignal:Signal = new Signal(int);
-
-	public const DEFAULT_FILTER:DropShadowFilter = new DropShadowFilter(0, 0, 0);
 
 	public var w_:int;
 	public var h_:int;
@@ -71,30 +70,28 @@ public class StatusBar extends Sprite
 			this.labelText_.setBold(true);
 			this.labelTextStringBuilder_ = new LineBuilder().setParams(_arg_5);
 			this.labelText_.setStringBuilder(this.labelTextStringBuilder_);
-			this.centerVertically(this.labelText_);
-			this.labelText_.filters = [DEFAULT_FILTER];
+			if (_arg_8)
+			{
+				this.labelText_.y = -16;
+				this.labelText_.filters = [new DropShadowFilter(1, 0, 0, 1, 4, 4, 2)];
+			}
+			else
+			{
+				this.centerVertically(this.labelText_);
+				this.labelText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
+			}
 			addChild(this.labelText_);
-		}
-		if (_arg_8)
-		{
-			this.rightLabelText_ = new TextFieldDisplayConcrete().setSize(14).setColor(this.textColor_);
-			this.rightLabelText_.setBold(true);
-			this.rightLabelTextStringBuilder_ = new LineBuilder().setParams("0%");
-			this.rightLabelText_.setStringBuilder(this.labelTextStringBuilder_);
-			this.centerVertically(this.rightLabelText_);
-			this.rightLabelText_.filters = [DEFAULT_FILTER];
-			addChild(this.rightLabelText_);
 		}
 		this.valueText_ = new TextFieldDisplayConcrete().setSize(14).setColor(0xFFFFFF);
 		this.valueText_.setBold(true);
-		this.valueText_.filters = [DEFAULT_FILTER];
+		this.valueText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.centerVertically(this.valueText_);
 		this.valueTextStringBuilder_ = new StaticStringBuilder();
 		this.boostText_ = new TextFieldDisplayConcrete().setSize(14).setColor(this.textColor_);
 		this.boostText_.setBold(true);
 		this.boostText_.alpha = 0.6;
 		this.centerVertically(this.boostText_);
-		this.boostText_.filters = [DEFAULT_FILTER];
+		this.boostText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.multiplierIcon = new Sprite();
 		this.multiplierIcon.x = (this.w_ - 25);
 		this.multiplierIcon.y = -3;
@@ -105,7 +102,7 @@ public class StatusBar extends Sprite
 		this.multiplierText = new TextFieldDisplayConcrete().setSize(14).setColor(9493531);
 		this.multiplierText.setBold(true);
 		this.multiplierText.setStringBuilder(new StaticStringBuilder("x2"));
-		this.multiplierText.filters = [DEFAULT_FILTER];
+		this.multiplierText.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.multiplierIcon.addChild(this.multiplierText);
 		if (!this.bTextEnabled(Parameters.data_.toggleBarText))
 		{

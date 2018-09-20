@@ -3,7 +3,6 @@
 package kabam.rotmg.application.model
 {
 import flash.net.LocalConnection;
-import flash.system.Security;
 
 public class DomainModel
 {
@@ -20,24 +19,9 @@ public class DomainModel
 	private var localDomain:String;
 
 
-	public function applyDomainSecurity():void
-	{
-		var _local_1:String;
-		for each (_local_1 in this.WHITELIST)
-		{
-			Security.allowDomain(_local_1);
-		}
-	}
-
 	public function isLocalDomainValid():Boolean
 	{
 		return ((this.client.isDesktop()) || (this.isLocalDomainInWhiteList()));
-	}
-
-	public function isLocalDomainProduction():Boolean
-	{
-		var _local_1:String = this.getLocalDomain();
-		return (!(this.PRODUCTION_WHITELIST.indexOf(_local_1) == -1));
 	}
 
 	private function isLocalDomainInWhiteList():Boolean

@@ -15,10 +15,7 @@ import io.decagames.rotmg.social.model.SocialModel;
 import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
 import kabam.rotmg.chat.model.TellModel;
-import kabam.rotmg.core.StaticInjectorContext;
-import kabam.rotmg.core.service.GoogleAnalytics;
 import kabam.rotmg.dialogs.control.OpenDialogSignal;
-import kabam.rotmg.friends.view.FriendListView;
 import kabam.rotmg.ui.model.HUDModel;
 import kabam.rotmg.ui.signals.HUDModelInitialized;
 import kabam.rotmg.ui.signals.NameChangedSignal;
@@ -113,10 +110,6 @@ public class CharacterDetailsMediator extends Mediator
 	{
 		this.tellModel.clearRecipients();
 		this.hudModel.gameSprite.gsc_.escape();
-		var _local_1:GoogleAnalytics = StaticInjectorContext.getInjector().getInstance(GoogleAnalytics);
-		if (_local_1)
-		{
-		}
 		Parameters.data_.needsRandomRealm = false;
 		Parameters.save();
 	}
@@ -124,10 +117,6 @@ public class CharacterDetailsMediator extends Mediator
 	private function onGotoOptions():void
 	{
 		this.hudModel.gameSprite.mui_.clearInput();
-		var _local_1:GoogleAnalytics = StaticInjectorContext.getInjector().getInstance(GoogleAnalytics);
-		if (_local_1)
-		{
-		}
 		this.hudModel.gameSprite.addChild(new Options(this.hudModel.gameSprite));
 	}
 

@@ -3,10 +3,10 @@
 package com.company.assembleegameclient.ui.dropdown
 {
 import com.company.ui.BaseSimpleText;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Sprite;
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 
 public class DropDownItem extends Sprite
 {
@@ -23,7 +23,7 @@ public class DropDownItem extends Sprite
 		this.nameText_.setBold(true);
 		this.nameText_.text = _arg_1;
 		this.nameText_.updateMetrics();
-		this.nameText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.nameText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.nameText_.x = ((this.w_ / 2) - (this.nameText_.width / 2));
 		this.nameText_.y = ((this.h_ / 2) - (this.nameText_.height / 2));
 		addChild(this.nameText_);

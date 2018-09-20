@@ -246,7 +246,7 @@ public class GraphicsFillExtra
 			waterSinks = new Dictionary();
 			waterSinksSize = 0;
 		}
-		if (vertexBuffersSize > 1000)
+		if (vertexBuffersSize > 2000)
 		{
 			disposeVertexBuffers();
 			vertexBuffersSize = 0;

@@ -11,9 +11,7 @@ import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.MouseEvent;
 
-import kabam.rotmg.core.StaticInjectorContext;
 import kabam.rotmg.core.model.PlayerModel;
-import kabam.rotmg.core.service.GoogleAnalytics;
 import kabam.rotmg.game.view.CreditDisplay;
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.ui.view.components.ScreenBase;
@@ -85,11 +83,6 @@ public class NewCharacterScreen extends Sprite
 		this.backButton_.y = 550;
 		this.creditDisplay_.x = stage.stageWidth;
 		this.creditDisplay_.y = 20;
-		var _local_3:GoogleAnalytics = StaticInjectorContext.getInjector().getInstance(GoogleAnalytics);
-		if (_local_3)
-		{
-			_local_3.trackPageView("/newCharScreen");
-		}
 	}
 
 	private function onBackClick(_arg_1:Event):void
@@ -121,10 +114,6 @@ public class NewCharacterScreen extends Sprite
 		}
 		var _local_3:int = _local_2.objectType();
 		var _local_4:String = ObjectLibrary.typeToDisplayId_[_local_3];
-		var _local_5:GoogleAnalytics = StaticInjectorContext.getInjector().getInstance(GoogleAnalytics);
-		if (_local_5)
-		{
-		}
 		this.selected.dispatch(_local_3);
 	}
 

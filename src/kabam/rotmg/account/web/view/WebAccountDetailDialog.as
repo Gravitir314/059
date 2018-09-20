@@ -4,9 +4,9 @@ package kabam.rotmg.account.web.view
 {
 import com.company.assembleegameclient.account.ui.Frame;
 import com.company.assembleegameclient.ui.DeprecatedClickableText;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.LineBuilder;
@@ -101,7 +101,7 @@ public class WebAccountDetailDialog extends Frame
 		this.loginText = new TextFieldDisplayConcrete().setSize(18).setColor(0xB3B3B3);
 		this.loginText.setBold(true);
 		this.loginText.setStringBuilder(new LineBuilder().setParams(this.headerText));
-		this.loginText.filters = [new DropShadowFilter(0, 0, 0)];
+		this.loginText.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.loginText.y = (h_ - 60);
 		this.loginText.x = 17;
 		addChild(this.loginText);

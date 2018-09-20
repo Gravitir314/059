@@ -4,9 +4,9 @@ package com.company.assembleegameclient.ui.panels
 {
 import com.company.assembleegameclient.game.GameSprite;
 import com.company.assembleegameclient.ui.DeprecatedTextButton;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 import flash.text.TextFieldAutoSize;
 
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
@@ -24,7 +24,7 @@ public class ButtonPanel extends Panel
 		this.titleText_ = new TextFieldDisplayConcrete().setSize(18).setColor(0xFFFFFF).setTextWidth(WIDTH).setHTML(true).setWordWrap(true).setMultiLine(true).setAutoSize(TextFieldAutoSize.CENTER);
 		this.titleText_.setBold(true);
 		this.titleText_.setStringBuilder(new LineBuilder().setParams(_arg_2).setPrefix('<p align="center">').setPostfix("</p>"));
-		this.titleText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.titleText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.titleText_.y = 6;
 		addChild(this.titleText_);
 		this.button_ = new DeprecatedTextButton(16, _arg_3);

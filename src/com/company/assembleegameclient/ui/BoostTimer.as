@@ -3,9 +3,9 @@
 package com.company.assembleegameclient.ui
 {
 import com.company.assembleegameclient.ui.components.TimerDisplay;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Sprite;
-import flash.filters.DropShadowFilter;
 
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.StringBuilder;
@@ -40,7 +40,7 @@ public class BoostTimer extends Sprite
 		_local_1.setBold(true);
 		_local_1.setMultiLine(true);
 		_local_1.mouseEnabled = true;
-		_local_1.filters = [new DropShadowFilter(0, 0, 0)];
+		_local_1.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		return (_local_1);
 	}
 
@@ -49,7 +49,7 @@ public class BoostTimer extends Sprite
 		this.labelTextField = new TextFieldDisplayConcrete().setSize(16).setColor(0xFFFFFF);
 		this.labelTextField.setMultiLine(true);
 		this.labelTextField.mouseEnabled = true;
-		this.labelTextField.filters = [new DropShadowFilter(0, 0, 0)];
+		this.labelTextField.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 	}
 
 	public function setLabelBuilder(_arg_1:StringBuilder):void

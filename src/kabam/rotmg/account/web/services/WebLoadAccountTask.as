@@ -53,7 +53,7 @@ public class WebLoadAccountTask extends BaseTask implements LoadAccountTask
 		}
 		catch (error:Error)
 		{
-			(trace(error.message));
+			trace(error.message);
 			data.username = null;
 			data.password = null;
 			data.secret = null;

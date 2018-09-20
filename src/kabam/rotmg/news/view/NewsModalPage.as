@@ -3,10 +3,10 @@
 package kabam.rotmg.news.view
 {
 import com.company.assembleegameclient.ui.Scrollbar;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Sprite;
 import flash.events.Event;
-import flash.filters.DropShadowFilter;
 import flash.text.TextField;
 
 import kabam.rotmg.core.StaticInjectorContext;
@@ -42,7 +42,7 @@ public class NewsModalPage extends Sprite
 		this.htmlText.multiline = true;
 		this.htmlText.wordWrap = true;
 		this.htmlText.htmlText = _arg_2;
-		this.htmlText.filters = [new DropShadowFilter(0, 0, 0)];
+		this.htmlText.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.htmlText.height = (this.htmlText.textHeight + 8);
 		_local_4 = new Sprite();
 		_local_4.addChild(this.htmlText);

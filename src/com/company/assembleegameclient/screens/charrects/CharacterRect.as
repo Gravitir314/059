@@ -3,6 +3,7 @@
 package com.company.assembleegameclient.screens.charrects
 {
 import com.company.rotmg.graphics.StarGraphic;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Shape;
 import flash.display.Sprite;
@@ -92,7 +93,7 @@ public class CharacterRect extends Sprite
 		this.taglineIcon.scaleY = 1.2;
 		this.taglineIcon.x = CharacterRectConstants.TAGLINE_ICON_POS_X;
 		this.taglineIcon.y = CharacterRectConstants.TAGLINE_ICON_POS_Y;
-		this.taglineIcon.filters = [new DropShadowFilter(0, 0, 0)];
+		this.taglineIcon.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.selectContainer.addChild(this.taglineIcon);
 	}
 

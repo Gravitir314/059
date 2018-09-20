@@ -2,13 +2,14 @@
 
 package com.company.assembleegameclient.account.ui
 {
+import com.greensock.plugins.DropShadowFilterPlugin;
+
 import flash.display.CapsStyle;
 import flash.display.Graphics;
 import flash.display.JointStyle;
 import flash.display.LineScaleMode;
 import flash.display.Sprite;
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.LineBuilder;
@@ -44,10 +45,10 @@ public class CheckBoxField extends Sprite
 		this.text_.setHTML(true);
 		this.text_.setStringBuilder(new LineBuilder().setParams(_arg_1));
 		this.text_.mouseEnabled = true;
-		this.text_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.text_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addChild(this.text_);
 		this.errorText_ = new TextFieldDisplayConcrete().setSize(12).setColor(16549442);
-		this.errorText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.errorText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addChild(this.errorText_);
 		this.text_.textChanged.addOnce(this.onTextChanged);
 	}

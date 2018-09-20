@@ -6,6 +6,7 @@ import com.company.assembleegameclient.account.ui.Frame;
 import com.company.assembleegameclient.account.ui.TextInputField;
 import com.company.assembleegameclient.ui.DeprecatedClickableText;
 import com.company.util.KeyCodes;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.events.Event;
 import flash.events.KeyboardEvent;
@@ -44,7 +45,7 @@ public class KabamLoginView extends Frame
 	{
 		this.headerText = new TextFieldDisplayConcrete().setSize(13).setColor(0xB3B3B3);
 		this.headerText.setStringBuilder(new StaticStringBuilder("Please login to Kabam.com"));
-		this.headerText.filters = [new DropShadowFilter(0, 0, 0)];
+		this.headerText.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.headerText.x = 5;
 		this.headerText.y = 3;
 		this.headerText.filters = [new DropShadowFilter(0, 0, 0, 0.5, 12, 12)];

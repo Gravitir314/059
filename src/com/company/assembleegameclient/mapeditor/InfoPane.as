@@ -7,6 +7,7 @@ import com.company.assembleegameclient.map.RegionLibrary;
 import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.ui.BaseSimpleText;
 import com.company.util.GraphicsUtil;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.CapsStyle;
 import flash.display.GraphicsPath;
@@ -17,7 +18,6 @@ import flash.display.JointStyle;
 import flash.display.LineScaleMode;
 import flash.display.Sprite;
 import flash.events.Event;
-import flash.filters.DropShadowFilter;
 import flash.geom.Rectangle;
 
 public class InfoPane extends Sprite
@@ -42,13 +42,13 @@ public class InfoPane extends Sprite
 		this.meMap_ = _arg_1;
 		this.drawBackground();
 		this.rectText_ = new BaseSimpleText(12, 0xFFFFFF, false, (WIDTH - 10), 0);
-		this.rectText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.rectText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.rectText_.y = 4;
 		this.rectText_.x = 4;
 		addChild(this.rectText_);
 		this.typeText_ = new BaseSimpleText(12, 0xFFFFFF, false, (WIDTH - 10), 0);
 		this.typeText_.wordWrap = true;
-		this.typeText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.typeText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.typeText_.x = 4;
 		this.typeText_.y = 36;
 		addChild(this.typeText_);

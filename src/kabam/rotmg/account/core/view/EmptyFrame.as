@@ -2,10 +2,11 @@
 
 package kabam.rotmg.account.core.view
 {
+import com.greensock.plugins.DropShadowFilterPlugin;
+
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 import flash.text.TextFieldAutoSize;
 import flash.text.TextFormatAlign;
 
@@ -146,7 +147,7 @@ public class EmptyFrame extends Sprite
 		_local_5.setMultiLine(true);
 		_local_5.setAutoSize(TextFieldAutoSize.CENTER);
 		_local_5.setHorizontalAlign(TextFormatAlign.CENTER);
-		_local_5.filters = [new DropShadowFilter(0, 0, 0)];
+		_local_5.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		_local_5.x = _arg_2;
 		_local_5.y = _arg_3;
 		return (_local_5);

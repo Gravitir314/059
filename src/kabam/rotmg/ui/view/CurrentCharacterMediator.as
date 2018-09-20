@@ -3,20 +3,15 @@
 package kabam.rotmg.ui.view
 {
 import com.company.assembleegameclient.appengine.SavedCharacter;
-import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
 import com.company.assembleegameclient.screens.NewCharacterScreen;
-import com.company.util.MoreDateUtil;
 
 import kabam.rotmg.account.securityQuestions.data.SecurityQuestionsModel;
 import kabam.rotmg.account.securityQuestions.view.SecurityQuestionsInfoDialog;
 import kabam.rotmg.classes.model.CharacterClass;
 import kabam.rotmg.classes.model.ClassesModel;
 import kabam.rotmg.core.model.PlayerModel;
-import kabam.rotmg.core.service.TrackingData;
 import kabam.rotmg.core.signals.SetScreenSignal;
-import kabam.rotmg.core.signals.TrackEventSignal;
-import kabam.rotmg.core.signals.TrackPageViewSignal;
 import kabam.rotmg.dialogs.control.OpenDialogSignal;
 import kabam.rotmg.game.model.GameInitData;
 import kabam.rotmg.game.signals.PlayGameSignal;
@@ -36,8 +31,6 @@ public class CurrentCharacterMediator extends Mediator
 	[Inject]
 	public var classesModel:ClassesModel;
 	[Inject]
-	public var track:TrackEventSignal;
-	[Inject]
 	public var setScreen:SetScreenSignal;
 	[Inject]
 	public var playGame:PlayGameSignal;
@@ -45,8 +38,6 @@ public class CurrentCharacterMediator extends Mediator
 	public var chooseName:ChooseNameSignal;
 	[Inject]
 	public var nameChanged:NameChangedSignal;
-	[Inject]
-	public var trackPage:TrackPageViewSignal;
 	[Inject]
 	public var initPackages:InitPackagesSignal;
 	[Inject]
@@ -57,14 +48,12 @@ public class CurrentCharacterMediator extends Mediator
 
 	override public function initialize():void
 	{
-		this.trackSomething();
 		this.view.initialize(this.playerModel);
 		this.view.close.add(this.onClose);
 		this.view.newCharacter.add(this.onNewCharacter);
 		this.view.showClasses.add(this.onNewCharacter);
 		this.view.chooseName.add(this.onChooseName);
 		this.view.playGame.add(this.onPlayGame);
-		this.trackPage.dispatch("/currentCharScreen");
 		this.nameChanged.add(this.onNameChanged);
 		this.initPackages.dispatch();
 		if (this.securityQuestionsModel.showSecurityQuestionsOnStartup)
@@ -86,21 +75,6 @@ public class CurrentCharacterMediator extends Mediator
 	private function onNameChanged(_arg_1:String):void
 	{
 		this.view.setName(_arg_1);
-	}
-
-	private function trackSomething():void
-	{
-		var _local_2:TrackingData;
-		var _local_1:String = MoreDateUtil.getDayStringInPT();
-		if (Parameters.data_.lastDailyAnalytics != _local_1)
-		{
-			_local_2 = new TrackingData();
-			_local_2.category = "joinDate";
-			_local_2.action = Parameters.data_.joinDate;
-			//this.track.dispatch(_local_2); TODO need this?
-			Parameters.data_.lastDailyAnalytics = _local_1;
-			Parameters.save();
-		}
 	}
 
 	private function onNewCharacter():void
@@ -125,12 +99,6 @@ public class CurrentCharacterMediator extends Mediator
 		var _local_2:CharacterClass = this.classesModel.getCharacterClass(_local_1.objectType());
 		_local_2.setIsSelected(true);
 		_local_2.skins.getSkin(_local_1.skinType()).setIsSelected(true);
-		var _local_3:TrackingData = new TrackingData();
-		_local_3.category = "character";
-		_local_3.action = "select";
-		_local_3.label = _local_1.displayId();
-		_local_3.value = _local_1.level();
-		//this.track.dispatch(_local_3); TODO need this?
 		var _local_4:GameInitData = new GameInitData();
 		_local_4.createCharacter = false;
 		_local_4.charId = _local_1.charId();

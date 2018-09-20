@@ -10,12 +10,11 @@ import com.company.assembleegameclient.ui.RankText;
 import com.company.assembleegameclient.ui.StatusBar;
 import com.company.assembleegameclient.ui.panels.itemgrids.EquippedGrid;
 import com.company.assembleegameclient.ui.panels.itemgrids.InventoryGrid;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
-import flash.filters.DropShadowFilter;
 import flash.text.TextFieldAutoSize;
 
 import kabam.rotmg.game.view.components.StatsView;
-
 import kabam.rotmg.text.model.TextKey;
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.LineBuilder;
@@ -79,7 +78,7 @@ public class PlayerToolTip extends ToolTip
 			this.clickMessage_ = new TextFieldDisplayConcrete().setSize(12).setColor(0xB3B3B3);
 			this.clickMessage_.setAutoSize(TextFieldAutoSize.CENTER);
 			this.clickMessage_.setStringBuilder(new LineBuilder().setParams(TextKey.PLAYER_TOOL_TIP_CLICK_MESSAGE));
-			this.clickMessage_.filters = [new DropShadowFilter(0, 0, 0)];
+			this.clickMessage_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 			this.clickMessage_.x = (width / 2);
 			this.clickMessage_.y = _local_2;
 			waiter.push(this.clickMessage_.textChanged);
@@ -160,7 +159,7 @@ public class PlayerToolTip extends ToolTip
 				this.clickMessage_ = new TextFieldDisplayConcrete().setSize(12).setColor(0xB3B3B3);
 				this.clickMessage_.setAutoSize(TextFieldAutoSize.CENTER);
 				this.clickMessage_.setStringBuilder(new LineBuilder().setParams(TextKey.PLAYER_TOOL_TIP_CLICK_MESSAGE));
-				this.clickMessage_.filters = [new DropShadowFilter(0, 0, 0)];
+				this.clickMessage_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 				this.clickMessage_.x = (width * 0.5);
 				this.clickMessage_.y = _local_2;
 				waiter.push(this.clickMessage_.textChanged);

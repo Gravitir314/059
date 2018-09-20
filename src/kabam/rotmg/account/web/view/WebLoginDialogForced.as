@@ -6,11 +6,11 @@ import com.company.assembleegameclient.account.ui.Frame;
 import com.company.assembleegameclient.account.ui.TextInputField;
 import com.company.assembleegameclient.ui.DeprecatedClickableText;
 import com.company.util.KeyCodes;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.events.Event;
 import flash.events.KeyboardEvent;
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 import flash.text.TextFieldAutoSize;
 import flash.text.TextFormatAlign;
 
@@ -129,7 +129,7 @@ public class WebLoginDialogForced extends Frame
 		_local_4.setMultiLine(true);
 		_local_4.setAutoSize(TextFieldAutoSize.CENTER);
 		_local_4.setHorizontalAlign(TextFormatAlign.CENTER);
-		_local_4.filters = [new DropShadowFilter(0, 0, 0)];
+		_local_4.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		_local_4.x = _arg_2;
 		_local_4.y = _arg_3;
 		return (_local_4);

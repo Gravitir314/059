@@ -4,13 +4,13 @@ package kabam.rotmg.mysterybox.components
 {
 import com.company.assembleegameclient.ui.dialogs.Dialog;
 import com.company.assembleegameclient.util.Currency;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.DisplayObject;
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.MouseEvent;
 import flash.filters.ColorMatrixFilter;
-import flash.filters.DropShadowFilter;
 import flash.geom.Point;
 import flash.text.TextFieldAutoSize;
 import flash.text.TextFormatAlign;
@@ -327,7 +327,7 @@ public class MysteryBoxSelectEntry extends Sprite
 		_local_6.setMultiLine(true);
 		_local_6.setAutoSize(TextFieldAutoSize.LEFT);
 		_local_6.setHorizontalAlign(TextFormatAlign.LEFT);
-		_local_6.filters = [new DropShadowFilter(0, 0, 0)];
+		_local_6.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		_local_6.x = _arg_2;
 		_local_6.y = _arg_3;
 		return (_local_6);

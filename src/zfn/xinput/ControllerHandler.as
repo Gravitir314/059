@@ -2,13 +2,14 @@
 
 package zfn.xinput
 {
-    import flash.events.EventDispatcher;
-    import flash.ui.GameInput;
-    import flash.ui.GameInputDevice;
-    import com.company.assembleegameclient.parameters.Parameters;
-    import flash.events.GameInputEvent;
+import com.company.assembleegameclient.parameters.Parameters;
 
-    public class ControllerHandler extends EventDispatcher 
+import flash.events.EventDispatcher;
+import flash.events.GameInputEvent;
+import flash.ui.GameInput;
+import flash.ui.GameInputDevice;
+
+public class ControllerHandler extends EventDispatcher
     {
 
         public static const LSTICK_X_AXIS:String = "AXIS_0";
@@ -63,17 +64,17 @@ package zfn.xinput
 
         public function inputEvent(_arg_1:int, _arg_2:Number):void
         {
-            ROTMG.STAGE.dispatchEvent(new ControllerEvent("buttonDown", false, false, _arg_1, _arg_2));
+            ROTMG.STAGE.dispatchEvent(new ControllerEvent(ControllerEvent.BUTTON_DOWN, false, false, _arg_1, _arg_2));
         }
 
         public function deviceAdded(_arg_1:GameInputEvent):void
         {
-            var _local_2:* = null;
+            var _local_2:GameInputDevice;
             if (GameInput.numDevices > 0)
             {
                 _local_2 = GameInput.getDeviceAt(0);
                 _local_2.enabled = true;
-                (trace("device found", _local_2.name));
+                trace("device found", _local_2.name);
                 if (_local_2.name == "Xbox 360 Controller (XInput STANDARD GAMEPAD)" || Parameters.data_.cNameBypass)
                 {
                     controller = _local_2;

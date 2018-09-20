@@ -30,6 +30,7 @@ public class ChatListItemFactory
 	private static const HELP:String = Parameters.HELP_CHAT_NAME;
 	private static const ERROR:String = Parameters.ERROR_CHAT_NAME;
 	private static const GUILD:String = Parameters.GUILD_CHAT_NAME;
+	private static const SYNC:String = Parameters.SYNC_CHAT_NAME;
 	private static const testField:TextField = makeTestTextField();
 
 	[Inject]
@@ -72,6 +73,13 @@ public class ChatListItemFactory
 		var _local_7:String;
 		var _local_8:int;
 		this.message = _arg_1;
+		if (this.buffer != null)
+		{
+			for each (var object:DisplayObject in buffer)
+			{
+				delete_.push(object);
+			}
+		}
 		this.buffer = new Vector.<DisplayObject>();
 		this.setTFonTestField();
 		this.makeStarsIcon();
@@ -130,7 +138,7 @@ public class ChatListItemFactory
 	private function isSpecialMessageType():Boolean
 	{
 		var _local_1:String = this.message.name;
-		return (((((_local_1 == SERVER) || (_local_1 == CLIENT)) || (_local_1 == HELP)) || (_local_1 == ERROR)) || (_local_1 == GUILD));
+		return (_local_1 == SERVER || _local_1 == CLIENT || _local_1 == HELP || _local_1 == ERROR || _local_1 == GUILD || _local_1 == SYNC);
 	}
 
 	private function bufferNameText():void
@@ -268,6 +276,10 @@ public class ChatListItemFactory
 		{
 			return (0xFF0000);
 		}
+		if (_local_1 == SYNC)
+		{
+			return (0x11D600);
+		}
 		if (_local_1.charAt(0) == "@")
 		{
 			return (0xFFFF00);
@@ -286,7 +298,7 @@ public class ChatListItemFactory
 	private function getBitmapData(_arg_1:StringBuilder, _arg_2:uint):BitmapData
 	{
 		var _local_3:String = this.stageProxy.getQuality();
-		var _local_4:Boolean = Parameters.data_["forceChatQuality"];
+		var _local_4:Boolean = Parameters.data_.forceChatQuality;
 		((_local_4) && (this.stageProxy.setQuality(StageQuality.HIGH)));
 		var _local_5:BitmapData = this.factory.make(_arg_1, 14, _arg_2, true, IDENTITY_MATRIX, true);
 		((_local_4) && (this.stageProxy.setQuality(_local_3)));

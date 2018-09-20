@@ -3,6 +3,7 @@
 package kabam.rotmg.editor.view.components.savedialog
 {
 import com.company.ui.BaseSimpleText;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.CapsStyle;
 import flash.display.JointStyle;
@@ -26,7 +27,7 @@ public class TagsInputField extends Sprite
 		this.nameText_.setBold(true);
 		this.nameText_.text = "Tags: ";
 		this.nameText_.updateMetrics();
-		this.nameText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.nameText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addChild(this.nameText_);
 		this.inputText_ = new BaseSimpleText(16, 0xB3B3B3, true, _arg_2, _arg_3);
 		this.inputText_.x = ((_arg_4) ? 0 : 80);

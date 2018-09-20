@@ -8,10 +8,10 @@ import com.company.assembleegameclient.parameters.Parameters;
 import com.company.assembleegameclient.ui.DeprecatedTextButton;
 import com.company.assembleegameclient.util.Currency;
 import com.company.assembleegameclient.util.GuildUtil;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Sprite;
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 import flash.text.TextFieldAutoSize;
 
 import kabam.rotmg.text.model.TextKey;
@@ -44,12 +44,13 @@ public class GuildRegisterPanel extends Panel
 		}
 		_local_2 = gs_.map.player_;
 		this.title_ = new TextFieldDisplayConcrete().setSize(18).setColor(0xFFFFFF).setTextWidth(WIDTH).setWordWrap(true).setMultiLine(true).setAutoSize(TextFieldAutoSize.CENTER).setHTML(true);
-		this.title_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.title_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		if (((!(_local_2.guildName_ == null)) && (_local_2.guildName_.length > 0)))
 		{
 			_local_3 = GuildUtil.rankToString(_local_2.guildRank_);
 			this.title_.setStringBuilder(new LineBuilder().setParams(TextKey.GUILD_REGISTER_PANEL_RANK, {
-				"rank": _local_3, "guildName": _local_2.guildName_
+				"rank": _local_3,
+				"guildName": _local_2.guildName_
 			}).setPrefix('<p align="center">').setPostfix("</p>"));
 			this.title_.y = 0;
 			addChild(this.title_);

@@ -27,8 +27,8 @@ public class NovaEffect extends ParticleEffect
 		var _local_9:Particle;
 		x_ = this.start_.x;
 		y_ = this.start_.y;
-		var _local_3:* = 200;
-		var _local_4:* = 200;
+		var _local_3:int = 200;
+		var _local_4:int = 200;
 		var _local_5:int = (4 + (this.novaRadius_ * 2));
 		var _local_6:int;
 		while (_local_6 < _local_5)
@@ -50,8 +50,8 @@ public class NovaEffect extends ParticleEffect
 		x_ = this.start_.x;
 		y_ = this.start_.y;
 		var _local_3:int = 10;
-		var _local_4:* = 200;
-		var _local_5:int = (0 + (this.novaRadius_ * 2));
+		var _local_4:int = 200;
+		var _local_5:int = (this.novaRadius_ * 2);
 		var _local_6:int;
 		while (_local_6 < _local_5)
 		{

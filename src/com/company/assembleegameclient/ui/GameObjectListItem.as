@@ -7,10 +7,10 @@ import com.company.assembleegameclient.objects.ObjectLibrary;
 import com.company.assembleegameclient.objects.Player;
 import com.company.assembleegameclient.parameters.Parameters;
 import com.company.util.MoreColorUtil;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Bitmap;
 import flash.display.Sprite;
-import flash.filters.DropShadowFilter;
 import flash.geom.ColorTransform;
 
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
@@ -49,7 +49,7 @@ public class GameObjectListItem extends Sprite
 		}
 		this.text.x = 32;
 		this.text.y = 6;
-		this.text.filters = [new DropShadowFilter(0, 0, 0)];
+		this.text.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addChild(this.text);
 		this.textReady = this.text.textChanged;
 		this.draw(_arg_3);

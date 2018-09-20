@@ -3,13 +3,13 @@
 package com.company.assembleegameclient.account.ui
 {
 import com.company.ui.BaseSimpleText;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.CapsStyle;
 import flash.display.JointStyle;
 import flash.display.LineScaleMode;
 import flash.display.Sprite;
 import flash.events.Event;
-import flash.filters.DropShadowFilter;
 
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.LineBuilder;
@@ -35,7 +35,7 @@ public class TextInputField extends Sprite
 		{
 			this.nameText_.setBold(true);
 			this.nameText_.setStringBuilder(new LineBuilder().setParams(_arg_1));
-			this.nameText_.filters = [new DropShadowFilter(0, 0, 0)];
+			this.nameText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 			addChild(this.nameText_);
 			this.inputText_.y = 30;
 		}
@@ -52,7 +52,7 @@ public class TextInputField extends Sprite
 		}
 		this.nameText_.setBold(true);
 		this.nameText_.setStringBuilder(new LineBuilder().setParams(_arg_1));
-		this.nameText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.nameText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addChild(this.nameText_);
 		this.inputText_ = new BaseSimpleText(20, 0xB3B3B3, true, 238, 30);
 		this.inputText_.y = 30;
@@ -76,7 +76,7 @@ public class TextInputField extends Sprite
 		this.errorText_ = new TextFieldDisplayConcrete().setSize(12).setColor(16549442);
 		this.errorText_.setMultiLine(true);
 		this.errorText_.y = ((this.inputText_.y + _arg_4) + 1);
-		this.errorText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.errorText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addChild(this.errorText_);
 	}
 

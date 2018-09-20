@@ -3,10 +3,10 @@
 package com.company.assembleegameclient.account.ui
 {
 import com.company.assembleegameclient.account.ui.components.Selectable;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Sprite;
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.LineBuilder;
@@ -56,7 +56,7 @@ public class PaymentMethodRadioButton extends Sprite implements Selectable
 	{
 		this.text = new TextFieldDisplayConcrete().setSize(18).setColor(0xFFFFFF).setBold(true);
 		this.text.setStringBuilder(new LineBuilder().setParams(this.label));
-		this.text.filters = [new DropShadowFilter(0, 0, 0)];
+		this.text.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		this.text.x = (HEIGHT + 8);
 		addChild(this.text);
 	}

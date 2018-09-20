@@ -4,11 +4,11 @@ package com.company.assembleegameclient.ui
 {
 import com.company.assembleegameclient.game.AGameSprite;
 import com.company.ui.BaseSimpleText;
+import com.greensock.plugins.DropShadowFilterPlugin;
 
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.MouseEvent;
-import flash.filters.DropShadowFilter;
 
 import kabam.rotmg.constants.GeneralConstants;
 import kabam.rotmg.messaging.impl.data.TradeItem;
@@ -46,12 +46,12 @@ public class TradeInventory extends Sprite
 		this.nameText_.y = 0;
 		this.nameText_.text = this.playerName_;
 		this.nameText_.updateMetrics();
-		this.nameText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.nameText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addChild(this.nameText_);
 		this.taglineText_ = new TextFieldDisplayConcrete().setSize(12).setColor(0xB3B3B3);
 		this.taglineText_.x = 0;
 		this.taglineText_.y = 22;
-		this.taglineText_.filters = [new DropShadowFilter(0, 0, 0)];
+		this.taglineText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 		addChild(this.taglineText_);
 		var _local_5:int;
 		while (_local_5 < (GeneralConstants.NUM_EQUIPMENT_SLOTS + GeneralConstants.NUM_INVENTORY_SLOTS))
