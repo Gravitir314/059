@@ -1,12 +1,12 @@
 ﻿//kabam.rotmg.packages.control.BuyPackageSuccessfulSignal
 
 package kabam.rotmg.packages.control
-{
-import org.osflash.signals.Signal;
+	{
+	import org.osflash.signals.Signal;
 
-public class BuyPackageSuccessfulSignal extends Signal
-{
+	public class BuyPackageSuccessfulSignal extends Signal
+		{
 
-}
-}//package kabam.rotmg.packages.control
+		}
+	}//package kabam.rotmg.packages.control
 

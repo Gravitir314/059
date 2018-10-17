@@ -1,12 +1,12 @@
 package com.company.rotmg.graphics
-{
-import flash.display.MovieClip;
-
-[Embed(source="ScreenGraphic.swf", symbol="com.company.rotmg.graphics.ScreenGraphic")]
-public dynamic class ScreenGraphic extends MovieClip
-{
-	public function ScreenGraphic()
 	{
+	import flash.display.MovieClip;
+
+	[Embed(source="ScreenGraphic.swf", symbol="com.company.rotmg.graphics.ScreenGraphic")]
+	public dynamic class ScreenGraphic extends MovieClip
+		{
+			public function ScreenGraphic()
+			{
+			}
+		}
 	}
-}
-}

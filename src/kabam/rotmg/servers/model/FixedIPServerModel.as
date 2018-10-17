@@ -1,58 +1,58 @@
 ﻿//kabam.rotmg.servers.model.FixedIPServerModel
 
 package kabam.rotmg.servers.model
-{
-import com.company.assembleegameclient.parameters.Parameters;
-
-import kabam.rotmg.servers.api.Server;
-import kabam.rotmg.servers.api.ServerModel;
-
-public class FixedIPServerModel implements ServerModel
-{
-
-	private var localhost:Server;
-
-	public function FixedIPServerModel()
 	{
-		this.localhost = new Server().setName("localhost").setPort(Parameters.PORT);
-	}
+	import com.company.assembleegameclient.parameters.Parameters;
 
-	public function setIP(_arg_1:String):FixedIPServerModel
-	{
-		this.localhost.setAddress(_arg_1);
-		return (this);
-	}
+	import kabam.rotmg.servers.api.Server;
+	import kabam.rotmg.servers.api.ServerModel;
 
-	public function getServers():Vector.<Server>
-	{
-		return (new <Server>[this.localhost]);
-	}
+	public class FixedIPServerModel implements ServerModel
+		{
 
-	public function getAbbreviations():Vector.<String>
-	{
-		return (new <String>[this.localhost.name])
-	}
+			private var localhost:Server;
 
-	public function getServerByName(_arg_1:String):Server
-	{
-		return (this.localhost);
-	}
+			public function FixedIPServerModel()
+			{
+				this.localhost = new Server().setName("localhost").setPort(Parameters.PORT);
+			}
 
-	public function getServer():Server
-	{
-		return (this.localhost);
-	}
+			public function setIP(_arg_1:String):FixedIPServerModel
+			{
+				this.localhost.setAddress(_arg_1);
+				return (this);
+			}
 
-	public function isServerAvailable():Boolean
-	{
-		return (true);
-	}
+			public function getServers():Vector.<Server>
+			{
+				return (new <Server>[this.localhost]);
+			}
 
-	public function setServers(_arg_1:Vector.<Server>):void
-	{
-	}
+			public function getAbbreviations():Vector.<String>
+			{
+				return (new <String>[this.localhost.name])
+			}
+
+			public function getServerByName(_arg_1:String):Server
+			{
+				return (this.localhost);
+			}
+
+			public function getServer():Server
+			{
+				return (this.localhost);
+			}
+
+			public function isServerAvailable():Boolean
+			{
+				return (true);
+			}
+
+			public function setServers(_arg_1:Vector.<Server>):void
+			{
+			}
 
 
-}
-}//package kabam.rotmg.servers.model
+		}
+	}//package kabam.rotmg.servers.model
 

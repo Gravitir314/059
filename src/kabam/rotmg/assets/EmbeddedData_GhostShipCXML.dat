@@ -48,7 +48,7 @@
       <HitSound>monster/pirates_hit</HitSound>
       <DeathSound>monster/skull_shrine_death</DeathSound>
       <Size>0</Size>
-      <MaxHitPoints>20000</MaxHitPoints>
+      <MaxHitPoints>35000</MaxHitPoints>
       <StasisImmune/>
       <Defense>35</Defense>
       <God/>
@@ -151,7 +151,7 @@
       </Texture>
       <HitSound>monster/traps_hit</HitSound>
       <DeathSound>spell/fire_nova</DeathSound>
-      <MaxHitPoints>2000</MaxHitPoints>
+      <MaxHitPoints>3500</MaxHitPoints>
       <Exp>0</Exp>
       <Size>120</Size>
       <Defense>2</Defense>

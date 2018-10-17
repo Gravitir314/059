@@ -1,13 +1,13 @@
 ﻿//kabam.rotmg.dialogs.control.CloseDialogsSignal
 
 package kabam.rotmg.dialogs.control
-{
-import org.osflash.signals.Signal;
+	{
+	import org.osflash.signals.Signal;
 
-public class CloseDialogsSignal extends Signal
-{
+	public class CloseDialogsSignal extends Signal
+		{
 
 
-}
-}//package kabam.rotmg.dialogs.control
+		}
+	}//package kabam.rotmg.dialogs.control
 

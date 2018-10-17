@@ -1,17 +1,17 @@
 ﻿//kabam.rotmg.arena.control.ImminentArenaWaveSignal
 
 package kabam.rotmg.arena.control
-{
-import org.osflash.signals.Signal;
-
-public class ImminentArenaWaveSignal extends Signal
-{
-
-	public function ImminentArenaWaveSignal()
 	{
-		super(int);
-	}
+	import org.osflash.signals.Signal;
 
-}
-}//package kabam.rotmg.arena.control
+	public class ImminentArenaWaveSignal extends Signal
+		{
+
+			public function ImminentArenaWaveSignal()
+			{
+				super(int);
+			}
+
+		}
+	}//package kabam.rotmg.arena.control
 

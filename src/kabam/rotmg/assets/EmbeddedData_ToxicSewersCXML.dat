@@ -270,7 +270,7 @@
       <HitSound>monster/slimes_hit</HitSound>
       <DeathSound>monster/slimes_death</DeathSound>
       <Size>120</Size>
-      <MaxHitPoints>25000</MaxHitPoints>
+      <MaxHitPoints>20000</MaxHitPoints>
       <Defense>25</Defense>
       <Quest/>
       <God/>
@@ -338,7 +338,7 @@
       <HitSound>monster/slimes_hit</HitSound>
       <DeathSound>monster/slimes_death</DeathSound>
       <Size>70</Size>
-      <MaxHitPoints>8000</MaxHitPoints>
+      <MaxHitPoints>6000</MaxHitPoints>
       <Defense>25</Defense>
       <StasisImmune/>
       <NoArticle/>
@@ -370,7 +370,7 @@
       <HitSound>monster/slimes_hit</HitSound>
       <DeathSound>monster/slimes_death</DeathSound>
       <Size>50</Size>
-      <MaxHitPoints>5000</MaxHitPoints>
+      <MaxHitPoints>3000</MaxHitPoints>
       <Defense>25</Defense>
       <Exp>0</Exp>
       <StasisImmune/>

@@ -224,7 +224,7 @@
       <Size>130</Size>
       <HitSound>monster/slimes_hit</HitSound>
       <DeathSound>monster/slimes_death</DeathSound>
-      <MaxHitPoints>180000</MaxHitPoints>
+      <MaxHitPoints>160000</MaxHitPoints>
       <Defense>35</Defense>
       <Exp>12000</Exp>
       <ShadowColor>0xFFA447</ShadowColor>

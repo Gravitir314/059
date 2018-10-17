@@ -1,22 +1,22 @@
 ﻿//kabam.rotmg.servers.api.ServerModel
 
 package kabam.rotmg.servers.api
-{
-public interface ServerModel
-{
+	{
+	public interface ServerModel
+		{
 
-	function setServers(_arg_1:Vector.<Server>):void;
+			function setServers(_arg_1:Vector.<Server>):void;
 
-	function getServer():Server;
+			function getServer():Server;
 
-	function getServerByName(_arg_1:String):Server;
+			function getServerByName(_arg_1:String):Server;
 
-	function isServerAvailable():Boolean;
+			function isServerAvailable():Boolean;
 
-	function getServers():Vector.<Server>;
+			function getServers():Vector.<Server>;
 
-	function getAbbreviations():Vector.<String>;
+			function getAbbreviations():Vector.<String>;
 
-}
-}//package kabam.rotmg.servers.api
+		}
+	}//package kabam.rotmg.servers.api
 

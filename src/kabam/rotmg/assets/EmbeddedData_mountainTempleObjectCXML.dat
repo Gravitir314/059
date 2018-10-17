@@ -3515,7 +3515,7 @@
       <HitSound>monster/greater_demons_hit</HitSound>
       <DeathSound>monster/greater_demons_death</DeathSound>
       <Size>100</Size>
-      <MaxHitPoints>75000</MaxHitPoints>
+      <MaxHitPoints>30000</MaxHitPoints>
       <Defense>12</Defense>
       <Flying/>
       <Hero/>
@@ -3575,7 +3575,7 @@
       <HitSound>monster/greater_demons_hit</HitSound>
       <DeathSound>monster/greater_demons_death</DeathSound>
       <Size>100</Size>
-      <MaxHitPoints>75000</MaxHitPoints>
+      <MaxHitPoints>30000</MaxHitPoints>
       <Defense>12</Defense>
       <Flying/>
       <Hero/>

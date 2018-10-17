@@ -248,7 +248,7 @@
       <DeathSound>monster/skeletons_death</DeathSound>
       <Size>120</Size>
       <ShadowSize>90</ShadowSize>
-      <MaxHitPoints>13500</MaxHitPoints>
+      <MaxHitPoints>8000</MaxHitPoints>
       <Defense>10</Defense>
       <Exp>0</Exp>
       <ParalyzeImmune/>

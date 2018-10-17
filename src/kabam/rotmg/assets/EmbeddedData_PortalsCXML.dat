@@ -272,7 +272,7 @@
          <Index>0x410</Index>
       </Texture>
    </Object>
-   <Object type="0x072d" id="Dreamscape Labyrinth Portal">
+   <Object type="0x0735" id="Dreamscape Labyrinth Portal">
       <Class>Portal</Class>
       <IntergamePortal/>
       <DisplayId>Dreamscape Labyrinth</DisplayId>
@@ -282,7 +282,7 @@
          <Index>0x7c</Index>
       </Texture>
    </Object>
-   <Object type="0x072c" id="Tomb of the Ancients Portal">
+   <Object type="0x0734" id="Tomb of the Ancients Portal">
       <DisplayId>Tomb of the Ancients</DisplayId>
       <Class>Portal</Class>
       <IntergamePortal/>

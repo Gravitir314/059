@@ -60,7 +60,7 @@
       <HitSound>monster/oryx_hit</HitSound>
       <DeathSound>monster/oryx_death</DeathSound>
       <Size>120</Size>
-      <MaxHitPoints>75000</MaxHitPoints>
+      <MaxHitPoints>65000</MaxHitPoints>
       <Defense>60</Defense>
       <Group>Group4</Group>
       <Quest/>
@@ -148,7 +148,7 @@
       <HitSound>monster/bats_hit</HitSound>
       <DeathSound>monster/bats_death</DeathSound>
       <Group>Group1</Group>
-      <MaxHitPoints>45000</MaxHitPoints>
+      <MaxHitPoints>30000</MaxHitPoints>
       <Defense>25</Defense>
       <Exp>0</Exp>
       <Size>170</Size>
@@ -222,7 +222,7 @@
       <ShadowSize>40</ShadowSize>
       <Z>0.2</Z>
       <Flying/>
-      <MaxHitPoints>45000</MaxHitPoints>
+      <MaxHitPoints>40000</MaxHitPoints>
       <Defense>30</Defense>
       <Exp>0</Exp>
       <LeachHealth/>
@@ -266,7 +266,7 @@
       <HitSound>monster/skeletons_hit</HitSound>
       <DeathSound>monster/skeletons_death</DeathSound>
       <Size>175</Size>
-      <MaxHitPoints>75000</MaxHitPoints>
+      <MaxHitPoints>65000</MaxHitPoints>
       <Defense>40</Defense>
       <Exp>0</Exp>
       <Level>20</Level>
@@ -364,7 +364,7 @@
       </AnimatedTexture>
       <HitSound>monster/demons_hit</HitSound>
       <DeathSound>monster/demons_death</DeathSound>
-      <MaxHitPoints>45000</MaxHitPoints>
+      <MaxHitPoints>40000</MaxHitPoints>
       <Size>100</Size>
       <Defense>20</Defense>
       <Exp>0</Exp>
@@ -459,7 +459,7 @@
       <HitSound>monster/snake_queen_hit</HitSound>
       <DeathSound>monster/snake_queen_death</DeathSound>
       <Size>100</Size>
-      <MaxHitPoints>75000</MaxHitPoints>
+      <MaxHitPoints>65000</MaxHitPoints>
       <Defense>30</Defense>
       <Group>Group2</Group>
       <Enemy/>
@@ -563,7 +563,7 @@
       <DeathSound>monster/flying_brain_death</DeathSound>
       <Size>225</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>45000</MaxHitPoints>
+      <MaxHitPoints>40000</MaxHitPoints>
       <Defense>30</Defense>
       <Projectile id="1">
          <ObjectId>Golden Blast</ObjectId>

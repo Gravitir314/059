@@ -1,17 +1,17 @@
 ﻿//kabam.lib.tasks.TaskResultSignal
 
 package kabam.lib.tasks
-{
-import org.osflash.signals.Signal;
-
-public class TaskResultSignal extends Signal
-{
-
-	public function TaskResultSignal()
 	{
-		super(BaseTask, Boolean, String);
-	}
+	import org.osflash.signals.Signal;
 
-}
-}//package kabam.lib.tasks
+	public class TaskResultSignal extends Signal
+		{
+
+			public function TaskResultSignal()
+			{
+				super(BaseTask, Boolean, String);
+			}
+
+		}
+	}//package kabam.lib.tasks
 

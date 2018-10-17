@@ -1,17 +1,17 @@
 ﻿//kabam.rotmg.game.focus.control.SetGameFocusSignal
 
 package kabam.rotmg.game.focus.control
-{
-import org.osflash.signals.Signal;
-
-public class SetGameFocusSignal extends Signal
-{
-
-	public function SetGameFocusSignal()
 	{
-		super(String);
-	}
+	import org.osflash.signals.Signal;
 
-}
-}//package kabam.rotmg.game.focus.control
+	public class SetGameFocusSignal extends Signal
+		{
+
+			public function SetGameFocusSignal()
+			{
+				super(String);
+			}
+
+		}
+	}//package kabam.rotmg.game.focus.control
 

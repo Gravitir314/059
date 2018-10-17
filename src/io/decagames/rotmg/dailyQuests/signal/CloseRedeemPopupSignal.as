@@ -1,13 +1,13 @@
 ﻿//io.decagames.rotmg.dailyQuests.signal.CloseRedeemPopupSignal
 
 package io.decagames.rotmg.dailyQuests.signal
-{
-import org.osflash.signals.Signal;
+	{
+	import org.osflash.signals.Signal;
 
-public class CloseRedeemPopupSignal extends Signal
-{
+	public class CloseRedeemPopupSignal extends Signal
+		{
 
 
-}
-}//package io.decagames.rotmg.dailyQuests.signal
+		}
+	}//package io.decagames.rotmg.dailyQuests.signal
 

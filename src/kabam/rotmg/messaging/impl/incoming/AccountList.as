@@ -1,41 +1,41 @@
 ﻿//kabam.rotmg.messaging.impl.incoming.AccountList
 
 package kabam.rotmg.messaging.impl.incoming
-{
-import flash.utils.IDataInput;
-
-public class AccountList extends IncomingMessage
-{
-
-	public var accountListId_:int;
-	public var accountIds_:Vector.<String> = new Vector.<String>();
-	public var lockAction_:int = -1;
-
-	public function AccountList(_arg_1:uint, _arg_2:Function)
 	{
-		super(_arg_1, _arg_2);
-	}
+	import flash.utils.IDataInput;
 
-	override public function parseFromInput(_arg_1:IDataInput):void
-	{
-		var _local_2:int = 0;
-		this.accountListId_ = _arg_1.readInt();
-		this.accountIds_.length = 0;
-		var _local_3:int = _arg_1.readShort();
-		while (_local_2 < _local_3)
+	public class AccountList extends IncomingMessage
 		{
-			this.accountIds_.push(_arg_1.readUTF());
-			_local_2++;
+
+			public var accountListId_:int;
+			public var accountIds_:Vector.<String> = new Vector.<String>();
+			public var lockAction_:int = -1;
+
+			public function AccountList(_arg_1:uint, _arg_2:Function)
+			{
+				super(_arg_1, _arg_2);
+			}
+
+			override public function parseFromInput(_arg_1:IDataInput):void
+			{
+				var _local_2:int = 0;
+				this.accountListId_ = _arg_1.readInt();
+				this.accountIds_.length = 0;
+				var _local_3:int = _arg_1.readShort();
+				while (_local_2 < _local_3)
+				{
+					this.accountIds_.push(_arg_1.readUTF());
+					_local_2++;
+				}
+				this.lockAction_ = _arg_1.readInt();
+			}
+
+			override public function toString():String
+			{
+				return (formatToString("ACCOUNTLIST", "accountListId_", "accountIds_", "lockAction_"));
+			}
+
+
 		}
-		this.lockAction_ = _arg_1.readInt();
-	}
-
-	override public function toString():String
-	{
-		return (formatToString("ACCOUNTLIST", "accountListId_", "accountIds_", "lockAction_"));
-	}
-
-
-}
-}//package kabam.rotmg.messaging.impl.incoming
+	}//package kabam.rotmg.messaging.impl.incoming
 

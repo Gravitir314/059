@@ -23,7 +23,7 @@
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
    </Object>
    <Object type="0x934" id="Testing Key Dropper">
       <Class>Character</Class>

@@ -648,7 +648,7 @@
          <File>lostHallsObjects8x8</File>
          <Index>0x1e</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <Effect color="0x270068">Vortex</Effect>
    </Object>
@@ -4526,7 +4526,7 @@
       <ParalyzeImmune/>
       <Projectile id="0">
          <ObjectId>Balaam Red Shot</ObjectId>
-         <Damage>450</Damage>
+         <Damage>350</Damage>
          <Size>160</Size>
          <Speed>30</Speed>
          <LifetimeMS>10000</LifetimeMS>

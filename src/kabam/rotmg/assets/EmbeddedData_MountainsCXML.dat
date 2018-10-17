@@ -413,7 +413,7 @@
       <HitSound>monster/ghost_god_hit</HitSound>
       <DeathSound>monster/ghost_god_death</DeathSound>
       <Size>100</Size>
-      <MaxHitPoints>27000</MaxHitPoints>
+      <MaxHitPoints>15000</MaxHitPoints>
       <Defense>25</Defense>
       <God/>
       <StasisImmune/>

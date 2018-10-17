@@ -21,12 +21,20 @@
    <Object type="0x0711" id="Trap">
       <Class>Character</Class>
       <Texture>
-         <File>lofiEnvironment</File>
-         <Index>0xff</Index>
+         <File>invisible</File>
+         <Index>0</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <Z>-0.2</Z>
       <NoMiniMap/>
+   </Object>
+   <Object type="0x3cc0" id="Poison">
+      <Class>GameObject</Class>
+      <Texture>
+         <File>invisible</File>
+         <Index>0</Index>
+      </Texture>
+      <Size>-1</Size>
    </Object>
    <Object type="0x0712" id="Nexus Portal">
       <Class>Portal</Class>
@@ -81,94 +89,6 @@
          <Index>0xe9</Index>
       </Texture>
       <ShadowSize>0</ShadowSize>
-   </Object>
-   <Object type="0x0723" id="Gravestone 1">
-      <Class>GameObject</Class>
-      <ShowName/>
-      <Texture>
-         <File>lofiChar28x8</File>
-         <Index>0x6c</Index>
-      </Texture>
-   </Object>
-   <Object type="0x0724" id="Gravestone 2">
-      <Class>GameObject</Class>
-      <ShowName/>
-      <Texture>
-         <File>lofiChar28x8</File>
-         <Index>0x6d</Index>
-      </Texture>
-   </Object>
-   <Object type="0x0725" id="Gravestone 3">
-      <Class>GameObject</Class>
-      <ShowName/>
-      <Texture>
-         <File>lofiChar28x8</File>
-         <Index>0x6e</Index>
-      </Texture>
-   </Object>
-   <Object type="0x0726" id="Gravestone 4">
-      <Class>GameObject</Class>
-      <ShowName/>
-      <Texture>
-         <File>lofiChar28x8</File>
-         <Index>0x6f</Index>
-      </Texture>
-   </Object>
-   <Object type="0x0727" id="Gravestone 5">
-      <Class>GameObject</Class>
-      <ShowName/>
-      <Texture>
-         <File>lofiChar216x16</File>
-         <Index>0x13</Index>
-      </Texture>
-   </Object>
-   <Object type="0x0728" id="Gravestone 6">
-      <Class>GameObject</Class>
-      <ShowName/>
-      <Texture>
-         <File>lofiChar216x16</File>
-         <Index>0x14</Index>
-      </Texture>
-   </Object>
-   <Object type="0x0729" id="Gravestone 7">
-      <Class>GameObject</Class>
-      <ShowName/>
-      <Texture>
-         <File>lofiChar216x16</File>
-         <Index>0x15</Index>
-      </Texture>
-   </Object>
-   <Object type="0x072a" id="Gravestone 8">
-      <Class>GameObject</Class>
-      <ShowName/>
-      <Texture>
-         <File>lofiChar216x16</File>
-         <Index>0x16</Index>
-      </Texture>
-   </Object>
-   <Object type="0x072b" id="Gravestone 9">
-      <Class>GameObject</Class>
-      <ShowName/>
-      <Texture>
-         <File>lofiChar216x16</File>
-         <Index>0x17</Index>
-      </Texture>
-   </Object>
-   <Object type="0x0734" id="Gravestone 10">
-      <Class>GameObject</Class>
-      <ShowName/>
-      <Texture>
-         <File>lofiChar216x16</File>
-         <Index>0x27</Index>
-      </Texture>
-   </Object>
-   <Object type="0x0735" id="Gravestone 11">
-      <Class>GameObject</Class>
-      <ShowName/>
-      <Texture>
-         <File>lofiChar216x16</File>
-         <Index>0x3d</Index>
-      </Texture>
    </Object>
    <Object type="0x01c7" id="White Fountain">
       <Class>GameObject</Class>
@@ -236,7 +156,7 @@
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
       <Effect color="0xFFFFFF" rate="4" life="3" lifeVariance=".25" speed="0" speedVariance=".5" size="5" rise="-.6" riseVariance=".1" rangeX="5" rangeY="5">CustomParticles</Effect>
@@ -315,7 +235,7 @@
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <ShadowSize>0</ShadowSize>
+      <Size>-1</Size>
       <Sound id="0">monster/traps_death</Sound>
    </Object>
    <Object type="0x073a" id="Cube">
@@ -381,7 +301,7 @@
          <File>lofiObj2</File>
          <Index>0xfb</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x0511" id="Mystery Box">
@@ -395,7 +315,7 @@
       <Class>MysteryBoxGround</Class>
       <NoMiniMap/>
       <ShadowSize>0</ShadowSize>
-      <Size>0</Size>
+      <Size>-1</Size>
       <Texture>
          <File>lofiObj3</File>
          <Index>0x494</Index>
@@ -425,7 +345,7 @@
       <Class>FortuneGround</Class>
       <NoMiniMap/>
       <ShadowSize>0</ShadowSize>
-      <Size>0</Size>
+      <Size>-1</Size>
       <Texture>
          <File>lofiObj3</File>
          <Index>0x494</Index>
@@ -472,7 +392,7 @@
    <Object type="0x175B" id="Daily Login Rewards Inv Object">
       <Class>DailyLoginRewards</Class>
       <ShadowSize>0</ShadowSize>
-      <Size>0</Size>
+      <Size>-1</Size>
       <Texture>
          <File>lofiObj3</File>
          <Index>0x4Fa</Index>
@@ -520,7 +440,7 @@
    <Object type="0x1755" id="Quest Rewards Inv Object">
       <Class>QuestRewards</Class>
       <ShadowSize>0</ShadowSize>
-      <Size>0</Size>
+      <Size>-1</Size>
       <Texture>
          <File>lofiObj3</File>
          <Index>0x4F6</Index>
@@ -555,86 +475,6 @@
             </Texture>
          </Frame>
       </Animation>
-   </Object>
-   <Object type="0x96f" id="Event Pinata">
-      <DisplayId>Pinata</DisplayId>
-      <Class>Character</Class>
-      <Enemy/>
-      <KeepDamageRecord/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x8b</Index>
-      </Texture>
-      <MaxHitPoints>60000</MaxHitPoints>
-      <Sound id="0">weapon/firework</Sound>
-      <Defense>0</Defense>
-      <Size>160</Size>
-      <Exp>1000</Exp>
-      <StasisImmune/>
-      <ParalyzeImmune/>
-   </Object>
-   <Object type="0x744D" id="Event Chest">
-      <DisplayId>Event Chest</DisplayId>
-      <Class>Character</Class>
-      <Enemy/>
-      <KeepDamageRecord/>
-      <Texture>
-         <File>lofiObj3</File>
-         <Index>0x466</Index>
-      </Texture>
-      <MaxHitPoints>60000</MaxHitPoints>
-      <Defense>0</Defense>
-      <Size>160</Size>
-      <Exp>1000</Exp>
-      <StasisImmune/>
-   </Object>
-   <Object type="0x6f9" id="Event Chest MotMG LH">
-      <DisplayId>Event Chest</DisplayId>
-      <Class>Character</Class>
-      <Enemy/>
-      <KeepDamageRecord/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x8d</Index>
-      </Texture>
-      <MaxHitPoints>60000</MaxHitPoints>
-      <Defense>0</Defense>
-      <Size>160</Size>
-      <Exp>1000</Exp>
-      <StasisImmune/>
-   </Object>
-   <Object type="0x6fa" id="Event Chest MotMG LH Helper">
-      <DisplayId>Mysterious voice</DisplayId>
-      <Class>Character</Class>
-      <Size>0</Size>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x8d</Index>
-      </Texture>
-   </Object>
-   <Object type="0x6dc" id="Oryx Portal Helper">
-      <DisplayId>Oryx the Mad God</DisplayId>
-      <Class>Character</Class>
-      <Size>100</Size>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x0c</Index>
-      </Texture>
-   </Object>
-   <Object type="0x744F" id="Event Chest MotMG">
-      <DisplayId>Event Chest</DisplayId>
-      <Class>Character</Class>
-      <Enemy/>
-      <KeepDamageRecord/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x8d</Index>
-      </Texture>
-      <MaxHitPoints>60000</MaxHitPoints>
-      <Defense>0</Defense>
-      <Size>160</Size>
-      <Exp>1000</Exp>
-      <StasisImmune/>
    </Object>
    <Object type="0xd8d" id="Quest Chest">
       <DisplayId>Quest Chest</DisplayId>
@@ -819,56 +659,5 @@
       <ShadowColor>0xff8271</ShadowColor>
       <Z>0.4</Z>
       <Flying/>
-   </Object>
-   <Object type="0x407" id="Potion Pinata">
-      <DisplayId>Potion Pinata</DisplayId>
-      <Enemy/>
-      <Class>Character</Class>
-      <Texture>
-         <File>santaWorkshopObjects8x8</File>
-         <Index>0x6b</Index>
-      </Texture>
-      <HitSound>monster/default_hit</HitSound>
-      <DeathSound>monster/default_death</DeathSound>
-      <Size>100</Size>
-      <ShadowSize>100</ShadowSize>
-      <MaxHitPoints>10000</MaxHitPoints>
-      <Defense>0</Defense>
-      <Exp>35</Exp>
-      <StasisImmune/>
-   </Object>
-   <Object type="0x408" id="Key Pinata">
-      <DisplayId>Key Pinata</DisplayId>
-      <Enemy/>
-      <Class>Character</Class>
-      <Texture>
-         <File>santaWorkshopObjects8x8</File>
-         <Index>0x6a</Index>
-      </Texture>
-      <HitSound>monster/default_hit</HitSound>
-      <DeathSound>monster/default_death</DeathSound>
-      <Size>100</Size>
-      <ShadowSize>100</ShadowSize>
-      <MaxHitPoints>10000</MaxHitPoints>
-      <Defense>0</Defense>
-      <Exp>35</Exp>
-      <StasisImmune/>
-   </Object>
-   <Object type="0x409" id="Food Pinata">
-      <DisplayId>Food Pinata</DisplayId>
-      <Enemy/>
-      <Class>Character</Class>
-      <Texture>
-         <File>santaWorkshopObjects8x8</File>
-         <Index>0x6c</Index>
-      </Texture>
-      <HitSound>monster/default_hit</HitSound>
-      <DeathSound>monster/default_death</DeathSound>
-      <Size>100</Size>
-      <ShadowSize>100</ShadowSize>
-      <MaxHitPoints>10000</MaxHitPoints>
-      <Defense>0</Defense>
-      <Exp>35</Exp>
-      <StasisImmune/>
    </Object>
 </Objects>

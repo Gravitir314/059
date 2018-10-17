@@ -1,14 +1,14 @@
 ﻿//kabam.rotmg.fame.model.FameVO
 
 package kabam.rotmg.fame.model
-{
-public interface FameVO
-{
+	{
+	public interface FameVO
+		{
 
-	function getAccountId():String;
+			function getAccountId():String;
 
-	function getCharacterId():int;
+			function getCharacterId():int;
 
-}
-}//package kabam.rotmg.fame.model
+		}
+	}//package kabam.rotmg.fame.model
 

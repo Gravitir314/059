@@ -9986,7 +9986,7 @@
       <SlotType>6</SlotType>
       <Description>Only cheaters wear this armor.</Description>
       <ActivateOnEquip stat="0" amount="-100">IncrementStat</ActivateOnEquip>
-      <BagType>0</BagType>
+      <BagType>6</BagType>
       <feedPower>300</feedPower>
       <Soulbound/>
    </Object>
@@ -10000,7 +10000,7 @@
       <SlotType>14</SlotType>
       <Description>Only cheaters wear this robe.</Description>
       <ActivateOnEquip stat="0" amount="-100">IncrementStat</ActivateOnEquip>
-      <BagType>0</BagType>
+      <BagType>6</BagType>
       <feedPower>300</feedPower>
       <Soulbound/>
    </Object>
@@ -10014,7 +10014,7 @@
       <SlotType>7</SlotType>
       <Description>Only cheaters wear this armor.</Description>
       <ActivateOnEquip stat="0" amount="-100">IncrementStat</ActivateOnEquip>
-      <BagType>0</BagType>
+      <BagType>6</BagType>
       <feedPower>300</feedPower>
       <Soulbound/>
    </Object>
@@ -10605,6 +10605,7 @@
       <Soulbound/>
    </Object>
    <Object type="0xb41" id="Tablet of the King's Avatar">
+      <DisplayId>Tablet of the King's Avatar</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -10612,15 +10613,15 @@
          <Index>0x490</Index>
       </Texture>
       <SlotType>11</SlotType>
-      <Description>Piercing. Thought to have been lost to the ages, the wisdom imparted in this tablet will summon a power unrivaled by any modern spell.</Description>
+      <Description>Thought to have been lost to the ages, the wisdom imparted in this tablet will summon a power unrivaled by any modern spell.</Description>
       <Sound>spell/magic_nova</Sound>
       <Projectile>
          <ObjectId>Fire Claw</ObjectId>
          <Speed>120</Speed>
-         <MinDamage>85</MinDamage>
-         <MaxDamage>125</MaxDamage>
-         <LifetimeMS>950</LifetimeMS>
-         <MultiHit/>
+         <MinDamage>260</MinDamage>
+         <MaxDamage>280</MaxDamage>
+         <LifetimeMS>167</LifetimeMS>
+         <Boomerang/>
       </Projectile>
       <ActivateOnEquip stat="27" amount="4">IncrementStat</ActivateOnEquip>
       <ActivateOnEquip stat="3" amount="40">IncrementStat</ActivateOnEquip>
@@ -10628,8 +10629,8 @@
       <BagType>6</BagType>
       <FameBonus>6</FameBonus>
       <MpCost>120</MpCost>
-      <Activate>BulletNova</Activate>
-      <feedPower>450</feedPower>
+      <Activate numShots="15">BulletNova</Activate>
+      <feedPower>1100</feedPower>
       <Soulbound/>
    </Object>
    <Object type="0x221c" id="Skull-splitter Sword">
@@ -18670,7 +18671,7 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       <Description>The first and last teardrop of the ominous fiery demon.</Description>
       <ActivateOnEquip stat="0" amount="30">IncrementStat</ActivateOnEquip>
       <ActivateOnEquip stat="3" amount="40">IncrementStat</ActivateOnEquip>
-      <ActivateOnEquip stat="28" amount="1">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="28" amount="3">IncrementStat</ActivateOnEquip>
       <BagType>8</BagType>
       <FameBonus>4</FameBonus>
       <feedPower>500</feedPower>
@@ -18708,5 +18709,115 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       <FameBonus>4</FameBonus>
       <feedPower>500</feedPower>
       <Soulbound/>
+   </Object>
+   <Object type="0x36a2" id="Tezcacoatl's Tail">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>secludedThicketObjects8x8</File>
+         <Index>0x3f</Index>
+      </Texture>
+      <SlotType>17</SlotType>
+      <Description>Adult male basilisks are apex predators, and at full maturity their tails gain the unique ability to release piercing acid from the tip.</Description>
+      <RateOfFire>0.33</RateOfFire>
+      <Sound>weapon/wand_of_death</Sound>
+      <Projectile>
+         <ObjectId>Basilisk Spit</ObjectId>
+         <Speed>225</Speed>
+         <MinDamage>170</MinDamage>
+         <MaxDamage>200</MaxDamage>
+         <LifetimeMS>400</LifetimeMS>
+         <Amplitude>0.25</Amplitude>
+         <Frequency>1.5</Frequency>
+         <ArmorPiercing/>
+         <FaceDir/>
+         <Size>80</Size>
+      </Projectile>
+      <BagType>6</BagType>
+      <FameBonus>5</FameBonus>
+      <NumProjectiles>2</NumProjectiles>
+      <ArcGap>0</ArcGap>
+      <OldSound>magicShoot</OldSound>
+      <feedPower>800</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x36a3" id="Sealed Crystal Skull">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>secludedThicketObjects8x8</File>
+         <Index>0x40</Index>
+      </Texture>
+      <SlotType>19</SlotType>
+      <Description>An undamaged version of a well known archaeological artifact, radiating a potent dark energy. This rare find is coveted by many explorers.</Description>
+      <Usable/>
+      <BagType>6</BagType>
+      <FameBonus>5</FameBonus>
+      <MpCost>100</MpCost>
+      <ActivateOnEquip stat="0" amount="50">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="28" amount="4">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="26" amount="4">IncrementStat</ActivateOnEquip>
+      <Activate radius="5" totalDamage="130" heal="75" ignoreDef="55" wisDamageBase="30">VampireBlast</Activate>
+      <feedPower>900</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x36fa" id="Tlatoani's Shroud">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>secludedThicketObjects8x8</File>
+         <Index>0x51</Index>
+      </Texture>
+      <SlotType>14</SlotType>
+      <Description>The Tlatoani used this robe to aid them in casting their most powerful magic spells. Like their other ceremonial garbs, it rarely saw much combat application.</Description>
+      <ActivateOnEquip amount="180" stat="3">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="27" amount="10">IncrementStat</ActivateOnEquip>
+      <BagType>4</BagType>
+      <FameBonus>3</FameBonus>
+      <feedPower>500</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x36a4" id="ST Spell">
+      <DisplayId>Penetrating Blast Spell</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x57</Index>
+      </Texture>
+      <SlotType>11</SlotType>
+      <Description>This spell's destructive power is so notorious that casting it was banned for many generations.</Description>
+      <Sound>spell/magic_nova</Sound>
+      <Projectile>
+         <ObjectId>Volt Bolt</ObjectId>
+         <Speed>160</Speed>
+         <MinDamage>60</MinDamage>
+         <MaxDamage>90</MaxDamage>
+         <LifetimeMS>700</LifetimeMS>
+         <MultiHit/>
+      </Projectile>
+      <ActivateOnEquip stat="20" amount="2">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="0" amount="40">IncrementStat</ActivateOnEquip>
+      <Usable/>
+      <BagType>6</BagType>
+      <FameBonus>6</FameBonus>
+      <MpCost>65</MpCost>
+      <Activate>BulletNova</Activate>
+      <feedPower>1000</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x6e9" id="Mystery">
+      <DisplayId>Mystery Reward</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x8e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>What's in the box?</Description>
+      <Sound>spell/fire_nova</Sound>
+      <BagType>5</BagType>
+      <Consumable/>
    </Object>
 </Objects>

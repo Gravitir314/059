@@ -1,13 +1,13 @@
 ﻿//kabam.rotmg.maploading.signals.ChangeMapSignal
 
 package kabam.rotmg.maploading.signals
-{
-import org.osflash.signals.Signal;
+	{
+	import org.osflash.signals.Signal;
 
-public class ChangeMapSignal extends Signal
-{
+	public class ChangeMapSignal extends Signal
+		{
 
 
-}
-}//package kabam.rotmg.maploading.signals
+		}
+	}//package kabam.rotmg.maploading.signals
 

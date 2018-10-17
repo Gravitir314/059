@@ -3998,7 +3998,7 @@
          <File>autumnNexusObjects8x8</File>
          <Index>0x7f</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
       <Effect color="0x3c5c73" rate="1200" life=".25" lifeVariance=".25" speed="0" speedVariance="3" size="4" rise="-20" riseVariance=".1" rangeX="50" rangeY="50">CustomParticles</Effect>
@@ -8672,7 +8672,7 @@
          <File>autumnNexusObjects8x8</File>
          <Index>0x7f</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
       <Effect color="0x3c5c73" rate="4200" life=".25" lifeVariance=".25" speed="0" speedVariance="3" size="4" rise="-20" riseVariance=".1" rangeX="50" rangeY="50">CustomParticles</Effect>
@@ -8683,7 +8683,7 @@
          <File>autumnNexusObjects8x8</File>
          <Index>0x7f</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
       <Effect color="0x3c5c73" rate="7200" life=".25" lifeVariance=".25" speed="0" speedVariance="3" size="4" rise="-20" riseVariance=".1" rangeX="50" rangeY="50">CustomParticles</Effect>
@@ -8694,7 +8694,7 @@
          <File>autumnNexusObjects8x8</File>
          <Index>0x7f</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
       <Effect color="0x3c5c73" rate="2400" life=".05" lifeVariance=".05" speed="0" speedVariance="6" size="2" rise="1" riseVariance=".1" rangeX="50" rangeY="50">CustomParticles</Effect>
@@ -8705,7 +8705,7 @@
          <File>autumnNexusObjects8x8</File>
          <Index>0x7f</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
       <Effect color="0x3c5c73" rate="8400" life=".05" lifeVariance=".05" speed="0" speedVariance="6" size="2" rise="1" riseVariance=".1" rangeX="50" rangeY="50">CustomParticles</Effect>
@@ -8716,7 +8716,7 @@
          <File>autumnNexusObjects8x8</File>
          <Index>0x7f</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
       <Effect color="0x3c5c73" rate="14400" life=".05" lifeVariance=".05" speed="0" speedVariance="6" size="2" rise="1" riseVariance=".1" rangeX="50" rangeY="50">CustomParticles</Effect>
@@ -10623,7 +10623,7 @@
          <File>autumnNexusObjects8x8</File>
          <Index>0x3a1</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
       <Effect color="0x192a36" rate="330" life=".25" lifeVariance=".25" speed="0" speedVariance="3" size="4" rise="-20" riseVariance=".1" rangeX="21" rangeY="21">CustomParticles</Effect>
@@ -10634,7 +10634,7 @@
          <File>autumnNexusObjects8x8</File>
          <Index>0x3a1</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
       <Effect color="0x192a36" rate="1100" life=".25" lifeVariance=".25" speed="0" speedVariance="3" size="4" rise="-20" riseVariance=".1" rangeX="21" rangeY="21">CustomParticles</Effect>
@@ -10645,7 +10645,7 @@
          <File>autumnNexusObjects8x8</File>
          <Index>0x3a1</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
       <Effect color="0x192a36" rate="2000" life=".25" lifeVariance=".25" speed="0" speedVariance="3" size="4" rise="-20" riseVariance=".1" rangeX="21" rangeY="21">CustomParticles</Effect>
@@ -10656,7 +10656,7 @@
          <File>autumnNexusObjects8x8</File>
          <Index>0x3a1</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
       <Effect color="0x192a36" rate="1400" life=".25" lifeVariance=".25" speed="0" speedVariance="3" size="4" rise="-20" riseVariance=".1" rangeX="21" rangeY="21">CustomParticles</Effect>
@@ -10667,7 +10667,7 @@
          <File>autumnNexusObjects8x8</File>
          <Index>0x3a1</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
       <Effect color="0x192a36" rate="330" life=".25" lifeVariance=".25" speed="0" speedVariance="3" size="4" rise="-20" riseVariance=".1" rangeX="21" rangeY="21">CustomParticles</Effect>
@@ -10678,7 +10678,7 @@
          <File>autumnNexusObjects8x8</File>
          <Index>0x3a1</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
       <Effect color="0x192a36" rate="660" life=".05" lifeVariance=".05" speed="0" speedVariance="6" size="2" rise="1" riseVariance=".1" rangeX="21" rangeY="21">CustomParticles</Effect>
@@ -10689,7 +10689,7 @@
          <File>autumnNexusObjects8x8</File>
          <Index>0x3a1</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
       <Effect color="0x192a36" rate="2800" life=".05" lifeVariance=".05" speed="0" speedVariance="6" size="2" rise="1" riseVariance=".1" rangeX="21" rangeY="21">CustomParticles</Effect>
@@ -10700,7 +10700,7 @@
          <File>autumnNexusObjects8x8</File>
          <Index>0x3a1</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
       <Effect color="0x192a36" rate="4000" life=".05" lifeVariance=".05" speed="0" speedVariance="6" size="2" rise="1" riseVariance=".1" rangeX="21" rangeY="21">CustomParticles</Effect>
@@ -10711,7 +10711,7 @@
          <File>autumnNexusObjects8x8</File>
          <Index>0x3a1</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
       <Effect color="0x192a36" rate="2800" life=".05" lifeVariance=".05" speed="0" speedVariance="6" size="2" rise="1" riseVariance=".1" rangeX="21" rangeY="21">CustomParticles</Effect>
@@ -10722,7 +10722,7 @@
          <File>autumnNexusObjects8x8</File>
          <Index>0x3a1</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
       <Effect color="0x192a36" rate="660" life=".05" lifeVariance=".05" speed="0" speedVariance="6" size="2" rise="1" riseVariance=".1" rangeX="21" rangeY="21">CustomParticles</Effect>
@@ -11619,7 +11619,7 @@
       <DisplayId>Creepy Talking Jack-O-Lantern</DisplayId>
       <Class>Character</Class>
       <NoMiniMap/>
-      <Size>0</Size>
+      <Size>-1</Size>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
@@ -12680,7 +12680,7 @@
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
       <Effect color="0x831499" rate="20" life=".45" lifeVariance=".1" speed="0" speedVariance=".5" size="5" rise="1" riseVariance=".1" rangeX="1.9" rangeY="1.9">CustomParticles</Effect>
@@ -12691,7 +12691,7 @@
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
       <Effect color="0x0079eb" rate="20" life=".45" lifeVariance=".1" speed="0" speedVariance=".5" size="5" rise="1" riseVariance=".1" rangeX="1.9" rangeY="1.9">CustomParticles</Effect>
@@ -14439,42 +14439,36 @@ A dubious candy that specially made by a certain witch. Contains strange ingredi
       <Flying/>
    </Object>
    <Object type="0x41f5" id="AN FL R">
-      <Enemy/>
       <Class>Character</Class>
       <Texture>
          <File>autumnNexusObjects8x8</File>
          <Index>0x460</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
-      <StasisImmune/>
       <Effect color="0x2d7373" rate="8" life="3" lifeVariance=".25" speed="0" speedVariance=".5" size="5" rise="-.6" riseVariance=".1" rangeX="8" rangeY="8">CustomParticles</Effect>
    </Object>
    <Object type="0x41f6" id="AN FL O">
-      <Enemy/>
       <Class>Character</Class>
       <Texture>
          <File>autumnNexusObjects8x8</File>
          <Index>0x461</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
-      <StasisImmune/>
       <Effect color="0xd87a21" rate="8" life="3" lifeVariance=".25" speed="0" speedVariance=".5" size="5" rise="-.6" riseVariance=".1" rangeX="8" rangeY="8">CustomParticles</Effect>
    </Object>
    <Object type="0x41f7" id="AN FL Y">
-      <Enemy/>
       <Class>Character</Class>
       <Texture>
          <File>autumnNexusObjects8x8</File>
          <Index>0x471</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
-      <StasisImmune/>
       <Effect color="0xcf9f11" rate="8" life="3" lifeVariance=".25" speed="0" speedVariance=".5" size="5" rise="-.6" riseVariance=".1" rangeX="8" rangeY="8">CustomParticles</Effect>
    </Object>
    <Object type="0x41f8" id="HN Lp">

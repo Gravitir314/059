@@ -1,13 +1,13 @@
 ﻿//kabam.rotmg.maploading.signals.HideMapLoadingSignal
 
 package kabam.rotmg.maploading.signals
-{
-import org.osflash.signals.Signal;
+	{
+	import org.osflash.signals.Signal;
 
-public class HideMapLoadingSignal extends Signal
-{
+	public class HideMapLoadingSignal extends Signal
+		{
 
 
-}
-}//package kabam.rotmg.maploading.signals
+		}
+	}//package kabam.rotmg.maploading.signals
 

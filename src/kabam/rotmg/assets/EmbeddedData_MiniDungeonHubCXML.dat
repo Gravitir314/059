@@ -9,7 +9,7 @@
          <File>lofiCharBig</File>
          <Index>0x04</Index>
       </Texture>
-      <MaxHitPoints>5000</MaxHitPoints>
+      <MaxHitPoints>3000</MaxHitPoints>
       <Defense>50</Defense>
       <Exp>0</Exp>
       <Size>100</Size>
@@ -91,7 +91,7 @@
          <File>d1lofiObjBig</File>
          <Index>0x13</Index>
       </Texture>
-      <MaxHitPoints>10000</MaxHitPoints>
+      <MaxHitPoints>6000</MaxHitPoints>
       <Defense>20</Defense>
       <Exp>0</Exp>
       <Size>100</Size>
@@ -198,13 +198,14 @@
       <DeathSound>monster/skeletons_death</DeathSound>
       <Size>250</Size>
       <ShadowSize>25</ShadowSize>
-      <MaxHitPoints>260000</MaxHitPoints>
+      <MaxHitPoints>100000</MaxHitPoints>
       <Defense>20</Defense>
       <Exp>0</Exp>
       <ParalyzeImmune/>
       <DazedImmune/>
       <StasisImmune/>
       <StunImmune/>
+      <EventChestBoss/>
       <AltTexture id="1">
          <Texture>
             <File>invisible</File>
@@ -389,19 +390,11 @@
       </Texture>
       <Size>0</Size>
    </Object>
-   <Object type="0x51c" id="Dungeon placer B">
+   <Object type="0x224e" id="Portal Slot Maker">
       <Class>GameObject</Class>
       <Texture>
          <File>lofiEnvironment</File>
-         <Index>0xa4</Index>
-      </Texture>
-      <Size>0</Size>
-   </Object>
-   <Object type="0x51d" id="Dungeon placer C">
-      <Class>GameObject</Class>
-      <Texture>
-         <File>lofiEnvironment</File>
-         <Index>0xa4</Index>
+         <Index>0x15</Index>
       </Texture>
       <Size>0</Size>
    </Object>

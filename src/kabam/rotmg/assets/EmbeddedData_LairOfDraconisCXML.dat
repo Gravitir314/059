@@ -276,7 +276,7 @@
       <HitSound>monster/skeletons_hit</HitSound>
       <DeathSound>monster/skeletons_death</DeathSound>
       <Size>175</Size>
-      <MaxHitPoints>120000</MaxHitPoints>
+      <MaxHitPoints>35000</MaxHitPoints>
       <Defense>40</Defense>
       <Level>20</Level>
       <Quest/>
@@ -362,7 +362,7 @@
       <HitSound>monster/skeletons_hit</HitSound>
       <DeathSound>monster/skeletons_death</DeathSound>
       <Size>225</Size>
-      <MaxHitPoints>120000</MaxHitPoints>
+      <MaxHitPoints>35000</MaxHitPoints>
       <Defense>75</Defense>
       <Level>20</Level>
       <Quest/>
@@ -526,7 +526,7 @@
       <HitSound>monster/skeletons_hit</HitSound>
       <DeathSound>monster/skeletons_death</DeathSound>
       <Size>200</Size>
-      <MaxHitPoints>100000</MaxHitPoints>
+      <MaxHitPoints>27500</MaxHitPoints>
       <Defense>40</Defense>
       <Exp>975</Exp>
       <Level>20</Level>
@@ -649,7 +649,7 @@
       <HitSound>monster/skeletons_hit</HitSound>
       <DeathSound>monster/skeletons_death</DeathSound>
       <Size>225</Size>
-      <MaxHitPoints>100000</MaxHitPoints>
+      <MaxHitPoints>27500</MaxHitPoints>
       <Defense>40</Defense>
       <Level>20</Level>
       <Quest/>
@@ -822,7 +822,7 @@
       <HitSound>monster/skeletons_hit</HitSound>
       <DeathSound>monster/skeletons_death</DeathSound>
       <Size>175</Size>
-      <MaxHitPoints>110000</MaxHitPoints>
+      <MaxHitPoints>40000</MaxHitPoints>
       <Defense>60</Defense>
       <Exp>975</Exp>
       <Level>20</Level>
@@ -915,7 +915,7 @@
       <HitSound>monster/skeletons_hit</HitSound>
       <DeathSound>monster/skeletons_death</DeathSound>
       <Size>225</Size>
-      <MaxHitPoints>110000</MaxHitPoints>
+      <MaxHitPoints>40000</MaxHitPoints>
       <Defense>60</Defense>
       <Level>20</Level>
       <Quest/>
@@ -1006,7 +1006,7 @@
          <Index>0x3ac</Index>
       </Texture>
       <Size>200</Size>
-      <MaxHitPoints>10000</MaxHitPoints>
+      <MaxHitPoints>2500</MaxHitPoints>
       <Defense>20</Defense>
       <Exp>0</Exp>
       <Projectile id="0">
@@ -1109,7 +1109,7 @@
       <HitSound>monster/skeletons_hit</HitSound>
       <DeathSound>monster/skeletons_death</DeathSound>
       <Size>240</Size>
-      <MaxHitPoints>110000</MaxHitPoints>
+      <MaxHitPoints>30000</MaxHitPoints>
       <Defense>70</Defense>
       <Exp>1462</Exp>
       <Quest/>
@@ -1236,7 +1236,7 @@
       <HitSound>monster/skeletons_hit</HitSound>
       <DeathSound>monster/skeletons_death</DeathSound>
       <Size>240</Size>
-      <MaxHitPoints>110000</MaxHitPoints>
+      <MaxHitPoints>30000</MaxHitPoints>
       <Defense>70</Defense>
       <Exp>1462</Exp>
       <Quest/>
@@ -1692,7 +1692,7 @@
       <Size>175</Size>
       <Z>.5</Z>
       <ShadowSize>25</ShadowSize>
-      <MaxHitPoints>125000</MaxHitPoints>
+      <MaxHitPoints>50000</MaxHitPoints>
       <Defense>50</Defense>
       <Exp>1462</Exp>
       <Level>20</Level>
@@ -1870,7 +1870,7 @@
       <DeathSound>monster/skeletons_death</DeathSound>
       <Size>100</Size>
       <ShadowSize>40</ShadowSize>
-      <MaxHitPoints>30000</MaxHitPoints>
+      <MaxHitPoints>8000</MaxHitPoints>
       <Defense>50</Defense>
       <Exp>487</Exp>
       <StasisImmune/>
@@ -1916,7 +1916,7 @@
       <DeathSound>monster/skeletons_death</DeathSound>
       <Size>100</Size>
       <ShadowSize>40</ShadowSize>
-      <MaxHitPoints>30000</MaxHitPoints>
+      <MaxHitPoints>8000</MaxHitPoints>
       <Defense>40</Defense>
       <Exp>487</Exp>
       <StunImmune/>
@@ -1961,7 +1961,7 @@
       <DeathSound>monster/skeletons_death</DeathSound>
       <Size>100</Size>
       <ShadowSize>40</ShadowSize>
-      <MaxHitPoints>30000</MaxHitPoints>
+      <MaxHitPoints>8000</MaxHitPoints>
       <Defense>50</Defense>
       <Exp>487</Exp>
       <ArmorBreakImmune/>
@@ -2006,7 +2006,7 @@
       <DeathSound>monster/skeletons_death</DeathSound>
       <Size>100</Size>
       <ShadowSize>40</ShadowSize>
-      <MaxHitPoints>30000</MaxHitPoints>
+      <MaxHitPoints>8000</MaxHitPoints>
       <Defense>40</Defense>
       <Exp>487</Exp>
       <StasisImmune/>

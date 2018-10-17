@@ -1,13 +1,13 @@
 ﻿//kabam.rotmg.ui.signals.ShowTitleUISignal
 
 package kabam.rotmg.ui.signals
-{
-import org.osflash.signals.Signal;
+	{
+	import org.osflash.signals.Signal;
 
-public class ShowTitleUISignal extends Signal
-{
+	public class ShowTitleUISignal extends Signal
+		{
 
 
-}
-}//package kabam.rotmg.ui.signals
+		}
+	}//package kabam.rotmg.ui.signals
 

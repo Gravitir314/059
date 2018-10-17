@@ -12,7 +12,7 @@
       </AnimatedTexture>
       <HitSound>monster/medusa_hit</HitSound>
       <DeathSound>monster/medusa_death</DeathSound>
-      <MaxHitPoints>85000</MaxHitPoints>
+      <MaxHitPoints>75000</MaxHitPoints>
       <StasisImmune/>
       <StunImmune/>
       <ParalyzeImmune/>

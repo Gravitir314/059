@@ -294,7 +294,7 @@
       <DeathSound>monster/flayers_death</DeathSound>
       <Size>120</Size>
       <ShadowSize>60</ShadowSize>
-      <MaxHitPoints>36000</MaxHitPoints>
+      <MaxHitPoints>48000</MaxHitPoints>
       <Exp>2000</Exp>
       <Defense>15</Defense>
       <StasisImmune/>
@@ -927,7 +927,7 @@
       <HitSound>monster/medusa_hit</HitSound>
       <DeathSound>monster/medusa_death</DeathSound>
       <Size>150</Size>
-      <MaxHitPoints>9000</MaxHitPoints>
+      <MaxHitPoints>20000</MaxHitPoints>
       <Exp>400</Exp>
       <Defense>30</Defense>
       <ShadowSize>70</ShadowSize>
@@ -977,7 +977,7 @@
       <DeathSound>monster/ogres_death</DeathSound>
       <Size>125</Size>
       <ShadowSize>100</ShadowSize>
-      <MaxHitPoints>8000</MaxHitPoints>
+      <MaxHitPoints>10000</MaxHitPoints>
       <Exp>100</Exp>
       <Defense>20</Defense>
       <Projectile id="0">
@@ -1107,7 +1107,7 @@
       <DeathSound>monster/dragons_death</DeathSound>
       <Size>175</Size>
       <ShadowSize>100</ShadowSize>
-      <MaxHitPoints>9000</MaxHitPoints>
+      <MaxHitPoints>15000</MaxHitPoints>
       <Exp>400</Exp>
       <Defense>20</Defense>
       <StasisImmune/>
@@ -1213,7 +1213,7 @@
       <DeathSound>monster/archdemon_death</DeathSound>
       <Size>150</Size>
       <ShadowSize>100</ShadowSize>
-      <MaxHitPoints>15000</MaxHitPoints>
+      <MaxHitPoints>30000</MaxHitPoints>
       <Exp>800</Exp>
       <Defense>15</Defense>
       <StasisImmune/>
@@ -1408,7 +1408,7 @@
       <DeathSound>monster/rocks_death</DeathSound>
       <Size>125</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>8000</MaxHitPoints>
+      <MaxHitPoints>10000</MaxHitPoints>
       <Exp>100</Exp>
       <Defense>30</Defense>
       <Projectile id="0">

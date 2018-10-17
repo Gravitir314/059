@@ -1712,7 +1712,7 @@
          <File>santaWorkshopObjects8x8</File>
          <Index>0x75</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
       <StasisImmune/>

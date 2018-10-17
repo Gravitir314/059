@@ -1,30 +1,30 @@
 ﻿//kabam.rotmg.messaging.impl.incoming.PasswordPrompt
 
 package kabam.rotmg.messaging.impl.incoming
-{
-import flash.utils.IDataInput;
-
-public class PasswordPrompt extends IncomingMessage
-{
-
-	public var cleanPasswordStatus:int;
-
-	public function PasswordPrompt(_arg_1:uint, _arg_2:Function)
 	{
-		super(_arg_1, _arg_2);
-	}
+	import flash.utils.IDataInput;
 
-	override public function parseFromInput(_arg_1:IDataInput):void
-	{
-		this.cleanPasswordStatus = _arg_1.readInt();
-	}
+	public class PasswordPrompt extends IncomingMessage
+		{
 
-	override public function toString():String
-	{
-		return (formatToString("PASSWORDPROMPT", "cleanPasswordStatus"));
-	}
+			public var cleanPasswordStatus:int;
+
+			public function PasswordPrompt(_arg_1:uint, _arg_2:Function)
+			{
+				super(_arg_1, _arg_2);
+			}
+
+			override public function parseFromInput(_arg_1:IDataInput):void
+			{
+				this.cleanPasswordStatus = _arg_1.readInt();
+			}
+
+			override public function toString():String
+			{
+				return (formatToString("PASSWORDPROMPT", "cleanPasswordStatus"));
+			}
 
 
-}
-}//package kabam.rotmg.messaging.impl.incoming
+		}
+	}//package kabam.rotmg.messaging.impl.incoming
 

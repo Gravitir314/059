@@ -1,13 +1,13 @@
 ﻿//kabam.rotmg.ui.signals.ChooseNameSignal
 
 package kabam.rotmg.ui.signals
-{
-import org.osflash.signals.Signal;
+	{
+	import org.osflash.signals.Signal;
 
-public class ChooseNameSignal extends Signal
-{
+	public class ChooseNameSignal extends Signal
+		{
 
 
-}
-}//package kabam.rotmg.ui.signals
+		}
+	}//package kabam.rotmg.ui.signals
 

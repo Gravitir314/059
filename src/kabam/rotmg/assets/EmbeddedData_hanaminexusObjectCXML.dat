@@ -137,7 +137,7 @@
          <File>SakuraEnvironment8x8</File>
          <Index>0x35</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
       <StasisImmune/>
@@ -253,7 +253,7 @@
          <File>SakuraEnvironment8x8</File>
          <Index>0x36</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <Effect color="0xffffff" rate="2" life="3" lifeVariance=".1" speed="0" speedVariance=".5" size="10" sizeVariance="10" rise="1" riseVariance=".1" rangeX="5" rangeY="5">CustomParticles</Effect>
    </Object>
    <Object type="0xfac" id="Onsen Sign">
@@ -624,17 +624,10 @@
          <File>HanamiParts</File>
          <Index>0x0</Index>
       </Texture>
-      <AltTexture id="1">
-         <Texture>
-            <File>HanamiParts</File>
-            <Index>0x0</Index>
-         </Texture>
-         <Effect particle="Steam" cooldown="2.6">XMLEffect</Effect>
-      </AltTexture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
-      <StasisImmune/>
+      <Effect particle="Steam" cooldown="2.6">XMLEffect</Effect>
    </Object>
    <Object type="0xfc8" id="Japanese Stone Monument">
       <Class>GameObject</Class>

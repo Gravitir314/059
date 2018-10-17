@@ -16,7 +16,7 @@
       <PerRealmMax>1</PerRealmMax>
       <HitSound>monster/golems_hit</HitSound>
       <DeathSound>monster/beholder_death</DeathSound>
-      <MaxHitPoints>450000</MaxHitPoints>
+      <MaxHitPoints>150000</MaxHitPoints>
       <Size>200</Size>
       <Defense>90</Defense>
       <Exp>1000</Exp>
@@ -71,7 +71,7 @@
       <StasisImmune/>
       <HitSound>monster/golems_hit</HitSound>
       <DeathSound>monster/beholder_death</DeathSound>
-      <MaxHitPoints>10000</MaxHitPoints>
+      <MaxHitPoints>5000</MaxHitPoints>
       <AnimatedTexture>
          <File>chars8x8dEncounters</File>
          <Index>61</Index>
@@ -101,7 +101,7 @@
       <StunImmune/>
       <HitSound>monster/golems_hit</HitSound>
       <DeathSound>monster/beholder_death</DeathSound>
-      <MaxHitPoints>25000</MaxHitPoints>
+      <MaxHitPoints>15000</MaxHitPoints>
       <AnimatedTexture>
          <File>chars16x16dEncounters2</File>
          <Index>73</Index>
@@ -131,7 +131,7 @@
       <StunImmune/>
       <HitSound>monster/golems_hit</HitSound>
       <DeathSound>monster/beholder_death</DeathSound>
-      <MaxHitPoints>25000</MaxHitPoints>
+      <MaxHitPoints>15000</MaxHitPoints>
       <AnimatedTexture>
          <File>chars16x16dEncounters2</File>
          <Index>73</Index>
@@ -161,7 +161,7 @@
       <StunImmune/>
       <HitSound>monster/golems_hit</HitSound>
       <DeathSound>monster/beholder_death</DeathSound>
-      <MaxHitPoints>25000</MaxHitPoints>
+      <MaxHitPoints>15000</MaxHitPoints>
       <AnimatedTexture>
          <File>chars16x16dEncounters2</File>
          <Index>73</Index>
@@ -191,7 +191,7 @@
       <StunImmune/>
       <HitSound>monster/golems_hit</HitSound>
       <DeathSound>monster/beholder_death</DeathSound>
-      <MaxHitPoints>25000</MaxHitPoints>
+      <MaxHitPoints>15000</MaxHitPoints>
       <AnimatedTexture>
          <File>chars16x16dEncounters2</File>
          <Index>73</Index>
@@ -232,7 +232,7 @@
       <StasisImmune/>
       <HitSound>monster/golems_hit</HitSound>
       <DeathSound>monster/beholder_death</DeathSound>
-      <MaxHitPoints>9000</MaxHitPoints>
+      <MaxHitPoints>4500</MaxHitPoints>
       <Defense>30</Defense>
       <AnimatedTexture>
          <File>chars8x8dEncounters</File>
@@ -1237,7 +1237,7 @@
       <HitSound>monster/skull_shrine_hit</HitSound>
       <DeathSound>monster/skull_shrine_death</DeathSound>
       <Size>120</Size>
-      <MaxHitPoints>10000</MaxHitPoints>
+      <MaxHitPoints>16000</MaxHitPoints>
       <Defense>40</Defense>
       <Enemy/>
       <Hero/>
@@ -1308,7 +1308,7 @@
       <HitSound>monster/skull_shrine_hit</HitSound>
       <DeathSound>monster/skull_shrine_death</DeathSound>
       <Size>120</Size>
-      <MaxHitPoints>10000</MaxHitPoints>
+      <MaxHitPoints>16000</MaxHitPoints>
       <Defense>40</Defense>
       <Enemy/>
       <Hero/>
@@ -1376,7 +1376,7 @@
       <HitSound>monster/cubes_hit</HitSound>
       <DeathSound>monster/cubes_death</DeathSound>
       <Size>120</Size>
-      <MaxHitPoints>10000</MaxHitPoints>
+      <MaxHitPoints>16000</MaxHitPoints>
       <Hero/>
       <Quest/>
       <God/>
@@ -1485,7 +1485,7 @@
       <HitSound>monster/cubes_hit</HitSound>
       <DeathSound>monster/cubes_death</DeathSound>
       <Size>120</Size>
-      <MaxHitPoints>10000</MaxHitPoints>
+      <MaxHitPoints>16000</MaxHitPoints>
       <Hero/>
       <Quest/>
       <God/>
@@ -1665,7 +1665,7 @@
          <ConditionEffect duration="2">Stunned</ConditionEffect>
          <Size>160</Size>
       </Projectile>
-      <MaxHitPoints>5000</MaxHitPoints>
+      <MaxHitPoints>8000</MaxHitPoints>
       <Size>120</Size>
       <Exp>19</Exp>
       <God/>

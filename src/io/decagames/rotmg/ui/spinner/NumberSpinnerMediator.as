@@ -1,41 +1,41 @@
 ﻿//io.decagames.rotmg.ui.spinner.NumberSpinnerMediator
 
 package io.decagames.rotmg.ui.spinner
-{
-import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-
-import robotlegs.bender.bundles.mvcs.Mediator;
-
-public class NumberSpinnerMediator extends Mediator
-{
-
-	[Inject]
-	public var view:NumberSpinner;
-
-
-	override public function initialize():void
 	{
-		this.view.upArrow.clickSignal.add(this.onUpClicked);
-		this.view.downArrow.clickSignal.add(this.onDownClicked);
-	}
+	import io.decagames.rotmg.ui.buttons.SliceScalingButton;
 
-	private function onUpClicked(_arg_1:SliceScalingButton):void
-	{
-		this.view.addToValue(this.view.step);
-	}
+	import robotlegs.bender.bundles.mvcs.Mediator;
 
-	private function onDownClicked(_arg_1:SliceScalingButton):void
-	{
-		this.view.addToValue(-(this.view.step));
-	}
+	public class NumberSpinnerMediator extends Mediator
+		{
 
-	override public function destroy():void
-	{
-		this.view.upArrow.clickSignal.remove(this.onUpClicked);
-		this.view.downArrow.clickSignal.remove(this.onDownClicked);
-	}
+			[Inject]
+			public var view:NumberSpinner;
 
 
-}
-}//package io.decagames.rotmg.ui.spinner
+			override public function initialize():void
+			{
+				this.view.upArrow.clickSignal.add(this.onUpClicked);
+				this.view.downArrow.clickSignal.add(this.onDownClicked);
+			}
+
+			private function onUpClicked(_arg_1:SliceScalingButton):void
+			{
+				this.view.addToValue(this.view.step);
+			}
+
+			private function onDownClicked(_arg_1:SliceScalingButton):void
+			{
+				this.view.addToValue(-(this.view.step));
+			}
+
+			override public function destroy():void
+			{
+				this.view.upArrow.clickSignal.remove(this.onUpClicked);
+				this.view.downArrow.clickSignal.remove(this.onDownClicked);
+			}
+
+
+		}
+	}//package io.decagames.rotmg.ui.spinner
 

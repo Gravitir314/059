@@ -257,7 +257,6 @@
       <StunImmune/>
       <Quest/>
       <Level>20</Level>
-      <EventChestBoss/>
       <AnimatedTexture>
          <File>chars16x16dEncounters</File>
          <Index>20</Index>

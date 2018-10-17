@@ -1591,7 +1591,7 @@
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
    </Object>
    <Object type="0xbcd" id="Snowflake Generator">
       <DisplayId>Delightful Snowflake</DisplayId>
@@ -1633,7 +1633,7 @@
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <Effect color="0xD0FFFF" color2="0xF0FFFF" minRadius="4.5" maxRadius="5.5" life="1.0" size="140">Snowflake</Effect>
    </Object>
    <Object type="0xddd" id="Snowball Generator">
@@ -1658,7 +1658,7 @@
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <Effect minRadius="0.1" maxRadius="0.6" color="0xFFFFFF" size="80" life="0.30" amount="10">ExplosionComplex</Effect>
    </Object>
    <Object type="0xddf" id="Snowball Bullet">
@@ -1675,7 +1675,7 @@
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <Effect minRadius="0.2" maxRadius="1.2" color="0xFFFFFF" size="100" life="0.30" amount="40">ExplosionComplex</Effect>
    </Object>
    <Object type="0xbea" id="Snowball x 1">
@@ -2104,6 +2104,6 @@
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
    </Object>
 </Objects>

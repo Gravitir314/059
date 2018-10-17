@@ -1,13 +1,13 @@
 ﻿//kabam.rotmg.external.command.MapExternalCallbacksSignal
 
 package kabam.rotmg.external.command
-{
-import org.osflash.signals.Signal;
+	{
+	import org.osflash.signals.Signal;
 
-public class MapExternalCallbacksSignal extends Signal
-{
+	public class MapExternalCallbacksSignal extends Signal
+		{
 
 
-}
-}//package kabam.rotmg.external.command
+		}
+	}//package kabam.rotmg.external.command
 

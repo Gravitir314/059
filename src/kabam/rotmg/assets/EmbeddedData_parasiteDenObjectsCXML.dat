@@ -907,7 +907,7 @@
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <Effect maxRadius="3.7" color="0xFF9000" size="100">ExplosionComplex</Effect>
    </Object>
    <Object type="0x786" id="pD Barrel">
@@ -929,7 +929,7 @@
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <Sound id="0">spell/fire_nova</Sound>
       <Effect minRadius="0.5" maxRadius="3.7" color="0xFF9000" size="100" life="0.35" amount="100">ExplosionComplex</Effect>
    </Object>

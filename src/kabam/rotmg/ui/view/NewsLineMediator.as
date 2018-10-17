@@ -1,39 +1,39 @@
 ﻿//kabam.rotmg.ui.view.NewsLineMediator
 
 package kabam.rotmg.ui.view
-{
-import com.company.assembleegameclient.screens.GraveyardLine;
-
-import kabam.rotmg.fame.control.ShowFameViewSignal;
-import kabam.rotmg.fame.model.SimpleFameVO;
-
-import robotlegs.bender.bundles.mvcs.Mediator;
-
-public class NewsLineMediator extends Mediator
-{
-
-	[Inject]
-	public var view:GraveyardLine;
-	[Inject]
-	public var showFameView:ShowFameViewSignal;
-
-
-	override public function initialize():void
 	{
-		this.view.viewCharacterFame.add(this.onViewFame);
-	}
+	import com.company.assembleegameclient.screens.GraveyardLine;
 
-	override public function destroy():void
-	{
-		this.view.viewCharacterFame.remove(this.onViewFame);
-	}
+	import kabam.rotmg.fame.control.ShowFameViewSignal;
+	import kabam.rotmg.fame.model.SimpleFameVO;
 
-	private function onViewFame(_arg_1:int):void
-	{
-		this.showFameView.dispatch(new SimpleFameVO(this.view.accountId, _arg_1));
-	}
+	import robotlegs.bender.bundles.mvcs.Mediator;
+
+	public class NewsLineMediator extends Mediator
+		{
+
+			[Inject]
+			public var view:GraveyardLine;
+			[Inject]
+			public var showFameView:ShowFameViewSignal;
 
 
-}
-}//package kabam.rotmg.ui.view
+			override public function initialize():void
+			{
+				this.view.viewCharacterFame.add(this.onViewFame);
+			}
+
+			override public function destroy():void
+			{
+				this.view.viewCharacterFame.remove(this.onViewFame);
+			}
+
+			private function onViewFame(_arg_1:int):void
+			{
+				this.showFameView.dispatch(new SimpleFameVO(this.view.accountId, _arg_1));
+			}
+
+
+		}
+	}//package kabam.rotmg.ui.view
 

@@ -1,13 +1,13 @@
 ﻿//io.decagames.rotmg.pets.signals.AddPetsConsoleActionsSignal
 
 package io.decagames.rotmg.pets.signals
-{
-import org.osflash.signals.Signal;
+	{
+	import org.osflash.signals.Signal;
 
-public class AddPetsConsoleActionsSignal extends Signal
-{
+	public class AddPetsConsoleActionsSignal extends Signal
+		{
 
 
-}
-}//package io.decagames.rotmg.pets.signals
+		}
+	}//package io.decagames.rotmg.pets.signals
 

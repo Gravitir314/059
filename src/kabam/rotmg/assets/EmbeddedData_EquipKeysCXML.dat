@@ -716,7 +716,7 @@
          <Index>0x5f</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to the Court of Oryx. Say hi to Craig for me. For testing purposes.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to the Court of Oryx. Say hi to Craig for me.\n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
@@ -1023,5 +1023,23 @@
       <BagType>8</BagType>
       <Activate id="oryxPandemonium Portal">Create</Activate>
       <Track/>
+   </Object>
+   <Object type="0x36a0" id="Secluded Thicket Key">
+      <DisplayId>Secluded Thicket Key</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>secludedThicketObjects8x8</File>
+         <Index>0x03</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A key which opens a passage to the Secluded Thicket. The most remote region of the realm houses a tropical rainforest filled with vicious animals, fierce natives, and a deity said to command lightning itself.\n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n  Lead: Toastrz\n  Art: Dappertron, Piggby, Tero,\n  Wunderwafe\n  Special Thanks: Kiddforce, Mrunibro</Description>
+      <Sound>use_key</Sound>
+      <Soulbound/>
+      <Track/>
+      <BagType>8</BagType>
+      <Consumable/>
+      <feedPower>200</feedPower>
+      <Activate id="Secluded Thicket Portal">CreatePortal</Activate>
    </Object>
 </Objects>

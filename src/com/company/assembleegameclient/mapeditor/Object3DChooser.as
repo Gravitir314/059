@@ -1,73 +1,73 @@
 ﻿//com.company.assembleegameclient.mapeditor.Object3DChooser
 
 package com.company.assembleegameclient.mapeditor
-{
-import com.company.assembleegameclient.objects.ObjectLibrary;
-import com.company.util.MoreStringUtil;
-
-import flash.utils.Dictionary;
-
-public class Object3DChooser extends Chooser
-{
-
-	private var cache:Dictionary;
-	private var lastSearch:String = "";
-
-	public function Object3DChooser()
 	{
-		super(Layer.OBJECT);
-		this.cache = new Dictionary();
-	}
+	import com.company.assembleegameclient.objects.ObjectLibrary;
+	import com.company.util.MoreStringUtil;
 
-	public function getLastSearch():String
-	{
-		return (this.lastSearch);
-	}
+	import flash.utils.Dictionary;
 
-	public function reloadObjects(_arg_1:String = ""):void
-	{
-		var _local_3:RegExp;
-		var _local_5:String;
-		var _local_6:XML;
-		var _local_7:int;
-		var _local_8:ObjectElement;
-		removeElements();
-		this.lastSearch = _arg_1;
-		var _local_2:Vector.<String> = new Vector.<String>();
-		if (_arg_1 != "")
+	public class Object3DChooser extends Chooser
 		{
-			_local_3 = new RegExp(_arg_1, "gix");
-		}
-		var _local_4:Dictionary = GroupDivider.GROUPS["3D Objects"];
-		for each (_local_6 in _local_4)
-		{
-			_local_5 = String(_local_6.@id);
-			if (((_local_3 == null) || (_local_5.search(_local_3) >= 0)))
+
+			private var cache:Dictionary;
+			private var lastSearch:String = "";
+
+			public function Object3DChooser()
 			{
-				_local_2.push(_local_5);
+				super(Layer.OBJECT);
+				this.cache = new Dictionary();
 			}
-		}
-		_local_2.sort(MoreStringUtil.cmp);
-		for each (_local_5 in _local_2)
-		{
-			_local_7 = ObjectLibrary.idToType_[_local_5];
-			_local_6 = ObjectLibrary.xmlLibrary_[_local_7];
-			if (!this.cache[_local_7])
+
+			public function getLastSearch():String
 			{
-				_local_8 = new ObjectElement(_local_6);
-				this.cache[_local_7] = _local_8;
+				return (this.lastSearch);
 			}
-			else
+
+			public function reloadObjects(_arg_1:String = ""):void
 			{
-				_local_8 = this.cache[_local_7];
+				var _local_3:RegExp;
+				var _local_5:String;
+				var _local_6:XML;
+				var _local_7:int;
+				var _local_8:ObjectElement;
+				removeElements();
+				this.lastSearch = _arg_1;
+				var _local_2:Vector.<String> = new Vector.<String>();
+				if (_arg_1 != "")
+				{
+					_local_3 = new RegExp(_arg_1, "gix");
+				}
+				var _local_4:Dictionary = GroupDivider.GROUPS["3D Objects"];
+				for each (_local_6 in _local_4)
+				{
+					_local_5 = String(_local_6.@id);
+					if (((_local_3 == null) || (_local_5.search(_local_3) >= 0)))
+					{
+						_local_2.push(_local_5);
+					}
+				}
+				_local_2.sort(MoreStringUtil.cmp);
+				for each (_local_5 in _local_2)
+				{
+					_local_7 = ObjectLibrary.idToType_[_local_5];
+					_local_6 = ObjectLibrary.xmlLibrary_[_local_7];
+					if (!this.cache[_local_7])
+					{
+						_local_8 = new ObjectElement(_local_6);
+						this.cache[_local_7] = _local_8;
+					}
+					else
+					{
+						_local_8 = this.cache[_local_7];
+					}
+					addElement(_local_8);
+				}
+				hasBeenLoaded = true;
+				scrollBar_.setIndicatorSize(HEIGHT, elementContainer_.height, true);
 			}
-			addElement(_local_8);
-		}
-		hasBeenLoaded = true;
-		scrollBar_.setIndicatorSize(HEIGHT, elementContainer_.height, true);
-	}
 
 
-}
-}//package com.company.assembleegameclient.mapeditor
+		}
+	}//package com.company.assembleegameclient.mapeditor
 

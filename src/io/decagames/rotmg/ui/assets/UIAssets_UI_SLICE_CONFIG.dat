@@ -465,6 +465,15 @@
         "h": 47
       }
     },
+    "main_button_decoration_dark.png": {
+      "type": "3grid",
+      "rectangle": {
+        "y": 0,
+        "w": 1,
+        "x": 39,
+        "h": 47
+      }
+    },
     "daily_quest_list_element_grey.png": {
       "type": "9grid",
       "rectangle": {
@@ -489,6 +498,15 @@
         "y": 9,
         "w": 1,
         "x": 8,
+        "h": 1
+      }
+    },
+    "black_field_background.png": {
+      "type": "9grid",
+      "rectangle": {
+        "y": 11,
+        "w": 1,
+        "x": 11,
         "h": 1
       }
     }

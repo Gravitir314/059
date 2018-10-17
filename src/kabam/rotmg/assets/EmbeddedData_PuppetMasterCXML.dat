@@ -27,7 +27,7 @@
       <DeathSound>monster/skeletons_death</DeathSound>
       <Size>120</Size>
       <ShadowSize>25</ShadowSize>
-      <MaxHitPoints>70000</MaxHitPoints>
+      <MaxHitPoints>30000</MaxHitPoints>
       <Defense>30</Defense>
       <Exp>292</Exp>
       <Level>20</Level>
@@ -250,7 +250,7 @@
       <DeathSound>monster/skeletons_death</DeathSound>
       <Size>120</Size>
       <ShadowSize>25</ShadowSize>
-      <MaxHitPoints>20000</MaxHitPoints>
+      <MaxHitPoints>8000</MaxHitPoints>
       <Defense>30</Defense>
       <Exp>292</Exp>
       <Level>20</Level>
@@ -291,7 +291,7 @@
       <DeathSound>monster/skeletons_death</DeathSound>
       <Size>100</Size>
       <ShadowSize>25</ShadowSize>
-      <MaxHitPoints>35000</MaxHitPoints>
+      <MaxHitPoints>25000</MaxHitPoints>
       <Defense>20</Defense>
       <Exp>253</Exp>
       <Level>20</Level>

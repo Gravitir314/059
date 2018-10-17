@@ -148,7 +148,7 @@
       <ActivateOnEquipAll skinType="0x7568" size="80" color="ffffff" bulletType="Katana Akuma Slash big">ChangeSkin</ActivateOnEquipAll>
       <ActivateOnEquipAll stat="20" amount="3">IncrementStat</ActivateOnEquipAll>
       <ActivateOnEquipAll stat="22" amount="4">IncrementStat</ActivateOnEquipAll>
-      <ActivateOnEquipAll stat="0" amount="115">IncrementStat</ActivateOnEquipAll>
+      <ActivateOnEquipAll stat="0" amount="100">IncrementStat</ActivateOnEquipAll>
       <ActivateOnEquipAll stat="21" amount="10">IncrementStat</ActivateOnEquipAll>
    </EquipmentSet>
 </EquipmentSets>

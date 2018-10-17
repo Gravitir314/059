@@ -57,7 +57,7 @@
       </AnimatedTexture>
       <HitSound>monster/demons_hit</HitSound>
       <DeathSound>monster/demons_death</DeathSound>
-      <MaxHitPoints>10000</MaxHitPoints>
+      <MaxHitPoints>12000</MaxHitPoints>
       <Size>100</Size>
       <Defense>20</Defense>
       <Exp>136</Exp>

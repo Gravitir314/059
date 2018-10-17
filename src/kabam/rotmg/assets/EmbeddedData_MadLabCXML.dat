@@ -32,10 +32,11 @@
       <DeathSound>monster/dark_elves_death</DeathSound>
       <Size>150</Size>
       <ShadowSize>50</ShadowSize>
-      <MaxHitPoints>55000</MaxHitPoints>
+      <MaxHitPoints>45000</MaxHitPoints>
       <Defense>25</Defense>
       <Exp>136</Exp>
       <StasisImmune/>
+      <ParalyzeImmune/>
       <EventChestBoss/>
       <Projectile id="0">
          <ObjectId>Invisible</ObjectId>
@@ -591,10 +592,11 @@
       <DeathSound>monster/demons_death</DeathSound>
       <Size>200</Size>
       <ShadowSize>50</ShadowSize>
-      <MaxHitPoints>60000</MaxHitPoints>
+      <MaxHitPoints>50000</MaxHitPoints>
       <Defense>30</Defense>
       <Exp>156</Exp>
       <StasisImmune/>
+      <ParalyzeImmune/>
       <Projectile id="1">
          <ObjectId>H Creation Wave</ObjectId>
          <Speed>75</Speed>
@@ -731,7 +733,7 @@
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
       <StasisImmune/>
@@ -744,7 +746,7 @@
          <Index>0</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
+      <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <StasisImmune/>
       <Effect color="0x0079eb" rate="20" life=".45" lifeVariance=".1" speed="0" speedVariance=".5" size="5" rise="1" riseVariance=".1" rangeX="1.9" rangeY="1.9">CustomParticles</Effect>

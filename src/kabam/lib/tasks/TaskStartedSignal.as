@@ -1,17 +1,17 @@
 ﻿//kabam.lib.tasks.TaskStartedSignal
 
 package kabam.lib.tasks
-{
-import org.osflash.signals.Signal;
-
-public class TaskStartedSignal extends Signal
-{
-
-	public function TaskStartedSignal()
 	{
-		super(BaseTask);
-	}
+	import org.osflash.signals.Signal;
 
-}
-}//package kabam.lib.tasks
+	public class TaskStartedSignal extends Signal
+		{
+
+			public function TaskStartedSignal()
+			{
+				super(BaseTask);
+			}
+
+		}
+	}//package kabam.lib.tasks
 

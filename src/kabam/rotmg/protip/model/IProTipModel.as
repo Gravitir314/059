@@ -1,12 +1,12 @@
 ﻿//kabam.rotmg.protip.model.IProTipModel
 
 package kabam.rotmg.protip.model
-{
-public interface IProTipModel
-{
+	{
+	public interface IProTipModel
+		{
 
-	function getTip():String;
+			function getTip():String;
 
-}
-}//package kabam.rotmg.protip.model
+		}
+	}//package kabam.rotmg.protip.model
 

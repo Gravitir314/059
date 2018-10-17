@@ -238,6 +238,34 @@
       <Speed>.333</Speed>
       <BlendPriority>1</BlendPriority>
    </Ground>
+   <Ground type="0xb04a" id="LH Void Pure Evil Deep">
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x447</Index>
+      </Texture>
+      <DisplayId>Pure Evil</DisplayId>
+      <MinDamage>90</MinDamage>
+      <MaxDamage>90</MaxDamage>
+      <Animate dx=".35">Flow</Animate>
+      <Sink/>
+      <RandomOffset/>
+      <Speed>.333</Speed>
+      <BlendPriority>1</BlendPriority>
+   </Ground>
+   <Ground type="0xb04b" id="LH Void Pure Evil Depths">
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x447</Index>
+      </Texture>
+      <DisplayId>Pure Evil</DisplayId>
+      <MinDamage>115</MinDamage>
+      <MaxDamage>115</MaxDamage>
+      <Animate dx=".35">Flow</Animate>
+      <Sink/>
+      <RandomOffset/>
+      <Speed>.333</Speed>
+      <BlendPriority>1</BlendPriority>
+   </Ground>
    <Ground type="0xb122" id="LH Titan Tile">
       <RandomTexture>
          <Texture>

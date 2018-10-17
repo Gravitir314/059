@@ -1,13 +1,13 @@
 ﻿//kabam.rotmg.core.signals.HideTooltipsSignal
 
 package kabam.rotmg.core.signals
-{
-import org.osflash.signals.Signal;
+	{
+	import org.osflash.signals.Signal;
 
-public class HideTooltipsSignal extends Signal
-{
+	public class HideTooltipsSignal extends Signal
+		{
 
 
-}
-}//package kabam.rotmg.core.signals
+		}
+	}//package kabam.rotmg.core.signals
 

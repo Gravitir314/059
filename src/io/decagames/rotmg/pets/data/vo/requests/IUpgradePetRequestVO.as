@@ -1,10 +1,10 @@
 ﻿//io.decagames.rotmg.pets.data.vo.requests.IUpgradePetRequestVO
 
 package io.decagames.rotmg.pets.data.vo.requests
-{
-public interface IUpgradePetRequestVO
-{
+	{
+	public interface IUpgradePetRequestVO
+		{
 
-}
-}//package io.decagames.rotmg.pets.data.vo.requests
+		}
+	}//package io.decagames.rotmg.pets.data.vo.requests
 

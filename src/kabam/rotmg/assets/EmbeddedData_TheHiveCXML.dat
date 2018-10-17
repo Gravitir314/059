@@ -110,7 +110,7 @@
       </AnimatedTexture>
       <HitSound>monster/snake_queen_hit</HitSound>
       <DeathSound>monster/snake_queen_death</DeathSound>
-      <MaxHitPoints>4300</MaxHitPoints>
+      <MaxHitPoints>3500</MaxHitPoints>
       <Defense>15</Defense>
       <Size>120</Size>
       <StasisImmune/>

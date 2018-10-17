@@ -1,13 +1,13 @@
 ﻿//kabam.rotmg.core.signals.MoneyFrameEnableCancelSignal
 
 package kabam.rotmg.core.signals
-{
-import org.osflash.signals.Signal;
+	{
+	import org.osflash.signals.Signal;
 
-public class MoneyFrameEnableCancelSignal extends Signal
-{
+	public class MoneyFrameEnableCancelSignal extends Signal
+		{
 
 
-}
-}//package kabam.rotmg.core.signals
+		}
+	}//package kabam.rotmg.core.signals
 

@@ -1,13 +1,13 @@
 ﻿//kabam.rotmg.news.controller.NewsButtonRefreshSignal
 
 package kabam.rotmg.news.controller
-{
-import org.osflash.signals.Signal;
+	{
+	import org.osflash.signals.Signal;
 
-public class NewsButtonRefreshSignal extends Signal
-{
+	public class NewsButtonRefreshSignal extends Signal
+		{
 
 
-}
-}//package kabam.rotmg.news.controller
+		}
+	}//package kabam.rotmg.news.controller
 

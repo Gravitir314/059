@@ -46,8 +46,8 @@
       <HitSound>monster/greater_pit_snakes_death</HitSound>
       <DeathSound>monster/scorpions_death</DeathSound>
       <Size>0</Size>
-      <MaxHitPoints>5500</MaxHitPoints>
-      <Defense>50</Defense>
+      <MaxHitPoints>7500</MaxHitPoints>
+      <Defense>20</Defense>
       <Projectile id="0">
          <ObjectId>Snake Spit</ObjectId>
          <Speed>45</Speed>
@@ -103,7 +103,7 @@
       <HitSound>monster/snake_queen_hit</HitSound>
       <DeathSound>monster/snake_queen_death</DeathSound>
       <Size>100</Size>
-      <MaxHitPoints>7500</MaxHitPoints>
+      <MaxHitPoints>9000</MaxHitPoints>
       <Defense>19</Defense>
       <Enemy/>
       <God/>
@@ -140,7 +140,7 @@
       <HitSound>monster/snakes_hit</HitSound>
       <DeathSound>monster/snakes_death</DeathSound>
       <Size>70</Size>
-      <MaxHitPoints>5000</MaxHitPoints>
+      <MaxHitPoints>2000</MaxHitPoints>
       <Defense>7</Defense>
       <Enemy/>
       <Level>1</Level>

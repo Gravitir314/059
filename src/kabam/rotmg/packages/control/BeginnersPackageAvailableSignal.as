@@ -1,12 +1,12 @@
 ﻿//kabam.rotmg.packages.control.BeginnersPackageAvailableSignal
 
 package kabam.rotmg.packages.control
-{
-import org.osflash.signals.Signal;
+	{
+	import org.osflash.signals.Signal;
 
-public class BeginnersPackageAvailableSignal extends Signal
-{
+	public class BeginnersPackageAvailableSignal extends Signal
+		{
 
-}
-}//package kabam.rotmg.packages.control
+		}
+	}//package kabam.rotmg.packages.control
 

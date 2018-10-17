@@ -302,7 +302,7 @@
          <Index>0x151</Index>
       </Texture>
       <Size>150</Size>
-      <MaxHitPoints>9000</MaxHitPoints>
+      <MaxHitPoints>7000</MaxHitPoints>
       <Defense>55</Defense>
       <StunImmune/>
       <ParalyzeImmune/>
@@ -432,7 +432,7 @@
          <Index>73</Index>
       </AnimatedTexture>
       <Size>150</Size>
-      <MaxHitPoints>15000</MaxHitPoints>
+      <MaxHitPoints>10000</MaxHitPoints>
       <Defense>50</Defense>
       <Exp>0</Exp>
       <StasisImmune/>
@@ -455,7 +455,7 @@
          <Index>73</Index>
       </AnimatedTexture>
       <Size>150</Size>
-      <MaxHitPoints>15000</MaxHitPoints>
+      <MaxHitPoints>10000</MaxHitPoints>
       <Defense>50</Defense>
       <Exp>0</Exp>
       <StasisImmune/>
@@ -478,7 +478,7 @@
          <Index>0x141</Index>
       </Texture>
       <Size>150</Size>
-      <MaxHitPoints>30000</MaxHitPoints>
+      <MaxHitPoints>20000</MaxHitPoints>
       <Defense>65</Defense>
       <Exp>0</Exp>
       <Projectile id="0">
@@ -499,7 +499,7 @@
          <Index>73</Index>
       </AnimatedTexture>
       <Size>150</Size>
-      <MaxHitPoints>15000</MaxHitPoints>
+      <MaxHitPoints>10000</MaxHitPoints>
       <Defense>50</Defense>
       <Exp>0</Exp>
       <StasisImmune/>
@@ -522,7 +522,7 @@
          <Index>73</Index>
       </AnimatedTexture>
       <Size>150</Size>
-      <MaxHitPoints>15000</MaxHitPoints>
+      <MaxHitPoints>10000</MaxHitPoints>
       <Defense>50</Defense>
       <Exp>0</Exp>
       <StasisImmune/>
@@ -545,7 +545,7 @@
          <Index>0x141</Index>
       </Texture>
       <Size>150</Size>
-      <MaxHitPoints>30000</MaxHitPoints>
+      <MaxHitPoints>20000</MaxHitPoints>
       <Defense>65</Defense>
       <Exp>0</Exp>
       <Projectile id="0">
@@ -1087,7 +1087,7 @@
          <Index>109</Index>
       </AnimatedTexture>
       <Size>150</Size>
-      <MaxHitPoints>90000</MaxHitPoints>
+      <MaxHitPoints>75000</MaxHitPoints>
       <Defense>70</Defense>
       <StasisImmune/>
       <StunImmune/>
@@ -1167,7 +1167,7 @@
          <Index>0x150</Index>
       </Texture>
       <Size>150</Size>
-      <MaxHitPoints>91000</MaxHitPoints>
+      <MaxHitPoints>77500</MaxHitPoints>
       <Defense>70</Defense>
       <Exp>4000</Exp>
       <ShadowSize>40</ShadowSize>
@@ -1253,7 +1253,7 @@
          <Index>114</Index>
       </AnimatedTexture>
       <Size>150</Size>
-      <MaxHitPoints>25000</MaxHitPoints>
+      <MaxHitPoints>20000</MaxHitPoints>
       <Defense>45</Defense>
       <Exp>500</Exp>
       <God/>
@@ -1281,7 +1281,7 @@
          <Index>114</Index>
       </AnimatedTexture>
       <Size>100</Size>
-      <MaxHitPoints>25000</MaxHitPoints>
+      <MaxHitPoints>10000</MaxHitPoints>
       <Defense>45</Defense>
       <Exp>0</Exp>
       <Projectile id="0">
@@ -1303,7 +1303,7 @@
          <Index>115</Index>
       </AnimatedTexture>
       <Size>100</Size>
-      <MaxHitPoints>150000</MaxHitPoints>
+      <MaxHitPoints>100000</MaxHitPoints>
       <Defense>65</Defense>
       <Exp>7000</Exp>
       <EventChestBoss/>
@@ -1498,7 +1498,7 @@
          <Index>112</Index>
       </AnimatedTexture>
       <Size>125</Size>
-      <MaxHitPoints>50000</MaxHitPoints>
+      <MaxHitPoints>30000</MaxHitPoints>
       <ParalyzeImmune/>
       <StasisImmune/>
       <Defense>45</Defense>
@@ -1528,7 +1528,7 @@
          <Index>113</Index>
       </AnimatedTexture>
       <Size>125</Size>
-      <MaxHitPoints>65000</MaxHitPoints>
+      <MaxHitPoints>30000</MaxHitPoints>
       <StunImmune/>
       <ParalyzeImmune/>
       <Defense>100</Defense>
@@ -1707,7 +1707,7 @@
          <Index>55</Index>
       </AnimatedTexture>
       <Size>150</Size>
-      <MaxHitPoints>25000</MaxHitPoints>
+      <MaxHitPoints>15000</MaxHitPoints>
       <Defense>60</Defense>
       <Exp>0</Exp>
    </Object>
@@ -1721,7 +1721,7 @@
          <Index>56</Index>
       </AnimatedTexture>
       <Size>150</Size>
-      <MaxHitPoints>25000</MaxHitPoints>
+      <MaxHitPoints>15000</MaxHitPoints>
       <Defense>60</Defense>
       <Exp>0</Exp>
       <Projectile id="0">
@@ -1743,7 +1743,7 @@
          <Index>57</Index>
       </AnimatedTexture>
       <Size>150</Size>
-      <MaxHitPoints>25000</MaxHitPoints>
+      <MaxHitPoints>15000</MaxHitPoints>
       <Defense>60</Defense>
       <Exp>0</Exp>
    </Object>
@@ -1757,7 +1757,7 @@
          <Index>58</Index>
       </AnimatedTexture>
       <Size>150</Size>
-      <MaxHitPoints>25000</MaxHitPoints>
+      <MaxHitPoints>15000</MaxHitPoints>
       <Defense>60</Defense>
       <Exp>0</Exp>
    </Object>
@@ -1962,7 +1962,7 @@
          <File>lofiObj3</File>
          <Index>0x466</Index>
       </Texture>
-      <MaxHitPoints>120000</MaxHitPoints>
+      <MaxHitPoints>60000</MaxHitPoints>
       <Defense>35</Defense>
       <Size>160</Size>
       <Exp>0</Exp>
@@ -1976,7 +1976,7 @@
          <File>lofiObj3</File>
          <Index>0x466</Index>
       </Texture>
-      <MaxHitPoints>120000</MaxHitPoints>
+      <MaxHitPoints>60000</MaxHitPoints>
       <Defense>35</Defense>
       <Size>160</Size>
       <Exp>0</Exp>
@@ -1990,7 +1990,7 @@
          <File>lofiObj3</File>
          <Index>0x466</Index>
       </Texture>
-      <MaxHitPoints>120000</MaxHitPoints>
+      <MaxHitPoints>60000</MaxHitPoints>
       <Defense>35</Defense>
       <Size>160</Size>
       <Exp>0</Exp>

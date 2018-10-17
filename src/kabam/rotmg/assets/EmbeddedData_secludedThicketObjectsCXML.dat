@@ -246,7 +246,15 @@
       </Texture>
       <Rotation>60</Rotation>
    </Object>
-   <Object type="0x369f" id="ST Portal">
+   <Object type="0x36f8" id="El Dorado Shield">
+      <Class>Projectile</Class>
+      <Texture>
+         <File>secludedThicketObjects8x8</File>
+         <Index>0x4f</Index>
+      </Texture>
+      <AngleCorrection>1</AngleCorrection>
+   </Object>
+   <Object type="0x369f" id="Secluded Thicket Portal">
       <DisplayId>Secluded Thicket</DisplayId>
       <Class>Portal</Class>
       <IntergamePortal/>
@@ -256,146 +264,6 @@
          <Index>0x04</Index>
       </Texture>
       <ShadowSize>0</ShadowSize>
-   </Object>
-   <Object type="0x36a0" id="ST Key">
-      <DisplayId>Secluded Thicket Key</DisplayId>
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>secludedThicketObjects8x8</File>
-         <Index>0x03</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A key which opens a passage to the Secluded Thicket. The most remote region of the realm houses a tropical rainforest filled with vicious animals, fierce natives, and a deity said to command lightning itself.\n\nKeys can only be used once you have 10 or more stars!\n\nDungeon credits:\n  Lead: Toastrz\n  Art: Dappertron, Piggby, Tero,\n  Wunderwafe\n  Special Thanks: Kiddforce, Mrunibro</Description>
-      <Sound>use_key</Sound>
-      <InvUse/>
-      <Soulbound/>
-      <feedPower>200</feedPower>
-      <Activate id="ST Portal">Create</Activate>
-   </Object>
-   <Object type="0x36a1" id="Testosterone">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x15a</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Guaranteed to turn you into a total beefcake in milliseconds!</Description>
-      <Sound>use_potion</Sound>
-      <Activate duration="1800" effect="Invincible">ConditionEffectSelf</Activate>
-      <InvUse/>
-      <BagType>2</BagType>
-      <feedPower>50</feedPower>
-   </Object>
-   <Object type="0x36a2" id="Tezcacoatl's Tail">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>secludedThicketObjects8x8</File>
-         <Index>0x3f</Index>
-      </Texture>
-      <SlotType>17</SlotType>
-      <Description>Adult male basilisks are apex predators, and at full maturity their tails gain the unique ability to release piercing acid from the tip.</Description>
-      <RateOfFire>0.33</RateOfFire>
-      <Sound>weapon/wand_of_death</Sound>
-      <Projectile>
-         <ObjectId>Basilisk Spit</ObjectId>
-         <Speed>225</Speed>
-         <MinDamage>170</MinDamage>
-         <MaxDamage>200</MaxDamage>
-         <LifetimeMS>400</LifetimeMS>
-         <Amplitude>0.25</Amplitude>
-         <Frequency>1.5</Frequency>
-         <ArmorPiercing/>
-         <FaceDir/>
-         <Size>80</Size>
-      </Projectile>
-      <BagType>6</BagType>
-      <FameBonus>5</FameBonus>
-      <NumProjectiles>2</NumProjectiles>
-      <ArcGap>0</ArcGap>
-      <OldSound>magicShoot</OldSound>
-      <feedPower>800</feedPower>
-      <Soulbound/>
-   </Object>
-   <Object type="0x36a3" id="Sealed Crystal Skull">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>secludedThicketObjects8x8</File>
-         <Index>0x40</Index>
-      </Texture>
-      <SlotType>19</SlotType>
-      <Description>An undamaged version of a well known archaeological artifact, radiating a potent dark energy. This rare find is coveted by many explorers.</Description>
-      <Usable/>
-      <BagType>6</BagType>
-      <FameBonus>5</FameBonus>
-      <MpCost>100</MpCost>
-      <ActivateOnEquip stat="0" amount="50">IncrementStat</ActivateOnEquip>
-      <ActivateOnEquip stat="28" amount="4">IncrementStat</ActivateOnEquip>
-      <ActivateOnEquip stat="26" amount="4">IncrementStat</ActivateOnEquip>
-      <Activate radius="5" totalDamage="130" heal="100" ignoreDef="35" wisDamageBase="30">VampireBlast</Activate>
-      <feedPower>900</feedPower>
-      <Soulbound/>
-   </Object>
-   <Object type="0x36a4" id="ST Spell">
-      <DisplayId>Penetrating Blast Spell</DisplayId>
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x57</Index>
-      </Texture>
-      <SlotType>11</SlotType>
-      <Description>This spell's destructive power is so notorious that casting it was banned for many generations.</Description>
-      <Sound>spell/magic_nova</Sound>
-      <Projectile>
-         <ObjectId>Volt Bolt</ObjectId>
-         <Speed>160</Speed>
-         <MinDamage>60</MinDamage>
-         <MaxDamage>90</MaxDamage>
-         <LifetimeMS>700</LifetimeMS>
-         <MultiHit/>
-      </Projectile>
-      <ActivateOnEquip stat="20" amount="2">IncrementStat</ActivateOnEquip>
-      <ActivateOnEquip stat="0" amount="40">IncrementStat</ActivateOnEquip>
-      <Usable/>
-      <BagType>6</BagType>
-      <FameBonus>6</FameBonus>
-      <MpCost>75</MpCost>
-      <Activate>BulletNova</Activate>
-      <feedPower>1000</feedPower>
-      <Soulbound/>
-   </Object>
-   <Object type="0x36a5" id="New Tablet">
-      <DisplayId>Tablet of the King's Avatar</DisplayId>
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj3</File>
-         <Index>0x490</Index>
-      </Texture>
-      <SlotType>11</SlotType>
-      <Description>Thought to have been lost to the ages, the wisdom imparted in this tablet will summon a power unrivaled by any modern spell.</Description>
-      <Sound>spell/magic_nova</Sound>
-      <Projectile>
-         <ObjectId>Fire Claw</ObjectId>
-         <Speed>120</Speed>
-         <MinDamage>150</MinDamage>
-         <MaxDamage>230</MaxDamage>
-         <LifetimeMS>167</LifetimeMS>
-         <Boomerang/>
-      </Projectile>
-      <ActivateOnEquip stat="27" amount="4">IncrementStat</ActivateOnEquip>
-      <ActivateOnEquip stat="3" amount="40">IncrementStat</ActivateOnEquip>
-      <Usable/>
-      <BagType>6</BagType>
-      <FameBonus>6</FameBonus>
-      <MpCost>120</MpCost>
-      <Activate>BulletNova</Activate>
-      <feedPower>450</feedPower>
-      <Soulbound/>
    </Object>
    <Object type="0x36a6" id="Tezcacoatl the Great Basilisk">
       <DisplayId>Tezcacoatl the Great Basilisk</DisplayId>
@@ -413,7 +281,7 @@
       </Portrait>
       <MaxHitPoints>100000</MaxHitPoints>
       <Defense>35</Defense>
-      <XpMult>15.3847</XpMult>
+      <Exp>3000</Exp>
       <Size>130</Size>
       <HitSound>monster/cyclops_hit</HitSound>
       <DeathSound>monster/cyclops_death</DeathSound>
@@ -549,9 +417,9 @@
          <File>secludedThicketChars8x8</File>
          <Index>0</Index>
       </AnimatedTexture>
-      <MaxHitPoints>12000</MaxHitPoints>
+      <MaxHitPoints>10000</MaxHitPoints>
       <Defense>15</Defense>
-      <XpMult>0</XpMult>
+      <Exp>0</Exp>
       <Size>120</Size>
       <HitSound>monster/dragons_hit</HitSound>
       <DeathSound>monster/dragons_death</DeathSound>
@@ -646,9 +514,9 @@
          <File>secludedThicketChars8x8</File>
          <Index>0</Index>
       </AnimatedTexture>
-      <MaxHitPoints>12000</MaxHitPoints>
+      <MaxHitPoints>10000</MaxHitPoints>
       <Defense>15</Defense>
-      <XpMult>0</XpMult>
+      <Exp>0</Exp>
       <Size>120</Size>
       <HitSound>monster/dragons_hit</HitSound>
       <DeathSound>monster/dragons_death</DeathSound>
@@ -743,9 +611,9 @@
          <File>secludedThicketChars8x8</File>
          <Index>0</Index>
       </AnimatedTexture>
-      <MaxHitPoints>12000</MaxHitPoints>
+      <MaxHitPoints>10000</MaxHitPoints>
       <Defense>15</Defense>
-      <XpMult>0</XpMult>
+      <Exp>0</Exp>
       <Size>120</Size>
       <HitSound>monster/dragons_hit</HitSound>
       <DeathSound>monster/dragons_death</DeathSound>
@@ -840,9 +708,9 @@
          <File>secludedThicketChars8x8</File>
          <Index>0</Index>
       </AnimatedTexture>
-      <MaxHitPoints>12000</MaxHitPoints>
+      <MaxHitPoints>10000</MaxHitPoints>
       <Defense>15</Defense>
-      <XpMult>0</XpMult>
+      <Exp>0</Exp>
       <Size>120</Size>
       <HitSound>monster/dragons_hit</HitSound>
       <DeathSound>monster/dragons_death</DeathSound>
@@ -937,9 +805,9 @@
          <File>secludedThicketChars8x8</File>
          <Index>0</Index>
       </AnimatedTexture>
-      <MaxHitPoints>12000</MaxHitPoints>
+      <MaxHitPoints>10000</MaxHitPoints>
       <Defense>15</Defense>
-      <XpMult>0</XpMult>
+      <Exp>0</Exp>
       <Size>120</Size>
       <HitSound>monster/dragons_hit</HitSound>
       <DeathSound>monster/dragons_death</DeathSound>
@@ -1034,9 +902,9 @@
          <File>secludedThicketChars8x8</File>
          <Index>0</Index>
       </AnimatedTexture>
-      <MaxHitPoints>12000</MaxHitPoints>
+      <MaxHitPoints>10000</MaxHitPoints>
       <Defense>15</Defense>
-      <XpMult>0</XpMult>
+      <Exp>0</Exp>
       <Size>120</Size>
       <HitSound>monster/dragons_hit</HitSound>
       <DeathSound>monster/dragons_death</DeathSound>
@@ -1131,9 +999,9 @@
          <File>secludedThicketChars16x16</File>
          <Index>0</Index>
       </AnimatedTexture>
-      <MaxHitPoints>135000</MaxHitPoints>
+      <MaxHitPoints>120000</MaxHitPoints>
       <Defense>65</Defense>
-      <XpMult>20.5129</XpMult>
+      <Exp>4000</Exp>
       <Size>160</Size>
       <HitSound>monster/wooden_walls_hit</HitSound>
       <DeathSound>monster/stone_walls_death</DeathSound>
@@ -1183,6 +1051,18 @@
          <MultiHit/>
          <ConditionEffect duration="3">Curse</ConditionEffect>
       </Projectile>
+      <Projectile id="7">
+         <ObjectId>El Dorado Shield</ObjectId>
+         <Damage>50</Damage>
+         <Speed>45</Speed>
+         <Size>120</Size>
+         <LifetimeMS>500</LifetimeMS>
+         <MultiHit/>
+         <ArmorPiercing/>
+         <Boomerang/>
+         <ConditionEffect duration="5">Curse</ConditionEffect>
+         <ConditionEffect duration="3">Slowed</ConditionEffect>
+      </Projectile>
    </Object>
    <Object type="0x36ae" id="Demon Tribesman">
       <DisplayId>Demon Tribesman</DisplayId>
@@ -1195,9 +1075,9 @@
       <HitSound>monster/ogres_hit</HitSound>
       <DeathSound>monster/ogres_death</DeathSound>
       <Size>1</Size>
-      <XpMult>5.1283</XpMult>
+      <Exp>1000</Exp>
       <God/>
-      <MaxHitPoints>45000</MaxHitPoints>
+      <MaxHitPoints>35000</MaxHitPoints>
       <Defense>25</Defense>
       <StasisImmune/>
       <Projectile id="0">
@@ -1207,6 +1087,7 @@
          <LifetimeMS>650</LifetimeMS>
          <Size>130</Size>
          <MultiHit/>
+         <ConditionEffect duration="2.6">Armor Broken</ConditionEffect>
       </Projectile>
       <Projectile id="1">
          <ObjectId>Demonic Blast</ObjectId>
@@ -1235,12 +1116,13 @@
       <HitSound>monster/ogres_hit</HitSound>
       <DeathSound>monster/ogres_death</DeathSound>
       <Size>1</Size>
-      <XpMult>5.1283</XpMult>
+      <Exp>1000</Exp>
       <God/>
-      <MaxHitPoints>35000</MaxHitPoints>
+      <MaxHitPoints>25000</MaxHitPoints>
       <Defense>35</Defense>
       <StasisImmune/>
       <ParalyzeImmune/>
+      <StunImmune/>
       <Projectile id="0">
          <ObjectId>Insectile Spike</ObjectId>
          <Damage>90</Damage>
@@ -1277,9 +1159,9 @@
       <HitSound>monster/ogres_hit</HitSound>
       <DeathSound>monster/ogres_death</DeathSound>
       <Size>1</Size>
-      <XpMult>5.1283</XpMult>
+      <Exp>1000</Exp>
       <God/>
-      <MaxHitPoints>40000</MaxHitPoints>
+      <MaxHitPoints>35000</MaxHitPoints>
       <Defense>40</Defense>
       <StasisImmune/>
       <ParalyzeImmune/>
@@ -1376,7 +1258,7 @@
       <StasisImmune/>
       <Projectile id="0">
          <ObjectId>Invisible</ObjectId>
-         <Damage>20</Damage>
+         <Damage>25</Damage>
          <Size>80</Size>
          <Speed>100</Speed>
          <LifetimeMS>80</LifetimeMS>
@@ -2108,9 +1990,9 @@
          <File>secludedThicketChars16x16</File>
          <Index>5</Index>
       </AnimatedTexture>
-      <MaxHitPoints>130000</MaxHitPoints>
+      <MaxHitPoints>120000</MaxHitPoints>
       <Defense>30</Defense>
-      <XpMult>25.6411</XpMult>
+      <Exp>5000</Exp>
       <Size>135</Size>
       <HitSound>monster/archdemon_hit</HitSound>
       <DeathSound>monster/archdemon_death</DeathSound>
@@ -2119,6 +2001,7 @@
       <StasisImmune/>
       <ParalyzeImmune/>
       <StunImmune/>
+      <EventChestBoss/>
       <Projectile id="0">
          <ObjectId>Lightning Shot</ObjectId>
          <Damage>125</Damage>
@@ -2134,7 +2017,7 @@
          <Size>90</Size>
          <LifetimeMS>5000</LifetimeMS>
          <MultiHit/>
-         <ConditionEffect duration="4">Bleeding</ConditionEffect>
+         <ConditionEffect duration="3">Bleeding</ConditionEffect>
       </Projectile>
       <Projectile id="2">
          <ObjectId>Electric Discharge</ObjectId>
@@ -2279,7 +2162,7 @@
       <StasisImmune/>
       <ParalyzeImmune/>
       <Flying/>
-      <XpMult>0.0</XpMult>
+      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2311,7 +2194,7 @@
       <StasisImmune/>
       <ParalyzeImmune/>
       <Flying/>
-      <XpMult>0.0</XpMult>
+      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2343,7 +2226,7 @@
       <StasisImmune/>
       <ParalyzeImmune/>
       <Flying/>
-      <XpMult>0.0</XpMult>
+      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2375,7 +2258,7 @@
       <StasisImmune/>
       <ParalyzeImmune/>
       <Flying/>
-      <XpMult>0.0</XpMult>
+      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2407,7 +2290,7 @@
       <StasisImmune/>
       <ParalyzeImmune/>
       <Flying/>
-      <XpMult>0.0</XpMult>
+      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2439,7 +2322,7 @@
       <StasisImmune/>
       <ParalyzeImmune/>
       <Flying/>
-      <XpMult>0.0</XpMult>
+      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2471,7 +2354,7 @@
       <StasisImmune/>
       <ParalyzeImmune/>
       <Flying/>
-      <XpMult>0.0</XpMult>
+      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2503,7 +2386,7 @@
       <StasisImmune/>
       <ParalyzeImmune/>
       <Flying/>
-      <XpMult>0.0</XpMult>
+      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2535,7 +2418,7 @@
       <StasisImmune/>
       <ParalyzeImmune/>
       <Flying/>
-      <XpMult>0.0</XpMult>
+      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2567,7 +2450,7 @@
       <StasisImmune/>
       <ParalyzeImmune/>
       <Flying/>
-      <XpMult>0.0</XpMult>
+      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2599,7 +2482,7 @@
       <StasisImmune/>
       <ParalyzeImmune/>
       <Flying/>
-      <XpMult>0.0</XpMult>
+      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2631,7 +2514,7 @@
       <StasisImmune/>
       <ParalyzeImmune/>
       <Flying/>
-      <XpMult>0.0</XpMult>
+      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2663,7 +2546,7 @@
       <StasisImmune/>
       <ParalyzeImmune/>
       <Flying/>
-      <XpMult>0.0</XpMult>
+      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2697,7 +2580,7 @@
       <StasisImmune/>
       <ParalyzeImmune/>
       <Flying/>
-      <XpMult>0.0</XpMult>
+      <Exp>0</Exp>
       <Sound id="0">lightning</Sound>
    </Object>
    <Object type="0x36da" id="Storm Generator">
@@ -2715,17 +2598,18 @@
       <Defense>0</Defense>
       <Projectile id="3">
          <ObjectId>Storm Swirl</ObjectId>
-         <Damage>60</Damage>
+         <Damage>25</Damage>
          <Speed>60</Speed>
          <LifetimeMS>5000</LifetimeMS>
          <Size>80</Size>
          <Boomerang/>
          <MultiHit/>
          <PassesCover/>
+         <ArmorPiercing/>
          <Amplitude>2</Amplitude>
          <Frequency>2</Frequency>
          <ConditionEffect duration="3">Silenced</ConditionEffect>
-         <ConditionEffect duration="2" target="1">Stasis</ConditionEffect>
+         <ConditionEffect duration="3" target="1">Stasis</ConditionEffect>
       </Projectile>
       <Projectile id="4">
          <ObjectId>Storm Swirl</ObjectId>
@@ -2780,6 +2664,20 @@
    </Object>
    <Object type="0x36de" id="The Ultimate Loophole">
       <DisplayId>The Ultimate Loophole</DisplayId>
+      <Class>Character</Class>
+      <Enemy/>
+      <Texture>
+         <File>invisible</File>
+         <Index>0</Index>
+      </Texture>
+      <NoMiniMap/>
+      <Size>0</Size>
+      <ShadowSize>0</ShadowSize>
+      <MaxHitPoints>10000</MaxHitPoints>
+      <Defense>0</Defense>
+   </Object>
+   <Object type="0x36f7" id="Retreat Taunt Controller">
+      <DisplayId>Underdog</DisplayId>
       <Class>Character</Class>
       <Enemy/>
       <Texture>
@@ -2921,22 +2819,6 @@
       </AnimatedTexture>
       <Size>0</Size>
    </Object>
-   <Object type="0x36ee" id="ST Item Dude">
-      <DisplayId>Item Dude</DisplayId>
-      <Enemy/>
-      <Class>Character</Class>
-      <Texture>
-         <File>secludedThicketObjects16x16</File>
-         <Index>0x09</Index>
-      </Texture>
-      <HitSound>weapon/glass_sword</HitSound>
-      <DeathSound>weapon/golden_sword</DeathSound>
-      <Size>120</Size>
-      <MaxHitPoints>2000</MaxHitPoints>
-      <Defense>0</Defense>
-      <God/>
-      <XpMult>99999</XpMult>
-   </Object>
    <Object type="0x36ef" id="Thicket Tree Big">
       <Class>GameObject</Class>
       <RandomTexture>
@@ -3051,6 +2933,45 @@
          </Texture>
       </RandomTexture>
       <Size>120</Size>
+      <Static/>
+   </Object>
+   <Object type="0x36f6" id="Thicket Brazier">
+      <Class>GameObject</Class>
+      <Texture>
+         <File>secludedThicketObjects16x16</File>
+         <Index>0x0a</Index>
+      </Texture>
+      <Animation period="0.0" prob="1.0">
+         <Frame time="0.2">
+            <Texture>
+               <File>secludedThicketObjects16x16</File>
+               <Index>0x0a</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>secludedThicketObjects16x16</File>
+               <Index>0x0b</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>secludedThicketObjects16x16</File>
+               <Index>0x0c</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>secludedThicketObjects16x16</File>
+               <Index>0x0d</Index>
+            </Texture>
+         </Frame>
+      </Animation>
+      <FullOccupy/>
+      <OccupySquare/>
+      <ShadowSize>80</ShadowSize>
+      <Size>90</Size>
+      <NoMiniMap/>
       <Static/>
    </Object>
    <Object type="0x36f4" id="El Dorado Temple Wall">

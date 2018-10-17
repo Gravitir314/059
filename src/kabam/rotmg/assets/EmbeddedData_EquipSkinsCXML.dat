@@ -6715,7 +6715,7 @@
          <Index>399</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>Despite his flashy looks he rarely says anything.\n\nSprite Credits: Squzavvvv</Description>
+      <Description>Despite his flashy looks he rarely says anything.\n\nSkin Class: Samurai\nSprite Credits: Squzavvvv</Description>
       <Activate skinType="9738">UnlockSkin</Activate>
       <Consumable/>
       <Soulbound/>
@@ -6758,11 +6758,403 @@
          <Index>402</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>Customize your Samurai with the Shogun Skin.\n\nSprite Credits: HadesIV</Description>
+      <Description>Customize your Samurai with the Shogun Skin.\n\nSkin Class: Samurai\nSprite Credits: HadesIV</Description>
       <Activate skinType="29604">UnlockSkin</Activate>
       <Consumable/>
       <Soulbound/>
       <BagType>8</BagType>
       <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x73a7" id="Airflow Samurai Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>403</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Let's dance.\n\nSkin Class: Samurai\nSprite Credits: HadesIV</Description>
+      <Activate skinType="29606">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x73a9" id="Peddler Assassin Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>404</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Do you want to have this *cough cough* potion?\n\nSkin Class: Assassin\nSprite Credits: Nazoado</Description>
+      <Activate skinType="29608">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x73ab" id="Masked Rogue Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>405</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Don't confuse me with that other guy... Pooltable was it?\n\nSkin Class: Rogue</Description>
+      <Activate skinType="29610">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x73ad" id="Cyberpunk Samurai Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>406</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Watch out - he got up from his cryosleep&#8230;\n\nSkin Class: Samurai</Description>
+      <Activate skinType="29612">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>8</BagType>
+      <Soulbound/>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x73af" id="Sushi Chef Samurai Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>407</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Careful! Or I'll cut you into pieces and roll YOU in a sushi roll...\n\nSkin Class: Samurai</Description>
+      <Activate skinType="29614">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>8</BagType>
+      <Soulbound/>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x73b1" id="Vampire Beast Rogue Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>408</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>At first glance, it has big adorable ears. But don't forget that this monster has an infectious disease!\n\nSkin Class: Rogue\nSprite Credits: Nazoado</Description>
+      <Activate skinType="29616">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x73b3" id="Gravekeeper Assassin Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>409</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Don't move, let me draw your blood.\n\nSkin Class: Assassin\nSprite Credits: Nazoado</Description>
+      <Activate skinType="29618">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x73b5" id="Cultist of Unknown Origin Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>410</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>The sole survivor of the Psychic Wars. If you see him after dark, don't turn your back on him.\n\nSkin Class: Sorcerer\nSprite Credits: Atrapper</Description>
+      <Activate skinType="29620">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x73b6" id="Supporter Extraordinaire - Warrior Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>411</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Rewarded to Community members which donated to support the RotMG Unity Project.\n\nSkin Class: Warrior</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Unity Supporter"/>
+      </ExtraTooltipData>
+      <Activate skinType="6119">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x73b7" id="Supporter Extraordinaire - Paladin Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>411</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Rewarded to Community members which donated to support the RotMG Unity Project.\n\nSkin Class: Paladin</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Unity Supporter"/>
+      </ExtraTooltipData>
+      <Activate skinType="6120">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x73b8" id="Supporter Extraordinaire - Samurai Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>415</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Rewarded to Community members which donated to support the RotMG Unity Project.\n\nSkin Class: Samurai</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Unity Supporter"/>
+      </ExtraTooltipData>
+      <Activate skinType="6121">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x73b9" id="Supporter Extraordinaire - Knight Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>411</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Rewarded to Community members which donated to support the RotMG Unity Project.\n\nSkin Class: Knight</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Unity Supporter"/>
+      </ExtraTooltipData>
+      <Activate skinType="6122">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x73ba" id="Supporter Extraordinaire - Ninja Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>415</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Rewarded to Community members which donated to support the RotMG Unity Project.\n\nSkin Class: Ninja</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Unity Supporter"/>
+      </ExtraTooltipData>
+      <Activate skinType="6123">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x73bb" id="Supporter Extraordinaire - Archer Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>414</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Rewarded to Community members which donated to support the RotMG Unity Project.\n\nSkin Class: Archer</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Unity Supporter"/>
+      </ExtraTooltipData>
+      <Activate skinType="6124">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x73bc" id="Supporter Extraordinaire - Rogue Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>412</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Rewarded to Community members which donated to support the RotMG Unity Project.\n\nSkin Class: Rogue</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Unity Supporter"/>
+      </ExtraTooltipData>
+      <Activate skinType="6125">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x73bd" id="Supporter Extraordinaire - Assassin Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>412</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Rewarded to Community members which donated to support the RotMG Unity Project.\n\nSkin Class: Assassin</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Unity Supporter"/>
+      </ExtraTooltipData>
+      <Activate skinType="6126">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x73be" id="Supporter Extraordinaire - Wizard Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>413</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Rewarded to Community members which donated to support the RotMG Unity Project.\n\nSkin Class: Wizard</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Unity Supporter"/>
+      </ExtraTooltipData>
+      <Activate skinType="6127">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x73bf" id="Supporter Extraordinaire - Necromancer Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>413</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Rewarded to Community members which donated to support the RotMG Unity Project.\n\nSkin Class: Necromancer</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Unity Supporter"/>
+      </ExtraTooltipData>
+      <Activate skinType="6128">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x73c0" id="Supporter Extraordinaire - Priest Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>416</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Rewarded to Community members which donated to support the RotMG Unity Project.\n\nSkin Class: Priest</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Unity Supporter"/>
+      </ExtraTooltipData>
+      <Activate skinType="6129">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x73c1" id="Supporter Extraordinaire - Sorcerer Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>416</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Rewarded to Community members which donated to support the RotMG Unity Project.\n\nSkin Class: Sorcerer</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Unity Supporter"/>
+      </ExtraTooltipData>
+      <Activate skinType="6130">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x73c2" id="Supporter Extraordinaire - Huntress Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>414</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Rewarded to Community members which donated to support the RotMG Unity Project.\n\nSkin Class: Huntress</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Unity Supporter"/>
+      </ExtraTooltipData>
+      <Activate skinType="6131">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x73c3" id="Supporter Extraordinaire - Mystic Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>413</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Rewarded to Community members which donated to support the RotMG Unity Project.\n\nSkin Class: Mystic</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Unity Supporter"/>
+      </ExtraTooltipData>
+      <Activate skinType="6132">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x73c4" id="Supporter Extraordinaire - Trickster Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>412</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Rewarded to Community members which donated to support the RotMG Unity Project.\n\nSkin Class: Trickster</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Unity Supporter"/>
+      </ExtraTooltipData>
+      <Activate skinType="6133">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x1582" id="Mega Supporter - Paladin Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins16</File>
+         <Index>21</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Rewarded to Community members which donated to support the RotMG Unity Project.\n\nSkin Class: Paladin</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Unity Supporter"/>
+      </ExtraTooltipData>
+      <Activate skinType="5505">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
    </Object>
 </Objects>

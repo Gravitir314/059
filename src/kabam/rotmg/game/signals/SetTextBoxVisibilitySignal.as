@@ -1,17 +1,17 @@
 ﻿//kabam.rotmg.game.signals.SetTextBoxVisibilitySignal
 
 package kabam.rotmg.game.signals
-{
-import org.osflash.signals.Signal;
-
-public class SetTextBoxVisibilitySignal extends Signal
-{
-
-	public function SetTextBoxVisibilitySignal()
 	{
-		super(Boolean);
-	}
+	import org.osflash.signals.Signal;
 
-}
-}//package kabam.rotmg.game.signals
+	public class SetTextBoxVisibilitySignal extends Signal
+		{
+
+			public function SetTextBoxVisibilitySignal()
+			{
+				super(Boolean);
+			}
+
+		}
+	}//package kabam.rotmg.game.signals
 

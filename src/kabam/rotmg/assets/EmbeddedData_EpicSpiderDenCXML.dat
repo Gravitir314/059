@@ -183,7 +183,7 @@
       <HitSound>monster/spider_queen_hit</HitSound>
       <DeathSound>monster/spider_queen_death</DeathSound>
       <Size>200</Size>
-      <MaxHitPoints>60000</MaxHitPoints>
+      <MaxHitPoints>50000</MaxHitPoints>
       <Defense>30</Defense>
       <Exp>117</Exp>
       <Enemy/>
@@ -256,7 +256,7 @@
       <HitSound>monster/eggs_hit</HitSound>
       <DeathSound>monster/eggs_death</DeathSound>
       <Size>150</Size>
-      <MaxHitPoints>20000</MaxHitPoints>
+      <MaxHitPoints>12500</MaxHitPoints>
       <Defense>20</Defense>
       <Exp>19</Exp>
       <StasisImmune/>
@@ -272,7 +272,7 @@
       <HitSound>monster/eggs_hit</HitSound>
       <DeathSound>monster/eggs_death</DeathSound>
       <Size>150</Size>
-      <MaxHitPoints>20000</MaxHitPoints>
+      <MaxHitPoints>12500</MaxHitPoints>
       <Defense>20</Defense>
       <Exp>19</Exp>
       <StasisImmune/>
@@ -288,7 +288,7 @@
       <HitSound>monster/eggs_hit</HitSound>
       <DeathSound>monster/eggs_death</DeathSound>
       <Size>150</Size>
-      <MaxHitPoints>20000</MaxHitPoints>
+      <MaxHitPoints>12500</MaxHitPoints>
       <Defense>20</Defense>
       <Exp>19</Exp>
       <StasisImmune/>
@@ -304,7 +304,7 @@
       <HitSound>monster/eggs_hit</HitSound>
       <DeathSound>monster/eggs_death</DeathSound>
       <Size>150</Size>
-      <MaxHitPoints>20000</MaxHitPoints>
+      <MaxHitPoints>12500</MaxHitPoints>
       <Defense>20</Defense>
       <Exp>19</Exp>
       <StasisImmune/>

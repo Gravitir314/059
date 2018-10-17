@@ -4404,14 +4404,255 @@
       <PlayerClassType>0x0311</PlayerClassType>
       <NoSkinSelect/>
    </Object>
-   <Object type="0x0144" id="mini Paladin skin Placeholder">
+   <Object type="0x73a6" id="Airflow Samurai">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>403</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0311</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x73a8" id="Peddler Assassin">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>404</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0320</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x73aa" id="Masked Rogue">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>405</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0300</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x73ac" id="Cyberpunk Samurai">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>406</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0311</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x73ae" id="Sushi Chef Samurai">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>407</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0311</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x73b0" id="Vampire Beast Rogue">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>408</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0300</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x73b2" id="Gravekeeper Assassin">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>409</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0320</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x73b4" id="Cultist of Unknown Origin">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>410</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0325</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x0144" id="16x16 Paladin skin Placeholder">
       <Skin/>
       <Class>Skin</Class>
       <AnimatedTexture>
          <File>playerskins</File>
          <Index>254</Index>
       </AnimatedTexture>
-      <PlayerClassType>0xffff</PlayerClassType>
+      <PlayerClassType>0x031f</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x17e7" id="Warrior - Supporter Extraordinaire">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>411</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x031d</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x17e8" id="Paladin - Supporter Extraordinaire">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>411</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x031f</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x17e9" id="Samurai - Supporter Extraordinaire">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>415</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0311</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x17ea" id="Knight - Supporter Extraordinaire">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>411</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x031e</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x17eb" id="Ninja - Supporter Extraordinaire">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>415</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0326</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x17ec" id="Archer - Supporter Extraordinaire">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>414</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x307</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x17ed" id="Rogue - Supporter Extraordinaire">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>412</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0300</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x17ee" id="Assassin - Supporter Extraordinaire">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>412</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0320</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x17ef" id="Wizard - Supporter Extraordinaire">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>413</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x30e</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x17f0" id="Necromancer - Supporter Extraordinaire">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>413</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0321</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x17f1" id="Priest - Supporter Extraordinaire">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>416</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0310</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x17f2" id="Sorcerer - Supporter Extraordinaire">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>416</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0325</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x17f3" id="Huntress - Supporter Extraordinaire">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>414</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0322</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x17f4" id="Mystic - Supporter Extraordinaire">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>413</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0323</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x17f5" id="Trickster - Supporter Extraordinaire">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>412</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0324</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x1581" id="Megasupporter - Paladin">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins16</File>
+         <Index>21</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x031f</PlayerClassType>
+      <UnlockSpecial>Set Skin</UnlockSpecial>
       <NoSkinSelect/>
    </Object>
 </Objects>
