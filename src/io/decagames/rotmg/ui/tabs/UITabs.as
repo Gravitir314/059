@@ -158,23 +158,20 @@ package io.decagames.rotmg.ui.tabs
 			private function updateTabButtonGraphicState(_arg_1:TabButton, _arg_2:int):void
 			{
 				var _local_3:int = this.buttons.indexOf(_arg_1);
-				if (Math.abs((_local_3 - _arg_2)) <= 1)
+				if (this.borderlessMode)
 				{
-					if (this.borderlessMode)
+					_arg_1.changeBitmap("tab_button_borderless_idle", new Point(0, ((this.borderlessMode) ? 0 : 3)));
+					_arg_1.bitmap.alpha = 0;
+				}
+				else
+				{
+					if (_local_3 > _arg_2)
 					{
-						_arg_1.changeBitmap("tab_button_borderless_idle", new Point(0, ((this.borderlessMode) ? 0 : TabButton.SELECTED_MARGIN)));
-						_arg_1.bitmap.alpha = 0;
+						_arg_1.changeBitmap("tab_button_right_idle", new Point(0, ((this.borderlessMode) ? 0 : 3)));
 					}
 					else
 					{
-						if (_local_3 > _arg_2)
-						{
-							_arg_1.changeBitmap("tab_button_right_idle", new Point(0, ((this.borderlessMode) ? 0 : TabButton.SELECTED_MARGIN)));
-						}
-						else
-						{
-							_arg_1.changeBitmap("tab_button_left_idle", new Point(0, ((this.borderlessMode) ? 0 : TabButton.SELECTED_MARGIN)));
-						}
+						_arg_1.changeBitmap("tab_button_left_idle", new Point(0, ((this.borderlessMode) ? 0 : 3)));
 					}
 				}
 			}

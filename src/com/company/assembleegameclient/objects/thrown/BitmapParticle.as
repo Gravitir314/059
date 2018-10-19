@@ -99,7 +99,7 @@ package com.company.assembleegameclient.objects.thrown
 				}
 				catch (error:Error)
 				{
-					return;
+
 				}
 			}
 

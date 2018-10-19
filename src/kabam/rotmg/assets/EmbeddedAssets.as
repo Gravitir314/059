@@ -3,375 +3,560 @@ package kabam.rotmg.assets
 	public class EmbeddedAssets
 		{
 
-			public static var particlesEmbed:Class = EmbeddedAssets_particlesEmbed;
+			[Embed(source="EmbeddedAssets_particlesEmbed.dat", mimeType="application/octet-stream")]
+			public static var particlesEmbed:Class;
 
-			public static const StarburstSpinner:Class = EmbeddedAssets_StarburstSpinner;
+			[Embed(source="EmbeddedAssets_StarburstSpinner.png")]
+			public static const StarburstSpinner:Class;
 
-			public static const EvolveBackground:Class = EmbeddedAssets_EvolveBackground;
+			[Embed(source="EmbeddedAssets_EvolveBackground.jpg")]
+			public static const EvolveBackground:Class;
 
-			public static const DarknessBackground:Class = EmbeddedAssets_DarknessBackground;
+			[Embed(source="EmbeddedAssets_DarknessBackground.png")]
+			public static const DarknessBackground:Class;
 
-			public static var lofiCharEmbed_:Class = EmbeddedAssets_lofiCharEmbed_;
+			[Embed(source="EmbeddedAssets_lofiCharEmbed_.png")]
+			public static var lofiCharEmbed_:Class;
 
-			public static var lofiChar2Embed_:Class = EmbeddedAssets_lofiChar2Embed_;
+			[Embed(source="EmbeddedAssets_lofiChar2Embed_.png")]
+			public static var lofiChar2Embed_:Class;
 
-			public static var lofiCharBigEmbed_:Class = EmbeddedAssets_lofiCharBigEmbed_;
+			[Embed(source="EmbeddedAssets_lofiCharBigEmbed_.png")]
+			public static var lofiCharBigEmbed_:Class;
 
-			public static var lofiEnvironmentEmbed_:Class = EmbeddedAssets_lofiEnvironmentEmbed_;
+			[Embed(source="EmbeddedAssets_lofiEnvironmentEmbed_.png")]
+			public static var lofiEnvironmentEmbed_:Class;
 
-			public static var lofiEnvironment2Embed_:Class = EmbeddedAssets_lofiEnvironment2Embed_;
+			[Embed(source="EmbeddedAssets_lofiEnvironment2Embed_.png")]
+			public static var lofiEnvironment2Embed_:Class;
 
-			public static var lofiEnvironment3Embed_:Class = EmbeddedAssets_lofiEnvironment3Embed_;
+			[Embed(source="EmbeddedAssets_lofiEnvironment3Embed_.png")]
+			public static var lofiEnvironment3Embed_:Class;
 
-			public static var lofiInterfaceEmbed_:Class = EmbeddedAssets_lofiInterfaceEmbed_;
+			[Embed(source="EmbeddedAssets_lofiInterfaceEmbed_.png")]
+			public static var lofiInterfaceEmbed_:Class;
 
-			public static var lofiInterfaceBigEmbed_:Class = EmbeddedAssets_lofiInterfaceBigEmbed_;
+			[Embed(source="EmbeddedAssets_lofiInterfaceBigEmbed_.png")]
+			public static var lofiInterfaceBigEmbed_:Class;
 
-			public static var lofiInterface2Embed_:Class = EmbeddedAssets_lofiInterface2Embed_;
+			[Embed(source="EmbeddedAssets_lofiInterface2Embed_.png")]
+			public static var lofiInterface2Embed_:Class;
 
-			public static var lofiObjEmbed_:Class = EmbeddedAssets_lofiObjEmbed_;
+			[Embed(source="EmbeddedAssets_lofiObjEmbed_.png")]
+			public static var lofiObjEmbed_:Class;
 
-			public static var lofiObj2Embed_:Class = EmbeddedAssets_lofiObj2Embed_;
+			[Embed(source="EmbeddedAssets_lofiObj2Embed_.png")]
+			public static var lofiObj2Embed_:Class;
 
-			public static var lofiObj3Embed_:Class = EmbeddedAssets_lofiObj3Embed_;
+			[Embed(source="EmbeddedAssets_lofiObj3Embed_.png")]
+			public static var lofiObj3Embed_:Class;
 
-			public static var lofiObj4Embed_:Class = EmbeddedAssets_lofiObj4Embed_;
+			[Embed(source="EmbeddedAssets_lofiObj4Embed_.png")]
+			public static var lofiObj4Embed_:Class;
 
-			public static var lofiObj5Embed_:Class = EmbeddedAssets_lofiObj5Embed_;
+			[Embed(source="EmbeddedAssets_lofiObj5Embed_.png")]
+			public static var lofiObj5Embed_:Class;
 
-			public static var lofiObj5bEmbed_:Class = EmbeddedAssets_lofiObj5bEmbed_;
+			[Embed(source="EmbeddedAssets_lofiObj5bEmbed_.png")]
+			public static var lofiObj5bEmbed_:Class;
 
-			public static var lofiObj6Embed_:Class = EmbeddedAssets_lofiObj6Embed_;
+			[Embed(source="EmbeddedAssets_lofiObj6Embed_.png")]
+			public static var lofiObj6Embed_:Class;
 
-			public static var lofiObjBigEmbed_:Class = EmbeddedAssets_lofiObjBigEmbed_;
+			[Embed(source="EmbeddedAssets_lofiObjBigEmbed_.png")]
+			public static var lofiObjBigEmbed_:Class;
 
-			public static var lofiObj40x40Embed_:Class = EmbeddedAssets_lofiObj40x40Embed_;
+			[Embed(source="EmbeddedAssets_lofiObj40x40Embed_.png")]
+			public static var lofiObj40x40Embed_:Class;
 
-			public static var lofiProjsEmbed_:Class = EmbeddedAssets_lofiProjsEmbed_;
+			[Embed(source="EmbeddedAssets_lofiProjsEmbed_.png")]
+			public static var lofiProjsEmbed_:Class;
 
-			public static var lofiProjsBigEmbed_:Class = EmbeddedAssets_lofiProjsBigEmbed_;
+			[Embed(source="EmbeddedAssets_lofiProjsBigEmbed_.png")]
+			public static var lofiProjsBigEmbed_:Class;
 
-			public static var lofiParticlesShockerEmbed_:Class = EmbeddedAssets_lofiParticlesShockerEmbed_;
+			[Embed(source="EmbeddedAssets_lofiParticlesShockerEmbed_.png")]
+			public static var lofiParticlesShockerEmbed_:Class;
 
-			public static var lofiPartsEmbed_:Class = EmbeddedAssets_lofiPartsEmbed_;
+			[Embed(source="EmbeddedAssets_lofiPartsEmbed_.png")]
+			public static var lofiPartsEmbed_:Class;
 
-			public static var chars8x8rBeachEmbed_:Class = EmbeddedAssets_chars8x8rBeachEmbed_;
+			[Embed(source="EmbeddedAssets_chars8x8rBeachEmbed_.png")]
+			public static var chars8x8rBeachEmbed_:Class;
 
-			public static var chars8x8dBeachEmbed_:Class = EmbeddedAssets_chars8x8dBeachEmbed_;
+			[Embed(source="EmbeddedAssets_chars8x8dBeachEmbed_.png")]
+			public static var chars8x8dBeachEmbed_:Class;
 
-			public static var chars8x8rLow1Embed_:Class = EmbeddedAssets_chars8x8rLow1Embed_;
+			[Embed(source="EmbeddedAssets_chars8x8rLow1Embed_.png")]
+			public static var chars8x8rLow1Embed_:Class;
 
-			public static var chars8x8rLow2Embed_:Class = EmbeddedAssets_chars8x8rLow2Embed_;
+			[Embed(source="EmbeddedAssets_chars8x8rLow2Embed_.png")]
+			public static var chars8x8rLow2Embed_:Class;
 
-			public static var chars8x8rMidEmbed_:Class = EmbeddedAssets_chars8x8rMidEmbed_;
+			[Embed(source="EmbeddedAssets_chars8x8rMidEmbed_.png")]
+			public static var chars8x8rMidEmbed_:Class;
 
-			public static var chars8x8rMid2Embed_:Class = EmbeddedAssets_chars8x8rMid2Embed_;
+			[Embed(source="EmbeddedAssets_chars8x8rMid2Embed_.png")]
+			public static var chars8x8rMid2Embed_:Class;
 
-			public static var chars8x8rHighEmbed_:Class = EmbeddedAssets_chars8x8rHighEmbed_;
+			[Embed(source="EmbeddedAssets_chars8x8rHighEmbed_.png")]
+			public static var chars8x8rHighEmbed_:Class;
 
-			public static var chars8x8rHero1Embed_:Class = EmbeddedAssets_chars8x8rHero1Embed_;
+			[Embed(source="EmbeddedAssets_chars8x8rHero1Embed_.png")]
+			public static var chars8x8rHero1Embed_:Class;
 
-			public static var chars8x8rHero2Embed_:Class = EmbeddedAssets_chars8x8rHero2Embed_;
+			[Embed(source="EmbeddedAssets_chars8x8rHero2Embed_.png")]
+			public static var chars8x8rHero2Embed_:Class;
 
-			public static var chars8x8dHero1Embed_:Class = EmbeddedAssets_chars8x8dHero1Embed_;
+			[Embed(source="EmbeddedAssets_chars8x8dHero1Embed_.png")]
+			public static var chars8x8dHero1Embed_:Class;
 
-			public static var chars16x16dMountains1Embed_:Class = EmbeddedAssets_chars16x16dMountains1Embed_;
+			[Embed(source="EmbeddedAssets_chars16x16dMountains1Embed_.png")]
+			public static var chars16x16dMountains1Embed_:Class;
 
-			public static var chars16x16dMountains2Embed_:Class = EmbeddedAssets_chars16x16dMountains2Embed_;
+			[Embed(source="EmbeddedAssets_chars16x16dMountains2Embed_.png")]
+			public static var chars16x16dMountains2Embed_:Class;
 
-			public static var chars8x8dEncountersEmbed_:Class = EmbeddedAssets_chars8x8dEncountersEmbed_;
+			[Embed(source="EmbeddedAssets_chars8x8dEncountersEmbed_.png")]
+			public static var chars8x8dEncountersEmbed_:Class;
 
-			public static var chars8x8rEncountersEmbed_:Class = EmbeddedAssets_chars8x8rEncountersEmbed_;
+			[Embed(source="EmbeddedAssets_chars8x8rEncountersEmbed_.png")]
+			public static var chars8x8rEncountersEmbed_:Class;
 
-			public static var chars16x8dEncountersEmbed_:Class = EmbeddedAssets_chars16x8dEncountersEmbed_;
+			[Embed(source="EmbeddedAssets_chars16x8dEncountersEmbed_.png")]
+			public static var chars16x8dEncountersEmbed_:Class;
 
-			public static var chars16x8rEncountersEmbed_:Class = EmbeddedAssets_chars16x8rEncountersEmbed_;
+			[Embed(source="EmbeddedAssets_chars16x8rEncountersEmbed_.png")]
+			public static var chars16x8rEncountersEmbed_:Class;
 
-			public static var chars16x16dEncountersEmbed_:Class = EmbeddedAssets_chars16x16dEncountersEmbed_;
+			[Embed(source="EmbeddedAssets_chars16x16dEncountersEmbed_.png")]
+			public static var chars16x16dEncountersEmbed_:Class;
 
-			public static var chars16x16dEncounters2Embed_:Class = EmbeddedAssets_chars16x16dEncounters2Embed_;
+			[Embed(source="EmbeddedAssets_chars16x16dEncounters2Embed_.png")]
+			public static var chars16x16dEncounters2Embed_:Class;
 
-			public static var chars16x16rEncountersEmbed_:Class = EmbeddedAssets_chars16x16rEncountersEmbed_;
+			[Embed(source="EmbeddedAssets_chars16x16rEncountersEmbed_.png")]
+			public static var chars16x16rEncountersEmbed_:Class;
 
-			public static var lofiGravestoneEmbed_:Class = EmbeddedAssets_lofiGravestoneEmbed_;
+			[Embed(source="EmbeddedAssets_lofiGravestoneEmbed_.png")]
+			public static var lofiGravestoneEmbed_:Class;
 
-			public static var playersEmbed_:Class = EmbeddedAssets_playersEmbed_;
+			[Embed(source="EmbeddedAssets_playersEmbed_.png")]
+			public static var playersEmbed_:Class;
 
-			public static var playersMaskEmbed_:Class = EmbeddedAssets_playersMaskEmbed_;
+			[Embed(source="EmbeddedAssets_playersMaskEmbed_.png")]
+			public static var playersMaskEmbed_:Class;
 
-			public static var playersSkinsEmbed_:Class = EmbeddedAssets_playersSkinsEmbed_;
+			[Embed(source="EmbeddedAssets_playersSkinsEmbed_.png")]
+			public static var playersSkinsEmbed_:Class;
 
-			public static var playersSkinsMaskEmbed_:Class = EmbeddedAssets_playersSkinsMaskEmbed_;
+			[Embed(source="EmbeddedAssets_playersSkinsMaskEmbed_.png")]
+			public static var playersSkinsMaskEmbed_:Class;
 
-			public static var playersSkins16Embed_:Class = EmbeddedAssets_playersSkins16Embed_;
+			[Embed(source="EmbeddedAssets_playersSkins16Embed_.png")]
+			public static var playersSkins16Embed_:Class;
 
-			public static var playersSkins16MaskEmbed_:Class = EmbeddedAssets_playersSkins16MaskEmbed_;
+			[Embed(source="EmbeddedAssets_playersSkins16MaskEmbed_.png")]
+			public static var playersSkins16MaskEmbed_:Class;
 
-			public static var chars8x8rPets1Embed_:Class = EmbeddedAssets_chars8x8rPets1Embed_;
+			[Embed(source="EmbeddedAssets_chars8x8rPets1Embed_.png")]
+			public static var chars8x8rPets1Embed_:Class;
 
-			public static var chars8x8rPets2Embed_:Class = EmbeddedAssets_chars8x8rPets2Embed_;
+			[Embed(source="EmbeddedAssets_chars8x8rPets2Embed_.png")]
+			public static var chars8x8rPets2Embed_:Class;
 
-			public static var chars8x8rPets1MaskEmbed_:Class = EmbeddedAssets_chars8x8rPets1MaskEmbed_;
+			[Embed(source="EmbeddedAssets_chars8x8rPets1MaskEmbed_.png")]
+			public static var chars8x8rPets1MaskEmbed_:Class;
 
-			public static var chars8x8rPetsKaratePenguin_:Class = EmbeddedAssets_chars8x8rPetsKaratePenguin_;
+			[Embed(source="EmbeddedAssets_chars8x8rPetsKaratePenguin_.png")]
+			public static var chars8x8rPetsKaratePenguin_:Class;
 
-			public static var petsDivineEmbed_:Class = EmbeddedAssets_petsDivineEmbed_;
+			[Embed(source="EmbeddedAssets_petsDivineEmbed_.png")]
+			public static var petsDivineEmbed_:Class;
 
-			public static var redLootBagEmbed_:Class = EmbeddedAssets_redLootBagEmbed_;
+			[Embed(source="EmbeddedAssets_redLootBagEmbed_.png")]
+			public static var redLootBagEmbed_:Class;
 
-			public static var starsEmbed_:Class = EmbeddedAssets_starsEmbed_;
+			[Embed(source="EmbeddedAssets_starsEmbed_.png")]
+			public static var starsEmbed_:Class;
 
-			public static var textile4x4Embed_:Class = EmbeddedAssets_textile4x4Embed_;
+			[Embed(source="EmbeddedAssets_textile4x4Embed_.png")]
+			public static var textile4x4Embed_:Class;
 
-			public static var textile5x5Embed_:Class = EmbeddedAssets_textile5x5Embed_;
+			[Embed(source="EmbeddedAssets_textile5x5Embed_.png")]
+			public static var textile5x5Embed_:Class;
 
-			public static var textile9x9Embed_:Class = EmbeddedAssets_textile9x9Embed_;
+			[Embed(source="EmbeddedAssets_textile9x9Embed_.png")]
+			public static var textile9x9Embed_:Class;
 
-			public static var textile10x10Embed_:Class = EmbeddedAssets_textile10x10Embed_;
+			[Embed(source="EmbeddedAssets_textile10x10Embed_.png")]
+			public static var textile10x10Embed_:Class;
 
-			public static var innerMaskEmbed_:Class = EmbeddedAssets_innerMaskEmbed_;
+			[Embed(source="EmbeddedAssets_innerMaskEmbed_.png")]
+			public static var innerMaskEmbed_:Class;
 
-			public static var sidesMaskEmbed_:Class = EmbeddedAssets_sidesMaskEmbed_;
+			[Embed(source="EmbeddedAssets_sidesMaskEmbed_.png")]
+			public static var sidesMaskEmbed_:Class;
 
-			public static var outerMaskEmbed_:Class = EmbeddedAssets_outerMaskEmbed_;
+			[Embed(source="EmbeddedAssets_outerMaskEmbed_.png")]
+			public static var outerMaskEmbed_:Class;
 
-			public static var innerP1MaskEmbed_:Class = EmbeddedAssets_innerP1MaskEmbed_;
+			[Embed(source="EmbeddedAssets_innerP1MaskEmbed_.png")]
+			public static var innerP1MaskEmbed_:Class;
 
-			public static var innerP2MaskEmbed_:Class = EmbeddedAssets_innerP2MaskEmbed_;
+			[Embed(source="EmbeddedAssets_innerP2MaskEmbed_.png")]
+			public static var innerP2MaskEmbed_:Class;
 
-			private static var monsterTank1Embed_:Class = EmbeddedAssets_monsterTank1Embed_;
+			[Embed(source="EmbeddedAssets_monsterTank1Embed_.dat", mimeType="application/octet-stream")]
+			private static var monsterTank1Embed_:Class;
 
-			private static var monsterTank2Embed_:Class = EmbeddedAssets_monsterTank2Embed_;
+			[Embed(source="EmbeddedAssets_monsterTank2Embed_.dat", mimeType="application/octet-stream")]
+			private static var monsterTank2Embed_:Class;
 
-			private static var monsterTank3Embed_:Class = EmbeddedAssets_monsterTank3Embed_;
+			[Embed(source="EmbeddedAssets_monsterTank3Embed_.dat", mimeType="application/octet-stream")]
+			private static var monsterTank3Embed_:Class;
 
-			private static var monsterTank4Embed_:Class = EmbeddedAssets_monsterTank4Embed_;
+			[Embed(source="EmbeddedAssets_monsterTank4Embed_.dat", mimeType="application/octet-stream")]
+			private static var monsterTank4Embed_:Class;
 
-			private static var labTankEmbed_:Class = EmbeddedAssets_labTankEmbed_;
+			[Embed(source="EmbeddedAssets_labTankEmbed_.dat", mimeType="application/octet-stream")]
+			private static var labTankEmbed_:Class;
 
-			private static var teslaEmbed_:Class = EmbeddedAssets_teslaEmbed_;
+			[Embed(source="EmbeddedAssets_teslaEmbed_.dat", mimeType="application/octet-stream")]
+			private static var teslaEmbed_:Class;
 
-			private static var gasEmitter_:Class = EmbeddedAssets_gasEmitter_;
+			[Embed(source="EmbeddedAssets_gasEmitter_.dat", mimeType="application/octet-stream")]
+			private static var gasEmitter_:Class;
 
-			private static var cloningVatEmbed_:Class = EmbeddedAssets_cloningVatEmbed_;
+			[Embed(source="EmbeddedAssets_cloningVatEmbed_.dat", mimeType="application/octet-stream")]
+			private static var cloningVatEmbed_:Class;
 
-			private static var crateEmbed_:Class = EmbeddedAssets_crateEmbed_;
+			[Embed(source="EmbeddedAssets_crateEmbed_.dat", mimeType="application/octet-stream")]
+			private static var crateEmbed_:Class;
 
-			private static var threeSideCubeEmbed_:Class = EmbeddedAssets_threeSideCubeEmbed_;
+			[Embed(source="EmbeddedAssets_threeSideCubeEmbed_.dat", mimeType="application/octet-stream")]
+			private static var threeSideCubeEmbed_:Class;
 
-			private static var squatty3Side_:Class = EmbeddedAssets_squatty3Side_;
+			[Embed(source="EmbeddedAssets_squatty3Side_.dat", mimeType="application/octet-stream")]
+			private static var squatty3Side_:Class;
 
-			private static var cubeEmbed_:Class = EmbeddedAssets_cubeEmbed_;
+			[Embed(source="EmbeddedAssets_cubeEmbed_.dat", mimeType="application/octet-stream")]
+			private static var cubeEmbed_:Class;
 
-			private static var bigcubeEmbed_:Class = EmbeddedAssets_bigcubeEmbed_;
+			[Embed(source="EmbeddedAssets_bigcubeEmbed_.dat", mimeType="application/octet-stream")]
+			private static var bigcubeEmbed_:Class;
 
-			private static var icosahedronEmbed_:Class = EmbeddedAssets_icosahedronEmbed_;
+			[Embed(source="EmbeddedAssets_icosahedronEmbed_.dat", mimeType="application/octet-stream")]
+			private static var icosahedronEmbed_:Class;
 
-			private static var octahedronEmbed_:Class = EmbeddedAssets_octahedronEmbed_;
+			[Embed(source="EmbeddedAssets_octahedronEmbed_.dat", mimeType="application/octet-stream")]
+			private static var octahedronEmbed_:Class;
 
-			private static var pyramidEmbed_:Class = EmbeddedAssets_pyramidEmbed_;
+			[Embed(source="EmbeddedAssets_pyramidEmbed_.dat", mimeType="application/octet-stream")]
+			private static var pyramidEmbed_:Class;
 
-			private static var tetrahedronEmbed_:Class = EmbeddedAssets_tetrahedronEmbed_;
+			[Embed(source="EmbeddedAssets_tetrahedronEmbed_.dat", mimeType="application/octet-stream")]
+			private static var tetrahedronEmbed_:Class;
 
-			private static var dodecahedronEmbed_:Class = EmbeddedAssets_dodecahedronEmbed_;
+			[Embed(source="EmbeddedAssets_dodecahedronEmbed_.dat", mimeType="application/octet-stream")]
+			private static var dodecahedronEmbed_:Class;
 
-			private static var pillarEmbed_:Class = EmbeddedAssets_pillarEmbed_;
+			[Embed(source="EmbeddedAssets_pillarEmbed_.dat", mimeType="application/octet-stream")]
+			private static var pillarEmbed_:Class;
 
-			private static var brokenPillarEmbed_:Class = EmbeddedAssets_brokenPillarEmbed_;
+			[Embed(source="EmbeddedAssets_brokenPillarEmbed_.dat", mimeType="application/octet-stream")]
+			private static var brokenPillarEmbed_:Class;
 
-			private static var towerEmbed_:Class = EmbeddedAssets_towerEmbed_;
+			[Embed(source="EmbeddedAssets_towerEmbed_.dat", mimeType="application/octet-stream")]
+			private static var towerEmbed_:Class;
 
-			private static var obeliskEmbed_:Class = EmbeddedAssets_obeliskEmbed_;
+			[Embed(source="EmbeddedAssets_obeliskEmbed_.dat", mimeType="application/octet-stream")]
+			private static var obeliskEmbed_:Class;
 
-			private static var tableEmbed_:Class = EmbeddedAssets_tableEmbed_;
+			[Embed(source="EmbeddedAssets_tableEmbed_.dat", mimeType="application/octet-stream")]
+			private static var tableEmbed_:Class;
 
-			private static var tableEdgeEmbed_:Class = EmbeddedAssets_tableEdgeEmbed_;
+			[Embed(source="EmbeddedAssets_tableEdgeEmbed_.dat", mimeType="application/octet-stream")]
+			private static var tableEdgeEmbed_:Class;
 
-			private static var signEmbed_:Class = EmbeddedAssets_signEmbed_;
+			[Embed(source="EmbeddedAssets_signEmbed_.dat", mimeType="application/octet-stream")]
+			private static var signEmbed_:Class;
 
-			private static var webEmbed_:Class = EmbeddedAssets_webEmbed_;
+			[Embed(source="EmbeddedAssets_webEmbed_.dat", mimeType="application/octet-stream")]
+			private static var webEmbed_:Class;
 
-			private static var twoHighWall_:Class = EmbeddedAssets_twoHighWall_;
+			[Embed(source="EmbeddedAssets_twoHighWall_.dat", mimeType="application/octet-stream")]
+			private static var twoHighWall_:Class;
 
-			private static var columnOneAndHalfEmbed_:Class = EmbeddedAssets_columnOneAndHalfEmbed_;
+			[Embed(source="EmbeddedAssets_columnOneAndHalfEmbed_.dat", mimeType="application/octet-stream")]
+			private static var columnOneAndHalfEmbed_:Class;
 
-			private static var candyColBrokenEmbed_:Class = EmbeddedAssets_candyColBrokenEmbed_;
+			[Embed(source="EmbeddedAssets_candyColBrokenEmbed_.dat", mimeType="application/octet-stream")]
+			private static var candyColBrokenEmbed_:Class;
 
-			private static var candyColWholeEmbed_:Class = EmbeddedAssets_candyColWholeEmbed_;
+			[Embed(source="EmbeddedAssets_candyColWholeEmbed_.dat", mimeType="application/octet-stream")]
+			private static var candyColWholeEmbed_:Class;
 
-			private static var candyDoughnut1Embed_:Class = EmbeddedAssets_candyDoughnut1Embed_;
+			[Embed(source="EmbeddedAssets_candyDoughnut1Embed_.dat", mimeType="application/octet-stream")]
+			private static var candyDoughnut1Embed_:Class;
 
-			private static var candyDoughnut2Embed_:Class = EmbeddedAssets_candyDoughnut2Embed_;
+			[Embed(source="EmbeddedAssets_candyDoughnut2Embed_.dat", mimeType="application/octet-stream")]
+			private static var candyDoughnut2Embed_:Class;
 
-			private static var candyDoughnut3Embed_:Class = EmbeddedAssets_candyDoughnut3Embed_;
+			[Embed(source="EmbeddedAssets_candyDoughnut3Embed_.dat", mimeType="application/octet-stream")]
+			private static var candyDoughnut3Embed_:Class;
 
-			private static var candyDoughnut4Embed_:Class = EmbeddedAssets_candyDoughnut4Embed_;
+			[Embed(source="EmbeddedAssets_candyDoughnut4Embed_.dat", mimeType="application/octet-stream")]
+			private static var candyDoughnut4Embed_:Class;
 
-			private static var newGateEmbed_:Class = EmbeddedAssets_newGateEmbed_;
+			[Embed(source="EmbeddedAssets_newGateEmbed_.dat", mimeType="application/octet-stream")]
+			private static var newGateEmbed_:Class;
 
-			private static var newGateEntryEmbed_:Class = EmbeddedAssets_newGateEntryEmbed_;
+			[Embed(source="EmbeddedAssets_newGateEntryEmbed_.dat", mimeType="application/octet-stream")]
+			private static var newGateEntryEmbed_:Class;
 
-			private static var newGateEntry2Embed_:Class = EmbeddedAssets_newGateEntry2Embed_;
+			[Embed(source="EmbeddedAssets_newGateEntry2Embed_.dat", mimeType="application/octet-stream")]
+			private static var newGateEntry2Embed_:Class;
 
-			private static var newGateEnd1Embed_:Class = EmbeddedAssets_newGateEnd1Embed_;
+			[Embed(source="EmbeddedAssets_newGateEnd1Embed_.dat", mimeType="application/octet-stream")]
+			private static var newGateEnd1Embed_:Class;
 
-			private static var newGateEnd2Embed_:Class = EmbeddedAssets_newGateEnd2Embed_;
+			[Embed(source="EmbeddedAssets_newGateEnd2Embed_.dat", mimeType="application/octet-stream")]
+			private static var newGateEnd2Embed_:Class;
 
-			private static var newMonument1Embed_:Class = EmbeddedAssets_newMonument1Embed_;
+			[Embed(source="EmbeddedAssets_newMonument1Embed_.dat", mimeType="application/octet-stream")]
+			private static var newMonument1Embed_:Class;
 
-			private static var newMonument2Embed_:Class = EmbeddedAssets_newMonument2Embed_;
+			[Embed(source="EmbeddedAssets_newMonument2Embed_.dat", mimeType="application/octet-stream")]
+			private static var newMonument2Embed_:Class;
 
-			private static var newMonument3Embed_:Class = EmbeddedAssets_newMonument3Embed_;
+			[Embed(source="EmbeddedAssets_newMonument3Embed_.dat", mimeType="application/octet-stream")]
+			private static var newMonument3Embed_:Class;
 
-			private static var largeMonument1Embed_:Class = EmbeddedAssets_largeMonument1Embed_;
+			[Embed(source="EmbeddedAssets_largeMonument1Embed_.dat", mimeType="application/octet-stream")]
+			private static var largeMonument1Embed_:Class;
 
-			private static var largeMonument2Embed_:Class = EmbeddedAssets_largeMonument2Embed_;
+			[Embed(source="EmbeddedAssets_largeMonument2Embed_.dat", mimeType="application/octet-stream")]
+			private static var largeMonument2Embed_:Class;
 
-			private static var largeMonument3Embed_:Class = EmbeddedAssets_largeMonument3Embed_;
+			[Embed(source="EmbeddedAssets_largeMonument3Embed_.dat", mimeType="application/octet-stream")]
+			private static var largeMonument3Embed_:Class;
 
-			private static var jackoEmbed_:Class = EmbeddedAssets_jackoEmbed_;
+			[Embed(source="EmbeddedAssets_jackoEmbed_.dat", mimeType="application/octet-stream")]
+			private static var jackoEmbed_:Class;
 
-			private static var petUpgrader_:Class = EmbeddedAssets_petUpgrader_;
+			[Embed(source="EmbeddedAssets_petUpgrader_.dat", mimeType="application/octet-stream")]
+			private static var petUpgrader_:Class;
 
-			public static var d1Chars8x8rEmbed_:Class = EmbeddedAssets_d1Chars8x8rEmbed_;
+			[Embed(source="EmbeddedAssets_d1Chars8x8rEmbed_.png")]
+			public static var d1Chars8x8rEmbed_:Class;
 
-			public static var d1Chars16x16rEmbed_:Class = EmbeddedAssets_d1Chars16x16rEmbed_;
+			[Embed(source="EmbeddedAssets_d1Chars16x16rEmbed_.png")]
+			public static var d1Chars16x16rEmbed_:Class;
 
-			public static var d1LofiObjEmbed_:Class = EmbeddedAssets_d1LofiObjEmbed_;
+			[Embed(source="EmbeddedAssets_d1LofiObjEmbed_.png")]
+			public static var d1LofiObjEmbed_:Class;
 
-			public static var d1LofiObjBigEmbed_:Class = EmbeddedAssets_d1LofiObjBigEmbed_;
+			[Embed(source="EmbeddedAssets_d1LofiObjBigEmbed_.png")]
+			public static var d1LofiObjBigEmbed_:Class;
 
-			public static var d2Chars8x8rEmbed_:Class = EmbeddedAssets_d2Chars8x8rEmbed_;
+			[Embed(source="EmbeddedAssets_d2Chars8x8rEmbed_.png")]
+			public static var d2Chars8x8rEmbed_:Class;
 
-			public static var d2Chars16x16rEmbed_:Class = EmbeddedAssets_d2Chars16x16rEmbed_;
+			[Embed(source="EmbeddedAssets_d2Chars16x16rEmbed_.png")]
+			public static var d2Chars16x16rEmbed_:Class;
 
-			public static var d2LofiObjEmbed_:Class = EmbeddedAssets_d2LofiObjEmbed_;
+			[Embed(source="EmbeddedAssets_d2LofiObjEmbed_.png")]
+			public static var d2LofiObjEmbed_:Class;
 
-			public static var d2LofiObjBigEmbed_:Class = EmbeddedAssets_d2LofiObjBigEmbed_;
+			[Embed(source="EmbeddedAssets_d2LofiObjBigEmbed_.png")]
+			public static var d2LofiObjBigEmbed_:Class;
 
-			public static var d3Chars8x8rEmbed_:Class = EmbeddedAssets_d3Chars8x8rEmbed_;
+			[Embed(source="EmbeddedAssets_d3Chars8x8rEmbed_.png")]
+			public static var d3Chars8x8rEmbed_:Class;
 
-			public static var d3Chars16x16rEmbed_:Class = EmbeddedAssets_d3Chars16x16rEmbed_;
+			[Embed(source="EmbeddedAssets_d3Chars16x16rEmbed_.png")]
+			public static var d3Chars16x16rEmbed_:Class;
 
-			public static var d3LofiObjEmbed_:Class = EmbeddedAssets_d3LofiObjEmbed_;
+			[Embed(source="EmbeddedAssets_d3LofiObjEmbed_.png")]
+			public static var d3LofiObjEmbed_:Class;
 
-			public static var d3LofiObjBigEmbed_:Class = EmbeddedAssets_d3LofiObjBigEmbed_;
+			[Embed(source="EmbeddedAssets_d3LofiObjBigEmbed_.png")]
+			public static var d3LofiObjBigEmbed_:Class;
 
-			public static var cursorsEmbed_:Class = EmbeddedAssets_cursorsEmbed_;
+			[Embed(source="EmbeddedAssets_cursorsEmbed_.png")]
+			public static var cursorsEmbed_:Class;
 
-			public static var parasiteDenChars8x8Embed_:Class = EmbeddedAssets_parasiteDenChars8x8Embed_;
+			[Embed(source="EmbeddedAssets_parasiteDenChars8x8Embed_.png")]
+			public static var parasiteDenChars8x8Embed_:Class;
 
-			public static var parasiteDenChars16x16Embed_:Class = EmbeddedAssets_parasiteDenChars16x16Embed_;
+			[Embed(source="EmbeddedAssets_parasiteDenChars16x16Embed_.png")]
+			public static var parasiteDenChars16x16Embed_:Class;
 
-			public static var parasiteDenObjects8x8Embed_:Class = EmbeddedAssets_parasiteDenObjects8x8Embed_;
+			[Embed(source="EmbeddedAssets_parasiteDenObjects8x8Embed_.png")]
+			public static var parasiteDenObjects8x8Embed_:Class;
 
-			public static var parasiteDenObjects16x16Embed_:Class = EmbeddedAssets_parasiteDenObjects16x16Embed_;
+			[Embed(source="EmbeddedAssets_parasiteDenObjects16x16Embed_.png")]
+			public static var parasiteDenObjects16x16Embed_:Class;
 
-			public static var stPatricksChars8x8Embed_:Class = EmbeddedAssets_stPatricksChars8x8Embed_;
+			[Embed(source="EmbeddedAssets_stPatricksChars8x8Embed_.png")]
+			public static var stPatricksChars8x8Embed_:Class;
 
-			public static var stPatricksChars16x16Embed_:Class = EmbeddedAssets_stPatricksChars16x16Embed_;
+			[Embed(source="EmbeddedAssets_stPatricksChars16x16Embed_.png")]
+			public static var stPatricksChars16x16Embed_:Class;
 
-			public static var stPatricksObjects8x8Embed_:Class = EmbeddedAssets_stPatricksObjects8x8Embed_;
+			[Embed(source="EmbeddedAssets_stPatricksObjects8x8Embed_.png")]
+			public static var stPatricksObjects8x8Embed_:Class;
 
-			public static var stPatricksObjects16x16Embed_:Class = EmbeddedAssets_stPatricksObjects16x16Embed_;
+			[Embed(source="EmbeddedAssets_stPatricksObjects16x16Embed_.png")]
+			public static var stPatricksObjects16x16Embed_:Class;
 
-			public static var buffedBunnyChars16x16Embed_:Class = EmbeddedAssets_buffedBunnyChars16x16Embed_;
+			[Embed(source="EmbeddedAssets_buffedBunnyChars16x16Embed_.png")]
+			public static var buffedBunnyChars16x16Embed_:Class;
 
-			public static var buffedBunnyObjects8x8Embed_:Class = EmbeddedAssets_buffedBunnyObjects8x8Embed_;
+			[Embed(source="EmbeddedAssets_buffedBunnyObjects8x8Embed_.png")]
+			public static var buffedBunnyObjects8x8Embed_:Class;
 
-			public static var buffedBunnyObjects16x16Embed_:Class = EmbeddedAssets_buffedBunnyObjects16x16Embed_;
+			[Embed(source="EmbeddedAssets_buffedBunnyObjects16x16Embed_.png")]
+			public static var buffedBunnyObjects16x16Embed_:Class;
 
-			public static var mountainTempleChars8x8Embed_:Class = EmbeddedAssets_mountainTempleChars8x8Embed_;
+			[Embed(source="EmbeddedAssets_mountainTempleChars8x8Embed_.png")]
+			public static var mountainTempleChars8x8Embed_:Class;
 
-			public static var mountainTempleChars16x16Embed_:Class = EmbeddedAssets_mountainTempleChars16x16Embed_;
+			[Embed(source="EmbeddedAssets_mountainTempleChars16x16Embed_.png")]
+			public static var mountainTempleChars16x16Embed_:Class;
 
-			public static var mountainTempleObjects8x8Embed_:Class = EmbeddedAssets_mountainTempleObjects8x8Embed_;
+			[Embed(source="EmbeddedAssets_mountainTempleObjects8x8Embed_.png")]
+			public static var mountainTempleObjects8x8Embed_:Class;
 
-			public static var mountainTempleObjects16x16Embed_:Class = EmbeddedAssets_mountainTempleObjects16x16Embed_;
+			[Embed(source="EmbeddedAssets_mountainTempleObjects16x16Embed_.png")]
+			public static var mountainTempleObjects16x16Embed_:Class;
 
-			public static var oryxHordeChars8x8Embed_:Class = EmbeddedAssets_oryxHordeChars8x8Embed_;
+			[Embed(source="EmbeddedAssets_oryxHordeChars8x8Embed_.png")]
+			public static var oryxHordeChars8x8Embed_:Class;
 
-			public static var oryxHordeChars16x16Embed_:Class = EmbeddedAssets_oryxHordeChars16x16Embed_;
+			[Embed(source="EmbeddedAssets_oryxHordeChars16x16Embed_.png")]
+			public static var oryxHordeChars16x16Embed_:Class;
 
-			public static var oryxHordeObjects8x8Embed_:Class = EmbeddedAssets_oryxHordeObjects8x8Embed_;
+			[Embed(source="EmbeddedAssets_oryxHordeObjects8x8Embed_.png")]
+			public static var oryxHordeObjects8x8Embed_:Class;
 
-			public static var oryxHordeObjects16x16Embed_:Class = EmbeddedAssets_oryxHordeObjects16x16Embed_;
+			[Embed(source="EmbeddedAssets_oryxHordeObjects16x16Embed_.png")]
+			public static var oryxHordeObjects16x16Embed_:Class;
 
-			public static var battleOryxChars8x8Embed_:Class = EmbeddedAssets_battleOryxChars8x8Embed_;
+			[Embed(source="EmbeddedAssets_battleOryxChars8x8Embed_.png")]
+			public static var battleOryxChars8x8Embed_:Class;
 
-			public static var battleOryxChars16x16Embed_:Class = EmbeddedAssets_battleOryxChars16x16Embed_;
+			[Embed(source="EmbeddedAssets_battleOryxChars16x16Embed_.png")]
+			public static var battleOryxChars16x16Embed_:Class;
 
-			public static var battleOryxObjects8x8Embed_:Class = EmbeddedAssets_battleOryxObjects8x8Embed_;
+			[Embed(source="EmbeddedAssets_battleOryxObjects8x8Embed_.png")]
+			public static var battleOryxObjects8x8Embed_:Class;
 
-			public static var battleOryxObjects16x16Embed_:Class = EmbeddedAssets_battleOryxObjects16x16Embed_;
+			[Embed(source="EmbeddedAssets_battleOryxObjects16x16Embed_.png")]
+			public static var battleOryxObjects16x16Embed_:Class;
 
-			public static var santaWorkshopChars8x8Embed_:Class = EmbeddedAssets_santaWorkshopChars8x8Embed_;
+			[Embed(source="EmbeddedAssets_santaWorkshopChars8x8Embed_.png")]
+			public static var santaWorkshopChars8x8Embed_:Class;
 
-			public static var santaWorkshopChars16x16Embed_:Class = EmbeddedAssets_santaWorkshopChars16x16Embed_;
+			[Embed(source="EmbeddedAssets_santaWorkshopChars16x16Embed_.png")]
+			public static var santaWorkshopChars16x16Embed_:Class;
 
-			public static var santaWorkshopObjects8x8Embed_:Class = EmbeddedAssets_santaWorkshopObjects8x8Embed_;
+			[Embed(source="EmbeddedAssets_santaWorkshopObjects8x8Embed_.png")]
+			public static var santaWorkshopObjects8x8Embed_:Class;
 
-			public static var santaWorkshopObjects16x16Embed_:Class = EmbeddedAssets_santaWorkshopObjects16x16Embed_;
+			[Embed(source="EmbeddedAssets_santaWorkshopObjects16x16Embed_.png")]
+			public static var santaWorkshopObjects16x16Embed_:Class;
 
-			public static var Hanami8x8charsEmbed_:Class = EmbeddedAssets_Hanami8x8charsEmbed_;
+			[Embed(source="EmbeddedAssets_Hanami8x8charsEmbed_.png")]
+			public static var Hanami8x8charsEmbed_:Class;
 
-			public static var SakuraEnvironment16x16Embed_:Class = EmbeddedAssets_SakuraEnvironment16x16Embed_;
+			[Embed(source="EmbeddedAssets_SakuraEnvironment16x16Embed_.png")]
+			public static var SakuraEnvironment16x16Embed_:Class;
 
-			public static var SakuraEnvironment8x8Embed_:Class = EmbeddedAssets_SakuraEnvironment8x8Embed_;
+			[Embed(source="EmbeddedAssets_SakuraEnvironment8x8Embed_.png")]
+			public static var SakuraEnvironment8x8Embed_:Class;
 
-			public static var HanamiParts8x8Embed_:Class = EmbeddedAssets_HanamiParts8x8Embed_;
+			[Embed(source="EmbeddedAssets_HanamiParts8x8Embed_.png")]
+			public static var HanamiParts8x8Embed_:Class;
 
-			public static var summerNexusChars8x8Embed_:Class = EmbeddedAssets_summerNexusChars8x8Embed_;
+			[Embed(source="EmbeddedAssets_summerNexusChars8x8Embed_.png")]
+			public static var summerNexusChars8x8Embed_:Class;
 
-			public static var summerNexusChars16x16Embed_:Class = EmbeddedAssets_summerNexusChars16x16Embed_;
+			[Embed(source="EmbeddedAssets_summerNexusChars16x16Embed_.png")]
+			public static var summerNexusChars16x16Embed_:Class;
 
-			public static var summerNexusObjects8x8Embed_:Class = EmbeddedAssets_summerNexusObjects8x8Embed_;
+			[Embed(source="EmbeddedAssets_summerNexusObjects8x8Embed_.png")]
+			public static var summerNexusObjects8x8Embed_:Class;
 
-			public static var summerNexusObjects16x16Embed_:Class = EmbeddedAssets_summerNexusObjects16x16Embed_;
+			[Embed(source="EmbeddedAssets_summerNexusObjects16x16Embed_.png")]
+			public static var summerNexusObjects16x16Embed_:Class;
 
-			public static var autumnNexusObjects8x8Embed_:Class = EmbeddedAssets_autumnNexusObjects8x8Embed_;
+			[Embed(source="EmbeddedAssets_autumnNexusObjects8x8Embed_.png")]
+			public static var autumnNexusObjects8x8Embed_:Class;
 
-			public static var autumnNexusObjects16x16Embed_:Class = EmbeddedAssets_autumnNexusObjects16x16Embed_;
+			[Embed(source="EmbeddedAssets_autumnNexusObjects16x16Embed_.png")]
+			public static var autumnNexusObjects16x16Embed_:Class;
 
-			public static var autumnNexusChars8x8Embed_:Class = EmbeddedAssets_autumnNexusChars8x8Embed_;
+			[Embed(source="EmbeddedAssets_autumnNexusChars8x8Embed_.png")]
+			public static var autumnNexusChars8x8Embed_:Class;
 
-			public static var autumnNexusChars16x16Embed_:Class = EmbeddedAssets_autumnNexusChars16x16Embed_;
+			[Embed(source="EmbeddedAssets_autumnNexusChars16x16Embed_.png")]
+			public static var autumnNexusChars16x16Embed_:Class;
 
-			public static var epicHiveChars8x8Embed_:Class = EmbeddedAssets_epicHiveChars8x8Embed_;
+			[Embed(source="EmbeddedAssets_epicHiveChars8x8Embed_.png")]
+			public static var epicHiveChars8x8Embed_:Class;
 
-			public static var epicHiveChars16x16Embed_:Class = EmbeddedAssets_epicHiveChars16x16Embed_;
+			[Embed(source="EmbeddedAssets_epicHiveChars16x16Embed_.png")]
+			public static var epicHiveChars16x16Embed_:Class;
 
-			public static var epicHiveObjects8x8Embed_:Class = EmbeddedAssets_epicHiveObjects8x8Embed_;
+			[Embed(source="EmbeddedAssets_epicHiveObjects8x8Embed_.png")]
+			public static var epicHiveObjects8x8Embed_:Class;
 
-			public static var epicHiveObjects16x16Embed_:Class = EmbeddedAssets_epicHiveObjects16x16Embed_;
+			[Embed(source="EmbeddedAssets_epicHiveObjects16x16Embed_.png")]
+			public static var epicHiveObjects16x16Embed_:Class;
 
-			public static var lostHallsObjects8x8Embed_:Class = EmbeddedAssets_lostHallsObjects8x8Embed_;
+			[Embed(source="EmbeddedAssets_lostHallsObjects8x8Embed_.png")]
+			public static var lostHallsObjects8x8Embed_:Class;
 
-			public static var lostHallsObjects16x16Embed_:Class = EmbeddedAssets_lostHallsObjects16x16Embed_;
+			[Embed(source="EmbeddedAssets_lostHallsObjects16x16Embed_.png")]
+			public static var lostHallsObjects16x16Embed_:Class;
 
-			public static var lostHallsChars16x16Embed_:Class = EmbeddedAssets_lostHallsChars16x16Embed_;
+			[Embed(source="EmbeddedAssets_lostHallsChars16x16Embed_.png")]
+			public static var lostHallsChars16x16Embed_:Class;
 
-			public static var lostHallsChars8x8Embed_:Class = EmbeddedAssets_lostHallsChars8x8Embed_;
+			[Embed(source="EmbeddedAssets_lostHallsChars8x8Embed_.png")]
+			public static var lostHallsChars8x8Embed_:Class;
 
-			public static var magicWoodsChars8x8Embed_:Class = EmbeddedAssets_magicWoodsChars8x8Embed_;
+			[Embed(source="EmbeddedAssets_magicWoodsChars8x8Embed_.png")]
+			public static var magicWoodsChars8x8Embed_:Class;
 
-			public static var magicWoodsChars16x16Embed_:Class = EmbeddedAssets_magicWoodsChars16x16Embed_;
+			[Embed(source="EmbeddedAssets_magicWoodsChars16x16Embed_.png")]
+			public static var magicWoodsChars16x16Embed_:Class;
 
-			public static var magicWoodsObjects8x8Embed_:Class = EmbeddedAssets_magicWoodsObjects8x8Embed_;
+			[Embed(source="EmbeddedAssets_magicWoodsObjects8x8Embed_.png")]
+			public static var magicWoodsObjects8x8Embed_:Class;
 
-			public static var magicWoodsObjects16x16Embed_:Class = EmbeddedAssets_magicWoodsObjects16x16Embed_;
+			[Embed(source="EmbeddedAssets_magicWoodsObjects16x16Embed_.png")]
+			public static var magicWoodsObjects16x16Embed_:Class;
 
-			public static var cnidarianReefObjects8x8Embed_:Class = EmbeddedAssets_cnidarianReefObjects8x8Embed_;
+			[Embed(source="EmbeddedAssets_cnidarianReefObjects8x8Embed_.png")]
+			public static var cnidarianReefObjects8x8Embed_:Class;
 
-			public static var cnidarianReefObjects16x16Embed_:Class = EmbeddedAssets_cnidarianReefObjects16x16Embed_;
+			[Embed(source="EmbeddedAssets_cnidarianReefObjects16x16Embed_.png")]
+			public static var cnidarianReefObjects16x16Embed_:Class;
 
-			public static var secludedThicketChars8x8Embed_:Class = EmbeddedAssets_secludedThicketChars8x8Embed_;
+			[Embed(source="EmbeddedAssets_secludedThicketChars8x8Embed_.png")]
+			public static var secludedThicketChars8x8Embed_:Class;
 
-			public static var secludedThicketChars16x16Embed_:Class = EmbeddedAssets_secludedThicketChars16x16Embed_;
+			[Embed(source="EmbeddedAssets_secludedThicketChars16x16Embed_.png")]
+			public static var secludedThicketChars16x16Embed_:Class;
 
-			public static var secludedThicketObjects8x8Embed_:Class = EmbeddedAssets_secludedThicketObjects8x8Embed_;
+			[Embed(source="EmbeddedAssets_secludedThicketObjects8x8Embed_.png")]
+			public static var secludedThicketObjects8x8Embed_:Class;
 
-			public static var secludedThicketObjects16x16Embed_:Class = EmbeddedAssets_secludedThicketObjects16x16Embed_;
+			[Embed(source="EmbeddedAssets_secludedThicketObjects16x16Embed_.png")]
+			public static var secludedThicketObjects16x16Embed_:Class;
 
 			public static var models_:Object = {
 				"Monster Tank1": new monsterTank1Embed_(),

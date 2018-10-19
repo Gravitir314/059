@@ -12,7 +12,6 @@ package io.decagames.rotmg.pets.components.petPortrait
 
 	import flash.display.Sprite;
 	import flash.events.MouseEvent;
-	import flash.text.TextFormat;
 
 	import io.decagames.rotmg.pets.components.petIcon.PetIconFactory;
 	import io.decagames.rotmg.pets.components.petSkinSlot.PetSkinSlot;
@@ -36,11 +35,11 @@ package io.decagames.rotmg.pets.components.petPortrait
 		{
 
 			public static const INFO_HEIGHT:int = 207;
+			public static const BASE_POS_Y:int = 15;
 
 			private var petName:UILabel;
 			private var petSwitch:UILabel;
 			private var petRarity:UILabel;
-			private var petFeedPower:UILabel;
 			private var contentDividerTitle:SliceScalingBitmap;
 			private var petFamily:UILabel;
 			private var _petVO:IPetVO;
@@ -80,18 +79,16 @@ package io.decagames.rotmg.pets.components.petPortrait
 				this.petRarity = new UILabel();
 				DefaultLabelFormat.petInfoLabel(this.petRarity, 0xFFFFFF);
 				addChild(this.petRarity);
-				this.petFeedPower = new UILabel();
-				addChild(this.petFeedPower);
-				this.petRarity.y = ((_arg_3) ? 95 : 85);
+				this.petRarity.y = (_arg_3 ? 85 : 75);
 				this.petFamily = new UILabel();
 				this.contentDividerTitle = TextureParser.instance.getSliceScalingBitmap("UI", "content_divider_smalltitle_white", 320);
 				addChild(this.contentDividerTitle);
-				this.contentDividerTitle.y = ((_arg_3) ? 110 : 100);
+				this.contentDividerTitle.y = ((_arg_3) ? 100 : 90);
 				addChild(this.petFamily);
-				this.petFamily.y = ((_arg_3) ? 110 : 100);
+				this.petFamily.y = ((_arg_3) ? 100 : 90);
 				this._petSkin = new PetSkinSlot(_arg_2, false);
 				this._petSkin.x = ((_arg_1 / 2) - (40 / 2));
-				this._petSkin.y = ((this._switchable) ? 50 : 40);
+				this._petSkin.y = ((this._switchable) ? 40 : 30);
 				addChild(this._petSkin);
 				this.render();
 			}
@@ -303,29 +300,6 @@ package io.decagames.rotmg.pets.components.petPortrait
 
 			private function updateFeedPowerInfo(_arg_1:int, _arg_2:int, _arg_3:Boolean):void
 			{
-				if (_arg_1 > _arg_2)
-				{
-					_arg_1 = _arg_2;
-				}
-				var _local_4:* = "Feed Power: ";
-				this.petFeedPower.text = (((_local_4 + _arg_1) + "/") + _arg_2);
-				var _local_5:TextFormat = DefaultLabelFormat.petFeedPower(this.petFeedPower, 0xFFFFFF);
-				if (_arg_2 == _arg_1)
-				{
-					_local_5.color = 6538829;
-					this.petFeedPower.setTextFormat(_local_5, _local_4.length, this.petFeedPower.text.length);
-				}
-				else
-				{
-					if (_arg_3)
-					{
-						_local_5.color = 6538829;
-						this.petFeedPower.setTextFormat(_local_5, _local_4.length, (_local_4.length + _arg_1.toString().length));
-					}
-				}
-				this.petFeedPower.y = 25;
-				this.petFeedPower.x = ((this.slotWidth / 2) - (this.petFeedPower.width / 2));
-				addChild(this.petFeedPower);
 			}
 
 			public function simulateFeed(_arg_1:Array, _arg_2:int):void

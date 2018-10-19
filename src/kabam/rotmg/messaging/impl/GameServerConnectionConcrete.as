@@ -1505,10 +1505,6 @@ package kabam.rotmg.messaging.impl
 			{
 				var _local_2:AbstractMap = gs_.map;
 				var _local_3:GameObject = ObjectLibrary.getObjectFromType(_arg_1.objectType_);
-				if (_local_3 == null)
-				{
-					return;
-				}
 				var _local_4:ObjectStatusData = _arg_1.status_;
 				_local_3.setObjectId(_local_4.objectId_);
 				_local_2.addObj(_local_3, _local_4.pos_.x_, _local_4.pos_.y_);
@@ -2517,7 +2513,7 @@ package kabam.rotmg.messaging.impl
 							Parameters.needsMapCheck = 0;
 						}
 					}
-					else
+					/*else
 					{
 						if (Parameters.needsMapCheck == 3)
 						{
@@ -2526,7 +2522,7 @@ package kabam.rotmg.messaging.impl
 								Parameters.needsMapCheck = 0;
 							}
 						}
-					}
+					}*/
 				}
 			}
 

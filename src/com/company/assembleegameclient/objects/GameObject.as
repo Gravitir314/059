@@ -105,6 +105,7 @@ package com.company.assembleegameclient.objects
 			public var equipment_:Vector.<int> = null;
 			public var lockedSlot:Vector.<int> = null;
 			public var condition_:Vector.<uint> = new <uint>[0, 0];
+			public var supporterPoints:int = 0;
 			protected var tex1Id_:int = 0;
 			protected var tex2Id_:int = 0;
 			public var isInteractive_:Boolean = false;
@@ -115,12 +116,11 @@ package com.company.assembleegameclient.objects
 			public var hallucinatingTexture_:BitmapData = null;
 			public var flash_:FlashDescription = null;
 			public var connectType_:int = -1;
-
+			private var isStasisImmune_:Boolean = false;
+			private var isInvincibleXML:Boolean = false;
 			private var isStunImmuneVar_:Boolean = false;
 			private var isParalyzeImmuneVar_:Boolean = false;
 			private var isDazedImmuneVar_:Boolean = false;
-
-			private var isStasisImmune_:Boolean = false;
 			protected var lastTickUpdateTime_:int = 0;
 			protected var myLastTickId_:int = -1;
 			protected var posAtTick_:Point = new Point();
@@ -275,6 +275,10 @@ package com.company.assembleegameclient.objects
 				{
 					this.isStasisImmune_ = true;
 				}
+				if (_arg_1.hasOwnProperty("Invincible"))
+				{
+					this.isInvincibleXML = true;
+				}
 				this.props_.loadSounds();
 			}
 
@@ -426,11 +430,6 @@ package com.company.assembleegameclient.objects
 
 			override public function dispose():void
 			{
-				var _local_1:Object;
-				var _local_2:BitmapData;
-				var _local_3:Dictionary;
-				var _local_4:Object;
-				var _local_5:BitmapData;
 				super.dispose();
 				this.texture_ = null;
 				if (this.portrait_ != null)
@@ -438,32 +437,8 @@ package com.company.assembleegameclient.objects
 					this.portrait_.dispose();
 					this.portrait_ = null;
 				}
-				if (this.texturingCache_ != null)
-				{
-					for each (_local_1 in this.texturingCache_)
-					{
-						_local_2 = (_local_1 as BitmapData);
-						if (_local_2 != null)
-						{
-							_local_2.dispose();
-							_local_2 = null;
-						}
-						else
-						{
-							_local_3 = (_local_1 as Dictionary);
-							for each (_local_4 in _local_3)
-							{
-								_local_5 = (_local_4 as BitmapData);
-								if (_local_5 != null)
-								{
-									_local_5.dispose();
-									_local_5 = null;
-								}
-							}
-						}
-					}
-					this.texturingCache_ = null;
-				}
+				this.clearTextureCache();
+				this.texturingCache_ = null;
 				if (this.obj3D_ != null)
 				{
 					this.obj3D_.dispose();
@@ -631,7 +606,7 @@ package com.company.assembleegameclient.objects
 
 			public function isInvincible_():Boolean
 			{
-				return (!((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.INVINCIBLE_BIT) == 0));
+				return (this.isInvincibleXML || !((this.condition_[ConditionEffect.CE_FIRST_BATCH] & ConditionEffect.INVINCIBLE_BIT) == 0));
 			}
 
 			public function isInvulnerable_():Boolean
@@ -1027,7 +1002,7 @@ package com.company.assembleegameclient.objects
 										_local_10 = ConditionEffect.effects_[_local_9];
 										break;
 									case ConditionEffect.STASIS:
-										if (this.isStasisImmune())
+										if (this.isStasisImmune_)
 										{
 											if (_arg_4)
 											{
@@ -1841,6 +1816,34 @@ package com.company.assembleegameclient.objects
 
 			public function clearTextureCache():void
 			{
+				var _local_3:Object;
+				var _local_1:BitmapData;
+				var _local_2:Dictionary;
+				var _local_4:Object;
+				var _local_5:BitmapData;
+				if (this.texturingCache_ != null)
+				{
+					for each (_local_3 in this.texturingCache_)
+					{
+						_local_1 = (_local_3 as BitmapData);
+						if (_local_1 != null)
+						{
+							_local_1.dispose();
+						}
+						else
+						{
+							_local_2 = (_local_3 as Dictionary);
+							for each (_local_4 in _local_2)
+							{
+								_local_5 = (_local_4 as BitmapData);
+								if (_local_5 != null)
+								{
+									_local_5.dispose();
+								}
+							}
+						}
+					}
+				}
 				this.texturingCache_ = new Dictionary();
 			}
 

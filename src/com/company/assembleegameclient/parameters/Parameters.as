@@ -23,11 +23,10 @@ package com.company.assembleegameclient.parameters
 	public class Parameters
 		{
 			// ObjectLibrary.as
-			// Add saving security questions to text file
 			// Update from X28.0.6 to X30.0.0
-			// Check teleport cooldown
 			// Fix typo || clean code
 			// Finish fullscreen
+			// [GetPackagesTask.as, GetMysteryBoxesTask.as, Player.as, MapUserInput.as, GameServerConnectionConcrete.as, ParseChatMessageCommand.as]
 			public static const PORT:int = 2050;
 			public static const ALLOW_SCREENSHOT_MODE:Boolean = false;
 			public static const FELLOW_GUILD_COLOR:uint = 10944349;
@@ -41,6 +40,7 @@ package com.company.assembleegameclient.parameters
 			public static const HELP_CHAT_NAME:String = "*Help*";
 			public static const GUILD_CHAT_NAME:String = "*Guild*";
 			public static const SYNC_CHAT_NAME:String = "*Sync*";
+			public static const ASTRAL_CHAT_NAME:String = "*Astral*";
 			public static const NEWS_TIMESTAMP_DEFAULT:Number = 1.1;
 			public static const NAME_CHANGE_PRICE:int = 1000;
 			public static const GUILD_CREATION_PRICE:int = 1000;
@@ -65,10 +65,10 @@ package com.company.assembleegameclient.parameters
 			public static const USER_GENERATED_CONTENT_TERMS:String = "/UGDTermsofUse.html";
 			public static const RANDOM1:String = "311f80691451c71b09a13a2a6e";
 			public static const RANDOM2:String = "72c5583cafb6818995cbd74b80";
-			public static const RSA_PUBLIC_KEY:String = ((((("-----BEGIN PUBLIC KEY-----\n" + "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDCKFctVrhfF3m2Kes0FBL/JFeO") + "cmNg9eJz8k/hQy1kadD+XFUpluRqa//Uxp2s9W2qE0EoUCu59ugcf/p7lGuL99Uo") + "SGmQEynkBvZct+/M40L0E0rZ4BVgzLOJmIbXMp0J4PnPcb6VLZvxazGcmSfjauC7") + "F3yWYqUbZd/HCBtawwIDAQAB\n") + "-----END PUBLIC KEY-----");
+			public static const RSA_PUBLIC_KEY:String = ("-----BEGIN PUBLIC KEY-----\n" + "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDCKFctVrhfF3m2Kes0FBL/JFeO" + "cmNg9eJz8k/hQy1kadD+XFUpluRqa//Uxp2s9W2qE0EoUCu59ugcf/p7lGuL99Uo" + "SGmQEynkBvZct+/M40L0E0rZ4BVgzLOJmIbXMp0J4PnPcb6VLZvxazGcmSfjauC7" + "F3yWYqUbZd/HCBtawwIDAQAB\n" + "-----END PUBLIC KEY-----");
 			private static var savedOptions_:SharedObject = null;
-			public static const skinTypes16:Vector.<int> = new <int>[1027, 0x0404, 1029, 1030, 10973, 19494, 19531, 6346];
-			public static const itemTypes16:Vector.<int> = new <int>[5473, 5474, 5475, 5476, 10939, 19494, 19531, 6347];
+			public static const skinTypes16:Vector.<int> = new <int>[1027, 0x0404, 1029, 1030, 10973, 19494, 19531, 6346, 30056, 5505];
+			public static const itemTypes16:Vector.<int> = new <int>[5473, 5474, 5475, 5476, 10939, 19494, 19531, 6347, 5506];
 			private static var keyNames_:Dictionary = new Dictionary();
 
 			private static var ctrlrInputNames_:Dictionary = new Dictionary();
@@ -340,7 +340,7 @@ package com.company.assembleegameclient.parameters
 				{
 					return (_local_3 + " already in inclusions list");
 				}
-				Parameters.data_.autoLootIncludes.push(_local_4);
+				(Parameters.data_.autoLootIncludes as Vector.<int>).push(_local_4);
 				Parameters.setAutolootDesireables();
 				Parameters.save();
 				return ("Added " + _local_3 + " to inclusions list");
@@ -868,6 +868,9 @@ package com.company.assembleegameclient.parameters
 				setDefault("showFameGain", false);
 				setDefault("curseIndication", false);
 				setDefault("showTierTag", true);
+				setDefault("characterGlow", 0);
+				setDefault("gravestones", 0);
+				setDefault("chatNameColor", 0);
 				if (!data_.hasOwnProperty("needsSurvey"))
 				{
 					data_.needsSurvey = data_.needsTutorial;
@@ -1087,8 +1090,9 @@ package com.company.assembleegameclient.parameters
 				setDefault("noRotate", false);
 				setDefault("customSounds", true);
 				setDefault("customVolume", 1);
-				setDefault("aimAtQuest", 0);
 				setDefault("followIntoPortals", false);
+				setDefault("spamPrism", false);
+				setDefault("instaNexus", true);
 				/*setDefaultControllerInput("ctrlEnterPortal", ControllerHandler.A_num_4);
 				setDefaultControllerInput("ctrlTeleQuest", ControllerHandler.Y_num_7);
 				setDefaultControllerInput("ctrlNexus", ControllerHandler.B_num_5);

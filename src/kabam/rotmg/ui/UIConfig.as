@@ -41,6 +41,8 @@ package kabam.rotmg.ui
 	import io.decagames.rotmg.fame.StatsLine;
 	import io.decagames.rotmg.fame.data.FameTracker;
 	import io.decagames.rotmg.pets.tasks.GetOwnedPetSkinsTask;
+	import io.decagames.rotmg.shop.ShopBuyButton;
+	import io.decagames.rotmg.shop.ShopBuyButtonMediator;
 	import io.decagames.rotmg.shop.ShopPopupMediator;
 	import io.decagames.rotmg.shop.ShopPopupView;
 	import io.decagames.rotmg.shop.mysteryBox.MysteryBoxTile;
@@ -61,6 +63,7 @@ package kabam.rotmg.ui
 	import io.decagames.rotmg.shop.packages.contentPopup.PackageBoxContentPopupMediator;
 	import io.decagames.rotmg.shop.packages.startupPackage.StartupPackage;
 	import io.decagames.rotmg.shop.packages.startupPackage.StartupPackageMediator;
+	import io.decagames.rotmg.supportCampaign.tasks.GetCampaignStatusTask;
 	import io.decagames.rotmg.ui.popups.PopupMediator;
 	import io.decagames.rotmg.ui.popups.PopupView;
 	import io.decagames.rotmg.ui.popups.modal.ConfirmationModal;
@@ -209,6 +212,7 @@ package kabam.rotmg.ui
 				this.injector.map(ShowLockFade).asSingleton();
 				this.injector.map(RemoveLockFade).asSingleton();
 				this.injector.map(ToggleShowTierTagSignal).asSingleton();
+				this.injector.map(ShowHideKeyUISignal).asSingleton();
 				this.injector.map(CharactersMetricsTracker).asSingleton();
 				this.injector.map(FameTracker).asSingleton();
 				this.commandMap.map(ShowLoadingUISignal).toCommand(ShowLoadingUICommand);
@@ -252,6 +256,7 @@ package kabam.rotmg.ui
 				this.mediatorMap.map(GameObjectArrow).toMediator(GameObjectArrowMediator);
 				this.mediatorMap.map(UnFocusAble).toMediator(UnFocusAbleMediator);
 				this.mediatorMap.map(ShopPopupView).toMediator(ShopPopupMediator);
+				this.mediatorMap.map(ShopBuyButton).toMediator(ShopBuyButtonMediator);
 				this.mediatorMap.map(FameContentPopup).toMediator(FameContentPopupMediator);
 				this.mediatorMap.map(MysteryBoxTile).toMediator(MysteryBoxTileMediator);
 				this.mediatorMap.map(PackageBoxTile).toMediator(PackageBoxTileMediator);
@@ -281,6 +286,7 @@ package kabam.rotmg.ui
 				this.startup.addTask(FetchPlayerCalendarTask);
 				this.startup.addTask(GetOwnedPetSkinsTask);
 				this.startup.addTask(GetInGameNewsTask);
+				this.startup.addTask(GetCampaignStatusTask);
 				this.startup.addSignal(ShowTitleUISignal, StartupSequence.LAST);
 			}
 

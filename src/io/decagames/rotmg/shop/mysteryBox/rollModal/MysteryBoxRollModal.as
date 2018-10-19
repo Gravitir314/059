@@ -192,6 +192,7 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
 					this.buyButton = new ShopBuyButton(this.info.priceAmount, this.info.priceCurrency);
 				}
 				this.buyButton.width = 95;
+				this.buyButton.showCampaignTooltip = true;
 				this.buyButtonBackground = TextureParser.instance.getSliceScalingBitmap("UI", "buy_button_background", (this.buyButton.width + 60));
 				this.buySectionContainer.addChild(this.buyButtonBackground);
 				this.buySectionContainer.addChild(this.spinner);

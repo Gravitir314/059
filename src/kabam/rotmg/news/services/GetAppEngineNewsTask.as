@@ -2,8 +2,6 @@
 
 package kabam.rotmg.news.services
 	{
-	import com.company.assembleegameclient.ui.dialogs.ErrorDialog;
-
 	import flash.utils.getTimer;
 
 	import kabam.lib.tasks.BaseTask;
@@ -54,10 +52,6 @@ package kabam.rotmg.news.services
 				{
 					this.onNewsRequestDone(_arg_2);
 				}
-				else
-				{
-					this.onNewsRequestError(_arg_2);
-				}
 				completeTask(_arg_1, _arg_2);
 				reset();
 			}
@@ -87,11 +81,6 @@ package kabam.rotmg.news.services
 				_local_2.priority = uint(_arg_1.priority);
 				_local_2.slot = uint(_arg_1.slot);
 				return (_local_2);
-			}
-
-			private function onNewsRequestError(_arg_1:String):void
-			{
-				this.openDialog.dispatch(new ErrorDialog("Unable to get news data."));
 			}
 
 

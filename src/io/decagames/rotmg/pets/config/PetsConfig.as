@@ -29,6 +29,8 @@ package io.decagames.rotmg.pets.config
 	import io.decagames.rotmg.pets.components.petSkinSlot.PetSkinSlotMediator;
 	import io.decagames.rotmg.pets.components.petSkinsCollection.PetSkinsCollection;
 	import io.decagames.rotmg.pets.components.petSkinsCollection.PetSkinsCollectionMediator;
+	import io.decagames.rotmg.pets.components.petStatsGrid.PetFeedStatsGrid;
+	import io.decagames.rotmg.pets.components.petStatsGrid.PetFeedStatsGridMediator;
 	import io.decagames.rotmg.pets.components.petStatsGrid.PetStatsGrid;
 	import io.decagames.rotmg.pets.components.petStatsGrid.PetStatsGridMediator;
 	import io.decagames.rotmg.pets.components.selectedPetSkinInfo.SelectedPetSkinInfo;
@@ -160,6 +162,7 @@ package io.decagames.rotmg.pets.config
 				this.mediatorMap.map(ChoosePetPopup).toMediator(ChoosePetPopupMediator);
 				this.mediatorMap.map(PetPortrait).toMediator(PetPortraitMediator);
 				this.mediatorMap.map(PetStatsGrid).toMediator(PetStatsGridMediator);
+				this.mediatorMap.map(PetFeedStatsGrid).toMediator(PetFeedStatsGridMediator);
 				this.mediatorMap.map(PetSkinSlot).toMediator(PetSkinSlotMediator);
 				this.injector.map(SelectPetSkinSignal).asSingleton();
 				this.mediatorMap.map(PetYardWindow).toMediator(PetYardWindowMediator);

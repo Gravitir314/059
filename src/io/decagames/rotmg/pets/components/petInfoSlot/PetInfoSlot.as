@@ -5,6 +5,7 @@ package io.decagames.rotmg.pets.components.petInfoSlot
 	import flash.display.Sprite;
 
 	import io.decagames.rotmg.pets.components.petPortrait.PetPortrait;
+	import io.decagames.rotmg.pets.components.petStatsGrid.PetFeedStatsGrid;
 	import io.decagames.rotmg.pets.components.petStatsGrid.PetStatsGrid;
 	import io.decagames.rotmg.pets.data.vo.IPetVO;
 	import io.decagames.rotmg.ui.gird.UIGrid;
@@ -16,6 +17,7 @@ package io.decagames.rotmg.pets.components.petInfoSlot
 
 			public static const INFO_HEIGHT:int = 207;
 			public static const STATS_WIDTH:int = 150;
+			public static const FEED_STATS_WIDTH:int = 195;
 
 			private var petPortrait:PetPortrait;
 			private var _switchable:Boolean;
@@ -25,11 +27,12 @@ package io.decagames.rotmg.pets.components.petInfoSlot
 			private var animations:Boolean;
 			private var isRarityLabelHidden:Boolean;
 			private var showReleaseButton:Boolean;
+			private var _useFeedStats:Boolean;
 			private var _petVO:IPetVO;
 			private var _showFeedPower:Boolean;
 			private var statsGrid:UIGrid;
 
-			public function PetInfoSlot(_arg_1:int, _arg_2:Boolean, _arg_3:Boolean, _arg_4:Boolean, _arg_5:Boolean = false, _arg_6:Boolean = false, _arg_7:Boolean = false, _arg_8:Boolean = false)
+			public function PetInfoSlot(_arg_1:int, _arg_2:Boolean, _arg_3:Boolean, _arg_4:Boolean, _arg_5:Boolean = false, _arg_6:Boolean = false, _arg_7:Boolean = false, _arg_8:Boolean = false, _arg_9:Boolean = false)
 			{
 				this._switchable = _arg_2;
 				this._slotWidth = _arg_1;
@@ -39,6 +42,7 @@ package io.decagames.rotmg.pets.components.petInfoSlot
 				this.animations = _arg_5;
 				this.showReleaseButton = _arg_7;
 				this.isRarityLabelHidden = _arg_6;
+				this._useFeedStats = _arg_9;
 				var _local_9:SliceScalingBitmap = TextureParser.instance.getSliceScalingBitmap("UI", "popup_content_inset", _arg_1);
 				addChild(_local_9);
 				_local_9.height = INFO_HEIGHT;
@@ -65,10 +69,10 @@ package io.decagames.rotmg.pets.components.petInfoSlot
 				}
 				if (((this.showStats) && (_arg_2)))
 				{
-					this.statsGrid = new PetStatsGrid(STATS_WIDTH, _arg_1);
+					this.statsGrid = ((this._useFeedStats) ? new PetFeedStatsGrid(FEED_STATS_WIDTH, _arg_1) : new PetStatsGrid(STATS_WIDTH, _arg_1));
 					addChild(this.statsGrid);
-					this.statsGrid.y = 130;
-					this.statsGrid.x = Math.round(((this._slotWidth - STATS_WIDTH) / 2));
+					this.statsGrid.y = ((this._useFeedStats) ? 132 : 130);
+					this.statsGrid.x = Math.round(((this._slotWidth - ((this._useFeedStats) ? FEED_STATS_WIDTH : STATS_WIDTH)) / 2));
 				}
 			}
 

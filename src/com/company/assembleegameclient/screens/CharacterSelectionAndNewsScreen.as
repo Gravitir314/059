@@ -21,7 +21,6 @@ package com.company.assembleegameclient.screens
 	import kabam.rotmg.core.model.PlayerModel;
 	import kabam.rotmg.game.view.CreditDisplay;
 	import kabam.rotmg.news.view.NewsView;
-	import kabam.rotmg.promotions.view.BeginnersPackageButton;
 	import kabam.rotmg.text.model.TextKey;
 	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
@@ -44,7 +43,6 @@ package com.company.assembleegameclient.screens
 			private const CHARACTER_LIST_X_POS:int = 18;
 			public var close:Signal;
 			public var showClasses:Signal;
-			public var beginnersPackageButton:BeginnersPackageButton;
 			private var model:PlayerModel;
 			private var isInitialized:Boolean;
 			private var nameText:TextFieldDisplayConcrete;

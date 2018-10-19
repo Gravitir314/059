@@ -221,7 +221,7 @@ package io.decagames.rotmg.shop.genericBox.data
 			public function isOnSale():Boolean
 			{
 				var _local_1:Date;
-				if (this._saleEnd)
+				if (this._saleAmount > 0 && this._saleEnd)
 				{
 					_local_1 = new Date();
 					return (_local_1.time < this._saleEnd.time);

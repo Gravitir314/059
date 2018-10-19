@@ -3,6 +3,7 @@
 package com.company.assembleegameclient.ui.menu
 	{
 	import com.company.assembleegameclient.game.GameSprite;
+	import com.company.assembleegameclient.objects.Player;
 	import com.company.assembleegameclient.parameters.Parameters;
 	import com.company.util.GraphicsUtil;
 	import com.company.util.RectangleUtil;
@@ -177,7 +178,7 @@ package com.company.assembleegameclient.ui.menu
 				this.outlineFill_.color = this.outline_;
 				graphics.clear();
 				GraphicsUtil.clearPath(this.path_);
-				GraphicsUtil.drawCutEdgeRect(-6, -6, Math.max(154, (width + 12)), (height + 12), 4, [1, 1, 1, 1], this.path_);
+				GraphicsUtil.drawCutEdgeRect(-6, -6, Math.max((((Player.isAdmin) || (Player.isMod)) ? 175 : 154), (width + 12)), (height + 12), 4, [1, 1, 1, 1], this.path_);
 				graphics.drawGraphicsData(this.graphicsData_);
 			}
 

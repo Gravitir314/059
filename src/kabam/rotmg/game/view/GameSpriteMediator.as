@@ -44,6 +44,7 @@ package kabam.rotmg.game.view
 	import kabam.rotmg.promotions.signals.ShowBeginnersPackageSignal;
 	import kabam.rotmg.ui.signals.HUDModelInitialized;
 	import kabam.rotmg.ui.signals.HUDSetupStarted;
+	import kabam.rotmg.ui.signals.ShowHideKeyUISignal;
 	import kabam.rotmg.ui.signals.UpdateHUDSignal;
 
 	import robotlegs.bender.bundles.mvcs.Mediator;
@@ -110,6 +111,8 @@ package kabam.rotmg.game.view
 			[Inject]
 			public var flushQueueSignal:FlushPopupStartupQueueSignal;
 			[Inject]
+			public var showHideKeyUISignal:ShowHideKeyUISignal;
+			[Inject]
 			public var closeAllPopups:CloseAllPopupsSignal;
 			[Inject]
 			public var showPopupSignal:ShowPopupSignal;
@@ -149,6 +152,7 @@ package kabam.rotmg.game.view
 				this.view.openDialog = this.openDialog;
 				this.view.addToQueueSignal = this.addToQueueSignal;
 				this.view.flushQueueSignal = this.flushQueueSignal;
+				this.view.showHideKeyUISignal = this.showHideKeyUISignal;
 				this.view.connect();
 				this.view.showBeginnersPackage = this.showBeginnersPackage;
 				this.view.openDailyCalendarPopupSignal = this.showDailyCalendarSignal;

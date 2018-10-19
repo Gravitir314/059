@@ -33,6 +33,7 @@ package com.company.assembleegameclient.util
 			public static var currentXmlIsTesting:Boolean = false;
 			public static var realmMaps:Vector.<BitmapData>;
 			public static var nexusMaps:Vector.<BitmapData>;
+			public static var nexusMap:BitmapData;
 			public static var castleMap:BitmapData;
 			public static var chamberMap:BitmapData;
 			public static var wcMap:BitmapData;
@@ -110,11 +111,11 @@ package com.company.assembleegameclient.util
 				this.loadMap(new this.wc(), 15);
 				this.loadMap(new this.vault(), 16);
 				this.loadMap(new this.shatters(), 17);
-				//this.loadMap(new this.nexus(), 18);
 				this.loadMap(new this.nexus_day(), 18);
 				this.loadMap(new this.nexus_night(), 19);
 				this.loadMap(new this.nexus_sunrise(), 20);
 				this.loadMap(new this.nexus_sunset(), 21);
+				this.loadMap(new this.nexus(), 22);
 			}
 
 			private function loadMap(_arg_1:*, _arg_2:int):void
@@ -164,6 +165,9 @@ package com.company.assembleegameclient.util
 							return;
 						case 21:
 							nexusMaps[3] = _local_4;
+							return;
+						case 22:
+							nexusMap = _local_4;
 							return;
 						default:
 					}

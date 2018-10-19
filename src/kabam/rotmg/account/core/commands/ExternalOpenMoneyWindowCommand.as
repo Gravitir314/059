@@ -10,10 +10,16 @@ package kabam.rotmg.account.core.commands
 	import flash.net.URLVariables;
 	import flash.net.navigateToURL;
 
+	import io.decagames.rotmg.shop.PreparingPurchaseTransactionModal;
+	import io.decagames.rotmg.ui.popups.modal.error.ErrorModal;
+	import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
+	import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+
 	import kabam.rotmg.account.core.Account;
 	import kabam.rotmg.account.core.model.JSInitializedModel;
 	import kabam.rotmg.account.core.model.MoneyConfig;
 	import kabam.rotmg.account.web.WebAccount;
+	import kabam.rotmg.appengine.api.AppEngineClient;
 	import kabam.rotmg.application.api.ApplicationSetup;
 	import kabam.rotmg.build.api.BuildData;
 	import kabam.rotmg.build.api.BuildEnvironment;
@@ -49,6 +55,13 @@ package kabam.rotmg.account.core.commands
 			public var playerModel:PlayerModel;
 			[Inject]
 			public var beginnersPackageModel:BeginnersPackageModel;
+			[Inject]
+			public var client:AppEngineClient;
+			[Inject]
+			public var showPopup:ShowPopupSignal;
+			[Inject]
+			public var closePopupSignal:ClosePopupSignal;
+			private var preparingModal:PreparingPurchaseTransactionModal;
 
 
 			public function execute():void
@@ -82,14 +95,7 @@ package kabam.rotmg.account.core.commands
 			{
 				if (((this.account is WebAccount) && (WebAccount(this.account).paymentProvider == "paymentwall")))
 				{
-					try
-					{
-						this.openPaymentwallMoneyWindowFromBrowser(WebAccount(this.account).paymentData);
-					}
-					catch (e:Error)
-					{
-						openPaymentwallMoneyWindowFromStandalonePlayer(WebAccount(account).paymentData);
-					}
+					this.requestPaymentToken();
 				}
 				else
 				{
@@ -160,14 +166,48 @@ package kabam.rotmg.account.core.commands
 			private function openKabamMoneyWindowFromBrowser():void
 			{
 				this.initializeMoneyWindow();
-				this.logger.debug("Attempting External Payments");
+				this.logger.debug("Attempting External Payments via KabamPayment");
 				ExternalInterface.call("rotmg.KabamPayment.displayPaymentWall");
 			}
 
-			private function openPaymentwallMoneyWindowFromBrowser(_arg_1:String):void
+			private function requestPaymentToken():void
 			{
-				this.logger.debug("Attempting External Payments via Paymentwall");
-				ExternalInterface.call("rotmg.Paymentwall.showPaymentwall", _arg_1);
+				this.preparingModal = new PreparingPurchaseTransactionModal();
+				this.showPopup.dispatch(this.preparingModal);
+				var _local_1:Object = this.account.getCredentials();
+				this.client.sendRequest("/credits/token", _local_1);
+				this.client.complete.addOnce(this.onComplete);
+			}
+
+			private function onComplete(_arg_1:Boolean, _arg_2:*):void
+			{
+				var _local_4:String;
+				var _local_5:* = _arg_1;
+				var _local_3:* = _arg_2;
+				this.closePopupSignal.dispatch(this.preparingModal);
+				if (_local_5)
+				{
+					_local_4 = XML(_local_3).toString();
+					if (_local_4 == "-1")
+					{
+						this.showPopup.dispatch(new ErrorModal(350, "Payment Error", "Unable to process payment request. Try again later."));
+					}
+					else
+					{
+						try
+						{
+							ExternalInterface.call("rotmg.Paymentwall.showPaymentwall", _local_4);
+						}
+						catch (e:Error)
+						{
+							openPaymentwallMoneyWindowFromStandalonePlayer(_local_4);
+						}
+					}
+				}
+				else
+				{
+					this.showPopup.dispatch(new ErrorModal(350, "Payment Error", "Unable to fetch payment information. Try again later."));
+				}
 			}
 
 			private function isGoldPurchaseEnabled():Boolean

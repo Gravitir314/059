@@ -14,6 +14,7 @@ package kabam.rotmg.messaging.impl.incoming
 			public var recipient_:String;
 			public var text_:String;
 			public var cleanText_:String;
+			public var isSupporter:Boolean = false;
 
 			public function Text(_arg_1:uint, _arg_2:Function)
 			{
@@ -29,6 +30,7 @@ package kabam.rotmg.messaging.impl.incoming
 				this.recipient_ = _arg_1.readUTF();
 				this.text_ = _arg_1.readUTF();
 				this.cleanText_ = _arg_1.readUTF();
+				this.isSupporter = _arg_1.readBoolean();
 			}
 
 			override public function toString():String

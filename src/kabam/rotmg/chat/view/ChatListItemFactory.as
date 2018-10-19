@@ -14,6 +14,8 @@ package kabam.rotmg.chat.view
 	import flash.text.TextField;
 	import flash.text.TextFormat;
 
+	import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
+
 	import kabam.rotmg.chat.model.ChatMessage;
 	import kabam.rotmg.chat.model.ChatModel;
 	import kabam.rotmg.text.model.FontModel;
@@ -31,6 +33,7 @@ package kabam.rotmg.chat.view
 			private static const ERROR:String = Parameters.ERROR_CHAT_NAME;
 			private static const GUILD:String = Parameters.GUILD_CHAT_NAME;
 			private static const SYNC:String = Parameters.SYNC_CHAT_NAME;
+			private static const ASTRAL:String = Parameters.ASTRAL_CHAT_NAME;
 			private static const testField:TextField = makeTestTextField();
 
 			[Inject]
@@ -39,6 +42,8 @@ package kabam.rotmg.chat.view
 			public var model:ChatModel;
 			[Inject]
 			public var fontModel:FontModel;
+			[Inject]
+			public var supporterCampaignModel:SupporterCampaignModel;
 			[Inject]
 			public var stageProxy:StageProxy;
 			private var message:ChatMessage;
@@ -141,7 +146,7 @@ package kabam.rotmg.chat.view
 			private function isSpecialMessageType():Boolean
 			{
 				var _local_1:String = this.message.name;
-				return (_local_1 == SERVER || _local_1 == CLIENT || _local_1 == HELP || _local_1 == ERROR || _local_1 == GUILD || _local_1 == SYNC);
+				return (_local_1 == SERVER || _local_1 == CLIENT || _local_1 == HELP || _local_1 == ERROR || _local_1 == GUILD || _local_1 == SYNC || _local_1 == ASTRAL);
 			}
 
 			private function bufferNameText():void
@@ -251,11 +256,15 @@ package kabam.rotmg.chat.view
 				}
 				if (this.message.recipient == GUILD)
 				{
-					return (10944349);
+					return (Parameters.FELLOW_GUILD_COLOR);
 				}
 				if (this.message.recipient != "")
 				{
 					return (61695);
+				}
+				if (this.message.isFromSupporter)
+				{
+					return (SupporterCampaignModel.SUPPORTER_CHAT_COLOR);
 				}
 				return (0xFF00);
 			}
@@ -283,13 +292,17 @@ package kabam.rotmg.chat.view
 				{
 					return (0x11D600);
 				}
+				if (_local_1 == ASTRAL)
+				{
+					return (13408767);
+				}
 				if (_local_1.charAt(0) == "@")
 				{
 					return (0xFFFF00);
 				}
 				if (this.message.recipient == GUILD)
 				{
-					return (10944349);
+					return (Parameters.FELLOW_GUILD_COLOR);
 				}
 				if (this.message.recipient != "")
 				{

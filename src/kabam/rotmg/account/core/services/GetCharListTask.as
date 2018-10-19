@@ -169,7 +169,14 @@ package kabam.rotmg.account.core.services
 			private function onTextError(_arg_1:String):void
 			{
 				var _local_2:WebLoginDialog;
-				this.setLoadingMessage.dispatch("error.loadError");
+				if (this.numRetries < 7)
+				{
+					this.setLoadingMessage.dispatch("Loading.text");
+				}
+				else
+				{
+					this.setLoadingMessage.dispatch("error.loadError");
+				}
 				if (_arg_1 == "Account credentials not valid")
 				{
 					if (this.fromMigration)

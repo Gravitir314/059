@@ -39,8 +39,8 @@ package kabam.rotmg.account.core.view
 			{
 				this.modalWidth = _arg_1;
 				this.modalHeight = _arg_2;
-				x = ((ROTMG.STAGE.stageWidth / 2) - (this.modalWidth / 2));
-				y = ((ROTMG.STAGE.stageHeight / 2) - (this.modalHeight / 2));
+				x = (400 - (this.modalWidth / 2));
+				y = (300 - (this.modalHeight / 2));
 				if (_arg_3 != "")
 				{
 					this.setTitle(_arg_3, true);
@@ -70,14 +70,14 @@ package kabam.rotmg.account.core.view
 			public function setWidth(_arg_1:Number):void
 			{
 				this.modalWidth = _arg_1;
-				x = ((ROTMG.STAGE.stageWidth / 2) - (this.modalWidth / 2));
+				x = (400 - (this.modalWidth / 2));
 				this.refreshBackground();
 			}
 
 			public function setHeight(_arg_1:Number):void
 			{
 				this.modalHeight = _arg_1;
-				y = ((ROTMG.STAGE.stageHeight / 2) - (this.modalHeight / 2));
+				y = (300 - (this.modalHeight / 2));
 				this.refreshBackground();
 			}
 
@@ -155,8 +155,8 @@ package kabam.rotmg.account.core.view
 
 			protected function makeModalBackground():Sprite
 			{
-				x = ((ROTMG.STAGE.stageWidth / 2) - (this.modalWidth / 2));
-				y = ((ROTMG.STAGE.stageHeight / 2) - (this.modalHeight / 2));
+				x = (400 - (this.modalWidth / 2));
+				y = (300 - (this.modalHeight / 2));
 				var _local_1:PopupWindowBackground = new PopupWindowBackground();
 				_local_1.draw(this.modalWidth, this.modalHeight, PopupWindowBackground.TYPE_DEFAULT_GREY);
 				if (this.title != null)

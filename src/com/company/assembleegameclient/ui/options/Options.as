@@ -31,6 +31,8 @@ package com.company.assembleegameclient.ui.options
 	import flash.ui.MouseCursor;
 	import flash.ui.MouseCursorData;
 
+	import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
+
 	import kabam.rotmg.core.StaticInjectorContext;
 	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
 	import kabam.rotmg.game.view.components.StatView;
@@ -201,6 +203,11 @@ package com.company.assembleegameclient.ui.options
 			private static function makeStarSelectLabels():Vector.<StringBuilder>
 			{
 				return (new <StringBuilder>[new StaticStringBuilder("Off"), new StaticStringBuilder("1"), new StaticStringBuilder("2"), new StaticStringBuilder("3"), new StaticStringBuilder("5"), new StaticStringBuilder("10")]);
+			}
+
+			private static function makeSupportLabels():Vector.<StringBuilder>
+			{
+				return (new <StringBuilder>[new StaticStringBuilder("Default"), new StaticStringBuilder("Blue"), new StaticStringBuilder("Purple"), new StaticStringBuilder("Orange")]);
 			}
 
 			private static function makeCursorSelectLabels():Vector.<StringBuilder>
@@ -819,6 +826,7 @@ package com.company.assembleegameclient.ui.options
 				this.addOptionAndPosition(new KeyMapper("Cam45DegDec", "Rotate -45 Degrees", "Rotates your camera angle by -45 degrees"), 0, 0, true);
 				this.addOptionAndPosition(new KeyMapper("aimAtQuest", "Aim at Quest", "Sets your camera angle in the direction of your quest"), 0, 0, true);
 				this.addOptionAndPosition(new KeyMapper("resetClientHP", "Reset Client HP", "Sets your Client HP to your Server HP, if you need to manually sync Health"), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("instaNexus", makeOnOffLabels(), [true, false], "Instant Nexus (Zauto Compatibility)", "Makes the act of Nexusing instantaneous by directly joining Nexus, instead of the normal way of asking the server for Nexus IP, then when it sends you it, join\n\nTurn this OFF for Zautonexus compatibility", null), 0, 0, true);
 				this.addOptionAndPosition(new KeyMapper("SelfTPHotkey", "Tele Self", "Teleports you to yourself for a free second of invicibility"), 0, 0, true);
 				this.addOptionAndPosition(new KeyMapper("PassesCoverHotkey", "Projectile Noclip", "Toggle allowing projectiles to pass through solid objects like trees and walls"), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("TradeDelay", makeOnOffLabels(), [true, false], "No Trade Delay", "Remove the 3 second trade delay", null), 0, 0, true);
@@ -1127,6 +1135,14 @@ package com.company.assembleegameclient.ui.options
 				StaticInjectorContext.getInjector().getInstance(ToggleShowTierTagSignal).dispatch(Parameters.data_.showTierTag);
 			}
 
+			private function onCharacterGlow():void
+			{
+				if (StaticInjectorContext.getInjector().getInstance(SupporterCampaignModel).rank >= 5)
+				{
+					this.gs_.map.player_.clearTextureCache();
+				}
+			}
+
 			private function onShowQuestPortraitsChange():void
 			{
 				if (((((!(this.gs_ == null)) && (!(this.gs_.map == null))) && (!(this.gs_.map.partyOverlay_ == null))) && (!(this.gs_.map.partyOverlay_.questArrow_ == null))))
@@ -1150,7 +1166,8 @@ package com.company.assembleegameclient.ui.options
 				if (!Parameters.ssmode)
 				{
 					this.addOptionAndPosition(new NullOption());
-					this.addOptionAndPosition(new ChoiceOption("customSounds", makeOnOffLabels(), [true, false], "Custom Sounds", "Play custom sound effects", null));
+					this.addOptionAndPosition(new ChoiceOption("customSounds", makeOnOffLabels(), [true, false], "Custom Sounds", "Play custom sound effects", this.onCustomSFXVolumeChange));
+					this.addOptionAndPosition(new SliderOption("customVolume", this.onCustomSFXVolumeChange), -120, 15);
 				}
 			}
 
@@ -1198,6 +1215,20 @@ package com.company.assembleegameclient.ui.options
 				this.refresh();
 			}
 
+			private function onPlayCustomSoundEffectsChange():void
+			{
+				SFX.setPlayCustomSFX(Parameters.data_.customSounds);
+				if (Parameters.data_.customSounds)
+				{
+					SFX.setSFXVolume(Parameters.data_.customVolume);
+				}
+				else
+				{
+					SFX.setSFXVolume(0);
+				}
+				this.refresh();
+			}
+
 			private function onMusicVolumeChange(_arg_1:Number):void
 			{
 				Music.setMusicVolume(_arg_1);
@@ -1206,6 +1237,11 @@ package com.company.assembleegameclient.ui.options
 			private function onSoundEffectsVolumeChange(_arg_1:Number):void
 			{
 				SFX.setSFXVolume(_arg_1);
+			}
+
+			private function onCustomSFXVolumeChange(_arg_1:Number):void
+			{
+				SFX.setCustomSFXVolume(_arg_1);
 			}
 
 			private function onLegalPrivacyClick():void

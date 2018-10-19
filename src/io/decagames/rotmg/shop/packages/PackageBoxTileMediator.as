@@ -9,6 +9,7 @@ package io.decagames.rotmg.shop.packages
 	import io.decagames.rotmg.shop.PurchaseInProgressModal;
 	import io.decagames.rotmg.shop.genericBox.BoxUtils;
 	import io.decagames.rotmg.shop.packages.contentPopup.PackageBoxContentPopup;
+	import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
 	import io.decagames.rotmg.ui.buttons.BaseButton;
 	import io.decagames.rotmg.ui.popups.modal.error.ErrorModal;
 	import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
@@ -43,6 +44,8 @@ package io.decagames.rotmg.shop.packages
 			public var account:Account;
 			[Inject]
 			public var closePopupSignal:ClosePopupSignal;
+			[Inject]
+			public var supportCampaignModel:SupporterCampaignModel;
 			private var inProgressModal:PurchaseInProgressModal;
 
 
@@ -121,7 +124,11 @@ package io.decagames.rotmg.shop.packages
 				if (_arg_1)
 				{
 					_local_3 = new XML(_arg_2);
-					if (((_local_3.hasOwnProperty("Left")) && (!(this.view.boxInfo.unitsLeft == -1))))
+					if (_local_3.hasOwnProperty("CampaignProgress"))
+					{
+						this.supportCampaignModel.parseUpdateData(_local_3.CampaignProgress);
+					}
+					if (_local_3.hasOwnProperty("Left") && this.view.boxInfo.unitsLeft != -1)
 					{
 						this.view.boxInfo.unitsLeft = int(_local_3.Left);
 					}

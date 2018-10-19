@@ -194,6 +194,7 @@ package io.decagames.rotmg.fame
 				_local_1.push(new DungeonLine("Parasite Chambers", "Parasite Chambers", (this.metrics.getCharacterStat(this.characterID, MetricsID.PARASITE_CHAMBERS_COMPLETED) + "")));
 				_local_1.push(new DungeonLine("Magic Woods", "Magic Woods", (this.metrics.getCharacterStat(this.characterID, MetricsID.MAGIC_WOODS_COMPLETED) + "")));
 				_local_1.push(new DungeonLine("Cnidarian Reef", "Cnidarian Reef", (this.metrics.getCharacterStat(this.characterID, MetricsID.CNIDARIAN_REEF_COMPLETED) + "")));
+				_local_1.push(new DungeonLine("Secluded Thicket", "Secluded Thicket", (this.metrics.getCharacterStat(this.characterID, MetricsID.SECLUDED_THICKETS_COMPLETED) + "")));
 				_local_1 = _local_1.sort(this.dungeonNameSort);
 				for each (_local_2 in _local_1)
 				{

@@ -23,6 +23,7 @@ package com.company.assembleegameclient.sound
 			private static const URL_PATTERN:String = "{URLBASE}/sfx/{NAME}.mp3";
 			public static var nameMap_:Dictionary = new Dictionary();
 			private static var activeSfxList_:Dictionary = new Dictionary(true);
+			private static var activeCustomSfxList_:Dictionary = new Dictionary(true);
 
 
 			public static function load(_arg_1:String):Sound
@@ -60,6 +61,34 @@ package com.company.assembleegameclient.sound
 				urlBase = ((urlBase) || (getUrlBase()));
 				var _local_2:String = URL_PATTERN.replace("{URLBASE}", urlBase).replace("{NAME}", _arg_1);
 				return (new URLRequest(_local_2));
+			}
+
+			public static function playCustomSFX(_arg_1:String, _arg_2:Number = 1):void
+			{
+				var _local_7:Number;
+				var _local_5:Sound = load(_arg_1);
+				if (!_local_5)
+				{
+					_local_5 = SoundCustom.grab(_arg_1);
+				}
+				if (!_local_5)
+				{
+					return;
+				}
+				var _local_3:Number = (Parameters.data_.customVolume * _arg_2);
+				_local_7 = ((Parameters.data_.customSounds) ? _local_3 : 0);
+				if (isNaN(_local_7))
+				{
+					return;
+				}
+				var _local_8:SoundTransform = new SoundTransform(_local_7);
+				var _local_6:SoundChannel = _local_5.play(0, 0, _local_8);
+				if (_local_6 == null)
+				{
+					return;
+				}
+				_local_6.addEventListener(Event.SOUND_COMPLETE, onCustomSoundComplete, false, 0, true);
+				activeCustomSfxList_[_local_6] = _local_3;
 			}
 
 			public static function play(name:String, volumeMultiplier:Number = 1, isFX:Boolean = true):void
@@ -101,6 +130,12 @@ package com.company.assembleegameclient.sound
 				delete activeSfxList_[_local_2];
 			}
 
+			private static function onCustomSoundComplete(_arg_1:Event):void
+			{
+				var _local_2:SoundChannel = (_arg_1.target as SoundChannel);
+				delete activeCustomSfxList_[_local_2];
+			}
+
 			public static function updateVolume(_arg_1:Number):void
 			{
 				var _local_2:SoundChannel;
@@ -123,6 +158,31 @@ package com.company.assembleegameclient.sound
 					_local_2 = _local_1.soundTransform;
 					_local_2.volume = ((Parameters.data_.playSFX) ? activeSfxList_[_local_1] : 0);
 					_local_1.soundTransform = _local_2;
+				}
+			}
+
+			public static function updateCustomVolume(_arg_1:Number):void
+			{
+				var _local_3:SoundChannel;
+				var _local_2:SoundTransform;
+				for each (_local_3 in activeCustomSfxList_)
+				{
+					activeCustomSfxList_[_local_3] = _arg_1;
+					_local_2 = _local_3.soundTransform;
+					_local_2.volume = ((Parameters.data_.customSounds) ? activeCustomSfxList_[_local_3] : 0);
+					_local_3.soundTransform = _local_2;
+				}
+			}
+
+			public static function updateCustomTransform():void
+			{
+				var _local_2:SoundChannel;
+				var _local_1:SoundTransform;
+				for each (_local_2 in activeCustomSfxList_)
+				{
+					_local_1 = _local_2.soundTransform;
+					_local_1.volume = ((Parameters.data_.customSounds) ? activeCustomSfxList_[_local_2] : 0);
+					_local_2.soundTransform = _local_1;
 				}
 			}
 

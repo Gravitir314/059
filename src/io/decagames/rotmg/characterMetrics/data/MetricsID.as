@@ -61,6 +61,7 @@ package io.decagames.rotmg.characterMetrics.data
 			public static const PARASITE_CHAMBERS_COMPLETED:int = 52;
 			public static const MAGIC_WOODS_COMPLETED:int = 53;
 			public static const CNIDARIAN_REEF_COMPLETED:int = 54;
+			public static const SECLUDED_THICKETS_COMPLETED:int = 55;
 
 
 		}

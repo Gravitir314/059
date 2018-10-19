@@ -3,7 +3,6 @@
 package io.decagames.rotmg.shop
 	{
 	import flash.display.Sprite;
-	import flash.text.TextFieldAutoSize;
 
 	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
 	import io.decagames.rotmg.ui.labels.UILabel;
@@ -30,7 +29,7 @@ package io.decagames.rotmg.shop
 				this.background.scaleType = SliceScalingBitmap.SCALE_TYPE_9;
 				addChild(this.background);
 				this._label = new UILabel();
-				this._label.autoSize = TextFieldAutoSize.LEFT;
+				this._label.autoSize = "left";
 				this._label.text = _arg_2;
 				this._label.x = 4;
 				if (_arg_3)

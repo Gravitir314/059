@@ -21,6 +21,10 @@ package kabam.rotmg.game.view
 	import flash.events.MouseEvent;
 	import flash.text.TextFieldAutoSize;
 
+	import io.decagames.rotmg.nexusShop.NexusShopPopupView;
+	import io.decagames.rotmg.ui.popups.signals.ClosePopupByClassSignal;
+	import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+
 	import kabam.rotmg.account.core.Account;
 	import kabam.rotmg.core.StaticInjectorContext;
 	import kabam.rotmg.core.signals.HideTooltipsSignal;
@@ -33,12 +37,17 @@ package kabam.rotmg.game.view
 	import kabam.rotmg.util.components.LegacyBuyButton;
 
 	import org.osflash.signals.Signal;
+	import org.swiftsuspenders.Injector;
 
 	public class SellableObjectPanel extends Panel implements TooltipAble
 		{
 
 			private const BUTTON_OFFSET:int = 17;
 
+			[Inject]
+			public var showPopupSignal:ShowPopupSignal;
+			[Inject]
+			public var closePopupByClassSignal:ClosePopupByClassSignal;
 			public var hoverTooltipDelegate:HoverTooltipDelegate = new HoverTooltipDelegate();
 			public var buyItem:Signal = new Signal(SellableObject);
 			private var owner_:SellableObject;
@@ -133,7 +142,15 @@ package kabam.rotmg.game.view
 
 			private function onRemovedFromStage(_arg_1:Event):void
 			{
+				var _local_2:Injector;
+				var _local_3:ClosePopupByClassSignal;
 				stage.removeEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown);
+				if (NexusShopPopupView != null)
+				{
+					_local_2 = StaticInjectorContext.getInjector();
+					_local_3 = _local_2.getInstance(ClosePopupByClassSignal);
+					_local_3.dispatch(NexusShopPopupView);
+				}
 				if ((((!(parent == null)) && (!(this.confirmBuyModal == null))) && (this.confirmBuyModal.open)))
 				{
 					parent.removeChild(this.confirmBuyModal);
@@ -158,11 +175,14 @@ package kabam.rotmg.game.view
 
 			private function buyEvent():void
 			{
-				var _local_1:Account = StaticInjectorContext.getInjector().getInstance(Account);
-				if ((((!(parent == null)) && (_local_1.isRegistered())) && (this.owner_ is Merchant)))
+				var _local_1:Injector;
+				var _local_2:ShowPopupSignal;
+				var _local_3:Account = StaticInjectorContext.getInjector().getInstance(Account);
+				if (parent != null && _local_3.isRegistered() && this.owner_ is Merchant)
 				{
-					this.confirmBuyModal = new ConfirmBuyModal(this.buyItem, this.owner_, this.buyButton_.width, this.availableInventoryNumber);
-					parent.addChild(this.confirmBuyModal);
+					_local_1 = StaticInjectorContext.getInjector();
+					_local_2 = _local_1.getInstance(ShowPopupSignal);
+					_local_2.dispatch(new NexusShopPopupView(this.buyItem, this.owner_, this.buyButton_.width, this.availableInventoryNumber));
 				}
 				else
 				{

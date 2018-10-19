@@ -40,7 +40,7 @@ package io.decagames.rotmg.pets.windows.yard
 
 			public function renderCurrentPet():void
 			{
-				this.currentPet = new PetInfoSlot(275, false, true, true, false, false, true, true);
+				this.currentPet = new PetInfoSlot(275, false, true, true, false, false, true, true, true);
 				this.currentPet.x = 305;
 				this.currentPet.y = 130;
 				addChild(this.currentPet);

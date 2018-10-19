@@ -70,29 +70,25 @@ package kabam.rotmg.servers.model
 				var _local_6:Server;
 				var _local_7:int;
 				var _local_8:Number;
-				var _local_1:Boolean = this.model.isAdmin();
 				var _local_2:LatLong = this.model.getMyPos();
 				var _local_3:Server;
 				var _local_4:Number = Number.MAX_VALUE;
 				var _local_5:int = int.MAX_VALUE;
 				for each (_local_6 in this.servers)
 				{
-					if (!((_local_6.isFull()) && (!(_local_1))))
+					if (_local_6.name == Parameters.data_.preferredServer)
 					{
-						if (_local_6.name == Parameters.data_.preferredServer)
-						{
-							return (_local_6);
-						}
-						_local_7 = _local_6.priority();
-						_local_8 = LatLong.distance(_local_2, _local_6.latLong);
-						if (((_local_7 < _local_5) || ((_local_7 == _local_5) && (_local_8 < _local_4))))
-						{
-							_local_3 = _local_6;
-							_local_4 = _local_8;
-							_local_5 = _local_7;
-							Parameters.data_.bestServer = _local_3.name;
-							Parameters.save();
-						}
+						return (_local_6);
+					}
+					_local_7 = _local_6.priority();
+					_local_8 = LatLong.distance(_local_2, _local_6.latLong);
+					if (((_local_7 < _local_5) || ((_local_7 == _local_5) && (_local_8 < _local_4))))
+					{
+						_local_3 = _local_6;
+						_local_4 = _local_8;
+						_local_5 = _local_7;
+						Parameters.data_.bestServer = _local_3.name;
+						Parameters.save();
 					}
 				}
 				return (_local_3);

@@ -31,6 +31,20 @@ package com.company.assembleegameclient.sound
 				SoundEffectLibrary.updateVolume(_arg_1);
 			}
 
+			public static function setPlayCustomSFX(_arg_1:Boolean):void
+			{
+				Parameters.data_.customSounds = _arg_1;
+				Parameters.save();
+				SoundEffectLibrary.updateCustomTransform();
+			}
+
+			public static function setCustomSFXVolume(_arg_1:Number):void
+			{
+				Parameters.data_.customVolume = _arg_1;
+				Parameters.save();
+				SoundEffectLibrary.updateCustomVolume(_arg_1);
+			}
+
 
 		}
 	}//package com.company.assembleegameclient.sound

@@ -22,6 +22,7 @@ package io.decagames.rotmg.shop
 			private var _price:int;
 			private var _soldOut:Boolean;
 			private var _currency:int;
+			private var _showCampaignTooltip:Boolean;
 
 			public function ShopBuyButton(_arg_1:int, _arg_2:int = 0)
 			{
@@ -112,6 +113,16 @@ package io.decagames.rotmg.shop
 			public function get currency():int
 			{
 				return (this._currency);
+			}
+
+			public function get showCampaignTooltip():Boolean
+			{
+				return (this._showCampaignTooltip);
+			}
+
+			public function set showCampaignTooltip(_arg_1:Boolean):void
+			{
+				this._showCampaignTooltip = _arg_1;
 			}
 
 

@@ -234,13 +234,13 @@ package com.company.assembleegameclient.game
 				{
 					this.gs_.stage.removeEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
 					this.gs_.stage.removeEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
-					this.gs_.map.addEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
-					this.gs_.map.addEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
+					this.gs_.gsHitArea.addEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
+					this.gs_.gsHitArea.addEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
 				}
 				else
 				{
-					this.gs_.map.removeEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
-					this.gs_.map.removeEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
+					this.gs_.gsHitArea.removeEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
+					this.gs_.gsHitArea.removeEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
 					this.gs_.stage.addEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
 					this.gs_.stage.addEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
 				}
@@ -287,10 +287,10 @@ package com.company.assembleegameclient.game
 				}
 				else
 				{
-					this.gs_.map.addEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
-					this.gs_.map.addEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
-					this.gs_.map.addEventListener(MouseEvent.RIGHT_MOUSE_DOWN, this.onRightMouseDown_forWorld);
-					this.gs_.map.addEventListener(MouseEvent.RIGHT_MOUSE_UP, this.onRightMouseUp_forWorld);
+					this.gs_.gsHitArea.addEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
+					this.gs_.gsHitArea.addEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
+					this.gs_.gsHitArea.addEventListener(MouseEvent.RIGHT_MOUSE_DOWN, this.onRightMouseDown_forWorld);
+					this.gs_.gsHitArea.addEventListener(MouseEvent.RIGHT_MOUSE_UP, this.onRightMouseUp_forWorld);
 				}
 				_local_2.addEventListener(Event.ENTER_FRAME, this.onEnterFrame);
 				_local_2.addEventListener(MouseEvent.RIGHT_MOUSE_DOWN, this.onRightMouseDown);
@@ -355,10 +355,10 @@ package com.company.assembleegameclient.game
 				}
 				else
 				{
-					this.gs_.map.removeEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
-					this.gs_.map.removeEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
-					this.gs_.map.removeEventListener(MouseEvent.RIGHT_MOUSE_DOWN, this.onRightMouseDown_forWorld);
-					this.gs_.map.removeEventListener(MouseEvent.RIGHT_MOUSE_UP, this.onRightMouseUp_forWorld);
+					this.gs_.gsHitArea.removeEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
+					this.gs_.gsHitArea.removeEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
+					this.gs_.gsHitArea.removeEventListener(MouseEvent.RIGHT_MOUSE_DOWN, this.onRightMouseDown_forWorld);
+					this.gs_.gsHitArea.removeEventListener(MouseEvent.RIGHT_MOUSE_UP, this.onRightMouseUp_forWorld);
 				}
 				_local_2.removeEventListener(Event.ENTER_FRAME, this.onEnterFrame);
 				_local_2.removeEventListener(MouseEvent.RIGHT_MOUSE_DOWN, this.onRightMouseDown);
@@ -448,7 +448,7 @@ package com.company.assembleegameclient.game
 					}
 					if (Parameters.isGpuRender())
 					{
-						if ((((_arg_1.currentTarget == _arg_1.target) || (_arg_1.target == this.gs_.map)) || (_arg_1.target == this.gs_)))
+						if ((((_arg_1.currentTarget == _arg_1.target) || (_arg_1.target == this.gs_.map)) || (_arg_1.target == this.gs_.gsHitArea)))
 						{
 							_local_2.useAltWeapon(_local_6, _local_7, UseType.START_USE);
 						}
@@ -461,7 +461,7 @@ package com.company.assembleegameclient.game
 				}
 				if (Parameters.isGpuRender())
 				{
-					if (((((_arg_1.currentTarget == _arg_1.target) || (_arg_1.target == this.gs_.map)) || (_arg_1.target == this.gs_)) || (_arg_1.currentTarget == this.gs_.chatBox_.list)))
+					if (_arg_1.currentTarget == _arg_1.target || _arg_1.target == this.gs_.map || _arg_1.target == this.gs_ || _arg_1.currentTarget == this.gs_.chatBox_.list || _arg_1.currentTarget == this.gs_.gsHitArea)
 					{
 						_local_3 = Math.atan2(this.gs_.map.mouseY, this.gs_.map.mouseX);
 					}
@@ -871,8 +871,12 @@ package com.company.assembleegameclient.game
 					case Parameters.data_.escapeToNexus2:
 						_local_4 = StaticInjectorContext.getInjector().getInstance(CloseAllPopupsSignal);
 						_local_4.dispatch();
-						this.exitGame.dispatch();
 						this.gs_.gsc_.escape();
+						if (Parameters.data_.instaNexus)
+						{
+							this.gs_.dispatchEvent(Parameters.reconNexus);
+						}
+						this.exitGame.dispatch();
 						Parameters.data_.needsRandomRealm = false;
 						Parameters.save();
 						break;

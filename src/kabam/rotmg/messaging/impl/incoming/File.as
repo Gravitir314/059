@@ -24,7 +24,7 @@ package kabam.rotmg.messaging.impl.incoming
 
 			override public function toString():String
 			{
-				return (formatToString("CLIENTSTAT", "filename_", "file_"));
+				return (formatToString("FILE", "filename_", "file_"));
 			}
 
 

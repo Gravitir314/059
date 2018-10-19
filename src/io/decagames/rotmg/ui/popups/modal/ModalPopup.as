@@ -27,7 +27,7 @@ package io.decagames.rotmg.ui.popups.modal
 			protected var scroll:UIScrollbar;
 			private var buttonsList:Vector.<BaseButton>;
 
-			public function ModalPopup(_arg_1:int, _arg_2:int, _arg_3:String = "", _arg_4:Function = null, _arg_5:Rectangle = null)
+			public function ModalPopup(_arg_1:int, _arg_2:int, _arg_3:String = "", _arg_4:Function = null, _arg_5:Rectangle = null, _arg_6:Number = 0.8)
 			{
 				var _local_6:int;
 				super((_arg_1 + (2 * this.contentMargin)), ((_arg_2 <= (2 * this.contentMargin)) ? ((2 * this.contentMargin) + 1) : (_arg_2 + (2 * this.contentMargin))), _arg_5);
@@ -36,7 +36,7 @@ package io.decagames.rotmg.ui.popups.modal
 				this.buttonsList = new Vector.<BaseButton>();
 				this._autoSize = (_arg_2 == 0);
 				_popupFadeColor = 0;
-				_popupFadeAlpha = 0.8;
+				_popupFadeAlpha = _arg_6;
 				_showOnFullScreen = true;
 				this.setBackground("popup_background_simple");
 				this._contentContainer = new Sprite();
@@ -51,7 +51,7 @@ package io.decagames.rotmg.ui.popups.modal
 				super.addChild(this._contentContainer);
 				if (_arg_3 != "")
 				{
-					this._header = new PopupHeader(width, PopupHeader.TYPE_MODAL);
+					this._header = new PopupHeader(_arg_1, PopupHeader.TYPE_MODAL);
 					this._header.setTitle(_arg_3, (popupWidth - 18), ((_arg_4 == null) ? DefaultLabelFormat.defaultModalTitle : _arg_4));
 					super.addChild(this._header);
 					_local_6 = int(((this._header.height / 2) - 1));

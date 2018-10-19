@@ -11,6 +11,7 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
 	import flash.utils.setTimeout;
 
 	import io.decagames.rotmg.shop.genericBox.BoxUtils;
+	import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
 	import io.decagames.rotmg.ui.buttons.BaseButton;
 	import io.decagames.rotmg.ui.buttons.SliceScalingButton;
 	import io.decagames.rotmg.ui.popups.header.PopupHeader;
@@ -48,6 +49,8 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
 			public var showPopupSignal:ShowPopupSignal;
 			[Inject]
 			public var getMysteryBoxesTask:GetMysteryBoxesTask;
+			[Inject]
+			public var supportCampaignModel:SupporterCampaignModel;
 			private var boxConfig:Array;
 			private var swapImageTimer:Timer = new Timer(80);
 			private var totalRollDelay:int = 2000;
@@ -151,6 +154,10 @@ package io.decagames.rotmg.shop.mysteryBox.rollModal
 				{
 					_local_3 = new XML(_arg_2);
 					this.rewardsList = [];
+					if (_local_3.hasOwnProperty("CampaignProgress"))
+					{
+						this.supportCampaignModel.parseUpdateData(_local_3.CampaignProgress);
+					}
 					for each (_local_4 in _local_3.elements("Awards"))
 					{
 						_local_6 = _local_4.toString().split(",");

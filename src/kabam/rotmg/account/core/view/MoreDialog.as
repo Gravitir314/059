@@ -125,11 +125,23 @@ package kabam.rotmg.account.core.view
 				this.title.filters = [new DropShadowFilter(0, 0, 0)];
 				this.title.x = 5;
 				this.title.y = 3;
+				this.title.addEventListener(MouseEvent.MOUSE_OUT, onRollOut);
+				this.title.addEventListener(MouseEvent.MOUSE_OVER, onRollOver);
 				addChild(this.title);
 				this.deleteButton = new DeleteXGraphic();
 				this.deleteButton.addEventListener(MouseEvent.CLICK, this.onClose);
 				this.deleteButton.x = 668;
 				addChild(this.deleteButton);
+			}
+
+			private function onRollOut(_arg_1:MouseEvent):void
+			{
+
+			}
+
+			private function onRollOver(_arg_1:MouseEvent):void
+			{
+
 			}
 
 			public function onRightClick(_arg_1:MouseEvent):void

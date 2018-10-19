@@ -100,7 +100,6 @@ package zfn.sound
 
 			public static function play(_arg_1:String):void
 			{
-				trace("Sound: " + _arg_1 + ", total length: " + sounds_.length);
 				if (_arg_1.indexOf("event") != -1)
 				{
 					SoundEffectLibrary.play(_arg_1, Parameters.data_.eventNotifierVolume, true);
@@ -109,7 +108,7 @@ package zfn.sound
 				{
 					if (Parameters.data_.customSounds)
 					{
-						SoundEffectLibrary.play(_arg_1, Parameters.data_.customVolume, true);
+						SoundEffectLibrary.playCustomSFX(_arg_1);
 					}
 				}
 			}

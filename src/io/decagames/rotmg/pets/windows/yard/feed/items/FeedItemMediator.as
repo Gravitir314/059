@@ -11,6 +11,7 @@ package io.decagames.rotmg.pets.windows.yard.feed.items
 
 	import io.decagames.rotmg.pets.signals.SelectFeedItemSignal;
 
+	import kabam.rotmg.core.signals.HideTooltipsSignal;
 	import kabam.rotmg.core.signals.ShowTooltipSignal;
 	import kabam.rotmg.ui.model.HUDModel;
 
@@ -23,6 +24,8 @@ package io.decagames.rotmg.pets.windows.yard.feed.items
 			public var view:FeedItem;
 			[Inject]
 			public var showTooltipSignal:ShowTooltipSignal;
+			[Inject]
+			public var hideTooltipsSignal:HideTooltipsSignal;
 			[Inject]
 			public var hud:HUDModel;
 			[Inject]
@@ -43,6 +46,7 @@ package io.decagames.rotmg.pets.windows.yard.feed.items
 			{
 				this.view.selected = (!(this.view.selected));
 				this.selectFeedItemSignal.dispatch();
+				this.hideTooltipsSignal.dispatch();
 			}
 
 			private function onRollOverHandler(_arg_1:MouseEvent):void

@@ -91,13 +91,13 @@ package kabam.rotmg.minimap.view
 				{
 					scores = new Vector.<int>(13);
 				}
-				else
+				/*else
 				{
 					if (map.name_ == "Nexus")
 					{
 						scores = new Vector.<int>(4);
 					}
-				}
+				}*/
 			}
 
 			override public function setFocus(_arg_1:GameObject):void
@@ -304,6 +304,10 @@ package kabam.rotmg.minimap.view
 			{
 				switch (_arg_1)
 				{
+					case "Nexus":
+						this.hackmapData = AssetLoader.nexusMap;
+						Parameters.needsMapCheck = 0;
+						return;
 					case "Vault":
 						this.hackmapData = AssetLoader.vaultMap;
 						Parameters.needsMapCheck = 0;

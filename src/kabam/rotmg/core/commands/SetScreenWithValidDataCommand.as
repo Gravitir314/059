@@ -7,6 +7,7 @@ package kabam.rotmg.core.commands
 	import flash.display.Sprite;
 
 	import io.decagames.rotmg.pets.tasks.GetOwnedPetSkinsTask;
+	import io.decagames.rotmg.supportCampaign.tasks.GetCampaignStatusTask;
 
 	import kabam.lib.tasks.DispatchSignalTask;
 	import kabam.lib.tasks.TaskMonitor;
@@ -32,6 +33,8 @@ package kabam.rotmg.core.commands
 			[Inject]
 			public var calendarTask:FetchPlayerCalendarTask;
 			[Inject]
+			public var campaignStatusTask:GetCampaignStatusTask;
+			[Inject]
 			public var petSkinsTask:GetOwnedPetSkinsTask;
 
 
@@ -54,6 +57,7 @@ package kabam.rotmg.core.commands
 				_local_1.add(this.task);
 				_local_1.add(this.calendarTask);
 				_local_1.add(this.petSkinsTask);
+				_local_1.add(this.campaignStatusTask);
 				_local_1.add(new DispatchSignalTask(this.setScreen, this.view));
 				this.monitor.add(_local_1);
 				_local_1.start();

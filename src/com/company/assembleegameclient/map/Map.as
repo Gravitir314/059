@@ -39,7 +39,6 @@ package com.company.assembleegameclient.map
 	import kabam.rotmg.stage3D.Renderer;
 	import kabam.rotmg.stage3D.graphic3D.Program3DFactory;
 	import kabam.rotmg.stage3D.graphic3D.TextureFactory;
-	import kabam.rotmg.ui.signals.ShowHideKeyUISignal;
 
 	public class Map extends AbstractMap
 		{
@@ -145,10 +144,6 @@ package com.company.assembleegameclient.map
 				addChild(partyOverlay_);
 				isPetYard = (name_.substr(0, 8) == "Pet Yard");
 				isNexus = (name_ == "Nexus");
-				if (name_ == "Davy Jones' Locker")
-				{
-					ShowHideKeyUISignal.instance.dispatch();
-				}
 			}
 
 			override public function resetOverlays():void
@@ -173,10 +168,6 @@ package com.company.assembleegameclient.map
 				var _local_2:GameObject;
 				var _local_3:BasicObject;
 				gs_ = null;
-				if (name_ == "Davy Jones' Locker")
-				{
-					ShowHideKeyUISignal.instance.dispatch();
-				}
 				background_ = null;
 				map_ = null;
 				hurtOverlay_ = null;
@@ -411,8 +402,8 @@ package com.company.assembleegameclient.map
 						y = ((-(_local_2.y) * 600) / (ROTMG.sHeight / _local_7));
 					}
 				}
-				var _local_3:Number = ((-(_local_2.x) - (_local_2.width * 0.5)) * 0.02);
-				var _local_5:Number = ((-(_local_2.y) - (_local_2.height * 0.5)) * 0.02);
+				var _local_3:Number = ((-(_local_2.x) - (_local_2.width / 2)) / 50);
+				var _local_5:Number = ((-(_local_2.y) - (_local_2.height / 2)) / 50);
 				var _local_6:Number = Math.sqrt(((_local_3 * _local_3) + (_local_5 * _local_5)));
 				var _local_4:Number = ((_arg_1.angleRad_ - (Math.PI / 2)) - Math.atan2(_local_3, _local_5));
 				return (new Point((_arg_1.x_ + (_local_6 * Math.cos(_local_4))), (_arg_1.y_ + (_local_6 * Math.sin(_local_4)))));
@@ -565,7 +556,7 @@ package com.company.assembleegameclient.map
 				for each (_local_13 in goDict_)
 				{
 					_local_13.drawn_ = false;
-					if (!_local_13.dead_)
+					if (!_local_13.dead_ || _local_13.size_ == 0)
 					{
 						_local_6 = _local_13.square_;
 						if (!((_local_6 == null) || (!(_local_6.lastVisible_ == _arg_2))))
@@ -819,7 +810,7 @@ package com.company.assembleegameclient.map
 				{
 					return (0);
 				}
-				var _local_2:Vector.<String> = new <String>["Vault", "Oryx's Castle", "Oryx's Chamber", "Wine Cellar"];
+				var _local_2:Vector.<String> = new <String>["Vault", "Oryx's Castle", "Oryx's Chamber", "Wine Cellar", "Nexus"];
 				if (_local_2.indexOf(_arg_1) > -1)
 				{
 					return (2);

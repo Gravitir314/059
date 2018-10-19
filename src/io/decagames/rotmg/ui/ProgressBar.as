@@ -23,7 +23,7 @@ package io.decagames.rotmg.ui
 			private var _maxLabel:UILabel;
 			private var _dynamicLabelString:String;
 			private var _maxValue:int;
-			private var minValue:int;
+			private var _minValue:int;
 			private var backgroundColor:uint;
 			private var progressBarColor:uint;
 			private var backgroundShape:Shape;
@@ -31,7 +31,7 @@ package io.decagames.rotmg.ui
 			private var _value:int;
 			private var _simulatedValue:int;
 			private var simulationColor:uint;
-			private var shouldAnimate:Boolean;
+			private var _shouldAnimate:Boolean;
 			private var _showMaxLabel:Boolean;
 			private var _simulatedValueTextFormat:TextFormat;
 			private var _maxColor:uint;
@@ -47,7 +47,7 @@ package io.decagames.rotmg.ui
 				this._maxLabel = new UILabel();
 				this._dynamicLabelString = _arg_4;
 				this._maxValue = _arg_6;
-				this.minValue = _arg_5;
+				this._minValue = _arg_5;
 				this.backgroundColor = _arg_8;
 				this.progressBarColor = _arg_9;
 				this.simulationColor = _arg_10;
@@ -58,7 +58,7 @@ package io.decagames.rotmg.ui
 				this.progressShape = new Shape();
 				addChild(this.progressShape);
 				this.value = _arg_7;
-				this.shouldAnimate = true;
+				this._shouldAnimate = true;
 			}
 
 			public function set value(_arg_1:int):void
@@ -66,7 +66,7 @@ package io.decagames.rotmg.ui
 				this.render(this._value, this._value, false);
 				this._value = _arg_1;
 				this._simulatedValue = _arg_1;
-				this.render(this._value, this._simulatedValue, this.shouldAnimate);
+				this.render(this._value, this._simulatedValue, this._shouldAnimate);
 			}
 
 			public function set simulatedValue(_arg_1:int):void
@@ -88,7 +88,7 @@ package io.decagames.rotmg.ui
 				this.backgroundShape.graphics.clear();
 				this.backgroundShape.graphics.beginFill(this.backgroundColor, 1);
 				this.backgroundShape.graphics.drawRect(0, 0, this.componentWidth, this.componentHeight);
-				var _local_5:Number = ((this.componentWidth * _arg_1) / (this._maxValue - this.minValue));
+				var _local_5:Number = ((this.componentWidth * _arg_1) / (this._maxValue - this._minValue));
 				if (isNaN(_local_5))
 				{
 					_local_5 = 0;
@@ -109,7 +109,7 @@ package io.decagames.rotmg.ui
 				if (_local_4)
 				{
 					this.progressShape.graphics.beginFill((((this.useMaxColor) && (this._maxValue == _arg_2)) ? this._maxColor : this.simulationColor), 1);
-					this.progressShape.graphics.drawRect(_local_5, 0, (((this.componentWidth * _arg_2) / (this._maxValue - this.minValue)) - _local_5), this.componentHeight);
+					this.progressShape.graphics.drawRect(_local_5, 0, (((this.componentWidth * _arg_2) / (this._maxValue - this._minValue)) - _local_5), this.componentHeight);
 				}
 				var _local_6:String = this._dynamicLabelString.replace(DYNAMIC_LABEL_TOKEN, ((_local_4) ? _arg_2 : _arg_1));
 				this._dynamicLabel.text = _local_6.replace(MAX_VALUE_TOKEN, this._maxValue);
@@ -170,6 +170,11 @@ package io.decagames.rotmg.ui
 				this._maxValue = _arg_1;
 			}
 
+			public function get minValue():int
+			{
+				return (this._minValue);
+			}
+
 			public function set simulatedValueTextFormat(_arg_1:TextFormat):void
 			{
 				this._simulatedValueTextFormat = _arg_1;
@@ -207,6 +212,16 @@ package io.decagames.rotmg.ui
 			{
 				this.useMaxColor = true;
 				this._maxColor = _arg_1;
+			}
+
+			public function get shouldAnimate():Boolean
+			{
+				return (this._shouldAnimate);
+			}
+
+			public function set shouldAnimate(_arg_1:Boolean):void
+			{
+				this._shouldAnimate = _arg_1;
 			}
 
 

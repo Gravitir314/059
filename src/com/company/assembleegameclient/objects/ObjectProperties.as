@@ -128,11 +128,11 @@ package com.company.assembleegameclient.objects
 				}
 				if (_arg_1.hasOwnProperty("Size"))
 				{
-					if (_arg_1.Size == 0)
-					{
-						_arg_1.Size = 100;
-					}
 					this.minSize_ = (this.maxSize_ = _arg_1.Size);
+					if (this.maxSize_ == -1)
+					{
+						this.minSize_ = (this.maxSize_ = 0);
+					}
 				}
 				else
 				{
@@ -163,11 +163,11 @@ package com.company.assembleegameclient.objects
 				}
 				if (_arg_1.hasOwnProperty("BloodColor"))
 				{
-					this.bloodColor_ = uint(_arg_1.BloodColor);
+					this.bloodColor_ = _arg_1.BloodColor;
 				}
 				if (_arg_1.hasOwnProperty("ShadowColor"))
 				{
-					this.shadowColor_ = uint(_arg_1.ShadowColor);
+					this.shadowColor_ = _arg_1.ShadowColor;
 				}
 				for each (_local_3 in _arg_1.Sound)
 				{

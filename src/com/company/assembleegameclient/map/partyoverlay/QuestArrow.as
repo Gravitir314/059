@@ -10,7 +10,9 @@ package com.company.assembleegameclient.map.partyoverlay
 	import com.company.assembleegameclient.ui.tooltip.PortraitToolTip;
 	import com.company.assembleegameclient.ui.tooltip.QuestToolTip;
 	import com.company.assembleegameclient.ui.tooltip.ToolTip;
+	import com.greensock.TimelineMax;
 	import com.greensock.TweenMax;
+	import com.greensock.easing.Expo;
 
 	import flash.events.MouseEvent;
 	import flash.utils.getTimer;
@@ -19,11 +21,12 @@ package com.company.assembleegameclient.map.partyoverlay
 		{
 
 			public var map_:Map;
-			private var questArrowTween:TweenMax;
+			private var questArrowTween:TimelineMax;
 
 			public function QuestArrow(_arg_1:Map)
 			{
 				super(16352321, 12919330, true);
+				this.mouseEnabled = false;
 				this.map_ = _arg_1;
 			}
 
@@ -83,12 +86,20 @@ package com.company.assembleegameclient.map.partyoverlay
 					setToolTip(this.getToolTip(_local_3, _arg_1));
 					if (!this.questArrowTween)
 					{
-						this.questArrowTween = TweenMax.to(this, 0.5, {
-							"scaleX": 2,
-							"scaleY": 2,
-							"yoyo": true,
-							"repeat": 1
-						});
+						this.questArrowTween = new TimelineMax();
+						this.questArrowTween.add(TweenMax.to(this, 0.15, {
+							"scaleX": 1.6,
+							"scaleY": 1.6
+						}));
+						this.questArrowTween.add(TweenMax.to(this, 0.05, {
+							"scaleX": 1.8,
+							"scaleY": 1.8
+						}));
+						this.questArrowTween.add(TweenMax.to(this, 0.3, {
+							"scaleX": 1,
+							"scaleY": 1,
+							"ease": Expo.easeOut
+						}));
 					}
 					else
 					{

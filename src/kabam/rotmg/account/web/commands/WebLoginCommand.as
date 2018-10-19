@@ -62,8 +62,7 @@ package kabam.rotmg.account.web.commands
 			private function makeSuccessTask():TaskSequence
 			{
 				Parameters.Cache_CHARLIST_valid = false;
-				var _local_1:TaskSequence;
-				_local_1 = new TaskSequence();
+				var _local_1:TaskSequence = new TaskSequence();
 				_local_1.add(new DispatchSignalTask(this.closeDialogs));
 				_local_1.add(new DispatchSignalTask(this.updateLogin));
 				_local_1.add(new DispatchSignalTask(this.invalidate));

@@ -462,6 +462,7 @@ package kabam.rotmg.chat.control
 				_local_2.recipient = _arg_1.recipient_;
 				_local_2.isWhisper = ((_arg_1.recipient_) && (!(this.isSpecialRecipientChat(_arg_1.recipient_))));
 				_local_2.isToMe = (this.model.player != null && _arg_1.recipient_ == this.model.player.name_);
+				_local_2.isFromSupporter = _arg_1.isSupporter;
 				this.addMessageText(_arg_1, _local_2);
 				this.addTextLine.dispatch(_local_2);
 			}

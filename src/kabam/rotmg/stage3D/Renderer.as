@@ -192,13 +192,13 @@ package kabam.rotmg.stage3D
 
 			private function resizeStage3DBackBuffer():void
 			{
-				if (((((ROTMG.STAGE.stageWidth * 3) / 4) < 1) || (ROTMG.STAGE.stageHeight < 1)))
+				if ((((ROTMG.STAGE.stageWidth * 0.75) < 1) || (ROTMG.STAGE.stageHeight < 1)))
 				{
 					return;
 				}
 				var _local_1:Stage3D = ROTMG.STAGE.stage3Ds[0];
-				_local_1.context3D.configureBackBuffer(((ROTMG.STAGE.stageWidth * 3) / 4), ROTMG.STAGE.stageHeight, 2, false);
-				this.stageWidth = ((ROTMG.STAGE.stageWidth * 3) / 4);
+				_local_1.context3D.configureBackBuffer((ROTMG.STAGE.stageWidth * 0.75), ROTMG.STAGE.stageHeight, 2, false);
+				this.stageWidth = (ROTMG.STAGE.stageWidth * 0.75);
 				this.stageHeight = ROTMG.STAGE.stageHeight;
 			}
 

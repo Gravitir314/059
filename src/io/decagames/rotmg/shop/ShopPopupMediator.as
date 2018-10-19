@@ -14,6 +14,8 @@ package io.decagames.rotmg.shop
 	import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
 	import io.decagames.rotmg.shop.mysteryBox.MysteryBoxTile;
 	import io.decagames.rotmg.shop.packages.PackageBoxTile;
+	import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
+	import io.decagames.rotmg.supportCampaign.tab.SupporterShopTabView;
 	import io.decagames.rotmg.ui.buttons.BaseButton;
 	import io.decagames.rotmg.ui.buttons.SliceScalingButton;
 	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
@@ -60,6 +62,8 @@ package io.decagames.rotmg.shop
 			public var showTooltipSignal:ShowTooltipSignal;
 			[Inject]
 			public var hideTooltipSignal:HideTooltipsSignal;
+			[Inject]
+			public var supporterModel:SupporterCampaignModel;
 			[Inject]
 			public var getMysteryBoxesTask:GetMysteryBoxesTask;
 			[Inject]
@@ -138,6 +142,11 @@ package io.decagames.rotmg.shop
 				this.closeButton = new SliceScalingButton(TextureParser.instance.getSliceScalingBitmap("UI", "close_button"));
 				this.addButton = new SliceScalingButton(TextureParser.instance.getSliceScalingBitmap("UI", "add_button"));
 				this.tabs = new UITabs(590);
+				if (this.supporterModel.hasValidData)
+				{
+					this.tabs.addTab(new SupporterShopTabView(), true);
+				}
+				this.tabs.addTab(this.createMysteryBoxTab(), (!(this.supporterModel.hasValidData)));
 				this.tabs.addTab(this.createMysteryBoxTab(), true);
 				this.tabs.addTab(this.createPackageBoxTab());
 				this.tabs.y = 115;
@@ -189,7 +198,10 @@ package io.decagames.rotmg.shop
 				this.updateTimer.addEventListener(TimerEvent.TIMER, this.updateShop);
 				this.updateTimer.start();
 				this.tabs.tabSelectedSignal.add(this.onTabChange);
-				this.updateShop(null);
+				if (!this.supporterModel.hasValidData)
+				{
+					this.updateShop(null);
+				}
 			}
 
 			private function onTabChange(_arg_1:String):void
@@ -199,7 +211,15 @@ package io.decagames.rotmg.shop
 					this.updateTimer.reset();
 					this.updateTimer.start();
 				}
-				this.updateShop(null);
+				if (_arg_1 != "Supporter")
+				{
+					this.updateShop(null);
+				}
+				else
+				{
+					TweenMax.killTweensOf(this.updateLabel);
+					this.updateLabel.alpha = 0;
+				}
 			}
 
 			private function get updateInterval():int
