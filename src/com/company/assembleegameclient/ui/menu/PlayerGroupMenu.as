@@ -87,10 +87,7 @@ package com.company.assembleegameclient.ui.menu
 						_local_3 = _local_4;
 						if (_local_2.msUtilTeleport() > Player.MS_BETWEEN_TELEPORT)
 						{
-							if (_local_4.isFellowGuild_)
-							{
-								break;
-							}
+							if (_local_4.isFellowGuild_) break;
 						}
 						else
 						{

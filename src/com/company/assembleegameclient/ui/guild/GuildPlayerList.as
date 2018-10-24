@@ -101,7 +101,7 @@ package com.company.assembleegameclient.ui.guild
 				this.titleText_.useTextDimensions();
 				this.titleText_.filters = [new DropShadowFilter(0, 0, 0, 1, 8, 8)];
 				this.titleText_.y = 24;
-				this.titleText_.x = ((stage.stageWidth / 2) - (this.titleText_.width / 2));
+				this.titleText_.x = (400 - (this.titleText_.width / 2));
 				addChild(this.titleText_);
 				this.guildFameText_ = new BaseSimpleText(22, 0xFFFFFF, false, 0, 0);
 				this.guildFameText_.text = _arg_1.CurrentFame;

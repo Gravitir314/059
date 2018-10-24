@@ -692,10 +692,7 @@ package com.company.assembleegameclient.ui.options
 
 			public function addWorldOptions():void
 			{
-				this.addOptionAndPosition(new ChoiceOption("ethDisable", makeOnOffLabels(), [true, false], "Offset Etherite", "Offsets your firing angle if you have an Etherite equipped to make it so your shots are in a straight line", null), 0, 0, true);
-				this.addOptionAndPosition(new ChoiceOption("cultiststaffDisable", makeOnOffLabels(), [true, false], "Reverse Cultist Staff", "Reverses the angle of the Staff of Unholy Sacrifice (which normally shoots backwards) to make it so you shoot forwards", null), 0, 0, true);
-				this.addOptionAndPosition(new ChoiceOption("offsetColossus", makeOnOffLabels(), [true, false], "Offset Colossus Sword", "Attempts to shoot straight, try /colo 0.4 and /colo 0.2", null), 0, 0, true);
-				this.addOptionAndPosition(new ChoiceOption("offsetVoidBow", makeOnOffLabels(), [true, false], "Offset Void Bow", "Offsets your firing angle if you have a Bow of the Void equipped to make it so your shots are in a straight line", null), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("offsetWeapon", makeOnOffLabels(), [true, false], "Offset Weapons", "Offsets your firing angle if you have an Etherite/Cultist Staff/Void Bow/Colossus Sword equipped to make it so your shots are in a straight line", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("damageIgnored", makeOnOffLabels(), [true, false], "Damage Ignored Enemies", "Prevents your shots from damaging enemies that are ignored", null), 0, 0, true);
 				this.addOptionAndPosition(new KeyMapper("anchorTeleport", "Teleport to Anchor", "Teleports you to the player you have anchored (set via /anchor <name> or the player menu)"), 0, 0, true);
 				this.addOptionAndPosition(new KeyMapper("QuestTeleport", "Teleport to Quest", "Teleports to the player closest to your quest"), 0, 0, true);
@@ -707,9 +704,6 @@ package com.company.assembleegameclient.ui.options
 				this.addOptionAndPosition(new KeyMapper("TextThessal", "Dying Thessal Text", 'Say the "He lives" quote'), 0, 0, true);
 				this.addOptionAndPosition(new KeyMapper("TextDraconis", "LoD Black Text", 'Say "black"'), 0, 0, true);
 				this.addOptionAndPosition(new KeyMapper("TextCem", "Cem Ready Text", 'Say "ready"'), 0, 0, true);
-				this.addOptionAndPosition(new KeyMapper("sayCustom1", "Custom 1", "Sends a custom message, set this message with /setmsg1"), 0, 0, true);
-				this.addOptionAndPosition(new KeyMapper("sayCustom2", "Custom 2", "Sends a custom message, set this message with /setmsg2"), 0, 0, true);
-				this.addOptionAndPosition(new KeyMapper("sayCustom3", "Custom 3", "Sends a custom message, set this message with /setmsg3"), 0, 0, true);
 			}
 
 			public function addReconOptions():void

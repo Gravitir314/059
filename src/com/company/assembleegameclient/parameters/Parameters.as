@@ -1045,9 +1045,7 @@ package com.company.assembleegameclient.parameters
 				setDefault("tiltCam", false);
 				setDefault("showBG", true);
 				setDefault("BossPriority", true);
-				setDefaultKey("sayCustom1", KeyCodes.UNSET);
-				setDefaultKey("sayCustom2", KeyCodes.UNSET);
-				setDefaultKey("sayCustom3", KeyCodes.UNSET);
+				setDefault("offsetWeapon", false);
 				setDefault("customMessage1", "We are impervious to non-mystic attacks!");
 				setDefault("customMessage2", "Forget this... run for it!");
 				setDefault("customMessage3", "Engaging Super-Mode!!!");

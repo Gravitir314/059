@@ -628,20 +628,12 @@ package kabam.rotmg.chat.control
 							SoundCustom.play(command[1]);
 							return (true);
 						}
-						//TODO delete this command
-						command = this.data.match("^/version ([\\s\\S]*?)");
-						if (command != null)
-						{
-							Parameters.data_.gameVersion = command[1];
-							return (true)
-						}
 						command = this.data.toLowerCase().match("^/con ?(\\w*) ?(\\w*) ?(\\w*)");
 						if (command != null)
 						{
 							var realm:Array;
 							var isRealm:Boolean;
 							var needServer:Boolean;
-
 							var server:Server;
 							var gameId:int = Parameters.NEXUS_GAMEID;
 							var charId:int = this.player.currentCharId;

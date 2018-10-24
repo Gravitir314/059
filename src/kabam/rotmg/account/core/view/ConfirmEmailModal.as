@@ -157,9 +157,9 @@ package kabam.rotmg.account.core.view
 			}
 
 			private function positionAndStuff():void
-			{
-				this.x = ((ROTMG.STAGE.stageWidth / 2) - (this.w_ / 2));
-				this.y = ((ROTMG.STAGE.stageHeight / 2) - (this.h_ / 2));
+			{// TODO check
+				this.x = (400 - (this.w_ / 2));
+				this.y = (300 - (this.h_ / 2));
 			}
 
 

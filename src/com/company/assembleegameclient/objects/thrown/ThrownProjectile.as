@@ -39,7 +39,7 @@ package com.company.assembleegameclient.objects.thrown
 			override public function update(_arg_1:int, _arg_2:int):Boolean
 			{
 				this.timeLeft_ = (this.timeLeft_ - _arg_2);
-				if (this.timeLeft_ <= 0 || map_ == null)
+				if (this.timeLeft_ <= 0)
 				{
 					return (false);
 				}

@@ -2434,7 +2434,7 @@ package com.company.assembleegameclient.objects
 			private function setToRandomAnimatedCharacter():void
 			{
 				var _local_1:Vector.<XML> = ObjectLibrary.hexTransforms_;
-				var _local_2:uint = uint(Math.floor((Math.random() * _local_1.length)));
+				var _local_2:uint = Math.floor((Math.random() * _local_1.length));
 				var _local_3:int = int(_local_1[_local_2].@type);
 				var _local_4:TextureData = ObjectLibrary.typeToTextureData_[_local_3];
 				texture_ = _local_4.texture_;
@@ -3171,33 +3171,26 @@ package com.company.assembleegameclient.objects
 				{
 					this.isShooting = _arg_5;
 				}
-				if (((_arg_2 == 580) && (Parameters.data_.cultiststaffDisable)))
-				{
-					_local_14 = (_local_14 + 3.14159265358979);
-				}
 				_local_11 = 0;
 				while (_local_11 < _local_12)
 				{
 					_local_7 = getBulletId();
-					if (!Parameters.ssmode)
+					if (!Parameters.ssmode && Parameters.data_.offsetWeapon)
 					{
-						if (((_arg_2 == 8608) && (Parameters.data_.ethDisable)))
+						switch (_arg_2)
 						{
-							_local_14 = (_local_14 + (((_local_7 % 2) != 0) ? 0.0436332312998582 : -0.0436332312998582));
-						}
-						else
-						{
-							if (((_arg_2 == 588) && (Parameters.data_.offsetVoidBow)))
-							{
-								_local_14 = (_local_14 + (((_local_7 % 2) != 0) ? 0.06 : -0.06));
-							}
-							else
-							{
-								if (((_arg_2 == 596) && (Parameters.data_.offsetColossus)))
-								{
-									_local_14 = (_local_14 + (((_local_7 % 2) != 0) ? Parameters.data_.coloOffset : -(Parameters.data_.coloOffset)));
-								}
-							}
+							case 580: // Cultist staff
+								_local_14 = _local_14 + Math.PI;
+								break;
+							case 8608: // Etherite
+								_local_14 = _local_14 + ((_local_7 % 2 != 0) ? 0.0436332312998582 : -0.0436332312998582);
+								break;
+							case 588: // Void Bow
+								_local_14 = _local_14 + ((_local_7 % 2 != 0) ? 0.06 : -0.06);
+								break;
+							case 596: // Colossus sword
+								_local_14 = _local_14 + ((_local_7 % 2 != 0) ? 19 : -(19));
+								break;
 						}
 					}
 					_local_10 = (FreeList.newObject(Projectile) as Projectile);

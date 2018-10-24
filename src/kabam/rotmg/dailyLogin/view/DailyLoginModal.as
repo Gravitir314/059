@@ -193,8 +193,8 @@ package kabam.rotmg.dailyLogin.view
 
 			private function centerModal():void
 			{
-				this.x = ((ROTMG.STAGE.stageWidth / 2) - (this.width / 2));
-				this.y = ((ROTMG.STAGE.stageHeight / 2) - (this.height / 2));
+				this.x = (400 - (this.width / 2));
+				this.y = (300 - (this.height / 2));
 				this.tabs.x = CalendarSettings.DAILY_LOGIN_MODAL_PADDING;
 			}
 

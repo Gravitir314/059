@@ -45,7 +45,7 @@ package com.company.assembleegameclient.objects.particles
 			override public function update(_arg_1:int, _arg_2:int):Boolean
 			{
 				this.numFramesRemaining--;
-				if (this.numFramesRemaining <= 0 || map_ == null)
+				if (this.numFramesRemaining <= 0)
 				{
 					return (false);
 				}

@@ -17,7 +17,7 @@ package kabam.rotmg.game.model
 			public function getGameObject(_arg_1:int):GameObject
 			{
 				var _local_2:GameObject = this.gameObjects[_arg_1];
-				if (_local_2 != null && this.player.objectId_ == _arg_1)
+				if (!(_local_2) && this.player.objectId_ == _arg_1)
 				{
 					_local_2 = this.player;
 				}

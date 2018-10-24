@@ -147,7 +147,6 @@ package io.decagames.rotmg.shop
 					this.tabs.addTab(new SupporterShopTabView(), true);
 				}
 				this.tabs.addTab(this.createMysteryBoxTab(), (!(this.supporterModel.hasValidData)));
-				this.tabs.addTab(this.createMysteryBoxTab(), true);
 				this.tabs.addTab(this.createPackageBoxTab());
 				this.tabs.y = 115;
 				this.tabs.x = 3;

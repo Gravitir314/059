@@ -33,11 +33,11 @@ package kabam.rotmg.ui.view
 			{
 				if (!Parameters.ssmode && Parameters.data_.showCHbar)
 				{
-					this.expBar_ = new StatusBar(176, 15, 5931045, 0x545454, TextKey.EXP_BAR_LEVEL, false, null, false, true);
-					this.fameBar_ = new StatusBar(176, 15, 0xE25F00, 0x545454, TextKey.CURRENCY_FAME, false, null, false, true);
-					this.hpBar_ = new StatusBar(176, 15, 14693428, 0x545454, TextKey.STATUS_BAR_HEALTH_POINTS);
-					this.clientHpBar_ = new StatusBar(176, 15, 14693428, 0x545454, "CH");
-					this.mpBar_ = new StatusBar(176, 15, 6325472, 0x545454, TextKey.STATUS_BAR_MANA_POINTS);
+					this.expBar_ = new StatusBar(176, 16, 5931045, 0x545454, TextKey.EXP_BAR_LEVEL, false, null, false, true);
+					this.fameBar_ = new StatusBar(176, 16, 0xE25F00, 0x545454, TextKey.CURRENCY_FAME, false, null, false, true);
+					this.hpBar_ = new StatusBar(176, 16, 14693428, 0x545454, TextKey.STATUS_BAR_HEALTH_POINTS);
+					this.clientHpBar_ = new StatusBar(176, 16, 14693428, 0x545454, "CH");
+					this.mpBar_ = new StatusBar(176, 16, 6325472, 0x545454, TextKey.STATUS_BAR_MANA_POINTS);
 					this.hpBar_.y = 16;
 					this.clientHpBar_.y = 32;
 					this.mpBar_.y = 48;
@@ -50,7 +50,7 @@ package kabam.rotmg.ui.view
 					this.expBar_ = new StatusBar(176, 16, 5931045, 0x545454, TextKey.EXP_BAR_LEVEL, false, null, false, true);
 					this.fameBar_ = new StatusBar(176, 16, 0xE25F00, 0x545454, TextKey.CURRENCY_FAME, false, null, false, true);
 					this.hpBar_ = new StatusBar(176, 16, 14693428, 0x545454, TextKey.STATUS_BAR_HEALTH_POINTS);
-					this.clientHpBar_ = new StatusBar(176, 15, 14693428, 0x545454, "CH");
+					this.clientHpBar_ = new StatusBar(176, 16, 14693428, 0x545454, "CH");
 					this.mpBar_ = new StatusBar(176, 16, 6325472, 0x545454, TextKey.STATUS_BAR_MANA_POINTS);
 					this.hpBar_.y = 24;
 					this.clientHpBar_.y = 32;
