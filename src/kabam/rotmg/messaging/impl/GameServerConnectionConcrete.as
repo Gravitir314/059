@@ -2488,6 +2488,15 @@ package kabam.rotmg.messaging.impl
 				}
 				if (_local_8.server_.name.substr(0, 12) == "NexusPortal.")
 				{
+					if (Parameters.realmJoining)
+					{
+						if (_local_8.server_.name.substr(12).toLowerCase().indexOf(Parameters.realmName) == -1)
+						{
+							this.gs_.dispatchEvent(new ReconnectEvent(Parameters.reconNexus.server_, Parameters.RANDOM_REALM_GAMEID, false, this.charId_, -1, null, false));
+							return;
+						}
+						Parameters.realmJoining = false;
+					}
 					Parameters.reconRealm = _local_8;
 				}
 				gs_.dispatchEvent(_local_8);
@@ -2537,19 +2546,19 @@ package kabam.rotmg.messaging.impl
 			{
 				if (_arg_1 == "Nexus")
 				{
-					Parameters.reconNexus = new ReconnectEvent(new Server().setName("Nexus").setAddress(this.server_.address).setPort(this.server_.port), -2, false, this.charId_, 0, null, this.isFromArena_);
+					Parameters.reconNexus = new ReconnectEvent(new Server().setName("Nexus").setAddress(this.server_.address).setPort(this.server_.port), Parameters.NEXUS_GAMEID, false, this.charId_, 0, null, this.isFromArena_);
 				}
 				if (Parameters.reconNexus == null)
 				{
-					Parameters.reconNexus = new ReconnectEvent(new Server().setName("Nexus").setAddress(this.server_.address).setPort(this.server_.port), -2, false, this.charId_, 0, null, this.isFromArena_);
+					Parameters.reconNexus = new ReconnectEvent(new Server().setName("Nexus").setAddress(this.server_.address).setPort(this.server_.port), Parameters.NEXUS_GAMEID, false, this.charId_, 0, null, this.isFromArena_);
 				}
 				if (Parameters.reconVault == null)
 				{
-					Parameters.reconVault = new ReconnectEvent(new Server().setName("Vault").setAddress(this.server_.address).setPort(this.server_.port), -5, false, this.charId_, 0, null, this.isFromArena_);
+					Parameters.reconVault = new ReconnectEvent(new Server().setName("Vault").setAddress(this.server_.address).setPort(this.server_.port), Parameters.VAULT_GAMEID, false, this.charId_, 0, null, this.isFromArena_);
 				}
 				if (Parameters.reconDaily == null)
 				{
-					Parameters.reconDaily = new ReconnectEvent(new Server().setName("Daily Quest Room").setAddress(this.server_.address).setPort(this.server_.port), -11, false, this.charId_, 0, null, this.isFromArena_);
+					Parameters.reconDaily = new ReconnectEvent(new Server().setName("Daily Quest Room").setAddress(this.server_.address).setPort(this.server_.port), Parameters.DAILYQUESTROOM_GAMEID, false, this.charId_, 0, null, this.isFromArena_);
 				}
 				if (Parameters.reconNexus)
 				{

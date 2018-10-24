@@ -18,10 +18,10 @@ package com.company.assembleegameclient.ui
 			public static const HEIGHT:int = 400;
 
 			public var gs_:AGameSprite;
-			private var myInv_:TradeInventory;
+			public var myInv_:TradeInventory;
+			public var tradeButton_:TradeButton;
 			private var yourInv_:TradeInventory;
 			private var cancelButton_:DeprecatedTextButton;
-			private var tradeButton_:TradeButton;
 
 			public function TradePanel(_arg_1:AGameSprite, _arg_2:TradeStart)
 			{

@@ -37,8 +37,8 @@ package com.company.assembleegameclient.ui
 			private static const DOSE_MATRIX:Matrix = makeDoseMatrix();
 
 			public var included_:Boolean;
+			public var item_:int;
 			private var id:uint;
-			private var item_:int;
 			private var overlay_:Shape;
 			private var bitmapFactory:BitmapTextFactory;
 

@@ -152,6 +152,7 @@ package com.company.assembleegameclient.parameters
 			public static var timerPhaseTimes:Dictionary = new Dictionary();
 			public static var timerPhaseNames:Dictionary = new Dictionary();
 			public static var oldFSmode:String = StageScaleMode.EXACT_FIT;
+			public static var realmName:String;
 
 			public static function setTimerPhases():void
 			{

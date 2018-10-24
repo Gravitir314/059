@@ -2,6 +2,7 @@
 
 package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
 	{
+	import com.company.assembleegameclient.objects.Player;
 	import com.company.assembleegameclient.ui.panels.itemgrids.ItemGrid;
 
 	import flash.display.DisplayObject;
@@ -10,6 +11,9 @@ package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
 	import flash.events.TimerEvent;
 	import flash.geom.Point;
 	import flash.utils.Timer;
+
+	import kabam.rotmg.core.StaticInjectorContext;
+	import kabam.rotmg.game.model.GameModel;
 
 	public class InteractiveItemTile extends ItemTile
 		{
@@ -21,11 +25,13 @@ package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
 			private var dragStart:Point;
 			private var pendingSecondClick:Boolean;
 			private var isDragging:Boolean;
+			private var player:Player;
 
 			public function InteractiveItemTile(_arg_1:int, _arg_2:ItemGrid, _arg_3:Boolean)
 			{
 				super(_arg_1, _arg_2);
 				mouseChildren = false;
+				this.player = StaticInjectorContext.getInjector().getInstance(GameModel).player;
 				this.doubleClickTimer = new Timer(DOUBLE_CLICK_PAUSE, 1);
 				this.doubleClickTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this.onDoubleClickTimerComplete);
 				this.setInteractive(_arg_3);
@@ -38,6 +44,7 @@ package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
 					addEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
 					addEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
 					addEventListener(MouseEvent.MOUSE_OUT, this.onMouseOut);
+					addEventListener(MouseEvent.RIGHT_CLICK, this.startCollect);
 					addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
 				}
 				else
@@ -45,6 +52,19 @@ package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
 					removeEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
 					removeEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
 					removeEventListener(MouseEvent.MOUSE_OUT, this.onMouseOut);
+					removeEventListener(MouseEvent.RIGHT_CLICK, this.startCollect);
+				}
+			}
+
+			public function startCollect(_arg_1:MouseEvent):void
+			{
+				if (ownerGrid.owner == this.player)
+				{
+					this.player.collect = (0 - itemSprite.itemId);
+				}
+				else
+				{
+					this.player.collect = itemSprite.itemId;
 				}
 			}
 

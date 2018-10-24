@@ -370,7 +370,26 @@ package kabam.rotmg.chat.control
 						Parameters.data_.traceMessage = !Parameters.data_.traceMessage;
 						player.textNotification(((Parameters.data_.traceMessage) ? "Tracing message" : "Tracing disabled"));
 						return (true);
+					case "/s":
+					case "/switch":
+					case "/swap":
+						if (player.hasBackpack_)
+						{
+							player.switchItems_ = true;
+						}
+						else
+						{
+							this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Whoa, that was close! Your items almost disappeared."));
+						}
+						return (true);
 					default:
+						command = this.data.toLowerCase().match("^/realm (\\w+)");
+						if (command != null)
+						{
+							Parameters.realmJoining = true;
+							Parameters.realmName = command[1];
+							this.hudModel.gameSprite.dispatchEvent(new ReconnectEvent(Parameters.reconNexus.server_, Parameters.RANDOM_REALM_GAMEID, false, this.hudModel.gameSprite.gsc_.charId_, -1, null, false));
+						}
 						command = (this.data.match("^/tp (\\w+)") || this.data.match("^/teleport (\\w+)"));
 						if (command != null)
 						{

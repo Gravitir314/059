@@ -2,6 +2,7 @@
 
 package kabam.rotmg.account.web.view
 	{
+	import com.company.assembleegameclient.parameters.Parameters;
 	import com.company.assembleegameclient.ui.dialogs.ConfirmDialog;
 
 	import kabam.rotmg.account.core.Account;
@@ -54,7 +55,10 @@ package kabam.rotmg.account.web.view
 
 			private function onMoreToggle():void
 			{
-				this.openDialog.dispatch(new MoreDialog);
+				if (Parameters.data_.logins != null)
+				{
+					this.openDialog.dispatch(new MoreDialog);
+				}
 			}
 
 			private function onRegister():void

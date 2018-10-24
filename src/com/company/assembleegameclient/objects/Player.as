@@ -3,6 +3,7 @@
 package com.company.assembleegameclient.objects
 	{
 	import com.company.assembleegameclient.map.Camera;
+	import com.company.assembleegameclient.map.Map;
 	import com.company.assembleegameclient.map.Square;
 	import com.company.assembleegameclient.map.mapoverlay.CharacterStatusText;
 	import com.company.assembleegameclient.objects.particles.HealingEffect;
@@ -76,6 +77,8 @@ package com.company.assembleegameclient.objects
 			private static const MAX_ATTACK_FREQ:Number = 0.008;
 			private static const MIN_ATTACK_MULT:Number = 0.5;
 			private static const MAX_ATTACK_MULT:Number = 2;
+			private static const MAX_LOOT_DIST:Number = 1;
+			private static const VAULT_CHEST:int = 1284;
 
 			public var xpTimer:int;
 			public var skinId:int;
@@ -165,7 +168,7 @@ package com.company.assembleegameclient.objects
 			public var followLanded:Boolean = false;
 			public var conMoveVec:Point = null;
 			public var mousePos_:Point = new Point(0, 0);
-			private var lastAutoAbilityAttempt:int = 0;
+			public var lastAutoAbilityAttempt:int = 0;
 			public var lastHpPotTime:int = 0;
 			public var lastTpTime_:int = 0;
 			public var ticksHPLastOff:int = 0;
@@ -173,6 +176,11 @@ package com.company.assembleegameclient.objects
 			public var questMob1:GameObject;
 			public var questMob2:GameObject;
 			public var questMob3:GameObject;
+			public var switchItems_:Boolean = false;
+			public var switchItemsBools_:Array = [false, false, false, false, false, false, false, false];
+			public var nextSwap:int = 0;
+			public var lastLootTime:int = 0;
+			public var collect:int;
 
 			public function Player(_arg_1:XML)
 			{
@@ -1926,17 +1934,21 @@ package com.company.assembleegameclient.objects
 				var _local_8:int;
 				var _local_9:Vector.<uint>;
 				var _local_10:Point;
+				var counter:int = 0;
 				if (this.map_.player_ == this)
 				{
 					if (this.isPaused)
 					{
 						return (true);
 					}
+					// AutoNexus //
 					this.calcHealth((getTimer() - map_.gs_.lastUpdate_));
 					if (this.checkHealth(_arg_1))
 					{
 						return (false);
 					}
+					// AutoNexus END //
+					// Following //
 					var following:Boolean = false;
 					if (followPos.x != 0 && followPos.y != 0)
 					{
@@ -2061,10 +2073,36 @@ package com.company.assembleegameclient.objects
 						this.followVec.x = 0;
 						this.followVec.y = 0;
 					}
+					// Following END //
+					// AutoLoot //
 					if (!map_.isVault && !isPaused && Parameters.data_.AutoLootOn)
 					{
 						this.autoLoot();
 					}
+					// AutoLoot END //
+					// Switch Vaults //
+					if (this.collect != 0 && map_.name_ == Map.VAULT && (lastLootTime + 500) < getTimer())
+					{
+						this.vault_();
+					}
+					// Switch Vaults END //
+					// Switch Inventories //
+					if (this.switchItems_)
+					{
+						this.findSlots();
+						this.switchItems_ = false;
+					}
+					while (counter < 8)
+					{
+						if (this.switchItemsBools_[counter])
+						{
+							this.swapInvBp(counter);
+							break;
+						}
+						counter++;
+					}
+					// Switch Inventories END //
+					// Quest HUD //
 					var questId:int = -1;
 					if (map_.quest_.getObject() != null)
 					{
@@ -2078,6 +2116,7 @@ package com.company.assembleegameclient.objects
 					{
 						this.questMob = null;
 					}
+					// Quest HUD END //
 				}
 				if (this.tierBoost && !isPaused)
 				{
@@ -3707,7 +3746,7 @@ package com.company.assembleegameclient.objects
 				return (false);
 			}
 
-			public function sendMaxText():void
+			public function sendMaxText():void // TODO unused function
 			{
 				var _local_1:String = "''";
 				_local_1 = (_local_1 + ((this.attackMax_ - (this.attack_ - this.attackBoost_)) + "."));
@@ -3813,6 +3852,146 @@ package com.company.assembleegameclient.objects
 					}
 				}
 				super.removeFromMap();
+			}
+
+			private function findSlots():void
+			{
+				var _local_1:Player;
+				var _local_2:int;
+				while (_local_2 < 8)
+				{
+					_local_1 = map_.player_;
+					if (_local_1.equipment_[(_local_2 + 4)] != _local_1.equipment_[(_local_2 + 12)])
+					{
+						this.switchItemsBools_[_local_2] = true;
+					}
+					_local_2++;
+				}
+			}
+
+			private function swapInvBp(_arg_1:int):void
+			{
+				if (getTimer() >= this.nextSwap)
+				{
+					map_.gs_.gsc_.invSwap(this, this, (_arg_1 + 4), equipment_[(_arg_1 + 4)], this, (_arg_1 + 12), equipment_[(_arg_1 + 12)]);
+					this.switchItemsBools_[_arg_1] = false;
+					this.nextSwap = (getTimer() + 500);
+				}
+			}
+
+			public function vault_():void
+			{
+				var _local_1:int;
+				var _local_2:GameObject;
+				var _local_3:int;
+				var _local_4:int;
+				var _local_5:Container;
+				var _local_6:int;
+				_local_1 = 4;
+				while (_local_1 < equipment_.length)
+				{
+					if (!this.hasBackpack_ && _local_1 > 11)
+					{
+						break;
+					}
+					if (this.collect > 0 && equipment_[_local_1] == -1)
+					{
+						_local_6 = _local_1;
+						break;
+					}
+					if (this.collect < 0 && equipment_[_local_1] == (0 - this.collect))
+					{
+						_local_6 = _local_1;
+						break;
+					}
+					if (this.collect == int.MIN_VALUE)
+					{
+						switch (equipment_[_local_1])
+						{
+							case 2592:
+							case 2591:
+							case 2593:
+							case 2636:
+							case 2612:
+							case 2613:
+							case 2793:
+							case 2794:
+								_local_6 = _local_1;
+								break;
+						}
+					}
+					_local_1++;
+				}
+				if (_local_6 == 0)
+				{
+					this.collect = 0;
+					this.textNotification("Stopping", 0xFF0000, 1500);
+					return;
+				}
+				for each (_local_2 in map_.goDict_)
+				{
+					if (_local_2.objectType_ == VAULT_CHEST)
+					{
+						if (_local_5 == null)
+						{
+							_local_5 = (_local_2 as Container);
+							_local_3 = int((((x_ - _local_5.x_) * (x_ - _local_5.x_)) + ((y_ - _local_5.y_) * (y_ - _local_5.y_))));
+						}
+						else
+						{
+							_local_4 = int((((x_ - _local_2.x_) * (x_ - _local_2.x_)) + ((y_ - _local_2.y_) * (y_ - _local_2.y_))));
+							if (_local_4 < _local_3)
+							{
+								_local_3 = _local_4;
+								_local_5 = (_local_2 as Container);
+							}
+						}
+					}
+				}
+				if (_local_5 == null)
+				{
+					return;
+				}
+				if (_local_3 > MAX_LOOT_DIST)
+				{
+					return;
+				}
+				_local_1 = 0;
+				while (_local_1 < _local_5.equipment_.length)
+				{
+					if (_local_5.equipment_[_local_1] == this.collect)
+					{
+						map_.gs_.gsc_.invSwap(this, _local_5, _local_1, _local_5.equipment_[_local_1], this, _local_6, equipment_[_local_6]);
+						lastLootTime = getTimer();
+						return;
+					}
+					if (((_local_5.equipment_[_local_1] == -1) && (this.collect < 0)))
+					{
+						map_.gs_.gsc_.invSwap(this, this, _local_6, equipment_[_local_6], _local_5, _local_1, _local_5.equipment_[_local_1]);
+						lastLootTime = getTimer();
+						return;
+					}
+					if (this.collect == int.MAX_VALUE)
+					{
+						switch (_local_5.equipment_[_local_1])
+						{
+							case 2592:
+							case 2591:
+							case 2593:
+							case 2636:
+							case 2612:
+							case 2613:
+							case 2793:
+							case 2794:
+								map_.gs_.gsc_.invSwap(this, _local_5, _local_1, _local_5.equipment_[_local_1], this, _local_6, equipment_[_local_6]);
+								lastLootTime = getTimer();
+								return;
+						}
+					}
+					_local_1++;
+				}
+				this.collect = 0;
+				this.textNotification("Stopping", 0xFF0000, 1500);
 			}
 
 
