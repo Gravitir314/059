@@ -43,6 +43,7 @@ Custom hacked client to game RotMG
 - Teleport to Anchor
 - Vaults Preview
 - /con (CC Edition)
+- Vault / Inventories switching
 ## TODO
 - Auto Aim
 - Auto Ability
