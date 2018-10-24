@@ -1,0 +1,53 @@
+# 059
+Custom hacked client to game RotMG
+## Requirements
+- [IntelliJ IDEA](https://en.wikipedia.org/wiki/IntelliJ_IDEA) / [Flash Develop](https://en.wikipedia.org/wiki/FlashDevelop)
+- [Apache Flex](https://en.wikipedia.org/wiki/Apache_Flex)
+## Finished
+- Custom Sounds
+- Event Notification
+- Anti-Debuffs
+- AutoLoot (Commands not tested)
+- Accounts list
+- Auto Nexus
+- Auto Sync HP
+- Mob Insta Kill
+- Auto Responder
+- Auto Claim Calendar
+- Weapon Offset
+- Teleport to Quest
+- Ignore Ice and Push
+- Safe Walk
+- Reconnects
+- Hide non-locked players
+- Hide pets (Your will stay)
+- Loot Preview
+- Percent of Damage
+- Lite stat monitor
+- Mob Info
+- Even Lower Graphics Mode
+- Transparent players
+- Big Loot Bags
+- Map Hack
+- Disable Shot Rotation
+- Quest Bar (CC Edition)
+- ScreenShot Mode
+- Teleport to Self
+- No Trade Delay
+- Projectile No-Clip
+- RC-Quest-Following
+- RC-Ability
+- RC-Tilt-Camera
+- Chat Length
+- Full-Screen V3
+- Teleport to Anchor
+- Vaults Preview
+- /con (CC Edition)
+## TODO
+- Auto Aim
+- Auto Ability
+- Low CPU Mode
+- Timers
+- FameBot
+- New HUD
+- Custom Hotkeys
