@@ -45,13 +45,13 @@ package com.company.assembleegameclient.objects
 
 			override public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void
 			{
+				var _local_6:BitmapData;
+				var _local_7:Face3D;
+				var _local_8:Square;
 				if (!Parameters.ssmode && Parameters.lowCPUMode)
 				{
 					return;
 				}
-				var _local_6:BitmapData;
-				var _local_7:Face3D;
-				var _local_8:Square;
 				if (texture_ == null)
 				{
 					return;

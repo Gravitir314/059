@@ -571,20 +571,21 @@ package kabam.rotmg.chat.control
 							}
 							return (true);
 						}
-						command = this.data.match("/timer (\\d+)");
+						command = this.data.match("^/timer ([\\d:]+)");
 						if (command != null)
 						{
 							Parameters.timerActive = true;
 							if (command[1].indexOf(":") != -1)
 							{
 								command = command[1].split(":");
-								Parameters.phaseChangeAt = (getTimer() + (((command[0] * 60) + command[1]) * 1000));
-								Parameters.phaseName = "";
+								trace(command[0], command[1]);
+								Parameters.phaseChangeAt = getTimer() + (command[0] * (60 * 1000)) + (command[1] * 1000);
+								Parameters.phaseName = "Timer";
 							}
 							else
 							{
-								Parameters.phaseChangeAt = (getTimer() + (parseInt(command[1]) * 1000));
-								Parameters.phaseName = "";
+								Parameters.phaseChangeAt = getTimer() + (command[1] * 1000);
+								Parameters.phaseName = "Timer";
 							}
 							return (true);
 						}

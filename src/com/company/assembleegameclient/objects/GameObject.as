@@ -1243,7 +1243,7 @@ package com.company.assembleegameclient.objects
 
 			public function drawName(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:Boolean):void
 			{
-				if (!Parameters.ssmode && Parameters.lowCPUMode)
+				if (!Parameters.ssmode && Parameters.lowCPUMode && this.objectType_ != 1810)
 				{
 					return;
 				}

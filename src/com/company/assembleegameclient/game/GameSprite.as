@@ -166,14 +166,13 @@ package com.company.assembleegameclient.game
 
 			public static function toTimeCode(_arg_1:Number):String
 			{
-				var _local_2:int = Math.floor(((_arg_1 / 100) % 60));
+				var _local_2:int = Math.floor(((_arg_1 * 0.001) % 60));
 				var _local_3:String = ((_local_2 < 10) ? ("0" + _local_2) : String(_local_2));
-				var _local_4:int = Math.round(Math.floor((_arg_1 / 100) / 6000));
+				var _local_4:int = Math.round(Math.floor(((_arg_1 * 0.001) * 0.0166666666666667)));
 				var _local_5:String = String(_local_4);
 				var _local_6:String = ((_local_5 + ":") + _local_3);
 				return (_local_6);
 			}
-
 
 			public function onChatDown(_arg_1:MouseEvent):void
 			{
@@ -349,11 +348,6 @@ package com.company.assembleegameclient.game
 					}
 					this.stats.setText(((((("FPS " + statsFPS) + "\nLAT ") + this.gsc_.pingReceivedAt) + "\nMEM ") + (1E-6 * System.totalMemoryNumber)));
 				}
-			}
-
-			private function onTimerCounterClick(_arg_1:MouseEvent):void
-			{
-				this.gsc_.playerText(((Parameters.phaseName + " time left: ") + toTimeCode((Parameters.phaseChangeAt - getTimer()))));
 			}
 
 			private function updateTimer(_arg_1:int):void

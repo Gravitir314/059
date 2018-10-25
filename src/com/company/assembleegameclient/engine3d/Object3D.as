@@ -92,11 +92,11 @@ package com.company.assembleegameclient.engine3d
 
 			public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:uint, _arg_4:BitmapData):void
 			{
+				var _local_5:ObjectFace3D;
 				if (Parameters.lowCPUMode)
 				{
 					return;
 				}
-				var _local_5:ObjectFace3D;
 				Utils3D.projectVectors(_arg_2.wToS_, this.vW_, this.vS_, this.uvts_);
 				for each (_local_5 in this.faces_)
 				{

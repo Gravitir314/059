@@ -71,13 +71,13 @@ git clone https://github.com/Gravitir314/059.git
 - Teleport to Anchor
 - Vaults Preview
 - /con (CC Edition)
-- Inventories Switch
+- Inventories Switch (?)
+- Vault Switch (?)
+- Low CPU Mode
+- Timers
 ## TODO
 - Auto Aim
 - Auto Ability
-- Low CPU Mode
-- Timers
 - FameBot
 - New HUD
 - Custom Hotkeys
-- Vault Switch
