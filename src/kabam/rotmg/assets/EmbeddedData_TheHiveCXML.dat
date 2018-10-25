@@ -2,15 +2,12 @@
 
 <Objects>
    <Object type="0x124" id="TH honey Heal">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <ShadowSize>0</ShadowSize>
-      <StasisImmune/>
    </Object>
    <Object type="0x125" id="TH Mini Hive">
       <Class>Character</Class>
@@ -196,14 +193,12 @@
       </Projectile>
    </Object>
    <Object type="0x12e" id="TH Queen Bee Summoner">
-      <Class>Character</Class>
-      <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
-      <Size>0</Size>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
+      <Size>0</Size>
    </Object>
    <Object type="0x133" id="TH Chunk1">
       <Class>Character</Class>
@@ -211,7 +206,6 @@
          <File>lofiObj3</File>
          <Index>0x592</Index>
       </Texture>
-      <MaxHitPoints>120</MaxHitPoints>
       <NoMiniMap/>
    </Object>
    <Object type="0x0d0b" id="TH Chunk2">
@@ -220,7 +214,6 @@
          <File>lofiObj3</File>
          <Index>0x593</Index>
       </Texture>
-      <MaxHitPoints>120</MaxHitPoints>
       <NoMiniMap/>
    </Object>
    <Object type="0x0d0c" id="TH Chunk3">
@@ -229,7 +222,6 @@
          <File>lofiObj3</File>
          <Index>0x594</Index>
       </Texture>
-      <MaxHitPoints>120</MaxHitPoints>
       <NoMiniMap/>
    </Object>
    <Object type="0x0d0d" id="TH Chunk4">
@@ -238,7 +230,6 @@
          <File>lofiObj3</File>
          <Index>0x595</Index>
       </Texture>
-      <MaxHitPoints>120</MaxHitPoints>
       <NoMiniMap/>
    </Object>
    <Object type="0x0d44" id="TH Fat Bees 2">

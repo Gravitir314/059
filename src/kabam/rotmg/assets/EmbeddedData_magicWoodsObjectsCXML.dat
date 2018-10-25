@@ -249,14 +249,11 @@
    </Object>
    <Object type="0x528" id="MW Cowardice Portal">
       <Class>GameObject</Class>
-      <NoMiniMap/>
-      <MaxHitPoints>10000</MaxHitPoints>
-      <Defense>0</Defense>
-      <Size>0</Size>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
+      <Size>0</Size>
    </Object>
    <Object id="MW Gharr" type="0x850">
       <DisplayId>Gharr</DisplayId>
@@ -1368,23 +1365,14 @@
          <Index>0</Index>
       </Texture>
       <Size>0</Size>
-      <StasisImmune/>
    </Object>
    <Object id="MW Boss Spawner" type="0x82f">
-      <DisplayId>Enchanted Fountain</DisplayId>
-      <Enemy/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <AnimatedTexture>
          <File>magicWoodsChars16x16</File>
          <Index>15</Index>
       </AnimatedTexture>
-      <HitSound>monster/sprites_hit</HitSound>
-      <DeathSound>monster/sprites_death</DeathSound>
       <Size>0</Size>
-      <MaxHitPoints>100</MaxHitPoints>
-      <Defense>0</Defense>
-      <NoMiniMap/>
-      <StasisImmune/>
    </Object>
    <Object id="MW Fountain Spirit" type="0x830">
       <DisplayId>Fountain Spirit</DisplayId>

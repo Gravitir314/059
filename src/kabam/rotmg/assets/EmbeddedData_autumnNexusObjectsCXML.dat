@@ -2073,7 +2073,6 @@
          </Frame>
       </Animation>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4045" id="AN LioG UM">
@@ -2110,7 +2109,6 @@
          </Frame>
       </Animation>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4046" id="AN LioG UR">
@@ -2147,7 +2145,6 @@
          </Frame>
       </Animation>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4047" id="AN LioG ML">
@@ -2184,7 +2181,6 @@
          </Frame>
       </Animation>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4048" id="AN LioG MM">
@@ -2221,7 +2217,6 @@
          </Frame>
       </Animation>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4049" id="AN LioG MR">
@@ -2258,7 +2253,6 @@
          </Frame>
       </Animation>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x404A" id="AN LioG DL">
@@ -2295,7 +2289,6 @@
          </Frame>
       </Animation>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x404B" id="AN LioG DM">
@@ -2332,7 +2325,6 @@
          </Frame>
       </Animation>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x404C" id="AN LioG DR">
@@ -2369,7 +2361,6 @@
          </Frame>
       </Animation>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x404D" id="AN TwLioG UL">
@@ -2380,7 +2371,6 @@
          <Index>0x1a0</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x404E" id="AN TwLioG UM">
@@ -2391,7 +2381,6 @@
          <Index>0x1a1</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x404F" id="AN TwLioG UR">
@@ -2402,7 +2391,6 @@
          <Index>0x1a2</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4050" id="AN TwLioG ML">
@@ -2413,7 +2401,6 @@
          <Index>0x1a3</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4051" id="AN TwLioG MM">
@@ -2424,7 +2411,6 @@
          <Index>0x1a4</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4052" id="AN TwLioG MR">
@@ -2435,7 +2421,6 @@
          <Index>0x1a5</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4053" id="AN TwLioG DL">
@@ -2446,7 +2431,6 @@
          <Index>0x1a6</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4054" id="AN TwLioG DM">
@@ -2457,7 +2441,6 @@
          <Index>0x1a7</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4055" id="AN TwLioG DR">
@@ -2468,7 +2451,6 @@
          <Index>0x1a8</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4056" id="AN TwLioG2 UL">
@@ -2479,7 +2461,6 @@
          <Index>0x1b0</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4057" id="AN TwLioG2 UM">
@@ -2490,7 +2471,6 @@
          <Index>0x1b1</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4058" id="AN TwLioG2 UR">
@@ -2501,7 +2481,6 @@
          <Index>0x1b2</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4059" id="AN TwLioG2 ML">
@@ -2512,7 +2491,6 @@
          <Index>0x1b3</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x405A" id="AN TwLioG2 MM">
@@ -2523,7 +2501,6 @@
          <Index>0x1b4</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x405B" id="AN TwLioG2 MR">
@@ -2534,7 +2511,6 @@
          <Index>0x1b5</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x405C" id="AN TwLioG2 DL">
@@ -2545,7 +2521,6 @@
          <Index>0x1b6</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x405D" id="AN TwLioG2 DM">
@@ -2556,7 +2531,6 @@
          <Index>0x1b7</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x405E" id="AN TwLioG2 DR">
@@ -2567,7 +2541,6 @@
          <Index>0x1b8</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x405F" id="AN ShdoG UL">
@@ -2578,7 +2551,6 @@
          <Index>0x1c0</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4060" id="AN ShdoG UM">
@@ -2589,7 +2561,6 @@
          <Index>0x1c1</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4061" id="AN ShdoG UR">
@@ -2600,7 +2571,6 @@
          <Index>0x1c2</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4062" id="AN ShdoG ML">
@@ -2611,7 +2581,6 @@
          <Index>0x1c3</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4063" id="AN ShdoG MM">
@@ -2622,7 +2591,6 @@
          <Index>0x1c4</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4064" id="AN ShdoG MR">
@@ -2633,7 +2601,6 @@
          <Index>0x1c5</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4065" id="AN ShdoG DL">
@@ -2644,7 +2611,6 @@
          <Index>0x1c6</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4066" id="AN ShdoG DM">
@@ -2655,7 +2621,6 @@
          <Index>0x1c7</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4067" id="AN ShdoG DR">
@@ -2666,7 +2631,6 @@
          <Index>0x1c8</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4068" id="AN MTwLioG">
@@ -2677,7 +2641,6 @@
          <Index>0x1a9</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4069" id="AN MTwLioG2">
@@ -2688,7 +2651,6 @@
          <Index>0x1b9</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x406A" id="AN MShdoG">
@@ -2699,7 +2661,6 @@
          <Index>0x1c9</Index>
       </Texture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x406B" id="AN PdlM L">
@@ -2722,7 +2683,6 @@
          </Texture>
       </AltTexture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x406C" id="AN PdlM M">
@@ -2745,7 +2705,6 @@
          </Texture>
       </AltTexture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x406D" id="AN PdlM R">
@@ -2768,7 +2727,6 @@
          </Texture>
       </AltTexture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x406E" id="AN PdlS">
@@ -2791,7 +2749,6 @@
          </Texture>
       </AltTexture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x406F" id="AN PdlB UL">
@@ -2814,7 +2771,6 @@
          </Texture>
       </AltTexture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4070" id="AN PdlB UM">
@@ -2837,7 +2793,6 @@
          </Texture>
       </AltTexture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4071" id="AN PdlB UR">
@@ -2860,7 +2815,6 @@
          </Texture>
       </AltTexture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4072" id="AN PdlB DM">
@@ -2883,7 +2837,6 @@
          </Texture>
       </AltTexture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4073" id="AN PdlB DR">
@@ -2906,7 +2859,6 @@
          </Texture>
       </AltTexture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4074" id="AN BTr R">
@@ -4554,7 +4506,6 @@
          </Texture>
       </AltTexture>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x40B9" id="HN PdlB UM">
@@ -7533,6 +7484,7 @@
          <File>autumnNexusObjects16x16</File>
          <Index>0x136</Index>
       </Texture>
+      <Color>0xA9D487</Color>
       <Static/>
       <OccupySquare/>
       <FullOccupy/>
@@ -7546,6 +7498,7 @@
          <File>autumnNexusObjects16x16</File>
          <Index>0x137</Index>
       </Texture>
+      <Color>0xA9D487</Color>
       <Static/>
       <OccupySquare/>
       <FullOccupy/>
@@ -7559,6 +7512,7 @@
          <File>autumnNexusObjects16x16</File>
          <Index>0x146</Index>
       </Texture>
+      <Color>0xA9D487</Color>
       <Static/>
       <OccupySquare/>
       <FullOccupy/>
@@ -7572,6 +7526,7 @@
          <File>autumnNexusObjects16x16</File>
          <Index>0x138</Index>
       </Texture>
+      <Color>0xA9D487</Color>
       <Static/>
       <OccupySquare/>
       <FullOccupy/>
@@ -7585,6 +7540,7 @@
          <File>autumnNexusObjects16x16</File>
          <Index>0x139</Index>
       </Texture>
+      <Color>0xA9D487</Color>
       <Static/>
       <OccupySquare/>
       <FullOccupy/>
@@ -7598,6 +7554,7 @@
          <File>autumnNexusObjects16x16</File>
          <Index>0x13a</Index>
       </Texture>
+      <Color>0xA9D487</Color>
       <Static/>
       <OccupySquare/>
       <FullOccupy/>
@@ -7611,6 +7568,7 @@
          <File>autumnNexusObjects16x16</File>
          <Index>0x147</Index>
       </Texture>
+      <Color>0xA9D487</Color>
       <Static/>
       <OccupySquare/>
       <FullOccupy/>
@@ -7624,6 +7582,7 @@
          <File>autumnNexusObjects16x16</File>
          <Index>0x13b</Index>
       </Texture>
+      <Color>0xA9D487</Color>
       <Static/>
       <OccupySquare/>
       <FullOccupy/>
@@ -9166,7 +9125,6 @@
          </Frame>
       </Animation>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4175" id="HN LioG UM">
@@ -9203,7 +9161,6 @@
          </Frame>
       </Animation>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4176" id="HN LioG UR">
@@ -9240,7 +9197,6 @@
          </Frame>
       </Animation>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4177" id="HN LioG ML">
@@ -9277,7 +9233,6 @@
          </Frame>
       </Animation>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4178" id="HN LioG MM">
@@ -9314,7 +9269,6 @@
          </Frame>
       </Animation>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4179" id="HN LioG MR">
@@ -9351,7 +9305,6 @@
          </Frame>
       </Animation>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x417A" id="HN LioG DL">
@@ -9388,7 +9341,6 @@
          </Frame>
       </Animation>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x417B" id="HN LioG DM">
@@ -9425,7 +9377,6 @@
          </Frame>
       </Animation>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x417C" id="HN LioG DR">
@@ -9462,7 +9413,6 @@
          </Frame>
       </Animation>
       <NoMiniMap/>
-      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x4180" id="HN Silc Fct">
@@ -12734,9 +12684,6 @@
       </AnimatedTexture>
       <DisplayId>Spectral Sentry</DisplayId>
       <Size>140</Size>
-      <MaxHitPoints>500000</MaxHitPoints>
-      <Defense>30</Defense>
-      <ParalyzeImmune/>
    </Object>
    <Object type="0x41b5" id="HN SBGn">
       <Class>Character</Class>

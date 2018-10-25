@@ -4061,7 +4061,7 @@
       <Consumable/>
       <BagType>8</BagType>
       <Soulbound/>
-      <feedPower>2000</feedPower>
+      <feedPower>1000</feedPower>
    </Object>
    <Object type="0x4c88" id="Turkey Rogue Skin">
       <Class>Equipment</Class>
@@ -4226,7 +4226,7 @@
       <Consumable/>
       <BagType>8</BagType>
       <Soulbound/>
-      <feedPower>2000</feedPower>
+      <feedPower>1000</feedPower>
    </Object>
    <Object type="0x179e" id="Ducky Knight Skin">
       <Class>Equipment</Class>
@@ -5526,7 +5526,7 @@
          <Index>326</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>&#8221;Our defenses are weakened, fall back!&#8221;\n\nSkin Class: Warrior\nSprite Credits: WunderWafe</Description>
+      <Description>"Our defenses are weakened, fall back!"\n\nSkin Class: Warrior\nSprite Credits: WunderWafe</Description>
       <ExtraTooltipData>
          <EffectInfo name="Collection" description="Kingdom Skins"/>
       </ExtraTooltipData>
@@ -5545,7 +5545,7 @@
          <Index>327</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>&#8221;We will not fall! Stand firm!&#8221;\n\nSkin Class: Knight\nSprite Credits: WunderWafe</Description>
+      <Description>"We will not fall! Stand firm!"\n\nSkin Class: Knight\nSprite Credits: WunderWafe</Description>
       <ExtraTooltipData>
          <EffectInfo name="Collection" description="Kingdom Skins"/>
       </ExtraTooltipData>
@@ -5564,7 +5564,7 @@
          <Index>328</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>&#8221;We will protect our King! Even if it costs us our lives!&#8221;\n\nSkin Class: Paladin\nSprite Credits: WunderWafe</Description>
+      <Description>"We will protect our King! Even if it costs us our lives!"\n\nSkin Class: Paladin\nSprite Credits: WunderWafe</Description>
       <ExtraTooltipData>
          <EffectInfo name="Collection" description="Kingdom Skins"/>
       </ExtraTooltipData>
@@ -5582,7 +5582,7 @@
          <Index>329</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>&#8221;My magic couldn&#8217;t phase them, they shifted shape, and took my soul.&#8221;\n\nSkin Class: Wizard\nSprite Credits: WunderWafe</Description>
+      <Description>"My magic couldn&#8217;t phase them, they shifted shape, and took my soul."\n\nSkin Class: Wizard\nSprite Credits: WunderWafe</Description>
       <ExtraTooltipData>
          <EffectInfo name="Collection" description="Kingdom Skins"/>
       </ExtraTooltipData>
@@ -5601,7 +5601,7 @@
          <Index>330</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>&#8221;I will soon join them, I will bring forth destruction! Our cult will never fall!&#8221;\n\nSkin Class: Necromancer\nSprite Credits: WunderWafe</Description>
+      <Description>"I will soon join them, I will bring forth destruction! Our cult will never fall!"\n\nSkin Class: Necromancer\nSprite Credits: WunderWafe</Description>
       <ExtraTooltipData>
          <EffectInfo name="Collection" description="Kingdom Skins"/>
       </ExtraTooltipData>
@@ -5620,7 +5620,7 @@
          <Index>331</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>&#8221;I warned them, I saw the future, and yet they did nothing to change fate&#8230;&#8221;\n\nSkin Class: Mystic\nSprite Credits: WunderWafe</Description>
+      <Description>"I warned them, I saw the future, and yet they did nothing to change fate..."\n\nSkin Class: Mystic\nSprite Credits: WunderWafe</Description>
       <ExtraTooltipData>
          <EffectInfo name="Collection" description="Kingdom Skins"/>
       </ExtraTooltipData>
@@ -5639,7 +5639,7 @@
          <Index>332</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>&#8221;I was tending my field, and a dark cloud blackened the skies.&#8221;\n\nSkin Class: Trickster\nSprite Credits: WunderWafe</Description>
+      <Description>"I was tending my field, and a dark cloud blackened the skies."\n\nSkin Class: Trickster\nSprite Credits: WunderWafe</Description>
       <ExtraTooltipData>
          <EffectInfo name="Collection" description="Kingdom Skins"/>
       </ExtraTooltipData>
@@ -5658,7 +5658,7 @@
          <Index>333</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>&#8221;I watched as the Void swallowed them all, and I could not avoid their fate.&#8221;\n\nSkin Class: Assassin\nSprite Credits: WunderWafe</Description>
+      <Description>"I watched as the Void swallowed them all, and I could not avoid their fate."\n\nSkin Class: Assassin\nSprite Credits: WunderWafe</Description>
       <ExtraTooltipData>
          <EffectInfo name="Collection" description="Kingdom Skins"/>
       </ExtraTooltipData>
@@ -5677,7 +5677,7 @@
          <Index>334</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>&#8221;As I meditated, I felt a powerful force. A horrific world void of life flooded my mind. And before me, my vision came true.&#8221;\n\nSkin Class: Ninja\nSprite Credits: WunderWafe</Description>
+      <Description>"As I meditated, I felt a powerful force. A horrific world void of life flooded my mind. And before me, my vision came true."\n\nSkin Class: Ninja\nSprite Credits: WunderWafe</Description>
       <ExtraTooltipData>
          <EffectInfo name="Collection" description="Kingdom Skins"/>
       </ExtraTooltipData>
@@ -5696,7 +5696,7 @@
          <Index>335</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>&#8221;I hid among the shadows, and I paid the price, and it swallowed me whole.&#8221;\n\nSkin Class: Rogue\nSprite Credits: WunderWafe</Description>
+      <Description>"I hid among the shadows, and I paid the price, and it swallowed me whole."\n\nSkin Class: Rogue\nSprite Credits: WunderWafe</Description>
       <ExtraTooltipData>
          <EffectInfo name="Collection" description="Kingdom Skins"/>
       </ExtraTooltipData>
@@ -5715,7 +5715,7 @@
          <Index>336</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>&#8221;The ground rumbled beneath my feet, and trees fell in the forest&#8230;&#8221;\n\nSkin Class: Archer\nSprite Credits: WunderWafe</Description>
+      <Description>"The ground rumbled beneath my feet, and trees fell in the forest..."\n\nSkin Class: Archer\nSprite Credits: WunderWafe</Description>
       <ExtraTooltipData>
          <EffectInfo name="Collection" description="Kingdom Skins"/>
       </ExtraTooltipData>
@@ -5734,7 +5734,7 @@
          <Index>337</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>&#8221;Before us split open a rift, a purple void, and a horrific shape-shifter came forth.&#8221;\n\nSkin Class: Huntress\nSprite Credits: WunderWafe</Description>
+      <Description>"Before us split open a rift, a purple void, and a horrific shape-shifter came forth."\n\nSkin Class: Huntress\nSprite Credits: WunderWafe</Description>
       <ExtraTooltipData>
          <EffectInfo name="Collection" description="Kingdom Skins"/>
       </ExtraTooltipData>
@@ -5753,7 +5753,7 @@
          <Index>338</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>&#8221;An impure voice echoed across the land, and our souls were taken from our bodies&#8230;&#8221;\n\nSkin Class: Priest\nSprite Credits: WunderWafe</Description>
+      <Description>"An impure voice echoed across the land, and our souls were taken from our bodies..."\n\nSkin Class: Priest\nSprite Credits: WunderWafe</Description>
       <ExtraTooltipData>
          <EffectInfo name="Collection" description="Kingdom Skins"/>
       </ExtraTooltipData>
@@ -5772,7 +5772,7 @@
          <Index>339</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>&#8221;All I saw was darkness, my body became a husk, and I fell into endless torment and anguish.&#8221;\n\nSkin Class: Sorcerer\nSprite Credits: WunderWafe</Description>
+      <Description>"All I saw was darkness, my body became a husk, and I fell into endless torment and anguish."\n\nSkin Class: Sorcerer\nSprite Credits: WunderWafe</Description>
       <ExtraTooltipData>
          <EffectInfo name="Collection" description="Kingdom Skins"/>
       </ExtraTooltipData>
@@ -6361,7 +6361,7 @@
          <Index>377</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>He may look like a wanderer, but the has sharp eyes and even sharper katana!\n\nSkin Class: Samurai\nSprite Credits: Nazoado</Description>
+      <Description>He may look like a wanderer, but he has sharp eyes and an even sharper katana!\n\nSkin Class: Samurai\nSprite Credits: Nazoado</Description>
       <Activate skinType="29794">UnlockSkin</Activate>
       <Consumable/>
       <BagType>8</BagType>
@@ -6376,7 +6376,7 @@
          <Index>378</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>First I was afraid, I was petrified... And then I realized I could still move. Huh, Craig's really bad at rituals.\n\nSkin Class: Samurai</Description>
+      <Description>First I was afraid, I was petrified... and then I realized I could still move. Huh, Craig's really bad at rituals.\n\nSkin Class: Samurai</Description>
       <ExtraTooltipData>
          <EffectInfo name="Collection" description="Stone Skins"/>
       </ExtraTooltipData>
@@ -6395,7 +6395,7 @@
          <Index>379</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>My duty lies with the people... My honor - within myself!\n\nSkin Class: Samurai\nSprite Credits: KwispyKwap</Description>
+      <Description>My duty lies with the people... my honor - within myself!\n\nSkin Class: Samurai\nSprite Credits: KwispyKwap</Description>
       <Activate skinType="8766">UnlockSkin</Activate>
       <Consumable/>
       <BagType>8</BagType>
@@ -6487,7 +6487,7 @@
          <Index>385</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>&#8221;What a terrible curse befell this place, what sorcery had these people toyed with?&#8221;\n\nSkin Class: Samurai\nSprite Credits: WunderWafe</Description>
+      <Description>"What a terrible curse befell this place, what sorcery had these people toyed with?"\n\nSkin Class: Samurai\nSprite Credits: WunderWafe</Description>
       <ExtraTooltipData>
          <EffectInfo name="Collection" description="Kingdom Skins"/>
       </ExtraTooltipData>
@@ -6536,7 +6536,7 @@
          <Index>388</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>NANANANANANA...Krathman!\n\nSkin Class: Ninja\nSprite Credits: Lovens</Description>
+      <Description>NANANANANANA... Krathman!\n\nSkin Class: Ninja\nSprite Credits: Lovens</Description>
       <Activate skinType="25106">UnlockSkin</Activate>
       <Consumable/>
       <BagType>8</BagType>
@@ -6818,7 +6818,7 @@
          <Index>406</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>Watch out - he got up from his cryosleep&#8230;\n\nSkin Class: Samurai</Description>
+      <Description>Watch out - he got up from his cryosleep...\n\nSkin Class: Samurai</Description>
       <Activate skinType="29612">UnlockSkin</Activate>
       <Consumable/>
       <BagType>8</BagType>
@@ -7140,21 +7140,49 @@
       <Soulbound/>
       <BagType>8</BagType>
    </Object>
-   <Object type="0x1582" id="Mega Supporter - Paladin Skin">
+   <Object type="0x73c6" id="Gravekeeper Hunter Skin">
       <Class>Equipment</Class>
       <Item/>
       <AnimatedTexture>
-         <File>playerskins16</File>
-         <Index>21</Index>
+         <File>playerskins</File>
+         <Index>417</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>Rewarded to Community members which donated to support the RotMG Unity Project.\n\nSkin Class: Paladin</Description>
-      <ExtraTooltipData>
-         <EffectInfo name="Collection" description="Unity Supporter"/>
-      </ExtraTooltipData>
-      <Activate skinType="5505">UnlockSkin</Activate>
+      <Description>Keep away from our graveyard right now, or I will release this arrow to penetrate your head!\n\nSkin Class: Huntress\nSprite Credits: Nazoado</Description>
+      <Activate skinType="29637">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>8</BagType>
+      <Soulbound/>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x73c8" id="Gravekeeper Warrior Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>418</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>I should dig that 8 maxed stats gravestone, right?\n\nSkin Class: Warrior\nSprite Credits: Nazoado</Description>
+      <Activate skinType="29639">UnlockSkin</Activate>
       <Consumable/>
       <Soulbound/>
       <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x73ca" id="Ankou Rogue Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>419</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Have you heard of that? All of who saw its face will die.\n\nSkin Class: Rogue\nSprite Credits: Nazoado</Description>
+      <Activate skinType="29641">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
    </Object>
 </Objects>

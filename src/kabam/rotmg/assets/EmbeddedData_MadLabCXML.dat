@@ -2,14 +2,12 @@
 
 <Objects>
    <Object type="0x0975" id="Mad Scientist Summoner">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <StasisImmune/>
    </Object>
    <Object type="0x0976" id="Dr Terrible">
       <Enemy/>
@@ -66,19 +64,14 @@
             <Index>0x58</Index>
          </Texture>
       </AltTexture>
-      <StasisImmune/>
    </Object>
    <Object type="0x0997" id="Mad Gas Controller">
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>0</Size>
-      <StasisImmune/>
    </Object>
    <Object type="0x0993" id="Red Gas Spawner UL">
       <Class>Character</Class>
@@ -89,9 +82,8 @@
          <Index>0x3e</Index>
       </Texture>
       <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
+      <Invincible/>
       <Size>100</Size>
-      <StasisImmune/>
       <Projectile id="0">
          <ObjectId>Red Gas</ObjectId>
          <Damage>150</Damage>
@@ -109,9 +101,8 @@
          <Index>0x3e</Index>
       </Texture>
       <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
+      <Invincible/>
       <Size>100</Size>
-      <StasisImmune/>
       <Projectile id="0">
          <ObjectId>Red Gas</ObjectId>
          <Damage>150</Damage>
@@ -129,9 +120,8 @@
          <Index>0x3e</Index>
       </Texture>
       <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
+      <Invincible/>
       <Size>100</Size>
-      <StasisImmune/>
       <Projectile id="0">
          <ObjectId>Red Gas</ObjectId>
          <Damage>150</Damage>
@@ -149,9 +139,8 @@
          <Index>0x3e</Index>
       </Texture>
       <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
+      <Invincible/>
       <Size>100</Size>
-      <StasisImmune/>
       <Projectile id="0">
          <ObjectId>Red Gas</ObjectId>
          <Damage>150</Damage>
@@ -488,7 +477,7 @@
          <File>lofiObj3</File>
          <Index>0x1aa</Index>
       </Texture>
-      <StasisImmune/>
+      <Invincible/>
       <Projectile>
          <ObjectId>Green Star</ObjectId>
          <Speed>40</Speed>
@@ -505,7 +494,7 @@
          <File>lofiObj3</File>
          <Index>0x1aa</Index>
       </Texture>
-      <StasisImmune/>
+      <Invincible/>
       <Projectile>
          <ObjectId>Green Star</ObjectId>
          <Speed>40</Speed>
@@ -516,26 +505,20 @@
    </Object>
    <Object type="0x0992" id="Mad Lab Open Wall">
       <DisplayId>Horrific Creation</DisplayId>
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <StasisImmune/>
    </Object>
    <Object type="0x1e19" id="Horrific Creation Summoner">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>0</Size>
-      <StasisImmune/>
    </Object>
    <Object type="0x5e1c" id="Horrific Creation">
       <Enemy/>
@@ -715,7 +698,7 @@
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
+      <Size>0</Size>
    </Object>
    <Object type="0x1e20" id="FERAL Death">
       <Class>Character</Class>
@@ -736,7 +719,6 @@
       <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
-      <StasisImmune/>
       <Effect color="0x00c631" rate="20" life=".45" lifeVariance=".1" speed="0" speedVariance=".5" size="5" rise="1" riseVariance=".1" rangeX="1.9" rangeY="1.9">CustomParticles</Effect>
    </Object>
    <Object type="0x1e16" id="DeHexxer">
@@ -748,14 +730,11 @@
       <NoMiniMap/>
       <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
-      <StasisImmune/>
       <Effect color="0x0079eb" rate="20" life=".45" lifeVariance=".1" speed="0" speedVariance=".5" size="5" rise="1" riseVariance=".1" rangeX="1.9" rangeY="1.9">CustomParticles</Effect>
    </Object>
    <Object type="0x1e22" id="Dr Terrible Bubble">
       <Class>GameObject</Class>
-      <Enemy/>
       <Size>125</Size>
-      <HitSound>monster/djinn_hit</HitSound>
       <Texture>
          <File>lofiObjBig</File>
          <Index>0x54</Index>
@@ -772,6 +751,5 @@
             <Index>0x56</Index>
          </Texture>
       </AltTexture>
-      <StasisImmune/>
    </Object>
 </Objects>

@@ -392,33 +392,26 @@
       </Projectile>
    </Object>
    <Object type="0x7157" id="DS Sick">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
       <Size>0</Size>
-      <ShadowSize>0</ShadowSize>
-      <NoMiniMap/>
-      <StasisImmune/>
    </Object>
    <Object type="0x7158" id="DS Master Rat">
       <DisplayId>Master Rat</DisplayId>
       <Enemy/>
       <Class>Character</Class>
-      <StasisImmune/>
       <AnimatedTexture>
          <File>chars8x8rEncounters</File>
          <Index>142</Index>
       </AnimatedTexture>
-      <HitSound>monster/medusa_hit</HitSound>
-      <DeathSound>monster/medusa_death</DeathSound>
-      <MaxHitPoints>10000</MaxHitPoints>
       <ShadowSize>0</ShadowSize>
       <Level>20</Level>
       <Exp>0</Exp>
       <Size>140</Size>
-      <Defense>60</Defense>
+      <Invincible/>
       <Projectile id="0">
          <ObjectId>Wereblast</ObjectId>
          <Speed>55</Speed>
@@ -511,14 +504,12 @@
       <DeathSound>monster/flayers_hit</DeathSound>
    </Object>
    <Object type="0x7160" id="DS Gulpord Summoner">
-      <Class>Character</Class>
-      <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
-      <Size>0</Size>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
+      <Size>0</Size>
    </Object>
    <Object type="0x7169" id="DS Sewer Dummy">
       <Class>GameObject</Class>
@@ -562,9 +553,7 @@
       <ShadowSize>0</ShadowSize>
       <DrawUnder/>
       <NoMiniMap/>
-      <MaxHitPoints>1000</MaxHitPoints>
-      <Defense>10</Defense>
-      <Exp>0</Exp>
+      <Invincible/>
       <Projectile id="0">
          <ObjectId>Invisible</ObjectId>
          <Damage>55</Damage>
@@ -605,9 +594,7 @@
       <ShadowSize>0</ShadowSize>
       <DrawUnder/>
       <NoMiniMap/>
-      <MaxHitPoints>1000</MaxHitPoints>
-      <Defense>10</Defense>
-      <Exp>0</Exp>
+      <Invincible/>
       <Projectile id="0">
          <ObjectId>Invisible</ObjectId>
          <Damage>55</Damage>
@@ -619,8 +606,6 @@
       </Projectile>
    </Object>
    <Object type="0x7164" id="DS Fly">
-      <Enemy/>
-      <DisplayId>Sewer Fly</DisplayId>
       <Class>Character</Class>
       <Texture>
          <File>lofiObj3</File>
@@ -640,8 +625,6 @@
             </Texture>
          </Frame>
       </Animation>
-      <MaxHitPoints>100</MaxHitPoints>
-      <Exp>0</Exp>
       <Z>0.27</Z>
       <Flying/>
       <Size>80</Size>

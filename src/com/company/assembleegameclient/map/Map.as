@@ -83,6 +83,7 @@ package com.company.assembleegameclient.map
 			public function Map(_arg_1:AGameSprite)
 			{
 				gs_ = _arg_1;
+				mapHitArea = new Sprite();
 				hurtOverlay_ = new HurtOverlay();
 				gradientOverlay_ = new GradientOverlay();
 				mapOverlay_ = new MapOverlay();
@@ -120,6 +121,12 @@ package com.company.assembleegameclient.map
 				this.forceSoftwareRenderCheck(name_);
 			}
 
+			override public function setHitAreaProps(_arg_1:int, _arg_2:int):void
+			{
+				mapHitArea.graphics.beginFill(0xFF0000, 0);
+				mapHitArea.graphics.drawRect((-(_arg_1) / 2), ((-(_arg_2) / 2) - 20), _arg_1, _arg_2);
+			}
+
 			private function forceSoftwareRenderCheck(_arg_1:String):void
 			{
 				forceSoftwareRender = ((!(this.forceSoftwareMap[_arg_1] == null)) || ((!(ROTMG.STAGE == null)) && (ROTMG.STAGE.stage3Ds[0].context3D == null)));
@@ -138,6 +145,7 @@ package com.company.assembleegameclient.map
 					}
 				}
 				addChild(map_);
+				addChild(mapHitArea);
 				addChild(hurtOverlay_);
 				addChild(gradientOverlay_);
 				addChild(mapOverlay_);
@@ -170,6 +178,8 @@ package com.company.assembleegameclient.map
 				gs_ = null;
 				background_ = null;
 				map_ = null;
+				mapHitArea.graphics.clear();
+				mapHitArea = null;
 				hurtOverlay_ = null;
 				gradientOverlay_ = null;
 				mapOverlay_ = null;

@@ -787,9 +787,7 @@
       </Animation>
       <DisplayId>The Beekeeper</DisplayId>
       <Size>100</Size>
-      <MaxHitPoints>100000</MaxHitPoints>
-      <Defense>999</Defense>
-      <StasisImmune/>
+      <Invincible/>
       <Projectile id="0">
          <ObjectId>Invisible</ObjectId>
          <Damage>90</Damage>
@@ -837,9 +835,7 @@
       </Animation>
       <DisplayId>The Beekeeper</DisplayId>
       <Size>80</Size>
-      <MaxHitPoints>100000</MaxHitPoints>
-      <Defense>999</Defense>
-      <StasisImmune/>
+      <Invincible/>
       <Projectile id="0">
          <ObjectId>Invisible</ObjectId>
          <Damage>90</Damage>
@@ -851,17 +847,12 @@
       </Projectile>
    </Object>
    <Object type="0xf33" id="MOTMG Secret Flame Spawner">
-      <Class>Character</Class>
-      <DisplayId>The Beekeeper</DisplayId>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <MaxHitPoints>100000</MaxHitPoints>
-      <HitSound>monster/dark_elves_hit</HitSound>
-      <StasisImmune/>
-      <Enemy/>
-      <NoMiniMap/>
+      <Size>0</Size>
    </Object>
    <Object type="0xf34" id="MOTMG Secret Bullet Spawner">
       <Class>Character</Class>
@@ -871,9 +862,7 @@
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <MaxHitPoints>100000</MaxHitPoints>
-      <HitSound>monster/dark_elves_hit</HitSound>
-      <StasisImmune/>
+      <Invincible/>
       <Enemy/>
       <Projectile id="0">
          <ObjectId>Demon Fire Blast</ObjectId>
@@ -902,10 +891,7 @@
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <Enemy/>
       <Size>0</Size>
-      <MaxHitPoints>100000</MaxHitPoints>
-      <StasisImmune/>
    </Object>
    <Object type="0xf36" id="MOTMG Beekeeper">
       <Class>Character</Class>
@@ -1332,11 +1318,9 @@
          </Texture>
       </AltTexture>
       <DrawOnGround/>
-      <HitSound>monster/cyclops_hit</HitSound>
-      <DeathSound>monster/cyclops_death</DeathSound>
       <Size>100</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>200000</MaxHitPoints>
+      <Invincible/>
       <Exp>0</Exp>
       <Projectile id="0">
          <ObjectId>pD Tongue Shot</ObjectId>
@@ -1364,7 +1348,6 @@
          <ConditionEffect duration="4" target="1">Stasis</ConditionEffect>
          <MultiHit/>
       </Projectile>
-      <StasisImmune/>
       <EventChestBoss/>
    </Object>
    <Object type="0xf1e" id="MotMG Biff">
@@ -1549,7 +1532,7 @@
          <File>lofiChar8x8</File>
          <Index>0xb5</Index>
       </Texture>
-      <MaxHitPoints>1000000</MaxHitPoints>
+      <Invincible/>
       <Size>0</Size>
       <Hero/>
       <Quest/>
@@ -1986,7 +1969,6 @@
       </AnimatedTexture>
       <Size>0</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>45000</MaxHitPoints>
       <NoMiniMap/>
    </Object>
    <Object type="0x552" id="Decaract Teleporter Target">

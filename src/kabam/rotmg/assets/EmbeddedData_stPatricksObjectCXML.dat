@@ -192,17 +192,12 @@
       <Static/>
    </Object>
    <Object type="0x1654" id="St. Patricks Event Dead">
-      <Class>Character</Class>
-      <Enemy/>
-      <NoMiniMap/>
-      <StasisImmune/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <Exp>0</Exp>
       <Size>0</Size>
-      <MaxHitPoints>10</MaxHitPoints>
    </Object>
    <Object type="0x1655" id="Patty Coin Drop">
       <Class>GameObject</Class>
@@ -213,40 +208,30 @@
       <Size>0</Size>
    </Object>
    <Object type="0x5b00" id="MotMG St Patricks Event Anchor">
-      <Enemy/>
-      <Class>Character</Class>
-      <NoMiniMap/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
       <Size>0</Size>
-      <ShadowSize>0</ShadowSize>
       <PerRealmMax>1</PerRealmMax>
-      <MaxHitPoints>5000</MaxHitPoints>
    </Object>
    <Object type="0x5b0b" id="MotMG St Patricks Event Protect Checker">
-      <Enemy/>
-      <Class>Character</Class>
-      <NoMiniMap/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
       <Size>0</Size>
-      <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>5000</MaxHitPoints>
    </Object>
    <Object type="0x5b01" id="MotMG St Patricks Taunt Controller">
       <DisplayId>Oryx the Mad God</DisplayId>
-      <Class>Character</Class>
-      <NoMiniMap/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
       <Size>0</Size>
-      <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x5b02" id="MotMG St Patricks Event">
       <DisplayId>Leprechaun Statue</DisplayId>
@@ -309,86 +294,68 @@
    <Object type="0x5b04" id="MotMG St Patricks Event Piece 1">
       <Group>Patty Statue Pieces</Group>
       <Class>Character</Class>
-      <Enemy/>
       <Texture>
          <File>stPatricksObjects8x8</File>
          <Index>0x30</Index>
       </Texture>
       <NoMiniMap/>
-      <StasisImmune/>
       <Size>100</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>10000</MaxHitPoints>
    </Object>
    <Object type="0x5b05" id="MotMG St Patricks Event Piece 2">
       <Group>Patty Statue Pieces</Group>
-      <Enemy/>
       <Class>Character</Class>
-      <NoMiniMap/>
-      <StasisImmune/>
       <Texture>
          <File>stPatricksObjects8x8</File>
          <Index>0x31</Index>
       </Texture>
+      <NoMiniMap/>
       <Size>100</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>10000</MaxHitPoints>
    </Object>
    <Object type="0x5b06" id="MotMG St Patricks Event Piece 3">
       <Group>Patty Statue Pieces</Group>
-      <Enemy/>
       <Class>Character</Class>
-      <NoMiniMap/>
-      <StasisImmune/>
       <Texture>
          <File>stPatricksObjects8x8</File>
          <Index>0x32</Index>
       </Texture>
+      <NoMiniMap/>
       <Size>100</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>10000</MaxHitPoints>
    </Object>
    <Object type="0x5b07" id="MotMG St Patricks Event Piece 4">
       <Group>Patty Statue Pieces</Group>
-      <Enemy/>
       <Class>Character</Class>
-      <NoMiniMap/>
-      <StasisImmune/>
       <Texture>
          <File>stPatricksObjects8x8</File>
          <Index>0x33</Index>
       </Texture>
+      <NoMiniMap/>
       <Size>100</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>10000</MaxHitPoints>
    </Object>
    <Object type="0x5b08" id="MotMG St Patricks Event Piece 5">
       <Group>Patty Statue Pieces</Group>
-      <Enemy/>
       <Class>Character</Class>
-      <NoMiniMap/>
-      <StasisImmune/>
       <Texture>
          <File>stPatricksObjects8x8</File>
          <Index>0x34</Index>
       </Texture>
+      <NoMiniMap/>
       <Size>100</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>10000</MaxHitPoints>
    </Object>
    <Object type="0x5b09" id="MotMG St Patricks Event Fake Piece">
       <Group>Patty Statue Pieces</Group>
-      <Enemy/>
       <Class>Character</Class>
-      <NoMiniMap/>
-      <StasisImmune/>
       <Texture>
          <File>stPatricksObjects8x8</File>
          <Index>0x35</Index>
       </Texture>
-      <Size>0</Size>
+      <NoMiniMap/>
+      <Size>100</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>10000</MaxHitPoints>
    </Object>
    <Object type="0x5b0a" id="MotMG St Patricks Event Chest">
       <DisplayId>Pot of Gold</DisplayId>

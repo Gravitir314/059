@@ -27,7 +27,7 @@ package kabam.rotmg.game.view.components
 
 			private function init(_arg_1:Player):void
 			{
-				this.backpackContent.name = TabStripModel.BACKPACK;
+				name = TabStripModel.BACKPACK;
 				this._backpack = new InventoryGrid(_arg_1, _arg_1, (GeneralConstants.NUM_EQUIPMENT_SLOTS + GeneralConstants.NUM_INVENTORY_SLOTS), true);
 			}
 

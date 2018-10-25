@@ -2,13 +2,11 @@
 
 <Objects>
    <Object type="0x1731" id="Stheno Summoner">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>0</Size>
    </Object>
    <Object type="0x0e28" id="Snakepit Guard Spawner">
@@ -80,11 +78,10 @@
          <File>lofiObj3</File>
          <Index>0x0a</Index>
       </Texture>
-      <MaxHitPoints>10</MaxHitPoints>
       <Exp>0</Exp>
       <Size>0</Size>
       <ShadowSize>0</ShadowSize>
-      <StasisImmune/>
+      <Invincible/>
       <Projectile>
          <ObjectId>Snakepit Dart</ObjectId>
          <Speed>50</Speed>

@@ -3,6 +3,7 @@
 package com.company.assembleegameclient.map.partyoverlay
 	{
 	import com.company.assembleegameclient.map.Camera;
+	import com.company.assembleegameclient.map.Map;
 	import com.company.assembleegameclient.objects.GameObject;
 	import com.company.assembleegameclient.parameters.Parameters;
 	import com.company.assembleegameclient.ui.menu.Menu;
@@ -33,6 +34,7 @@ package com.company.assembleegameclient.map.partyoverlay
 			public var fillColor_:uint;
 			public var go_:GameObject = null;
 			public var extraGOs_:Vector.<GameObject> = new Vector.<GameObject>();
+			public var map_:Map;
 			public var mouseOver_:Boolean = false;
 			private var big_:Boolean;
 			private var arrow_:Shape = new Shape();
@@ -80,7 +82,10 @@ package com.company.assembleegameclient.map.partyoverlay
 
 			protected function onMouseDown(_arg_1:MouseEvent):void
 			{
-				_arg_1.stopImmediatePropagation();
+				if (Parameters.isGpuRender())
+				{
+					this.map_.mapHitArea.dispatchEvent(_arg_1);
+				}
 			}
 
 			protected function setToolTip(_arg_1:ToolTip):void

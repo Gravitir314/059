@@ -39,7 +39,7 @@ package io.decagames.rotmg.pets.utils
 			{
 				var _local_1:LineBreakDesign = new LineBreakDesign(173, 0);
 				_local_1.x = 5;
-				_local_1.y = 64;
+				_local_1.y = 92;
 				return (_local_1);
 			}
 

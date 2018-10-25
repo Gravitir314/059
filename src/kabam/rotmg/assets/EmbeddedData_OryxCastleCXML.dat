@@ -718,14 +718,11 @@
    </Object>
    <Object type="0x0d86" id="Quiet Bomb">
       <Group>Oryx's Minions</Group>
-      <Class>Character</Class>
-      <StasisImmune/>
+      <Class>GameObject</Class>
       <Enemy/>
-      <NoMiniMap/>
-      <MaxHitPoints>100000</MaxHitPoints>
+      <Invincible/>
       <Exp>0</Exp>
       <Size>90</Size>
-      <Defense>0</Defense>
       <Texture>
          <File>lofiEnvironment3</File>
          <Index>0x22</Index>
@@ -742,8 +739,6 @@
             <Index>0x24</Index>
          </Texture>
       </AltTexture>
-      <HitSound>monster/skeletons_hit</HitSound>
-      <DeathSound>monster/skull_shrine_hit</DeathSound>
       <Projectile id="0">
          <ObjectId>Mute Spell</ObjectId>
          <Speed>40</Speed>

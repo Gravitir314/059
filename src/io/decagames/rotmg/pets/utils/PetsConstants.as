@@ -31,8 +31,8 @@ package io.decagames.rotmg.pets.utils
 			public static const PANEL_TEXTS_START_POSITION_X:Number = 55;
 			public static const PANEL_TEXTS_START_POSITION_Y:Number = 17;
 			public static const TOOLTIP_WIDTH:Number = 185;
-			public static const TOOLTIP_HEIGHT:Number = 133;
-			public static const TOOLTIP_HEIGHT_NO_ABILITIES:Number = 57;
+			public static const TOOLTIP_HEIGHT:Number = 150;
+			public static const TOOLTIP_HEIGHT_NO_ABILITIES:Number = 70;
 			public static const TOOLTIP_ABILITIES_START_POSITION_X:int = 8;
 			public static const TOOLTIP_ABILITIES_START_POSITION_Y:int = 86;
 			public static const TOOLTIP_ABILITIES_SPACING:uint = 17;

@@ -2,33 +2,22 @@
 
 <Objects>
    <Object type="0x1548" id="Arena Tomb Bosses">
-      <Enemy/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>lofiObjBig</File>
          <Index>0xb6</Index>
       </Texture>
-      <MaxHitPoints>1000</MaxHitPoints>
-      <Exp>0</Exp>
       <Size>0</Size>
-      <NoMiniMap/>
-      <StasisImmune/>
    </Object>
    <Object type="0x5e86" id="Spreading Fire">
-      <Enemy/>
       <Class>Character</Class>
       <AnimatedTexture>
          <File>chars8x8rEncounters</File>
          <Index>90</Index>
       </AnimatedTexture>
-      <MaxHitPoints>1000</MaxHitPoints>
-      <Defense>10</Defense>
-      <Exp>0</Exp>
       <Size>120</Size>
       <ShadowSize>0</ShadowSize>
       <Flying/>
-      <StasisImmune/>
-      <StunImmune/>
    </Object>
    <Object type="0x5e85" id="Fire Bomb">
       <Enemy/>

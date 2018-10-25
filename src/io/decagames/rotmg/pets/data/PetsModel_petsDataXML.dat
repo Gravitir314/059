@@ -11008,7 +11008,7 @@
          <Index>225</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>Don't mistake me for a fluffy bunny - I'm a genuine Chilean Chinchilla&#8230;\n\nUnlocks Chinchilla Skin of the Exotic family. The skin will be added to your Pet Wardrobe in the Pet Yard and can be used to change the appearance of your pet!</Description>
+      <Description>Don't mistake me for a fluffy bunny - I'm a genuine Chilean Chinchilla...\n\nUnlocks Chinchilla Skin of the Exotic family. The skin will be added to your Pet Wardrobe in the Pet Yard and can be used to change the appearance of your pet!</Description>
       <Activate skinType="29348">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
@@ -12060,7 +12060,7 @@
       </Texture>
       <Family>Automaton</Family>
       <Rarity>Divine</Rarity>
-      <DefaultSkin>Titanium Rex</DefaultSkin>
+      <DefaultSkin>Titanium Rex Pet Skin</DefaultSkin>
       <Size>80</Size>
       <NoHatchOrFuse/>
    </Object>
@@ -12101,7 +12101,7 @@
       </Texture>
       <Family>Exotic</Family>
       <Rarity>Divine</Rarity>
-      <DefaultSkin>Red Panda</DefaultSkin>
+      <DefaultSkin>Red Panda Pet Skin</DefaultSkin>
       <Size>80</Size>
       <NoHatchOrFuse/>
    </Object>
@@ -12142,7 +12142,7 @@
       </Texture>
       <Family>Reptile</Family>
       <Rarity>Divine</Rarity>
-      <DefaultSkin>Gargantua</DefaultSkin>
+      <DefaultSkin>Gargantua Pet Skin</DefaultSkin>
       <Size>80</Size>
       <NoHatchOrFuse/>
    </Object>

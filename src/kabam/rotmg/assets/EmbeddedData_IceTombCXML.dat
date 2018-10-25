@@ -281,10 +281,6 @@
          <Index>0x0e</Index>
       </Texture>
       <Size>0</Size>
-      <Enemy/>
-      <MaxHitPoints>90000</MaxHitPoints>
-      <Exp>0</Exp>
-      <EventChestBoss/>
    </Object>
    <Object type="0x7fa7" id="Activator">
       <DisplayId>Mysterious Ice Shard</DisplayId>

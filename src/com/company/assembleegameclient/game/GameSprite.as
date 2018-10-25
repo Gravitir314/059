@@ -136,15 +136,12 @@ package com.company.assembleegameclient.game
 			private var lastUpdateInteractiveTime:int = 0;
 			private var lastCalcTime:int = int.MIN_VALUE;
 			public var questBar:QuestHealthBar;
-			public var gsHitArea:Sprite;
 
 			public function GameSprite(_arg_1:Server, _arg_2:int, _arg_3:Boolean, _arg_4:int, _arg_5:int, _arg_6:ByteArray, _arg_7:PlayerModel, _arg_8:String, _arg_9:Boolean)
 			{
 				this.model = _arg_7;
 				map = new Map(this);
 				addChild(map);
-				this.gsHitArea = new Sprite();
-				addChild(this.gsHitArea);
 				gsc_ = new GameServerConnectionConcrete(this, _arg_1, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_8, _arg_9);
 				mui_ = new MapUserInput(this);
 				this.chatBox_ = new Chat();
@@ -461,8 +458,7 @@ package com.company.assembleegameclient.game
 						Parameters.phaseChangeAt = (getTimer() + 30000);
 					}
 				}
-				this.gsHitArea.graphics.beginFill(0xFF0000, 0);
-				this.gsHitArea.graphics.drawRect(0, 0, map.width, map.height);
+				map.setHitAreaProps(map.width, map.height);
 				Parameters.save();
 				hidePreloader();
 				this.parent.parent.setChildIndex((this.parent.parent as Layers).top, 2);

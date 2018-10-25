@@ -1,6 +1,60 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <Objects>
+   <Object type="0xf3d" id="Knight DPS Shield">
+      <Class>Projectile</Class>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0xca</Index>
+      </Texture>
+      <AngleCorrection>1</AngleCorrection>
+   </Object>
+   <Object type="0xf3e" id="Knight DPS Bolt">
+      <Class>Projectile</Class>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0xc8</Index>
+      </Texture>
+      <AngleCorrection>1</AngleCorrection>
+   </Object>
+   <Object type="0xf3f" id="Knight DPS Big Bolt">
+      <Class>Projectile</Class>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0xc9</Index>
+      </Texture>
+      <AngleCorrection>1</AngleCorrection>
+   </Object>
+   <Object type="0xf40" id="Ghost Skulls proj">
+      <Class>Projectile</Class>
+      <RandomTexture>
+         <Texture>
+            <File>d2LofiObjEmbed</File>
+            <Index>0xcc</Index>
+         </Texture>
+         <Texture>
+            <File>d2LofiObjEmbed</File>
+            <Index>0xcd</Index>
+         </Texture>
+         <Texture>
+            <File>d2LofiObjEmbed</File>
+            <Index>0xce</Index>
+         </Texture>
+         <Texture>
+            <File>d2LofiObjEmbed</File>
+            <Index>0xcf</Index>
+         </Texture>
+         <Texture>
+            <File>d2LofiObjEmbed</File>
+            <Index>0xd0</Index>
+         </Texture>
+         <Texture>
+            <File>d2LofiObjEmbed</File>
+            <Index>0xd1</Index>
+         </Texture>
+      </RandomTexture>
+      <Rotation>1000</Rotation>
+   </Object>
    <Object type="0x5b21" id="Rsxd Shot">
       <Class>Projectile</Class>
       <Texture>
@@ -4787,5 +4841,21 @@
       </Texture>
       <AngleCorrection>1</AngleCorrection>
       <Size>100</Size>
+   </Object>
+   <Object type="0xab2f" id="Sun Explosion">
+      <Class>Projectile</Class>
+      <Texture>
+         <File>d3LofiObjEmbed16</File>
+         <Index>0x59</Index>
+      </Texture>
+      <Rotation>180</Rotation>
+   </Object>
+   <Object type="0xab30" id="Sun Bullet">
+      <Class>Projectile</Class>
+      <Texture>
+         <File>d3LofiObjEmbed</File>
+         <Index>0x174</Index>
+      </Texture>
+      <AngleCorrection>1</AngleCorrection>
    </Object>
 </Objects>

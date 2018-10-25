@@ -308,13 +308,7 @@
       <NoMiniMap/>
       <Size>0</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>500000</MaxHitPoints>
-      <StasisImmune/>
-      <ParalyzeImmune/>
-      <StunImmune/>
-      <DazedImmune/>
-      <SlowImmune/>
-      <ArmorBreakImmune/>
+      <Invincible/>
       <Exp>0</Exp>
       <Projectile id="1">
          <ObjectId>Bubble Laser</ObjectId>

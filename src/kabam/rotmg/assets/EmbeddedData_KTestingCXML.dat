@@ -1,6 +1,286 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <Objects>
+   <Object type="0xaaaa" id="Totalia Bullet">
+      <Class>Projectile</Class>
+      <Texture>
+         <File>d3LofiObjEmbed</File>
+         <Index>0x164</Index>
+      </Texture>
+      <AngleCorrection>1</AngleCorrection>
+   </Object>
+   <Object type="0xaaab" id="Totalia Star">
+      <Class>Projectile</Class>
+      <Texture>
+         <File>d3LofiObjEmbed</File>
+         <Index>0x165</Index>
+      </Texture>
+      <Rotation>80</Rotation>
+   </Object>
+   <Object type="0xaaac" id="Totalia Bolt">
+      <Class>Projectile</Class>
+      <Texture>
+         <File>d3LofiObjEmbed</File>
+         <Index>0x166</Index>
+      </Texture>
+      <AngleCorrection>1</AngleCorrection>
+   </Object>
+   <Object type="0xaaad" id="Totalia Crescent">
+      <Class>Projectile</Class>
+      <Texture>
+         <File>d3LofiObjEmbed</File>
+         <Index>0x167</Index>
+      </Texture>
+      <Rotation>50</Rotation>
+   </Object>
+   <Object type="0xaaae" id="Totalia Bat Eye">
+      <Class>Projectile</Class>
+      <Texture>
+         <File>d3LofiObjEmbed</File>
+         <Index>0x168</Index>
+      </Texture>
+   </Object>
+   <Object type="0xaaef" id="Totalia Bat Body">
+      <Class>Projectile</Class>
+      <Texture>
+         <File>d3LofiObjEmbed</File>
+         <Index>0x169</Index>
+      </Texture>
+   </Object>
+   <Object type="0x231a" id="Pile Spawn MidForest">
+      <Class>GameObject</Class>
+      <Texture>
+         <File>invisible</File>
+         <Index>0</Index>
+      </Texture>
+      <Size>0</Size>
+      <Enemy/>
+      <Invincible/>
+      <PerRealmMax>2</PerRealmMax>
+      <Terrain>MidForest</Terrain>
+      <SpawnProb>0.1</SpawnProb>
+   </Object>
+   <Object type="0x231b" id="Pile Spawn MidPlains">
+      <Class>GameObject</Class>
+      <Texture>
+         <File>invisible</File>
+         <Index>0</Index>
+      </Texture>
+      <Size>0</Size>
+      <Enemy/>
+      <Invincible/>
+      <PerRealmMax>2</PerRealmMax>
+      <Terrain>MidPlains</Terrain>
+      <SpawnProb>0.1</SpawnProb>
+   </Object>
+   <Object type="0x231c" id="Pile Spawn MidSand">
+      <Class>GameObject</Class>
+      <Texture>
+         <File>invisible</File>
+         <Index>0</Index>
+      </Texture>
+      <Size>0</Size>
+      <Enemy/>
+      <Invincible/>
+      <PerRealmMax>2</PerRealmMax>
+      <Terrain>MidSand</Terrain>
+      <SpawnProb>0.1</SpawnProb>
+   </Object>
+   <Object type="0x231d" id="Pile Spawn HighForest">
+      <Class>GameObject</Class>
+      <Texture>
+         <File>invisible</File>
+         <Index>0</Index>
+      </Texture>
+      <Size>0</Size>
+      <Enemy/>
+      <Invincible/>
+      <PerRealmMax>2</PerRealmMax>
+      <Terrain>HighForest</Terrain>
+      <SpawnProb>0.1</SpawnProb>
+   </Object>
+   <Object type="0x231e" id="Pile Spawn HighPlains">
+      <Class>GameObject</Class>
+      <Texture>
+         <File>invisible</File>
+         <Index>0</Index>
+      </Texture>
+      <Size>0</Size>
+      <Enemy/>
+      <Invincible/>
+      <PerRealmMax>2</PerRealmMax>
+      <Terrain>HighPlains</Terrain>
+      <SpawnProb>0.1</SpawnProb>
+   </Object>
+   <Object type="0x231f" id="Pile Spawn HighSand">
+      <Class>GameObject</Class>
+      <Texture>
+         <File>invisible</File>
+         <Index>0</Index>
+      </Texture>
+      <Size>0</Size>
+      <Enemy/>
+      <Invincible/>
+      <PerRealmMax>2</PerRealmMax>
+      <Terrain>HighSand</Terrain>
+      <SpawnProb>0.1</SpawnProb>
+   </Object>
+   <Object type="0x2320" id="Pile Spawn God">
+      <Class>GameObject</Class>
+      <Texture>
+         <File>invisible</File>
+         <Index>0</Index>
+      </Texture>
+      <Size>0</Size>
+      <Enemy/>
+      <Invincible/>
+      <PerRealmMax>3</PerRealmMax>
+      <Terrain>Mountains</Terrain>
+      <SpawnProb>0.1</SpawnProb>
+   </Object>
+   <Object type="0x7460" id="Totalia Death">
+      <Class>GameObject</Class>
+      <Texture>
+         <File>invisible</File>
+         <Index>0</Index>
+      </Texture>
+      <Size>0</Size>
+   </Object>
+   <Object type="0x7fc8" id="Pile of Bones">
+      <Class>GameObject</Class>
+      <Texture>
+         <File>oryxHordeObjects16x16</File>
+         <Index>0x0e</Index>
+      </Texture>
+      <MinSize>80</MinSize>
+      <MaxSize>90</MaxSize>
+      <SizeStep>2</SizeStep>
+      <Sound id="0">monster/rocks_death</Sound>
+   </Object>
+   <Object type="0x3ccf" id="Totalia the Malevolent">
+      <Class>Character</Class>
+      <Enemy/>
+      <AnimatedTexture>
+         <File>chars16x16dEncounters</File>
+         <Index>37</Index>
+      </AnimatedTexture>
+      <HitSound>monster/default_hit</HitSound>
+      <DeathSound>char_select</DeathSound>
+      <Size>120</Size>
+      <MaxHitPoints>80000</MaxHitPoints>
+      <Defense>20</Defense>
+      <StasisImmune/>
+      <StunImmune/>
+      <ParalyzeImmune/>
+      <DazedImmune/>
+      <Projectile id="0">
+         <ObjectId>Totalia Bullet</ObjectId>
+         <Speed>60</Speed>
+         <Damage>120</Damage>
+         <Size>90</Size>
+         <LifetimeMS>4000</LifetimeMS>
+         <MultiHit/>
+         <FaceDir/>
+         <Amplitude>1.2</Amplitude>
+         <Frequency>4</Frequency>
+         <PassesCover/>
+      </Projectile>
+      <Projectile id="1">
+         <ObjectId>Totalia Star</ObjectId>
+         <Speed>50</Speed>
+         <Damage>140</Damage>
+         <Size>110</Size>
+         <LifetimeMS>4000</LifetimeMS>
+         <MultiHit/>
+         <Amplitude>1.0</Amplitude>
+         <Frequency>2</Frequency>
+         <PassesCover/>
+      </Projectile>
+      <Projectile id="2">
+         <ObjectId>Invisible</ObjectId>
+         <Speed>0</Speed>
+         <Damage>0</Damage>
+         <LifetimeMS>0</LifetimeMS>
+         <Size>0</Size>
+      </Projectile>
+      <Projectile id="3">
+         <ObjectId>Totalia Bolt</ObjectId>
+         <Speed>60</Speed>
+         <Damage>130</Damage>
+         <Size>90</Size>
+         <LifetimeMS>4000</LifetimeMS>
+         <MultiHit/>
+         <FaceDir/>
+         <Amplitude>2</Amplitude>
+         <Frequency>2</Frequency>
+         <PassesCover/>
+      </Projectile>
+      <Projectile id="4">
+         <ObjectId>Totalia Bat Body</ObjectId>
+         <Speed>50</Speed>
+         <Damage>120</Damage>
+         <Size>90</Size>
+         <LifetimeMS>4000</LifetimeMS>
+         <MultiHit/>
+         <PassesCover/>
+      </Projectile>
+      <Projectile id="5">
+         <ObjectId>Totalia Bat Eye</ObjectId>
+         <Speed>50</Speed>
+         <Damage>120</Damage>
+         <Size>90</Size>
+         <LifetimeMS>4000</LifetimeMS>
+         <MultiHit/>
+         <PassesCover/>
+      </Projectile>
+      <Projectile id="6">
+         <ObjectId>Armor Pierce Bullet</ObjectId>
+         <Speed>0</Speed>
+         <Damage>80</Damage>
+         <Size>90</Size>
+         <LifetimeMS>2000</LifetimeMS>
+         <MultiHit/>
+         <ArmorPiercing/>
+         <PassesCover/>
+      </Projectile>
+      <Projectile id="7">
+         <ObjectId>Totalia Crescent</ObjectId>
+         <Speed>50</Speed>
+         <Damage>90</Damage>
+         <Size>100</Size>
+         <LifetimeMS>4000</LifetimeMS>
+         <MultiHit/>
+         <ArmorPiercing/>
+         <PassesCover/>
+      </Projectile>
+   </Object>
+   <Object type="0x6fe8" id="Totalia Bat">
+      <DisplayId>Totalia's Bat Swarm</DisplayId>
+      <Class>Character</Class>
+      <Enemy/>
+      <AnimatedTexture>
+         <File>autumnNexusChars16x16</File>
+         <Index>0x3</Index>
+      </AnimatedTexture>
+      <HitSound>monster/bats_hit</HitSound>
+      <DeathSound>monster/bats_death</DeathSound>
+      <Size>80</Size>
+      <Flying/>
+      <Z>0.2</Z>
+      <MaxHitPoints>2500</MaxHitPoints>
+      <Projectile>
+         <ObjectId>Purple Spit</ObjectId>
+         <Speed>50</Speed>
+         <Damage>80</Damage>
+         <Size>100</Size>
+         <LifetimeMS>1600</LifetimeMS>
+         <MultiHit/>
+         <FaceDir/>
+         <Amplitude>1.25</Amplitude>
+         <Frequency>0.35</Frequency>
+         <ConditionEffect duration="3">Unstable</ConditionEffect>
+      </Projectile>
+   </Object>
    <Object type="0xafb" id="New Ability Dropper">
       <Class>Character</Class>
       <StasisImmune/>
@@ -135,7 +415,7 @@
          <File>lofiChar8x8</File>
          <Index>0xb5</Index>
       </Texture>
-      <MaxHitPoints>10000</MaxHitPoints>
+      <Invincible/>
       <Size>0</Size>
       <Hero/>
       <Quest/>

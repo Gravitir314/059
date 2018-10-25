@@ -75,13 +75,11 @@
       </Projectile>
    </Object>
    <Object type="0x0e2d" id="Captain Summoner">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>0</Size>
    </Object>
    <Object type="0x0e50" id="Ghost Pirate Sr">
@@ -117,14 +115,12 @@
       <Class>Character</Class>
       <Enemy/>
       <NoMiniMap/>
-      <StasisImmune/>
       <Group>GhostShip Lamps</Group>
       <Texture>
          <File>lofiObj3</File>
          <Index>0xac</Index>
       </Texture>
-      <HitSound>monster/traps_hit</HitSound>
-      <DeathSound>monster/flaming_skulls_hit</DeathSound>
+      <Invincible/>
       <Projectile id="0">
          <ObjectId>Lanturn Blast</ObjectId>
          <Speed>40</Speed>
@@ -136,8 +132,6 @@
       <Exp>0</Exp>
       <Size>120</Size>
       <ShadowColor>0xfec937a</ShadowColor>
-      <MaxHitPoints>600</MaxHitPoints>
-      <Defense>5000</Defense>
    </Object>
    <Object type="0x0e35" id="Ghost Lanturn Off">
       <Class>Character</Class>
@@ -163,7 +157,6 @@
          <Index>0xae</Index>
       </Texture>
       <Size>80</Size>
-      <MaxHitPoints>100</MaxHitPoints>
       <NoMiniMap/>
       <ShadowSize>80</ShadowSize>
       <DeathSound>weapon/obsidian_dagger</DeathSound>
@@ -175,7 +168,6 @@
          <Index>0xaf</Index>
       </Texture>
       <Size>80</Size>
-      <MaxHitPoints>100</MaxHitPoints>
       <NoMiniMap/>
       <ShadowSize>80</ShadowSize>
       <DeathSound>weapon/obsidian_dagger</DeathSound>
@@ -187,7 +179,6 @@
          <Index>0xb6</Index>
       </Texture>
       <Size>80</Size>
-      <MaxHitPoints>100</MaxHitPoints>
       <NoMiniMap/>
       <ShadowSize>80</ShadowSize>
       <DeathSound>weapon/obsidian_dagger</DeathSound>
@@ -199,75 +190,56 @@
          <Index>0xb7</Index>
       </Texture>
       <Size>80</Size>
-      <MaxHitPoints>100</MaxHitPoints>
       <NoMiniMap/>
       <ShadowSize>80</ShadowSize>
       <DeathSound>weapon/obsidian_dagger</DeathSound>
    </Object>
    <Object type="0x0e2e" id="Yellow Opener">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>lofiObj3</File>
          <Index>0xae</Index>
       </Texture>
       <Size>0</Size>
-      <MaxHitPoints>100</MaxHitPoints>
-      <NoMiniMap/>
    </Object>
    <Object type="0x0e30" id="Red Opener">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>lofiObj3</File>
          <Index>0xaf</Index>
       </Texture>
       <Size>0</Size>
-      <MaxHitPoints>100</MaxHitPoints>
-      <NoMiniMap/>
    </Object>
    <Object type="0x0e33" id="Green Opener">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>lofiObj3</File>
          <Index>0xb8</Index>
       </Texture>
       <Size>0</Size>
-      <MaxHitPoints>100</MaxHitPoints>
-      <NoMiniMap/>
    </Object>
    <Object type="0x0e34" id="Purple Opener">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>lofiObj3</File>
          <Index>0xb9</Index>
       </Texture>
       <Size>0</Size>
-      <MaxHitPoints>100</MaxHitPoints>
-      <NoMiniMap/>
    </Object>
    <Object type="0x0e4a" id="VDoor">
-      <Class>Character</Class>
-      <Enemy/>
-      <NoMiniMap/>
-      <StasisImmune/>
+      <Class>GameObject</Class>
       <Texture>
          <File>lofiObj3</File>
          <Index>0xba</Index>
       </Texture>
-      <MaxHitPoints>10</MaxHitPoints>
-      <Exp>0</Exp>
       <Size>0</Size>
    </Object>
    <Object type="0x0e49" id="HDoor">
-      <Class>Character</Class>
-      <Enemy/>
-      <NoMiniMap/>
-      <StasisImmune/>
+      <Class>GameObject</Class>
       <Texture>
          <File>lofiObj3</File>
          <Index>0xbb</Index>
       </Texture>
-      <MaxHitPoints>10</MaxHitPoints>
-      <Exp>0</Exp>
       <Size>0</Size>
    </Object>
    <Object type="0x0e3a" id="Violent Spirit">
@@ -321,9 +293,8 @@
       <Exp>0</Exp>
       <Size>90</Size>
       <ShadowSize>80</ShadowSize>
-      <MaxHitPoints>500</MaxHitPoints>
-      <Defense>30</Defense>
       <Z>0.33</Z>
+      <Invincible/>
       <DeathSound>monster/flaming_skulls_hit</DeathSound>
       <Projectile id="0">
          <ObjectId>Spirit Bolt</ObjectId>
@@ -363,16 +334,12 @@
       </Projectile>
    </Object>
    <Object type="0x0e47" id="Maggot Sack">
-      <Class>Character</Class>
-      <Group>GhostShip Group</Group>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <Exp>0</Exp>
       <Size>0</Size>
-      <MaxHitPoints>200</MaxHitPoints>
    </Object>
    <Object type="0x0e46" id="Maggot">
       <Class>Character</Class>

@@ -52,7 +52,7 @@
       <Enemy/>
       <NoMiniMap/>
       <Size>75</Size>
-      <StasisImmune/>
+      <Invincible/>
       <Projectile id="0">
          <ObjectId>Yellow Energy Shot</ObjectId>
          <Speed>100</Speed>
@@ -71,7 +71,7 @@
       <Enemy/>
       <NoMiniMap/>
       <Size>75</Size>
-      <StasisImmune/>
+      <Invincible/>
       <Projectile id="0">
          <ObjectId>Yellow Energy Shot</ObjectId>
          <Speed>100</Speed>
@@ -90,7 +90,7 @@
       <Enemy/>
       <NoMiniMap/>
       <Size>75</Size>
-      <StasisImmune/>
+      <Invincible/>
       <Projectile id="0">
          <ObjectId>Yellow Energy Shot</ObjectId>
          <Speed>100</Speed>

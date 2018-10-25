@@ -150,18 +150,11 @@
       </Projectile>
    </Object>
    <Object type="0x1723" id="Bat Swarm 1">
-      <DisplayId>Bat Swarm</DisplayId>
-      <Enemy/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <AnimatedTexture>
          <File>chars8x8rEncounters</File>
          <Index>26</Index>
       </AnimatedTexture>
-      <HitSound>monster/wooden_walls_hit</HitSound>
-      <DeathSound>monster/stone_walls_death</DeathSound>
-      <MaxHitPoints>125</MaxHitPoints>
-      <Exp>0</Exp>
-      <Flying/>
       <Size>0</Size>
    </Object>
    <Object type="0x1724" id="Vampire Bat Swarmer 1">
@@ -191,16 +184,11 @@
       </Projectile>
    </Object>
    <Object type="0x1725" id="Bat Swarm 2">
-      <DisplayId>Bat Swarm</DisplayId>
-      <Enemy/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <AnimatedTexture>
          <File>chars8x8rEncounters</File>
          <Index>26</Index>
       </AnimatedTexture>
-      <MaxHitPoints>125</MaxHitPoints>
-      <Exp>0</Exp>
-      <Flying/>
       <Size>0</Size>
    </Object>
    <Object type="0x1726" id="Vampire Bat Swarmer 2">
@@ -430,13 +418,11 @@
       </Projectile>
    </Object>
    <Object type="0x1736" id="Vampire Summoner">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>0</Size>
    </Object>
    <Object type="0x1737" id="Coffin">

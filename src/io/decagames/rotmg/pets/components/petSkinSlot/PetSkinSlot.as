@@ -64,7 +64,7 @@ package io.decagames.rotmg.pets.components.petSkinSlot
 			{
 				this.graphics.clear();
 				this.graphics.beginFill(((this._selected) ? 15306295 : (((this._isSkinSelectableSlot) && (this._skinVO.isOwned)) ? this._skinVO.rarity.backgroundColor : 0x1D1D1D)));
-				this.graphics.drawRect(0, 0, SLOT_SIZE, SLOT_SIZE);
+				this.graphics.drawRect(-1, -1, (SLOT_SIZE + 2), (SLOT_SIZE + 2));
 			}
 
 			public function get skinVO():IPetVO

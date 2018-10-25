@@ -33,8 +33,8 @@ package io.decagames.rotmg.pets.components.petIcon
 				var _local_4:BitmapData = ((_arg_1.getSkinMaskedImage()) ? _arg_1.getSkinMaskedImage().image_ : null);
 				if (_local_4)
 				{
-					_local_5 = ((_arg_2 - TextureRedrawer.minSize) / _local_4.width);
-					_local_6 = TextureRedrawer.resize(_local_4, _arg_1.getSkinMaskedImage().mask_, 100, true, 0, 0, _local_5);
+					_local_5 = (5 * (16 / _local_4.width));
+					_local_6 = TextureRedrawer.resize(_local_4, _arg_1.getSkinMaskedImage().mask_, _arg_2, true, 0, 0, _local_5);
 					_local_6 = GlowRedrawer.outlineGlow(_local_6, _arg_3, this.outlineSize);
 					return (_local_6);
 				}

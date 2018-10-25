@@ -1144,7 +1144,7 @@
       <ShadowSize>80</ShadowSize>
       <Z>0.4</Z>
       <Flying/>
-      <MaxHitPoints>2000</MaxHitPoints>
+      <Invincible/>
       <Exp>300</Exp>
       <Projectile id="0">
          <ObjectId>pD Pterasite Shot</ObjectId>
@@ -1166,7 +1166,7 @@
          <Index>0xa4</Index>
       </Texture>
       <Size>120</Size>
-      <MaxHitPoints>200000</MaxHitPoints>
+      <Invincible/>
       <Exp>0</Exp>
       <Projectile id="0">
          <ObjectId>Poison Fireball</ObjectId>
@@ -1463,7 +1463,7 @@
       <DeathSound>monster/cyclops_death</DeathSound>
       <Size>100</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>200000</MaxHitPoints>
+      <Invincible/>
       <Exp>0</Exp>
       <Projectile id="0">
          <ObjectId>pD Tongue Shot</ObjectId>
@@ -1491,7 +1491,6 @@
          <ConditionEffect duration="4" target="1">Stasis</ConditionEffect>
          <MultiHit/>
       </Projectile>
-      <StasisImmune/>
    </Object>
    <Object type="0x7c6" id="pD Blood Slurp">
       <DisplayId>Blood Slurp</DisplayId>

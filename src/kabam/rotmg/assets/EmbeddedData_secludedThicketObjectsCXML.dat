@@ -1204,11 +1204,8 @@
       <Size>100</Size>
       <Z>0.2</Z>
       <Flying/>
-      <MaxHitPoints>10000</MaxHitPoints>
-      <Defense>0</Defense>
+      <Invincible/>
       <NoMiniMap/>
-      <StasisImmune/>
-      <ParalyzeImmune/>
       <Projectile id="0">
          <ObjectId>El Dorado Spirit Skull</ObjectId>
          <Damage>200</Damage>
@@ -1253,9 +1250,7 @@
       </Animation>
       <DisplayId>Jungle Flame</DisplayId>
       <Size>100</Size>
-      <MaxHitPoints>10000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
+      <Invincible/>
       <Projectile id="0">
          <ObjectId>Invisible</ObjectId>
          <Damage>25</Damage>
@@ -1387,9 +1382,7 @@
          <Index>0x00</Index>
       </Texture>
       <Size>0</Size>
-      <MaxHitPoints>5000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
+      <Invincible/>
       <NoMiniMap/>
       <Projectile id="0">
          <ObjectId>Demonic Blast</ObjectId>
@@ -1417,9 +1410,7 @@
          <Index>0x00</Index>
       </Texture>
       <Size>0</Size>
-      <MaxHitPoints>5000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
+      <Invincible/>
       <NoMiniMap/>
       <Projectile id="0">
          <ObjectId>Demonic Blast</ObjectId>
@@ -1447,9 +1438,7 @@
          <Index>0x00</Index>
       </Texture>
       <Size>0</Size>
-      <MaxHitPoints>5000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
+      <Invincible/>
       <NoMiniMap/>
       <Projectile id="0">
          <ObjectId>Demonic Blast</ObjectId>
@@ -1477,9 +1466,7 @@
          <Index>0x00</Index>
       </Texture>
       <Size>0</Size>
-      <MaxHitPoints>5000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
+      <Invincible/>
       <NoMiniMap/>
       <Projectile id="0">
          <ObjectId>Demonic Blast</ObjectId>
@@ -1507,9 +1494,7 @@
          <Index>0x00</Index>
       </Texture>
       <Size>0</Size>
-      <MaxHitPoints>5000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
+      <Invincible/>
       <NoMiniMap/>
       <Projectile id="0">
          <ObjectId>Demonic Blast</ObjectId>
@@ -1537,9 +1522,7 @@
          <Index>0x00</Index>
       </Texture>
       <Size>0</Size>
-      <MaxHitPoints>5000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
+      <Invincible/>
       <NoMiniMap/>
       <Projectile id="0">
          <ObjectId>Demonic Blast</ObjectId>
@@ -1567,9 +1550,7 @@
          <Index>0x00</Index>
       </Texture>
       <Size>0</Size>
-      <MaxHitPoints>5000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
+      <Invincible/>
       <NoMiniMap/>
       <Projectile id="0">
          <ObjectId>Demonic Blast</ObjectId>
@@ -1597,9 +1578,7 @@
          <Index>0x00</Index>
       </Texture>
       <Size>0</Size>
-      <MaxHitPoints>5000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
+      <Invincible/>
       <NoMiniMap/>
       <Projectile id="0">
          <ObjectId>Demonic Blast</ObjectId>
@@ -1627,9 +1606,7 @@
          <Index>0x00</Index>
       </Texture>
       <Size>0</Size>
-      <MaxHitPoints>5000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
+      <Invincible/>
       <NoMiniMap/>
       <Projectile id="0">
          <ObjectId>Demonic Blast</ObjectId>
@@ -1657,9 +1634,7 @@
          <Index>0x00</Index>
       </Texture>
       <Size>0</Size>
-      <MaxHitPoints>5000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
+      <Invincible/>
       <NoMiniMap/>
       <Projectile id="0">
          <ObjectId>Demonic Blast</ObjectId>
@@ -1687,9 +1662,7 @@
          <Index>0x00</Index>
       </Texture>
       <Size>0</Size>
-      <MaxHitPoints>5000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
+      <Invincible/>
       <NoMiniMap/>
       <Projectile id="0">
          <ObjectId>Demonic Blast</ObjectId>
@@ -1717,9 +1690,7 @@
          <Index>0x00</Index>
       </Texture>
       <Size>0</Size>
-      <MaxHitPoints>5000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
+      <Invincible/>
       <NoMiniMap/>
       <Projectile id="0">
          <ObjectId>Demonic Blast</ObjectId>
@@ -1747,9 +1718,7 @@
          <Index>0x01</Index>
       </Texture>
       <Size>0</Size>
-      <MaxHitPoints>5000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
+      <Invincible/>
       <NoMiniMap/>
       <Projectile id="0">
          <ObjectId>Insectile Spike</ObjectId>
@@ -1777,9 +1746,7 @@
          <Index>0x01</Index>
       </Texture>
       <Size>0</Size>
-      <MaxHitPoints>5000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
+      <Invincible/>
       <NoMiniMap/>
       <Projectile id="0">
          <ObjectId>Insectile Spike</ObjectId>
@@ -1807,9 +1774,7 @@
          <Index>0x01</Index>
       </Texture>
       <Size>0</Size>
-      <MaxHitPoints>5000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
+      <Invincible/>
       <NoMiniMap/>
       <Projectile id="0">
          <ObjectId>Insectile Spike</ObjectId>
@@ -1837,9 +1802,7 @@
          <Index>0x01</Index>
       </Texture>
       <Size>0</Size>
-      <MaxHitPoints>5000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
+      <Invincible/>
       <NoMiniMap/>
       <Projectile id="0">
          <ObjectId>Insectile Spike</ObjectId>
@@ -1867,9 +1830,7 @@
          <Index>0x02</Index>
       </Texture>
       <Size>0</Size>
-      <MaxHitPoints>5000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
+      <Invincible/>
       <NoMiniMap/>
       <Projectile id="0">
          <ObjectId>Avian Spinner</ObjectId>
@@ -1898,9 +1859,7 @@
          <Index>0x02</Index>
       </Texture>
       <Size>0</Size>
-      <MaxHitPoints>5000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
+      <Invincible/>
       <NoMiniMap/>
       <Projectile id="0">
          <ObjectId>Avian Spinner</ObjectId>
@@ -1929,9 +1888,7 @@
          <Index>0x02</Index>
       </Texture>
       <Size>0</Size>
-      <MaxHitPoints>5000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
+      <Invincible/>
       <NoMiniMap/>
       <Projectile id="0">
          <ObjectId>Avian Spinner</ObjectId>
@@ -1960,9 +1917,7 @@
          <Index>0x02</Index>
       </Texture>
       <Size>0</Size>
-      <MaxHitPoints>5000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
+      <Invincible/>
       <NoMiniMap/>
       <Projectile id="0">
          <ObjectId>Avian Spinner</ObjectId>
@@ -2147,7 +2102,6 @@
       </Projectile>
    </Object>
    <Object type="0x36cc" id="Lightning Target">
-      <Enemy/>
       <NoMiniMap/>
       <DisplayId>Lightning Target</DisplayId>
       <Class>Character</Class>
@@ -2157,12 +2111,7 @@
       </Texture>
       <Size>100</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
-      <ParalyzeImmune/>
       <Flying/>
-      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2179,7 +2128,6 @@
       </Animation>
    </Object>
    <Object type="0x36cd" id="Lightning Target 2">
-      <Enemy/>
       <NoMiniMap/>
       <DisplayId>Lightning Target</DisplayId>
       <Class>Character</Class>
@@ -2189,12 +2137,7 @@
       </Texture>
       <Size>100</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
-      <ParalyzeImmune/>
       <Flying/>
-      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2211,7 +2154,6 @@
       </Animation>
    </Object>
    <Object type="0x36ce" id="Lightning Target 3">
-      <Enemy/>
       <NoMiniMap/>
       <DisplayId>Lightning Target</DisplayId>
       <Class>Character</Class>
@@ -2221,12 +2163,7 @@
       </Texture>
       <Size>100</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
-      <ParalyzeImmune/>
       <Flying/>
-      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2243,7 +2180,6 @@
       </Animation>
    </Object>
    <Object type="0x36cf" id="Lightning Target T">
-      <Enemy/>
       <NoMiniMap/>
       <DisplayId>Lightning Target</DisplayId>
       <Class>Character</Class>
@@ -2253,12 +2189,7 @@
       </Texture>
       <Size>100</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
-      <ParalyzeImmune/>
       <Flying/>
-      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2275,7 +2206,6 @@
       </Animation>
    </Object>
    <Object type="0x36d0" id="Lightning Target X">
-      <Enemy/>
       <NoMiniMap/>
       <DisplayId>Lightning Target</DisplayId>
       <Class>Character</Class>
@@ -2285,12 +2215,7 @@
       </Texture>
       <Size>100</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
-      <ParalyzeImmune/>
       <Flying/>
-      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2307,7 +2232,6 @@
       </Animation>
    </Object>
    <Object type="0x36d1" id="Lightning Target N">
-      <Enemy/>
       <NoMiniMap/>
       <DisplayId>Lightning Target</DisplayId>
       <Class>Character</Class>
@@ -2317,12 +2241,7 @@
       </Texture>
       <Size>100</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
-      <ParalyzeImmune/>
       <Flying/>
-      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2339,7 +2258,6 @@
       </Animation>
    </Object>
    <Object type="0x36d2" id="Lightning Target E">
-      <Enemy/>
       <NoMiniMap/>
       <DisplayId>Lightning Target</DisplayId>
       <Class>Character</Class>
@@ -2349,12 +2267,7 @@
       </Texture>
       <Size>100</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
-      <ParalyzeImmune/>
       <Flying/>
-      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2371,7 +2284,6 @@
       </Animation>
    </Object>
    <Object type="0x36d3" id="Lightning Target S">
-      <Enemy/>
       <NoMiniMap/>
       <DisplayId>Lightning Target</DisplayId>
       <Class>Character</Class>
@@ -2381,12 +2293,7 @@
       </Texture>
       <Size>100</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
-      <ParalyzeImmune/>
       <Flying/>
-      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2403,7 +2310,6 @@
       </Animation>
    </Object>
    <Object type="0x36d4" id="Lightning Target W">
-      <Enemy/>
       <NoMiniMap/>
       <DisplayId>Lightning Target</DisplayId>
       <Class>Character</Class>
@@ -2413,12 +2319,7 @@
       </Texture>
       <Size>100</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
-      <ParalyzeImmune/>
       <Flying/>
-      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2435,7 +2336,6 @@
       </Animation>
    </Object>
    <Object type="0x36d5" id="Lightning Target NE">
-      <Enemy/>
       <NoMiniMap/>
       <DisplayId>Lightning Target</DisplayId>
       <Class>Character</Class>
@@ -2445,12 +2345,7 @@
       </Texture>
       <Size>100</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
-      <ParalyzeImmune/>
       <Flying/>
-      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2467,7 +2362,6 @@
       </Animation>
    </Object>
    <Object type="0x36d6" id="Lightning Target NW">
-      <Enemy/>
       <NoMiniMap/>
       <DisplayId>Lightning Target</DisplayId>
       <Class>Character</Class>
@@ -2477,12 +2371,7 @@
       </Texture>
       <Size>100</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
-      <ParalyzeImmune/>
       <Flying/>
-      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2499,7 +2388,6 @@
       </Animation>
    </Object>
    <Object type="0x36d7" id="Lightning Target SE">
-      <Enemy/>
       <NoMiniMap/>
       <DisplayId>Lightning Target</DisplayId>
       <Class>Character</Class>
@@ -2509,12 +2397,7 @@
       </Texture>
       <Size>100</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
-      <ParalyzeImmune/>
       <Flying/>
-      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2531,7 +2414,6 @@
       </Animation>
    </Object>
    <Object type="0x36d8" id="Lightning Target SW">
-      <Enemy/>
       <NoMiniMap/>
       <DisplayId>Lightning Target</DisplayId>
       <Class>Character</Class>
@@ -2541,12 +2423,7 @@
       </Texture>
       <Size>100</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
-      <ParalyzeImmune/>
       <Flying/>
-      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -2575,10 +2452,7 @@
       <DeathSound>monster/dark_elves_death</DeathSound>
       <Size>300</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>0</Defense>
-      <StasisImmune/>
-      <ParalyzeImmune/>
+      <Invincible/>
       <Flying/>
       <Exp>0</Exp>
       <Sound id="0">lightning</Sound>
@@ -2594,8 +2468,7 @@
       <NoMiniMap/>
       <Size>0</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>10000</MaxHitPoints>
-      <Defense>0</Defense>
+      <Invincible/>
       <Projectile id="3">
          <ObjectId>Storm Swirl</ObjectId>
          <Damage>25</Damage>
@@ -2627,31 +2500,20 @@
    </Object>
    <Object type="0x36db" id="Dialogue Controller">
       <DisplayId>Xolotl the Lightning God</DisplayId>
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
-      <Size>0</Size>
-      <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>10000</MaxHitPoints>
-      <Defense>0</Defense>
+      <Size>-1</Size>
    </Object>
    <Object type="0x36dc" id="Target Controller">
-      <DisplayId>Xolotl the Lightning God</DisplayId>
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>10000</MaxHitPoints>
-      <Defense>0</Defense>
    </Object>
    <Object type="0x36dd" id="Fake Lightning Target">
       <DisplayId>Stupid Loophole</DisplayId>
@@ -2663,32 +2525,20 @@
       <Size>0</Size>
    </Object>
    <Object type="0x36de" id="The Ultimate Loophole">
-      <DisplayId>The Ultimate Loophole</DisplayId>
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>10000</MaxHitPoints>
-      <Defense>0</Defense>
    </Object>
    <Object type="0x36f7" id="Retreat Taunt Controller">
-      <DisplayId>Underdog</DisplayId>
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>10000</MaxHitPoints>
-      <Defense>0</Defense>
    </Object>
    <Object type="0x36df" id="ST First Door Helper">
       <DisplayId>Niegil</DisplayId>

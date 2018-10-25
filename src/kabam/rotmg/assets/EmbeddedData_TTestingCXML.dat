@@ -13,6 +13,5 @@
       <DeathSound>monster/flying_brain_death</DeathSound>
       <Size>200</Size>
       <ShadowSize>50</ShadowSize>
-      <Defense>10</Defense>
    </Object>
 </Objects>

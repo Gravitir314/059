@@ -4491,7 +4491,7 @@
          <File>playerskins</File>
          <Index>254</Index>
       </AnimatedTexture>
-      <PlayerClassType>0x031f</PlayerClassType>
+      <PlayerClassType>0xffff</PlayerClassType>
       <NoSkinSelect/>
    </Object>
    <Object type="0x17e7" id="Warrior - Supporter Extraordinaire">
@@ -4644,15 +4644,53 @@
       <PlayerClassType>0x0324</PlayerClassType>
       <NoSkinSelect/>
    </Object>
-   <Object type="0x1581" id="Megasupporter - Paladin">
+   <Object type="0x17f6" id="Supporter - Baby Djinja">
       <Skin/>
       <Class>Skin</Class>
       <AnimatedTexture>
-         <File>playerskins16</File>
-         <Index>21</Index>
+         <File>playerskins</File>
+         <Index>102</Index>
       </AnimatedTexture>
-      <PlayerClassType>0x031f</PlayerClassType>
-      <UnlockSpecial>Set Skin</UnlockSpecial>
+      <PlayerClassType>0xffff</PlayerClassType>
       <NoSkinSelect/>
+   </Object>
+   <Object type="0x73c5" id="Gravekeeper Hunter">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>417</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0322</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x73c7" id="Gravekeeper Warrior">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>418</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x031d</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x73c9" id="Ankou Rogue">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>419</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0300</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x73cc" id="Calcium Skeleton">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>74</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0xffff</PlayerClassType>
    </Object>
 </Objects>

@@ -214,16 +214,12 @@
       </Projectile>
    </Object>
    <Object type="0x735e" id="shtrs blobomb maker">
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <Exp>0</Exp>
-      <StasisImmune/>
    </Object>
    <Object type="0x735f" id="shtrs eyeswarmer">
       <DisplayId>Eye of the Avatar</DisplayId>
@@ -305,8 +301,6 @@
          <File>lofiObjBig</File>
          <Index>0xb9</Index>
       </Texture>
-      <MaxHitPoints>10000</MaxHitPoints>
-      <Defense>10</Defense>
       <Exp>0</Exp>
       <Size>100</Size>
       <AltTexture id="1">
@@ -322,58 +316,39 @@
          <Size>160</Size>
          <LifetimeMS>600</LifetimeMS>
       </Projectile>
+      <Invincible/>
    </Object>
    <Object type="0x5e77" id="Dragon Marker BR">
-      <Enemy/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>lofiObjBig</File>
          <Index>0xb0</Index>
       </Texture>
-      <MaxHitPoints>1000</MaxHitPoints>
-      <Exp>0</Exp>
       <Size>0</Size>
-      <NoMiniMap/>
-      <StasisImmune/>
    </Object>
    <Object type="0x5e76" id="Dragon Marker BL">
-      <Enemy/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>lofiObjBig</File>
          <Index>0xb0</Index>
       </Texture>
-      <MaxHitPoints>1000</MaxHitPoints>
-      <Exp>0</Exp>
       <Size>0</Size>
-      <NoMiniMap/>
-      <StasisImmune/>
    </Object>
    <Object type="0x5e75" id="Dragon Marker TR">
-      <Enemy/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>lofiObjBig</File>
          <Index>0xb0</Index>
       </Texture>
-      <MaxHitPoints>1000</MaxHitPoints>
-      <Exp>0</Exp>
       <Size>0</Size>
-      <NoMiniMap/>
-      <StasisImmune/>
    </Object>
    <Object type="0x5e74" id="Dragon Marker TL">
-      <Enemy/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>lofiObjBig</File>
          <Index>0xb0</Index>
       </Texture>
-      <MaxHitPoints>1000</MaxHitPoints>
-      <Exp>0</Exp>
       <Size>0</Size>
-      <NoMiniMap/>
-      <StasisImmune/>
    </Object>
    <Object type="0x5e73" id="Dragon Head Spawner">
       <Enemy/>
@@ -382,33 +357,21 @@
          <File>lofiObjBig</File>
          <Index>0xb6</Index>
       </Texture>
-      <MaxHitPoints>1000</MaxHitPoints>
       <Exp>0</Exp>
       <Size>0</Size>
       <NoMiniMap/>
       <Encounter/>
       <Level>20</Level>
-      <StasisImmune/>
       <PerRealmMax>1</PerRealmMax>
+      <Invincible/>
    </Object>
    <Object type="0x5e72" id="Dragon Head Leader">
-      <Enemy/>
-      <DisplayId>Rock Dragon</DisplayId>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>lofiObjBig</File>
          <Index>0xc5</Index>
       </Texture>
-      <HitSound>monster/bats_hit</HitSound>
-      <DeathSound>monster/bats_death</DeathSound>
-      <MaxHitPoints>1000</MaxHitPoints>
-      <Defense>10</Defense>
-      <Exp>0</Exp>
       <Size>0</Size>
-      <Flying/>
-      <Z>0.35</Z>
-      <NoMiniMap/>
-      <StasisImmune/>
       <Projectile id="0">
          <ObjectId>Fire Bust Shot</ObjectId>
          <Damage>120</Damage>
@@ -1243,7 +1206,6 @@
       <Hero/>
       <Quest/>
       <God/>
-      <Encounter/>
       <StasisImmune/>
       <Level>20</Level>
       <Projectile>
@@ -1314,6 +1276,7 @@
       <Hero/>
       <Quest/>
       <God/>
+      <Encounter/>
       <StasisImmune/>
       <Level>20</Level>
       <Projectile>
@@ -1680,13 +1643,13 @@
          <File>lofiChar8x8</File>
          <Index>0xb5</Index>
       </Texture>
-      <MaxHitPoints>10000</MaxHitPoints>
       <Size>0</Size>
       <Hero/>
       <Quest/>
       <God/>
       <Encounter/>
       <Level>20</Level>
+      <Invincible/>
    </Object>
    <Object type="0x0d60" id="Pentaract Tower Corpse">
       <Enemy/>
@@ -1955,20 +1918,16 @@
    <Object type="0x0d65" id="Hermit God Tentacle Spawner">
       <Group>Hermit God Encounter</Group>
       <Class>Character</Class>
-      <StasisImmune/>
       <Enemy/>
       <NoMiniMap/>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <HitSound>monster/skeletons_hit</HitSound>
-      <DeathSound>monster/dwarves_death</DeathSound>
-      <MaxHitPoints>10000</MaxHitPoints>
       <Exp>0</Exp>
       <ShadowSize>0</ShadowSize>
       <Size>0</Size>
-      <Defense>50</Defense>
+      <Invincible/>
    </Object>
    <Object type="0x0d66" id="Hermit God Drop">
       <Group>Hermit God Encounter</Group>
@@ -1992,13 +1951,14 @@
             <Index>50</Index>
          </AnimatedTexture>
       </Portrait>
-      <MaxHitPoints>100000</MaxHitPoints>
       <Exp>0</Exp>
       <God/>
       <Hero/>
       <Quest/>
+      <Encounter/>
       <Level>20</Level>
       <PerRealmMax>10</PerRealmMax>
+      <Invincible/>
    </Object>
    <Object type="0x0e5c" id="Bonegrind 2">
       <DisplayId>Bonegrind the Undead Butcher</DisplayId>
@@ -2057,15 +2017,12 @@
       </Projectile>
    </Object>
    <Object type="0x0e57" id="Horde Spawner">
-      <Enemy/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <MaxHitPoints>100000</MaxHitPoints>
-      <Exp>0</Exp>
-      <NoMiniMap/>
+      <Size>0</Size>
    </Object>
    <Object type="0x0e56" id="Masked Party God">
       <Enemy/>
@@ -2186,21 +2143,16 @@
       </Projectile>
    </Object>
    <Object type="0x0e3c" id="Beach Spectre Spawner">
-      <Enemy/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <AnimatedTexture>
          <File>chars8x8rEncounters</File>
          <Index>36</Index>
       </AnimatedTexture>
       <Size>0</Size>
-      <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>1000</MaxHitPoints>
-      <Defense>100</Defense>
-      <NoMiniMap/>
    </Object>
    <Object type="0x0e3b" id="Tempest Cloud">
       <Enemy/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
@@ -2260,13 +2212,10 @@
             <Index>0x3a</Index>
          </Texture>
       </AltTexture>
-      <HitSound>monster/sprites_hit</HitSound>
-      <DeathSound>monster/sprites_death</DeathSound>
       <Size>0</Size>
-      <MaxHitPoints>800</MaxHitPoints>
-      <Defense>15</Defense>
       <Flying/>
       <Z>0.8</Z>
+      <Invincible/>
       <Projectile id="0">
          <ObjectId>Lightning Bolt</ObjectId>
          <Damage>66</Damage>
@@ -2311,12 +2260,11 @@
       <DeathSound>monster/sprites_death</DeathSound>
       <Size>0</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>6000</MaxHitPoints>
-      <Defense>2000</Defense>
       <NoMiniMap/>
       <PerRealmMax>1</PerRealmMax>
       <Encounter/>
       <Level>20</Level>
+      <Invincible/>
    </Object>
    <Object type="0x0e37" id="Ghost Ship">
       <Enemy/>

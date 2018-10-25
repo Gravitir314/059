@@ -5,20 +5,27 @@
       <DisplayId>Oryx the Mad God</DisplayId>
       <Enemy/>
       <Class>Character</Class>
-      <Texture>
-         <File>lofiChar16x16</File>
-         <Index>0x54</Index>
-      </Texture>
-      <AltTexture id="1">
-         <Texture>
-            <File>lofiChar16x16</File>
-            <Index>0x54</Index>
-         </Texture>
-      </AltTexture>
+      <RandomTexture>
+         <AnimatedTexture>
+            <File>d3Chars16x16rEmbed</File>
+            <Index>0x07</Index>
+            <Right/>
+         </AnimatedTexture>
+         <AnimatedTexture>
+            <File>d3Chars16x16rEmbed</File>
+            <Index>0x07</Index>
+            <Right/>
+         </AnimatedTexture>
+         <AnimatedTexture>
+            <File>d3Chars16x16rEmbed</File>
+            <Index>0x06</Index>
+            <Right/>
+         </AnimatedTexture>
+      </RandomTexture>
       <HitSound>monster/oryx_hit</HitSound>
       <DeathSound>monster/oryx_death</DeathSound>
       <Size>120</Size>
-      <MaxHitPoints>65000</MaxHitPoints>
+      <MaxHitPoints>100000</MaxHitPoints>
       <Defense>60</Defense>
       <Exp>20000</Exp>
       <Quest/>
@@ -75,6 +82,55 @@
          <LifetimeMS>3000</LifetimeMS>
          <ArmorPiercing/>
       </Projectile>
+      <Projectile id="11">
+         <ObjectId>Grey Star</ObjectId>
+         <Damage>140</Damage>
+         <Speed>45</Speed>
+         <LifetimeMS>1733</LifetimeMS>
+         <ConditionEffect duration="3">Quiet</ConditionEffect>
+         <MultiHit/>
+      </Projectile>
+      <Projectile id="12">
+         <ObjectId>Red Star</ObjectId>
+         <Damage>120</Damage>
+         <Speed>35</Speed>
+         <LifetimeMS>2228</LifetimeMS>
+         <ArmorPiercing/>
+         <MultiHit/>
+      </Projectile>
+      <Projectile id="15">
+         <ObjectId>Sun Explosion</ObjectId>
+         <Speed>40</Speed>
+         <Size>200</Size>
+         <Damage>250</Damage>
+         <LifetimeMS>2000</LifetimeMS>
+         <MultiHit/>
+         <ArmorPiercing/>
+      </Projectile>
+      <Projectile id="16">
+         <ObjectId>White Star Stunner</ObjectId>
+         <Speed>40</Speed>
+         <Size>90</Size>
+         <Damage>90</Damage>
+         <LifetimeMS>3000</LifetimeMS>
+         <ConditionEffect duration="4">Dazed</ConditionEffect>
+         <MultiHit/>
+      </Projectile>
+      <Projectile id="17">
+         <ObjectId>White Superblast</ObjectId>
+         <Damage>250</Damage>
+         <Speed>48</Speed>
+         <LifetimeMS>3000</LifetimeMS>
+         <Size>200</Size>
+         <MultiHit/>
+         <PassesCover/>
+      </Projectile>
+      <Projectile id="18">
+         <ObjectId>White Ball Blast</ObjectId>
+         <Damage>180</Damage>
+         <Speed>80</Speed>
+         <LifetimeMS>800</LifetimeMS>
+      </Projectile>
       <Projectile id="13">
          <ObjectId>Dark Gray Spinner</ObjectId>
          <Speed>90</Speed>
@@ -94,6 +150,102 @@
          <MultiHit/>
       </Projectile>
    </Object>
+   <Object type="0x23ce" id="O2 Bullet Split">
+      <DisplayId>Oryx the Mad God</DisplayId>
+      <Class>GameObject</Class>
+      <Texture>
+         <File>lofiChar8x8</File>
+         <Index>0xb4</Index>
+      </Texture>
+      <Size>0</Size>
+      <Enemy/>
+      <Invincible/>
+      <Projectile id="0">
+         <ObjectId>Sun Bullet</ObjectId>
+         <Damage>100</Damage>
+         <Speed>65</Speed>
+         <LifetimeMS>2000</LifetimeMS>
+         <Size>100</Size>
+         <MultiHit/>
+         <ArmorPiercing/>
+      </Projectile>
+   </Object>
+   <Object type="0x6ffb" id="O2 MinionRemover">
+      <Class>GameObject</Class>
+      <Texture>
+         <File>lofiChar8x8</File>
+         <Index>0xb4</Index>
+      </Texture>
+      <Size>0</Size>
+   </Object>
+   <Object type="0xb01a" id="O2 Bomb Artifact">
+      <DisplayId>Oryx the Mad God</DisplayId>
+      <Enemy/>
+      <Class>Character</Class>
+      <Texture>
+         <File>invisible</File>
+         <Index>0</Index>
+      </Texture>
+      <AltTexture id="1">
+         <Texture>
+            <File>lofiChar8x8</File>
+            <Index>0xb4</Index>
+         </Texture>
+      </AltTexture>
+      <Size>120</Size>
+      <Invincible/>
+   </Object>
+   <Object type="0xb096" id="O2 Bomb Artifact 2">
+      <DisplayId>Oryx the Mad God</DisplayId>
+      <Enemy/>
+      <Class>Character</Class>
+      <Texture>
+         <File>lofiChar8x8</File>
+         <Index>0xb4</Index>
+      </Texture>
+      <Size>120</Size>
+      <Invincible/>
+   </Object>
+   <Object type="0xaadf" id="Cog Artifact2 R">
+      <Enemy/>
+      <Class>Character</Class>
+      <Texture>
+         <File>lofiChar8x8</File>
+         <Index>0xb4</Index>
+      </Texture>
+      <Size>100</Size>
+      <MaxHitPoints>100000</MaxHitPoints>
+      <StunImmune/>
+      <StasisImmune/>
+      <Projectile id="0">
+         <ObjectId>Black Magic</ObjectId>
+         <Damage>120</Damage>
+         <Speed>120</Speed>
+         <LifetimeMS>320</LifetimeMS>
+         <ConditionEffect duration="4">Weak</ConditionEffect>
+         <MultiHit/>
+      </Projectile>
+   </Object>
+   <Object type="0x203f" id="Cog Artifact2 L">
+      <Enemy/>
+      <Class>Character</Class>
+      <Texture>
+         <File>lofiChar8x8</File>
+         <Index>0xb4</Index>
+      </Texture>
+      <Size>100</Size>
+      <MaxHitPoints>100000</MaxHitPoints>
+      <StunImmune/>
+      <StasisImmune/>
+      <Projectile id="0">
+         <ObjectId>Black Magic</ObjectId>
+         <Damage>120</Damage>
+         <Speed>120</Speed>
+         <LifetimeMS>320</LifetimeMS>
+         <ConditionEffect duration="4">Weak</ConditionEffect>
+         <MultiHit/>
+      </Projectile>
+   </Object>
    <Object type="0x0944" id="Henchman of Oryx">
       <Enemy/>
       <Class>Character</Class>
@@ -104,7 +256,7 @@
       <HitSound>monster/minion_of_oryx_hit</HitSound>
       <DeathSound>monster/minion_of_oryx_death</DeathSound>
       <Size>100</Size>
-      <MaxHitPoints>4000</MaxHitPoints>
+      <MaxHitPoints>3000</MaxHitPoints>
       <Defense>25</Defense>
       <Exp>19</Exp>
       <Projectile id="0">
@@ -388,8 +540,7 @@
       <ShadowSize>0</ShadowSize>
       <DrawUnder/>
       <NoMiniMap/>
-      <MaxHitPoints>2000</MaxHitPoints>
-      <Defense>0</Defense>
+      <Invincible/>
       <Exp>0</Exp>
       <Projectile id="0">
          <ObjectId>Invisible</ObjectId>

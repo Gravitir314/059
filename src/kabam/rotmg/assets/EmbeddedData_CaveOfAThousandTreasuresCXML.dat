@@ -139,6 +139,7 @@
          <File>lofiObjBig</File>
          <Index>0x6a</Index>
       </Texture>
+      <Invincible/>
       <AltTexture id="1">
          <Texture>
             <File>lofiObjBig</File>
@@ -159,8 +160,6 @@
       </AltTexture>
       <Size>100</Size>
       <ShadowSize>50</ShadowSize>
-      <StasisImmune/>
-      <Defense>10</Defense>
       <Projectile id="0">
          <ObjectId>Invisible</ObjectId>
          <Speed>50</Speed>
@@ -202,6 +201,7 @@
       <Class>GameObject</Class>
       <Enemy/>
       <DrawOnGround/>
+      <Invincible/>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
@@ -249,6 +249,7 @@
       <Class>GameObject</Class>
       <Enemy/>
       <DrawOnGround/>
+      <Invincible/>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
@@ -499,12 +500,9 @@
             <Index>0x216</Index>
          </Texture>
       </AltTexture>
-      <HitSound>monster/slimes_death</HitSound>
-      <DeathSound>monster/flying_brain_death</DeathSound>
       <Size>250</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>1000</MaxHitPoints>
-      <Defense>10</Defense>
+      <Invincible/>
       <Projectile id="0">
          <ObjectId>Invisible</ObjectId>
          <Damage>60</Damage>
@@ -516,14 +514,12 @@
       <DisplayId>{cave.Boulder}</DisplayId>
    </Object>
    <Object type="0x5e3f" id="Boulder Spawner">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <StasisImmune/>
       <DisplayId>{cave.Boulder_Spawner}</DisplayId>
    </Object>
    <Object type="0x5e4a" id="Gold Planet">
@@ -533,13 +529,9 @@
          <Index>44</Index>
       </AnimatedTexture>
       <Enemy/>
-      <HitSound>monster/cubes_hit</HitSound>
-      <DeathSound>monster/cubes_death</DeathSound>
-      <Defense>5</Defense>
       <Exp>0</Exp>
-      <MaxHitPoints>1000</MaxHitPoints>
       <Size>200</Size>
-      <StasisImmune/>
+      <Invincible/>
       <Projectile id="1">
          <ObjectId>Grey Spiral</ObjectId>
          <Damage>60</Damage>
@@ -558,14 +550,12 @@
       <DisplayId>{cave.Gold_Planet}</DisplayId>
    </Object>
    <Object type="0x5e4b" id="Realm Portal Opener">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <StasisImmune/>
       <DisplayId>{cave.Realm_Portal_Opener}</DisplayId>
    </Object>
    <Object type="0x5e4e" id="Treasure Rocks">

@@ -124,31 +124,27 @@
       <Exp>0</Exp>
    </Object>
    <Object type="0x1733" id="Archdemon Summoner">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>0</Size>
    </Object>
    <Object type="0x1734" id="Archdemon GroundShot">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>0</Size>
    </Object>
    <Object type="0x1735" id="Archdemon SafeGround">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>0</Size>
    </Object>
    <Object type="0x673" id="White Demon of the Abyss">
@@ -299,17 +295,12 @@
       </Projectile>
    </Object>
    <Object type="0x0e1e" id="AbyssIdolDead">
-      <Class>Character</Class>
-      <Enemy/>
-      <NoMiniMap/>
-      <StasisImmune/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <Exp>0</Exp>
       <Size>0</Size>
-      <MaxHitPoints>10</MaxHitPoints>
    </Object>
    <Object type="0x0e1d" id="Abyss Idol">
       <Class>Character</Class>
@@ -349,42 +340,27 @@
       </Projectile>
    </Object>
    <Object type="0x0e1c" id="AbyssExitGuarder">
-      <Class>Character</Class>
-      <Enemy/>
-      <NoMiniMap/>
-      <StasisImmune/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <Exp>0</Exp>
       <Size>0</Size>
-      <MaxHitPoints>10</MaxHitPoints>
    </Object>
    <Object type="0x0e1b" id="LavaTrigger">
-      <Class>Character</Class>
-      <Enemy/>
-      <NoMiniMap/>
-      <StasisImmune/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <Exp>0</Exp>
       <Size>0</Size>
-      <MaxHitPoints>10</MaxHitPoints>
    </Object>
    <Object type="0x0e1a" id="AbyssTreasureLavaBomb">
-      <Class>Character</Class>
-      <Enemy/>
-      <NoMiniMap/>
-      <StasisImmune/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <MaxHitPoints>10</MaxHitPoints>
-      <Exp>0</Exp>
       <Size>0</Size>
    </Object>
 </Objects>

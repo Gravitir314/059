@@ -536,4 +536,43 @@
       <Z>0.2</Z>
       <NoMiniMap/>
    </Object>
+   <Object type="0x20c3" id="Aether Trap">
+      <Class>Character</Class>
+      <Size>-1</Size>
+      <ShadowSize>100</ShadowSize>
+      <Texture>
+         <File>mountainTempleObjects16x16</File>
+         <Index>0x60</Index>
+      </Texture>
+      <AltTexture id="1">
+         <Texture>
+            <File>mountainTempleObjects16x16</File>
+            <Index>0x63</Index>
+         </Texture>
+      </AltTexture>
+      <AltTexture id="2">
+         <Texture>
+            <File>mountainTempleObjects16x16</File>
+            <Index>0x64</Index>
+         </Texture>
+      </AltTexture>
+      <AltTexture id="3">
+         <Texture>
+            <File>mountainTempleObjects16x16</File>
+            <Index>0x65</Index>
+         </Texture>
+      </AltTexture>
+      <AltTexture id="4">
+         <Texture>
+            <File>mountainTempleObjects16x16</File>
+            <Index>0x66</Index>
+         </Texture>
+      </AltTexture>
+      <AltTexture id="5">
+         <Texture>
+            <File>mountainTempleObjects16x16</File>
+            <Index>0x67</Index>
+         </Texture>
+      </AltTexture>
+   </Object>
 </Objects>

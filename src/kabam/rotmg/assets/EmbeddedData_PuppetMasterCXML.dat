@@ -2,17 +2,12 @@
 
 <Objects>
    <Object type="0x7443" id="Puppet Theatre Boss Spawn">
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <Exp>0</Exp>
-      <StasisImmune/>
-      <StunImmune/>
    </Object>
    <Object type="0x7433" id="The Puppet Master">
       <DisplayId>The Puppet Master</DisplayId>

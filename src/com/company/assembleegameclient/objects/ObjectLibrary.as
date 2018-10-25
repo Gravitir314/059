@@ -41,6 +41,7 @@ package com.company.assembleegameclient.objects
 			public static const petXMLDataLibrary_:Dictionary = new Dictionary();
 			public static const skinSetXMLDataLibrary_:Dictionary = new Dictionary();
 			public static const dungeonToPortalTextureData_:Dictionary = new Dictionary();
+			public static const petSkinIdToPetType_:Dictionary = new Dictionary();
 			public static const dungeonsXMLLibrary_:Dictionary = new Dictionary(true);
 			public static const ENEMY_FILTER_LIST:Vector.<String> = new <String>["None", "Hp", "Defense"];
 			public static const TILE_FILTER_LIST:Vector.<String> = new <String>["ALL", "Walkable", "Unwalkable", "Slow", "Speed=1"];
@@ -187,6 +188,10 @@ package com.company.assembleegameclient.objects
 						if (((_local_3.hasOwnProperty("IntergamePortal")) && (_local_3.hasOwnProperty("DungeonName"))))
 						{
 							dungeonToPortalTextureData_[String(_local_3.DungeonName)] = typeToTextureData_[_local_6];
+						}
+						if (String(_local_3.Class) == "Pet" && _local_3.hasOwnProperty("DefaultSkin"))
+						{
+							petSkinIdToPetType_[String(_local_3.DefaultSkin)] = _local_6;
 						}
 					}
 				}

@@ -343,8 +343,8 @@
          <LifetimeMS>1200</LifetimeMS>
          <MultiHit/>
       </Projectile>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>100</Size>
+      <Invincible/>
    </Object>
    <Object type="0x0e15" id="TemporaryLavaLonger">
       <Class>Character</Class>
@@ -352,60 +352,42 @@
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>0</Size>
    </Object>
    <Object type="0x0e14" id="FireMakerUp">
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <MaxHitPoints>10</MaxHitPoints>
-      <Size>140</Size>
-      <ShadowSize>0</ShadowSize>
-      <Flying/>
+      <Size>0</Size>
    </Object>
    <Object type="0x0e13" id="FireMakerDn">
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <MaxHitPoints>10</MaxHitPoints>
-      <Size>140</Size>
-      <ShadowSize>0</ShadowSize>
-      <Flying/>
+      <Size>0</Size>
    </Object>
    <Object type="0x0e12" id="FireMakerLf">
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <MaxHitPoints>10</MaxHitPoints>
-      <Size>140</Size>
-      <ShadowSize>0</ShadowSize>
-      <Flying/>
+      <Size>0</Size>
    </Object>
    <Object type="0x0e11" id="FireMakerRt">
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <MaxHitPoints>10</MaxHitPoints>
-      <Size>140</Size>
-      <ShadowSize>0</ShadowSize>
-      <Flying/>
+      <Size>0</Size>
    </Object>
    <Object type="0x0e10" id="TestFire">
       <Class>Character</Class>
-      <Enemy/>
       <RemoteTexture>
          <Instance>testing</Instance>
          <Id>4759176</Id>
@@ -475,7 +457,6 @@
             </Texture>
          </Frame>
       </Animation>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>140</Size>
       <ShadowSize>0</ShadowSize>
       <Flying/>
@@ -495,7 +476,6 @@
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>0</Size>
    </Object>
    <Object type="0x0e0b" id="Sparkle">

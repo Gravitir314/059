@@ -31,6 +31,7 @@ package com.company.assembleegameclient.map
 			protected var allowPlayerTeleport_:Boolean;
 			public var background_:Background = null;
 			public var map_:Sprite = new Sprite();
+			public var mapHitArea:Sprite;
 			public var hurtOverlay_:HurtOverlay = null;
 			public var gradientOverlay_:GradientOverlay = null;
 			public var mapOverlay_:MapOverlay = null;
@@ -56,6 +57,10 @@ package com.company.assembleegameclient.map
 
 
 			public function setProps(_arg_1:int, _arg_2:int, _arg_3:String, _arg_4:int, _arg_5:Boolean, _arg_6:Boolean):void
+			{
+			}
+
+			public function setHitAreaProps(_arg_1:int, _arg_2:int):void
 			{
 			}
 

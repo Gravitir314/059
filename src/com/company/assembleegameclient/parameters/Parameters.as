@@ -20,6 +20,8 @@ package com.company.assembleegameclient.parameters
 	import flash.system.Capabilities;
 	import flash.utils.Dictionary;
 
+	import kabam.rotmg.text.model.TextKey;
+
 	public class Parameters
 		{
 			// ObjectLibrary.as
@@ -904,13 +906,13 @@ package com.company.assembleegameclient.parameters
 							return;
 					}
 				}
-				setDefault("gameVersion", "X30.0.0");
-				setDefault("lastTab", "Options.Controls");
+				setDefault("gameVersion", "X31.0.0");
+				setDefault("lastTab", TextKey.OPTIONS_CONTROLS);
 				setDefault("ssdebuffBitmask", 0);
 				setDefault("ssdebuffBitmask2", 0);
 				setDefault("ccdebuffBitmask", 0);
 				setDefault("spamFilter", spamFilter);
-				setDefault("AutoLootOn", false);
+				setDefault("AutoLootOn", true);
 				setDefault("AutoHealPercentage", 99);
 				setDefault("AAOn", false);
 				setDefault("AATargetLead", true);

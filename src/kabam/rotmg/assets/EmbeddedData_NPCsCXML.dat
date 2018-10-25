@@ -11,20 +11,16 @@
       <Size>100</Size>
    </Object>
    <Object type="0x5e29" id="Halloween Bat">
-      <Enemy/>
       <Class>Character</Class>
       <AnimatedTexture>
          <File>chars8x8rEncounters</File>
          <Index>26</Index>
       </AnimatedTexture>
-      <HitSound>monster/bats_hit</HitSound>
-      <DeathSound>monster/bats_death</DeathSound>
-      <MaxHitPoints>125</MaxHitPoints>
-      <Defense>25</Defense>
       <Z>0.24</Z>
       <Flying/>
       <Size>80</Size>
       <ShadowSize>80</ShadowSize>
+      <Color>0xFF0000</Color>
    </Object>
    <Object type="0x074c" id="Nexus Turkey">
       <DisplayId>Turkey</DisplayId>
@@ -76,11 +72,8 @@
             <Index>84</Index>
          </AnimatedTexture>
       </AltTexture>
-      <HitSound>monster/slimes_death</HitSound>
-      <DeathSound>monster/flying_brain_death</DeathSound>
       <Size>140</Size>
       <ShadowSize>50</ShadowSize>
-      <Defense>10</Defense>
    </Object>
    <Object type="0x0c5a" id="Guill Hearticles">
       <Class>GameObject</Class>
@@ -135,7 +128,6 @@
       <Sound id="0">monster/oryx_death</Sound>
       <Size>140</Size>
       <ShadowSize>50</ShadowSize>
-      <Defense>10</Defense>
    </Object>
    <Object type="0xc1b" id="Guill Potion Gift">
       <Class>Character</Class>

@@ -1362,6 +1362,9 @@
       <Class>Character</Class>
       <DisplayId>Fire Bomb</DisplayId>
       <Enemy/>
+      <Exp>0</Exp>
+      <Size>100</Size>
+      <Invincible/>
       <Texture>
          <File>lofiObj3</File>
          <Index>0x45e</Index>
@@ -1484,9 +1487,6 @@
          <LifetimeMS>1500</LifetimeMS>
          <MultiHit/>
       </Projectile>
-      <MaxHitPoints>10</MaxHitPoints>
-      <Exp>0</Exp>
-      <Size>100</Size>
    </Object>
    <Object type="0x729d" id="shtrs Inferno">
       <DisplayId>Inferno</DisplayId>
@@ -1640,15 +1640,11 @@
       <DisplayId>The Cursed Crown</DisplayId>
       <Class>Character</Class>
       <Group>Stone Monster</Group>
-      <Enemy/>
       <AnimatedTexture>
          <File>chars16x16dEncounters2</File>
          <Index>82</Index>
       </AnimatedTexture>
       <Size>100</Size>
-      <MaxHitPoints>25000</MaxHitPoints>
-      <Defense>45</Defense>
-      <Exp>0</Exp>
       <AltTexture id="1">
          <AnimatedTexture>
             <File>chars16x16dEncounters2</File>

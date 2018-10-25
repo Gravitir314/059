@@ -1715,7 +1715,6 @@
       <Size>-1</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
-      <StasisImmune/>
       <Effect color="0xFFFFEF" rate="4" life="3" lifeVariance=".25" speed="0" speedVariance=".5" size="5" rise="-.6" riseVariance=".1" rangeX="5" rangeY="5">CustomParticles</Effect>
    </Object>
    <Object type="0x3cce" id="SW Portal">
@@ -2376,8 +2375,6 @@
       <StasisImmune/>
    </Object>
    <Object type="0x3d42" id="SW Room1 Gift Healer">
-      <DisplayId>Presents Healer</DisplayId>
-      <Enemy/>
       <Class>Character</Class>
       <Texture>
          <File>santaWorkshopObjects8x8</File>
@@ -2386,7 +2383,6 @@
       <Size>0</Size>
       <NoMiniMap/>
       <ShadowSize>0</ShadowSize>
-      <StasisImmune/>
    </Object>
    <Object type="0x3ceb" id="SW Gift Small R2T1">
       <DisplayId>Small Present</DisplayId>
@@ -2586,7 +2582,6 @@
    </Object>
    <Object type="0x3d43" id="SW Room2 Gift Healer">
       <DisplayId>Presents Healer</DisplayId>
-      <Enemy/>
       <Class>Character</Class>
       <Texture>
          <File>santaWorkshopObjects8x8</File>
@@ -2595,7 +2590,6 @@
       <Size>0</Size>
       <NoMiniMap/>
       <ShadowSize>0</ShadowSize>
-      <StasisImmune/>
    </Object>
    <Object type="0x3d15" id="SW Gift Small R3T1">
       <DisplayId>Small Present</DisplayId>
@@ -2795,21 +2789,16 @@
    </Object>
    <Object type="0x3d44" id="SW Room3 Gift Healer">
       <DisplayId>Presents Healer</DisplayId>
-      <Enemy/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>santaWorkshopObjects8x8</File>
          <Index>0x73</Index>
       </Texture>
       <Size>0</Size>
-      <NoMiniMap/>
-      <ShadowSize>0</ShadowSize>
-      <StasisImmune/>
    </Object>
    <Object type="0x3d3f" id="SW Screen Changer">
       <DisplayId>Screen Changer</DisplayId>
       <Class>Character</Class>
-      <Enemy/>
       <Texture>
          <File>santaWorkshopObjects16x16</File>
          <Index>0x36</Index>
@@ -2822,19 +2811,16 @@
       </AltTexture>
       <NoMiniMap/>
       <Size>100</Size>
-      <StasisImmune/>
    </Object>
    <Object type="0x3d34" id="SW Craig Anchor">
       <DisplayId>Craig The Intern</DisplayId>
       <Class>Character</Class>
-      <Enemy/>
       <Texture>
          <File>santaWorkshopObjects16x16</File>
          <Index>0x18</Index>
       </Texture>
       <NoMiniMap/>
       <Size>0</Size>
-      <StasisImmune/>
    </Object>
    <Object type="0x3d46" id="SW Pet Stasis Shot">
       <Class>Projectile</Class>
@@ -2848,6 +2834,7 @@
       <DisplayId>Pet manager</DisplayId>
       <Class>Character</Class>
       <Enemy/>
+      <Invincible/>
       <Texture>
          <File>santaWorkshopObjects8x8</File>
          <Index>0x74</Index>
@@ -2862,192 +2849,150 @@
          <LifetimeMS>5000</LifetimeMS>
          <ConditionEffect duration="6000" target="1">Stasis</ConditionEffect>
       </Projectile>
-      <StasisImmune/>
    </Object>
    <Object type="0x3d41" id="SW Clock">
       <DisplayId>Santa's Clock</DisplayId>
       <Class>Character</Class>
-      <Enemy/>
       <Texture>
          <File>santaWorkshopObjects8x8</File>
          <Index>0x70</Index>
       </Texture>
       <NoMiniMap/>
       <Size>0</Size>
-      <StasisImmune/>
    </Object>
    <Object type="0x3d47" id="SW Clock 2">
       <DisplayId>Santa's Clock</DisplayId>
       <Class>Character</Class>
-      <Enemy/>
       <Texture>
          <File>santaWorkshopObjects8x8</File>
          <Index>0x70</Index>
       </Texture>
       <NoMiniMap/>
       <Size>0</Size>
-      <StasisImmune/>
    </Object>
    <Object type="0x3d26" id="TP Tile A">
-      <DisplayId>Mysterious voice</DisplayId>
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <StasisImmune/>
    </Object>
    <Object type="0x3d27" id="TP Tile B">
-      <DisplayId>Mysterious voice</DisplayId>
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <StasisImmune/>
    </Object>
    <Object type="0x3d28" id="TP Tile C">
-      <DisplayId>Mysterious voice</DisplayId>
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <StasisImmune/>
    </Object>
    <Object type="0x3d29" id="TP Tile D">
-      <DisplayId>Mysterious voice</DisplayId>
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <StasisImmune/>
    </Object>
    <Object type="0x3d3b" id="SW Security tile A">
-      <DisplayId>Security line</DisplayId>
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <StasisImmune/>
    </Object>
    <Object type="0x3d3c" id="SW Security tile B">
-      <DisplayId>Security line</DisplayId>
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <StasisImmune/>
    </Object>
    <Object type="0x3d39" id="SW Elf">
       <DisplayId>Elf guard</DisplayId>
       <Class>Character</Class>
-      <Enemy/>
       <Texture>
          <File>santaWorkshopObjects8x8</File>
          <Index>0x0c</Index>
       </Texture>
       <Size>90</Size>
-      <StasisImmune/>
       <NoMiniMap/>
    </Object>
    <Object type="0x3d07" id="SW Tree Helper 1">
       <DisplayId>Vanilla</DisplayId>
       <Class>Character</Class>
-      <Enemy/>
       <Texture>
          <File>santaWorkshopObjects8x8</File>
          <Index>0x0d</Index>
       </Texture>
       <Size>90</Size>
-      <StasisImmune/>
       <NoMiniMap/>
    </Object>
    <Object type="0x3d08" id="SW Tree Helper 2">
       <DisplayId>Cinnamon</DisplayId>
       <Class>Character</Class>
-      <Enemy/>
       <Texture>
          <File>santaWorkshopObjects8x8</File>
          <Index>0x0e</Index>
       </Texture>
       <Size>90</Size>
-      <StasisImmune/>
       <NoMiniMap/>
    </Object>
    <Object type="0x3d35" id="SW Tree Helper 3">
       <DisplayId>Ginger</DisplayId>
       <Class>Character</Class>
-      <Enemy/>
       <Texture>
          <File>santaWorkshopObjects8x8</File>
          <Index>0x0f</Index>
       </Texture>
       <NoMiniMap/>
       <Size>90</Size>
-      <StasisImmune/>
    </Object>
    <Object type="0x3d23" id="SW Door GuardTutorial">
       <DisplayId>Blue Nutcracker</DisplayId>
       <Class>Character</Class>
-      <Enemy/>
       <Texture>
          <File>santaWorkshopObjects8x8</File>
          <Index>0x08</Index>
       </Texture>
       <Size>100</Size>
-      <StasisImmune/>
       <NoMiniMap/>
    </Object>
    <Object type="0x3d0d" id="SW Door Guard1">
       <DisplayId>Red Nutcracker</DisplayId>
       <Class>Character</Class>
-      <Enemy/>
       <Texture>
          <File>santaWorkshopObjects8x8</File>
          <Index>0x09</Index>
       </Texture>
       <NoMiniMap/>
       <Size>100</Size>
-      <StasisImmune/>
    </Object>
    <Object type="0x3d14" id="SW Door Guard2">
       <DisplayId>Green Nutcracker</DisplayId>
       <Class>Character</Class>
-      <Enemy/>
       <Texture>
          <File>santaWorkshopObjects8x8</File>
          <Index>0x0a</Index>
       </Texture>
       <NoMiniMap/>
       <Size>100</Size>
-      <StasisImmune/>
    </Object>
    <Object type="0x3d2a" id="Strange Voice">
       <DisplayId>Craig The Intern</DisplayId>
       <Class>Character</Class>
       <Enemy/>
+      <Invincible/>
       <Texture>
          <File>santaWorkshopObjects8x8</File>
          <Index>0x0b</Index>
@@ -3061,7 +3006,6 @@
          <LifetimeMS>5000</LifetimeMS>
          <ConditionEffect duration="6000" target="1">Stasis</ConditionEffect>
       </Projectile>
-      <StasisImmune/>
       <NoMiniMap/>
    </Object>
 </Objects>

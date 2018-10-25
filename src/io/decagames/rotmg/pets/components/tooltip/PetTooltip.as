@@ -2,8 +2,10 @@
 
 package io.decagames.rotmg.pets.components.tooltip
 	{
+	import com.company.assembleegameclient.objects.ObjectLibrary;
 	import com.company.assembleegameclient.ui.LineBreakDesign;
 	import com.company.assembleegameclient.ui.tooltip.ToolTip;
+	import com.company.assembleegameclient.ui.tooltip.TooltipHelper;
 
 	import flash.display.Bitmap;
 	import flash.display.Sprite;
@@ -29,6 +31,7 @@ package io.decagames.rotmg.pets.components.tooltip
 			private const titleTextField:TextFieldDisplayConcrete = PetsViewAssetFactory.returnTextfield(0xFFFFFF, 16, true);
 			private const petRarityTextField:TextFieldDisplayConcrete = PetsViewAssetFactory.returnTextfield(0xB3B3B3, 12, false);
 			private const petFamilyTextField:TextFieldDisplayConcrete = PetsViewAssetFactory.returnTextfield(0xB3B3B3, 12, false);
+			private const petProbabilityInfoField:TextFieldDisplayConcrete = PetsViewAssetFactory.returnTextfield(0xB3B3B3, 12, false);
 			private const lineBreak:LineBreakDesign = PetsViewAssetFactory.returnTooltipLineBreak();
 
 			private var petBitmap:Bitmap;
@@ -59,6 +62,30 @@ package io.decagames.rotmg.pets.components.tooltip
 				this.titleTextField.setStringBuilder(new LineBuilder().setParams(this.petVO.name));
 				this.petRarityTextField.setStringBuilder(new LineBuilder().setParams(this.petVO.rarity.rarityKey));
 				this.petFamilyTextField.setStringBuilder(new LineBuilder().setParams(PetFamilyKeys.getTranslationKey(this.petVO.family))).setColor(PetFamilyColors.getColorByFamilyKey(this.petVO.family));
+				this.petProbabilityInfoField.setHTML(true).setText(this.getProbabilityTip());
+			}
+
+			private function getProbabilityTip():String
+			{
+				var _local_1:XML = ObjectLibrary.xmlLibrary_[this.petVO.getType()];
+				if (_local_1 == null)
+				{
+					return ("");
+				}
+				if (_local_1.hasOwnProperty("NoHatchOrFuse"))
+				{
+					return (this.makeProbabilityTipLine("not", TooltipHelper.WORSE_COLOR));
+				}
+				if (_local_1.hasOwnProperty("BasicPet"))
+				{
+					return (this.makeProbabilityTipLine("commonly", TooltipHelper.BETTER_COLOR));
+				}
+				return (this.makeProbabilityTipLine("rarely", TooltipHelper.NO_DIFF_COLOR));
+			}
+
+			private function makeProbabilityTipLine(_arg_1:String, _arg_2:uint):String
+			{
+				return (("Can " + TooltipHelper.wrapInFontTag(_arg_1, ("#" + _arg_2.toString(16)))) + " be obtained\nthrough hatching or fusion.");
 			}
 
 			private function addChildren():void
@@ -70,6 +97,7 @@ package io.decagames.rotmg.pets.components.tooltip
 				this.petsContent.addChild(this.titleTextField);
 				this.petsContent.addChild(this.petRarityTextField);
 				this.petsContent.addChild(this.petFamilyTextField);
+				this.petsContent.addChild(this.petProbabilityInfoField);
 				if (this.hasAbilities)
 				{
 					this.petsContent.addChild(this.lineBreak);
@@ -107,7 +135,7 @@ package io.decagames.rotmg.pets.components.tooltip
 				var _local_1:UIGrid;
 				_local_1 = new PetStatsGrid(178, this.petVO);
 				this.petsContent.addChild(_local_1);
-				_local_1.y = 76;
+				_local_1.y = 104;
 				_local_1.x = 2;
 			}
 
@@ -129,6 +157,8 @@ package io.decagames.rotmg.pets.components.tooltip
 				this.petRarityTextField.y = 35;
 				this.petFamilyTextField.x = 55;
 				this.petFamilyTextField.y = 48;
+				this.petProbabilityInfoField.x = 0;
+				this.petProbabilityInfoField.y = 54;
 			}
 
 

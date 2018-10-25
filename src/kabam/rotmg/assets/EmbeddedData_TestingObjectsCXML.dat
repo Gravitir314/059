@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <Objects>
+   <Object type="0x710c" id="tots">
+      <Class>Equipment</Class>
+      <Item/>
+      <DisplayId>Totalia Summoner</DisplayId>
+      <AnimatedTexture>
+         <File>chars16x16dEncounters</File>
+         <Index>37</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Summons Totalia.</Description>
+      <Sound>use_key</Sound>
+      <Soulbound/>
+      <Activate id="Totalia the Malevolent" cooldown="30">Create</Activate>
+      <feedPower>200</feedPower>
+      <BagType>8</BagType>
+      <InvUse/>
+   </Object>
    <Object type="0x1aa8" id="frpk">
       <Class>Equipment</Class>
       <Item/>
@@ -50,6 +67,118 @@
       <Sound>use_key</Sound>
       <Soulbound/>
       <Activate id="TG">Create</Activate>
+      <feedPower>200</feedPower>
+      <BagType>8</BagType>
+      <Track/>
+      <InvUse/>
+   </Object>
+   <Object type="0x50d" id="GH1 Portal">
+      <Class>Portal</Class>
+      <IntergamePortal/>
+      <DisplayId>Guild Hall 1 Portal</DisplayId>
+      <DungeonName>Guild Hall</DungeonName>
+      <Texture>
+         <File>lofiEnvironment2</File>
+         <Index>0x54</Index>
+      </Texture>
+   </Object>
+   <Object type="0x608" id="GH1 Key">
+      <Class>Equipment</Class>
+      <Item/>
+      <DisplayId>Guild Hall 1 Key</DisplayId>
+      <Texture>
+         <File>lofiObj</File>
+         <Index>0x22</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A key which opens an entrance to Guild Hall. For testing purposes.</Description>
+      <Sound>use_key</Sound>
+      <Soulbound/>
+      <Activate id="GH1 Portal">CreatePortal</Activate>
+      <feedPower>200</feedPower>
+      <BagType>8</BagType>
+      <Track/>
+      <InvUse/>
+   </Object>
+   <Object type="0x611" id="GH2 Portal">
+      <Class>Portal</Class>
+      <IntergamePortal/>
+      <DisplayId>Guild Hall 2 Portal</DisplayId>
+      <DungeonName>Guild Hall 2</DungeonName>
+      <Texture>
+         <File>lofiEnvironment2</File>
+         <Index>0x54</Index>
+      </Texture>
+   </Object>
+   <Object type="0x61b" id="GH2 Key">
+      <Class>Equipment</Class>
+      <Item/>
+      <DisplayId>Guild Hall 2 Key</DisplayId>
+      <Texture>
+         <File>lofiObj</File>
+         <Index>0x22</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A key which opens an entrance to Guild Hall 2. For testing purposes.</Description>
+      <Sound>use_key</Sound>
+      <Soulbound/>
+      <Activate id="GH2 Portal">CreatePortal</Activate>
+      <feedPower>200</feedPower>
+      <BagType>8</BagType>
+      <Track/>
+      <InvUse/>
+   </Object>
+   <Object type="0x621" id="GH3 Portal">
+      <Class>Portal</Class>
+      <IntergamePortal/>
+      <DisplayId>Guild Hall 3 Portal</DisplayId>
+      <DungeonName>Guild Hall 3</DungeonName>
+      <Texture>
+         <File>lofiEnvironment2</File>
+         <Index>0x54</Index>
+      </Texture>
+   </Object>
+   <Object type="0x630" id="GH3 Key">
+      <Class>Equipment</Class>
+      <Item/>
+      <DisplayId>Guild Hall 3 Key</DisplayId>
+      <Texture>
+         <File>lofiObj</File>
+         <Index>0x22</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A key which opens an entrance to Guild Hall 3. For testing purposes.</Description>
+      <Sound>use_key</Sound>
+      <Soulbound/>
+      <Activate id="GH3 Portal">CreatePortal</Activate>
+      <feedPower>200</feedPower>
+      <BagType>8</BagType>
+      <Track/>
+      <InvUse/>
+   </Object>
+   <Object type="0x627" id="GH4 Portal">
+      <Class>Portal</Class>
+      <IntergamePortal/>
+      <DisplayId>Guild Hall 4 Portal</DisplayId>
+      <DungeonName>Guild Hall 4</DungeonName>
+      <Texture>
+         <File>lofiEnvironment2</File>
+         <Index>0x54</Index>
+      </Texture>
+   </Object>
+   <Object type="0x628" id="GH4 Key">
+      <Class>Equipment</Class>
+      <Item/>
+      <DisplayId>Guild Hall 4 Key</DisplayId>
+      <Texture>
+         <File>lofiObj</File>
+         <Index>0x22</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A key which opens an entrance to Guild Hall 4. For testing purposes.</Description>
+      <Sound>use_key</Sound>
+      <Soulbound/>
+      <Activate id="GH4 Portal">CreatePortal</Activate>
       <feedPower>200</feedPower>
       <BagType>8</BagType>
       <Track/>
@@ -132,6 +261,19 @@
          <Index>0x172</Index>
       </Texture>
    </Object>
+   <Object type="0x2199" id="Event Item Gift 1">
+      <Class>Character</Class>
+      <StasisImmune/>
+      <Enemy/>
+      <NoMiniMap/>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Exp>0</Exp>
+      <Size>80</Size>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x172</Index>
+      </Texture>
+   </Object>
    <Object type="0xb03" id="Egg Gift 1">
       <Class>Character</Class>
       <StasisImmune/>
@@ -185,15 +327,12 @@
       </Texture>
    </Object>
    <Object type="0x64e" id="Key Spawner">
-      <Class>Character</Class>
-      <Enemy/>
-      <NoMiniMap/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
       <Size>0</Size>
-      <MaxHitPoints>50000</MaxHitPoints>
    </Object>
    <Object type="0x66c" id="Key Dropper 1">
       <Class>Character</Class>
@@ -277,8 +416,6 @@
       <Class>Character</Class>
       <NoMiniMap/>
       <Size>90</Size>
-      <Enemy/>
-      <MaxHitPoints>50000</MaxHitPoints>
       <Texture>
          <File>lofiEnvironment3</File>
          <Index>0x22</Index>
@@ -317,114 +454,6 @@
          <ConditionEffect duration="20" target="1">Stasis</ConditionEffect>
          <MultiHit/>
       </Projectile>
-   </Object>
-   <Object type="0x50d" id="GH1 Portal">
-      <Class>Portal</Class>
-      <IntergamePortal/>
-      <DisplayId>Guild Hall 1 Portal</DisplayId>
-      <DungeonName>Guild Hall</DungeonName>
-      <Texture>
-         <File>lofiEnvironment2</File>
-         <Index>0x54</Index>
-      </Texture>
-   </Object>
-   <Object type="0x608" id="GH1 Key">
-      <Class>Equipment</Class>
-      <Item/>
-      <DisplayId>Guild Hall 1 Key</DisplayId>
-      <Texture>
-         <File>lofiObj</File>
-         <Index>0x22</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to Guild Hall. For testing purposes.</Description>
-      <Sound>use_key</Sound>
-      <Consumable/>
-      <Soulbound/>
-      <Activate id="GH1 Portal">Create</Activate>
-      <feedPower>260</feedPower>
-      <Track/>
-   </Object>
-   <Object type="0x611" id="GH2 Portal">
-      <Class>Portal</Class>
-      <IntergamePortal/>
-      <DisplayId>Guild Hall 2 Portal</DisplayId>
-      <DungeonName>Guild Hall 2</DungeonName>
-      <Texture>
-         <File>lofiEnvironment2</File>
-         <Index>0x54</Index>
-      </Texture>
-   </Object>
-   <Object type="0x61b" id="GH2 Key">
-      <Class>Equipment</Class>
-      <Item/>
-      <DisplayId>Guild Hall 2 Key</DisplayId>
-      <Texture>
-         <File>lofiObj</File>
-         <Index>0x22</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to Guild Hall 2. For testing purposes.</Description>
-      <Sound>use_key</Sound>
-      <Consumable/>
-      <Soulbound/>
-      <Activate id="GH2 Portal">Create</Activate>
-      <feedPower>260</feedPower>
-      <Track/>
-   </Object>
-   <Object type="0x621" id="GH3 Portal">
-      <Class>Portal</Class>
-      <IntergamePortal/>
-      <DisplayId>Guild Hall 3 Portal</DisplayId>
-      <DungeonName>Guild Hall 3</DungeonName>
-      <Texture>
-         <File>lofiEnvironment2</File>
-         <Index>0x54</Index>
-      </Texture>
-   </Object>
-   <Object type="0x630" id="GH3 Key">
-      <Class>Equipment</Class>
-      <Item/>
-      <DisplayId>Guild Hall 3 Key</DisplayId>
-      <Texture>
-         <File>lofiObj</File>
-         <Index>0x22</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to Guild Hall 3. For testing purposes.</Description>
-      <Sound>use_key</Sound>
-      <Consumable/>
-      <Soulbound/>
-      <Activate id="GH3 Portal">Create</Activate>
-      <feedPower>260</feedPower>
-      <Track/>
-   </Object>
-   <Object type="0x627" id="GH4 Portal">
-      <Class>Portal</Class>
-      <IntergamePortal/>
-      <DisplayId>Guild Hall 4 Portal</DisplayId>
-      <DungeonName>Guild Hall 4</DungeonName>
-      <Texture>
-         <File>lofiEnvironment2</File>
-         <Index>0x54</Index>
-      </Texture>
-   </Object>
-   <Object type="0x628" id="GH4 Key">
-      <Class>Equipment</Class>
-      <Item/>
-      <DisplayId>Guild Hall 4 Key</DisplayId>
-      <Texture>
-         <File>lofiObj</File>
-         <Index>0x22</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to Guild Hall 4. For testing purposes.</Description>
-      <Sound>use_key</Sound>
-      <Consumable/>
-      <Soulbound/>
-      <Activate id="GH4 Portal">Create</Activate>
-      <feedPower>260</feedPower>
-      <Track/>
    </Object>
    <Object type="0x023b" id="Test Chicken">
       <Group>Test Chickens</Group>
@@ -619,22 +648,20 @@
       <Exp>200000</Exp>
    </Object>
    <Object type="0x217" id="Lvl20 Chicken Spawner">
-      <Class>Character</Class>
-      <NoMiniMap/>
-      <Size>90</Size>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
+      <Size>0</Size>
    </Object>
    <Object type="0x219" id="Fame Chicken Spawner">
-      <Class>Character</Class>
-      <NoMiniMap/>
-      <Size>90</Size>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
+      <Size>0</Size>
    </Object>
    <Object type="0x203" id="Testing Gift Ring">
       <Group>Testing Gifts</Group>
@@ -1158,6 +1185,22 @@
       <DeathSound>player/rogue_death</DeathSound>
       <MaxHitPoints>100000</MaxHitPoints>
    </Object>
+   <Object type="0x1903" id="Testing Gift Samurai">
+      <Group>Testing Gifts Class</Group>
+      <Class>Character</Class>
+      <StasisImmune/>
+      <Enemy/>
+      <NoMiniMap/>
+      <Exp>0</Exp>
+      <Size>80</Size>
+      <AnimatedTexture>
+         <File>players</File>
+         <Index>14</Index>
+      </AnimatedTexture>
+      <HitSound>player/warrior_hit</HitSound>
+      <DeathSound>player/warrior_death</DeathSound>
+      <MaxHitPoints>100000</MaxHitPoints>
+   </Object>
    <Object type="0x699" id="Testing Gift Cloak">
       <Group>Testing Gifts Ability</Group>
       <Class>Character</Class>
@@ -1354,6 +1397,20 @@
          <Index>0x231</Index>
       </Texture>
    </Object>
+   <Object type="0x1902" id="Testing Gift Wakizashi">
+      <Group>Testing Gifts Ability</Group>
+      <Class>Character</Class>
+      <StasisImmune/>
+      <Enemy/>
+      <NoMiniMap/>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Exp>0</Exp>
+      <Size>80</Size>
+      <Texture>
+         <File>lofiObj6</File>
+         <Index>0xe6</Index>
+      </Texture>
+   </Object>
    <Object type="0x154" id="Testing Gift ST Oryx">
       <Group>Testing Gifts ST</Group>
       <Class>Character</Class>
@@ -1522,18 +1579,18 @@
          <Index>18</Index>
       </AnimatedTexture>
    </Object>
-   <Object type="0x54e" id="Testing Gift Silex">
-      <Group>Testing Gifts Armor</Group>
+   <Object type="0x54e" id="Testing Gift ST Akuma">
+      <Group>Testing Gifts ST</Group>
       <Class>Character</Class>
       <StasisImmune/>
       <Enemy/>
       <NoMiniMap/>
       <MaxHitPoints>100</MaxHitPoints>
       <Exp>0</Exp>
-      <Size>160</Size>
+      <Size>40</Size>
       <AnimatedTexture>
          <File>playerskins16</File>
-         <Index>13</Index>
+         <Index>20</Index>
       </AnimatedTexture>
    </Object>
 </Objects>

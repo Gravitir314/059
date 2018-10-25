@@ -2,6 +2,8 @@
 
 package io.decagames.rotmg.pets.data.vo
 	{
+	import com.company.assembleegameclient.objects.ObjectLibrary;
+
 	import io.decagames.rotmg.pets.data.rarity.PetRarityEnum;
 	import io.decagames.rotmg.pets.data.skin.PetSkinRenderer;
 
@@ -96,6 +98,11 @@ package io.decagames.rotmg.pets.data.vo
 			public function getID():int
 			{
 				return (-1);
+			}
+
+			public function getType():int
+			{
+				return (ObjectLibrary.petSkinIdToPetType_[ObjectLibrary.getIdFromType(this.skinType)]);
 			}
 
 			public function get isNew():Boolean

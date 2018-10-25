@@ -1,52 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <Objects>
-   <Object type="0x20c3" id="Aether Trap">
-      <Class>Character</Class>
-      <HitSound>monster/dark_elves_hit</HitSound>
-      <DeathSound>monster/dark_elves_death</DeathSound>
-      <Size>0</Size>
-      <ShadowSize>100</ShadowSize>
-      <MaxHitPoints>15000</MaxHitPoints>
-      <Defense>65</Defense>
-      <StasisImmune/>
-      <StunImmune/>
-      <ParalyzeImmune/>
-      <Texture>
-         <File>mountainTempleObjects16x16</File>
-         <Index>0x60</Index>
-      </Texture>
-      <AltTexture id="1">
-         <Texture>
-            <File>mountainTempleObjects16x16</File>
-            <Index>0x63</Index>
-         </Texture>
-      </AltTexture>
-      <AltTexture id="2">
-         <Texture>
-            <File>mountainTempleObjects16x16</File>
-            <Index>0x64</Index>
-         </Texture>
-      </AltTexture>
-      <AltTexture id="3">
-         <Texture>
-            <File>mountainTempleObjects16x16</File>
-            <Index>0x65</Index>
-         </Texture>
-      </AltTexture>
-      <AltTexture id="4">
-         <Texture>
-            <File>mountainTempleObjects16x16</File>
-            <Index>0x66</Index>
-         </Texture>
-      </AltTexture>
-      <AltTexture id="5">
-         <Texture>
-            <File>mountainTempleObjects16x16</File>
-            <Index>0x67</Index>
-         </Texture>
-      </AltTexture>
-   </Object>
    <Object type="0x7002" id="Daichi Room Wall">
       <Class>Wall</Class>
       <Top>
@@ -68,41 +22,21 @@
       <BlocksSight/>
    </Object>
    <Object type="0x7000" id="Daichi Door helper">
-      <Enemy/>
-      <NoMiniMap/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <HitSound>monster/greater_demons_hit</HitSound>
-      <DeathSound>monster/greater_demons_death</DeathSound>
-      <Size>1</Size>
-      <MaxHitPoints>75000</MaxHitPoints>
-      <Defense>12</Defense>
-      <Flying/>
-      <StasisImmune/>
-      <StunImmune/>
-      <ParalyzeImmune/>
+      <Size>0</Size>
    </Object>
    <Object type="0x7004" id="Troom helper">
       <DisplayId>Secret Mechanism</DisplayId>
-      <Enemy/>
-      <NoMiniMap/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <HitSound>monster/greater_demons_hit</HitSound>
-      <DeathSound>monster/greater_demons_death</DeathSound>
-      <Size>1</Size>
-      <MaxHitPoints>75000</MaxHitPoints>
-      <Defense>12</Defense>
-      <Flying/>
-      <StasisImmune/>
-      <StunImmune/>
-      <ParalyzeImmune/>
+      <Size>0</Size>
    </Object>
    <Object type="0x7001" id="Lantern Opener">
       <Enemy/>
@@ -123,7 +57,6 @@
       <ParalyzeImmune/>
    </Object>
    <Object type="0x7003" id="Lantern On">
-      <Enemy/>
       <NoMiniMap/>
       <Class>Character</Class>
       <Texture>
@@ -157,14 +90,7 @@
          </Frame>
       </Animation>
       <Size>120</Size>
-      <HitSound>monster/greater_demons_hit</HitSound>
-      <DeathSound>monster/greater_demons_death</DeathSound>
-      <MaxHitPoints>75000</MaxHitPoints>
-      <Defense>12</Defense>
       <Flying/>
-      <StasisImmune/>
-      <StunImmune/>
-      <ParalyzeImmune/>
    </Object>
    <Object type="0x6fff" id="MT Troom Chest">
       <DisplayId>Old Chest</DisplayId>
@@ -3248,8 +3174,7 @@
       <ShadowSize>60</ShadowSize>
       <Z>.4</Z>
       <Flying/>
-      <MaxHitPoints>200000</MaxHitPoints>
-      <Defense>99</Defense>
+      <Invincible/>
       <NoMiniMap/>
       <Projectile id="1">
          <ObjectId>Fire Elemental Bolt</ObjectId>
@@ -3305,8 +3230,7 @@
       <ShadowSize>60</ShadowSize>
       <Z>.4</Z>
       <Flying/>
-      <MaxHitPoints>200000</MaxHitPoints>
-      <Defense>99</Defense>
+      <Invincible/>
       <NoMiniMap/>
       <Projectile id="1">
          <ObjectId>Earth Elemental Bolt</ObjectId>
@@ -3362,8 +3286,7 @@
       <ShadowSize>60</ShadowSize>
       <Z>.4</Z>
       <Flying/>
-      <MaxHitPoints>200000</MaxHitPoints>
-      <Defense>99</Defense>
+      <Invincible/>
       <NoMiniMap/>
       <Projectile id="1">
          <ObjectId>Water Elemental Bolt</ObjectId>
@@ -3419,8 +3342,7 @@
       <ShadowSize>60</ShadowSize>
       <Z>.4</Z>
       <Flying/>
-      <MaxHitPoints>200000</MaxHitPoints>
-      <Defense>99</Defense>
+      <Invincible/>
       <NoMiniMap/>
       <Projectile id="1">
          <ObjectId>Air Elemental Bolt</ObjectId>
@@ -3433,50 +3355,44 @@
       </Projectile>
    </Object>
    <Object type="0xaaaf" id="altar">
-      <DisplayId>altar</DisplayId>
-      <Class>Character</Class>
-      <NoMiniMap/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <Size>100</Size>
+      <Size>0</Size>
    </Object>
    <Object type="0xaab7" id="Fire socket">
-      <DisplayId>Fire socket</DisplayId>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <Size>100</Size>
+      <Size>0</Size>
    </Object>
    <Object type="0xaab8" id="Water socket">
-      <DisplayId>Water socket</DisplayId>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <Size>100</Size>
+      <Size>0</Size>
    </Object>
    <Object type="0xaab9" id="Air socket">
-      <DisplayId>Air socket</DisplayId>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <Size>100</Size>
+      <Size>0</Size>
    </Object>
    <Object type="0xaaba" id="Earth socket">
-      <DisplayId>Air socket</DisplayId>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <Size>100</Size>
+      <Size>0</Size>
    </Object>
    <Object type="0x6fcc" id="Encounter Altar">
       <Enemy/>
@@ -3626,38 +3542,20 @@
       </Projectile>
    </Object>
    <Object type="0x6fc9" id="A helper">
-      <NoMiniMap/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <HitSound>monster/greater_demons_hit</HitSound>
-      <DeathSound>monster/greater_demons_death</DeathSound>
-      <Size>1</Size>
-      <MaxHitPoints>75000</MaxHitPoints>
-      <Defense>12</Defense>
-      <Flying/>
-      <StasisImmune/>
-      <StunImmune/>
-      <ParalyzeImmune/>
+      <Size>0</Size>
    </Object>
    <Object type="0x6fc8" id="B helper">
-      <NoMiniMap/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <HitSound>monster/greater_demons_hit</HitSound>
-      <DeathSound>monster/greater_demons_death</DeathSound>
-      <Size>1</Size>
-      <MaxHitPoints>75000</MaxHitPoints>
-      <Defense>12</Defense>
-      <Flying/>
-      <StasisImmune/>
-      <StunImmune/>
-      <ParalyzeImmune/>
+      <Size>0</Size>
    </Object>
    <Object type="0x6fc7" id="Temple Encounter">
       <Enemy/>
@@ -3667,15 +3565,8 @@
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <HitSound>monster/greater_demons_hit</HitSound>
-      <DeathSound>monster/greater_demons_death</DeathSound>
-      <Size>1</Size>
-      <MaxHitPoints>75000</MaxHitPoints>
-      <Defense>12</Defense>
-      <Flying/>
-      <StasisImmune/>
-      <StunImmune/>
-      <ParalyzeImmune/>
+      <Size>0</Size>
+      <Invincible/>
       <Encounter/>
       <Level>20</Level>
       <PerRealmMax>1</PerRealmMax>

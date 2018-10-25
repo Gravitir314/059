@@ -25,7 +25,7 @@ package io.decagames.rotmg.pets.components.petSkinSlot
 			{
 				if (this.view.skinVO)
 				{
-					this.view.addSkin(this.petIconFactory.getPetSkinTexture(this.view.skinVO, 50, this.view.skinVO.rarity.color));
+					this.view.addSkin(this.petIconFactory.getPetSkinTexture(this.view.skinVO, 40, this.view.skinVO.rarity.color));
 				}
 				if (this.view.isSkinSelectableSlot)
 				{
@@ -42,7 +42,7 @@ package io.decagames.rotmg.pets.components.petSkinSlot
 			{
 				if (!this.view.manualUpdate)
 				{
-					this.view.addSkin(((this.view.skinVO == null) ? null : this.petIconFactory.getPetSkinTexture(this.view.skinVO, 50)));
+					this.view.addSkin(((this.view.skinVO == null) ? null : this.petIconFactory.getPetSkinTexture(this.view.skinVO, 40)));
 				}
 			}
 

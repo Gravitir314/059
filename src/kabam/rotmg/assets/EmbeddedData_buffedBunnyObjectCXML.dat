@@ -386,8 +386,6 @@
       </AltTexture>
       <Size>80</Size>
       <ShadowSize>50</ShadowSize>
-      <MaxHitPoints>500</MaxHitPoints>
-      <Defense>10</Defense>
    </Object>
    <Object type="0x8a1" id="BB Bunny Girl B">
       <Class>Character</Class>
@@ -415,8 +413,6 @@
       </AltTexture>
       <Size>80</Size>
       <ShadowSize>50</ShadowSize>
-      <MaxHitPoints>500</MaxHitPoints>
-      <Defense>10</Defense>
    </Object>
    <Object type="0x8a2" id="BB Egg Basket Big">
       <Class>GameObject</Class>

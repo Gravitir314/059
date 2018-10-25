@@ -576,9 +576,9 @@
       </Texture>
       <Size>0</Size>
       <Enemy/>
-      <MaxHitPoints>90000</MaxHitPoints>
       <Exp>0</Exp>
       <EventChestBoss/>
+      <Invincible/>
    </Object>
    <Object type="0x0d3d" id="Tomb Support Statue">
       <Group>Tomb Boss Statues</Group>
@@ -1169,7 +1169,6 @@
       <DisplayId>Switch</DisplayId>
       <Group>Tomb Traps</Group>
       <Class>Character</Class>
-      <Enemy/>
       <Texture>
          <File>lofiChar28x8</File>
          <Index>0x90</Index>
@@ -1180,9 +1179,6 @@
             <Index>0x91</Index>
          </Texture>
       </AltTexture>
-      <HitSound>monster/traps_hit</HitSound>
-      <DeathSound>monster/traps_death</DeathSound>
-      <StasisImmune/>
       <Size>100</Size>
       <DrawOnGround/>
       <NoMiniMap/>
@@ -1200,6 +1196,7 @@
       <Size>100</Size>
       <DrawOnGround/>
       <NoMiniMap/>
+      <Invincible/>
    </Object>
    <Object type="0x0d39" id="Deactivated Tomb Bomb Trap">
       <Class>Character</Class>

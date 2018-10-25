@@ -2,52 +2,36 @@
 
 <Objects>
    <Object type="0x718a" id="destnex Observer 1">
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <Exp>0</Exp>
-      <StasisImmune/>
    </Object>
    <Object type="0x718b" id="destnex Observer 2">
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <Exp>0</Exp>
-      <StasisImmune/>
    </Object>
    <Object type="0x718c" id="destnex Observer 3">
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <Exp>0</Exp>
-      <StasisImmune/>
    </Object>
    <Object type="0x718d" id="destnex Observer 4">
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
       <Size>0</Size>
-      <Exp>0</Exp>
-      <StasisImmune/>
    </Object>
    <Object type="0x718e" id="Oryx the Mad God Deux">
       <DisplayId>Oryx the Mad God</DisplayId>
@@ -608,13 +592,9 @@
          <Index>44</Index>
       </AnimatedTexture>
       <Enemy/>
-      <HitSound>monster/cubes_hit</HitSound>
-      <DeathSound>monster/cubes_death</DeathSound>
-      <Defense>5</Defense>
       <Exp>0</Exp>
-      <MaxHitPoints>1000</MaxHitPoints>
       <Size>200</Size>
-      <StasisImmune/>
+      <Invincible/>
       <Projectile id="1">
          <ObjectId>Grey Spiral</ObjectId>
          <Damage>60</Damage>
@@ -779,22 +759,11 @@
       </Projectile>
    </Object>
    <Object type="0x722c" id="NM Green Dragon Shield Counter Deux">
-      <DisplayId>Abundant Shield</DisplayId>
-      <Enemy/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <Size>100</Size>
-      <MaxHitPoints>5000</MaxHitPoints>
-      <Defense>20</Defense>
-      <Projectile id="0">
-         <ObjectId>Black Missile</ObjectId>
-         <Speed>55</Speed>
-         <Damage>100</Damage>
-         <Size>100</Size>
-         <LifetimeMS>1200</LifetimeMS>
-      </Projectile>
+      <Size>0</Size>
    </Object>
 </Objects>

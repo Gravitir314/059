@@ -1,6 +1,902 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <Objects>
+   <Object type="0x5b4a" id="Halloween Haunted Event Chest">
+      <DisplayId>Event Chest</DisplayId>
+      <Class>Character</Class>
+      <Enemy/>
+      <KeepDamageRecord/>
+      <Texture>
+         <File>autumnNexusObjects16x16</File>
+         <Index>0x214</Index>
+      </Texture>
+      <Animation sync="true" prob="1" period="0.8">
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x214</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x215</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x216</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x217</Index>
+            </Texture>
+         </Frame>
+      </Animation>
+      <MaxHitPoints>60000</MaxHitPoints>
+      <Defense>0</Defense>
+      <Size>0</Size>
+      <Exp>1000</Exp>
+      <StasisImmune/>
+   </Object>
+   <Object type="0x5b46" id="Halloween Chest Helper">
+      <DisplayId>Event Chest</DisplayId>
+      <Class>Character</Class>
+      <Enemy/>
+      <KeepDamageRecord/>
+      <Texture>
+         <File>autumnNexusObjects16x16</File>
+         <Index>0x214</Index>
+      </Texture>
+      <Animation sync="true" prob="1" period="0.8">
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x214</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x215</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x216</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x217</Index>
+            </Texture>
+         </Frame>
+      </Animation>
+      <MaxHitPoints>60000</MaxHitPoints>
+      <Defense>0</Defense>
+      <Size>100</Size>
+      <Exp>1000</Exp>
+      <StasisImmune/>
+   </Object>
+   <Object type="0x5b47" id="Spooky Protector">
+      <DisplayId>Spooky</DisplayId>
+      <Group>Halloween Chest Protector</Group>
+      <Class>Character</Class>
+      <Enemy/>
+      <KeepDamageRecord/>
+      <Texture>
+         <File>invisible</File>
+         <Index>0</Index>
+      </Texture>
+      <Animation prob="1" period="0">
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d0</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d1</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d2</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d3</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d2</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d1</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e0</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e1</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e2</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e3</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e2</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e1</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f0</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f1</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f2</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f3</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f2</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f1</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f0</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f1</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f2</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f3</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f2</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f1</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f0</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f1</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f2</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f3</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f2</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f1</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e0</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e1</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e2</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e3</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e2</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e1</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d0</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d1</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d2</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d3</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d2</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d1</Index>
+            </Texture>
+         </Frame>
+      </Animation>
+      <Flying/>
+      <MaxHitPoints>15000</MaxHitPoints>
+      <Defense>0</Defense>
+      <Size>100</Size>
+      <Exp>1</Exp>
+      <StasisImmune/>
+   </Object>
+   <Object type="0x5b48" id="Pumpmkin Protector">
+      <DisplayId>Pumpmkin</DisplayId>
+      <Group>Halloween Chest Protector</Group>
+      <Class>Character</Class>
+      <Enemy/>
+      <KeepDamageRecord/>
+      <Texture>
+         <File>invisible</File>
+         <Index>0</Index>
+      </Texture>
+      <Animation prob="1" period="0">
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d4</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d5</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d6</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d7</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d6</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d5</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e4</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e5</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e6</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e7</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e6</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e5</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f4</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f5</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f6</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f7</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f6</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f5</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f4</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f5</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f6</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f7</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f6</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f5</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f4</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f5</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f6</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f7</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f6</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f5</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e4</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e5</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e6</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e7</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e6</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e5</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d4</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d5</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d6</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d7</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d6</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d5</Index>
+            </Texture>
+         </Frame>
+      </Animation>
+      <Flying/>
+      <MaxHitPoints>15000</MaxHitPoints>
+      <Defense>0</Defense>
+      <Size>100</Size>
+      <Exp>1</Exp>
+      <StasisImmune/>
+   </Object>
+   <Object type="0x5b49" id="Skull Protector">
+      <DisplayId>Skull</DisplayId>
+      <Group>Halloween Chest Protector</Group>
+      <Class>Character</Class>
+      <Enemy/>
+      <KeepDamageRecord/>
+      <Texture>
+         <File>invisible</File>
+         <Index>0</Index>
+      </Texture>
+      <Animation prob="1" period="0">
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d8</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d9</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1da</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1db</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1da</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d9</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e8</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e9</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1ea</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1eb</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1ea</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e9</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f8</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f9</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1fa</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1fb</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1fa</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f9</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f8</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f9</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1fa</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1fb</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1fa</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f9</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f8</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f9</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1fa</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1fb</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1fa</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1f9</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e8</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e9</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1ea</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1eb</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1ea</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1e9</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d8</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d9</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1da</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1db</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1da</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.2">
+            <Texture>
+               <File>autumnNexusObjects16x16</File>
+               <Index>0x1d9</Index>
+            </Texture>
+         </Frame>
+      </Animation>
+      <Flying/>
+      <Z>0</Z>
+      <MaxHitPoints>15000</MaxHitPoints>
+      <Defense>0</Defense>
+      <Size>100</Size>
+      <Exp>1</Exp>
+      <StasisImmune/>
+   </Object>
    <Object type="0x20cb" id="Shaitan Voice">
       <DisplayId>Shaitan the Advisor</DisplayId>
       <Class>Character</Class>
@@ -8,8 +904,6 @@
          <File>battleOryxObjects16x16</File>
          <Index>0x00</Index>
       </Texture>
-      <MaxHitPoints>100</MaxHitPoints>
-      <Defense>0</Defense>
       <Size>100</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
@@ -199,7 +1093,7 @@
       <StasisImmune/>
    </Object>
    <Object type="0x6fa" id="Event Chest MotMG LH Helper">
-      <DisplayId>Mysterious voice</DisplayId>
+      <DisplayId>Mysterious Voice</DisplayId>
       <Class>Character</Class>
       <Size>0</Size>
       <Texture>

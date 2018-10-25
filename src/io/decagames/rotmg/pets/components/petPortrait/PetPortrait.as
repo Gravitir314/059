@@ -79,16 +79,16 @@ package io.decagames.rotmg.pets.components.petPortrait
 				this.petRarity = new UILabel();
 				DefaultLabelFormat.petInfoLabel(this.petRarity, 0xFFFFFF);
 				addChild(this.petRarity);
-				this.petRarity.y = (_arg_3 ? 85 : 75);
+				this.petRarity.y = (_arg_3 ? 95 : 85);
 				this.petFamily = new UILabel();
 				this.contentDividerTitle = TextureParser.instance.getSliceScalingBitmap("UI", "content_divider_smalltitle_white", 320);
 				addChild(this.contentDividerTitle);
-				this.contentDividerTitle.y = ((_arg_3) ? 100 : 90);
+				this.contentDividerTitle.y = ((_arg_3) ? 110 : 100);
 				addChild(this.petFamily);
-				this.petFamily.y = ((_arg_3) ? 100 : 90);
+				this.petFamily.y = ((_arg_3) ? 110 : 100);
 				this._petSkin = new PetSkinSlot(_arg_2, false);
 				this._petSkin.x = ((_arg_1 / 2) - (40 / 2));
-				this._petSkin.y = ((this._switchable) ? 40 : 30);
+				this._petSkin.y = ((this._switchable) ? 52 : 42);
 				addChild(this._petSkin);
 				this.render();
 			}

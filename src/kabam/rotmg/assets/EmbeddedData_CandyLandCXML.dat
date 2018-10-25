@@ -220,17 +220,12 @@
       </Projectile>
    </Object>
    <Object type="0x5e43" id="Candyland Boss Spawner">
-      <Enemy/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>lofiObj3</File>
          <Index>0x289</Index>
       </Texture>
       <Size>0</Size>
-      <ShadowSize>0</ShadowSize>
-      <NoMiniMap/>
-      <MaxHitPoints>10000</MaxHitPoints>
-      <Exp>0</Exp>
    </Object>
    <Object type="0x5e42" id="Gumball Machine">
       <Class>Character</Class>
@@ -560,20 +555,14 @@
       </Projectile>
    </Object>
    <Object type="0x5e31" id="Candyland Spawner">
-      <Enemy/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>lofiObj3</File>
          <Index>0x289</Index>
       </Texture>
       <Size>0</Size>
-      <ShadowSize>0</ShadowSize>
-      <NoMiniMap/>
-      <MaxHitPoints>10000</MaxHitPoints>
-      <Exp>0</Exp>
    </Object>
    <Object type="0x5e2f" id="Butterfly">
-      <Enemy/>
       <Class>Character</Class>
       <Texture>
          <File>lofiObj3</File>
@@ -593,8 +582,6 @@
             </Texture>
          </Frame>
       </Animation>
-      <MaxHitPoints>100</MaxHitPoints>
-      <Exp>0</Exp>
       <Z>0.27</Z>
       <Flying/>
       <Size>80</Size>

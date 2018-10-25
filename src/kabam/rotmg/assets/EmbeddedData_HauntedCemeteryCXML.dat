@@ -2,49 +2,40 @@
 
 <Objects>
    <Object type="0x6010" id="Arena Dn Spawner">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <AnimatedTexture>
          <File>chars8x8rEncounters</File>
          <Index>64</Index>
       </AnimatedTexture>
-      <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>0</Size>
    </Object>
    <Object type="0x600f" id="Arena Up Spawner">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <AnimatedTexture>
          <File>chars8x8rEncounters</File>
          <Index>64</Index>
       </AnimatedTexture>
-      <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>0</Size>
    </Object>
    <Object type="0x600e" id="Arena Rt Spawner">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <AnimatedTexture>
          <File>chars8x8rEncounters</File>
          <Index>64</Index>
       </AnimatedTexture>
-      <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>0</Size>
    </Object>
    <Object type="0x600d" id="Arena Lf Spawner">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <AnimatedTexture>
          <File>chars8x8rEncounters</File>
          <Index>64</Index>
       </AnimatedTexture>
-      <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>0</Size>
    </Object>
    <Object type="0x600b" id="BattleMaster">
       <DisplayId>Ghost of Skuld</DisplayId>
       <Class>Character</Class>
-      <Enemy/>
       <AnimatedTexture>
          <File>chars16x16rEncounters</File>
          <Index>66</Index>
@@ -68,7 +59,6 @@
             <Index>0x0b</Index>
          </Texture>
       </AltTexture>
-      <MaxHitPoints>100000</MaxHitPoints>
       <Size>120</Size>
       <ShadowSize>80</ShadowSize>
       <NoMiniMap/>
@@ -83,13 +73,11 @@
       </Projectile>
    </Object>
    <Object type="0x600a" id="Skuld Portal">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <AnimatedTexture>
          <File>chars16x16rEncounters</File>
          <Index>67</Index>
       </AnimatedTexture>
-      <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>0</Size>
    </Object>
    <Object type="0x6009" id="Skuld Apparition">
@@ -164,13 +152,11 @@
       </Projectile>
    </Object>
    <Object type="0x6008" id="Skuld Summoner">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <AnimatedTexture>
          <File>chars16x16rEncounters</File>
          <Index>66</Index>
       </AnimatedTexture>
-      <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>0</Size>
    </Object>
    <Object type="0x6007" id="Flying Flame Skull">
@@ -192,9 +178,8 @@
       <Z>0.4</Z>
       <Flying/>
       <DontFaceAttacks/>
-      <MaxHitPoints>1000</MaxHitPoints>
       <Exp>45</Exp>
-      <Defense>8</Defense>
+      <Invincible/>
       <Projectile id="0">
          <ObjectId>Skull Wave</ObjectId>
          <Damage>70</Damage>
@@ -328,17 +313,12 @@
       </Projectile>
    </Object>
    <Object type="0x6002" id="Halloween Zombie Spawner">
-      <Enemy/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <AnimatedTexture>
          <File>chars8x8rEncounters</File>
          <Index>65</Index>
       </AnimatedTexture>
       <Size>0</Size>
-      <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>1000</MaxHitPoints>
-      <Defense>8</Defense>
-      <NoMiniMap/>
    </Object>
    <Object type="0x6001" id="Blue Zombie">
       <Enemy/>
@@ -363,7 +343,6 @@
       </Projectile>
    </Object>
    <Object type="0x6000" id="Zombie Rise">
-      <Enemy/>
       <Class>Character</Class>
       <Texture>
          <File>invisible</File>
@@ -450,8 +429,6 @@
       <Size>110</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
-      <MaxHitPoints>10000</MaxHitPoints>
-      <Exp>0</Exp>
    </Object>
    <Object type="0x600c" id="Mini Werewolf">
       <Group>Hallowrena</Group>
@@ -571,53 +548,40 @@
       </Projectile>
    </Object>
    <Object type="0x5e8c" id="Arena North Gate Spawner">
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <AnimatedTexture>
          <File>chars8x8rEncounters</File>
          <Index>69</Index>
       </AnimatedTexture>
-      <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>0</Size>
    </Object>
    <Object type="0x5e8d" id="Arena South Gate Spawner">
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <AnimatedTexture>
          <File>chars8x8rEncounters</File>
          <Index>69</Index>
       </AnimatedTexture>
-      <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>0</Size>
    </Object>
    <Object type="0x5e8e" id="Arena East Gate Spawner">
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <AnimatedTexture>
          <File>chars8x8rEncounters</File>
          <Index>69</Index>
       </AnimatedTexture>
-      <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>0</Size>
    </Object>
    <Object type="0x5e8f" id="Arena West Gate Spawner">
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <AnimatedTexture>
          <File>chars8x8rEncounters</File>
          <Index>69</Index>
       </AnimatedTexture>
-      <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>0</Size>
    </Object>
    <Object type="0x5e9a" id="Area 1 Controller">
       <DisplayId>Ghost of Skuld</DisplayId>
       <Class>Character</Class>
-      <Enemy/>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
@@ -648,14 +612,12 @@
          </Texture>
       </AltTexture>
       <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>125</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x5f21" id="Area 2 Controller">
       <DisplayId>Ghost of Skuld</DisplayId>
       <Class>Character</Class>
-      <Enemy/>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
@@ -686,14 +648,12 @@
          </Texture>
       </AltTexture>
       <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>125</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x5f22" id="Area 3 Controller">
       <DisplayId>Ghost of Skuld</DisplayId>
       <Class>Character</Class>
-      <Enemy/>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
@@ -724,14 +684,12 @@
          </Texture>
       </AltTexture>
       <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>125</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x5f23" id="Area 4 Controller">
       <DisplayId>Ghost of Skuld</DisplayId>
       <Class>Character</Class>
-      <Enemy/>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
@@ -743,21 +701,17 @@
          </AnimatedTexture>
       </AltTexture>
       <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>125</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x5f24" id="Area 5 Controller">
       <DisplayId>Arena Master</DisplayId>
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <NoMiniMap/>
-      <MaxHitPoints>10</MaxHitPoints>
-      <Size>0</Size>
+      <Size>-1</Size>
    </Object>
    <Object type="0x5f01" id="Arena Ghost 1">
       <DisplayId>Apparition</DisplayId>

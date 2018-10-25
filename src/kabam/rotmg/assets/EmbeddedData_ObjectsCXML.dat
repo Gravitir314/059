@@ -515,7 +515,6 @@
             <Index>0</Index>
          </Texture>
       </AltTexture>
-      <MaxHitPoints>100000</MaxHitPoints>
       <Size>0</Size>
    </Object>
    <Object type="0x7413" id="Nexus Chinese Dragon">
@@ -524,7 +523,6 @@
          <File>petsDivine</File>
          <Index>37</Index>
       </AnimatedTexture>
-      <MaxHitPoints>100000</MaxHitPoints>
       <Size>120</Size>
       <ShadowSize>60</ShadowSize>
       <Z>0.8</Z>
@@ -588,7 +586,6 @@
             </Texture>
          </Frame>
       </Animation>
-      <MaxHitPoints>100000</MaxHitPoints>
       <Size>80</Size>
       <ShadowSize>180</ShadowSize>
       <ShadowColor>0xff8271</ShadowColor>
@@ -653,7 +650,6 @@
             </Texture>
          </Frame>
       </Animation>
-      <MaxHitPoints>100000</MaxHitPoints>
       <Size>80</Size>
       <ShadowSize>100</ShadowSize>
       <ShadowColor>0xff8271</ShadowColor>

@@ -382,6 +382,9 @@ package kabam.rotmg.chat.control
 							this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Whoa, that was close! Your items almost disappeared."));
 						}
 						return (true);
+					case "/tile":
+						this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, player.square_.tileType_.toString()));
+						return (true);
 					default:
 						command = this.data.toLowerCase().match("^/realm (\\w+)");
 						if (command != null)

@@ -72,30 +72,20 @@
       </Projectile>
    </Object>
    <Object type="0x739b" id="vlntns Governor">
-      <Enemy/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <MaxHitPoints>1000</MaxHitPoints>
-      <Exp>0</Exp>
       <Size>0</Size>
-      <NoMiniMap/>
-      <StasisImmune/>
    </Object>
    <Object type="0x739c" id="vlntns Planter">
-      <Enemy/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <MaxHitPoints>1000</MaxHitPoints>
-      <Exp>0</Exp>
       <Size>0</Size>
-      <NoMiniMap/>
-      <StasisImmune/>
    </Object>
    <Object type="0x739d" id="vlntns Red">
       <DisplayId>Immaculate Red Flower</DisplayId>

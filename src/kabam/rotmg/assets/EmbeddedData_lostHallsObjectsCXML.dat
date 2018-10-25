@@ -1147,11 +1147,8 @@
       </AnimatedTexture>
       <DisplayId>Spectral Sentry</DisplayId>
       <Size>0</Size>
-      <MaxHitPoints>77000</MaxHitPoints>
-      <Defense>30</Defense>
+      <Invincible/>
       <Exp>10000</Exp>
-      <ParalyzeImmune/>
-      <StasisImmune/>
       <Projectile id="0">
          <ObjectId>Spectral Spinner Blue</ObjectId>
          <Damage>125</Damage>
@@ -1200,11 +1197,8 @@
       </AnimatedTexture>
       <DisplayId>Spectral Sentry</DisplayId>
       <Size>0</Size>
-      <MaxHitPoints>77000</MaxHitPoints>
-      <Defense>30</Defense>
       <Exp>0</Exp>
-      <ParalyzeImmune/>
-      <StasisImmune/>
+      <Invincible/>
       <Projectile id="0">
          <ObjectId>Spectral Spinner Blue</ObjectId>
          <Damage>125</Damage>
@@ -1246,6 +1240,7 @@
       <DisplayId>Lost Grenade Trap</DisplayId>
       <DrawOnGround/>
       <NoMiniMap/>
+      <Invincible/>
    </Object>
    <Object type="0xb142" id="LH Grenade Trap Disabled">
       <Class>GameObject</Class>
@@ -1279,6 +1274,7 @@
       <DisplayId>Lost Grenade Trap</DisplayId>
       <DrawOnGround/>
       <NoMiniMap/>
+      <Invincible/>
    </Object>
    <Object type="0xb145" id="LH Wall Trap E">
       <Class>Character</Class>
@@ -1291,6 +1287,7 @@
       <DisplayId>Lost Arrow Trap</DisplayId>
       <Size>0</Size>
       <ShadowSize>0</ShadowSize>
+      <Invincible/>
       <Projectile>
          <ObjectId>Black Arrow</ObjectId>
          <Speed>50</Speed>
@@ -1309,10 +1306,10 @@
          <Index>0xc2</Index>
       </Texture>
       <DisplayId>Lost Arrow Trap</DisplayId>
-      <MaxHitPoints>5000</MaxHitPoints>
       <Exp>0.0</Exp>
       <Size>0</Size>
       <ShadowSize>0</ShadowSize>
+      <Invincible/>
       <Projectile>
          <ObjectId>Black Arrow</ObjectId>
          <Speed>50</Speed>
@@ -1331,10 +1328,10 @@
          <Index>0xc2</Index>
       </Texture>
       <DisplayId>Lost Arrow Trap</DisplayId>
-      <MaxHitPoints>5000</MaxHitPoints>
       <Exp>0.0</Exp>
       <Size>0</Size>
       <ShadowSize>0</ShadowSize>
+      <Invincible/>
       <Projectile>
          <ObjectId>Black Arrow</ObjectId>
          <Speed>50</Speed>
@@ -1353,10 +1350,10 @@
          <Index>0xc2</Index>
       </Texture>
       <DisplayId>Lost Arrow Trap</DisplayId>
-      <MaxHitPoints>5000</MaxHitPoints>
       <Exp>0.0</Exp>
       <Size>0</Size>
       <ShadowSize>0</ShadowSize>
+      <Invincible/>
       <Projectile>
          <ObjectId>Black Arrow</ObjectId>
          <Speed>50</Speed>
@@ -1371,6 +1368,7 @@
       <Class>Character</Class>
       <Enemy/>
       <NoMiniMap/>
+      <Invincible/>
       <Size>140</Size>
       <ShadowSize>80</ShadowSize>
       <HitSound>monster/rocks_hit</HitSound>
@@ -1421,8 +1419,6 @@
             <Index>35</Index>
          </AnimatedTexture>
       </AltTexture>
-      <MaxHitPoints>9000</MaxHitPoints>
-      <Defense>35</Defense>
       <Exp>0</Exp>
       <Projectile id="0">
          <ObjectId>Purple Spiral</ObjectId>
@@ -1496,17 +1492,13 @@
          <ConditionEffect duration="3">Bleeding</ConditionEffect>
          <MultiHit/>
       </Projectile>
-      <StasisImmune/>
    </Object>
    <Object type="0xb14c" id="LH Marble Colossus Eye">
       <DisplayId>Eye of Marble Colossus</DisplayId>
       <Class>Character</Class>
-      <Enemy/>
       <NoMiniMap/>
       <Size>140</Size>
       <ShadowSize>80</ShadowSize>
-      <HitSound>monster/rocks_hit</HitSound>
-      <DeathSound>monster/rocks_death</DeathSound>
       <Texture>
          <File>lostHallsObjects16x16</File>
          <Index>0x32</Index>
@@ -2150,8 +2142,7 @@
       <NoMiniMap/>
       <Size>0</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>500000</MaxHitPoints>
-      <Defense>20</Defense>
+      <Invincible/>
       <Projectile id="0">
          <ObjectId>Colossal Bullet</ObjectId>
          <Damage>300</Damage>
@@ -2172,8 +2163,7 @@
       <NoMiniMap/>
       <Size>0</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>500000</MaxHitPoints>
-      <Defense>20</Defense>
+      <Invincible/>
       <Projectile id="0">
          <ObjectId>Colossal Bullet</ObjectId>
          <Damage>300</Damage>
@@ -2470,8 +2460,7 @@
             <Index>0x1e3</Index>
          </Texture>
       </AltTexture>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>10</Defense>
+      <Invincible/>
       <Z>0.2</Z>
       <Flying/>
       <Sound id="0">spell/fire_spray</Sound>
@@ -2483,7 +2472,6 @@
          <MultiHit/>
          <ArmorPiercing/>
       </Projectile>
-      <ParalyzeImmune/>
    </Object>
    <Object type="0xb036" id="LH Colossus Rock 2">
       <DisplayId>Marble Colossus Rock</DisplayId>
@@ -2500,8 +2488,7 @@
             <Index>0x1e3</Index>
          </Texture>
       </AltTexture>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>10</Defense>
+      <Invincible/>
       <Z>0.2</Z>
       <Flying/>
       <Sound id="0">spell/fire_spray</Sound>
@@ -2513,7 +2500,6 @@
          <MultiHit/>
          <ArmorPiercing/>
       </Projectile>
-      <ParalyzeImmune/>
    </Object>
    <Object type="0xb037" id="LH Colossus Rock 3">
       <DisplayId>Marble Colossus Rock</DisplayId>
@@ -2530,8 +2516,7 @@
             <Index>0x1e3</Index>
          </Texture>
       </AltTexture>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>10</Defense>
+      <Invincible/>
       <Z>0.2</Z>
       <Flying/>
       <Sound id="0">spell/fire_spray</Sound>
@@ -2543,7 +2528,6 @@
          <MultiHit/>
          <ArmorPiercing/>
       </Projectile>
-      <ParalyzeImmune/>
    </Object>
    <Object type="0xb038" id="LH Colossus Rock 4">
       <DisplayId>Marble Colossus Rock</DisplayId>
@@ -2560,8 +2544,7 @@
             <Index>0x1e3</Index>
          </Texture>
       </AltTexture>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>10</Defense>
+      <Invincible/>
       <Z>0.2</Z>
       <Flying/>
       <Sound id="0">spell/fire_spray</Sound>
@@ -2573,7 +2556,6 @@
          <MultiHit/>
          <ArmorPiercing/>
       </Projectile>
-      <ParalyzeImmune/>
    </Object>
    <Object type="0xb039" id="LH Colossus Rock 5">
       <DisplayId>Marble Colossus Rock</DisplayId>
@@ -2590,8 +2572,7 @@
             <Index>0x1e3</Index>
          </Texture>
       </AltTexture>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>10</Defense>
+      <Invincible/>
       <Z>0.2</Z>
       <Flying/>
       <Sound id="0">spell/fire_spray</Sound>
@@ -2603,7 +2584,6 @@
          <MultiHit/>
          <ArmorPiercing/>
       </Projectile>
-      <ParalyzeImmune/>
    </Object>
    <Object type="0xb03a" id="LH Colossus Rock 6">
       <DisplayId>Marble Colossus Rock</DisplayId>
@@ -2620,8 +2600,7 @@
             <Index>0x1e3</Index>
          </Texture>
       </AltTexture>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>10</Defense>
+      <Invincible/>
       <Z>0.2</Z>
       <Flying/>
       <Sound id="0">spell/fire_spray</Sound>
@@ -2633,7 +2612,6 @@
          <MultiHit/>
          <ArmorPiercing/>
       </Projectile>
-      <ParalyzeImmune/>
    </Object>
    <Object type="0xb041" id="LH Colossus Rock 7">
       <DisplayId>Marble Colossus Rock</DisplayId>
@@ -2650,8 +2628,7 @@
             <Index>0x1e3</Index>
          </Texture>
       </AltTexture>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>10</Defense>
+      <Invincible/>
       <Z>0.2</Z>
       <Flying/>
       <Sound id="0">spell/fire_spray</Sound>
@@ -2663,7 +2640,6 @@
          <MultiHit/>
          <ArmorPiercing/>
       </Projectile>
-      <ParalyzeImmune/>
    </Object>
    <Object type="0xb042" id="LH Colossus Rock 8">
       <DisplayId>Marble Colossus Rock</DisplayId>
@@ -2680,8 +2656,7 @@
             <Index>0x1e3</Index>
          </Texture>
       </AltTexture>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>10</Defense>
+      <Invincible/>
       <Z>0.2</Z>
       <Flying/>
       <Sound id="0">spell/fire_spray</Sound>
@@ -2693,7 +2668,6 @@
          <MultiHit/>
          <ArmorPiercing/>
       </Projectile>
-      <ParalyzeImmune/>
    </Object>
    <Object type="0xb043" id="LH Colossus Rock 9">
       <DisplayId>Marble Colossus Rock</DisplayId>
@@ -2710,8 +2684,7 @@
             <Index>0x1e3</Index>
          </Texture>
       </AltTexture>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>10</Defense>
+      <Invincible/>
       <Z>0.2</Z>
       <Flying/>
       <Sound id="0">spell/fire_spray</Sound>
@@ -2723,7 +2696,6 @@
          <MultiHit/>
          <ArmorPiercing/>
       </Projectile>
-      <ParalyzeImmune/>
    </Object>
    <Object type="0xb044" id="LH Colossus Rock 10">
       <DisplayId>Marble Colossus Rock</DisplayId>
@@ -2776,8 +2748,7 @@
             <Index>32</Index>
          </AnimatedTexture>
       </AltTexture>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>10</Defense>
+      <Invincible/>
       <Z>0.2</Z>
       <Flying/>
       <Projectile id="0">
@@ -2844,7 +2815,6 @@
          <ConditionEffect duration="3">Bleeding</ConditionEffect>
          <MultiHit/>
       </Projectile>
-      <ParalyzeImmune/>
    </Object>
    <Object type="0xb045" id="LH Colossus Rock 11">
       <DisplayId>Marble Colossus Rock</DisplayId>
@@ -2897,8 +2867,7 @@
             <Index>32</Index>
          </AnimatedTexture>
       </AltTexture>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>10</Defense>
+      <Invincible/>
       <Z>0.2</Z>
       <Flying/>
       <Projectile id="0">
@@ -2965,7 +2934,6 @@
          <ConditionEffect duration="3">Bleeding</ConditionEffect>
          <MultiHit/>
       </Projectile>
-      <ParalyzeImmune/>
    </Object>
    <Object type="0xb052" id="LH Colossus Rock 12">
       <DisplayId>Marble Colossus Rock</DisplayId>
@@ -3018,8 +2986,7 @@
             <Index>32</Index>
          </AnimatedTexture>
       </AltTexture>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>10</Defense>
+      <Invincible/>
       <Z>0.2</Z>
       <Flying/>
       <Projectile id="0">
@@ -3086,7 +3053,6 @@
          <ConditionEffect duration="3">Bleeding</ConditionEffect>
          <MultiHit/>
       </Projectile>
-      <ParalyzeImmune/>
    </Object>
    <Object type="0xb04e" id="LH Colossus Rock 13">
       <DisplayId>Marble Colossus Rock</DisplayId>
@@ -3139,8 +3105,7 @@
             <Index>32</Index>
          </AnimatedTexture>
       </AltTexture>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>10</Defense>
+      <Invincible/>
       <Z>0.2</Z>
       <Flying/>
       <Projectile id="0">
@@ -3207,7 +3172,6 @@
          <ConditionEffect duration="3">Bleeding</ConditionEffect>
          <MultiHit/>
       </Projectile>
-      <ParalyzeImmune/>
    </Object>
    <Object type="0xb04f" id="LH Colossus Rock 14">
       <DisplayId>Marble Colossus Rock</DisplayId>
@@ -3260,8 +3224,7 @@
             <Index>32</Index>
          </AnimatedTexture>
       </AltTexture>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>10</Defense>
+      <Invincible/>
       <Z>0.2</Z>
       <Flying/>
       <Projectile id="0">
@@ -3328,7 +3291,6 @@
          <ConditionEffect duration="3">Bleeding</ConditionEffect>
          <MultiHit/>
       </Projectile>
-      <ParalyzeImmune/>
    </Object>
    <Object type="0xb137" id="LH Marble Core 1">
       <Class>Character</Class>
@@ -4393,9 +4355,7 @@
       </Animation>
       <DisplayId>Molek</DisplayId>
       <Size>100</Size>
-      <MaxHitPoints>50000</MaxHitPoints>
-      <Defense>35</Defense>
-      <StasisImmune/>
+      <Invincible/>
       <Projectile id="0">
          <ObjectId>Invisible</ObjectId>
          <Damage>65</Damage>
@@ -8952,8 +8912,7 @@
       <DisplayId>Spectral Sentry</DisplayId>
       <Enemy/>
       <Class>Character</Class>
-      <MaxHitPoints>77000</MaxHitPoints>
-      <Defense>30</Defense>
+      <Invincible/>
       <Size>140</Size>
       <AnimatedTexture>
          <File>lostHallsChars16x16</File>

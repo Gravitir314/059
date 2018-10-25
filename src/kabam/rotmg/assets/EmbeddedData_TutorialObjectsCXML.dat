@@ -125,11 +125,12 @@
       <Size>120</Size>
    </Object>
    <Object type="0x0745" id="Nexus Explanation Obj">
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
+      <Size>0</Size>
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x0746" id="Nexus Explanation Portal">

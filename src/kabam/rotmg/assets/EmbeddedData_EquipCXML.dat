@@ -4539,7 +4539,7 @@
       <ActivateOnEquip stat="3" amount="100">IncrementStat</ActivateOnEquip>
       <BagType>6</BagType>
       <FameBonus>5</FameBonus>
-      <feedPower>700</feedPower>
+      <feedPower>900</feedPower>
       <Soulbound/>
    </Object>
    <Object type="0x7fd3" id="Ring of the Northern Light">
@@ -6965,7 +6965,6 @@
       <Activate duration="7">StasisBlast</Activate>
       <Activate effect="Speedy" duration="2" useWisMod="true">ConditionEffectSelf</Activate>
       <Activate effect="Damaging" duration="2" useWisMod="true">ConditionEffectSelf</Activate>
-      <Cooldown>5</Cooldown>
       <feedPower>750</feedPower>
       <Soulbound/>
    </Object>
@@ -18439,8 +18438,8 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
          <Index>0x8c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Temporarily transform players around you to ducky Knight</Description>
-      <Activate skin="0x0144" duration="15">GroupTransform</Activate>
+      <Description>Temporarily transform players around you to Deca mini Djinja.</Description>
+      <Activate skin="0x17f6" duration="15">GroupTransform</Activate>
       <Consumable/>
       <Soulbound/>
       <BagType>8</BagType>
@@ -18819,5 +18818,158 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       <Sound>spell/fire_nova</Sound>
       <BagType>5</BagType>
       <Consumable/>
+   </Object>
+   <Object type="0x5bde" id="KnightST2" setType="0x5be2" setName="Oryx's Battle Attires">
+      <DisplayId>Mercy's Bane</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0xc6</Index>
+      </Texture>
+      <SlotType>7</SlotType>
+      <Description>Skuld enchanted this signature armor by channeling Oryx's relentless rage into its metal plates. This aura of anger now grants the strength of unbridled fury to anyone reckless enough to wear it themselves.</Description>
+      <ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="20" amount="7">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="28" amount="7">IncrementStat</ActivateOnEquip>
+      <BagType>8</BagType>
+      <Soulbound/>
+      <FameBonus>4</FameBonus>
+      <feedPower>500</feedPower>
+   </Object>
+   <Object type="0x5bdf" id="KnightST3" setType="0x5be2" setName="Oryx's Battle Attires">
+      <DisplayId>Bloodstone Ring</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0xc7</Index>
+      </Texture>
+      <SlotType>9</SlotType>
+      <Description>It is believed that Oryx siphons a drop of blood from each hero he slays for use in this intimidating crimson ring.</Description>
+      <ActivateOnEquip stat="0" amount="120">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="21" amount="4">IncrementStat</ActivateOnEquip>
+      <BagType>8</BagType>
+      <Soulbound/>
+      <FameBonus>4</FameBonus>
+      <feedPower>500</feedPower>
+   </Object>
+   <Object type="0x5be0" id="KnightST1" setType="0x5be2" setName="Oryx's Battle Attires">
+      <DisplayId>Champion's Bastion</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0xc5</Index>
+      </Texture>
+      <SlotType>5</SlotType>
+      <Description>This almighty shield was specially designed to protect its owner from a bombardment of attacks in all directions. Although feared today, it once stood as a reminder of Oryx's glory in an era long forgotten.</Description>
+      <Sound>spell/fire_spray</Sound>
+      <Projectile>
+         <ObjectId>Knight DPS Shield</ObjectId>
+         <Speed>70</Speed>
+         <MinDamage>385</MinDamage>
+         <MaxDamage>455</MaxDamage>
+         <LifetimeMS>400</LifetimeMS>
+         <Size>80</Size>
+         <ConditionEffect duration="1.5">Stunned</ConditionEffect>
+         <MultiHit/>
+         <PassesCover/>
+         <Wavy/>
+         <ParticleTrail>0xbb0101</ParticleTrail>
+      </Projectile>
+      <ConditionEffect duration="1.5">Stunned</ConditionEffect>
+      <Usable/>
+      <MpCost>75</MpCost>
+      <Activate>Shoot</Activate>
+      <NumProjectiles>5</NumProjectiles>
+      <Activate stat="21" amount="15" duration="2.5">StatBoostSelf</Activate>
+      <BagType>8</BagType>
+      <Soulbound/>
+      <FameBonus>4</FameBonus>
+      <feedPower>500</feedPower>
+   </Object>
+   <Object type="0x5be1" id="KnightST0" setType="0x5be2" setName="Oryx's Battle Attires">
+      <DisplayId>Oryx's Greatsword</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0xc4</Index>
+      </Texture>
+      <SlotType>1</SlotType>
+      <Description>Forged eons ago in the fires of Shaitan's domain, this infamous blade has cut down countless mighty heroes throughout the ages.</Description>
+      <RateOfFire>1.1</RateOfFire>
+      <Sound>weapon/mithril_sword</Sound>
+      <Projectile>
+         <ObjectId>Knight DPS Bolt</ObjectId>
+         <Speed>70</Speed>
+         <MinDamage>185</MinDamage>
+         <MaxDamage>245</MaxDamage>
+         <LifetimeMS>400</LifetimeMS>
+         <Size>100</Size>
+         <ArmorPiercing/>
+      </Projectile>
+      <BagType>8</BagType>
+      <Soulbound/>
+      <FameBonus>4</FameBonus>
+      <feedPower>500</feedPower>
+   </Object>
+   <Object type="0x73cd" id="Suspicious Milk Bottle">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0xcb</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>"Very rich in calcium!" - Dr. Terrible.</Description>
+      <Activate skin="0x73cc" duration="30">GroupTransform</Activate>
+      <Activate stat="21" amount="5" duration="30" range="8">StatBoostAura</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+   </Object>
+   <Object type="0x73ce" id="Trap of the Blood Spirit">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0xcc</Index>
+      </Texture>
+      <SlotType>20</SlotType>
+      <Description>This artifact is the result of a forbidden spell. It is made of crystalized blood.</Description>
+      <ActivateOnEquip stat="3" amount="20">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="20" amount="3">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="22" amount="3">IncrementStat</ActivateOnEquip>
+      <Usable/>
+      <BagType>6</BagType>
+      <FameBonus>6</FameBonus>
+      <MpCost>90</MpCost>
+      <Activate radius="3" totalDamage="650" condEffect="Nothing" throwTime="0.75" sensitivity="0.65" duration="10" color="0xC7164C">Trap</Activate>
+      <feedPower>900</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x73cf" id="Orb of Terror">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0xcd</Index>
+      </Texture>
+      <SlotType>21</SlotType>
+      <Description>This orb has been imbued by Skuld with the energy of the lost souls wandering her Cemetery.</Description>
+      <ActivateOnEquip stat="20" amount="2">IncrementStat</ActivateOnEquip>
+      <ActivateOnEquip stat="28" amount="2">IncrementStat</ActivateOnEquip>
+      <Usable/>
+      <BagType>6</BagType>
+      <FameBonus>6</FameBonus>
+      <MpCost>100</MpCost>
+      <Activate duration="7">StasisBlast</Activate>
+      <Activate effect="Speedy" duration="2" useWisMod="true">ConditionEffectSelf</Activate>
+      <Activate effect="Damaging" duration="2" useWisMod="true">ConditionEffectSelf</Activate>
+      <Cooldown>5</Cooldown>
+      <feedPower>750</feedPower>
+      <Soulbound/>
    </Object>
 </Objects>

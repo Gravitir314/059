@@ -19,8 +19,6 @@ package com.company.assembleegameclient.map.partyoverlay
 
 	public class QuestArrow extends GameObjectArrow
 		{
-
-			public var map_:Map;
 			private var questArrowTween:TimelineMax;
 
 			public function QuestArrow(_arg_1:Map)

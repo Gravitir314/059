@@ -218,8 +218,6 @@
    <Object type="0x1fde" id="FR Spawn">
       <DisplayId>Permafrost Lord</DisplayId>
       <Class>GameObject</Class>
-      <Enemy/>
-      <NoMiniMap/>
       <Texture>
          <File>d3LofiObjEmbed16</File>
          <Index>0x46</Index>

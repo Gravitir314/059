@@ -19,6 +19,8 @@ package io.decagames.rotmg.pets.data.vo
 
 			function getID():int;
 
+			function getType():int;
+
 			function get name():String;
 
 			function get rarity():PetRarityEnum;

@@ -9,7 +9,6 @@
       </Texture>
       <HitSound>monster/trees_hit</HitSound>
       <DeathSound>monster/tress_death</DeathSound>
-      <MaxHitPoints>1000</MaxHitPoints>
       <MinSize>130</MinSize>
       <MaxSize>160</MaxSize>
       <SizeStep>5</SizeStep>
@@ -24,7 +23,6 @@
       </Texture>
       <HitSound>monster/trees_hit</HitSound>
       <DeathSound>monster/tress_death</DeathSound>
-      <MaxHitPoints>1000</MaxHitPoints>
       <MinSize>130</MinSize>
       <MaxSize>160</MaxSize>
       <SizeStep>5</SizeStep>
@@ -39,7 +37,6 @@
       </Texture>
       <HitSound>monster/trees_hit</HitSound>
       <DeathSound>monster/tress_death</DeathSound>
-      <MaxHitPoints>1000</MaxHitPoints>
       <MinSize>130</MinSize>
       <MaxSize>160</MaxSize>
       <SizeStep>5</SizeStep>
@@ -54,7 +51,6 @@
       </Texture>
       <HitSound>monster/trees_hit</HitSound>
       <DeathSound>monster/tress_death</DeathSound>
-      <MaxHitPoints>1000</MaxHitPoints>
       <MinSize>130</MinSize>
       <MaxSize>160</MaxSize>
       <SizeStep>5</SizeStep>
@@ -69,7 +65,6 @@
       </Texture>
       <HitSound>monster/trees_hit</HitSound>
       <DeathSound>monster/tress_death</DeathSound>
-      <MaxHitPoints>1000</MaxHitPoints>
       <MinSize>130</MinSize>
       <MaxSize>160</MaxSize>
       <SizeStep>5</SizeStep>
@@ -1969,7 +1964,6 @@
          <File>lofiEnvironment</File>
          <Index>0x49</Index>
       </Texture>
-      <MaxHitPoints>1000</MaxHitPoints>
       <Size>175</Size>
       <Static/>
       <OccupySquare/>
@@ -2074,8 +2068,8 @@
    <Object type="0x01e5" id="Guild Chronicle">
       <Class>GuildChronicle</Class>
       <Texture>
-         <File>lofiEnvironment2</File>
-         <Index>0x5c</Index>
+         <File>parasiteDenObjects8x8</File>
+         <Index>0x3b</Index>
       </Texture>
       <OccupySquare/>
       <ShadowSize>0</ShadowSize>
@@ -3099,7 +3093,6 @@
       <Size>0</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
-      <StasisImmune/>
    </Object>
    <Object type="0x1809" id="Dummy Spawner">
       <Class>GameObject</Class>
@@ -3110,7 +3103,6 @@
       <Size>0</Size>
       <ShadowSize>0</ShadowSize>
       <NoMiniMap/>
-      <StasisImmune/>
    </Object>
    <Object type="0x180a" id="Gothic Bricks">
       <Class>Wall</Class>
@@ -3223,8 +3215,6 @@
       <Static/>
       <HitSound>monster/stone_walls_hit</HitSound>
       <DeathSound>monster/stone_walls_death</DeathSound>
-      <MaxHitPoints>2200</MaxHitPoints>
-      <StasisImmune/>
    </Object>
    <Object type="0x180e" id="Gothic Window 1">
       <Class>Wall</Class>
@@ -4140,7 +4130,6 @@
       <Static/>
       <HitSound>monster/wooden_walls_hit</HitSound>
       <DeathSound>monster/stone_walls_death</DeathSound>
-      <StasisImmune/>
    </Object>
    <Object type="0x1835" id="Ghost Table">
       <Class>GameObject</Class>
@@ -7383,8 +7372,6 @@
       <Static/>
       <HitSound>monster/stone_walls_hit</HitSound>
       <DeathSound>monster/stone_walls_death</DeathSound>
-      <MaxHitPoints>2200</MaxHitPoints>
-      <StasisImmune/>
    </Object>
    <Object type="0x1933" id="Dragon Table LL">
       <Class>GameObject</Class>

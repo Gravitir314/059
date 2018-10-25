@@ -3228,7 +3228,6 @@
    <Object type="0x3B5E" id="SN FW H F">
       <Class>Character</Class>
       <NoMiniMap/>
-      <StasisImmune/>
       <Texture>
          <File>summerNexusObjects16x16</File>
          <Index>0x4f</Index>
@@ -3386,7 +3385,6 @@
    <Object type="0x3B65" id="SN Map Changer">
       <Class>Character</Class>
       <NoMiniMap/>
-      <StasisImmune/>
       <Texture>
          <File>summerNexusObjects8x8</File>
          <Index>0x0</Index>
@@ -3396,7 +3394,6 @@
    <Object type="0x3B66" id="SN Map Changer 2">
       <Class>Character</Class>
       <NoMiniMap/>
-      <StasisImmune/>
       <Texture>
          <File>summerNexusObjects8x8</File>
          <Index>0x0</Index>
@@ -3406,7 +3403,6 @@
    <Object type="0x3B67" id="SN Map Changer 3">
       <Class>Character</Class>
       <NoMiniMap/>
-      <StasisImmune/>
       <Texture>
          <File>summerNexusObjects8x8</File>
          <Index>0x0</Index>
@@ -3416,7 +3412,6 @@
    <Object type="0x3B68" id="SN Map Changer B">
       <Class>Character</Class>
       <NoMiniMap/>
-      <StasisImmune/>
       <Texture>
          <File>summerNexusObjects8x8</File>
          <Index>0x0</Index>
@@ -3485,7 +3480,6 @@
          </Texture>
       </RandomTexture>
       <NoMiniMap/>
-      <StasisImmune/>
       <Size>60</Size>
       <ShadowSize>0</ShadowSize>
       <Z>0.5</Z>
@@ -3505,7 +3499,6 @@
    <Object type="0x3B6C" id="SN drod">
       <Class>Character</Class>
       <NoMiniMap/>
-      <StasisImmune/>
       <Texture>
          <File>summerNexusObjects8x8</File>
          <Index>0x1bf</Index>
@@ -3516,7 +3509,6 @@
    <Object type="0x3B6D" id="SNS drod">
       <Class>Character</Class>
       <NoMiniMap/>
-      <StasisImmune/>
       <Texture>
          <File>summerNexusObjects8x8</File>
          <Index>0x1bf</Index>
@@ -3527,7 +3519,6 @@
    <Object type="0x3B6E" id="SNN drod">
       <Class>Character</Class>
       <NoMiniMap/>
-      <StasisImmune/>
       <Texture>
          <File>summerNexusObjects8x8</File>
          <Index>0x1bf</Index>
@@ -3538,7 +3529,6 @@
    <Object type="0x3B6F" id="SNR drod">
       <Class>Character</Class>
       <NoMiniMap/>
-      <StasisImmune/>
       <Texture>
          <File>summerNexusObjects8x8</File>
          <Index>0x1bf</Index>
@@ -3567,7 +3557,6 @@
          </Texture>
       </RandomTexture>
       <NoMiniMap/>
-      <StasisImmune/>
       <Size>60</Size>
       <ShadowSize>0</ShadowSize>
       <Z>0.5</Z>
@@ -3593,7 +3582,6 @@
          </Texture>
       </RandomTexture>
       <NoMiniMap/>
-      <StasisImmune/>
       <Size>60</Size>
       <ShadowSize>0</ShadowSize>
       <Z>0.5</Z>
@@ -3619,7 +3607,6 @@
          </Texture>
       </RandomTexture>
       <NoMiniMap/>
-      <StasisImmune/>
       <Size>60</Size>
       <ShadowSize>0</ShadowSize>
       <Z>0.5</Z>
@@ -9753,7 +9740,6 @@
    <Object type="0x3C22" id="SNN Sr S">
       <Class>Character</Class>
       <NoMiniMap/>
-      <StasisImmune/>
       <Texture>
          <File>summerNexusObjects8x8</File>
          <Index>0x237</Index>

@@ -35,6 +35,7 @@ package io.decagames.rotmg.pets.components.petItem
 			public function setPetIcon(_arg_1:PetIcon):void
 			{
 				this.petIcon = _arg_1;
+				this.petIcon.x = (this.petIcon.y = -8);
 				addChild(_arg_1);
 			}
 

@@ -51,18 +51,12 @@
       <EnemyOccupySquare/>
    </Object>
    <Object type="0x2705" id="Grinch Portal">
-      <DisplayId>Grinch Portal</DisplayId>
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <MaxHitPoints>60000</MaxHitPoints>
-      <Defense>0</Defense>
-      <Size>60</Size>
-      <Exp>0</Exp>
-      <StasisImmune/>
+      <Size>0</Size>
       <Animation sync="true" prob="1" period="1">
          <Frame time="0.2">
             <Texture>
@@ -651,22 +645,12 @@
       <ShadowSize>0</ShadowSize>
    </Object>
    <Object type="0x2029" id="Megamad Oryx Statue helper">
-      <Enemy/>
-      <NoMiniMap/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <HitSound>monster/greater_demons_hit</HitSound>
-      <DeathSound>monster/greater_demons_death</DeathSound>
-      <Size>1</Size>
-      <MaxHitPoints>75000</MaxHitPoints>
-      <Defense>12</Defense>
-      <Flying/>
-      <StasisImmune/>
-      <StunImmune/>
-      <ParalyzeImmune/>
+      <Size>0</Size>
    </Object>
    <Object type="0x202a" id="Spirit of Oryx Helper">
       <Enemy/>
@@ -687,58 +671,28 @@
       <ParalyzeImmune/>
    </Object>
    <Object type="0x1fdd" id="Brute helper">
-      <Enemy/>
-      <NoMiniMap/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <HitSound>monster/greater_demons_hit</HitSound>
-      <DeathSound>monster/greater_demons_death</DeathSound>
-      <Size>1</Size>
-      <MaxHitPoints>75000</MaxHitPoints>
-      <Defense>12</Defense>
-      <Flying/>
-      <StasisImmune/>
-      <StunImmune/>
-      <ParalyzeImmune/>
+      <Size>0</Size>
    </Object>
    <Object type="0x1fdf" id="StoneRight helper">
-      <Enemy/>
-      <NoMiniMap/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <HitSound>monster/greater_demons_hit</HitSound>
-      <DeathSound>monster/greater_demons_death</DeathSound>
-      <Size>1</Size>
-      <MaxHitPoints>75000</MaxHitPoints>
-      <Defense>12</Defense>
-      <Flying/>
-      <StasisImmune/>
-      <StunImmune/>
-      <ParalyzeImmune/>
+      <Size>0</Size>
    </Object>
    <Object type="0x1fe0" id="StoneLeft helper">
-      <Enemy/>
-      <NoMiniMap/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <HitSound>monster/greater_demons_hit</HitSound>
-      <DeathSound>monster/greater_demons_death</DeathSound>
-      <Size>1</Size>
-      <MaxHitPoints>75000</MaxHitPoints>
-      <Defense>12</Defense>
-      <Flying/>
-      <StasisImmune/>
-      <StunImmune/>
-      <ParalyzeImmune/>
+      <Size>0</Size>
    </Object>
    <Object type="0x1fdc" id="Megamad Oryx Guardian Sword">
       <DisplayId>Stone Guardian Sword</DisplayId>
@@ -1381,102 +1335,60 @@
       </Projectile>
    </Object>
    <Object type="0x1fec" id="Death Ring Anchor">
-      <Class>Character</Class>
-      <DisplayId>Death Ring Anchor</DisplayId>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <StasisImmune/>
-      <StunImmune/>
-      <ParalyzeImmune/>
-      <HitSound>monster/rocks_hit</HitSound>
-      <DeathSound>monster/rocks_death</DeathSound>
-      <MaxHitPoints>100000</MaxHitPoints>
-      <Defense>0</Defense>
-      <Exp>0</Exp>
-      <Size>20</Size>
-      <ShadowSize>100</ShadowSize>
-      <NoMiniMap/>
+      <Size>0</Size>
    </Object>
    <Object type="0x1fed" id="Oryx Marker BR">
-      <Enemy/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>lofiObjBig</File>
          <Index>0xb0</Index>
       </Texture>
-      <MaxHitPoints>1000</MaxHitPoints>
-      <Exp>0</Exp>
       <Size>0</Size>
-      <NoMiniMap/>
-      <StasisImmune/>
    </Object>
    <Object type="0x1fef" id="Oryx Marker BL">
-      <Enemy/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>lofiObjBig</File>
          <Index>0xb0</Index>
       </Texture>
-      <MaxHitPoints>1000</MaxHitPoints>
-      <Exp>0</Exp>
       <Size>0</Size>
-      <NoMiniMap/>
-      <StasisImmune/>
    </Object>
    <Object type="0x1ff0" id="Oryx Marker TL">
-      <Enemy/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>lofiObjBig</File>
          <Index>0xb0</Index>
       </Texture>
-      <MaxHitPoints>1000</MaxHitPoints>
-      <Exp>0</Exp>
       <Size>0</Size>
-      <NoMiniMap/>
-      <StasisImmune/>
    </Object>
    <Object type="0x1ff1" id="Oryx Marker TR">
-      <Enemy/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>lofiObjBig</File>
          <Index>0xb0</Index>
       </Texture>
-      <MaxHitPoints>1000</MaxHitPoints>
-      <Exp>0</Exp>
       <Size>0</Size>
-      <NoMiniMap/>
-      <StasisImmune/>
    </Object>
    <Object type="0x1ff2" id="Oryx Marker Center">
-      <Enemy/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>lofiObjBig</File>
          <Index>0xb0</Index>
       </Texture>
-      <MaxHitPoints>1000</MaxHitPoints>
-      <Exp>0</Exp>
       <Size>0</Size>
-      <NoMiniMap/>
-      <StasisImmune/>
    </Object>
    <Object type="0x1ffc" id="Oryx Leader">
-      <Enemy/>
-      <Class>Character</Class>
+      <Class>GameObject</Class>
       <Texture>
          <File>lofiObjBig</File>
          <Index>0xb0</Index>
       </Texture>
-      <MaxHitPoints>1000</MaxHitPoints>
-      <Exp>0</Exp>
       <Size>0</Size>
-      <NoMiniMap/>
-      <StasisImmune/>
    </Object>
    <Object type="0x1ffd" id="Oryx Darkness Trap">
       <Enemy/>
@@ -1569,25 +1481,16 @@
       </Projectile>
    </Object>
    <Object type="0x6faf" id="Thunder Helper">
-      <Enemy/>
       <NoMiniMap/>
-      <DisplayId>Thunder</DisplayId>
       <Class>Character</Class>
       <Group>Daichi</Group>
       <Texture>
          <File>oryxHordeObjects16x16</File>
          <Index>0x00</Index>
       </Texture>
-      <HitSound>monster/dark_elves_hit</HitSound>
-      <DeathSound>monster/dark_elves_death</DeathSound>
       <Size>100</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>100000</MaxHitPoints>
-      <Defense>35</Defense>
-      <StasisImmune/>
-      <ParalyzeImmune/>
       <Flying/>
-      <Exp>0</Exp>
       <Animation sync="true" prob="1" period="0.4">
          <Frame time="0.2">
             <Texture>
@@ -1613,16 +1516,10 @@
          <File>mountainTempleChars16x16</File>
          <Index>9</Index>
       </AnimatedTexture>
-      <HitSound>monster/dark_elves_hit</HitSound>
-      <DeathSound>monster/dark_elves_death</DeathSound>
       <Size>100</Size>
       <ShadowSize>0</ShadowSize>
-      <MaxHitPoints>100000</MaxHitPoints>
-      <Defense>35</Defense>
-      <StasisImmune/>
-      <ParalyzeImmune/>
+      <Invincible/>
       <Flying/>
-      <Exp>0</Exp>
       <Projectile id="0">
          <ObjectId>Thunderbolt</ObjectId>
          <Damage>95</Damage>
@@ -1644,6 +1541,7 @@
       <DisplayId>Earth Smash</DisplayId>
       <Class>Character</Class>
       <Enemy/>
+      <Invincible/>
       <Texture>
          <File>oryxHordeObjects8x8</File>
          <Index>0x11</Index>
@@ -1656,7 +1554,6 @@
          <LifetimeMS>1200</LifetimeMS>
          <MultiHit/>
       </Projectile>
-      <MaxHitPoints>10</MaxHitPoints>
       <Exp>0</Exp>
       <Size>100</Size>
    </Object>
@@ -1669,56 +1566,39 @@
       <Size>0</Size>
    </Object>
    <Object type="0x2010" id="OryxFireMakerUp">
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <MaxHitPoints>10</MaxHitPoints>
-      <Size>140</Size>
-      <ShadowSize>0</ShadowSize>
-      <Flying/>
+      <Size>0</Size>
    </Object>
    <Object type="0x2011" id="OryxFireMakerDn">
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <MaxHitPoints>10</MaxHitPoints>
-      <Size>140</Size>
-      <ShadowSize>0</ShadowSize>
-      <Flying/>
+      <Size>0</Size>
    </Object>
    <Object type="0x2012" id="OryxFireMakerLf">
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <MaxHitPoints>10</MaxHitPoints>
-      <Size>140</Size>
-      <ShadowSize>0</ShadowSize>
-      <Flying/>
+      <Size>0</Size>
    </Object>
    <Object type="0x2013" id="OryxFireMakerRt">
-      <Class>Character</Class>
-      <Enemy/>
+      <Class>GameObject</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <MaxHitPoints>10</MaxHitPoints>
-      <Size>140</Size>
-      <ShadowSize>0</ShadowSize>
-      <Flying/>
+      <Size>0</Size>
    </Object>
    <Object type="0x2014" id="OryxFire">
       <Class>Character</Class>
-      <Enemy/>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
@@ -1761,7 +1641,6 @@
             </Texture>
          </Frame>
       </Animation>
-      <MaxHitPoints>10</MaxHitPoints>
       <Size>140</Size>
       <ShadowSize>0</ShadowSize>
       <Flying/>

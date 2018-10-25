@@ -99,6 +99,10 @@ package com.company.assembleegameclient.map
 			public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void
 			{
 				var _local_4:SquareFace;
+				if (this.tileType_ == 18475) // TODO delete this
+				{
+					this.tileType_ = 18449;
+				}
 				if (!Parameters.ssmode && Parameters.lowCPUMode)
 				{
 					if (this.map_ != null && this.map_.player_ != null && this.props_.minDamage_ > 0)

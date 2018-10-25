@@ -684,7 +684,7 @@
       <Sound>use_key</Sound>
       <InvUse/>
       <Soulbound/>
-      <Activate id="Wine Cellar Portal">CreatePortal</Activate>
+      <Activate id="Wine Cellar Short Portal">CreatePortal</Activate>
       <feedPower>200</feedPower>
       <BagType>8</BagType>
       <Track/>
