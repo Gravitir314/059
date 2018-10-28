@@ -81,3 +81,6 @@ git clone https://github.com/Gravitir314/059.git
 - FameBot
 - New HUD
 - Custom Hotkeys
+- Toggle Skin/Dye
+- Change Skin
+- Mobs HP Counter [X/X left]
