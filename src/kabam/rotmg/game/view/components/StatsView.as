@@ -51,6 +51,14 @@ package kabam.rotmg.game.view.components
 				this.mouseDown = new NativeSignal(this, MouseEvent.MOUSE_DOWN, MouseEvent);
 			}
 
+			public function dispose():void
+			{
+				while (this.numChildren > 0)
+				{
+					this.removeChildAt(0);
+				}
+			}
+
 			private function createStats():void
 			{
 				var _local_3:StatView;

@@ -28,6 +28,7 @@ package com.company.assembleegameclient.game
 	import flash.events.Event;
 	import flash.events.MouseEvent;
 	import flash.filters.ColorMatrixFilter;
+	import flash.geom.Point;
 	import flash.geom.Vector3D;
 	import flash.system.System;
 	import flash.utils.ByteArray;
@@ -128,14 +129,16 @@ package com.company.assembleegameclient.game
 
 			private var timerCounter:TextFieldDisplayConcrete;
 			private var timerCounterStringBuilder:StaticStringBuilder;
-			private var enemyCounter:TextFieldDisplayConcrete;
-			private var enemyCounterStringBuilder:StaticStringBuilder;
 			public var stats:TextFieldDisplayConcrete;
 			public var statsStringBuilder:StaticStringBuilder;
 			public var packageOffer:BeginnersPackageButton;
 			private var lastUpdateInteractiveTime:int = 0;
 			private var lastCalcTime:int = int.MIN_VALUE;
 			public var questBar:QuestHealthBar;
+			public const nexusFountains:Point = new Point(129.5, 116.5);
+			public const nexusRealms:Point = new Point(nexusFountains.x, (nexusFountains.y - 18));
+			public const nexusHallway:Point = new Point(nexusFountains.x, (nexusFountains.y - 10));
+			public const vaultFountain:Point = new Point(56, 67.1);
 
 			public function GameSprite(_arg_1:Server, _arg_2:int, _arg_3:Boolean, _arg_4:int, _arg_5:int, _arg_6:ByteArray, _arg_7:PlayerModel, _arg_8:String, _arg_9:Boolean)
 			{
@@ -291,24 +294,6 @@ package com.company.assembleegameclient.game
 				}
 			}
 
-			private function addEnemyCounter():void
-			{
-				if (this.enemyCounter == null)
-				{
-					this.enemyCounter = new TextFieldDisplayConcrete().setSize(Parameters.data_.uiTextSize).setColor(0xFFFFFF);
-					this.enemyCounter.mouseChildren = false;
-					this.enemyCounter.mouseEnabled = false;
-					this.enemyCounter.setBold(true);
-					this.enemyCounterStringBuilder = new StaticStringBuilder("0");
-					this.enemyCounter.setStringBuilder(this.enemyCounterStringBuilder);
-					this.enemyCounter.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
-					this.enemyCounter.x = 3;
-					this.enemyCounter.y = 160;
-					addChild(this.enemyCounter);
-					stage.dispatchEvent(new Event(Event.RESIZE));
-				}
-			}
-
 			public function addStats():void
 			{
 				if (this.stats == null)
@@ -362,16 +347,6 @@ package com.company.assembleegameclient.game
 					this.timerCounter.visible = true;
 					stage.dispatchEvent(new Event(Event.RESIZE));
 				}
-			}
-
-			public function updateEnemyCounter(_arg_1:String):void
-			{
-				if (!this.enemyCounter)
-				{
-					this.addEnemyCounter();
-				}
-				this.enemyCounter.visible = true;
-				this.enemyCounter.setText(_arg_1);
 			}
 
 			private function fadeRed(_arg_1:Number):uint
@@ -492,20 +467,6 @@ package com.company.assembleegameclient.game
 					{
 						this.timerCounter.scaleX = _local_3;
 						this.timerCounter.scaleY = _local_6;
-					}
-				}
-				if (this.enemyCounter != null)
-				{
-					if (_local_2)
-					{
-						this.enemyCounter.scaleX = _local_7;
-						this.enemyCounter.scaleY = 1;
-						this.enemyCounter.y = 160;
-					}
-					else
-					{
-						this.enemyCounter.scaleX = _local_3;
-						this.enemyCounter.scaleY = _local_6;
 					}
 				}
 				if (this.questBar != null)
@@ -988,12 +949,6 @@ package com.company.assembleegameclient.game
 						this.timerCounter.visible = false;
 						this.timerCounter = null;
 					}
-					if (this.enemyCounter != null)
-					{
-						this.enemyCounter.visible = false;
-						this.enemyCounterStringBuilder = null;
-						this.enemyCounter = null;
-					}
 					Parameters.followPlayer = null;
 					gsc_.disconnect();
 					System.pauseForGCIfCollectionImminent(0);
@@ -1084,10 +1039,6 @@ package com.company.assembleegameclient.game
 							this.updateStats(_local_7);
 						}
 					}
-					if (this.enemyCounter != null && Parameters.data_.showEnemyCounter)
-					{
-						this.enemyCounter.visible = true;
-					}
 				}
 				else
 				{
@@ -1098,10 +1049,6 @@ package com.company.assembleegameclient.game
 					if (this.stats != null)
 					{
 						this.stats.visible = false;
-					}
-					if (this.enemyCounter)
-					{
-						this.enemyCounter.visible = false;
 					}
 				}
 				var _local_8:Player = map.player_;
@@ -1138,16 +1085,16 @@ package com.company.assembleegameclient.game
 								{
 									if ((_local_7 - Parameters.fameWalkSleepStart) > Parameters.fameWalkSleep_toFountainOrHall)
 									{
-										_local_8.followPos.x = (107 + (Math.cos((_local_7 << 4)) * 1.9));
-										_local_8.followPos.y = (158.5 + Math.sin((_local_7 << 2)));
+										_local_8.followPos.x = (nexusFountains.x + (Math.cos((_local_7 << 4)) * 1.9));
+										_local_8.followPos.y = (nexusFountains.y + Math.sin((_local_7 << 2)));
 									}
 								}
 								else
 								{
-									if (_local_8.y_ > (138 + (Math.sin((_local_7 / 100)) * 3)))
+									if (_local_8.y_ > ((nexusRealms.y + 7) + (Math.sin((_local_7 / 100)) * 3)))
 									{
-										_local_8.followPos.x = (107 + (Math.sin((_local_7 / 100)) * 5.6));
-										_local_8.followPos.y = (131.5 + (Math.sin((_local_7 / 100)) * 2.6));
+										_local_8.followPos.x = (nexusRealms.x + (Math.cos((_local_7 / 100)) * 1.6));
+										_local_8.followPos.y = (nexusRealms.y + (Math.sin((_local_7 / 100)) * 2.6));
 									}
 									else
 									{
@@ -1173,8 +1120,8 @@ package com.company.assembleegameclient.game
 											{
 												if (PointUtil.distanceSquaredXY(_local_8.x_, _local_8.y_, _local_8.followPos.x, _local_8.followPos.y) >= 29)
 												{
-													_local_8.followPos.x = (107 + (Math.cos((_local_7 << 4)) * 1.5));
-													_local_8.followPos.y = (148.5 + (Math.sin((_local_7 << 2)) * 5));
+													_local_8.followPos.x = (nexusHallway.x + (Math.cos((_local_7 << 4)) * 1.5));
+													_local_8.followPos.y = (nexusHallway.y + (Math.sin((_local_7 << 2)) * 5));
 												}
 												else
 												{
@@ -1187,12 +1134,13 @@ package com.company.assembleegameclient.game
 												{
 													if (PointUtil.distanceSquaredXY(_local_8.x_, _local_8.y_, _local_8.followPos.x, _local_8.followPos.y) >= 1)
 													{
-														_local_8.followPos.x = (159 + Math.cos((_local_7 << 4)));
-														_local_8.followPos.y = (131.5 + Math.sin((_local_7 << 2)));
+														_local_8.followPos.x = (nexusRealms.x + Math.cos((_local_7 << 4)));
+														_local_8.followPos.y = (nexusRealms.y + Math.sin((_local_7 << 2)));
 													}
 													else
 													{
 														Parameters.fameWalkSleep_toFountainOrHall = int.MAX_VALUE;
+														_local_8.textNotification("Pick a Realm!", 0xFF0000, 0);
 													}
 												}
 											}
@@ -1204,8 +1152,8 @@ package com.company.assembleegameclient.game
 							{
 								if (((Parameters.data_.famebotContinue == 1) && (_local_8.hp_ < _local_8.maxHP_)))
 								{
-									_local_8.followPos.x = (107 + Math.cos((_local_7 << 4)));
-									_local_8.followPos.y = 158.5;
+									_local_8.followPos.x = (nexusFountains.x + Math.cos((_local_7 << 4)));
+									_local_8.followPos.y = nexusFountains.y;
 								}
 								else
 								{
@@ -1228,18 +1176,39 @@ package com.company.assembleegameclient.game
 						}
 						else
 						{
-							if (map.name_ == Map.VAULT)
+							if (map.name_ == "Vault")
 							{
 								if (_local_8.hp_ < _local_8.maxHP_)
 								{
-									_local_8.followPos.x = 56;
-									_local_8.followPos.y = 67.1;
+									_local_8.followPos.x = vaultFountain.x;
+									_local_8.followPos.y = vaultFountain.y;
 								}
 								else
 								{
 									if (Parameters.data_.famebotContinue == 2)
 									{
-										this.dispatchEvent(Parameters.reconNexus);
+										if (Parameters.data_.disableNexus)
+										{
+											if (Parameters.fameWaitNTTime == 0)
+											{
+												Parameters.fameWaitNTTime = (60000 + RandomUtil.randomRange(-5000, 34000));
+											}
+											if (Parameters.fameWaitStartTime == 0)
+											{
+												Parameters.fameWaitStartTime = _local_7;
+											}
+											_local_8.textNotification((("Waiting " + int((Parameters.fameWaitNTTime / 1000))) + ' seconds to "/nexustutorial"'), 3158271, 0);
+											if ((_local_7 - Parameters.fameWaitStartTime) > Parameters.fameWaitNTTime)
+											{
+												this.dispatchEvent(Parameters.reconRealm);
+												Parameters.fameWaitNTTime = 0;
+												Parameters.fameWaitStartTime = 0;
+											}
+										}
+										else
+										{
+											this.dispatchEvent(Parameters.reconNexus);
+										}
 									}
 									else
 									{
@@ -1258,6 +1227,10 @@ package com.company.assembleegameclient.game
 									_local_8.followPos = _local_8.calcFollowPos();
 									lastCalcTime = _local_7;
 								}
+								if (Parameters.warnDensity)
+								{
+									_local_8.textNotification("Not enough players!", 0xFF0000, 0);
+								}
 								if ((((_local_7 - _local_8.lastTpTime_) > Parameters.data_.fameTpCdTime) && (PointUtil.distanceSquaredXY(_local_8.x_, _local_8.y_, _local_8.followPos.x, _local_8.followPos.y) > Parameters.data_.teleDistance)))
 								{
 									_local_8.lastTpTime_ = _local_7;
@@ -1274,33 +1247,15 @@ package com.company.assembleegameclient.game
 							_local_8.followPos.y = Parameters.followPlayer.y_;
 						}
 					}
-					this.drawCharacterWindow.dispatch(_local_8);
-					if (((Parameters.ssmode) || (Parameters.data_.showFameGoldRealms)))
+					if (this.creditDisplay_ != null)
 					{
-						this.creditDisplay_.visible = true;
-						if (this.evalIsNotInCombatMapArea())
-						{
-							this.rankText_.draw(_local_8.numStars_);
-							this.guildText_.draw(_local_8.guildName_, _local_8.guildRank_);
-							this.creditDisplay_.draw(_local_8.credits_, _local_8.fame_, _local_8.tokens_);
-						}
-						else
-						{
-							this.creditDisplay_.draw(_local_8.credits_, _local_8.fame_, _local_8.tokens_);
-						}
+						this.creditDisplay_.draw(_local_8.credits_, _local_8.fame_, _local_8.tokens_);
 					}
-					else
+					this.drawCharacterWindow.dispatch(_local_8);
+					if (this.evalIsNotInCombatMapArea())
 					{
-						if (this.evalIsNotInCombatMapArea())
-						{
-							this.rankText_.draw(_local_8.numStars_);
-							this.guildText_.draw(_local_8.guildName_, _local_8.guildRank_);
-							this.creditDisplay_.draw(_local_8.credits_, _local_8.fame_, _local_8.tokens_);
-						}
-						else
-						{
-							this.creditDisplay_.visible = false;
-						}
+						this.rankText_.draw(_local_8.numStars_);
+						this.guildText_.draw(_local_8.guildName_, _local_8.guildRank_);
 					}
 					if (_local_8.isPaused)
 					{

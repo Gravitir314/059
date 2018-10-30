@@ -25,9 +25,7 @@ package com.company.assembleegameclient.parameters
 	public class Parameters
 		{
 			// ObjectLibrary.as
-			// Update from X28.0.6 to X30.0.0
 			// Fix typo || clean code
-			// Finish fullscreen
 			// [GetPackagesTask.as, GetMysteryBoxesTask.as, Player.as, MapUserInput.as, GameServerConnectionConcrete.as, ParseChatMessageCommand.as]
 			public static const PORT:int = 2050;
 			public static const ALLOW_SCREENSHOT_MODE:Boolean = false;
@@ -132,7 +130,7 @@ package com.company.assembleegameclient.parameters
 			public static var emptyOffer:Vector.<Boolean> = new <Boolean>[false, false, false, false, false, false, false, false, false, false, false, false];
 			public static var recvrName:String;
 			public static var dmgCounter:Array = [];
-			public static const spamFilter:Vector.<String> = new <String>["oryxsh0p.net", "wh!tebag,net", "wh!tebag.net", "realmshop.info", "rotmgmarket.c", "rotmg.sh0p", "rotmg.shop", "rpgstash,com", "rpgstash.com", "realmitems", "reaimitems", "reaimltems", "realmltems", "realmpower,net", "reaimpower.net", "realmpower.net", "reaimpower,net", "rea!mkings.xyz", "buyrotmg.c", "lifepot. org", "-----|", "rotmg,org", "rotmgmax.me", "rotmgmax,me"];
+			public static const spamFilter:Vector.<String> = new <String>["oryxsh0p.net", "wh!tebag,net", "wh!tebag.net", "realmshop.info", "rotmgmarket.c", "rotmg.sh0p", "rotmg.shop", "rpgstash,com", "rpgstash.com", "rpgstash com", "realmitems", "reaimitems", "reaimltems", "realmltems", "realmpower,net", "reaimpower.net", "realmpower.net", "reaimpower,net", "rea!mkings.xyz", "buyrotmg.c", "lifepot. org", "-----|", "rotmg,org", "rotmgmax.me", "rotmgmax,me", "bert"];
 			public static var lockRecon:Boolean = false;
 			public static var usingPortal:Boolean;
 			public static var portalID:int;
@@ -155,6 +153,10 @@ package com.company.assembleegameclient.parameters
 			public static var timerPhaseNames:Dictionary = new Dictionary();
 			public static var oldFSmode:String = StageScaleMode.EXACT_FIT;
 			public static var realmName:String;
+			public static var warnDensity:Boolean = false;
+			public static var playerSkin:int = -1;
+			public static var PlayerTex1:int = -1;
+			public static var PlayerTex2:int = -1;
 
 			public static function setTimerPhases():void
 			{
@@ -784,7 +786,7 @@ package com.company.assembleegameclient.parameters
 				setDefaultKey("toggleProjectiles", KeyCodes.N);
 				setDefaultKey("toggleMasterParticles", KeyCodes.M);
 				setDefault("playerObjectType", 782);
-				setDefault("playMusic", true);
+				setDefault("playMusic", false);
 				setDefault("playSFX", true);
 				setDefault("playPewPew", true);
 				setDefault("centerOnPlayer", true);
@@ -906,7 +908,7 @@ package com.company.assembleegameclient.parameters
 							return;
 					}
 				}
-				setDefault("gameVersion", "X31.0.0");
+				setDefault("gameVersion", "X31.0.1");
 				setDefault("lastTab", TextKey.OPTIONS_CONTROLS);
 				setDefault("ssdebuffBitmask", 0);
 				setDefault("ssdebuffBitmask2", 0);
@@ -978,7 +980,8 @@ package com.company.assembleegameclient.parameters
 				setDefault("AAIgnore", DefaultAAIgnore);
 				setDefault("passThroughInvuln", false);
 				setDefault("autoaimAtInvulnerable", false);
-				setDefault("showDamageOnEnemy", false);
+				setDefault("showDamageAndHP", "base");
+				setDefault("showDamageAndHPColorized", false);
 				setDefault("fameBlockTP", false);
 				setDefault("fameBlockAbility", false);
 				setDefault("fameBlockCubes", false);
@@ -1077,10 +1080,7 @@ package com.company.assembleegameclient.parameters
 				setDefault("autoLootConsumables", false);
 				setDefault("autoLootSoulbound", false);
 				setDefault("autoLootEggs", 1);
-				setDefault("showFameGoldRealms", false);
-				setDefault("showEnemyCounter", true);
 				setDefault("showTimers", true);
-				setDefault("showAOGuildies", false);
 				setDefault("autoDrinkFromBags", false);
 				setDefault("cacheCharList", false);
 				setDefault("PassesCover", false);
@@ -1094,6 +1094,7 @@ package com.company.assembleegameclient.parameters
 				setDefault("followIntoPortals", false);
 				setDefault("spamPrism", false);
 				setDefault("instaNexus", true);
+				setDefault("showHighestDps", "off");
 				/*setDefaultControllerInput("ctrlEnterPortal", ControllerHandler.A_num_4);
 				setDefaultControllerInput("ctrlTeleQuest", ControllerHandler.Y_num_7);
 				setDefaultControllerInput("ctrlNexus", ControllerHandler.B_num_5);
@@ -1121,6 +1122,12 @@ package com.company.assembleegameclient.parameters
 				setDefault("notifyZombieHorde", false);
 				setDefault("notifyTurkeyGod", false);
 				setDefault("notifyBeachBum", true);
+				setDefault("showDyes", true);
+				setDefault("showSkins", true);
+				setDefault("nsetSkin", ["", -1]);
+				setDefault("customUI", false);
+				setDefault("setTex1", -1);
+				setDefault("setTex2", -1);
 			}
 
 

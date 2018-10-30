@@ -49,6 +49,7 @@ package kabam.rotmg.messaging.impl
 	import com.company.assembleegameclient.ui.dialogs.NotEnoughFameDialog;
 	import com.company.assembleegameclient.ui.panels.GuildInvitePanel;
 	import com.company.assembleegameclient.ui.panels.TradeRequestPanel;
+	import com.company.assembleegameclient.util.AnimatedChars;
 	import com.company.assembleegameclient.util.AssetLoader;
 	import com.company.assembleegameclient.util.ConditionEffect;
 	import com.company.assembleegameclient.util.Currency;
@@ -195,7 +196,6 @@ package kabam.rotmg.messaging.impl
 	import kabam.rotmg.messaging.impl.outgoing.InvDrop;
 	import kabam.rotmg.messaging.impl.outgoing.InvSwap;
 	import kabam.rotmg.messaging.impl.outgoing.JoinGuild;
-	import kabam.rotmg.messaging.impl.outgoing.KeyDown;
 	import kabam.rotmg.messaging.impl.outgoing.KeyInfoRequest;
 	import kabam.rotmg.messaging.impl.outgoing.Load;
 	import kabam.rotmg.messaging.impl.outgoing.Move;
@@ -408,7 +408,6 @@ package kabam.rotmg.messaging.impl
 				_local_1.map(REQUESTTRADE).toMessage(RequestTrade);
 				_local_1.map(CHANGETRADE).toMessage(ChangeTrade);
 				_local_1.map(ACCEPTTRADE).toMessage(AcceptTrade);
-				_local_1.map(KEY_DOWN_MSG).toMessage(KeyDown);
 				_local_1.map(CANCELTRADE).toMessage(CancelTrade);
 				_local_1.map(CHECKCREDITS).toMessage(CheckCredits);
 				_local_1.map(ESCAPE).toMessage(Escape);
@@ -754,6 +753,10 @@ package kabam.rotmg.messaging.impl
 				_arg_2.equipment_[_arg_3] = _arg_5.equipment_[_arg_6];
 				_arg_5.equipment_[_arg_6] = _local_9;
 				SoundEffectLibrary.play("inventory_move_item");
+				if (_arg_1 == this.gs_.map.player_)
+				{
+					_arg_1.recalcAllEnemyHighestDps();
+				}
 				return (true);
 			}
 
@@ -792,6 +795,10 @@ package kabam.rotmg.messaging.impl
 				serverConnection.sendMessage(_local_8);
 				this.lastInvSwapTime = _local_8.time_;
 				SoundEffectLibrary.play("inventory_move_item");
+				if (player == this.gs_.map.player_)
+				{
+					player.recalcAllEnemyHighestDps();
+				}
 				return (true);
 			}
 
@@ -805,6 +812,10 @@ package kabam.rotmg.messaging.impl
 				if (_arg_2 != PotionInventoryModel.HEALTH_POTION_SLOT && _arg_2 != PotionInventoryModel.MAGIC_POTION_SLOT)
 				{
 					_arg_1.equipment_[_arg_2] = ItemConstants.NO_ITEM;
+				}
+				if (player == this.gs_.map.player_)
+				{
+					player.recalcAllEnemyHighestDps();
 				}
 			}
 
@@ -833,6 +844,10 @@ package kabam.rotmg.messaging.impl
 				_local_8.itemUsePos_.y_ = _arg_6;
 				_local_8.useType_ = _arg_7;
 				serverConnection.sendMessage(_local_8);
+				if (player == this.gs_.map.player_)
+				{
+					player.recalcAllEnemyHighestDps();
+				}
 			}
 
 			override public function useItem_new(_arg_1:GameObject, _arg_2:int):Boolean
@@ -1158,13 +1173,6 @@ package kabam.rotmg.messaging.impl
 				_local_3.myOffer_ = _arg_1;
 				_local_3.yourOffer_ = _arg_2;
 				serverConnection.sendMessage(_local_3);
-			}
-
-			override public function keyDown(_arg_1:int):void
-			{
-				var _local_1:KeyDown = (this.messages.require(KEY_DOWN_MSG) as KeyDown);
-				_local_1.key_ = _arg_1;
-				serverConnection.sendMessage(_local_1)
 			}
 
 			override public function cancelTrade():void
@@ -1998,7 +2006,6 @@ package kabam.rotmg.messaging.impl
 				var _local_5:Merchant = (_arg_1 as Merchant);
 				var _local_6:Pet = (_arg_1 as Pet);
 				var _local_12:Boolean; // Change this
-				var _local_16:int; // Change this
 				if (_local_6)
 				{
 					this.petUpdater.updatePet(_local_6, _arg_2);
@@ -2044,6 +2051,10 @@ package kabam.rotmg.messaging.impl
 							break;
 						case StatData.SIZE_STAT:
 							_arg_1.size_ = _local_8;
+							if (_arg_1 == player && Parameters.data_.nsetSkin[0] == "playerskins16")
+							{
+								_arg_1.size_ = 70;
+							}
 							break;
 						case StatData.MAX_MP_STAT:
 							_local_4.maxMP_ = _local_8;
@@ -2116,10 +2127,40 @@ package kabam.rotmg.messaging.impl
 							}
 							break;
 						case StatData.TEX1_STAT:
-							(_local_8 >= 0 && _arg_1.setTex1(_local_8));
+							if (_local_4 == player)
+							{
+								Parameters.PlayerTex1 = _local_8;
+							}
+							if (!Parameters.data_.showDyes && !Parameters.ssmode || _local_8 <= 0)
+							{
+								_arg_1.setTex1(0);
+							}
+							else
+							{
+								_arg_1.setTex1(_local_8);
+							}
+							if (!Parameters.ssmode && _local_4 == player && Parameters.data_.setTex1 != -1)
+							{
+								_arg_1.setTex1(Parameters.data_.setTex1);
+							}
 							break;
 						case StatData.TEX2_STAT:
-							(_local_8 >= 0 && _arg_1.setTex2(_local_8));
+							if (_local_4 == player)
+							{
+								Parameters.PlayerTex2 = _local_8;
+							}
+							if (!Parameters.data_.showDyes && !Parameters.ssmode || _local_8 <= 0)
+							{
+								_arg_1.setTex2(0);
+							}
+							else
+							{
+								_arg_1.setTex2(_local_8);
+							}
+							if (!Parameters.ssmode && _local_4 == player && Parameters.data_.setTex2 != -1)
+							{
+								_arg_1.setTex1(Parameters.data_.setTex2);
+							}
 							break;
 						case StatData.MERCHANDISE_TYPE_STAT:
 							_local_5.setMerchandiseType(_local_8);
@@ -2256,7 +2297,19 @@ package kabam.rotmg.messaging.impl
 						case StatData.TEXTURE_STAT:
 							if (_local_4 != null)
 							{
+								if (_local_4 == player)
+								{
+									Parameters.playerSkin = _local_8;
+								}
+								if (!Parameters.data_.showSkins)
+								{
+									break;
+								}
 								(_local_4.skinId != _local_8 && _local_8 >= 0 && this.setPlayerSkinTemplate(_local_4, _local_8));
+								if (_local_4 == player && Parameters.data_.nsetSkin[1] != -1 && !Parameters.ssmode)
+								{
+									player.skin = AnimatedChars.getAnimatedChar(Parameters.data_.nsetSkin[0], Parameters.data_.nsetSkin[1]);
+								}
 							}
 							else
 							{
@@ -2307,7 +2360,7 @@ package kabam.rotmg.messaging.impl
 				}
 			}
 
-			private function setPlayerSkinTemplate(_arg_1:Player, _arg_2:int):void
+			override public function setPlayerSkinTemplate(_arg_1:Player, _arg_2:int):void
 			{
 				var _local_3:Reskin = (this.messages.require(RESKIN) as Reskin);
 				_local_3.skinID = _arg_2;

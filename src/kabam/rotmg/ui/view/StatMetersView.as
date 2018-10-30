@@ -29,36 +29,20 @@ package kabam.rotmg.ui.view
 				init();
 			}
 
-			public function init():void // TODO minimize this
+			public function init():void
 			{
-				if (!Parameters.ssmode && Parameters.data_.showCHbar)
-				{
-					this.expBar_ = new StatusBar(176, 16, 5931045, 0x545454, TextKey.EXP_BAR_LEVEL, false, null, false, true);
-					this.fameBar_ = new StatusBar(176, 16, 0xE25F00, 0x545454, TextKey.CURRENCY_FAME, false, null, false, true);
-					this.hpBar_ = new StatusBar(176, 16, 14693428, 0x545454, TextKey.STATUS_BAR_HEALTH_POINTS);
-					this.clientHpBar_ = new StatusBar(176, 16, 14693428, 0x545454, "CH");
-					this.mpBar_ = new StatusBar(176, 16, 6325472, 0x545454, TextKey.STATUS_BAR_MANA_POINTS);
-					this.hpBar_.y = 16;
-					this.clientHpBar_.y = 32;
-					this.mpBar_.y = 48;
-					this.expBar_.visible = true;
-					this.fameBar_.visible = false;
-					this.clientHpBar_.visible = true;
-				}
-				else
-				{
-					this.expBar_ = new StatusBar(176, 16, 5931045, 0x545454, TextKey.EXP_BAR_LEVEL, false, null, false, true);
-					this.fameBar_ = new StatusBar(176, 16, 0xE25F00, 0x545454, TextKey.CURRENCY_FAME, false, null, false, true);
-					this.hpBar_ = new StatusBar(176, 16, 14693428, 0x545454, TextKey.STATUS_BAR_HEALTH_POINTS);
-					this.clientHpBar_ = new StatusBar(176, 16, 14693428, 0x545454, "CH");
-					this.mpBar_ = new StatusBar(176, 16, 6325472, 0x545454, TextKey.STATUS_BAR_MANA_POINTS);
-					this.hpBar_.y = 24;
-					this.clientHpBar_.y = 32;
-					this.mpBar_.y = 48;
-					this.expBar_.visible = true;
-					this.fameBar_.visible = false;
-					this.clientHpBar_.visible = false;
-				}
+				var _local_1:Boolean = (!Parameters.ssmode && Parameters.data_.showCHbar);
+				this.expBar_ = new StatusBar(176, 16, 5931045, 0x545454, TextKey.EXP_BAR_LEVEL, false, null, false, true);
+				this.fameBar_ = new StatusBar(176, 16, 0xE25F00, 0x545454, TextKey.CURRENCY_FAME, false, null, false, true);
+				this.hpBar_ = new StatusBar(176, 16, 14693428, 0x545454, TextKey.STATUS_BAR_HEALTH_POINTS);
+				this.clientHpBar_ = new StatusBar(176, 16, 14693428, 0x545454, "CH");
+				this.mpBar_ = new StatusBar(176, 16, 6325472, 0x545454, TextKey.STATUS_BAR_MANA_POINTS);
+				this.hpBar_.y = (_local_1 ? 16 : 24);
+				this.clientHpBar_.y = 32;
+				this.mpBar_.y = 48;
+				this.expBar_.visible = true;
+				this.fameBar_.visible = false;
+				this.clientHpBar_.visible = _local_1;
 				addChild(this.expBar_);
 				addChild(this.fameBar_);
 				addChild(this.hpBar_);

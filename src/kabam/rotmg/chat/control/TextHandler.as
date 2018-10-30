@@ -144,17 +144,6 @@ package kabam.rotmg.chat.control
 						return;
 					}
 				}
-				else
-				{
-					if (!Parameters.ssmode)
-					{
-						if (_arg_1.text_.indexOf("Current number of") != -1)
-						{
-							this.hudModel.gameSprite.updateEnemyCounter("Enemies: " + _arg_1.text_.substring(40, (_arg_1.text_.length - 1)));
-							return;
-						}
-					}
-				}
 				if (_arg_1.recipient_ != null && this.model.player != null)
 				{
 					if (_arg_1.recipient_ != this.model.player.name_ && !this.isSpecialRecipientChat(_arg_1.recipient_))

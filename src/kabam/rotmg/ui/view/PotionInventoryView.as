@@ -29,6 +29,14 @@ package kabam.rotmg.ui.view
 				}
 			}
 
+			public function dispose():void
+			{
+				while (this.numChildren > 0)
+				{
+					this.removeChildAt(0);
+				}
+			}
+
 		}
 	}//package kabam.rotmg.ui.view
 

@@ -21,6 +21,7 @@ package kabam.rotmg.chat.control
 
 	import kabam.rotmg.account.core.Account;
 	import kabam.rotmg.appengine.api.AppEngineClient;
+	import kabam.rotmg.assets.EmbeddedData;
 	import kabam.rotmg.build.api.BuildData;
 	import kabam.rotmg.chat.model.ChatMessage;
 	import kabam.rotmg.core.model.PlayerModel;
@@ -30,6 +31,7 @@ package kabam.rotmg.chat.control
 	import kabam.rotmg.game.model.GameInitData;
 	import kabam.rotmg.game.signals.AddTextLineSignal;
 	import kabam.rotmg.game.signals.PlayGameSignal;
+	import kabam.rotmg.messaging.impl.GameServerConnection;
 	import kabam.rotmg.servers.api.Server;
 	import kabam.rotmg.servers.api.ServerModel;
 	import kabam.rotmg.text.model.TextKey;
@@ -68,6 +70,7 @@ package kabam.rotmg.chat.control
 			{
 				var command:Array;
 				var player:Player = this.hudModel.gameSprite.map.player_;
+				var gsc:GameServerConnection = this.hudModel.gameSprite.gsc_;
 				var object:GameObject;
 				var array:Array;
 				var counter:int;
@@ -347,7 +350,6 @@ package kabam.rotmg.chat.control
 							player.followPos.x = Parameters.VHSNext.x;
 							player.followPos.y = Parameters.VHSNext.y;
 							player.clearTextureCache();
-							trace(player.followPos.x, player.followPos.y);
 						}
 						return (true);
 					case "/blend":
@@ -386,6 +388,26 @@ package kabam.rotmg.chat.control
 						this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, player.square_.tileType_.toString()));
 						return (true);
 					default:
+						command = this.data.toLowerCase().match("^/skin (.+)$");
+						if (command != null)
+						{
+							if (command[1] == "none")
+							{
+								Parameters.data_.nsetSkin[0] = "";
+								Parameters.data_.nsetSkin[1] = -1;
+								Parameters.save();
+								player.size_ = 100;
+								gsc.setPlayerSkinTemplate(player, Parameters.playerSkin);
+							}
+							else
+							{
+								Parameters.data_.nsetSkin = this.findSkinIndex(command[1]);
+								Parameters.save();
+								player.size_ = 100;
+								gsc.setPlayerSkinTemplate(player, Parameters.data_.nsetSkin[1]);
+							}
+							return (true);
+						}
 						command = this.data.toLowerCase().match("^/realm (\\w+)");
 						if (command != null)
 						{
@@ -451,7 +473,7 @@ package kabam.rotmg.chat.control
 						if (command != null)
 						{
 							ROTMG.STAGE.frameRate = command[1];
-							this.addTextLine.dispatch(ChatMessage.make("", ("Framerate set to " + ROTMG.STAGE.frameRate)));
+							this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ("Framerate set to " + ROTMG.STAGE.frameRate)));
 							return (true);
 						}
 						command = this.data.match("^/goto ([0-9.]+)");
@@ -508,6 +530,60 @@ package kabam.rotmg.chat.control
 							else
 							{
 								this.hudModel.gameSprite.map.player_.textNotification((((("Nexusing at: " + Parameters.data_.AutoNexus) + "% (") + this.hudModel.gameSprite.map.player_.autoNexusNumber) + ")"));
+							}
+							return (true);
+						}
+						command = this.data..toLowerCase().match("^/dye([1-2])? ([\\w ]+)");
+						if (command != null)
+						{
+							switch (parseInt(command[1]))
+							{
+								case 1:
+									if (command[2] == "none")
+									{
+										Parameters.data_.setTex1 = -1;
+										Parameters.save();
+										player.setTex1(Parameters.PlayerTex1);
+									}
+									else
+									{
+										Parameters.data_.setTex1 = this.getTex1(this.findMatch2((command[2] + " cloth")));
+										Parameters.save();
+										player.setTex1(Parameters.data_.setTex1);
+									}
+									break;
+								case 2:
+									if (command[2] == "none")
+									{
+										Parameters.data_.setTex2 = -1;
+										Parameters.save();
+										player.setTex2(Parameters.PlayerTex2);
+									}
+									else
+									{
+										Parameters.data_.setTex2 = this.getTex1(this.findMatch2((command[2] + " cloth")));
+										Parameters.save();
+										player.setTex2(Parameters.data_.setTex2);
+									}
+									break;
+								default:
+									if (command[2] == "none")
+									{
+										Parameters.data_.setTex1 = -1;
+										Parameters.data_.setTex2 = -1;
+										Parameters.save();
+										player.setTex1(Parameters.PlayerTex1);
+										player.setTex2(Parameters.PlayerTex2);
+									}
+									else
+									{
+										command[2] = this.getTex1(this.findMatch2((command[2] + " cloth")));
+										Parameters.data_.setTex1 = command[2];
+										Parameters.data_.setTex2 = command[2];
+										Parameters.save();
+										player.setTex1(Parameters.data_.setTex1);
+										player.setTex2(Parameters.data_.setTex2);
+									}
 							}
 							return (true);
 						}
@@ -578,7 +654,6 @@ package kabam.rotmg.chat.control
 							if (command[1].indexOf(":") != -1)
 							{
 								command = command[1].split(":");
-								trace(command[0], command[1]);
 								Parameters.phaseChangeAt = getTimer() + (command[0] * (60 * 1000)) + (command[1] * 1000);
 								Parameters.phaseName = "Timer";
 							}
@@ -586,6 +661,22 @@ package kabam.rotmg.chat.control
 							{
 								Parameters.phaseChangeAt = getTimer() + (command[1] * 1000);
 								Parameters.phaseName = "Timer";
+							}
+							return (true);
+						}
+						command = this.data.match("^/anchor (\\w+)");
+						if (command != null)
+						{
+							object = player.getPlayer(command[1]);
+							if (object != null)
+							{
+								this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, "Player with name \"" + object.name_ + "\" are anchored."));
+								Parameters.data_.anchorName = object.name_;
+								Parameters.save();
+							}
+							else
+							{
+								this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, "Player with name \"" + command[1] + "\" not found."));
 							}
 							return (true);
 						}
@@ -765,8 +856,8 @@ package kabam.rotmg.chat.control
 								server = new Server();
 								server.name = "";
 								server.address = PlayGameCommand.curip;
-								server.port = 2050;
-								gameId = 0;
+								server.port = Parameters.PORT;
+								gameId = Parameters.REALM_GAMEID;
 							}
 							else
 							{
@@ -779,7 +870,7 @@ package kabam.rotmg.chat.control
 									server = new Server();
 									server.name = realm[1] + " " + realm[2];
 									server.address = realm[0];
-									server.port = 2050;
+									server.port = Parameters.PORT;
 								}
 							}
 							this.hudModel.gameSprite.gsc_.gs_.dispatchEvent(new ReconnectEvent(server, gameId, false, charId, -1, new ByteArray(), false));
@@ -794,6 +885,37 @@ package kabam.rotmg.chat.control
 				var command:Array;
 				var output:String;
 				var value:int;
+				command = this.data.match("^/sfadd ([\\w\\d]+)");
+				if (command != null)
+				{
+					Parameters.data_.spamFilter.push(command[1]);
+					this.addTextLine.dispatch(ChatMessage.make("", ("Adding to spam text: " + command[1])));
+					return (true);
+				}
+				command = this.data.match("^/sflist");
+				if (command != null)
+				{
+					output = "List of filtered words: ";
+					for each (var _local_28:String in Parameters.data_.spamFilter)
+					{
+						output = (output + (_local_28 + ", "));
+					}
+					this.addTextLine.dispatch(ChatMessage.make("", (output.substring(0, (output.length - 2)))));
+					return (true);
+				}
+				command = this.data.match("^/sfclear");
+				if (command != null)
+				{
+					Parameters.data_.spamFilter = new Vector.<String>();
+					this.addTextLine.dispatch(ChatMessage.make("", "Spam text cleared"));
+					return (true);
+				}
+				command = this.data.match("^/sfdefault");
+				if (command != null)
+				{
+					Parameters.data_.spamFilter = Parameters.spamFilter;
+					return (true);
+				}
 				command = this.data.match("^/iglist");
 				if (command != null)
 				{
@@ -943,6 +1065,24 @@ package kabam.rotmg.chat.control
 				return (false);
 			}
 
+			private function custMessages():Boolean
+			{
+				var _local_1:Array = this.data.match("^/setmsg (\\d) (.+)$");
+				if (_local_1 == null)
+				{
+					return (false);
+				}
+				var _local_2:int = parseInt(_local_1[1]);
+				var _local_3:String = "msg" + _local_1[1];
+				if (_local_2 > 0 && _local_2 <= 9)
+				{
+					Parameters.data_[_local_3] = _local_1[2];
+				}
+				this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Message #" + _local_1[1] + ' set to "' + _local_1[2] + '"'));
+				Parameters.save();
+				return (true);
+			}
+
 			public function jumpToIP(_arg_1:String):void
 			{
 				this.enterGame.dispatch();
@@ -958,6 +1098,87 @@ package kabam.rotmg.chat.control
 				this.playGame.dispatch(_local_2);
 			}
 
+			private function findSkinIndex(_arg_1:String):Array
+			{
+				var _local_2:Array;
+				var _local_3:XML;
+				var _local_4:int;
+				var _local_5:String;
+				var _local_6:String;
+				var _local_7:XML;
+				var _local_8:XMLList;
+				var _local_9:Array = _arg_1.split(" ");
+				var _local_10:int = int.MAX_VALUE;
+				_local_7 = EmbeddedData.skinsXML;
+				_local_8 = _local_7.children();
+				for each (_local_3 in _local_8)
+				{
+					_local_2 = _local_3.@id.toLowerCase().split(" ");
+					_local_4 = this.scoredMatch(_local_3.@id.toString().length, _local_9, _local_2);
+					if (_local_4 < _local_10)
+					{
+						_local_10 = _local_4;
+						_local_5 = _local_3.AnimatedTexture.File;
+						_local_6 = _local_3.AnimatedTexture.Index;
+					}
+				}
+				return ([_local_5, _local_6]);
+			}
+
+			private function getTex1(_arg_1:int):uint
+			{
+				var _local_2:XML = ObjectLibrary.xmlLibrary_[_arg_1];
+				return (_local_2.Tex1);
+			}
+
+			private function findMatch2(_arg_1:String):int
+			{
+				var _local_2:Array;
+				var _local_3:String;
+				var _local_4:int;
+				var _local_5:String;
+				var _local_8:int;
+				var _local_6:Vector.<String> = new <String>["def", "att", "spd", "dex", "vit", "wis", "ubhp"];
+				var _local_7:Vector.<int> = new <int>[2592, 2591, 2593, 2636, 2612, 2613, 2985];
+				while (_local_8 < _local_6.length)
+				{
+					if (_arg_1 == _local_6[_local_8])
+					{
+						return (_local_7[_local_8]);
+					}
+					_local_8++;
+				}
+				var _local_9:Array = _arg_1.split(" ");
+				var _local_10:int = int.MAX_VALUE;
+				for each (_local_3 in ObjectLibrary.itemLib)
+				{
+					_local_2 = _local_3.toLowerCase().split(" ");
+					_local_4 = this.scoredMatch(_local_3.length, _local_9, _local_2);
+					if (_local_4 < _local_10)
+					{
+						_local_10 = _local_4;
+						_local_5 = _local_3;
+					}
+				}
+				return (ObjectLibrary.idToType_[_local_5]);
+			}
+
+			private function scoredMatch(_arg_1:int, _arg_2:Array, _arg_3:Array):int
+			{
+				var _local_4:String;
+				var _local_5:String;
+				for each (_local_4 in _arg_3)
+				{
+					for each (_local_5 in _arg_2)
+					{
+						if (_local_4.substr(0, _local_5.length) == _local_5)
+						{
+							_arg_1 = (_arg_1 - (_local_5.length * 10));
+						}
+					}
+				}
+				return (_arg_1);
+			}
 
 			public function execute():void
 			{
@@ -974,6 +1195,10 @@ package kabam.rotmg.chat.control
 						return;
 					}
 					if (this.listCommands())
+					{
+						return;
+					}
+					if (this.custMessages())
 					{
 						return;
 					}

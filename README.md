@@ -32,55 +32,56 @@ git clone https://github.com/Gravitir314/059.git
 - Click to the plus and add new "ActionScript/Flex" libraries, they located in repository/lib.
 8. Close the "Project Structure", in the upper right corner you can find your build configurations and buttons to build client.
 ## Finished
-- Custom Sounds
-- Event Notification
-- Anti-Debuffs
-- AutoLoot (Commands not tested)
+- /con (CC Edition)
 - Accounts list
-- Auto Nexus
-- Auto Sync HP
-- Mob Insta Kill
-- Auto Responder
+- Anti-Debuffs
 - Auto Claim Calendar
-- Weapon Offset
-- Teleport to Quest
-- Ignore Ice and Push
-- Safe Walk
-- Reconnects
+- Auto Nexus
+- Auto Responder
+- Auto Sync HP
+- Auto Loot (Commands not tested)
+- Big Loot Bags
+- Change Dye
+- Change Skin (not toggleable by SS-Mode)
+- Chat Length
+- Custom Hotkeys
+- Custom Sounds
+- Disable Shot Rotation
+- Even Lower Graphics Mode
+- Event Notification
+- Full-Screen V3
 - Hide non-locked players
 - Hide pets (Your will stay)
-- Loot Preview
-- Percent of Damage
-- Lite stat monitor
-- Mob Info
-- Even Lower Graphics Mode
-- Transparent players
-- Big Loot Bags
-- Map Hack
-- Disable Shot Rotation
-- Quest Bar (CC Edition)
-- ScreenShot Mode
-- Teleport to Self
-- No Trade Delay
-- Projectile No-Clip
-- RC-Quest-Following
-- RC-Ability
-- RC-Tilt-Camera
-- Chat Length
-- Full-Screen V3
-- Teleport to Anchor
-- Vaults Preview
-- /con (CC Edition)
+- Ignore Ice and Push
 - Inventories Switch (?)
-- Vault Switch (?)
+- Lite stat monitor
+- Loot Preview
 - Low CPU Mode
+- Map Hack
+- Mob Info
+- Mob Insta Kill
+- Mobs HP Counter [X/X left]
+- New UI
+- No Trade Delay
+- Percent of Damage
+- Projectile No-Clip
+- Quest Bar (CC Edition)
+- RC-Ability
+- RC-Quest-Following
+- RC-Tilt-Camera
+- Reconnects
+- Safe Walk
+- ScreenShot Mode
+- Teleport to Anchor
+- Teleport to Quest
+- Teleport to Self
 - Timers
+- Toggle Skin/Dye
+- Transparent players
+- Vault Switch
+- Vaults Preview
+- Weapon Offset
 ## TODO
 - Auto Aim
 - Auto Ability
 - FameBot
-- New HUD
-- Custom Hotkeys
-- Toggle Skin/Dye
-- Change Skin
-- Mobs HP Counter [X/X left]

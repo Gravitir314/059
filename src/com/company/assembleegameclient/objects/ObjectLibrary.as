@@ -34,6 +34,7 @@ package com.company.assembleegameclient.objects
 			public static const xmlLibrary_:Dictionary = new Dictionary();
 			public static const setLibrary_:Dictionary = new Dictionary();
 			public static const idToType_:Dictionary = new Dictionary();
+			public static const itemLib:Vector.<String> = new Vector.<String>(0);
 			public static const typeToDisplayId_:Dictionary = new Dictionary();
 			public static const typeToTextureData_:Dictionary = new Dictionary();
 			public static const typeToTopTextureData_:Dictionary = new Dictionary();
@@ -143,6 +144,10 @@ package com.company.assembleegameclient.objects
 						}
 					}
 					_local_6 = int(_local_3.@type);
+					if (_local_3.hasOwnProperty("SlotType"))
+					{
+						itemLib.push(_local_4);
+					}
 					if (((_local_3.hasOwnProperty("PetBehavior")) || (_local_3.hasOwnProperty("PetAbility"))))
 					{
 						petXMLDataLibrary_[_local_6] = _local_3;

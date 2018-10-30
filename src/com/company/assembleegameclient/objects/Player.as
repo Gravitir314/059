@@ -181,6 +181,10 @@ package com.company.assembleegameclient.objects
 			public var nextSwap:int = 0;
 			public var lastLootTime:int = 0;
 			public var collect:int;
+			private var previousDamaging:Boolean = false;
+			private var previousWeak:Boolean = false;
+			private var previousBerserk:Boolean = false;
+			private var previousDaze:Boolean = false;
 
 			public function Player(_arg_1:XML)
 			{
@@ -829,9 +833,10 @@ package com.company.assembleegameclient.objects
 				}
 				if (_local_3 < 3)
 				{
-					this.textNotification("Not enough players!", 0, 500, false);
+					Parameters.warnDensity = true;
 					return (new Point(followPos.x, followPos.y));
 				}
+				Parameters.warnDensity = true;
 				if (_local_8.length > 1)
 				{
 					_local_8.normalize(1);
@@ -1862,10 +1867,17 @@ package com.company.assembleegameclient.objects
 					}
 					if (this.hp_ <= this.autoNexusNumber || this.clientHp <= this.autoNexusNumber || this.hp2 <= this.autoNexusNumber)
 					{
-						var close:CloseAllPopupsSignal = StaticInjectorContext.getInjector().getInstance(CloseAllPopupsSignal);
-						close.dispatch();
-						exitGame.dispatch();
-						map_.gs_.gsc_.escape();
+						if (Parameters.data_.instaNexus)
+						{
+							this.map_.gs_.gsc_.disconnect();
+						}
+						else
+						{
+							var close:CloseAllPopupsSignal = StaticInjectorContext.getInjector().getInstance(CloseAllPopupsSignal);
+							close.dispatch();
+							exitGame.dispatch();
+							map_.gs_.gsc_.escape();
+						}
 						return (true);
 					}
 					if (!Parameters.data_.fameBlockThirsty && !this.isSick && this.autoHpPotNumber != 0 && (this.hp_ <= this.autoHpPotNumber || this.clientHp <= this.autoHpPotNumber || this.hp2 <= this.autoHpPotNumber) && (_arg_1 - this.lastHpPotTime) > Parameters.data_.autohpPotDelay)
@@ -1896,6 +1908,7 @@ package com.company.assembleegameclient.objects
 
 			override public function updateStatuses():void
 			{
+				var _local_1:Boolean;
 				if (this.map_.player_ == this)
 				{
 					this.isWeak = this.isWeak_();
@@ -1922,6 +1935,45 @@ package com.company.assembleegameclient.objects
 				this.isInvisible = this.isInvisible_();
 				this.isHealing = this.isHealing_();
 				super.updateStatuses();
+				if (this.map_.player_ == this)
+				{
+					_local_1 = false;
+					if (this.isDamaging != this.previousDamaging)
+					{
+						this.previousDamaging = this.isDamaging;
+						_local_1 = true;
+					}
+					if (this.isWeak != this.previousWeak)
+					{
+						this.previousWeak = this.isWeak;
+						_local_1 = true;
+					}
+					if (this.isBerserk != this.previousBerserk)
+					{
+						this.previousBerserk = this.isBerserk;
+						_local_1 = true;
+					}
+					if (this.isDazed != this.previousDaze)
+					{
+						this.previousDaze = this.isDazed;
+						_local_1 = true;
+					}
+					if (_local_1)
+					{
+						this.recalcAllEnemyHighestDps();
+					}
+				}
+			}
+
+			public function recalcAllEnemyHighestDps():void
+			{
+				for each (var _local_1:GameObject in this.map_.goDict_)
+				{
+					if (_local_1.props_.isEnemy_)
+					{
+						_local_1.calcHighestDps = true;
+					}
+				}
 			}
 
 			override public function update(_arg_1:int, _arg_2:int):Boolean
@@ -2282,7 +2334,6 @@ package com.company.assembleegameclient.objects
 				{
 					if (this.square_.props_.maxDamage_ > 0 && (this.square_.lastDamage_ + 500) < _arg_1 && !this.isInvincible && (square_.obj_ == null || !this.square_.obj_.props_.protectFromGroundDamage_))
 					{
-						_arg_1 = getTimer();
 						_local_8 = map_.gs_.gsc_.getNextDamage(this.square_.props_.minDamage_, this.square_.props_.maxDamage_);
 						if (this.subtractDamage(_local_8, _arg_1))
 						{
@@ -2597,7 +2648,7 @@ package com.company.assembleegameclient.objects
 					}
 					texturingCache_[_local_8] = _local_9;
 				}
-				if (!Parameters.ssmode && Parameters.data_.alphaOnOthers && this.objectId_ != map_.player_.objectId_ && (!this.starred_ || (this.isFellowGuild_ && Parameters.data_.showAOGuildies)))
+				if (!Parameters.ssmode && Parameters.data_.alphaOnOthers && this.objectId_ != map_.player_.objectId_ && (!this.starred_ || this.isFellowGuild_))
 				{
 					_local_9 = CachingColorTransformer.alphaBitmapData(_local_9, Parameters.data_.alphaMan);
 				}
@@ -3992,6 +4043,71 @@ package com.company.assembleegameclient.objects
 				}
 				this.collect = 0;
 				this.textNotification("Stopping", 0xFF0000, 1500);
+			}
+
+			public function highestDpsWeapon(_arg_1:int, _arg_2:Boolean, _arg_3:Boolean):int
+			{
+				var _local_5:XML;
+				if (this.slotTypes_.length == 0)
+				{
+					return (-1);
+				}
+				var _local_10:int = -1;
+				var _local_6:int = this.slotTypes_[0];
+				var _local_15:int;
+				var _local_8:int;
+				var _local_9:int = 0;
+				var _local_11:int = 1;
+				var _local_4:int = 1;
+				var _local_13:int = 0;
+				var _local_12:int;
+				var _local_7:int = 0;
+				for each (var _local_14:int in this.equipment_)
+				{
+					_local_5 = ObjectLibrary.xmlLibrary_[_local_14];
+					if (_local_5)
+					{
+						if (_local_5.SlotType != _local_6) continue;
+						if (_local_5.hasOwnProperty("Projectile"))
+						{
+							_local_15 = _local_5.Projectile.MinDamage;
+							_local_8 = _local_5.Projectile.MaxDamage;
+							_local_9 = (_local_15 + (_local_8 / 2));
+							_local_9 = (_local_9 * this.attackMultiplier());
+							_local_9 = Math.max((_local_9 * 0.15), (_local_9 - _arg_1));
+							if (_arg_2)
+							{
+								_local_9 = (_local_9 * 0.9);
+							}
+							if (_arg_3)
+							{
+								_local_9 = (_local_9 * 1.2);
+							}
+							if (_local_5.hasOwnProperty("RateOfFire"))
+							{
+								_local_4 = _local_5.RateOfFire;
+							}
+							if (_local_5.hasOwnProperty("NumProjectiles"))
+							{
+								_local_11 = _local_5.NumProjectiles;
+							}
+							_local_13 = ((this.attackFrequency() * _local_4) * 1000);
+							_local_7 = ((_local_13 * _local_9) * _local_11);
+							if (_local_7 > _local_12)
+							{
+								_local_12 = _local_7;
+								_local_10 = int(_local_5.@type);
+							}
+						}
+					}
+					_local_15 = 0;
+					_local_8 = 0;
+					_local_9 = 0;
+					_local_4 = 1;
+					_local_11 = 1;
+					_local_7 = 0;
+				}
+				return (_local_10);
 			}
 
 

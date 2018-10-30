@@ -186,6 +186,13 @@ package com.company.assembleegameclient.objects
 			public var lastPercent_:int;
 			public var myPet:Boolean;
 			public var jittery:Boolean = false;
+			public var highestDpsWeaponIcon:BitmapData;
+			public var calcHighestDps:Boolean = true;
+			private var previousArmored:Boolean = false;
+			private var previousArmorBroken:Boolean = false;
+			private var previousCursed:Boolean = false;
+			private var previousPetrified:Boolean = false;
+			private var previousExposed:Boolean = false;
 
 			public var iconCache:Vector.<BitmapData> = new Vector.<BitmapData>();
 			public var tickPosition_:Point = new Point();
@@ -305,6 +312,39 @@ package com.company.assembleegameclient.objects
 				isPetrifiedImmune = isPetrifiedImmune_();
 				isCursed = isCursed_();
 				isCursedImmune = isCursedImmune_();
+				if (this.props_.isEnemy_)
+				{
+					if (this.isArmored != this.previousArmored)
+					{
+						this.previousArmored = this.isArmored;
+						this.calcHighestDps = true;
+					}
+					if (this.isArmored != this.previousArmored)
+					{
+						this.previousArmored = this.isArmored;
+						this.calcHighestDps = true;
+					}
+					if (this.isArmorBroken != this.previousArmorBroken)
+					{
+						this.previousArmorBroken = this.isArmorBroken;
+						this.calcHighestDps = true;
+					}
+					if (this.isCursed != this.previousCursed)
+					{
+						this.previousCursed = this.isCursed;
+						this.calcHighestDps = true;
+					}
+					if (this.isPetrified != this.previousPetrified)
+					{
+						this.previousPetrified = this.isPetrified;
+						this.calcHighestDps = true;
+					}
+					if (this.isExposed != this.previousExposed)
+					{
+						this.previousExposed = this.isExposed;
+						this.calcHighestDps = true;
+					}
+				}
 			}
 
 			public static function damageWithDefense(_arg_1:int, _arg_2:int, _arg_3:Boolean, _arg_4:Vector.<uint>):int
@@ -476,6 +516,11 @@ package com.company.assembleegameclient.objects
 					this.shadowPath_ = null;
 				}
 				this.footer_ = false;
+				if (this.highestDpsWeaponIcon)
+				{
+					this.highestDpsWeaponIcon.dispose();
+					this.highestDpsWeaponIcon = null;
+				}
 			}
 
 			public function isQuiet_():Boolean
@@ -1217,20 +1262,37 @@ package com.company.assembleegameclient.objects
 
 			public function showDamageText(_arg_1:int, _arg_2:Boolean):void
 			{
-				if (this.texture_ != null)
+				takeDmgNotif(_arg_1, this, _arg_2);
+			}
+
+			public static function takeDmgNotif(_arg_1:int, _arg_2:GameObject, _arg_3:Boolean = false):void
+			{
+				if (_arg_2.texture_ != null)
 				{
-					var _local_3:String = ("-" + _arg_1);
-					var _local_4:CharacterStatusText;
-					if (Parameters.ssmode || !Parameters.data_.dynamicHPcolor)
+					var _local_4:int;
+					var _local_5:Boolean = (Parameters.data_.showDamageAndHP == "base" || Parameters.data_.showDamageAndHP == "total" || Parameters.data_.showDamageAndHP == "all");
+					var _local_6:Boolean = ((Parameters.data_.showDamageAndHP == "total" || Parameters.data_.showDamageAndHP == "all") && !Parameters.ssmode);
+					var _local_7:int = (_arg_2.hp_ - _arg_1);
+					_local_7 = ((_local_7 < 0) ? 0 : _local_7);
+					if (_arg_3)
 					{
-						_local_4 = new CharacterStatusText(this, (_arg_2 ? 0x9000FF : 0xFF0000), 1000);
+						_local_4 = 0x9000FF;
 					}
 					else
 					{
-						_local_4 = new CharacterStatusText(this, (_arg_2 ? 0x9000FF : Character.green2red(((this.hp_ - _arg_1) * 100) / this.maxHP_)), 1000);
+						if (Parameters.data_.showDamageAndHPColorized && !Parameters.ssmode)
+						{
+							_local_4 = int(Character.green2red((_arg_2.hp_ / _arg_2.maxHP_) * 100));
+						}
+						else
+						{
+							_local_4 = 0xFF0000;
+						}
 					}
-					_local_4.setStringBuilder(new StaticStringBuilder(_local_3));
-					map_.mapOverlay_.addStatusText(_local_4);
+					var _local_8:String = ((_local_5 ? "-" + _arg_1 + (_local_6 ? " [" : "") : "") + ((_local_6) ? ((_local_7).toString() + ((_local_5) ? "]" : "")) : ""));
+					var _local_9:CharacterStatusText = new CharacterStatusText(_arg_2, _local_4, 1000);
+					_local_9.setStringBuilder(new StaticStringBuilder(_local_8));
+					_arg_2.map_.mapOverlay_.addStatusText(_local_9);
 				}
 			}
 
@@ -1657,13 +1719,46 @@ package com.company.assembleegameclient.objects
 				{
 					this.drawConditionIcons(_arg_1, _arg_2, _arg_3);
 				}
+
+				var _local_13:String = Parameters.data_["showHighestDps"];
+				if (this.map_.player_ != null && !Parameters.ssmode && _local_13 != "off")
+				{
+					if (this.props_.isEnemy_ && (_local_13 == "quest" && this.props_.isQuest_ || _local_13 == "all"))
+					{
+						if (this.calcHighestDps)
+						{
+							this.calcHighestDps = false;
+							_local_8 = this.defense_;
+							if (this.isArmorBroken)
+							{
+								_local_8 = 0;
+							}
+							if (this.isArmored)
+							{
+								_local_8 = (_local_8 * 2);
+							}
+							if (this.isExposed)
+							{
+								_local_8 = (_local_8 - 20);
+							}
+							if (this.highestDpsWeaponIcon)
+							{
+								this.highestDpsWeaponIcon.dispose();
+								this.highestDpsWeaponIcon = null;
+							}
+							this.highestDpsWeaponIcon = ObjectLibrary.getItemIcon(this.map_.player_.highestDpsWeapon(_local_8, this.isPetrified, this.isCursed));
+						}
+						this.drawHighestDps(_arg_1, _arg_2);
+					}
+				}
+
 				if ((((this.props_.showName_) && (!(this.name_ == null))) && (!(this.name_.length == 0))))
 				{
 					this.drawName(_arg_1, _arg_2, false);
 				}
 				if (_local_5)
 				{
-					_local_10 = uint(((_local_4.getPixel32((_local_4.width / 4), (_local_4.height / 4)) | _local_4.getPixel32((_local_4.width / 2), (_local_4.height / 2))) | _local_4.getPixel32(((_local_4.width * 3) / 4), ((_local_4.height * 3) / 4))));
+					_local_10 = int(((_local_4.getPixel32((_local_4.width / 4), (_local_4.height / 4)) | _local_4.getPixel32((_local_4.width / 2), (_local_4.height / 2))) | _local_4.getPixel32(((_local_4.width * 3) / 4), ((_local_4.height * 3) / 4))));
 					_local_11 = (_local_10 >> 24);
 					if (_local_11 != 0)
 					{
@@ -1681,7 +1776,7 @@ package com.company.assembleegameclient.objects
 				}
 				if (!Parameters.ssmode)
 				{
-					if (!this.dead_ && Parameters.data_.showDamageOnEnemy)
+					if (!this.dead_ && (Parameters.data_.showDamageAndHP == "percent" || Parameters.data_.showDamageAndHP == "all"))
 					{
 						if (this.footer_)
 						{
@@ -1790,6 +1885,32 @@ package com.company.assembleegameclient.objects
 					_arg_1.push(GraphicsUtil.END_FILL);
 					_local_8++;
 				}
+			}
+
+			public function drawHighestDps(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera):void
+			{
+				var _local_6:BitmapData;
+				var _local_9:GraphicsBitmapFill;
+				var _local_3:GraphicsPath;
+				var _local_7:Number;
+				var _local_8:Number;
+				var _local_10:Matrix;
+				var _local_5:Number = this.posS_[3];
+				var _local_4:Number = this.vS_[1];
+				_local_6 = this.highestDpsWeaponIcon;
+				_local_9 = new GraphicsBitmapFill(null, new Matrix(), false, false);
+				_local_3 = new GraphicsPath(GraphicsUtil.QUAD_COMMANDS, new Vector.<Number>());
+				_local_9.bitmapData = _local_6;
+				_local_7 = (_local_5 - (_local_6.width / 2));
+				_local_8 = ((_local_4 - _local_6.height) - (_local_6.height / 2));
+				_local_3.data.length = 0;
+				(_local_3.data as Vector.<Number>).push(_local_7, _local_8, (_local_7 + _local_6.width), _local_8, (_local_7 + _local_6.width), (_local_8 + _local_6.height), _local_7, (_local_8 + _local_6.height));
+				_local_10 = _local_9.matrix;
+				_local_10.identity();
+				_local_10.translate(_local_7, _local_8);
+				_arg_1.push(_local_9);
+				_arg_1.push(_local_3);
+				_arg_1.push(GraphicsUtil.END_FILL);
 			}
 
 			override public function drawShadow(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void

@@ -133,10 +133,10 @@ package com.company.assembleegameclient.game
 				this.areFKeysAvailable = _local_3.areDeveloperHotkeysEnabled();
 				this.gs_.map.signalRenderSwitch.add(this.onRenderSwitch);
 				this.pcmc = _local_2.getInstance(ParseChatMessageSignal);
-				/*if (Parameters.data_.allowController)
+				if (Parameters.data_.allowController)
 				{
 					setController();
-				}*/
+				}
 			}
 
 			public static function addIgnore(_arg_1:int):String
@@ -295,10 +295,10 @@ package com.company.assembleegameclient.game
 				_local_2.addEventListener(Event.ENTER_FRAME, this.onEnterFrame);
 				_local_2.addEventListener(MouseEvent.RIGHT_MOUSE_DOWN, this.onRightMouseDown);
 				_local_2.addEventListener(MouseEvent.RIGHT_MOUSE_UP, this.onRightMouseUp);
-				/*if (Parameters.data_.allowController)
+				if (Parameters.data_.allowController)
 				{
 					_local_2.addEventListener(ControllerEvent.BUTTON_DOWN, this.onControllerInput);
-				}*/
+				}
 			}
 
 			public function onRightMouseDown_forWorld(_arg_1:MouseEvent):void
@@ -363,10 +363,10 @@ package com.company.assembleegameclient.game
 				_local_2.removeEventListener(Event.ENTER_FRAME, this.onEnterFrame);
 				_local_2.removeEventListener(MouseEvent.RIGHT_MOUSE_DOWN, this.onRightMouseDown);
 				_local_2.removeEventListener(MouseEvent.RIGHT_MOUSE_UP, this.onRightMouseUp);
-				/*if (Parameters.data_.allowController)
+				if (Parameters.data_.allowController)
 				{
 					_local_2.removeEventListener(ControllerEvent.BUTTON_DOWN, this.onControllerInput);
-				}*/
+				}
 			}
 
 			public function onMiddleClick(_arg_1:MouseEvent):void
@@ -529,7 +529,7 @@ package com.company.assembleegameclient.game
 							}
 							else
 							{
-								_local_2 = (Math.random() * 6.28318530717959);
+								_local_2 = (Math.random() * (Math.PI * 2));
 								_local_3.attemptAttackAngle(_local_2);
 								_local_3.attemptAutoAbility(_local_2);
 							}
@@ -545,15 +545,15 @@ package com.company.assembleegameclient.game
 								}
 								else
 								{
-									_local_3.attemptAutoAim((Math.random() * 6.28318530717959));
+									_local_3.attemptAutoAim((Math.random() * (Math.PI * 2)));
 								}
 							}
 						}
 					}
-					/*if (ROTMG.focus && _local_3.conMoveVec)
+					if (ROTMG.focus && _local_3.conMoveVec)
 					{
 						controller(_local_3);
-					}*/
+					}
 				}
 			}
 
@@ -915,6 +915,8 @@ package com.company.assembleegameclient.game
 						_local_4 = StaticInjectorContext.getInjector().getInstance(CloseAllPopupsSignal);
 						_local_4.dispatch();
 						this.statsTabHotKeyInputSignal.dispatch();
+						this.gs_.hudView.mainView = !this.gs_.hudView.mainView;
+						this.gs_.hudView.toggleUI();
 						break;
 					case Parameters.data_.interact:
 						_local_4 = StaticInjectorContext.getInjector().getInstance(CloseAllPopupsSignal);
@@ -1107,6 +1109,18 @@ package com.company.assembleegameclient.game
 						Parameters.ssmode = !Parameters.ssmode;
 						if (Parameters.ssmode)
 						{
+							if (Parameters.data_.setTex1 != -1 && Parameters.PlayerTex1 != -1)
+							{
+								player.setTex1(Parameters.PlayerTex1);
+							}
+							if (Parameters.data_.setTex2 != -1 && Parameters.PlayerTex2 != -1)
+							{
+								player.setTex2(Parameters.PlayerTex2);
+							}
+							if (Parameters.data_.nsetSkin[1] != -1 && Parameters.playerSkin != -1)
+							{
+								this.gs_.gsc_.setPlayerSkinTemplate(player, Parameters.playerSkin);
+							}
 							if (this.gs_.map.mapOverlay_)
 							{
 								this.gs_.map.mapOverlay_.removeChildren(0);
@@ -1117,9 +1131,24 @@ package com.company.assembleegameclient.game
 						}
 						else
 						{
+							if (Parameters.data_.setTex1 != -1)
+							{
+								player.setTex1(Parameters.data_.setTex1);
+							}
+							if (Parameters.data_.setTex2 != -1)
+							{
+								player.setTex2(Parameters.data_.setTex2);
+							}
+							if (Parameters.data_.nsetSkin[1] != -1)
+							{
+								this.gs_.gsc_.setPlayerSkinTemplate(player, Parameters.data_.nsetSkin[1]);
+							}
 							Parameters.root.stage.scaleMode = Parameters.oldFSmode;
 							Parameters.data_.stageScale = Parameters.oldFSmode;
 						}
+						this.gs_.hudView.toggleUI();
+						this.gs_.hudView.characterDetails.update(player); // TODO fix skin
+						this.gs_.hudView.characterDetails.setName(player.name_);
 						this.gs_.chatBox_.list.setVisibleItemCount();
 						this.gs_.chatBox_.list.removeOldestExcessVisible();
 						this.gs_.chatBox_.model.setVisibleItemCount();
@@ -1147,6 +1176,19 @@ package com.company.assembleegameclient.game
 							Parameters.save();
 						}
 						break;
+				}
+				for (counter = 1; counter <= 9; counter++)
+				{
+					var key:String = "msg" + (counter).toString() + "key";
+					if (_arg_1.keyCode == Parameters.data_[key])
+					{
+						key = "msg" + (counter).toString();
+						if (Parameters.data_[key] != null)
+						{
+							this.pcmc.dispatch(Parameters.data_[key]);
+						}
+						break;
+					}
 				}
 				if (Parameters.ALLOW_SCREENSHOT_MODE)
 				{

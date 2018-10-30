@@ -40,6 +40,14 @@ package io.decagames.rotmg.pets.components.guiTab
 				_arg_1.updated.add(this.onUpdate);
 			}
 
+			public function dispose():void
+			{
+				while (this.numChildren > 0)
+				{
+					this.removeChildAt(0);
+				}
+			}
+
 			private function onUpdate():void
 			{
 				this.updatePetBitmap();

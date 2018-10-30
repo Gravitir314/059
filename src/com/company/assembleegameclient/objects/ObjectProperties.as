@@ -60,6 +60,7 @@ package com.company.assembleegameclient.objects
 			public var tier:int = int.MIN_VALUE;
 			public var boss_:Boolean = false;
 			public var rateOfFire_:Number;
+			public var isQuest_:Boolean = false;
 
 			public function ObjectProperties(_arg_1:XML)
 			{
@@ -81,6 +82,7 @@ package com.company.assembleegameclient.objects
 				this.shadowSize_ = ((_arg_1.hasOwnProperty("ShadowSize")) ? _arg_1.ShadowSize : 100);
 				this.isPlayer_ = _arg_1.hasOwnProperty("Player");
 				this.isEnemy_ = _arg_1.hasOwnProperty("Enemy");
+				this.isQuest_ = _arg_1.hasOwnProperty("Quest");
 				this.isItem_ = _arg_1.hasOwnProperty("Item");
 				if (_arg_1.hasOwnProperty("SlotType"))
 				{

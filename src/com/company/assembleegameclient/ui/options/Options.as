@@ -46,8 +46,6 @@ package com.company.assembleegameclient.ui.options
 
 	public class Options extends Sprite
 		{
-
-			//private static const TABS:Vector.<String> = new <String>[TextKey.OPTIONS_CONTROLS, TextKey.OPTIONS_HOTKEYS, TextKey.OPTIONS_CHAT, TextKey.OPTIONS_GRAPHICS, TextKey.OPTIONS_SOUND, TextKey.OPTIONS_FRIEND, TextKey.OPTIONS_MISC];
 			public static const Y_POSITION:int = 550;
 			public static const CHAT_COMMAND:String = "chatCommand";
 			public static const CHAT:String = "chat";
@@ -85,7 +83,7 @@ package com.company.assembleegameclient.ui.options
 				}
 				else
 				{
-					TABS = new <String>[TextKey.OPTIONS_CONTROLS, TextKey.OPTIONS_HOTKEYS, TextKey.OPTIONS_CHAT, TextKey.OPTIONS_GRAPHICS, TextKey.OPTIONS_SOUND, TextKey.OPTIONS_FRIEND, "Event", "Experimental", "Debuffs", "Auto", "Loot", "World", "Recon", "Visual", "Fame", "Other"];
+					TABS = new <String>[TextKey.OPTIONS_CONTROLS, TextKey.OPTIONS_HOTKEYS, TextKey.OPTIONS_CHAT, TextKey.OPTIONS_GRAPHICS, TextKey.OPTIONS_SOUND, TextKey.OPTIONS_FRIEND, "Event", "Experimental", "Debuffs", "Auto", "Loot", "World", "Recon|Msg", "Visual", "Fame", "Other"];
 				}
 				super();
 				this.gs_ = _arg_1;
@@ -472,8 +470,8 @@ package com.company.assembleegameclient.ui.options
 					case "World":
 						this.addWorldOptions();
 						return;
-					case "Recon":
-						this.addReconOptions();
+					case "Recon|Msg":
+						this.addReconAndMessageOptions();
 						return;
 					case "Visual":
 						this.addVisualOptions();
@@ -690,6 +688,16 @@ package com.company.assembleegameclient.ui.options
 				return (new <StringBuilder>[new StaticStringBuilder("Off"), new StaticStringBuilder("0"), new StaticStringBuilder("1"), new StaticStringBuilder("2"), new StaticStringBuilder("3"), new StaticStringBuilder("4"), new StaticStringBuilder("5"), new StaticStringBuilder("6"), new StaticStringBuilder("7"), new StaticStringBuilder("8"), new StaticStringBuilder("9"), new StaticStringBuilder("10"), new StaticStringBuilder("11"), new StaticStringBuilder("12"), new StaticStringBuilder("13"), new StaticStringBuilder("14")]);
 			}
 
+			public function HighestDpsTexts():Vector.<StringBuilder>
+			{
+				return (new <StringBuilder>[new StaticStringBuilder("Off"), new StaticStringBuilder("All"), new StaticStringBuilder("Quest")]);
+			}
+
+			public function showDamageAndHPTexts():Vector.<StringBuilder>
+			{
+				return (new <StringBuilder>[new StaticStringBuilder("Off"), new StaticStringBuilder("Percent"), new StaticStringBuilder("Base"), new StaticStringBuilder("With HP"), new StaticStringBuilder("All")]);
+			}
+
 			public function addWorldOptions():void
 			{
 				this.addOptionAndPosition(new ChoiceOption("offsetWeapon", makeOnOffLabels(), [true, false], "Offset Weapons", "Offsets your firing angle if you have an Etherite/Cultist Staff/Void Bow/Colossus Sword equipped to make it so your shots are in a straight line", null), 0, 0, true);
@@ -706,12 +714,23 @@ package com.company.assembleegameclient.ui.options
 				this.addOptionAndPosition(new KeyMapper("TextCem", "Cem Ready Text", 'Say "ready"'), 0, 0, true);
 			}
 
-			public function addReconOptions():void
+			public function addReconAndMessageOptions():void
 			{
 				this.addOptionAndPosition(new KeyMapper("ReconRealm", "Recon Realm", "Key that connects the user to the last realm in."));
 				this.addOptionAndPosition(new KeyMapper("RandomRealm", "Random Realm", "Key that connects the user to a random realm in the current server."));
 				this.addOptionAndPosition(new KeyMapper("ReconVault", "Recon Vault", "Key that connects the user to their vault."));
 				this.addOptionAndPosition(new KeyMapper("ReconDaily", "Recon Daily", "Key that connects the user to their daily quest room."));
+				this.addOptionAndPosition(new NullOption());
+				this.addOptionAndPosition(new NullOption());
+				this.addOptionAndPosition(new KeyMapper("msg1key", "Custom Message 1", (('Currently set to "' + Parameters.data_.msg1) + '". Use /setmsg 1 <message> to replace this message.')));
+				this.addOptionAndPosition(new KeyMapper("msg2key", "Custom Message 2", (('Currently set to "' + Parameters.data_.msg2) + '". Use /setmsg 2 <message> to replace this message.')));
+				this.addOptionAndPosition(new KeyMapper("msg3key", "Custom Message 3", (('Currently set to "' + Parameters.data_.msg3) + '". Use /setmsg 3 <message> to replace this message.')));
+				this.addOptionAndPosition(new KeyMapper("msg4key", "Custom Message 4", (('Currently set to "' + Parameters.data_.msg4) + '". Use /setmsg 4 <message> to replace this message.')));
+				this.addOptionAndPosition(new KeyMapper("msg5key", "Custom Message 5", (('Currently set to "' + Parameters.data_.msg5) + '". Use /setmsg 5 <message> to replace this message.')));
+				this.addOptionAndPosition(new KeyMapper("msg6key", "Custom Message 6", (('Currently set to "' + Parameters.data_.msg6) + '". Use /setmsg 6 <message> to replace this message.')));
+				this.addOptionAndPosition(new KeyMapper("msg7key", "Custom Message 7", (('Currently set to "' + Parameters.data_.msg7) + '". Use /setmsg 7 <message> to replace this message.')));
+				this.addOptionAndPosition(new KeyMapper("msg8key", "Custom Message 8", (('Currently set to "' + Parameters.data_.msg8) + '". Use /setmsg 8 <message> to replace this message.')));
+				this.addOptionAndPosition(new KeyMapper("msg9key", "Custom Message 9", (('Currently set to "' + Parameters.data_.msg9) + '". Use /setmsg 9 <message> to replace this message.')));
 			}
 
 			public function addVisualOptions():void
@@ -721,7 +740,8 @@ package com.company.assembleegameclient.ui.options
 				this.addOptionAndPosition(new ChoiceOption("hideLockList", makeOnOffLabels(), [true, false], "Hide Nonlocked", "Hide non locked players", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("hidePets", makeOnOffLabels(), [true, false], "Hide Pets", "Hide all pets", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("lootPreview", makeOnOffLabels(), [true, false], "Loot Preview", "Shows previews of equipment over bags", null), 0, 0, true);
-				this.addOptionAndPosition(new ChoiceOption("showDamageOnEnemy", makeOnOffLabels(), [true, false], "Show Dealt %", "Shows the % of damage you've done to an enemy, below that enemy (note, only counts projectile damage, it does not include damage from poison, trap, scepter, etc)", null), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("showDamageAndHP", showDamageAndHPTexts(), ["off", "percent", "base", "total", "all"], "Show Damage and HP", "Shows the % of projectile damage you've done to an enemy, below that enemy. Show total health points of player and enemies as they take damage.", null), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("showDamageAndHPColorized", makeOnOffLabels(), [true, false], "Colorized Show Damage and HP", "Changes the status text color based on the percentage of health the player or enemy has.", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("showMobInfo", makeOnOffLabels(), [true, false], "Show Mob Info", "Shows the object itemType above mobs", this.onShowMobInfo), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("liteMonitor", makeOnOffLabels(), [true, false], "Lite Stats Monitor", 'Replaces the Net Jitter stats monitor with a "lite" one that also measures ping', null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("showClientStat", makeOnOffLabels(), [true, false], "Show ClientStat", "Output when you get a ClientStat packet, which shows when things like TilesSeen, GodsKilled, DungeonsCompleted, etc changes", null), 0, 0, true);
@@ -730,14 +750,14 @@ package com.company.assembleegameclient.ui.options
 				this.addOptionAndPosition(new ChoiceOption("bigLootBags", makeOnOffLabels(), [true, false], "Big Loot Bags", "Makes soulbound loot bags twice as big", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("evenLowerGraphics", makeOnOffLabels(), [true, false], "Even Lower Graphics Mode", "[NOT COMPATIBLE WITH SCREENSHOT MODE] Makes the graphics worse in an attempt to reduce lag. Warning: dye items are red/green and don't show their proper pattern", this.onN64Mode), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("showCHbar", makeOnOffLabels(), [true, false], "Show Client HP Bar", "Displays the extra client HP bar or not", this.toggleBars), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("showDyes", makeOnOffLabels(), [true, false], "Show Dyes", "Makes every player use the default dye.", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("alphaOnOthers", makeOnOffLabels(), [true, false], "Make Other Players Transparent", "Makes nonlocked players and their pets transparent, toggleable with /ao and transparency level customizable with /alpha 0.2", null), 0, 0, true);
-				this.addOptionAndPosition(new ChoiceOption("showAOGuildies", makeOnOffLabels(), [true, false], "Show Guildmates with Alpha", "Makes guildmates always visible when /ao is enabled", null), 0, 0, true);
-				this.addOptionAndPosition(new ChoiceOption("showFameGoldRealms", makeOnOffLabels(), [true, false], "Always Show Fame/Gold", "Makes Fame/Gold always visible when in Realms and Dungeons", null), 0, 0, true);
-				this.addOptionAndPosition(new ChoiceOption("showEnemyCounter", makeOnOffLabels(), [true, false], "Show Remaining Enemy Counter", 'Shows the "Enemies left in dungeon" in a text area instead of in chat', null), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("showSkins", makeOnOffLabels(), [true, false], "Show Skins", "Forces default skin to everyone when turned off.", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("showTimers", makeOnOffLabels(), [true, false], "Show Phase Timers", "Shows a countdown for enemy phase and custom set timers", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("questHUD", makeOnOffLabels(), [true, false], "Quest Bar", "Quest Bar.", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("mapHack", makeOnOffLabels(), [true, false], "Map Hack", "Shows entire map when entering a realm. Loading in for the first time will take longer.", mapHackChange), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("noRotate", makeOnOffLabels(), [true, false], "Disable Shot Rotation", "Makes Shots not have their rotation effect, which prevents a lot of lag especially in Lost Halls", null), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("showHighestDps", HighestDpsTexts(), ["off", "all", "quest"], "Show Highest DPS", "Shows the highest DPS weapon under an enemy.", null), 0, 0, true);
 			}
 
 			public function mapHackChange():void
@@ -826,17 +846,22 @@ package com.company.assembleegameclient.ui.options
 				this.addOptionAndPosition(new ChoiceOption("TradeDelay", makeOnOffLabels(), [true, false], "No Trade Delay", "Remove the 3 second trade delay", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("skipPopups", makeOnOffLabels(), [true, false], "Ignore Startup Popups", "Hides all popups when you first load the client", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("extraPlayerMenu", makeOnOffLabels(), [true, false], "Extended Player Menu", "Show extra options on player menus when you click in chat or in the party list", null), 0, 0, true);
-				this.addOptionAndPosition(new ChoiceOption("dynamicHPcolor", makeOnOffLabels(), [true, false], "Dynamic Damage Text Color", "Makes the damage text change color based on health", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("mobNotifier", makeOnOffLabels(), [true, false], "Treasure Room Notifier", "Plays a sound when a Troom is opened", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("rightClickOption", makeRightClickOptions(), ["Off", "Quest", "Ability", "Camera"], "Right Click Option", "Select the functionality you want on right click: none, quest follow (hold down right click to walk towards your quest), spellbomb/ability assist (uses your ability at the enemy closest to your cursor), camera (rotates your camera when holding right click)", null), 0, 0, true);
 				this.addOptionAndPosition(new KeyMapper("sskey", "Screenshot Mode [READ THIS PLEASE]", "(NOT SAFE FOR RECORDING!!!!!!)         Hides every visual modification, please note that there could potentially be some hacks that are not hidden, but have not been discovered, if you find something missing then post on the MPGH thread please!", false, 3596312), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("customUI", makeOnOffLabels(), [true, false], "Custom UI", "Toggle UI to better view.", this.toggleUI), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("tiltCam", makeOnOffLabels(), [true, false], "Tilt Camera X Axis", "Allows the Right Click Option, when on Camera, to rotate the X Axis of the Camera's perspective", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("cacheCharList", makeOnOffLabels(), [true, false], "Cache Character List", 'Makes the main menu reload when you go back to it, instead of using the cached version which avoids the 10 minute "Internal Error" timeout', null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("chatLength", chatLengthLabels(), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], "Chat Length", "Determines the number of lines chat shows (5 is the standard, previously it was 10)", this.onChatLengthChange), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("fixTabHotkeys", makeOnOffLabels(), [true, false], "Fix Backpack Tab Hotkeys", "Makes the 1-8 htokeys for using inventory items use backpack items when the backpack tab is selected", null), 0, 0, true);
-				//this.addOptionAndPosition(new ChoiceOption("allowController", makeOnOffLabels(), [true, false], "Use Controller", "Enables usage of an Xbox 360 controller", this.toggleControllerOptions), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("allowController", makeOnOffLabels(), [true, false], "Use Controller", "Enables usage of an Xbox 360 controller", this.toggleControllerOptions), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("followIntoPortals", makeOnOffLabels(), [true, false], "Follow Into Portal", "If the player you're /following enters a portal, having this on tries to join them", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("FocusFPS", makeOnOffLabels(), [true, false], "Background FPS", "Lower FPS when the client loses focus (alt tabbing, minimizing, etc), set the background values with /bgfps # and foreground with /fgfps #", null), 0, 0, true);
+			}
+
+			private function toggleUI():void
+			{
+				this.gs_.hudView.toggleUI();
 			}
 
 			private function onChatLengthChange():void

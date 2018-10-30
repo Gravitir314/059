@@ -115,7 +115,6 @@ package kabam.rotmg.messaging.impl
 			public static const LOGIN_REWARD_MSG:int = 37;
 			public static const QUEST_ROOM_MSG:int = 88;
 			public static const PET_CHANGE_SKIN_MSG:int = 105;
-			public static const KEY_DOWN_MSG:int = 111;
 			public static var instance:GameServerConnection;
 
 			public var changeMapSignal:Signal;
@@ -227,6 +226,10 @@ package kabam.rotmg.messaging.impl
 			}
 
 			public function teleport(_arg_1:int):void
+			{
+			}
+
+			public function setPlayerSkinTemplate(_arg_1:Player, _arg_2:int):void
 			{
 			}
 

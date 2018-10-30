@@ -5,9 +5,11 @@ package kabam.rotmg.ui.view
 	import com.company.assembleegameclient.game.AGameSprite;
 	import com.company.assembleegameclient.game.GameSprite;
 	import com.company.assembleegameclient.objects.Player;
+	import com.company.assembleegameclient.parameters.Parameters;
 	import com.company.assembleegameclient.ui.TradePanel;
 	import com.company.assembleegameclient.ui.panels.InteractPanel;
 	import com.company.assembleegameclient.ui.panels.itemgrids.EquippedGrid;
+	import com.company.assembleegameclient.ui.panels.itemgrids.InventoryGrid;
 	import com.company.util.GraphicsUtil;
 	import com.company.util.SpriteUtil;
 
@@ -19,7 +21,9 @@ package kabam.rotmg.ui.view
 	import flash.geom.Point;
 
 	import io.decagames.rotmg.classes.NewClassUnlockNotification;
+	import io.decagames.rotmg.pets.components.guiTab.PetsTabContentView;
 
+	import kabam.rotmg.game.view.components.StatsView;
 	import kabam.rotmg.game.view.components.TabStripView;
 	import kabam.rotmg.messaging.impl.incoming.TradeAccepted;
 	import kabam.rotmg.messaging.impl.incoming.TradeChanged;
@@ -36,6 +40,11 @@ package kabam.rotmg.ui.view
 			private const EQUIPMENT_INVENTORY_POSITION:Point = new Point(14, 304);
 			private const TAB_STRIP_POSITION:Point = new Point(7, 346);
 			private const INTERACT_PANEL_POSITION:Point = new Point(0, 500);
+			private const INVENTORY_POSITION:Point = new Point(14, 304);
+			private const BACKPACK_POSITION:Point = new Point(14, 392);
+			private const STATS_POSITION:Point = new Point(10, 424);
+			private const PET_POSITION:Point = new Point(5, 296);
+			private const POTIONS_POSITION:Point = new Point(14, 480);
 
 			private var background:CharacterWindowBackground;
 			private var newClassUnlockNotification:NewClassUnlockNotification;
@@ -49,6 +58,13 @@ package kabam.rotmg.ui.view
 			public var interactPanel:InteractPanel;
 			public var tradePanel:TradePanel;
 
+			private var inventory:InventoryGrid;
+			private var backpack:InventoryGrid;
+			private var stats:StatsView;
+			private var pet:PetsTabContentView;
+			private var potions:PotionInventoryView;
+			public var mainView:Boolean = true;
+
 			public function HUDView()
 			{
 				this.createAssets();
@@ -60,10 +76,15 @@ package kabam.rotmg.ui.view
 			{
 				this.background = null;
 				this.player = null;
+				this.inventory = null;
+				this.backpack = null;
 				((this.statMeters) && (this.statMeters.dispose()));
 				((this.miniMap) && (this.miniMap.dispose()));
 				((this.tabStrip) && (this.tabStrip.dispose()));
 				((this.interactPanel) && (this.interactPanel.dispose()));
+				((this.stats) && (this.stats.dispose()));
+				((this.pet) && (this.pet.dispose()));
+				((this.potions) && (this.potions.dispose()));
 			}
 
 			private function createAssets():void
@@ -74,6 +95,9 @@ package kabam.rotmg.ui.view
 				this.tabStrip = new TabStripView();
 				this.characterDetails = new CharacterDetailsView();
 				this.statMeters = new StatMetersView();
+				this.stats = new StatsView();
+				this.pet = new PetsTabContentView();
+				this.potions = new PotionInventoryView();
 			}
 
 			private function addAssets():void
@@ -84,6 +108,38 @@ package kabam.rotmg.ui.view
 				addChild(this.tabStrip);
 				addChild(this.characterDetails);
 				addChild(this.statMeters);
+				addChild(this.stats);
+				addChild(this.pet);
+				addChild(this.potions);
+			}
+
+			public function toggleUI():void
+			{
+				var _local_1:Boolean = (!Parameters.ssmode && Parameters.data_.customUI);
+				this.statMeters.y = (_local_1 ? this.STAT_METERS_POSITION.y - 32 : this.STAT_METERS_POSITION.y);
+				this.equippedGrid.y = (_local_1 ? this.EQUIPMENT_INVENTORY_POSITION.y - 39 : this.EQUIPMENT_INVENTORY_POSITION.y);
+				this.equippedGridBG.visible = !_local_1;
+				this.characterDetails.visible = !_local_1;
+				this.tabStrip.visible = !_local_1;
+				if (this.inventory == null)
+				{
+					this.inventory = new InventoryGrid(this.player, this.player, 4);
+				}
+				if (this.backpack == null)
+				{
+					this.backpack = new InventoryGrid(this.player, this.player, 12);
+				}
+				this.inventory.x = this.INVENTORY_POSITION.x;
+				this.inventory.y = this.INVENTORY_POSITION.y;
+				this.backpack.x = this.BACKPACK_POSITION.x;
+				this.backpack.y = this.BACKPACK_POSITION.y;
+				this.inventory.visible = (_local_1 && mainView);
+				this.backpack.visible = (_local_1 && this.player.hasBackpack_ && mainView);
+				this.stats.visible = (_local_1 && (!this.player.hasBackpack_ || !mainView));
+				this.pet.visible = (_local_1 && !mainView);
+				this.potions.visible = _local_1;
+				addChild(this.inventory);
+				addChild(this.backpack);
 			}
 
 			private function positionAssets():void
@@ -100,6 +156,12 @@ package kabam.rotmg.ui.view
 				this.characterDetails.y = this.CHARACTER_DETAIL_PANEL_POSITION.y;
 				this.statMeters.x = this.STAT_METERS_POSITION.x;
 				this.statMeters.y = this.STAT_METERS_POSITION.y;
+				this.stats.x = this.STATS_POSITION.x;
+				this.stats.y = this.STATS_POSITION.y;
+				this.pet.x = this.PET_POSITION.x;
+				this.pet.y = this.PET_POSITION.y;
+				this.potions.x = this.POTIONS_POSITION.x;
+				this.potions.y = this.POTIONS_POSITION.y;
 			}
 
 			public function setPlayerDependentAssets(_arg_1:GameSprite):void
@@ -108,6 +170,7 @@ package kabam.rotmg.ui.view
 				this.createEquippedGridBackground();
 				this.createEquippedGrid();
 				this.createInteractPanel(_arg_1);
+				this.toggleUI();
 			}
 
 			private function createInteractPanel(_arg_1:GameSprite):void
