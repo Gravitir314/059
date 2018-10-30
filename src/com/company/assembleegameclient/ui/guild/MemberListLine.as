@@ -152,7 +152,7 @@ package com.company.assembleegameclient.ui.guild
 			private function onPromote(_arg_1:MouseEvent):void
 			{
 				var _local_2:String = GuildUtil.rankToString(GuildUtil.promotedRank(this.rank_));
-				var _local_3:Dialog = new Dialog("", "", TextKey.PROMOTE_LEFTBUTTON, TextKey.PROMOTE_RIGHTBUTTON, "/promote");
+				var _local_3:Dialog = new Dialog("", "", TextKey.PROMOTE_LEFTBUTTON, TextKey.PROMOTE_RIGHTBUTTON);
 				_local_3.setTextParams(TextKey.PROMOTE_TEXT, {
 					"name": this.name_, "rank": _local_2
 				});
@@ -171,7 +171,7 @@ package com.company.assembleegameclient.ui.guild
 			private function onDemote(_arg_1:MouseEvent):void
 			{
 				var _local_2:String = GuildUtil.rankToString(GuildUtil.demotedRank(this.rank_));
-				var _local_3:Dialog = new Dialog("", "", TextKey.DEMOTE_LEFT, TextKey.DEMOTE_RIGHT, "/demote");
+				var _local_3:Dialog = new Dialog("", "", TextKey.DEMOTE_LEFT, TextKey.DEMOTE_RIGHT);
 				_local_3.setTextParams(TextKey.DEMOTE_TEXT, {
 					"name": this.name_, "rank": _local_2
 				});
@@ -189,7 +189,7 @@ package com.company.assembleegameclient.ui.guild
 
 			private function onRemove(_arg_1:MouseEvent):void
 			{
-				var _local_2:Dialog = new Dialog("", "", TextKey.REMOVE_LEFT, TextKey.REMOVE_RIGHT, "/removeFromGuild");
+				var _local_2:Dialog = new Dialog("", "", TextKey.REMOVE_LEFT, TextKey.REMOVE_RIGHT);
 				_local_2.setTextParams(TextKey.REMOVE_TEXT, {"name": this.name_});
 				_local_2.setTitleStringBuilder(new LineBuilder().setParams(TextKey.REMOVE_TITLE, {"name": this.name_}));
 				_local_2.addEventListener(Dialog.LEFT_BUTTON, this.onCancelDialog);

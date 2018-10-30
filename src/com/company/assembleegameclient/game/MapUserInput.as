@@ -512,8 +512,7 @@ package com.company.assembleegameclient.game
 			{
 				var _local_2:Number;
 				var _local_3:Player = this.gs_.map.player_;
-				doneAction(this.gs_, Tutorial.UPDATE_ACTION);
-				if (_local_3 != null)
+				if (_local_3)
 				{
 					_local_3.mousePos_.x = this.gs_.map.mouseX;
 					_local_3.mousePos_.y = this.gs_.map.mouseY;
@@ -536,7 +535,7 @@ package com.company.assembleegameclient.game
 						}
 						else
 						{
-							if ((((Parameters.data_.AAOn) || (this.autofire_)) || (Parameters.data_.AutoAbilityOn)))
+							if (Parameters.data_.AAOn || this.autofire_ || Parameters.data_.AutoAbilityOn)
 							{
 								if (!_local_3.isUnstable)
 								{
@@ -871,11 +870,7 @@ package com.company.assembleegameclient.game
 					case Parameters.data_.escapeToNexus2:
 						_local_4 = StaticInjectorContext.getInjector().getInstance(CloseAllPopupsSignal);
 						_local_4.dispatch();
-						this.gs_.gsc_.escape();
-						if (Parameters.data_.instaNexus)
-						{
-							this.gs_.dispatchEvent(Parameters.reconNexus);
-						}
+						this.gs_.dispatchEvent(Parameters.reconNexus);
 						this.exitGame.dispatch();
 						Parameters.data_.needsRandomRealm = false;
 						Parameters.save();
@@ -1147,7 +1142,6 @@ package com.company.assembleegameclient.game
 							Parameters.data_.stageScale = Parameters.oldFSmode;
 						}
 						this.gs_.hudView.toggleUI();
-						this.gs_.hudView.characterDetails.update(player); // TODO fix skin
 						this.gs_.hudView.characterDetails.setName(player.name_);
 						this.gs_.chatBox_.list.setVisibleItemCount();
 						this.gs_.chatBox_.list.removeOldestExcessVisible();

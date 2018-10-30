@@ -9,7 +9,7 @@ package kabam.rotmg.characters.deletion.view
 
 			public function DeletingCharacterView()
 			{
-				super(null, "DeletingCharacterView.text", null, null, "/deletingChar");
+				super(null, "DeletingCharacterView.text", null, null);
 			}
 
 		}

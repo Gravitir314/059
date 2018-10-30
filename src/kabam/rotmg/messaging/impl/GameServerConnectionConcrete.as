@@ -2615,6 +2615,10 @@ package kabam.rotmg.messaging.impl
 				{
 					Parameters.reconVault = new ReconnectEvent(new Server().setName("Vault").setAddress(this.server_.address).setPort(this.server_.port), Parameters.VAULT_GAMEID, false, this.charId_, 0, null, this.isFromArena_);
 				}
+				if (Parameters.reconTutor == null)
+				{
+					Parameters.reconTutor = new ReconnectEvent(new Server().setName("Tutorial").setAddress(this.server_.address).setPort(this.server_.port), Parameters.TUTORIAL_GAMEID, false, this.charId_, 0, null, this.isFromArena_);
+				}
 				if (Parameters.reconDaily == null)
 				{
 					Parameters.reconDaily = new ReconnectEvent(new Server().setName("Daily Quest Room").setAddress(this.server_.address).setPort(this.server_.port), Parameters.DAILYQUESTROOM_GAMEID, false, this.charId_, 0, null, this.isFromArena_);
@@ -2635,9 +2639,9 @@ package kabam.rotmg.messaging.impl
 				{
 					Parameters.reconDung.charId_ = this.charId_;
 				}
-				if (Parameters.reconOryx)
+				if (Parameters.reconTutor)
 				{
-					Parameters.reconOryx.charId_ = this.charId_;
+					Parameters.reconTutor.charId_ = this.charId_;
 				}
 				if (Parameters.reconDaily)
 				{
@@ -3129,7 +3133,7 @@ package kabam.rotmg.messaging.impl
 			{
 				Parameters.data_.gameVersion = _arg_1.errorDescription_;
 				Parameters.save();
-				var _local_2:Dialog = new Dialog(TextKey.CLIENT_UPDATE_TITLE, "", TextKey.CLIENT_UPDATE_LEFT_BUTTON, null, "/clientUpdate");
+				var _local_2:Dialog = new Dialog(TextKey.CLIENT_UPDATE_TITLE, "", TextKey.CLIENT_UPDATE_LEFT_BUTTON, null);
 				_local_2.setTextParams(TextKey.CLIENT_UPDATE_DESCRIPTION, {
 					"client": Parameters.data_.gameVersion,
 					"server": _arg_1.errorDescription_

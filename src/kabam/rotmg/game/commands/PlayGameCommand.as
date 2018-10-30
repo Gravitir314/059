@@ -21,9 +21,6 @@ package kabam.rotmg.game.commands
 
 	public class PlayGameCommand
 		{
-
-			public static const RECONNECT_DELAY:int = 250;
-
 			public static var currealm:String = "Nexus";
 			public static var curip:String = "0.0.0.0";
 			public static var visited:Array = [];
@@ -50,7 +47,7 @@ package kabam.rotmg.game.commands
 			{
 				if (!this.data.isNewGame)
 				{
-					this.socketServerModel.connectDelayMS = PlayGameCommand.RECONNECT_DELAY;
+					this.socketServerModel.connectDelayMS = Parameters.data_.reconDelay;
 				}
 				this.recordCharacterUseInSharedObject();
 				this.makeGameView();

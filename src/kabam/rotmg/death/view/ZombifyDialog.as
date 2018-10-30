@@ -22,7 +22,7 @@ package kabam.rotmg.death.view
 
 			public function ZombifyDialog()
 			{
-				this.dialog = new Dialog(TITLE, BODY, BUTTON, null, null);
+				this.dialog = new Dialog(TITLE, BODY, BUTTON, null);
 				this.dialog.offsetX = -100;
 				this.dialog.offsetY = 200;
 				this.dialog.addEventListener(Dialog.LEFT_BUTTON, this.onButtonClick);

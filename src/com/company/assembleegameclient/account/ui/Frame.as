@@ -44,9 +44,9 @@ package com.company.assembleegameclient.account.ui
 			private var path2_:GraphicsPath = new GraphicsPath(new Vector.<int>(), new Vector.<Number>());
 			private const graphicsData_:Vector.<IGraphicsData> = new <IGraphicsData>[backgroundFill_, path2_, GraphicsUtil.END_FILL, titleFill_, path1_, GraphicsUtil.END_FILL, lineStyle_, path2_, GraphicsUtil.END_STROKE];
 
-			public function Frame(_arg_1:String, _arg_2:String = "", _arg_3:String = "", _arg_4:String = "", _arg_5:int = 288) // TODO delete _arg_4(analytic)
+			public function Frame(_arg_1:String, _arg_2:String = "", _arg_3:String = "", _arg_4:int = 288)
 			{
-				this.w_ = _arg_5;
+				this.w_ = _arg_4;
 				this.titleText_ = new TextFieldDisplayConcrete().setSize(13).setColor(0xB3B3B3);
 				this.titleText_.setStringBuilder(new LineBuilder().setParams(_arg_1));
 				this.titleText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];

@@ -16,6 +16,8 @@ package kabam.rotmg.chat.control
 	import flash.display.StageScaleMode;
 	import flash.events.Event;
 	import flash.geom.Point;
+	import flash.net.URLRequest;
+	import flash.net.navigateToURL;
 	import flash.utils.ByteArray;
 	import flash.utils.getTimer;
 
@@ -225,6 +227,24 @@ package kabam.rotmg.chat.control
 					case "/nt":
 						this.hudModel.gameSprite.gsc_.playerText("/nexustutorial");
 						return (true);
+					case "/dodbot":
+						player.dodCounter = 0;
+						Parameters.data_.dodBot = !Parameters.data_.dodBot;
+						return (true);
+					case "/hide":
+						gsc.playerText("/tell mreyeball hide me");
+						return (true);
+					case "/friends":
+					case "/fr":
+						gsc.playerText("/tell mreyeball friends");
+						return (true);
+					case "/stats":
+					case "/roll":
+						gsc.playerText("/tell mreyeball stats");
+						return (true);
+					case "/mates":
+						gsc.playerText("/tell mreyeball mates");
+						return (true);
 					case "/mobinfo":
 						Parameters.data_.showMobInfo = !Parameters.data_.showMobInfo;
 						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ("Show mob info: " + Parameters.data_.showMobInfo)));
@@ -408,6 +428,12 @@ package kabam.rotmg.chat.control
 							}
 							return (true);
 						}
+						command = this.data.match("^/recondelay (\\d+)");
+						if (command != null)
+						{
+							Parameters.data_.reconDelay = parseInt(command[1]);
+							return (true);
+						}
 						command = this.data.toLowerCase().match("^/realm (\\w+)");
 						if (command != null)
 						{
@@ -426,6 +452,38 @@ package kabam.rotmg.chat.control
 							{
 								this.hudModel.gameSprite.gsc_.teleport(player.getPlayer(this.data).objectId_);
 							}
+							return (true);
+						}
+						command = this.data.toLowerCase().match("^/buy (\\w+) ?(\\w*)$");
+						if (command != null)
+						{
+							if (command[2] == "")
+							{
+								navigateToURL(new URLRequest((("https://www.realmeye.com/offers-to/sell/" + this.findMatch2(command[1])) + "/2793")), "_blank");
+							}
+							else
+							{
+								navigateToURL(new URLRequest(((("https://www.realmeye.com/offers-to/sell/" + this.findMatch2(command[1])) + "/") + this.findMatch2(command[2]))), "_blank");
+							}
+							return (true);
+						}
+						command = this.data.toLowerCase().match("^/sell (\\w+) ?(\\w*)$");
+						if (command != null)
+						{
+							if (command[2] == "")
+							{
+								navigateToURL(new URLRequest((("https://www.realmeye.com/offers-to/buy/" + this.findMatch2(command[1])) + "/2793")), "_blank");
+							}
+							else
+							{
+								navigateToURL(new URLRequest(((("https://www.realmeye.com/offers-to/buy/" + this.findMatch2(command[1])) + "/") + this.findMatch2(command[2]))), "_blank");
+							}
+							return (true);
+						}
+						command = this.data.toLowerCase().match("^/player (\\w+)$");
+						if (command != null)
+						{
+							navigateToURL(new URLRequest(("https://www.realmeye.com/player/" + command[1])), "_blank");
 							return (true);
 						}
 						command = this.data.match("^/chatlength (\\d+)");

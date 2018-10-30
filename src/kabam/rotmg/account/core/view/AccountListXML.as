@@ -1,10 +1,10 @@
-//kabam.rotmg.account.core.view.MoreXML
+//kabam.rotmg.account.core.view.AccountListXML
 
 package kabam.rotmg.account.core.view
 	{
 	import com.company.assembleegameclient.parameters.Parameters;
 
-	public class MoreXML
+	public class AccountListXML
 		{
 
 			public static var loginsVector:Array = Parameters.data_.logins;
@@ -13,7 +13,7 @@ package kabam.rotmg.account.core.view
 			public var logins:Vector.<String> = new Vector.<String>(0);
 			public var passwords:Vector.<String> = new Vector.<String>(0);
 
-			public function MoreXML()
+			public function AccountListXML()
 			{
 				this.makeTipsVector();
 			}

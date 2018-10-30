@@ -1,4 +1,4 @@
-//kabam.rotmg.account.core.view.MoreDialog
+//kabam.rotmg.account.core.view.AccountListDialog
 
 package kabam.rotmg.account.core.view
 	{
@@ -15,30 +15,37 @@ package kabam.rotmg.account.core.view
 	import flash.filters.DropShadowFilter;
 	import flash.net.FileReference;
 
+	import kabam.rotmg.account.core.signals.LoginSignal;
+	import kabam.rotmg.account.web.model.AccountData;
 	import kabam.rotmg.core.StaticInjectorContext;
 	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
 	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	public class MoreDialog extends Frame
+	public class AccountListDialog extends Frame
 		{
-
+			public var login:LoginSignal;
 			private var closeDialogs:CloseDialogsSignal;
 			private var deleteButton:Sprite;
 			private var scrollBar:Scrollbar;
-			private var container:MoreContainer;
+			private var container:AccountListContainer;
 			private var title:TextFieldDisplayConcrete;
 			private var file:FileReference;
 
-			public function MoreDialog()
+			public function AccountListDialog()
 			{
-				super("");
+				super("", "Edit", "Enter");
 				this.closeDialogs = StaticInjectorContext.getInjector().getInstance(CloseDialogsSignal);
+				this.login = StaticInjectorContext.getInjector().getInstance(LoginSignal);
 				w_ = 700;
 				h_ = 550;
-				this.container = new MoreContainer();
+				leftButton_.x = w_ - 150;
+				rightButton_.x = w_ - 50;
+				this.container = new AccountListContainer();
 				addChild(this.container);
 				addEventListener(MouseEvent.RIGHT_CLICK, this.onRightClick);
+				rightButton_.addEventListener(MouseEvent.CLICK, this.onRBClick);
+				leftButton_.addEventListener(MouseEvent.CLICK, this.onLBClick);
 				this.createScrollbar();
 				this.makeMask();
 				this.makeDeleteButton();
@@ -125,8 +132,6 @@ package kabam.rotmg.account.core.view
 				this.title.filters = [new DropShadowFilter(0, 0, 0)];
 				this.title.x = 5;
 				this.title.y = 3;
-				this.title.addEventListener(MouseEvent.MOUSE_OUT, onRollOut);
-				this.title.addEventListener(MouseEvent.MOUSE_OVER, onRollOver);
 				addChild(this.title);
 				this.deleteButton = new DeleteXGraphic();
 				this.deleteButton.addEventListener(MouseEvent.CLICK, this.onClose);
@@ -134,12 +139,25 @@ package kabam.rotmg.account.core.view
 				addChild(this.deleteButton);
 			}
 
-			private function onRollOut(_arg_1:MouseEvent):void
+			private function onRBClick(_arg_1:MouseEvent):void
 			{
-
+				if (AccountListContainer.selectedContainer == null) return;
+				var _local_1:AccountData = new AccountData();
+				_local_1.username = AccountListContainer.selectedContainer.title.getStringBuilder().getString();
+				if (_local_1.username.indexOf("@") != -1)
+				{
+					_local_1.password = AccountListContainer.selectedContainer.content.getStringBuilder().getString();
+					_local_1.secret = "";
+				}
+				else
+				{
+					_local_1.password = "";
+					_local_1.secret = AccountListContainer.selectedContainer.content.getStringBuilder().getString();
+				}
+				this.login.dispatch(_local_1);
 			}
 
-			private function onRollOver(_arg_1:MouseEvent):void
+			private function onLBClick(_arg_1:MouseEvent):void
 			{
 
 			}

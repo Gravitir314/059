@@ -11,7 +11,7 @@ package kabam.rotmg.account.core.view
 
 			public function BuyingDialog()
 			{
-				super(null, TextKey.BUYING_CHARACTER_SLOT, null, null, "/buyingCharSlot");
+				super(null, TextKey.BUYING_CHARACTER_SLOT, null, null);
 			}
 
 		}

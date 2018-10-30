@@ -79,6 +79,8 @@ package com.company.assembleegameclient.objects
 			private static const MAX_ATTACK_MULT:Number = 2;
 			private static const MAX_LOOT_DIST:Number = 1;
 			private static const VAULT_CHEST:int = 1284;
+			private static const DOD_PATH_X:Array = [125, 125, 132, 132, 129, 129, 132, 132, 130, 131, 129, 128];
+			private static const DOD_PATH_Y:Array = [228, 224, 223, 217, 217, 212, 212, 209, 208, 203, 203, 129];
 
 			public var xpTimer:int;
 			public var skinId:int;
@@ -87,6 +89,7 @@ package com.company.assembleegameclient.objects
 			public var creditsWereChanged:Signal = new Signal();
 			public var fameWasChanged:Signal = new Signal();
 			private var exitGame:ExitGameSignal;
+			private var closeAllPopups:CloseAllPopupsSignal;
 			private var famePortrait_:BitmapData = null;
 			public var lastSwap_:int = -1;
 			public var accountId_:String = "";
@@ -185,12 +188,14 @@ package com.company.assembleegameclient.objects
 			private var previousWeak:Boolean = false;
 			private var previousBerserk:Boolean = false;
 			private var previousDaze:Boolean = false;
+			public var dodCounter:int = 0;
 
 			public function Player(_arg_1:XML)
 			{
 				var _local_2:Injector = StaticInjectorContext.getInjector();
 				this.addTextLine = _local_2.getInstance(AddTextLineSignal);
 				this.exitGame = _local_2.getInstance(ExitGameSignal);
+				this.closeAllPopups = _local_2.getInstance(CloseAllPopupsSignal);
 				this.factory = _local_2.getInstance(CharacterFactory);
 				super(_arg_1);
 				this.attackMax_ = int(_arg_1.Attack.@max);
@@ -904,7 +909,7 @@ package com.company.assembleegameclient.objects
 						}
 					}
 				}
-				//this.attemptAutoAbility(_arg_1, _local_3, this.equipment_[1]);
+				this.attemptAutoAbility(_arg_1, _local_3, this.equipment_[1]);
 			}
 
 			public function attemptAutoAbility(_arg_1:Number, _arg_2:int = -1, _arg_3:int = 0):void
@@ -1873,8 +1878,7 @@ package com.company.assembleegameclient.objects
 						}
 						else
 						{
-							var close:CloseAllPopupsSignal = StaticInjectorContext.getInjector().getInstance(CloseAllPopupsSignal);
-							close.dispatch();
+							closeAllPopups.dispatch();
 							exitGame.dispatch();
 							map_.gs_.gsc_.escape();
 						}
@@ -2000,8 +2004,48 @@ package com.company.assembleegameclient.objects
 						return (false);
 					}
 					// AutoNexus END //
-					// Following //
+					// Doer of Deeds Bot //
 					var following:Boolean = false;
+					if (Parameters.data_.dodBot)
+					{
+						if (this.map_.name_ == Map.NEXUS)
+						{
+							dodCounter = 0;
+							this.map_.gs_.gsc_.playerText("/tutorial");
+							return (true);
+						}
+						if (this.map_.name_ == "Tutorial")
+						{
+							if (PointUtil.distanceSquaredXY(x_, y_, DOD_PATH_X[dodCounter], DOD_PATH_Y[dodCounter]) < 0.1)
+							{
+								dodCounter++;
+							}
+							if (dodCounter == DOD_PATH_X.length)
+							{
+								Parameters.data_.dodComplete++;
+								Parameters.save();
+								addTextLine.dispatch(ChatMessage.make("DoD Complete", "Completed " + Parameters.data_.dodComplete + " quests."));
+								dodCounter = 0;
+								this.map_.gs_.gsc_.playerText("/tutorial");
+								return (true);
+							}
+							if (this.followLanded)
+							{
+								this.followVec.x = 0;
+								this.followVec.y = 0;
+								this.followLanded = false;
+							}
+							else
+							{
+								this.followPos.x = DOD_PATH_X[dodCounter];
+								this.followPos.y = DOD_PATH_Y[dodCounter];
+								following = true;
+								this.follow(this.followPos.x, this.followPos.y);
+							}
+						}
+					}
+					// Doer of Deeds Bot END /
+					// Following //
 					if (followPos.x != 0 && followPos.y != 0)
 					{
 						if (Parameters.followingName && Parameters.followName != null && Parameters.followPlayer != null)

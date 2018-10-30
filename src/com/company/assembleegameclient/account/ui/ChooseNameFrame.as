@@ -19,9 +19,9 @@ package com.company.assembleegameclient.account.ui
 			public var gameSprite:AGameSprite;
 			private var nameInput:TextInputField;
 
-			public function ChooseNameFrame(_arg_1:AGameSprite, _arg_2:Boolean) // TODO delete _arg_2(analytic)
+			public function ChooseNameFrame(_arg_1:AGameSprite)
 			{
-				super(TextKey.CHOOSE_NAME_TITLE, TextKey.FRAME_CANCEL, TextKey.CHOOSE_NAME_CHOOSE, "/chooseName");
+				super(TextKey.CHOOSE_NAME_TITLE, TextKey.FRAME_CANCEL, TextKey.CHOOSE_NAME_CHOOSE);
 				this.gameSprite = _arg_1;
 				this.nameInput = new TextInputField(TextKey.CHOOSE_NAME_NAME, false);
 				this.nameInput.inputText_.restrict = "A-Za-z";

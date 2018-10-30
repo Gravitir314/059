@@ -15,7 +15,7 @@ package com.company.assembleegameclient.mapeditor
 
 			public function EditTilePropertiesFrame(_arg_1:String)
 			{
-				super("Tile properties", "Cancel", "Save", null);
+				super("Tile properties", "Cancel", "Save");
 				this.objectName_ = new TextInputField("Object Name", false);
 				if (_arg_1 != null)
 				{

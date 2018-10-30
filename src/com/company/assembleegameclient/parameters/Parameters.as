@@ -22,6 +22,8 @@ package com.company.assembleegameclient.parameters
 
 	import kabam.rotmg.text.model.TextKey;
 
+	import zfn.xinput.ControllerHandler;
+
 	public class Parameters
 		{
 			// ObjectLibrary.as
@@ -122,7 +124,7 @@ package com.company.assembleegameclient.parameters
 			public static var reconDung:ReconnectEvent = null;
 			public static var reconVault:ReconnectEvent = null;
 			public static var reconNexus:ReconnectEvent = null;
-			public static var reconOryx:ReconnectEvent = null;
+			public static var reconTutor:ReconnectEvent = null;
 			public static var reconDaily:ReconnectEvent = null;
 			public static var givingPotions:Boolean;
 			public static var receivingPots:Boolean;
@@ -1095,11 +1097,11 @@ package com.company.assembleegameclient.parameters
 				setDefault("spamPrism", false);
 				setDefault("instaNexus", true);
 				setDefault("showHighestDps", "off");
-				/*setDefaultControllerInput("ctrlEnterPortal", ControllerHandler.A_num_4);
+				setDefaultControllerInput("ctrlEnterPortal", ControllerHandler.A_num_4);
 				setDefaultControllerInput("ctrlTeleQuest", ControllerHandler.Y_num_7);
 				setDefaultControllerInput("ctrlNexus", ControllerHandler.B_num_5);
 				setDefaultControllerInput("ctrlAbility", ControllerHandler.X_num_6);
-				setDefaultControllerInput("ctrlItemMenu", ControllerHandler.LSTICK_CLICK_num_14);*/
+				setDefaultControllerInput("ctrlItemMenu", ControllerHandler.LSTICK_CLICK_num_14);
 				setDefault("allowController", true);
 				setDefault("useControllerNumber", 0);
 				setDefault("selectedItemColor", 0);
@@ -1128,6 +1130,9 @@ package com.company.assembleegameclient.parameters
 				setDefault("customUI", false);
 				setDefault("setTex1", -1);
 				setDefault("setTex2", -1);
+				setDefault("reconDelay", 250);
+				setDefault("dodBot", false);
+				setDefault("dodComplete", 0);
 			}
 
 

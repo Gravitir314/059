@@ -1,4 +1,4 @@
-//kabam.rotmg.account.core.view.MoreElement
+//kabam.rotmg.account.core.view.AccountListElement
 
 package kabam.rotmg.account.core.view
 	{
@@ -8,13 +8,13 @@ package kabam.rotmg.account.core.view
 	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	public class MoreElement extends Sprite
+	public class AccountListElement extends Sprite
 		{
 
 			public var title:TextFieldDisplayConcrete;
 			public var content:TextFieldDisplayConcrete;
 
-			public function MoreElement(_arg_1:String, _arg_2:String)
+			public function AccountListElement(_arg_1:String, _arg_2:String)
 			{
 				graphics.beginFill(0x545454);
 				graphics.drawRoundRect(0, 0, 670, 36, 8, 8);

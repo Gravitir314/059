@@ -14,6 +14,8 @@ package kabam.rotmg.game.view.components
 	import flash.display.Sprite;
 	import flash.events.MouseEvent;
 
+	import io.decagames.rotmg.pets.data.PetsModel;
+
 	import org.osflash.signals.Signal;
 
 	public class TabStripView extends Sprite
@@ -28,6 +30,7 @@ package kabam.rotmg.game.view.components
 
 			public var iconButtonFactory:IconButtonFactory;
 			public var imageFactory:ImageFactory;
+			public var petModel:PetsModel;
 			private var _width:Number;
 			private var _height:Number;
 			public var tabs:Vector.<TabView> = new Vector.<TabView>();

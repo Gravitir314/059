@@ -59,9 +59,9 @@ package com.company.assembleegameclient.ui.dialogs
 			protected const graphicsData_:Vector.<IGraphicsData> = new <IGraphicsData>[lineStyle_, backgroundFill_, path_, GraphicsUtil.END_FILL, GraphicsUtil.END_STROKE];
 			protected var uiWaiter:SignalWaiter = new SignalWaiter();
 
-			public function Dialog(_arg_1:String, _arg_2:String, _arg_3:String, _arg_4:String, _arg_5:String, _arg_6:Object = null) // TODO delete _arg_5(analytic)
+			public function Dialog(_arg_1:String, _arg_2:String, _arg_3:String, _arg_4:String, _arg_5:Object = null)
 			{
-				this.replaceTokens = _arg_6;
+				this.replaceTokens = _arg_5;
 				this.leftButtonKey = _arg_3;
 				this.rightButtonKey = _arg_4;
 				super();

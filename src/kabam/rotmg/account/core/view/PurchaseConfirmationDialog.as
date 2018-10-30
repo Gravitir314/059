@@ -11,7 +11,7 @@ package kabam.rotmg.account.core.view
 
 			public function PurchaseConfirmationDialog(_arg_1:Function)
 			{
-				super("Purchase confirmation", "Continue with purchase?", "Yes", "No", null);
+				super("Purchase confirmation", "Continue with purchase?", "Yes", "No");
 				this.confirmedHandler = _arg_1;
 			}
 

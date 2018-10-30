@@ -53,6 +53,7 @@ package kabam.rotmg.game.view.components
 
 			override public function initialize():void
 			{
+				this.view.petModel = this.petModel;
 				this.view.imageFactory = this.imageFactory;
 				this.view.iconButtonFactory = this.iconButtonFactory;
 				this.view.tabSelected.add(this.onTabSelected);

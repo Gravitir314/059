@@ -8,7 +8,7 @@ package kabam.rotmg.account.web.view
 	import kabam.rotmg.account.core.Account;
 	import kabam.rotmg.account.core.signals.LoginSignal;
 	import kabam.rotmg.account.core.signals.LogoutSignal;
-	import kabam.rotmg.account.core.view.MoreDialog;
+	import kabam.rotmg.account.core.view.AccountListDialog;
 	import kabam.rotmg.account.web.model.AccountData;
 	import kabam.rotmg.appengine.api.AppEngineClient;
 	import kabam.rotmg.build.api.BuildEnvironment;
@@ -57,7 +57,7 @@ package kabam.rotmg.account.web.view
 			{
 				if (Parameters.data_.logins != null)
 				{
-					this.openDialog.dispatch(new MoreDialog);
+					this.openDialog.dispatch(new AccountListDialog);
 				}
 			}
 

@@ -18,8 +18,6 @@ package kabam.rotmg.account.web
 	import kabam.rotmg.account.core.signals.OpenAccountInfoSignal;
 	import kabam.rotmg.account.core.signals.RegisterSignal;
 	import kabam.rotmg.account.core.signals.SendPasswordReminderSignal;
-	import kabam.rotmg.account.core.view.MoreContainer;
-	import kabam.rotmg.account.core.view.MoreContainerMediator;
 	import kabam.rotmg.account.web.commands.WebChangePasswordCommand;
 	import kabam.rotmg.account.web.commands.WebLoginCommand;
 	import kabam.rotmg.account.web.commands.WebLogoutCommand;
@@ -104,7 +102,6 @@ package kabam.rotmg.account.web
 				this.mediatorMap.map(WebAccountDetailDialog).toMediator(WebAccountDetailMediator);
 				this.mediatorMap.map(WebRegisterDialog).toMediator(WebRegisterMediator);
 				this.mediatorMap.map(WebLoginDialog).toMediator(WebLoginMediator);
-				this.mediatorMap.map(MoreContainer).toMediator(MoreContainerMediator);
 				this.mediatorMap.map(WebLoginDialogForced).toMediator(WebLoginMediatorForced);
 				this.mediatorMap.map(WebChangePasswordDialogForced).toMediator(WebChangePasswordMediatorForced);
 			}

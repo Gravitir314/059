@@ -96,7 +96,6 @@ package kabam.rotmg.ui.view
 				this.characterDetails = new CharacterDetailsView();
 				this.statMeters = new StatMetersView();
 				this.stats = new StatsView();
-				this.pet = new PetsTabContentView();
 				this.potions = new PotionInventoryView();
 			}
 
@@ -109,7 +108,6 @@ package kabam.rotmg.ui.view
 				addChild(this.characterDetails);
 				addChild(this.statMeters);
 				addChild(this.stats);
-				addChild(this.pet);
 				addChild(this.potions);
 			}
 
@@ -121,25 +119,14 @@ package kabam.rotmg.ui.view
 				this.equippedGridBG.visible = !_local_1;
 				this.characterDetails.visible = !_local_1;
 				this.tabStrip.visible = !_local_1;
-				if (this.inventory == null)
-				{
-					this.inventory = new InventoryGrid(this.player, this.player, 4);
-				}
-				if (this.backpack == null)
-				{
-					this.backpack = new InventoryGrid(this.player, this.player, 12);
-				}
-				this.inventory.x = this.INVENTORY_POSITION.x;
-				this.inventory.y = this.INVENTORY_POSITION.y;
-				this.backpack.x = this.BACKPACK_POSITION.x;
-				this.backpack.y = this.BACKPACK_POSITION.y;
-				this.inventory.visible = (_local_1 && mainView);
+				this.inventory.visible = (_local_1 && (mainView || this.pet == null));
 				this.backpack.visible = (_local_1 && this.player.hasBackpack_ && mainView);
 				this.stats.visible = (_local_1 && (!this.player.hasBackpack_ || !mainView));
-				this.pet.visible = (_local_1 && !mainView);
+				if (this.pet != null)
+				{
+					this.pet.visible = (_local_1 && !mainView);
+				}
 				this.potions.visible = _local_1;
-				addChild(this.inventory);
-				addChild(this.backpack);
 			}
 
 			private function positionAssets():void
@@ -158,8 +145,6 @@ package kabam.rotmg.ui.view
 				this.statMeters.y = this.STAT_METERS_POSITION.y;
 				this.stats.x = this.STATS_POSITION.x;
 				this.stats.y = this.STATS_POSITION.y;
-				this.pet.x = this.PET_POSITION.x;
-				this.pet.y = this.PET_POSITION.y;
 				this.potions.x = this.POTIONS_POSITION.x;
 				this.potions.y = this.POTIONS_POSITION.y;
 			}
@@ -170,6 +155,8 @@ package kabam.rotmg.ui.view
 				this.createEquippedGridBackground();
 				this.createEquippedGrid();
 				this.createInteractPanel(_arg_1);
+				this.createInventoryAndBackpack();
+				this.createPetWindow();
 				this.toggleUI();
 			}
 
@@ -179,6 +166,35 @@ package kabam.rotmg.ui.view
 				this.interactPanel.x = this.INTERACT_PANEL_POSITION.x;
 				this.interactPanel.y = this.INTERACT_PANEL_POSITION.y;
 				addChild(this.interactPanel);
+			}
+
+			private function createPetWindow():void
+			{
+				if (this.tabStrip.petModel.getActivePet())
+				{
+					this.pet = new PetsTabContentView();
+					this.pet.x = this.PET_POSITION.x;
+					this.pet.y = this.PET_POSITION.y;
+					addChild(this.pet);
+				}
+			}
+
+			private function createInventoryAndBackpack():void
+			{
+				if (this.inventory == null)
+				{
+					this.inventory = new InventoryGrid(this.player, this.player, 4);
+				}
+				if (this.backpack == null)
+				{
+					this.backpack = new InventoryGrid(this.player, this.player, 12);
+				}
+				this.inventory.x = this.INVENTORY_POSITION.x;
+				this.inventory.y = this.INVENTORY_POSITION.y;
+				this.backpack.x = this.BACKPACK_POSITION.x;
+				this.backpack.y = this.BACKPACK_POSITION.y;
+				addChild(this.inventory);
+				addChild(this.backpack);
 			}
 
 			private function createEquippedGrid():void
@@ -236,10 +252,13 @@ package kabam.rotmg.ui.view
 				this.equippedGrid.visible = _arg_1;
 				this.equippedGridBG.visible = (_arg_1 && !_local_1);
 				this.interactPanel.visible = _arg_1;
-				this.inventory.visible = (_arg_1 && _local_1 && mainView);
+				this.inventory.visible = (_arg_1 && _local_1 && (mainView || this.pet == null));
 				this.backpack.visible = (_arg_1 && _local_1 && player.hasBackpack_ && mainView);
-				this.stats.visible = (_arg_1 && _local_1 && !mainView);
-				this.pet.visible = (_arg_1 && _local_1 && !mainView);
+				this.stats.visible = (_arg_1 && _local_1 && (!mainView || !player.hasBackpack_));
+				if (this.pet != null)
+				{
+					this.pet.visible = (_arg_1 && _local_1 && !mainView);
+				}
 				this.potions.visible = (_arg_1 && _local_1);
 			}
 

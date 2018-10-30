@@ -42,7 +42,7 @@ package kabam.rotmg.game.view
 			{
 				if (this.account.isRegistered())
 				{
-					this.openDialog.dispatch(new ChooseNameFrame(this.view.gs_, this.view.buy_));
+					this.openDialog.dispatch(new ChooseNameFrame(this.view.gs_));
 				}
 				else
 				{
