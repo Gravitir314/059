@@ -43,6 +43,7 @@ package kabam.rotmg.messaging.impl
 	import com.company.assembleegameclient.objects.particles.ThrowEffect;
 	import com.company.assembleegameclient.objects.thrown.ThrowProjectileEffect;
 	import com.company.assembleegameclient.parameters.Parameters;
+	import com.company.assembleegameclient.screens.charrects.CurrentCharacterRect;
 	import com.company.assembleegameclient.sound.SoundEffectLibrary;
 	import com.company.assembleegameclient.ui.PicView;
 	import com.company.assembleegameclient.ui.dialogs.Dialog;
@@ -1249,6 +1250,11 @@ package kabam.rotmg.messaging.impl
 				var _local_2:Hello = (this.messages.require(HELLO) as Hello);
 				_local_2.buildVersion_ = Parameters.data_.gameVersion;
 				_local_2.gameId_ = gameId_;
+				if (CurrentCharacterRect.vaultSelect)
+				{
+					_local_2.gameId_ = Parameters.VAULT_GAMEID;
+					CurrentCharacterRect.vaultSelect = false;
+				}
 				if (Parameters.dailyCalendar1RunOnce)
 				{
 					_local_2.gameId_ = Parameters.DAILYQUESTROOM_GAMEID;

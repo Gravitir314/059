@@ -229,12 +229,18 @@ package kabam.rotmg.ui.view
 
 			private function setNonTradePanelAssetsVisible(_arg_1:Boolean):void
 			{
-				this.characterDetails.visible = _arg_1;
+				var _local_1:Boolean = (!Parameters.ssmode && Parameters.data_.customUI);
+				this.characterDetails.visible = (_arg_1 && !_local_1);
 				this.statMeters.visible = _arg_1;
-				this.tabStrip.visible = _arg_1;
+				this.tabStrip.visible = (_arg_1 && !_local_1);
 				this.equippedGrid.visible = _arg_1;
-				this.equippedGridBG.visible = _arg_1;
+				this.equippedGridBG.visible = (_arg_1 && !_local_1);
 				this.interactPanel.visible = _arg_1;
+				this.inventory.visible = (_arg_1 && _local_1 && mainView);
+				this.backpack.visible = (_arg_1 && _local_1 && player.hasBackpack_ && mainView);
+				this.stats.visible = (_arg_1 && _local_1 && !mainView);
+				this.pet.visible = (_arg_1 && _local_1 && !mainView);
+				this.potions.visible = (_arg_1 && _local_1);
 			}
 
 			public function tradeDone():void

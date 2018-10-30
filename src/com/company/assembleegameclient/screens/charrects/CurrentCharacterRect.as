@@ -40,6 +40,7 @@ package com.company.assembleegameclient.screens.charrects
 
 			public static var charnames:Vector.<String> = new Vector.<String>(0);
 			public static var charids:Vector.<int> = new Vector.<int>(0);
+			public static var vaultSelect:Boolean = false;
 
 			public const selected:Signal = new Signal();
 			public const deleteCharacter:Signal = new Signal();
@@ -98,6 +99,7 @@ package com.company.assembleegameclient.screens.charrects
 
 			private function onSelectVault(_arg_1:MouseEvent):void
 			{
+				vaultSelect = true;
 				this.selected.dispatch(this.char);
 			}
 

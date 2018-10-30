@@ -53,7 +53,6 @@ git clone https://github.com/Gravitir314/059.git
 - Hide non-locked players
 - Hide pets (Your will stay)
 - Ignore Ice and Push
-- Inventories Switch (?)
 - Lite stat monitor
 - Loot Preview
 - Low CPU Mode
@@ -85,3 +84,4 @@ git clone https://github.com/Gravitir314/059.git
 - Auto Aim
 - Auto Ability
 - FameBot
+- Inventories Switch
