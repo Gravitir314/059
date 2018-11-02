@@ -72,6 +72,7 @@ git clone https://github.com/Gravitir314/059.git
 - RC-Ability
 - RC-Quest-Following
 - RC-Tilt-Camera
+- RC-Select Items on Trade
 - Reconnects
 - Refresh Account
 - Safe Walk
@@ -92,4 +93,3 @@ git clone https://github.com/Gravitir314/059.git
 - DB Keys
 - Tomb Hack
 - Controller Input (Can't test)
-- RC-Select Items on Trade

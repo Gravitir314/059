@@ -1129,6 +1129,7 @@ package com.company.assembleegameclient.parameters
 				setDefault("msg4", "ready");
 				setDefault("anchorName", "");
 				setDefault("vialChecker", true);
+				setDefault("instaTradeSelect", false);
 			}
 
 

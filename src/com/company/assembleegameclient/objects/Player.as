@@ -10,6 +10,7 @@ package com.company.assembleegameclient.objects
 	import com.company.assembleegameclient.objects.particles.LevelUpEffect;
 	import com.company.assembleegameclient.parameters.Parameters;
 	import com.company.assembleegameclient.sound.SoundEffectLibrary;
+	import com.company.assembleegameclient.ui.TradeSlot;
 	import com.company.assembleegameclient.util.AnimatedChar;
 	import com.company.assembleegameclient.util.ConditionEffect;
 	import com.company.assembleegameclient.util.FameUtil;
@@ -188,6 +189,9 @@ package com.company.assembleegameclient.objects
 			private var previousBerserk:Boolean = false;
 			private var previousDaze:Boolean = false;
 			public var dodCounter:int = 0;
+			public var select_:int = -1;
+			private var nextSelect:int = 0;
+			private var loopStart:int = 4;
 
 			public function Player(_arg_1:XML)
 			{
@@ -2191,6 +2195,31 @@ package com.company.assembleegameclient.objects
 						counter++;
 					}
 					// Switch Inventories END //
+					// Select Trade Items //
+					if (this.select_ != -1 && getTimer() >= this.nextSelect)
+					{
+						counter = this.loopStart;
+						while (counter < 12)
+						{
+							var slot:TradeSlot = this.naturalize(counter - 4);
+							if (slot.item_ == this.select_)
+							{
+								this.selectSlot(slot);
+								this.loopStart = (counter + 1);
+								if (counter != 11)
+								{
+									break;
+								}
+							}
+							if (counter == 11)
+							{
+								this.select_ = -1;
+								this.loopStart = 4;
+							}
+							counter++;
+						}
+					}
+					// Select Trade Items END //
 					// Quest HUD //
 					var questId:int = -1;
 					if (map_.quest_.getObject() != null)
@@ -3954,6 +3983,28 @@ package com.company.assembleegameclient.objects
 					}
 				}
 				super.removeFromMap();
+			}
+
+			private function selectSlot(_arg_1:TradeSlot):void
+			{
+				var _local_2:int;
+				var _local_3:Vector.<Boolean> = new <Boolean>[false, false, false, false];
+				this.nextSelect = (getTimer() + 175);
+				_arg_1.setIncluded((!(_arg_1.included_)));
+				_local_2 = 4;
+				while (_local_2 < 12)
+				{
+					_local_3[_local_2] = map_.gs_.hudView.tradePanel.myInv_.slots_[_local_2].included_;
+					_local_2++;
+				}
+				map_.gs_.gsc_.changeTrade(_local_3);
+				map_.gs_.hudView.tradePanel.tradeButton_.reset();
+			}
+
+			private function naturalize(_arg_1:int):TradeSlot
+			{
+				var _local_2:Vector.<int> = new <int>[4, 8, 5, 9, 6, 10, 7, 11];
+				return (map_.gs_.hudView.tradePanel.myInv_.slots_[_local_2[_arg_1]]);
 			}
 
 			private function findSlots():void

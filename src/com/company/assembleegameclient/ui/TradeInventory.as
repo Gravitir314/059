@@ -3,6 +3,9 @@
 package com.company.assembleegameclient.ui
 	{
 	import com.company.assembleegameclient.game.AGameSprite;
+	import com.company.assembleegameclient.objects.ObjectLibrary;
+	import com.company.assembleegameclient.objects.Player;
+	import com.company.assembleegameclient.parameters.Parameters;
 	import com.company.ui.BaseSimpleText;
 	import com.greensock.plugins.DropShadowFilterPlugin;
 
@@ -64,6 +67,7 @@ package com.company.assembleegameclient.ui
 					if (((_arg_4) && (_local_6.tradeable_)))
 					{
 						_local_7.addEventListener(MouseEvent.MOUSE_DOWN, this.onSlotClick);
+						_local_7.addEventListener(MouseEvent.RIGHT_CLICK, this.selectAll);
 					}
 					this.slots_.push(_local_7);
 					addChild(_local_7);
@@ -171,6 +175,41 @@ package com.company.assembleegameclient.ui
 				var _local_2:TradeSlot = (_arg_1.currentTarget as TradeSlot);
 				_local_2.setIncluded((!(_local_2.included_)));
 				dispatchEvent(new Event(Event.CHANGE));
+			}
+
+			private function selectAll(_arg_1:MouseEvent):void
+			{
+				if (Parameters.data_.instaTradeSelect)
+				{
+					this.selectAllInstantly();
+				}
+				else
+				{
+					this.gs_.map.player_.select_ = (_arg_1.currentTarget as TradeSlot).item_;
+				}
+			}
+
+			private function selectAllInstantly():void
+			{
+				var _local_1:int;
+				var _local_2:XML;
+				var _local_3:Vector.<Boolean> = new <Boolean>[false, false, false, false, false, false, false, false, false, false, false, false];
+				var _local_4:Player = this.gs_.map.player_;
+				_local_1 = 4;
+				while (_local_1 < 12)
+				{
+					if (_local_4.equipment_[_local_1] != -1)
+					{
+						_local_2 = ObjectLibrary.xmlLibrary_[_local_4.equipment_[_local_1]];
+						if (!_local_2.hasOwnProperty("Soulbound"))
+						{
+							_local_3[_local_1] = true;
+							this.slots_[_local_1].setIncluded((!(this.slots_[_local_1].included_)));
+						}
+					}
+					_local_1++;
+				}
+				this.gs_.gsc_.changeTrade(_local_3);
 			}
 
 
