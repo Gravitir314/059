@@ -614,6 +614,7 @@ package com.company.assembleegameclient.map
 						_local_14.draw(this.graphicsData_, _arg_1, _arg_2);
 					}
 				}
+				this.visible_.sortOn(VISIBLE_SORT_FIELDS, VISIBLE_SORT_PARAMS);
 				if (Parameters.data_.drawShadows)
 				{
 					for each (_local_14 in this.visible_)
