@@ -1542,21 +1542,14 @@ package com.company.assembleegameclient.objects
 				_arg_1.push(this.hpbarBackFill_);
 				_arg_1.push(this.hpbarBackPath_);
 				_arg_1.push(GraphicsUtil.END_FILL);
-				var _local_8:int = ((this == this.map_.player_) ? this.map_.player_.clientHp : this.hp_);
-				if (_local_8 > 0)
+				var hp:int = (this == this.map_.player_) ? this.map_.player_.clientHp : this.hp_;
+				if (hp > 0)
 				{
-					_local_6 = (_local_8 / this.maxHP_);
+					_local_6 = (hp / this.maxHP_);
 					_local_7 = ((_local_6 * 2) * _local_3);
 					this.hpbarPath_.data.length = 0;
 					(this.hpbarPath_.data as Vector.<Number>).push((posS_[0] - _local_3), (posS_[1] + _arg_2), ((posS_[0] - _local_3) + _local_7), (posS_[1] + _arg_2), ((posS_[0] - _local_3) + _local_7), ((posS_[1] + _arg_2) + _local_4), (posS_[0] - _local_3), ((posS_[1] + _arg_2) + _local_4));
-					if (Parameters.ssmode)
-					{
-						this.hpbarFill_.color = ((_local_8 < 0.5) ? ((_local_8 < 0.2) ? 14684176 : 16744464) : 0x10FF00);
-					}
-					else
-					{
-						this.hpbarFill_.color = uint(Character.green2red(_local_8 * 100));
-					}
+					this.hpbarFill_.color = ((_local_6 < 0.5) ? ((_local_6 < 0.2) ? 14684176 : 16744464) : 0x10FF00);
 					_arg_1.push(this.hpbarFill_);
 					_arg_1.push(this.hpbarPath_);
 					_arg_1.push(GraphicsUtil.END_FILL);
