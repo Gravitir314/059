@@ -210,7 +210,7 @@ package kabam.rotmg.chat.control
 					{
 						SoundCustom.play("ding");
 					}
-					if (Parameters.data_.AutoResponder)
+					if (Parameters.data_.AutoResponder) // TODO add LoD
 					{
 						if (_arg_1.name_ == "#Thessal the Mermaid Goddess" && _arg_1.text_ == "Is King Alexander alive?")
 						{

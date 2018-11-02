@@ -39,6 +39,7 @@ git clone https://github.com/Gravitir314/059.git
 - Auto Nexus
 - Auto Responder
 - Auto Sync HP
+- Auto Version Updater
 - Auto Loot (Commands not tested)
 - Big Loot Bags
 - Change Dye
@@ -49,10 +50,12 @@ git clone https://github.com/Gravitir314/059.git
 - Disable Shot Rotation
 - Even Lower Graphics Mode
 - Event Notification
+- FameBot
 - Full-Screen V3
 - Hide non-locked players
 - Hide pets (Your will stay)
 - Ignore Ice and Push
+- Inventories Switch
 - Lite stat monitor
 - Loot Preview
 - Low CPU Mode
@@ -64,11 +67,13 @@ git clone https://github.com/Gravitir314/059.git
 - No Trade Delay
 - Percent of Damage
 - Projectile No-Clip
+- Player Following (Portals/Nexus too)
 - Quest Bar (CC Edition)
 - RC-Ability
 - RC-Quest-Following
 - RC-Tilt-Camera
 - Reconnects
+- Refresh Account
 - Safe Walk
 - ScreenShot Mode
 - Teleport to Anchor
@@ -79,9 +84,12 @@ git clone https://github.com/Gravitir314/059.git
 - Transparent players
 - Vault Switch
 - Vaults Preview
+- Vial Checker (Not tested)
 - Weapon Offset
 ## TODO
 - Auto Aim
 - Auto Ability
-- FameBot
-- Inventories Switch
+- DB Keys
+- Tomb Hack
+- Controller Input (Can't test)
+- RC-Select Items on Trade

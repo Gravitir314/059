@@ -55,7 +55,7 @@ package kabam.rotmg.mysterybox.services
 					this.logger.warn("GetMysteryBox.onComplete: Request failed.");
 					completeTask(true);
 				}
-				reset(); // TODO need this?
+				reset();
 			}
 
 			private function handleOkay(_arg_1:*):void

@@ -56,8 +56,8 @@ package com.company.assembleegameclient.appengine
 			{
 				var _local_8:AnimatedChar = AnimatedChars.getAnimatedChar(String(_arg_2.AnimatedTexture.File), int(_arg_2.AnimatedTexture.Index));
 				var _local_9:MaskedImage = _local_8.imageFromDir(_arg_3, _arg_4, _arg_5);
-				var _local_10:int = ((_arg_1 != null) ? _arg_1.tex1() : null);
-				var _local_11:int = ((_arg_1 != null) ? _arg_1.tex2() : null);
+				var _local_10:int = ((_arg_1 != null) ? _arg_1.tex1() : 0);
+				var _local_11:int = ((_arg_1 != null) ? _arg_1.tex2() : 0);
 				var _local_12:BitmapData = TextureRedrawer.resize(_local_9.image_, _local_9.mask_, 100, false, _local_10, _local_11);
 				_local_12 = GlowRedrawer.outlineGlow(_local_12, 0);
 				if (!_arg_6)
@@ -76,8 +76,8 @@ package com.company.assembleegameclient.appengine
 
 			public static function compare(_arg_1:SavedCharacter, _arg_2:SavedCharacter):Number
 			{
-				var _local_3:Number = ((Parameters.data_.charIdUseMap.hasOwnProperty(_arg_1.charId())) ? Parameters.data_.charIdUseMap[_arg_1.charId()] : 0);
-				var _local_4:Number = ((Parameters.data_.charIdUseMap.hasOwnProperty(_arg_2.charId())) ? Parameters.data_.charIdUseMap[_arg_2.charId()] : 0);
+				var _local_3:Number = ((Parameters.data_.charIdUseMap.hasOwnProperty(_arg_1.charId().toString())) ? Parameters.data_.charIdUseMap[_arg_1.charId()] : 0);
+				var _local_4:Number = ((Parameters.data_.charIdUseMap.hasOwnProperty(_arg_2.charId().toString())) ? Parameters.data_.charIdUseMap[_arg_2.charId()] : 0);
 				if (_local_3 != _local_4)
 				{
 					return (_local_4 - _local_3);

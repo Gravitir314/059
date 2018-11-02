@@ -81,7 +81,7 @@ package com.company.assembleegameclient.ui.panels.mediators
 					this.currentRunModel.saveCurrentUserInfo();
 					_local_1 = this.injector.getInstance(GetBestArenaRunTask);
 					_local_1.start();
-					_local_2 = (this.messages.require(GameServerConnection.ENTER_ARENA) as EnterArena);
+					_local_2 = (this.messages.require(GameServerConnection.ENTERARENA) as EnterArena);
 					_local_2.currency = Currency.FAME;
 					this.socketServer.sendMessage(_local_2);
 					this.exitSignal.dispatch();
@@ -121,7 +121,7 @@ package com.company.assembleegameclient.ui.panels.mediators
 							this.currentRunModel.saveCurrentUserInfo();
 							_local_1 = this.injector.getInstance(GetBestArenaRunTask);
 							_local_1.start();
-							_local_2 = (this.messages.require(GameServerConnection.ENTER_ARENA) as EnterArena);
+							_local_2 = (this.messages.require(GameServerConnection.ENTERARENA) as EnterArena);
 							_local_2.currency = Currency.GOLD;
 							this.socketServer.sendMessage(_local_2);
 							this.exitSignal.dispatch();

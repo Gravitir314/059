@@ -4,45 +4,12 @@ package kabam.rotmg.servers.api
 	{
 	public class Server
 		{
-			public static var serverAbbreviations:Array; // TODO add parser
-
 			public var name:String;
 			public var address:String;
 			public var port:int;
 			public var latLong:LatLong;
 			public var usage:Number;
 			public var isAdminOnly:Boolean;
-
-			public function Server()
-			{
-				serverAbbreviations = [];
-				serverAbbreviations["proxy"] = "Proxy";
-				serverAbbreviations["usw3"] = "USWest3";
-				serverAbbreviations["usw2"] = "USWest2";
-				serverAbbreviations["usw"] = "USWest";
-				serverAbbreviations["ussw"] = "USSouthWest";
-				serverAbbreviations["uss3"] = "USSouth3";
-				serverAbbreviations["uss2"] = "USSouth2";
-				serverAbbreviations["uss"] = "USSouth";
-				serverAbbreviations["usnw"] = "USNorthWest";
-				serverAbbreviations["usmw2"] = "USMidWest2";
-				serverAbbreviations["usmw"] = "USMidWest";
-				serverAbbreviations["use3"] = "USEast3";
-				serverAbbreviations["use2"] = "USEast2";
-				serverAbbreviations["use"] = "USEast";
-				serverAbbreviations["euw2"] = "EUWest2";
-				serverAbbreviations["euw"] = "EUWest";
-				serverAbbreviations["eusw"] = "EUSouthWest";
-				serverAbbreviations["eus"] = "EUSouth";
-				serverAbbreviations["eun2"] = "EUNorth2";
-				serverAbbreviations["eun"] = "EUNorth";
-				serverAbbreviations["eue"] = "EUEast";
-				serverAbbreviations["ase"] = "AsiaSouthEast";
-				serverAbbreviations["ae"] = "AsiaEast";
-				serverAbbreviations["aus"] = "Australia";
-				serverAbbreviations["au"] = "Australia";
-				super();
-			}
 
 			public function setName(_arg_1:String):Server
 			{

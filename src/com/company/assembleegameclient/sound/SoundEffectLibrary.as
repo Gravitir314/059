@@ -15,6 +15,7 @@ package com.company.assembleegameclient.sound
 	import kabam.rotmg.application.api.ApplicationSetup;
 	import kabam.rotmg.core.StaticInjectorContext;
 
+	import zfn.sound.SoundAssets;
 	import zfn.sound.SoundCustom;
 
 	public class SoundEffectLibrary
@@ -33,7 +34,7 @@ package com.company.assembleegameclient.sound
 
 			public static function makeSound(_arg_1:String):Sound
 			{
-				//return (SoundAssets.grab(_arg_1)); TODO need this?
+				return (SoundAssets.grab(_arg_1));
 				var _local_2:Sound = new Sound();
 				_local_2.addEventListener(IOErrorEvent.IO_ERROR, onIOError);
 				_local_2.load(makeSoundRequest(_arg_1));
@@ -66,11 +67,7 @@ package com.company.assembleegameclient.sound
 			public static function playCustomSFX(_arg_1:String, _arg_2:Number = 1):void
 			{
 				var _local_7:Number;
-				var _local_5:Sound = load(_arg_1);
-				if (!_local_5)
-				{
-					_local_5 = SoundCustom.grab(_arg_1);
-				}
+				var _local_5:Sound = SoundCustom.grab(_arg_1);
 				if (!_local_5)
 				{
 					return;

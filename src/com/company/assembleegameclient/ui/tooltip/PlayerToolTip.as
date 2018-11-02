@@ -52,7 +52,7 @@ package com.company.assembleegameclient.ui.tooltip
 					this.rankText_.y = _local_2;
 					addChild(this.rankText_);
 					_local_2 = (_local_2 + 30);
-					if (((!(_arg_1.guildName_ == null)) && (!(_arg_1.guildName_ == ""))))
+					if (_arg_1.guildName_ != null && _arg_1.guildName_ != "")
 					{
 						this.guildText_ = new GuildText(this.player_.guildName_, this.player_.guildRank_, 136);
 						this.guildText_.x = 6;

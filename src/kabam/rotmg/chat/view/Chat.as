@@ -13,7 +13,7 @@ package kabam.rotmg.chat.view
 			public var list:ChatList;
 			private var input:ChatInput;
 			private var notAllowed:ChatInputNotAllowed;
-			public var model:ChatModel; // TODO public or private?
+			public var model:ChatModel;
 
 			public function Chat()
 			{

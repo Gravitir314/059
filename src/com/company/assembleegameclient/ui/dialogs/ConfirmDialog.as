@@ -15,7 +15,7 @@ package com.company.assembleegameclient.ui.dialogs
 			public function ConfirmDialog(_arg_1:String, _arg_2:String, _arg_3:Function)
 			{
 				this._callback = _arg_3;
-				super(_arg_1, _arg_2, "Cancel", "OK", null);
+				super(_arg_1, _arg_2, "Cancel", "OK");
 				addEventListener(Dialog.LEFT_BUTTON, this.onCancel);
 				addEventListener(Dialog.RIGHT_BUTTON, this.onConfirm);
 			}

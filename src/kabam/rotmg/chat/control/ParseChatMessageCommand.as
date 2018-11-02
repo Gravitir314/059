@@ -397,7 +397,7 @@ package kabam.rotmg.chat.control
 					case "/swap":
 						if (player.hasBackpack_)
 						{
-							player.switchItems_ = true;
+							Parameters.switchItems = true;
 						}
 						else
 						{
@@ -697,7 +697,7 @@ package kabam.rotmg.chat.control
 								Parameters.followPlayer = object;
 								Parameters.followName = object.name_;
 								Parameters.followingName = true;
-								this.hudModel.gameSprite.map.player_.textNotification(("Following to " + object.name_));
+								this.hudModel.gameSprite.map.player_.textNotification("Following to " + object.name_);
 							}
 							else
 							{

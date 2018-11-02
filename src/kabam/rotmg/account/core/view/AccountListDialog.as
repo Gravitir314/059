@@ -4,22 +4,30 @@ package kabam.rotmg.account.core.view
 	{
 	import com.company.assembleegameclient.account.ui.Frame;
 	import com.company.assembleegameclient.parameters.Parameters;
+	import com.company.assembleegameclient.ui.DeprecatedClickableText;
 	import com.company.assembleegameclient.ui.Scrollbar;
 	import com.company.rotmg.graphics.DeleteXGraphic;
+	import com.company.util.KeyCodes;
+	import com.greensock.plugins.DropShadowFilterPlugin;
 
 	import flash.display.Graphics;
 	import flash.display.Shape;
 	import flash.display.Sprite;
 	import flash.events.Event;
+	import flash.events.KeyboardEvent;
 	import flash.events.MouseEvent;
 	import flash.filters.DropShadowFilter;
 	import flash.net.FileReference;
 
+	import kabam.lib.tasks.Task;
 	import kabam.rotmg.account.core.signals.LoginSignal;
 	import kabam.rotmg.account.web.model.AccountData;
 	import kabam.rotmg.core.StaticInjectorContext;
+	import kabam.rotmg.core.signals.TaskErrorSignal;
 	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
+	import kabam.rotmg.dialogs.control.OpenDialogSignal;
 	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
 	public class AccountListDialog extends Frame
@@ -27,31 +35,126 @@ package kabam.rotmg.account.core.view
 			public var login:LoginSignal;
 			private var closeDialogs:CloseDialogsSignal;
 			private var deleteButton:Sprite;
+			private var deleteAccButton:DeprecatedClickableText;
 			private var scrollBar:Scrollbar;
 			private var container:AccountListContainer;
 			private var title:TextFieldDisplayConcrete;
+			private var openDialog:OpenDialogSignal;
+			private var helpButton:DeprecatedClickableText;
+			private var enterButton:DeprecatedClickableText;
+			private var editButton:DeprecatedClickableText;
+			private var errorText_:TextFieldDisplayConcrete;
+			private var loginError:TaskErrorSignal;
 			private var file:FileReference;
 
 			public function AccountListDialog()
 			{
-				super("", "Edit", "Enter");
-				this.closeDialogs = StaticInjectorContext.getInjector().getInstance(CloseDialogsSignal);
-				this.login = StaticInjectorContext.getInjector().getInstance(LoginSignal);
+				super("", "", "");
+				this.initialize();
 				w_ = 700;
 				h_ = 550;
-				leftButton_.x = w_ - 150;
-				rightButton_.x = w_ - 50;
 				this.container = new AccountListContainer();
 				addChild(this.container);
 				addEventListener(MouseEvent.RIGHT_CLICK, this.onRightClick);
-				rightButton_.addEventListener(MouseEvent.CLICK, this.onRBClick);
-				leftButton_.addEventListener(MouseEvent.CLICK, this.onLBClick);
-				this.createScrollbar();
+				if (this.container.articles.logins.length > 11)
+				{
+					this.makeScrollbar();
+				}
 				this.makeMask();
 				this.makeDeleteButton();
+				this.makeButtons();
+				this.loginError.add(this.onLoginError);
+				addEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown);
+				addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
 			}
 
-			private function createScrollbar():void
+			private function initialize():void
+			{
+				this.closeDialogs = StaticInjectorContext.getInjector().getInstance(CloseDialogsSignal);
+				this.login = StaticInjectorContext.getInjector().getInstance(LoginSignal);
+				this.openDialog = StaticInjectorContext.getInjector().getInstance(OpenDialogSignal);
+				this.loginError = StaticInjectorContext.getInjector().getInstance(TaskErrorSignal);
+			}
+
+			private function onRemovedFromStage(_arg_1:Event):void
+			{
+				removeEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown);
+				removeEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
+			}
+
+			private function onKeyDown(_arg_1:KeyboardEvent):void
+			{
+				if (_arg_1.keyCode == KeyCodes.ENTER)
+				{
+					this.onRBClick(null);
+				}
+			}
+
+			private function onLoginError(_arg_1:Task):void
+			{
+				AccountListContainer.setColor(16549442);
+				this.errorText_ = new TextFieldDisplayConcrete().setSize(12).setColor(16549442);
+				this.errorText_.setStringBuilder(new LineBuilder().setParams(_arg_1.error));
+				this.errorText_.setMultiLine(true);
+				this.errorText_.x = AccountListContainer.selectedContainer.x + (w_ - 200);
+				this.errorText_.y = AccountListContainer.selectedContainer.y + 3;
+				this.errorText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
+				addChild(this.errorText_);
+			}
+
+			private function makeButtons():void
+			{
+				this.helpButton = new DeprecatedClickableText(18, true, "Help");
+				this.helpButton.buttonMode = true;
+				this.helpButton.x = 20;
+				this.helpButton.y = (this.h_ - 52);
+				this.helpButton.addEventListener(MouseEvent.CLICK, this.onHelpClick);
+				addChild(this.helpButton);
+				this.deleteAccButton = new DeprecatedClickableText(18, true, "Delete");
+				this.deleteAccButton.buttonMode = true;
+				this.deleteAccButton.x = w_ - 275;
+				this.deleteAccButton.y = (this.h_ - 52);
+				this.deleteAccButton.addEventListener(MouseEvent.CLICK, this.onDeleteClick);
+				addChild(this.deleteAccButton);
+				this.editButton = new DeprecatedClickableText(18, true, "Edit");
+				this.editButton.buttonMode = true;
+				this.editButton.x = w_ - 175;
+				this.editButton.y = (this.h_ - 52);
+				this.editButton.addEventListener(MouseEvent.CLICK, this.onLBClick);
+				addChild(this.editButton);
+				this.enterButton = new DeprecatedClickableText(18, true, "Enter");
+				this.enterButton.buttonMode = true;
+				this.enterButton.x = w_ - 100;
+				this.enterButton.y = (this.h_ - 52);
+				this.enterButton.addEventListener(MouseEvent.CLICK, this.onRBClick);
+				addChild(this.enterButton);
+			}
+
+			private function onDeleteClick(_arg_1:MouseEvent):void
+			{
+				if (AccountListContainer.selectedContainer == null) return;
+				var elem:AccountListElement = AccountListContainer.selectedContainer;
+				for (var i:int = 0; i < Parameters.data_.logins.length; i++)
+				{
+					if (elem.guid.textField.text == Parameters.data_.logins[i])
+					{
+						Parameters.data_.usernames.splice(i, 1);
+						Parameters.data_.logins.splice(i, 1);
+						Parameters.data_.passwords.splice(i, 1);
+						Parameters.save();
+						break;
+					}
+				}
+				this.openDialog.dispatch(new AccountListDialog);
+			}
+
+			private function onHelpClick(_arg_1:MouseEvent):void
+			{
+				AccountListContainer.selectedContainer = null;
+				this.openDialog.dispatch(new AccountListHelpDialog);
+			}
+
+			private function makeScrollbar():void
 			{
 				this.scrollBar = new Scrollbar(16, 510);
 				this.scrollBar.x = 674;
@@ -143,23 +246,26 @@ package kabam.rotmg.account.core.view
 			{
 				if (AccountListContainer.selectedContainer == null) return;
 				var _local_1:AccountData = new AccountData();
-				_local_1.username = AccountListContainer.selectedContainer.title.getStringBuilder().getString();
+				_local_1.username = AccountListContainer.selectedContainer.guid.getStringBuilder().getString();
 				if (_local_1.username.indexOf("@") != -1)
 				{
-					_local_1.password = AccountListContainer.selectedContainer.content.getStringBuilder().getString();
+					_local_1.password = AccountListContainer.selectedContainer.pass.getStringBuilder().getString();
 					_local_1.secret = "";
 				}
 				else
 				{
 					_local_1.password = "";
-					_local_1.secret = AccountListContainer.selectedContainer.content.getStringBuilder().getString();
+					_local_1.secret = AccountListContainer.selectedContainer.pass.getStringBuilder().getString();
 				}
 				this.login.dispatch(_local_1);
 			}
 
 			private function onLBClick(_arg_1:MouseEvent):void
 			{
-
+				if (AccountListContainer.selectedContainer != null)
+				{
+					this.openDialog.dispatch(new AccountListEditDialog);
+				}
 			}
 
 			public function onRightClick(_arg_1:MouseEvent):void
@@ -185,11 +291,13 @@ package kabam.rotmg.account.core.view
 						var match:Array = matches[counter].match("[\"\']([\\w-@.]+)[\"\']: [\"\']([\\s\\S]*?)[\"\']");
 						if (Parameters.data_.logins.indexOf(match[1]) == -1)
 						{
+							Parameters.data_.usernames.push("");
 							Parameters.data_.logins.push(match[1]);
 							Parameters.data_.passwords.push(match[2]);
 						}
 					}
 				}
+				this.openDialog.dispatch(new AccountListDialog);
 			}
 
 			private function onClose(_arg_1:MouseEvent):void

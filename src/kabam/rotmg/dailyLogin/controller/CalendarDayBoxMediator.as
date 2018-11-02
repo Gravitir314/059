@@ -56,7 +56,7 @@ package kabam.rotmg.dailyLogin.controller
 				this.view.removeEventListener(MouseEvent.CLICK, this.onClickHandler);
 				if ((((this.hudModel.gameSprite.map.name_ == Map.DAILY_QUEST_ROOM) && (!(this.view.day.claimKey == ""))) && (!(this.view.day.isClaimed))))
 				{
-					_local_2 = (this.messages.require(GameServerConnection.CLAIM_LOGIN_REWARD_MSG) as ClaimDailyRewardMessage);
+					_local_2 = (this.messages.require(GameServerConnection.CLAIMLOGINREWARDMSG) as ClaimDailyRewardMessage);
 					_local_2.claimKey = this.view.day.claimKey;
 					_local_2.type = this.view.getDay().calendarType;
 					this.socketServer.sendMessage(_local_2);

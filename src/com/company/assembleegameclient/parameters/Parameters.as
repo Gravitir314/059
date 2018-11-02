@@ -27,6 +27,7 @@ package com.company.assembleegameclient.parameters
 	public class Parameters
 		{
 			// ObjectLibrary.as
+			// Update to X31.0.2
 			// Fix typo || clean code
 			// [GetPackagesTask.as, GetMysteryBoxesTask.as, Player.as, MapUserInput.as, GameServerConnectionConcrete.as, ParseChatMessageCommand.as]
 			public static const PORT:int = 2050;
@@ -159,6 +160,8 @@ package com.company.assembleegameclient.parameters
 			public static var playerSkin:int = -1;
 			public static var PlayerTex1:int = -1;
 			public static var PlayerTex2:int = -1;
+			public static var switchItems:Boolean = false;
+			public static var vialHolders:Array = [];
 
 			public static function setTimerPhases():void
 			{
@@ -910,7 +913,7 @@ package com.company.assembleegameclient.parameters
 							return;
 					}
 				}
-				setDefault("gameVersion", "X31.0.1");
+				setDefault("gameVersion", "X31.0.2");
 				setDefault("lastTab", TextKey.OPTIONS_CONTROLS);
 				setDefault("ssdebuffBitmask", 0);
 				setDefault("ssdebuffBitmask2", 0);
@@ -947,15 +950,10 @@ package com.company.assembleegameclient.parameters
 				setDefault("hideOtherDamage", false);
 				setDefault("mscale", 1);
 				setDefault("stageScale", StageScaleMode.NO_SCALE);
-				setDefault("uiscale", true);
-				setDefault("offsetVoidBow", false);
-				setDefault("offsetColossus", false);
-				setDefault("coloOffset", 0.225);
-				setDefault("ethDisable", false);
-				setDefault("cultiststaffDisable", false);
+				setDefault("uiscale", false);
 				setDefault("alphaOnOthers", false);
 				setDefault("alphaMan", 0.4);
-				setDefault("lootPreview", true);
+				setDefault("lootPreview", "vault");
 				setDefaultKey("tradeNearestPlayerKey", KeyCodes.UNSET);
 				setDefaultKey("LowCPUModeHotKey", KeyCodes.UNSET);
 				setDefaultKey("Cam45DegInc", KeyCodes.UNSET);
@@ -974,10 +972,6 @@ package com.company.assembleegameclient.parameters
 				setDefault("damageIgnored", false);
 				setDefault("AntiSpookiBoiDecoi", false);
 				setDefault("ignoreIce", false);
-				setDefaultKey("TextCem", KeyCodes.F1);
-				setDefaultKey("TextPause", KeyCodes.F2);
-				setDefaultKey("TextThessal", KeyCodes.F3);
-				setDefaultKey("TextDraconis", KeyCodes.F4);
 				setDefault("AAException", DefaultAAException);
 				setDefault("AAIgnore", DefaultAAIgnore);
 				setDefault("passThroughInvuln", false);
@@ -1036,13 +1030,11 @@ package com.company.assembleegameclient.parameters
 				setDefault("bigLootBags", false);
 				setDefault("AutoSyncClientHP", false);
 				setDefault("extraPlayerMenu", true);
-				setDefault("safeWalk", false);
+				setDefault("safeWalk", true);
 				setDefault("evenLowerGraphics", false);
 				setDefault("showCHbar", true);
-				setDefault("rightClickOption", 0);
+				setDefault("rightClickOption", "Off");
 				setDefaultKey("sskey", KeyCodes.DELETE);
-				setDefault("dynamicHPcolor", true);
-				setDefault("uiTextSize", 15);
 				setDefault("mobNotifier", true);
 				setDefault("showMobInfo", false);
 				setDefault("questHUD", true);
@@ -1054,11 +1046,9 @@ package com.company.assembleegameclient.parameters
 				setDefault("showBG", true);
 				setDefault("BossPriority", true);
 				setDefault("offsetWeapon", false);
-				setDefault("customMessage1", "We are impervious to non-mystic attacks!");
-				setDefault("customMessage2", "Forget this... run for it!");
-				setDefault("customMessage3", "Engaging Super-Mode!!!");
-				setDefault("logins", ["Use Right-Click"]);
-				setDefault("passwords", ["To add new accounts"]);
+				setDefault("usernames", []);
+				setDefault("logins", []);
+				setDefault("passwords", []);
 				setDefault("autoLootExcludes", Parameters.defaultExclusions);
 				setDefault("autoLootIncludes", Parameters.defaultInclusions);
 				setDefault("autoLootUpgrades", false);
@@ -1082,20 +1072,16 @@ package com.company.assembleegameclient.parameters
 				setDefault("autoLootConsumables", false);
 				setDefault("autoLootSoulbound", false);
 				setDefault("autoLootEggs", 1);
-				setDefault("showTimers", true);
 				setDefault("autoDrinkFromBags", false);
 				setDefault("cacheCharList", false);
 				setDefault("PassesCover", false);
 				setDefault("chatLength", 10);
 				setDefault("autohpPotDelay", 400);
 				setDefault("mapHack", false);
-				setDefault("fixTabHotkeys", true);
 				setDefault("noRotate", false);
 				setDefault("customSounds", true);
 				setDefault("customVolume", 1);
-				setDefault("followIntoPortals", false);
 				setDefault("spamPrism", false);
-				setDefault("instaNexus", true);
 				setDefault("showHighestDps", "off");
 				setDefaultControllerInput("ctrlEnterPortal", ControllerHandler.A_num_4);
 				setDefaultControllerInput("ctrlTeleQuest", ControllerHandler.Y_num_7);
@@ -1106,7 +1092,7 @@ package com.company.assembleegameclient.parameters
 				setDefault("useControllerNumber", 0);
 				setDefault("selectedItemColor", 0);
 				setDefault("cNameBypass", false);
-				setDefault("eventNotifier", false);
+				setDefault("eventNotifier", true);
 				setDefault("eventNotifierVolume", 1);
 				setDefault("notifySkull", true);
 				setDefault("notifyCube", true);
@@ -1127,12 +1113,22 @@ package com.company.assembleegameclient.parameters
 				setDefault("showDyes", true);
 				setDefault("showSkins", true);
 				setDefault("nsetSkin", ["", -1]);
-				setDefault("customUI", false);
+				setDefault("customUI", true);
 				setDefault("setTex1", -1);
 				setDefault("setTex2", -1);
 				setDefault("reconDelay", 250);
 				setDefault("dodBot", false);
 				setDefault("dodComplete", 0);
+				setDefaultKey("msg1key", KeyCodes.F1);
+				setDefaultKey("msg2key", KeyCodes.F2);
+				setDefaultKey("msg3key", KeyCodes.F3);
+				setDefaultKey("msg4key", KeyCodes.F4);
+				setDefault("msg1", "/pause");
+				setDefault("msg2", "He lives and reigns and conquers the world");
+				setDefault("msg3", "black");
+				setDefault("msg4", "ready");
+				setDefault("anchorName", "");
+				setDefault("vialChecker", true);
 			}
 
 

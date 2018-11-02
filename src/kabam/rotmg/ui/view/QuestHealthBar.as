@@ -22,9 +22,9 @@ package kabam.rotmg.ui.view
 
 			public function QuestHealthBar()
 			{
-				this.questBar = new StatusBar(194, 16, 12919330, 0x545454, "Quest", true, null, true);
-				this.questBar2 = new StatusBar(194, 16, 12919330, 0x545454, "Quest", true, null, true);
-				this.questBar3 = new StatusBar(194, 16, 12919330, 0x545454, "Quest", true, null, true);
+				this.questBar = new StatusBar(194, 16, 12919330, 0x545454, "Quest", true, true);
+				this.questBar2 = new StatusBar(194, 16, 12919330, 0x545454, "Quest", true, true);
+				this.questBar3 = new StatusBar(194, 16, 12919330, 0x545454, "Quest", true, true);
 				this.questBar.visible = false;
 				this.questBar2.visible = false;
 				this.questBar3.visible = false;

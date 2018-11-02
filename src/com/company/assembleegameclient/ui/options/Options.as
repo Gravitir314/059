@@ -527,7 +527,7 @@ package com.company.assembleegameclient.ui.options
 				this.addOptionAndPosition(new ChoiceOption("spellbombHPThreshold", this.spellbombThresholdValues(), [0, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 15000, 20000], "AutoAbility Health Threshold", "Sets the enemy current health value at which Auto Ability will target enemies (ie, if it is set to 5000, then the auto ability will only attempt to shoot at enemies with greater than 5000 health), use /sbthreshold to set a specific value", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("skullHPThreshold", this.skullThresholdValues(), [0, 100, 250, 500, 800, 1000, 2000, 4000, 8000], "AOE AutoAbility Health Threshold", "Sets the enemy current health value at which Auto Ability will target enemies for AOE abilities like Necro, Assassin, Huntress, Sorc, (ie, if it is set to 1000, then the Auto Ability will only attempt to shoot at enemies with greater than 1000 health), use /aathreshold to set a specific value", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("skullTargets", this.skullTargetsValues(), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "Min AOE AutoAbility Targets", "Sets the amount of enemies required in your AOE ability's radius before using the ability, use /aatargets to set a specific value", null), 0, 0, true);
-				this.addOptionAndPosition(new ChoiceOption("AutoResponder", makeOnOffLabels(), [true, false], "AutoResponder", "Automatically replies to Thessal/Cem/LoD/Sewer text", null), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("AutoResponder", makeOnOffLabels(), [true, false], "AutoResponder", "Automatically replies to Thessal/Cem/Sewer text", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("aaDistance", this.aaDistanceValues(), [0, 0.5, 1, 1.5, 2, 2.5, 3], "AutoAim Distance Increase", "Adds additional range to AutoAim's range", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("autoClaimCalendar", makeOnOffLabels(), [true, false], "Auto Claim Calendar", "Automatically claims Daily Login Calendar items upon logging in", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("BossPriority", makeOnOffLabels(), [true, false], "Boss Priority", 'Makes AutoAim prioritize Boss enemies over everything else - "bosses" includes all Quests and certain dungeon bosses which are not quests, such as the Shatters bosses', null), 0, 0, true);
@@ -693,6 +693,11 @@ package com.company.assembleegameclient.ui.options
 				return (new <StringBuilder>[new StaticStringBuilder("Off"), new StaticStringBuilder("All"), new StaticStringBuilder("Quest")]);
 			}
 
+			public function lootPreviewTexts():Vector.<StringBuilder>
+			{
+				return (new <StringBuilder>[new StaticStringBuilder("Off"), new StaticStringBuilder("Vault"), new StaticStringBuilder("Everywhere")]);
+			}
+
 			public function showDamageAndHPTexts():Vector.<StringBuilder>
 			{
 				return (new <StringBuilder>[new StaticStringBuilder("Off"), new StaticStringBuilder("Percent"), new StaticStringBuilder("Base"), new StaticStringBuilder("With HP"), new StaticStringBuilder("All")]);
@@ -708,10 +713,7 @@ package com.company.assembleegameclient.ui.options
 				this.addOptionAndPosition(new KeyMapper("tradeNearestPlayerKey", "Trade Nearest Player", "Sends a trade request to the nearest player"), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("passThroughInvuln", makeOnOffLabels(), [true, false], "Pass Through Invuln", "Makes your projectiles not hit things that are invulnerable (unless your projectile would inflict a status effect), THIS INCLUDES TUTORIAL TURRETS, TURN IT OFF WHEN ACCURACY FARMING", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("safeWalk", makeOnOffLabels(), [true, false], "Safe Walk", "Makes lava tiles act as if they were unwalkable.", null), 0, 0, true);
-				this.addOptionAndPosition(new KeyMapper("TextPause", "/pause", 'Say "/pause"'), 0, 0, true);
-				this.addOptionAndPosition(new KeyMapper("TextThessal", "Dying Thessal Text", 'Say the "He lives" quote'), 0, 0, true);
-				this.addOptionAndPosition(new KeyMapper("TextDraconis", "LoD Black Text", 'Say "black"'), 0, 0, true);
-				this.addOptionAndPosition(new KeyMapper("TextCem", "Cem Ready Text", 'Say "ready"'), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("vialChecker", makeOnOffLabels(), [true, false], "Vial Checker", "Check players inventories and add him to the list if vial found.", null), 0, 0, true);
 			}
 
 			public function addReconAndMessageOptions():void
@@ -739,7 +741,7 @@ package com.company.assembleegameclient.ui.options
 				this.addOptionAndPosition(new ChoiceOption("hideLowCPUModeChat", makeOnOffLabels(), [true, false], "Hide Chat in Low CPU Mode", "Controls whether normal chat is shown in Low CPU Mode", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("hideLockList", makeOnOffLabels(), [true, false], "Hide Nonlocked", "Hide non locked players", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("hidePets", makeOnOffLabels(), [true, false], "Hide Pets", "Hide all pets", null), 0, 0, true);
-				this.addOptionAndPosition(new ChoiceOption("lootPreview", makeOnOffLabels(), [true, false], "Loot Preview", "Shows previews of equipment over bags", null), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("lootPreview", lootPreviewTexts(), ["off", "vault", "everywhere"], "Loot Preview", "Shows previews of equipment over bags", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("showDamageAndHP", showDamageAndHPTexts(), ["off", "percent", "base", "total", "all"], "Show Damage and HP", "Shows the % of projectile damage you've done to an enemy, below that enemy. Show total health points of player and enemies as they take damage.", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("showDamageAndHPColorized", makeOnOffLabels(), [true, false], "Colorized Show Damage and HP", "Changes the status text color based on the percentage of health the player or enemy has.", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("showMobInfo", makeOnOffLabels(), [true, false], "Show Mob Info", "Shows the object itemType above mobs", this.onShowMobInfo), 0, 0, true);
@@ -753,7 +755,6 @@ package com.company.assembleegameclient.ui.options
 				this.addOptionAndPosition(new ChoiceOption("showDyes", makeOnOffLabels(), [true, false], "Show Dyes", "Makes every player use the default dye.", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("alphaOnOthers", makeOnOffLabels(), [true, false], "Make Other Players Transparent", "Makes nonlocked players and their pets transparent, toggleable with /ao and transparency level customizable with /alpha 0.2", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("showSkins", makeOnOffLabels(), [true, false], "Show Skins", "Forces default skin to everyone when turned off.", null), 0, 0, true);
-				this.addOptionAndPosition(new ChoiceOption("showTimers", makeOnOffLabels(), [true, false], "Show Phase Timers", "Shows a countdown for enemy phase and custom set timers", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("questHUD", makeOnOffLabels(), [true, false], "Quest Bar", "Quest Bar.", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("mapHack", makeOnOffLabels(), [true, false], "Map Hack", "Shows entire map when entering a realm. Loading in for the first time will take longer.", mapHackChange), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("noRotate", makeOnOffLabels(), [true, false], "Disable Shot Rotation", "Makes Shots not have their rotation effect, which prevents a lot of lag especially in Lost Halls", null), 0, 0, true);
@@ -840,7 +841,6 @@ package com.company.assembleegameclient.ui.options
 				this.addOptionAndPosition(new KeyMapper("Cam45DegDec", "Rotate -45 Degrees", "Rotates your camera angle by -45 degrees"), 0, 0, true);
 				this.addOptionAndPosition(new KeyMapper("aimAtQuest", "Aim at Quest", "Sets your camera angle in the direction of your quest"), 0, 0, true);
 				this.addOptionAndPosition(new KeyMapper("resetClientHP", "Reset Client HP", "Sets your Client HP to your Server HP, if you need to manually sync Health"), 0, 0, true);
-				this.addOptionAndPosition(new ChoiceOption("instaNexus", makeOnOffLabels(), [true, false], "Instant Nexus (Zauto Compatibility)", "Makes the act of Nexusing instantaneous by directly joining Nexus, instead of the normal way of asking the server for Nexus IP, then when it sends you it, join\n\nTurn this OFF for Zautonexus compatibility", null), 0, 0, true);
 				this.addOptionAndPosition(new KeyMapper("SelfTPHotkey", "Tele Self", "Teleports you to yourself for a free second of invicibility"), 0, 0, true);
 				this.addOptionAndPosition(new KeyMapper("PassesCoverHotkey", "Projectile Noclip", "Toggle allowing projectiles to pass through solid objects like trees and walls"), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("TradeDelay", makeOnOffLabels(), [true, false], "No Trade Delay", "Remove the 3 second trade delay", null), 0, 0, true);
@@ -853,9 +853,7 @@ package com.company.assembleegameclient.ui.options
 				this.addOptionAndPosition(new ChoiceOption("tiltCam", makeOnOffLabels(), [true, false], "Tilt Camera X Axis", "Allows the Right Click Option, when on Camera, to rotate the X Axis of the Camera's perspective", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("cacheCharList", makeOnOffLabels(), [true, false], "Cache Character List", 'Makes the main menu reload when you go back to it, instead of using the cached version which avoids the 10 minute "Internal Error" timeout', null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("chatLength", chatLengthLabels(), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], "Chat Length", "Determines the number of lines chat shows (5 is the standard, previously it was 10)", this.onChatLengthChange), 0, 0, true);
-				this.addOptionAndPosition(new ChoiceOption("fixTabHotkeys", makeOnOffLabels(), [true, false], "Fix Backpack Tab Hotkeys", "Makes the 1-8 htokeys for using inventory items use backpack items when the backpack tab is selected", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("allowController", makeOnOffLabels(), [true, false], "Use Controller", "Enables usage of an Xbox 360 controller", this.toggleControllerOptions), 0, 0, true);
-				this.addOptionAndPosition(new ChoiceOption("followIntoPortals", makeOnOffLabels(), [true, false], "Follow Into Portal", "If the player you're /following enters a portal, having this on tries to join them", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("FocusFPS", makeOnOffLabels(), [true, false], "Background FPS", "Lower FPS when the client loses focus (alt tabbing, minimizing, etc), set the background values with /bgfps # and foreground with /fgfps #", null), 0, 0, true);
 			}
 

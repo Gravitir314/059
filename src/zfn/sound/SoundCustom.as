@@ -86,10 +86,6 @@ package zfn.sound
 
 			private static function addSound(_arg_1:String, _arg_2:Sound):void
 			{
-				if (sounds_[_arg_1] == null)
-				{
-					sounds_[_arg_1] = [];
-				}
 				sounds_[_arg_1] = _arg_2;
 			}
 

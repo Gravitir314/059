@@ -27,7 +27,6 @@ package com.company.util
 
 			public static function addImageSet(_arg_1:String, _arg_2:BitmapData, _arg_3:int, _arg_4:int):void
 			{
-				trace("Loading asset: " + _arg_1);
 				images_[_arg_1] = _arg_2;
 				var _local_5:ImageSet = new ImageSet();
 				_local_5.addFromBitmapData(_arg_2, _arg_3, _arg_4);

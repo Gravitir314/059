@@ -45,6 +45,7 @@ package
 	import kabam.rotmg.language.LanguageConfig;
 	import kabam.rotmg.legends.LegendsConfig;
 	import kabam.rotmg.maploading.MapLoadingConfig;
+	import kabam.rotmg.messaging.impl.GameServerConnectionConcrete;
 	import kabam.rotmg.minimap.MiniMapConfig;
 	import kabam.rotmg.mysterybox.MysteryBoxConfig;
 	import kabam.rotmg.news.NewsConfig;
@@ -121,6 +122,7 @@ package
 				STAGE = stage;
 				stage.scaleMode = StageScaleMode.EXACT_FIT;
 				this.hackParameters();
+				GameServerConnectionConcrete.parsePackets();
 				this.createContext();
 				new AssetLoader().load();
 				setupController();

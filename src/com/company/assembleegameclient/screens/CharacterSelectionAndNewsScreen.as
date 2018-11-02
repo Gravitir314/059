@@ -7,7 +7,6 @@ package com.company.assembleegameclient.screens
 	import com.company.assembleegameclient.ui.DeprecatedClickableText;
 	import com.company.assembleegameclient.ui.Scrollbar;
 
-	import flash.display.DisplayObject;
 	import flash.display.Shape;
 	import flash.display.Sprite;
 	import flash.events.Event;
@@ -16,8 +15,9 @@ package com.company.assembleegameclient.screens
 	import flash.geom.Rectangle;
 	import flash.text.TextFieldAutoSize;
 
-	import kabam.rotmg.account.core.services.GetCharListTask;
-	import kabam.rotmg.account.core.signals.CharListDataSignal;
+	import kabam.rotmg.account.core.signals.LoginSignal;
+	import kabam.rotmg.account.web.model.AccountData;
+	import kabam.rotmg.core.StaticInjectorContext;
 	import kabam.rotmg.core.model.PlayerModel;
 	import kabam.rotmg.game.view.CreditDisplay;
 	import kabam.rotmg.news.view.NewsView;
@@ -63,19 +63,18 @@ package com.company.assembleegameclient.screens
 			public var newCharacter:Signal = new Signal();
 			public var chooseName:Signal = new Signal();
 			public var playGame:Signal = new Signal();
+			public var login:LoginSignal;
 			private const DROP_SHADOW:DropShadowFilter = new DropShadowFilter(0, 0, 0, 1, 8, 8);
 			private var playButton:TitleMenuOption = ButtonFactory.getPlayButton();
 			private var classesButton:TitleMenuOption = ButtonFactory.getClassesButton();
 			private var backButton:TitleMenuOption = ButtonFactory.getMainButton();
 			private var charIdText:TextFieldDisplayConcrete;
 			private var charIdField:TextInputField;
-			private var charListTask:GetCharListTask;
-			private var charListDataSignal:CharListDataSignal;
-			private var refreshIcon:DisplayObject;
-			private var refreshText:TextFieldDisplayConcrete;
+			private var refreshButton:DeprecatedClickableText;
 
 			public function CharacterSelectionAndNewsScreen()
 			{
+				this.login = StaticInjectorContext.getInjector().getInstance(LoginSignal);
 				this.close = this.backButton.clicked;
 				this.showClasses = this.classesButton.clicked;
 				addChild(new ScreenBase());
@@ -121,6 +120,34 @@ package com.company.assembleegameclient.screens
 				{
 					this.createChooseNameLink();
 				}
+				this.createRefreshButton();
+			}
+
+			private function createRefreshButton():void
+			{
+				this.refreshButton = new DeprecatedClickableText(18, true, "Refresh");
+				this.refreshButton.buttonMode = true;
+				this.refreshButton.x = 720;
+				this.refreshButton.y = this.openCharactersText.y;
+				this.refreshButton.addEventListener(MouseEvent.CLICK, onRefreshClick);
+				addChild(this.refreshButton);
+			}
+
+			private function onRefreshClick(_arg_1:MouseEvent):void
+			{
+				var _local_1:AccountData = new AccountData();
+				_local_1.username = this.model.account.getUserId();
+				if (_local_1.username.indexOf("@") != -1)
+				{
+					_local_1.password = this.model.account.getPassword();
+					_local_1.secret = "";
+				}
+				else
+				{
+					_local_1.password = "";
+					_local_1.secret = this.model.account.getSecret();
+				}
+				this.login.dispatch(_local_1);
 			}
 
 			private function makeMenuOptionsBar():void
@@ -401,47 +428,6 @@ package com.company.assembleegameclient.screens
 					this.nameChooseLink_ = null;
 				}
 			}
-
-			/*private function createRefreshText():void TODO unused function
-			{
-				this.refreshIcon = new ReloadEmbed();
-				this.refreshIcon.x = 365;
-				this.refreshIcon.y = 79;
-				this.addChild(refreshIcon);
-				this.refreshText = new TextFieldDisplayConcrete().setSize(18).setColor(0xB3B3B3);
-				this.refreshText.setBold(true);
-				this.refreshText.setStringBuilder(new StaticStringBuilder("Refresh"));
-				this.refreshText.filters = [this.DROP_SHADOW];
-				this.refreshText.x = 385;
-				this.refreshText.y = 79;
-				this.refreshText.addEventListener("click", this.onRefreshClick);
-				addChild(this.refreshText);
-			}
-
-			private function onRefreshClick(_arg_1:MouseEvent):void
-			{
-				charListTask = StaticInjectorContext.getInjector().getInstance(GetCharListTask);
-				charListTask.client.complete.addOnce(this.charListTaskCompleted);
-				charListTask.start();
-			}
-
-			private function charListTaskCompleted(_arg_1:Boolean, _arg_2:*):void
-			{
-				if (_arg_1)
-				{
-					charListDataSignal = StaticInjectorContext.getInjector().getInstance(CharListDataSignal);
-					charListDataSignal.dispatch(XML(_arg_2));
-					charListDataSignal.addOnce(this.charListDataUpdated);
-				}
-			}
-
-			private function charListDataUpdated(_arg_1:*):void
-			{
-				this.removeCharacterList();
-				this.model = StaticInjectorContext.getInjector().getInstance(PlayerModel);
-				this.createCharacterListChar();
-			}*/
-
 
 		}
 	}//package com.company.assembleegameclient.screens

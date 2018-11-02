@@ -18,6 +18,7 @@ package kabam.rotmg.ui.view
 	import flash.display.IGraphicsData;
 	import flash.display.Sprite;
 	import flash.events.Event;
+	import flash.events.MouseEvent;
 	import flash.geom.Point;
 
 	import io.decagames.rotmg.classes.NewClassUnlockNotification;
@@ -64,6 +65,7 @@ package kabam.rotmg.ui.view
 			private var pet:PetsTabContentView;
 			private var potions:PotionInventoryView;
 			public var mainView:Boolean = true;
+			public var backpackSelected:Boolean = false;
 
 			public function HUDView()
 			{
@@ -181,20 +183,26 @@ package kabam.rotmg.ui.view
 
 			private function createInventoryAndBackpack():void
 			{
-				if (this.inventory == null)
-				{
-					this.inventory = new InventoryGrid(this.player, this.player, 4);
-				}
-				if (this.backpack == null)
-				{
-					this.backpack = new InventoryGrid(this.player, this.player, 12);
-				}
+				this.inventory = new InventoryGrid(this.player, this.player, 4);
+				this.backpack = new InventoryGrid(this.player, this.player, 12);
 				this.inventory.x = this.INVENTORY_POSITION.x;
 				this.inventory.y = this.INVENTORY_POSITION.y;
 				this.backpack.x = this.BACKPACK_POSITION.x;
 				this.backpack.y = this.BACKPACK_POSITION.y;
+				this.backpack.addEventListener(MouseEvent.MOUSE_OVER, this.onBackpack);
+				this.backpack.addEventListener(MouseEvent.MOUSE_OUT, this.onBackpackOut);
 				addChild(this.inventory);
 				addChild(this.backpack);
+			}
+
+			private function onBackpack(_arg_1:MouseEvent):void
+			{
+				this.backpackSelected = true;
+			}
+
+			private function onBackpackOut(_arg_1:MouseEvent):void
+			{
+				this.backpackSelected = false;
 			}
 
 			private function createEquippedGrid():void

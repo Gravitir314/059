@@ -104,7 +104,7 @@ package com.company.assembleegameclient.objects
 			override public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void
 			{
 				super.draw(_arg_1, _arg_2, _arg_3);
-				if (!Parameters.ssmode && Parameters.data_.lootPreview)
+				if (!Parameters.ssmode && (Parameters.data_.lootPreview == "vault" && this.map_.name_ == Map.VAULT || Parameters.data_.lootPreview == "everywhere"))
 				{
 					drawItems(_arg_1, _arg_2, _arg_3);
 				}

@@ -129,6 +129,8 @@ package com.company.assembleegameclient.game
 
 			private var timerCounter:TextFieldDisplayConcrete;
 			private var timerCounterStringBuilder:StaticStringBuilder;
+			private var vialList:TextFieldDisplayConcrete;
+			private var vialListStringBuilder:StaticStringBuilder;
 			public var stats:TextFieldDisplayConcrete;
 			public var statsStringBuilder:StaticStringBuilder;
 			public var packageOffer:BeginnersPackageButton;
@@ -280,7 +282,7 @@ package com.company.assembleegameclient.game
 			{
 				if (this.timerCounter == null)
 				{
-					this.timerCounter = new TextFieldDisplayConcrete().setSize(Parameters.data_.uiTextSize).setColor(0xFFFFFF);
+					this.timerCounter = new TextFieldDisplayConcrete().setSize(15).setColor(0xFFFFFF);
 					this.timerCounter.mouseChildren = false;
 					this.timerCounter.mouseEnabled = false;
 					this.timerCounter.setBold(true);
@@ -290,7 +292,24 @@ package com.company.assembleegameclient.game
 					this.timerCounter.x = 3;
 					this.timerCounter.y = 180;
 					addChild(this.timerCounter);
-					stage.dispatchEvent(new Event(Event.RESIZE));
+				}
+			}
+
+			private function addVialList():void
+			{
+				if (this.vialList == null)
+				{
+					this.vialList = new TextFieldDisplayConcrete().setSize(15).setColor(0xFFFFFF);
+					this.vialList.mouseChildren = false;
+					this.vialList.mouseEnabled = false;
+					this.vialList.setBold(true);
+					this.vialListStringBuilder = new StaticStringBuilder();
+					this.vialList.setStringBuilder(this.vialListStringBuilder);
+					this.vialList.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
+					this.vialList.x = 3;
+					this.vialList.y = 240;
+					this.vialList.visible = false;
+					addChild(this.vialList);
 				}
 			}
 
@@ -313,7 +332,6 @@ package com.company.assembleegameclient.game
 						this.gsc_.playerText(Parameters.statsChar);
 						this.gsc_.pingSentAt = this.lastUpdate_;
 					}
-					stage.dispatchEvent(new Event(Event.RESIZE));
 				}
 			}
 
@@ -331,6 +349,7 @@ package com.company.assembleegameclient.game
 						this.gsc_.playerText(Parameters.statsChar);
 						this.gsc_.pingSentAt = _arg_1;
 					}
+					this.stats.visible = true;
 					this.stats.setText(((((("FPS " + statsFPS) + "\nLAT ") + this.gsc_.pingReceivedAt) + "\nMEM ") + (1E-6 * System.totalMemoryNumber)));
 				}
 			}
@@ -341,12 +360,44 @@ package com.company.assembleegameclient.game
 				{
 					this.timerCounter.setColor(this.fadeRed((Parameters.phaseChangeAt - _arg_1) / 3000));
 				}
+				this.timerCounter.visible = true;
 				this.timerCounter.setText(((Parameters.phaseName + "\n") + toTimeCode((Parameters.phaseChangeAt - _arg_1))));
-				if (!this.timerCounter.visible)
+			}
+
+			public function vialFind():void
+			{
+				var _local_5:int;
+				var _local_7:int;
+				var name:String;
+				for each (var _local_1:GameObject in this.map.goDict_)
 				{
-					this.timerCounter.visible = true;
-					stage.dispatchEvent(new Event(Event.RESIZE));
+					if (_local_1 is Player)
+					{
+						if (Parameters.vialHolders.indexOf(_local_1.name_) != -1)
+						{
+							break;
+						}
+						_local_5 = 0;
+						while (_local_5 < ((_local_1 as Player).hasBackpack_ ? 20 : 12))
+						{
+							_local_7 = _local_1.equipment_[_local_5];
+							if (_local_7 == 0x0247)
+							{
+								Parameters.vialHolders.push(_local_1.name_);
+								break;
+							}
+							_local_5++;
+						}
+
+					}
 				}
+				var output:String = "";
+				for each (name in Parameters.vialHolders)
+				{
+					output += name + "\n"
+				}
+				this.vialList.visible = (Parameters.vialHolders.length > 0);
+				this.vialList.setText("Vial Holders:\n" + output);
 			}
 
 			private function fadeRed(_arg_1:Number):uint
@@ -1009,35 +1060,24 @@ package com.company.assembleegameclient.game
 				for each (var _local_4:Hit in this.hitQueue)
 				{
 					this.gsc_.playerHit(_local_4.bulletId, _local_4.objectId);
-					_local_4 = null;
 				}
 				this.hitQueue.length = 0;
 				this.camera_.update(_local_2);
-				if (!Parameters.ssmode)
+				if (Parameters.timerActive && !Parameters.ssmode)
 				{
-					if (Parameters.timerActive && Parameters.data_.showTimers)
+					if (this.timerCounter == null)
 					{
-						if (this.timerCounter == null)
-						{
-							this.addTimer();
-						}
-						if (_local_7 >= Parameters.phaseChangeAt)
-						{
-							Parameters.phaseChangeAt = int.MAX_VALUE;
-							Parameters.timerActive = false;
-							this.timerCounter.visible = false;
-						}
-						else
-						{
-							updateTimer(_local_7);
-						}
+						this.addTimer();
 					}
-					if (Parameters.data_.liteMonitor)
+					if (_local_7 >= Parameters.phaseChangeAt)
 					{
-						if (this.stats != null)
-						{
-							this.updateStats(_local_7);
-						}
+						Parameters.phaseChangeAt = int.MAX_VALUE;
+						Parameters.timerActive = false;
+						this.timerCounter.visible = false;
+					}
+					else
+					{
+						updateTimer(_local_7);
 					}
 				}
 				else
@@ -1046,9 +1086,37 @@ package com.company.assembleegameclient.game
 					{
 						this.timerCounter.visible = false;
 					}
+				}
+				if (Parameters.data_.liteMonitor && !Parameters.ssmode)
+				{
+					if (this.stats != null)
+					{
+						this.updateStats(_local_7);
+					}
+				}
+				else
+				{
 					if (this.stats != null)
 					{
 						this.stats.visible = false;
+					}
+				}
+				if (Parameters.data_.vialChecker && !Parameters.ssmode)
+				{
+					if (this.vialList == null)
+					{
+						this.addVialList();
+					}
+					if (this.vialList != null)
+					{
+						this.vialFind();
+					}
+				}
+				else
+				{
+					if (this.vialList != null)
+					{
+						this.vialList.visible = false;
 					}
 				}
 				var _local_8:Player = map.player_;

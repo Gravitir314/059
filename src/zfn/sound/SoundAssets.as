@@ -552,11 +552,6 @@ package zfn.sound
 
 			private static function addSound(_arg_1:String, _arg_2:Sound):void
 			{
-				var _local_3:Array = sounds_[_arg_1];
-				if (_local_3 == null)
-				{
-					sounds_[_arg_1] = [];
-				}
 				sounds_[_arg_1] = _arg_2;
 			}
 

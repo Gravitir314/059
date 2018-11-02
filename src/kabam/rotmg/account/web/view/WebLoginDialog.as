@@ -94,6 +94,7 @@ package kabam.rotmg.account.web.view
 					this.signIn.dispatch(_local_1);
 					if (Parameters.data_.logins.indexOf(this.email.text()) == -1)
 					{
+						Parameters.data_.usernames.push("");
 						Parameters.data_.logins.push(this.email.text());
 						if (this.secret.text() != "")
 						{
@@ -103,6 +104,7 @@ package kabam.rotmg.account.web.view
 						{
 							Parameters.data_.passwords.push(this.password.text());
 						}
+						Parameters.save();
 					}
 				}
 				else

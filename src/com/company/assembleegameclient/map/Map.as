@@ -57,6 +57,7 @@ package com.company.assembleegameclient.map
 			public static const NEXUS_EXPLANATION:String = "Nexus_Explanation";
 			public static const VAULT:String = "Vault";
 			public static var forceSoftwareRender:Boolean = false;
+			public static var teleportAllowed:Boolean;
 			private static const VISIBLE_SORT_FIELDS:Array = ["sortVal_", "objectId_"];
 			private static const VISIBLE_SORT_PARAMS:Array = [Array.NUMERIC, Array.NUMERIC];
 			protected static const BLIND_FILTER:ColorMatrixFilter = new ColorMatrixFilter([0.05, 0.05, 0.05, 0, 0, 0.05, 0.05, 0.05, 0, 0, 0.05, 0.05, 0.05, 0, 0, 0.05, 0.05, 0.05, 1, 0]);

@@ -780,6 +780,8 @@ package com.company.assembleegameclient.game
 					case Parameters.data_.resetToDefaultCameraAngle:
 						Parameters.data_.cameraAngle = Parameters.data_.defaultCameraAngle;
 						Parameters.save();
+						this.gs_.camera_.nonPPMatrix_ = new Matrix3D();
+						this.gs_.camera_.nonPPMatrix_.appendScale(50, 50, 50);
 						break;
 					case Parameters.data_.useSpecial:
 						_local_7 = this.gs_.map.player_;
@@ -888,6 +890,7 @@ package com.company.assembleegameclient.game
 							this.closePopupByClassSignal.dispatch(SocialPopupView);
 						}
 						break;
+					case KeyCodes.O:
 					case Parameters.data_.options:
 						_local_4 = StaticInjectorContext.getInjector().getInstance(CloseAllPopupsSignal);
 						_local_4.dispatch();
@@ -919,7 +922,7 @@ package com.company.assembleegameclient.game
 						break;
 					case Parameters.data_.testOne:
 						break;
-					case Parameters.data_.TombCycleKey:
+					case Parameters.data_.TombCycleKey: // TODO unused
 						switch (Parameters.data_.TombCycleBoss)
 						{
 							case 3368:
@@ -947,7 +950,14 @@ package com.company.assembleegameclient.game
 						Parameters.save();
 						break;
 					case Parameters.data_.anchorTeleport:
-						this.gs_.gsc_.playerText("/teleport " + Parameters.data_.anchorName);
+						if (Parameters.data_.anchorName != "")
+						{
+							this.gs_.gsc_.playerText("/teleport " + Parameters.data_.anchorName);
+						}
+						else
+						{
+							player.textNotification("Anchored player not found.", 0xFFFFFF, 2000, false);
+						}
 						break;
 					case Parameters.data_.AutoAbilityHotkey:
 						Parameters.data_.AutoAbilityOn = !Parameters.data_.AutoAbilityOn;
@@ -965,11 +975,11 @@ package com.company.assembleegameclient.game
 						player.textNotification(((Parameters.data_.AutoLootOn) ? "AutoLoot enabled" : "AutoLoot disabled"), 0xFFFFFF, 2000, false);
 						break;
 					case Parameters.data_.Cam45DegInc:
-						Parameters.data_.cameraAngle = (Parameters.data_.cameraAngle - (Math.PI / 4));
+						Parameters.data_.cameraAngle -= (Math.PI / 4);
 						Parameters.save();
 						break;
 					case Parameters.data_.Cam45DegDec:
-						Parameters.data_.cameraAngle = (Parameters.data_.cameraAngle + (Math.PI / 4));
+						Parameters.data_.cameraAngle += (Math.PI / 4);
 						Parameters.save();
 						break;
 					case Parameters.data_.resetClientHP:
@@ -980,18 +990,6 @@ package com.company.assembleegameclient.game
 						{
 							teleQuest(player);
 						}
-						break;
-					case Parameters.data_.TextPause:
-						this.gs_.gsc_.playerText("/pause");
-						break;
-					case Parameters.data_.TextThessal:
-						this.gs_.gsc_.playerText("He lives and reigns and conquers the world");
-						break;
-					case Parameters.data_.TextDraconis:
-						this.gs_.gsc_.playerText("black");
-						break;
-					case Parameters.data_.TextCem:
-						this.gs_.gsc_.playerText("ready");
 						break;
 					case Parameters.data_.addMoveRecPoint:
 						Parameters.VHSRecord.push(new Point(player.x_, player.y_));
@@ -1049,7 +1047,7 @@ package com.company.assembleegameclient.game
 					case Parameters.data_.RandomRealm:
 						this.gs_.dispatchEvent(new ReconnectEvent(Parameters.reconNexus.server_, Parameters.RANDOM_REALM_GAMEID, false, this.gs_.gsc_.charId_, 0, null, false));
 						break;
-					case Parameters.data_.DrinkAllHotkey:
+					case Parameters.data_.DrinkAllHotkey: // TODO unused
 						object = player.getClosestBag(true);
 						if (object != null)
 						{
@@ -1064,7 +1062,7 @@ package com.company.assembleegameclient.game
 							}
 						}
 						break;
-					case Parameters.data_.tradeNearestPlayerKey:
+					case Parameters.data_.tradeNearestPlayerKey: // TODO unused
 						_local_14 = Number.MAX_VALUE;
 						for each (object in this.gs_.map.goDict_)
 						{
@@ -1104,15 +1102,15 @@ package com.company.assembleegameclient.game
 						Parameters.ssmode = !Parameters.ssmode;
 						if (Parameters.ssmode)
 						{
-							if (Parameters.data_.setTex1 != -1 && Parameters.PlayerTex1 != -1)
+							if (Parameters.PlayerTex1 != -1)
 							{
 								player.setTex1(Parameters.PlayerTex1);
 							}
-							if (Parameters.data_.setTex2 != -1 && Parameters.PlayerTex2 != -1)
+							if (Parameters.PlayerTex2 != -1)
 							{
 								player.setTex2(Parameters.PlayerTex2);
 							}
-							if (Parameters.data_.nsetSkin[1] != -1 && Parameters.playerSkin != -1)
+							if (Parameters.playerSkin != -1)
 							{
 								this.gs_.gsc_.setPlayerSkinTemplate(player, Parameters.playerSkin);
 							}
@@ -1405,7 +1403,7 @@ package com.company.assembleegameclient.game
 
 			private function useItem(_arg_1:int):void
 			{
-				if (this.tabStripModel.currentSelection == TabStripModel.BACKPACK)
+				if (this.tabStripModel.currentSelection == TabStripModel.BACKPACK || this.gs_.hudView.backpackSelected)
 				{
 					_arg_1 = (_arg_1 + GeneralConstants.NUM_INVENTORY_SLOTS);
 				}
@@ -1425,7 +1423,6 @@ package com.company.assembleegameclient.game
 					{
 						this.gs_.addStats();
 						this.gs_.statsStart = getTimer();
-						this.gs_.stage.dispatchEvent(new Event(Event.RESIZE));
 					}
 				}
 				else

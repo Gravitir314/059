@@ -79,7 +79,7 @@ package com.company.assembleegameclient.util
 
 			public static function resize(_arg_1:BitmapData, _arg_2:BitmapData, _arg_3:int, _arg_4:Boolean, _arg_5:int, _arg_6:int, _arg_7:Number = 5):BitmapData
 			{
-				if (((!(_arg_2 == null)) && ((!(_arg_5 == 0)) || (!(_arg_6 == 0)))))
+				if (_arg_2 != null && (_arg_5 != 0 || _arg_6 != 0))
 				{
 					_arg_1 = retexture(_arg_1, _arg_2, _arg_5, _arg_6);
 					_arg_3 = int((_arg_3 / 5));

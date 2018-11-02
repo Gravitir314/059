@@ -2,7 +2,6 @@
 
 package com.company.assembleegameclient.ui
 	{
-	import com.company.assembleegameclient.objects.GameObject;
 	import com.company.assembleegameclient.parameters.Parameters;
 	import com.greensock.plugins.DropShadowFilterPlugin;
 
@@ -35,8 +34,6 @@ package com.company.assembleegameclient.ui
 			public var level_:int = 0;
 			private var labelText_:TextFieldDisplayConcrete;
 			private var labelTextStringBuilder_:LineBuilder;
-			private var rightLabelText_:TextFieldDisplayConcrete;
-			private var rightLabelTextStringBuilder_:LineBuilder;
 			private var valueText_:TextFieldDisplayConcrete;
 			private var valueTextStringBuilder_:StaticStringBuilder;
 			private var boostText_:TextFieldDisplayConcrete;
@@ -52,11 +49,10 @@ package com.company.assembleegameclient.ui
 			private var repetitions:int;
 			private var direction:int = -1;
 			private var speed:Number = 0.1;
-			public var quest:GameObject;
 
-			public function StatusBar(_arg_1:int, _arg_2:int, _arg_3:uint, _arg_4:uint, _arg_5:String = null, _arg_6:Boolean = false, _arg_7:GameObject = null, _arg_8:Boolean = false, _arg_9:Boolean = false)
+			public function StatusBar(_arg_1:int, _arg_2:int, _arg_3:uint, _arg_4:uint, _arg_5:String = null, _arg_6:Boolean = false, _arg_7:Boolean = false) // TODO fix text location
 			{
-				this.isProgressBar_ = _arg_9;
+				this.isProgressBar_ = _arg_7;
 				addChild(this.colorSprite);
 				this.w_ = _arg_1;
 				this.h_ = _arg_2;
@@ -70,7 +66,7 @@ package com.company.assembleegameclient.ui
 					this.labelText_.setBold(true);
 					this.labelTextStringBuilder_ = new LineBuilder().setParams(_arg_5);
 					this.labelText_.setStringBuilder(this.labelTextStringBuilder_);
-					if (_arg_8)
+					if (_arg_7)
 					{
 						this.labelText_.y = -16;
 						this.labelText_.filters = [new DropShadowFilter(1, 0, 0, 1, 4, 4, 2)];
@@ -109,7 +105,6 @@ package com.company.assembleegameclient.ui
 					addEventListener(MouseEvent.ROLL_OVER, this.onMouseOver);
 					addEventListener(MouseEvent.ROLL_OUT, this.onMouseOut);
 				}
-				quest = _arg_7;
 				barTextSignal.add(this.setBarText);
 			}
 

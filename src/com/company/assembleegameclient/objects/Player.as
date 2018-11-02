@@ -179,7 +179,6 @@ package com.company.assembleegameclient.objects
 			public var questMob1:GameObject;
 			public var questMob2:GameObject;
 			public var questMob3:GameObject;
-			public var switchItems_:Boolean = false;
 			public var switchItemsBools_:Array = [false, false, false, false, false, false, false, false];
 			public var nextSwap:int = 0;
 			public var lastLootTime:int = 0;
@@ -1872,16 +1871,9 @@ package com.company.assembleegameclient.objects
 					}
 					if (this.hp_ <= this.autoNexusNumber || this.clientHp <= this.autoNexusNumber || this.hp2 <= this.autoNexusNumber)
 					{
-						if (Parameters.data_.instaNexus)
-						{
-							this.map_.gs_.gsc_.disconnect();
-						}
-						else
-						{
-							closeAllPopups.dispatch();
-							exitGame.dispatch();
-							map_.gs_.gsc_.escape();
-						}
+						closeAllPopups.dispatch();
+						exitGame.dispatch();
+						map_.gs_.gsc_.escape();
 						return (true);
 					}
 					if (!Parameters.data_.fameBlockThirsty && !this.isSick && this.autoHpPotNumber != 0 && (this.hp_ <= this.autoHpPotNumber || this.clientHp <= this.autoHpPotNumber || this.hp2 <= this.autoHpPotNumber) && (_arg_1 - this.lastHpPotTime) > Parameters.data_.autohpPotDelay)
@@ -2177,17 +2169,18 @@ package com.company.assembleegameclient.objects
 					}
 					// AutoLoot END //
 					// Switch Vaults //
-					if (this.collect != 0 && map_.name_ == Map.VAULT && (lastLootTime + 500) < getTimer())
+					if (this.collect != 0 && map_.name_ == Map.VAULT && (lastLootTime + 600) < getTimer())
 					{
 						this.vault_();
 					}
 					// Switch Vaults END //
 					// Switch Inventories //
-					if (this.switchItems_)
+					if (Parameters.switchItems)
 					{
 						this.findSlots();
-						this.switchItems_ = false;
+						Parameters.switchItems = false;
 					}
+					counter = 0;
 					while (counter < 8)
 					{
 						if (this.switchItemsBools_[counter])
@@ -3550,7 +3543,7 @@ package com.company.assembleegameclient.objects
 				return (_local_3);
 			}
 
-			public function handleTradePotsCommand(_arg_1:Text):void
+			public function handleTradePotsCommand(_arg_1:Text):void // TODO unused function
 			{
 				var _local_8:int;
 				if (MoreStringUtil.countCharInString(_arg_1.text_, ".") != 7)
@@ -3850,8 +3843,8 @@ package com.company.assembleegameclient.objects
 				_local_1 = (_local_1 + ((this.dexterityMax_ - (this.dexterity_ - this.dexterityBoost_)) + "."));
 				_local_1 = (_local_1 + ((this.vitalityMax_ - (this.vitality_ - this.vitalityBoost_)) + "."));
 				_local_1 = (_local_1 + ((this.wisdomMax_ - (this.wisdom_ - this.wisdomBoost_)) + "."));
-				_local_1 = (_local_1 + (Math.ceil(((this.maxHPMax_ - (this.maxHP_ - this.maxHPBoost_)) * 0.2)) + "."));
-				_local_1 = (_local_1 + Math.ceil(((this.maxMPMax_ - (this.maxMP_ - this.maxMPBoost_)) * 0.2)));
+				_local_1 = (_local_1 + (Math.ceil(((this.maxHPMax_ - (this.maxHP_ - this.maxHPBoost_)) / 5)) + "."));
+				_local_1 = (_local_1 + Math.ceil(((this.maxMPMax_ - (this.maxMP_ - this.maxMPBoost_)) / 5)));
 				this.map_.gs_.gsc_.playerText(_local_1);
 			}
 
@@ -3872,7 +3865,7 @@ package com.company.assembleegameclient.objects
 			public function sbAssist(_arg_1:int, _arg_2:int):void
 			{
 				var _local_5:Number;
-				var _local_8:* = null;
+				var _local_8:GameObject;
 				var _local_3:int = this.equipment_[1];
 				if (_local_3 == -1)
 				{
@@ -3935,13 +3928,27 @@ package com.company.assembleegameclient.objects
 
 			override public function removeFromMap():void
 			{
-				if (Parameters.data_.followIntoPortals && this.name_ == Parameters.followName)
+				if (Parameters.followingName && this.name_ == Parameters.followName)
 				{
-					for each (var _local_1:GameObject in map_.goDict_)
+					var portal:Portal = getClosestPortal(true);
+					if (portal != null)
 					{
-						if (_local_1 is Portal && PointUtil.distanceSquaredXY(x_, y_, _local_1.x_, _local_1.y_) <= 1)
+						this.map_.gs_.gsc_.usePortal(portal.objectId_);
+					}
+					else
+					{
+						this.map_.gs_.gsc_.escape();
+					}
+				}
+				if (Parameters.data_.vialChecker)
+				{
+					var counter:int;
+					for (counter = 0; counter < Parameters.vialHolders.length; counter++)
+					{
+						if (this.name_ == Parameters.vialHolders[counter])
 						{
-							this.map_.gs_.gsc_.usePortal(_local_1.objectId_);
+							this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, "Player " + this.name_ + " with vial left from dungeon."));
+							Parameters.vialHolders.splice(counter, 1);
 							break;
 						}
 					}
@@ -3970,7 +3977,7 @@ package com.company.assembleegameclient.objects
 				{
 					map_.gs_.gsc_.invSwap(this, this, (_arg_1 + 4), equipment_[(_arg_1 + 4)], this, (_arg_1 + 12), equipment_[(_arg_1 + 12)]);
 					this.switchItemsBools_[_arg_1] = false;
-					this.nextSwap = (getTimer() + 500);
+					this.nextSwap = (getTimer() + 600);
 				}
 			}
 

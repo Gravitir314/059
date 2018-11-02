@@ -27,7 +27,7 @@ package io.decagames.rotmg.pets.commands
 
 			override public function execute():void
 			{
-				var _local_1:ActivePetUpdateRequest = (this.messages.require(GameServerConnection.ACTIVE_PET_UPDATE_REQUEST) as ActivePetUpdateRequest);
+				var _local_1:ActivePetUpdateRequest = (this.messages.require(GameServerConnection.ACTIVEPETUPDATEREQUEST) as ActivePetUpdateRequest);
 				_local_1.instanceid = this.instanceID;
 				_local_1.commandtype = PetsConstants.FOLLOWING;
 				this.server.sendMessage(_local_1);
