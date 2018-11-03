@@ -44,7 +44,7 @@ package kabam.rotmg.text.model
 			private function computeRatiosByRendering():void
 			{
 				var _local_1:TextField = this.makeTextField();
-				var _local_2:BitmapData = new BitmapData(_local_1.width, _local_1.height);
+				var _local_2:BitmapData = new BitmapData(_local_1.width, _local_1.height, true, 0);
 				_local_2.draw(_local_1);
 				var _local_3:uint = 0xFFFFFF;
 				var _local_4:Rectangle = _local_2.getColorBoundsRect(_local_3, this.textColor, true);
