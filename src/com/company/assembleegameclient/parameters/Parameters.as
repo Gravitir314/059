@@ -369,7 +369,7 @@ package com.company.assembleegameclient.parameters
 				{
 					_local_3 = _local_2.@id;
 				}
-				var _local_4:int = Parameters.data_.autoLootIncludes.indexOf(_local_5);
+				var _local_4:int = (Parameters.data_.autoLootIncludes as Vector.<int>).indexOf(_local_5);
 				if (_local_4 >= 0)
 				{
 					Parameters.data_.autoLootIncludes.splice(_local_4, 1);
@@ -913,7 +913,7 @@ package com.company.assembleegameclient.parameters
 							return;
 					}
 				}
-				setDefault("gameVersion", "X31.0.2");
+				setDefault("gameVersion", "X31.1.0");
 				setDefault("lastTab", TextKey.OPTIONS_CONTROLS);
 				setDefault("ssdebuffBitmask", 0);
 				setDefault("ssdebuffBitmask2", 0);

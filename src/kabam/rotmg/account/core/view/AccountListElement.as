@@ -15,7 +15,7 @@ package kabam.rotmg.account.core.view
 			public var guid:TextFieldDisplayConcrete;
 			public var pass:TextFieldDisplayConcrete;
 
-			public function AccountListElement(_arg_1:String,_arg_2:String, _arg_3:String)
+			public function AccountListElement(_arg_1:String, _arg_2:String, _arg_3:String)
 			{
 				graphics.beginFill(0x545454);
 				graphics.drawRoundRect(0, 0, 670, 36, 8, 8);

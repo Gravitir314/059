@@ -21,11 +21,11 @@ package com.company.assembleegameclient.util
 				{
 					_local_6 = new ImageSet();
 					_local_6.addFromBitmapData(_arg_2, _arg_3, _arg_4);
-					/*if (_local_5.images_.length > _local_6.images_.length)
+					if (_local_5.images_.length > _local_6.images_.length)
 					{
 						trace("Need masks for png referenced on line in stacktrace function AssetLoader/addAnimatedCharacters()");
 						trace(new Error().getStackTrace());
-					}*/
+					}
 				}
 				var _local_7:int;
 				while (_local_7 < _local_5.images_.length)

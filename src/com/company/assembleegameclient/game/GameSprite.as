@@ -954,7 +954,7 @@ package com.company.assembleegameclient.game
 					this.parent.parent.setChildIndex((this.parent.parent as Layers).top, 0);
 					if (Parameters.data_ != null)
 					{
-						stage.scaleMode = Parameters.data_.stageScale;
+						stage.scaleMode = Parameters.data_.stageScale == null ? StageScaleMode.NO_SCALE : Parameters.data_.stageScale;
 					}
 					stage.addEventListener(Event.RESIZE, this.onScreenResize);
 					stage.dispatchEvent(new Event(Event.RESIZE));

@@ -39,14 +39,6 @@ package kabam.rotmg.core.service
 				completeTask(true, _local_1);
 			}
 
-			private function onComplete(_arg_1:Boolean, _arg_2:*):void
-			{
-				var _local_3:XML = XML(_arg_2);
-				((_arg_1) && (this.appInitConfigData.dispatch(_local_3)));
-				this.initDynamicSettingsClass(_local_3);
-				completeTask(_arg_1, _arg_2);
-			}
-
 			private function initDynamicSettingsClass(_arg_1:XML):void
 			{
 				if (_arg_1 != null)

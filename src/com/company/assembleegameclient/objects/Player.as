@@ -4154,7 +4154,7 @@ package com.company.assembleegameclient.objects
 				{
 					return (-1);
 				}
-				var _local_10:int = -1;
+				var _local_10:int = 1;
 				var _local_6:int = this.slotTypes_[0];
 				var _local_15:int;
 				var _local_8:int;
@@ -4169,7 +4169,10 @@ package com.company.assembleegameclient.objects
 					_local_5 = ObjectLibrary.xmlLibrary_[_local_14];
 					if (_local_5)
 					{
-						if (_local_5.SlotType != _local_6) continue;
+						if (_local_5.SlotType != _local_6)
+						{
+							continue;
+						}
 						if (_local_5.hasOwnProperty("Projectile"))
 						{
 							_local_15 = _local_5.Projectile.MinDamage;

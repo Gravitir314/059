@@ -132,7 +132,10 @@ package kabam.rotmg.account.core.view
 
 			private function onDeleteClick(_arg_1:MouseEvent):void
 			{
-				if (AccountListContainer.selectedContainer == null) return;
+				if (AccountListContainer.selectedContainer == null)
+				{
+					return;
+				}
 				var elem:AccountListElement = AccountListContainer.selectedContainer;
 				for (var i:int = 0; i < Parameters.data_.logins.length; i++)
 				{
@@ -244,7 +247,10 @@ package kabam.rotmg.account.core.view
 
 			private function onRBClick(_arg_1:MouseEvent):void
 			{
-				if (AccountListContainer.selectedContainer == null) return;
+				if (AccountListContainer.selectedContainer == null)
+				{
+					return;
+				}
 				var _local_1:AccountData = new AccountData();
 				_local_1.username = AccountListContainer.selectedContainer.guid.getStringBuilder().getString();
 				if (_local_1.username.indexOf("@") != -1)

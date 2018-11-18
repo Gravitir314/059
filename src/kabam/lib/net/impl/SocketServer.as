@@ -15,7 +15,6 @@ package kabam.lib.net.impl
 	import flash.utils.Timer;
 
 	import kabam.lib.net.api.MessageProvider;
-	import kabam.rotmg.messaging.impl.GameServerConnection;
 
 	import org.osflash.signals.Signal;
 
@@ -119,15 +118,7 @@ package kabam.lib.net.impl
 			{
 				if (Parameters.data_.traceMessage)
 				{
-					switch (_arg_1.id)
-					{
-						case GameServerConnection.PONG:
-						case GameServerConnection.UPDATEACK:
-						case GameServerConnection.ESCAPE:
-							break;
-						default:
-							trace(_arg_1);
-					}
+					trace(_arg_1);
 				}
 				this.tail.next = _arg_1;
 				this.tail = _arg_1;
@@ -252,14 +243,7 @@ package kabam.lib.net.impl
 					}
 					if (Parameters.data_.traceMessage)
 					{
-						switch (message.id)
-						{
-							case GameServerConnection.PING:
-							case GameServerConnection.NEWTICK:
-								break;
-							default:
-								trace(message);
-						}
+						trace(message);
 					}
 					message.consume();
 				}

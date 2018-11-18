@@ -58,7 +58,10 @@ package com.company.assembleegameclient.mapeditor
 						if (_arg_2 != "")
 						{
 							_local_8 = ((_local_7.hasOwnProperty(_arg_2)) ? Number(_local_7.elements(_arg_2)) : -1);
-							if (_local_8 < 0) continue;
+							if (_local_8 < 0)
+							{
+								continue;
+							}
 							_local_5 = (_local_8 >= _arg_3);
 							_local_6 = (!((_arg_4 > 0) && (_local_8 > _arg_4)));
 						}

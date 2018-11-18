@@ -1032,7 +1032,7 @@
       </Projectile>
       <Projectile id="2">
          <ObjectId>El Dorado Gold</ObjectId>
-         <Damage>175</Damage>
+         <Damage>200</Damage>
          <Speed>80</Speed>
          <Size>130</Size>
          <LifetimeMS>2000</LifetimeMS>
