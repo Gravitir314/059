@@ -715,6 +715,7 @@ package com.company.assembleegameclient.ui.options
 				this.addOptionAndPosition(new ChoiceOption("safeWalk", makeOnOffLabels(), [true, false], "Safe Walk", "Makes lava tiles act as if they were unwalkable.", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("vialChecker", makeOnOffLabels(), [true, false], "Vial Checker", "Check players inventories and add him to the list if vial found.", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("instaTradeSelect", makeOnOffLabels(), [true, false], "Instantly Select All Items", "When turned on, a right click on the trade window will select all your items instantly. When turned off, selects only items of the same type, smoothly, like an actual player.", null), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("multiBox", makeOnOffLabels(), [true, false], "Multi Box", "Toggle multibox.", null), 0, 0, true);
 			}
 
 			public function addReconAndMessageOptions():void

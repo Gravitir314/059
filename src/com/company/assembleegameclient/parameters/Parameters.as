@@ -133,7 +133,7 @@ package com.company.assembleegameclient.parameters
 			public static var emptyOffer:Vector.<Boolean> = new <Boolean>[false, false, false, false, false, false, false, false, false, false, false, false];
 			public static var recvrName:String;
 			public static var dmgCounter:Array = [];
-			public static const spamFilter:Vector.<String> = new <String>["oryxsh0p.net", "wh!tebag,net", "wh!tebag.net", "realmshop.info", "rotmgmarket.c", "rotmg.sh0p", "rotmg.shop", "rpgstash,com", "rpgstash.com", "rpgstash com", "realmitems", "reaimitems", "reaimltems", "realmltems", "realmpower,net", "reaimpower.net", "realmpower.net", "reaimpower,net", "rea!mkings.xyz", "buyrotmg.c", "lifepot. org", "-----|", "rotmg,org", "rotmgmax.me", "rotmgmax,me", "bert"];
+			public static const spamFilter:Vector.<String> = new <String>["oryxsh0p.net", "wh!tebag,net", "wh!tebag.net", "realmshop.info", "rotmgmarket.c", "rotmg.sh0p", "rotmg.shop", "rpgstash,com", "rpgstash.com", "rpgstash com", "realmitems", "reaimitems", "reaimltems", "realmltems", "realmpower,net", "reaimpower.net", "realmpower.net", "reaimpower,net", "rea!mkings.xyz", "buyrotmg.c", "lifepot. org", "-----|", "rotmg,org", "rotmgmax.me", "rotmgmax,me", "rotmgmax_me", "bert"];
 			public static var lockRecon:Boolean = false;
 			public static var usingPortal:Boolean;
 			public static var portalID:int;
@@ -1130,6 +1130,8 @@ package com.company.assembleegameclient.parameters
 				setDefault("anchorName", "");
 				setDefault("vialChecker", true);
 				setDefault("instaTradeSelect", false);
+				setDefault("multiLeader", "");
+				setDefault("multiBox", false);
 			}
 
 

@@ -95,7 +95,7 @@ package com.company.assembleegameclient.screens
 				var _local_2:DisplayObject;
 				this.accountInfo = _arg_1;
 				_local_2 = (_arg_1 as DisplayObject);
-				_local_2.x = (stage.stageWidth - 10);
+				_local_2.x = (800 - 10);
 				_local_2.y = 2;
 				while (this.accountInfoLayer.numChildren > 0)
 				{

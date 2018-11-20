@@ -51,7 +51,7 @@ git clone https://github.com/Gravitir314/059.git
 - Even Lower Graphics Mode
 - Event Notification
 - FameBot
-- Full-Screen V3
+- Full-Screen V3 (+Steam)
 - Hide non-locked players
 - Hide pets (Your will stay)
 - Ignore Ice and Push

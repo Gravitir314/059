@@ -974,8 +974,6 @@ package com.company.assembleegameclient.game
 					stage.removeEventListener(Event.DEACTIVATE, this.onFocusOut);
 					stage.removeEventListener(Event.RESIZE, this.onScreenResize);
 					LoopedProcess.destroyAll();
-					stage.scaleMode = StageScaleMode.EXACT_FIT;
-					stage.dispatchEvent(new Event(Event.RESIZE));
 					((contains(map)) && (removeChild(map)));
 					if (hudView != null)
 					{

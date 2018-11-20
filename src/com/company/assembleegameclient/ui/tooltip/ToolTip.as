@@ -150,9 +150,9 @@ package com.company.assembleegameclient.ui.tooltip
 				{
 					_local_3 = (((stage.stageWidth - 800) / 2) + stage.mouseX);
 					_local_1 = (((stage.stageHeight - 600) / 2) + stage.mouseY);
-					if (((this.parent is TooltipsView) || ((this is PlayerGroupToolTip) && (!(this.parent is PlayerArrow)))))
+					if (this.parent is TooltipsView || this is PlayerGroupToolTip && (!(this.parent is PlayerArrow)))
 					{
-						if (((!(Parameters.ssmode)) && (Parameters.data_.uiscale)))
+						if (!Parameters.ssmode && Parameters.data_.uiscale)
 						{
 							this.parent.scaleX = (_local_2 / _local_4);
 							this.parent.scaleY = 1;

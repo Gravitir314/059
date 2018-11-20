@@ -94,6 +94,7 @@ package
 			private function onAddedToStage(_arg_1:Event):void
 			{
 				removeEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
+				stage.addEventListener(Event.RESIZE, this.onStageResize, false, 0, true);
 				this.setup();
 			}
 

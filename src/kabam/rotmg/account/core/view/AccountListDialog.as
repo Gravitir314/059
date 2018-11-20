@@ -30,6 +30,8 @@ package kabam.rotmg.account.core.view
 	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
+	import org.swiftsuspenders.Injector;
+
 	public class AccountListDialog extends Frame
 		{
 			public var login:LoginSignal;
@@ -70,10 +72,11 @@ package kabam.rotmg.account.core.view
 
 			private function initialize():void
 			{
-				this.closeDialogs = StaticInjectorContext.getInjector().getInstance(CloseDialogsSignal);
-				this.login = StaticInjectorContext.getInjector().getInstance(LoginSignal);
-				this.openDialog = StaticInjectorContext.getInjector().getInstance(OpenDialogSignal);
-				this.loginError = StaticInjectorContext.getInjector().getInstance(TaskErrorSignal);
+				var injector:Injector = StaticInjectorContext.getInjector();
+				this.closeDialogs = injector.getInstance(CloseDialogsSignal);
+				this.login = injector.getInstance(LoginSignal);
+				this.openDialog = injector.getInstance(OpenDialogSignal);
+				this.loginError = injector.getInstance(TaskErrorSignal);
 			}
 
 			private function onRemovedFromStage(_arg_1:Event):void

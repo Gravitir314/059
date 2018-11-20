@@ -19,6 +19,7 @@ package com.company.assembleegameclient.screens
 	import kabam.rotmg.account.web.model.AccountData;
 	import kabam.rotmg.core.StaticInjectorContext;
 	import kabam.rotmg.core.model.PlayerModel;
+	import kabam.rotmg.dialogs.control.OpenDialogSignal;
 	import kabam.rotmg.game.view.CreditDisplay;
 	import kabam.rotmg.news.view.NewsView;
 	import kabam.rotmg.text.model.TextKey;
@@ -30,6 +31,7 @@ package com.company.assembleegameclient.screens
 	import kabam.rotmg.ui.view.components.ScreenBase;
 
 	import org.osflash.signals.Signal;
+	import org.swiftsuspenders.Injector;
 
 	public class CharacterSelectionAndNewsScreen extends Sprite
 		{
@@ -70,11 +72,15 @@ package com.company.assembleegameclient.screens
 			private var backButton:TitleMenuOption = ButtonFactory.getMainButton();
 			private var charIdText:TextFieldDisplayConcrete;
 			private var charIdField:TextInputField;
+			private var multiButton:DeprecatedClickableText;
 			private var refreshButton:DeprecatedClickableText;
+			public var openDialog:OpenDialogSignal;
 
 			public function CharacterSelectionAndNewsScreen()
 			{
-				this.login = StaticInjectorContext.getInjector().getInstance(LoginSignal);
+				var injector:Injector = StaticInjectorContext.getInjector();
+				this.openDialog = injector.getInstance(OpenDialogSignal);
+				this.login = injector.getInstance(LoginSignal);
 				this.close = this.backButton.clicked;
 				this.showClasses = this.classesButton.clicked;
 				addChild(new ScreenBase());
@@ -120,7 +126,18 @@ package com.company.assembleegameclient.screens
 				{
 					this.createChooseNameLink();
 				}
+				this.createMultiButton();
 				this.createRefreshButton();
+			}
+
+			private function createMultiButton():void
+			{
+				this.multiButton = new DeprecatedClickableText(18, true, "Multi");
+				this.multiButton.buttonMode = true;
+				this.multiButton.x = 640;
+				this.multiButton.y = this.openCharactersText.y;
+				this.multiButton.addEventListener(MouseEvent.CLICK, onMultiClick);
+				addChild(this.multiButton);
 			}
 
 			private function createRefreshButton():void
@@ -131,6 +148,11 @@ package com.company.assembleegameclient.screens
 				this.refreshButton.y = this.openCharactersText.y;
 				this.refreshButton.addEventListener(MouseEvent.CLICK, onRefreshClick);
 				addChild(this.refreshButton);
+			}
+
+			private function onMultiClick(_arg_1:MouseEvent):void
+			{
+				this.openDialog.dispatch(new MultiDialog);
 			}
 
 			private function onRefreshClick(_arg_1:MouseEvent):void
@@ -366,11 +388,7 @@ package com.company.assembleegameclient.screens
 
 			private function getReferenceRectangle():Rectangle
 			{
-				var _local_1:Rectangle = new Rectangle();
-				if (stage)
-				{
-					_local_1 = new Rectangle(0, 0, stage.stageWidth, stage.stageHeight);
-				}
+				var _local_1:Rectangle = new Rectangle(0, 0, 800, 600);
 				return (_local_1);
 			}
 

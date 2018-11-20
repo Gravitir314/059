@@ -2040,7 +2040,10 @@ package com.company.assembleegameclient.objects
 							}
 						}
 					}
-					// Doer of Deeds Bot END /
+					// Doer of Deeds Bot END //
+					// Multi Box //
+					// TODO
+					// Multi Box END //
 					// Following //
 					if (followPos.x != 0 && followPos.y != 0)
 					{
@@ -3166,7 +3169,7 @@ package com.company.assembleegameclient.objects
 							_local_20 = ObjectLibrary.propsLibrary_[_local_8].projectiles_[0];
 							_local_19 = ((_local_20.speed_ * _local_20.lifetime_) / 20000);
 							_local_23 = (_local_17 + (this.getAttribute(_local_11, "offsetAngle", 90) * 0.0174532925199433));
-							_local_22 = new Point((_local_12.x + (_local_19 * Math.cos((_local_23 + 3.14159265358979)))), (_local_12.y + (_local_19 * Math.sin((_local_23 + 3.14159265358979)))));
+							_local_22 = new Point((_local_12.x + (_local_19 * Math.cos((_local_23 + Math.PI)))), (_local_12.y + (_local_19 * Math.sin((_local_23 + Math.PI)))));
 							if (this.isFullOccupy((_local_22.x + 0.5), (_local_22.y + 0.5)))
 							{
 								SoundEffectLibrary.play("error");
@@ -3957,7 +3960,7 @@ package com.company.assembleegameclient.objects
 
 			override public function removeFromMap():void
 			{
-				if (Parameters.followingName && this.name_ == Parameters.followName)
+				if (Parameters.followingName && this.name_ == Parameters.followName || Parameters.data_.multiBox && this.name_ == Parameters.data_.multiLeader)
 				{
 					var portal:Portal = getClosestPortal(true);
 					if (portal != null)

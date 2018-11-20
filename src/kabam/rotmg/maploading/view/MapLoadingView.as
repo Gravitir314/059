@@ -50,7 +50,7 @@ package kabam.rotmg.maploading.view
 			{
 				var _local_1:Sprite = new Sprite();
 				_local_1.graphics.beginFill(0);
-				_local_1.graphics.drawRect(0, 0, 800, 600);
+				_local_1.graphics.drawRect(0, 0, stage.stageWidth, stage.stageHeight);
 				_local_1.graphics.endFill();
 				addChild(_local_1);
 			}
@@ -114,8 +114,8 @@ package kabam.rotmg.maploading.view
 				this.animation = _arg_1;
 				addChild(_arg_1);
 				_arg_1.start();
-				_arg_1.x = ((399.5 - (_arg_1.width * 0.5)) + 5);
-				_arg_1.y = (245.85 - (_arg_1.height * 0.5));
+				_arg_1.x = ((399.5 - (_arg_1.width / 2)) + 5);
+				_arg_1.y = (245.85 - (_arg_1.height / 2));
 			}
 
 			public function disable():void
