@@ -1,5 +1,6 @@
 # 059
-Custom hacked client to game RotMG
+Custom hacked client to game RotMG.
+<br>Development frozen indefinitely.
 ## Requirements
 - [IntelliJ IDEA](https://en.wikipedia.org/wiki/IntelliJ_IDEA) / [Flash Develop](https://en.wikipedia.org/wiki/FlashDevelop)
 - [Apache Flex](https://en.wikipedia.org/wiki/Apache_Flex)
