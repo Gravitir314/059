@@ -92,6 +92,7 @@ package com.company.assembleegameclient.objects
 				{
 					this.tier = _arg_1.Tier;
 				}
+                this.rateOfFire_ = (("RateOfFire" in _arg_1) ? _arg_1.RateOfFire : 0);
 				this.boss_ = _arg_1.hasOwnProperty("Quest");
 				if (this.unlistedBosses.indexOf(this.type_) >= 0)
 				{

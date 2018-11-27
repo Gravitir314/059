@@ -935,43 +935,39 @@ package com.company.assembleegameclient.objects
 				}
 			}
 
-			public function shootAutoAimWeaponAngle(_arg_1:int, _arg_2:int):Boolean
-			{
-				var _local_8:* = null;
-				var _local_6:Number;
-				if ((((this.isStunned_()) || (this.isPaused_())) || (this.isPetrified_())))
-				{
-					return (false);
-				}
-				var _local_9:ObjectProperties = ObjectLibrary.getPropsFromType(_arg_1);
-				this.attackPeriod_ = ((1 / this.attackFrequency()) * (1 / _local_9.rateOfFire_));
-				if (_arg_2 < (attackStart_ + this.attackPeriod_))
-				{
-					return (false);
-				}
-				var _local_5:Vector3D = new Vector3D(this.x_, this.y_);
-				var _local_4:Point = this.sToW(this.mousePos_.x, this.mousePos_.y);
-				var _local_3:Vector3D = new Vector3D(_local_4.x, _local_4.y);
-				var _local_7:ProjectileProperties = _local_9.projectiles_[0];
-				if (this.isUnstable)
-				{
-					this.attackStart_ = _arg_2;
-					this.attackAngle_ = (Math.random() * 6.28318530717959);
-					this.doShoot(_arg_2, _arg_1, ObjectLibrary.xmlLibrary_[_arg_1], this.attackAngle_, true);
-					return (true);
-				}
-				_local_8 = this.calcAimAngle(_local_7.speed_, (_local_7.maxProjTravel_ + Parameters.data_.aaDistance), _local_5, _local_3);
-				if (_local_8)
-				{
-					_local_6 = Math.atan2((_local_8.y - this.y_), (_local_8.x - this.x_));
-					this.attackStart_ = _arg_2;
-					this.attackAngle_ = _local_6;
-					this.doShoot(this.attackStart_, _arg_1, ObjectLibrary.xmlLibrary_[_arg_1], _local_6, true);
-					return (true);
-				}
-				this.isShooting = false;
-				return (false);
-			}
+            public function shootAutoAimWeaponAngle(_arg_1:int, _arg_2:int):Boolean {
+                var angleVec:Vector3D;
+                var atkAngle:Number;
+                if ((((this.isStunned) || (this.isPaused)) || (this.isPetrified))) {
+                    return (false);
+                }
+                var _local_9:ObjectProperties = ObjectLibrary.getPropsFromType(_arg_1);
+                this.attackPeriod_ = ((1 / this.attackFrequency()) * (1 / _local_9.rateOfFire_));
+                if (_arg_2 < (attackStart_ + this.attackPeriod_)) {
+                    return (false);
+                }
+                var xyVec:Vector3D = new Vector3D(this.x_, this.y_);
+                var point:Point = this.sToW(this.mousePos_.x, this.mousePos_.y);
+                var pointVec:Vector3D = new Vector3D(point.x, point.y);
+                var projProps:ProjectileProperties = _local_9.projectiles_[0];
+                var speed:Number = (projProps.speed_ / 10000);
+                if (this.isUnstable) {
+                    this.attackStart_ = _arg_2;
+                    this.attackAngle_ = (Math.random() * 6.28318530717959);
+                    this.doShoot(_arg_2, _arg_1, ObjectLibrary.xmlLibrary_[_arg_1], this.attackAngle_, true);
+                    return (true);
+                }
+                angleVec = this.calcAimAngle(speed, (projProps.lifetime_ * speed), xyVec, pointVec);
+                if (angleVec) {
+                    atkAngle = Math.atan2((angleVec.y - this.y_), (angleVec.x - this.x_));
+                    this.attackStart_ = _arg_2;
+                    this.attackAngle_ = atkAngle;
+                    this.doShoot(this.attackStart_, _arg_1, ObjectLibrary.xmlLibrary_[_arg_1], atkAngle, true);
+                    return (true);
+                }
+                this.isShooting = false;
+                return (false);
+            }
 
 			public function shootAutoAimAbilityAngle(_arg_1:int, _arg_2:int):void
 			{

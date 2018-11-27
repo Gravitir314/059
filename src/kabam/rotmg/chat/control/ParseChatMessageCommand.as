@@ -681,7 +681,7 @@ package kabam.rotmg.chat.control
 							}
 							return (true);
 						}
-						command = this.data.match("^/alpha (\\d+)");
+                        command = this.data.match("^/alpha (\\d*\\.*\\d+)");
 						if (command != null)
 						{
 							Parameters.data_.alphaMan = command[1];

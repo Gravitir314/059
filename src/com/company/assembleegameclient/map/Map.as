@@ -130,7 +130,7 @@ package com.company.assembleegameclient.map
 
 			private function forceSoftwareRenderCheck(_arg_1:String):void
 			{
-				forceSoftwareRender = ((!(this.forceSoftwareMap[_arg_1] == null)) || ((!(ROTMG.STAGE == null)) && (ROTMG.STAGE.stage3Ds[0].context3D == null)));
+				forceSoftwareRender = true
 			}
 
 			override public function initialize():void

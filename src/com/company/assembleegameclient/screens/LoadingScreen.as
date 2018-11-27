@@ -35,7 +35,7 @@ package com.company.assembleegameclient.screens
 			private function onAdded(_arg_1:Event):void
 			{
 				removeEventListener(Event.ADDED_TO_STAGE, this.onAdded);
-				this.text.x = (800 / 2);
+                this.text.x = (stage.stageWidth / 2);
 			}
 
 			public function setTextKey(_arg_1:String):void
