@@ -7,6 +7,8 @@ package com.company.assembleegameclient.screens
 	import com.company.assembleegameclient.ui.DeprecatedClickableText;
 	import com.company.assembleegameclient.ui.Scrollbar;
 
+	import flash.display.DisplayObject;
+
 	import flash.display.Shape;
 	import flash.display.Sprite;
 	import flash.events.Event;
@@ -112,8 +114,7 @@ package com.company.assembleegameclient.screens
 					this.openCharactersText.setColor(TAB_SELECTED);
 					this.createOpenGraveyardText();
 				}
-				this.createVaultsText();
-				if (Parameters.preload)
+				if (Parameters.preload && !Parameters.ssmode)
 				{
 					this.createCharIdTextBox();
 				}
@@ -126,8 +127,12 @@ package com.company.assembleegameclient.screens
 				{
 					this.createChooseNameLink();
 				}
-				this.createMultiButton();
-				this.createRefreshButton();
+				if (!Parameters.ssmode)
+				{
+					this.createVaultsText();
+					this.createMultiButton();
+					this.createRefreshButton();
+				}
 			}
 
 			private function createMultiButton():void

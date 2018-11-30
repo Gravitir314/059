@@ -967,7 +967,7 @@
       <Consumable/>
       <Soulbound/>
       <feedPower>200</feedPower>
-      <Activate id="SW Portal" onlyInVault="1">CreatePortal</Activate>
+      <Activate id="SW Portal" onlyIn="vault">CreatePortal</Activate>
       <BagType>8</BagType>
       <Track/>
    </Object>

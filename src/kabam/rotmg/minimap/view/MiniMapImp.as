@@ -271,7 +271,7 @@ package kabam.rotmg.minimap.view
 							this.hackmapData = _arg_1[_local_8];
 							if (this.map.name_ != Map.NEXUS)
 							{
-								Parameters.worldMessage = (((("World " + ++_local_8) + " (") + _local_9) + " uncertainty)");
+								Parameters.worldMessage = "World " + ++_local_8 + " (" + _local_9 + " uncertainty)";
 							}
 							return (true);
 						}

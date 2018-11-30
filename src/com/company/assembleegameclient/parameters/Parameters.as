@@ -26,10 +26,6 @@ package com.company.assembleegameclient.parameters
 
 	public class Parameters
 		{
-			// ObjectLibrary.as
-			// Update to X31.0.2
-			// Fix typo || clean code
-			// [GetPackagesTask.as, GetMysteryBoxesTask.as, Player.as, MapUserInput.as, GameServerConnectionConcrete.as, ParseChatMessageCommand.as]
 			public static const PORT:int = 2050;
 			public static const ALLOW_SCREENSHOT_MODE:Boolean = false;
 			public static const FELLOW_GUILD_COLOR:uint = 10944349;
@@ -78,7 +74,7 @@ package com.company.assembleegameclient.parameters
 			public static var fameBotPortalId:int;
 			public static var fameBotPortal:Portal;
 			public static var fameBotPortalPoint:Point;
-			public static var ssmode:Boolean = false;
+			public static var ssmode:Boolean = false; // TODO
 			public static var ignoringSecurityQuestions:Boolean = false;
 			public static var Cache_CHARLIST_valid:Boolean = false;
 			public static var Cache_CHARLIST_data:String;
@@ -119,7 +115,7 @@ package com.company.assembleegameclient.parameters
 			public static var syncFollowing:Boolean = false;
 			public static var questFollow:Boolean = false;
 			public static var famePoint:Point = new Point(0, 0);
-			public static var SPOOKYBOINEAR:Boolean;
+			public static var SPOOKYBOINEAR:Boolean; // TODO
 			public static var DrownAmount:int = 94;
 			public static var reconRealm:ReconnectEvent = null;
 			public static var reconDung:ReconnectEvent = null;
@@ -160,7 +156,6 @@ package com.company.assembleegameclient.parameters
 			public static var playerSkin:int = -1;
 			public static var PlayerTex1:int = -1;
 			public static var PlayerTex2:int = -1;
-			public static var switchItems:Boolean = false;
 			public static var vialHolders:Array = [];
 
 			public static function setTimerPhases():void
@@ -733,7 +728,8 @@ package com.company.assembleegameclient.parameters
 
 			public static function isGpuRender():Boolean
 			{
-				return (!GPURenderError && data_.GPURender && !Map.forceSoftwareRender);
+				return false;
+				//return (!GPURenderError && data_.GPURender && !Map.forceSoftwareRender); // TODO fix hardware acceleration
 			}
 
 			public static function clearGpuRenderEvent(_arg_1:Event):void
@@ -913,15 +909,15 @@ package com.company.assembleegameclient.parameters
 							return;
 					}
 				}
-				setDefault("gameVersion", "X31.1.0");
+				setDefault("gameVersion", "X31.1.1");
 				setDefault("lastTab", TextKey.OPTIONS_CONTROLS);
 				setDefault("ssdebuffBitmask", 0);
 				setDefault("ssdebuffBitmask2", 0);
 				setDefault("ccdebuffBitmask", 0);
 				setDefault("spamFilter", spamFilter);
 				setDefault("AutoLootOn", true);
-				setDefault("AutoHealPercentage", 99);
-				setDefault("AAOn", false);
+				setDefault("AutoHealPercentage", 60);
+				setDefault("AAOn", true);
 				setDefault("AATargetLead", true);
 				setDefault("AABoundingDist", 4);
 				setDefault("aimMode", 2);
@@ -958,17 +954,16 @@ package com.company.assembleegameclient.parameters
 				setDefaultKey("LowCPUModeHotKey", KeyCodes.UNSET);
 				setDefaultKey("Cam45DegInc", KeyCodes.UNSET);
 				setDefaultKey("Cam45DegDec", KeyCodes.UNSET);
-				setDefaultKey("QuestTeleport", KeyCodes.UNSET);
+				setDefaultKey("QuestTeleport", KeyCodes.T);
 				setDefaultKey("ReconRealm", KeyCodes.P);
 				setDefaultKey("RandomRealm", KeyCodes.LEFTBRACKET);
 				setDefaultKey("ReconVault", KeyCodes.RIGHTBRACKET);
 				setDefaultKey("ReconDaily", KeyCodes.UNSET);
 				setDefaultKey("PassesCoverHotkey", KeyCodes.UNSET);
-				setDefaultKey("AAHotkey", KeyCodes.UNSET);
-				setDefaultKey("AAModeHotkey", KeyCodes.UNSET);
+				setDefaultKey("AAHotkey", KeyCodes.L);
+				setDefaultKey("AAModeHotkey", KeyCodes.M);
 				setDefaultKey("AutoAbilityHotkey", KeyCodes.UNSET);
 				setDefaultKey("AutoLootHotkey", KeyCodes.UNSET);
-				setDefault("requestHealPercent", 55);
 				setDefault("damageIgnored", false);
 				setDefault("AntiSpookiBoiDecoi", false);
 				setDefault("ignoreIce", false);
@@ -1038,30 +1033,28 @@ package com.company.assembleegameclient.parameters
 				setDefault("mobNotifier", true);
 				setDefault("showMobInfo", false);
 				setDefault("questHUD", true);
-				setDefault("newHUD", false);
-				setDefault("aaDistance", 1);
 				setDefault("hideLowCPUModeChat", false);
 				setDefault("fameOryx", false);
 				setDefault("tiltCam", false);
 				setDefault("showBG", true);
 				setDefault("BossPriority", true);
-				setDefault("offsetWeapon", false);
+				setDefault("offsetWeapon", true);
 				setDefault("usernames", []);
 				setDefault("logins", []);
 				setDefault("passwords", []);
 				setDefault("autoLootExcludes", Parameters.defaultExclusions);
 				setDefault("autoLootIncludes", Parameters.defaultInclusions);
 				setDefault("autoLootUpgrades", false);
-				setDefault("autoLootWeaponTier", 11);
-				setDefault("autoLootAbilityTier", 5);
-				setDefault("autoLootArmorTier", 12);
-				setDefault("autoLootRingTier", 5);
+				setDefault("autoLootWeaponTier", 12);
+				setDefault("autoLootAbilityTier", 6);
+				setDefault("autoLootArmorTier", 13);
+				setDefault("autoLootRingTier", 6);
 				setDefault("autoLootSkins", true);
 				setDefault("autoLootPetSkins", true);
 				setDefault("autoLootKeys", true);
 				setDefault("autoLootHPPots", true);
 				setDefault("autoLootMPPots", true);
-				setDefault("autoLootHPPotsInv", true);
+				setDefault("autoLootHPPotsInv", false);
 				setDefault("autoLootMPPotsInv", false);
 				setDefault("autoLootLifeManaPots", true);
 				setDefault("autoLootRainbowPots", true);
@@ -1074,14 +1067,14 @@ package com.company.assembleegameclient.parameters
 				setDefault("autoLootEggs", 1);
 				setDefault("autoDrinkFromBags", false);
 				setDefault("cacheCharList", false);
-				setDefault("PassesCover", false);
+				setDefault("PassesCover", true);
 				setDefault("chatLength", 10);
 				setDefault("autohpPotDelay", 400);
 				setDefault("mapHack", false);
-				setDefault("noRotate", false);
+				setDefault("noRotate", true);
 				setDefault("customSounds", true);
 				setDefault("customVolume", 1);
-				setDefault("spamPrism", false);
+				setDefault("spamPrism", false); // TODO
 				setDefault("showHighestDps", "off");
 				setDefaultControllerInput("ctrlEnterPortal", ControllerHandler.A_num_4);
 				setDefaultControllerInput("ctrlTeleQuest", ControllerHandler.Y_num_7);
@@ -1090,7 +1083,6 @@ package com.company.assembleegameclient.parameters
 				setDefaultControllerInput("ctrlItemMenu", ControllerHandler.LSTICK_CLICK_num_14);
 				setDefault("allowController", true);
 				setDefault("useControllerNumber", 0);
-				setDefault("selectedItemColor", 0);
 				setDefault("cNameBypass", false);
 				setDefault("eventNotifier", true);
 				setDefault("eventNotifierVolume", 1);
@@ -1132,6 +1124,8 @@ package com.company.assembleegameclient.parameters
 				setDefault("instaTradeSelect", false);
 				setDefault("multiLeader", "");
 				setDefault("multiBox", false);
+				setDefault("portalQuest", true);
+				setDefault("glowColor", 0);
 			}
 
 

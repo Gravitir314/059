@@ -141,7 +141,7 @@ package kabam.rotmg.chat.view
 			{
 				if (!this.view.hasEnteredText())
 				{
-					this.view.activate(((((Parameters.ssmode) ? "/tell " : "/t ") + this.tellModel.getNext()) + " "), true);
+					this.view.activate(Parameters.ssmode ? "/tell " : "/t " + this.tellModel.getNext() + " ", true);
 				}
 			}
 

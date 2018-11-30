@@ -2,7 +2,6 @@
 
 package kabam.rotmg.maploading.view
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
 	import com.gskinner.motion.GTween;
 
 	import flash.display.DisplayObject;
@@ -36,23 +35,13 @@ package kabam.rotmg.maploading.view
 			private var difficulty:int;
 			private var animation:Animation;
 
+			[Embed(source="MapLoadingScreen.swf", symbol="MapLoadingScreen")]
+			private var MapLoadingScreen:Class;
+
 			public function MapLoadingView()
 			{
-				if (Parameters.ssmode) // TODO need this?
-				{
-					this.addBackground();
-				}
 				this.makeLoadingScreen();
 				addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
-			}
-
-			private function addBackground():void
-			{
-				var _local_1:Sprite = new Sprite();
-				_local_1.graphics.beginFill(0);
-				_local_1.graphics.drawRect(0, 0, stage.stageWidth, stage.stageHeight);
-				_local_1.graphics.endFill();
-				addChild(_local_1);
 			}
 
 			private function makeLoadingScreen():void

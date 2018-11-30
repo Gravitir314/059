@@ -1,0 +1,1566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d42eab77-8cca-4611-b80f-8c08326a9b08" name="Default" comment="Screenshot mode now can delete messages that created by hack commands.&#10;Event notifier fixed&#10;Tooltips fixed in Steam with fullscreen&#10;Use /glow to select your glow color&#10;If someone open portal in nexus, you will get quest arrow to portal">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MapLoadingScreen.as" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MapLoadingScreen.swf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ROTMG.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/ROTMG.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/engine3d/Object3D.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/engine3d/Object3D.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/engine3d/ObjectFace3D.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/engine3d/ObjectFace3D.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/game/MapUserInput.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/game/MapUserInput.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/map/DarknessOverlay.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/map/DarknessOverlay.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/map/HurtOverlay.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/map/HurtOverlay.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/map/Map.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/map/Map.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/map/mapoverlay/MapOverlay.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/map/mapoverlay/MapOverlay.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/objects/ObjectProperties.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/objects/ObjectProperties.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/objects/Player.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/objects/Player.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/objects/animation/FrameData.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/objects/animation/FrameData.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/objects/particles/GasParticle.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/objects/particles/GasParticle.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/parameters/Parameters.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/parameters/Parameters.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/screens/CharacterSelectionAndNewsScreen.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/screens/CharacterSelectionAndNewsScreen.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/screens/ServerBoxes.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/screens/ServerBoxes.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/sound/SoundEffectLibrary.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/sound/SoundEffectLibrary.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/GameObjectListItem.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/GameObjectListItem.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/StatusBar.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/StatusBar.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/options/Options.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/options/Options.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/panels/mediators/ItemGridMediator.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/panels/mediators/ItemGridMediator.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/tooltip/EquipmentToolTip.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/tooltip/EquipmentToolTip.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/util/AssetLoader.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/util/AssetLoader.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/util/AssetLoader_Nexus.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/decagames/rotmg/pets/data/PetsModel_petsDataXML.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/decagames/rotmg/pets/data/PetsModel_petsDataXML.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/decagames/rotmg/supportCampaign/data/SupporterCampaignModel.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/decagames/rotmg/supportCampaign/data/SupporterCampaignModel.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/decagames/rotmg/supportCampaign/tab/SupporterShopTabMediator.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/decagames/rotmg/supportCampaign/tab/SupporterShopTabMediator.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/decagames/rotmg/supportCampaign/tab/SupporterShopTabView.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/decagames/rotmg/supportCampaign/tab/SupporterShopTabView.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/decagames/rotmg/ui/assets/UIAssets_UI.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/decagames/rotmg/ui/assets/UIAssets_UI.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/decagames/rotmg/ui/assets/UIAssets_UI_CONFIG.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/decagames/rotmg/ui/assets/UIAssets_UI_CONFIG.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/core/view/AccountListContainer.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/core/view/AccountListContainer.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/core/view/AccountListDialog.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/core/view/AccountListDialog.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/core/view/ConfirmEmailModal.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/core/view/ConfirmEmailModal.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/securityQuestions/mediators/SecurityQuestionsMediator.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/securityQuestions/mediators/SecurityQuestionsMediator.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/securityQuestions/view/SecurityQuestionsDialog.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/securityQuestions/view/SecurityQuestionsDialog.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/web/commands/WebLoginCommand.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/web/commands/WebLoginCommand.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/web/model/AccountData.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/web/model/AccountData.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/web/view/WebAccountInfoView.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/web/view/WebAccountInfoView.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/web/view/WebLoginDialog.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/web/view/WebLoginDialog.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/web/view/WebLoginMediator.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/web/view/WebLoginMediator.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars16x16rEncountersEmbed_.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars16x16rEncountersEmbed_.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiObj2Embed_.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiObj2Embed_.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_petsDivineEmbed_.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_petsDivineEmbed_.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_playersSkinsEmbed_.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_playersSkinsEmbed_.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_playersSkinsMaskEmbed_.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_playersSkinsMaskEmbed_.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EncountersCXML.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EncountersCXML.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EquipCXML.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EquipCXML.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EquipKeysCXML.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EquipKeysCXML.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EquipSkinsCXML.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EquipSkinsCXML.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_KTestingCXML.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_KTestingCXML.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_OryxWineCellarCXML.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_OryxWineCellarCXML.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_PetsCXML.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_PetsCXML.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_SkinsCXML.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_SkinsCXML.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_StaticObjectsCXML.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_StaticObjectsCXML.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_TokenCXML.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_TokenCXML.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_eventChestObjectsCXML.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_eventChestObjectsCXML.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/characters/reskin/control/OpenReskinDialogCommand.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/characters/reskin/control/OpenReskinDialogCommand.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/chat/control/ParseChatMessageCommand.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/chat/control/ParseChatMessageCommand.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/chat/control/TextHandler.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/chat/control/TextHandler.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/chat/model/ChatMessage.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/chat/model/ChatMessage.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/chat/view/ChatInputMediator.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/chat/view/ChatInputMediator.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/chat/view/ChatList.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/chat/view/ChatList.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/chat/view/ChatListItem.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/chat/view/ChatListItem.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/chat/view/ChatListItemFactory.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/chat/view/ChatListItemFactory.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/chat/view/ChatMediator.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/chat/view/ChatMediator.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/constants/ActivationType.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/constants/ActivationType.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/core/service/RequestAppInitTask.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/core/service/RequestAppInitTask.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/dailyLogin/controller/CalendarViewMediator.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/dailyLogin/controller/CalendarViewMediator.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/game/commands/PlayGameCommand.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/game/commands/PlayGameCommand.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/game/view/GameSpriteMediator.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/game/view/GameSpriteMediator.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/language/service/GetLanguageService.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/language/service/GetLanguageService.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/maploading/view/MapLoadingView.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/maploading/view/MapLoadingView.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/messaging/impl/GameServerConnectionConcrete.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/messaging/impl/GameServerConnectionConcrete.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/messaging/impl/data/StatData.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/messaging/impl/data/StatData.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/minimap/view/MiniMapImp.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/minimap/view/MiniMapImp.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/promotions/view/BeginnersPackageOfferDialog.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/promotions/view/BeginnersPackageOfferDialog.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/servers/control/ParseServerDataCommand.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/servers/control/ParseServerDataCommand.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/ui/view/CharacterDetailsView.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/ui/view/CharacterDetailsView.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/ui/view/TitleView.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/ui/view/TitleView.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/ui/view/TitleView_TitleScreenBackground.as" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/ui/view/TitleView_TitleScreenGraphic.as" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/ui/view/components/ScreenBase.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/ui/view/components/ScreenBase.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/ui/view/components/ScreenBase_TitleScreenBackground.as" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/util/graphics/ButtonLayoutHelper.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/kabam/rotmg/util/graphics/ButtonLayoutHelper.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/zfn/sound/SoundCustom.as" beforeDir="false" afterPath="$PROJECT_DIR$/src/zfn/sound/SoundCustom.as" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="330602412">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="as" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="ActionScript" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="as" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="ActionScript" value="5" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-1986853030">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="10" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.37" value="2" />
+          <entry key="project.open.time.39" value="1" />
+          <entry key="project.open.time.43" value="1" />
+          <entry key="project.open.time.46" value="1" />
+          <entry key="project.open.time.49" value="1" />
+          <entry key="project.opened" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="as" value="122" />
+          <entry key="dtd" value="1" />
+          <entry key="swf" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="ActionScript" value="122" />
+          <entry key="DTD" value="1" />
+          <entry key="SWF" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="as" value="4175" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="ActionScript" value="4175" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-1559565574">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="80" />
+          <entry key="project.open.time.0" value="4" />
+          <entry key="project.open.time.1" value="7" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.100" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.117" value="1" />
+          <entry key="project.open.time.14" value="2" />
+          <entry key="project.open.time.15" value="2" />
+          <entry key="project.open.time.17" value="4" />
+          <entry key="project.open.time.18" value="2" />
+          <entry key="project.open.time.19" value="2" />
+          <entry key="project.open.time.2" value="7" />
+          <entry key="project.open.time.20" value="2" />
+          <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.23" value="2" />
+          <entry key="project.open.time.28" value="3" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.34" value="1" />
+          <entry key="project.open.time.36" value="1" />
+          <entry key="project.open.time.37" value="2" />
+          <entry key="project.open.time.38" value="2" />
+          <entry key="project.open.time.40" value="1" />
+          <entry key="project.open.time.42" value="1" />
+          <entry key="project.open.time.46" value="3" />
+          <entry key="project.open.time.47" value="2" />
+          <entry key="project.open.time.48" value="2" />
+          <entry key="project.open.time.49" value="1" />
+          <entry key="project.open.time.50" value="1" />
+          <entry key="project.open.time.53" value="2" />
+          <entry key="project.open.time.54" value="1" />
+          <entry key="project.open.time.55" value="1" />
+          <entry key="project.open.time.56" value="3" />
+          <entry key="project.open.time.58" value="2" />
+          <entry key="project.open.time.59" value="2" />
+          <entry key="project.open.time.62" value="1" />
+          <entry key="project.open.time.66" value="3" />
+          <entry key="project.open.time.69" value="1" />
+          <entry key="project.open.time.70" value="1" />
+          <entry key="project.open.time.73" value="2" />
+          <entry key="project.open.time.75" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.92" value="1" />
+          <entry key="project.opened" value="83" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="as" value="1834" />
+          <entry key="dat" value="31" />
+          <entry key="go" value="5" />
+          <entry key="iml" value="1" />
+          <entry key="java" value="1" />
+          <entry key="js2" value="1" />
+          <entry key="md" value="34" />
+          <entry key="png" value="12" />
+          <entry key="swf" value="32" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="ActionScript" value="1828" />
+          <entry key="Go" value="5" />
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="Image" value="12" />
+          <entry key="JAVA" value="1" />
+          <entry key="Markdown" value="34" />
+          <entry key="PLAIN_TEXT" value="38" />
+          <entry key="SWF" value="32" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="as" value="44110" />
+          <entry key="dat" value="1" />
+          <entry key="dummy" value="24" />
+          <entry key="go" value="5015" />
+          <entry key="js2" value="5" />
+          <entry key="md" value="483" />
+          <entry key="txt" value="1187" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="ActionScript" value="44038" />
+          <entry key="Go" value="5015" />
+          <entry key="Markdown" value="483" />
+          <entry key="PLAIN_TEXT" value="1289" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.go.postfix.template.usages.trigger">
+        <counts>
+          <entry key=".len" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="1324387279">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="10" />
+          <entry key="project.open.time.1" value="3" />
+          <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.3" value="3" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.opened" value="12" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="as" value="51" />
+          <entry key="swf" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="ActionScript" value="51" />
+          <entry key="SWF" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="as" value="377" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="ActionScript" value="377" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="059" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Go Application" />
+        <option value="ActionScript Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>question</find>
+      <find>SecurityQuestions.</find>
+      <find>SecurityQuestionsDialog.question1</find>
+      <find>security</find>
+      <find>Set your</find>
+      <find>SecurityQuestionsDialog.title</find>
+      <find>Ignore</find>
+      <find>rightButt</find>
+      <find>/glow</find>
+      <find>sskey</find>
+      <find>LootHPPo</find>
+      <find>autoLootHPPotsInv</find>
+      <find>Ring</find>
+      <find>autoDrinkFromBags</find>
+      <find>Marks</find>
+      <find>autoLootMarks</find>
+      <find>error</find>
+      <find>drawRect</find>
+      <find>beginill</find>
+      <find>&quot;accounts&quot;</find>
+      <find>getCre</find>
+      <find>this.account</find>
+      <find>isGpu</find>
+      <find>Parameters.glowColor</find>
+      <find>Too many</find>
+      <find>LoginError.tooManyFails</find>
+      <find>Djinn</find>
+      <find>Proxy</find>
+      <find>makeLocalhostServer</find>
+      <find>reconDelay</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>ROTMG</replace>
+      <replace>16</replace>
+      <replace>map</replace>
+      <replace>_local_12</replace>
+      <replace>_local_13</replace>
+      <replace>_local_8</replace>
+      <replace>showDamageAndHP</replace>
+      <replace>showD</replace>
+      <replace>player</replace>
+      <replace>command</replace>
+      <replace>evalIsNotInCombatMapArea</replace>
+      <replace>helpButton</replace>
+      <replace>content</replace>
+      <replace>title</replace>
+      <replace>username</replace>
+      <replace>var</replace>
+      <replace>public static var $1:int = $2;</replace>
+      <replace>enterButton</replace>
+      <replace>closeButton</replace>
+      <replace>editButton</replace>
+      <replace>deleteAccButton</replace>
+      <replace>vial</replace>
+      <replace>vialList</replace>
+      <replace>counter</replace>
+      <replace>slot</replace>
+      <replace>BitmapData</replace>
+      <replace>multiButton</replace>
+      <replace>setMeLead</replace>
+      <replace />
+      <replace>Parameters.data_.glowColor</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>D:\IDEA\Projects\059</dir>
+      <dir>D:\Projects\059\src\kabam\rotmg\messaging</dir>
+      <dir>D:\Projects\059\src\kabam\rotmg\assets</dir>
+    </dirStrings>
+  </component>
+  <component name="GOROOT" path="D:\Programs\Go" />
+  <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/io/decagames/rotmg/supportCampaign/data/SupporterFeatures.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/GameObjectListItem.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/ui/view/components/ScreenBase.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/ui/view/TitleView.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets.as" />
+        <option value="$PROJECT_DIR$/src/MapLoadingScreen.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/game/GameSprite.as" />
+        <option value="$PROJECT_DIR$/src/zfn/sound/SoundCustom.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/sound/SoundEffectLibrary.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/dialogs/EmbeddedHelp.dat" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/dialogs/HelpDialog.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/minimap/view/MiniMapImp.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/chat/control/TextHandler.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/ui/PlayerGroupMenuMediator.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/dailyLogin/controller/CalendarViewMediator.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/chat/view/ChatListMediator.as" />
+        <option value="$PROJECT_DIR$/src/io/decagames/rotmg/social/commands/FriendActionCommand.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/messaging/impl/GameServerConnectionConcrete.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/panels/mediators/ItemGridMediator.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/ui/view/CharacterDetailsView.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/map/DarknessOverlay.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/StatusBar.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/appengine/CharacterStats.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/engine3d/ObjectFace3D.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/stage3D/Renderer.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/map/Map.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/chat/view/ChatListItemFactory.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/chat/view/ChatListItem.as" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/chat/model/ChatMessage.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/game/MapUserInput.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/chat/view/ChatList.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/language/service/GetLanguageService.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/securityQuestions/mediators/SecurityQuestionsMediator.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/securityQuestions/view/SecurityQuestionsDialog.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/core/view/AccountListDialog.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/web/view/WebAccountInfoView.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/web/view/WebLoginMediator.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/screens/CharacterSelectionAndNewsScreen.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/web/model/AccountData.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/web/view/WebLoginDialog.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/objects/Player.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/parameters/Parameters.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/chat/control/ParseChatMessageCommand.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/core/services/GetCharListTask.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/core/view/AccountListContainer.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/maploading/view/MapLoadingView.as" />
+        <option value="$PROJECT_DIR$/src/ROTMG.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/screens/ServerBoxes.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/servers/control/ParseServerDataCommand.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/game/commands/PlayGameCommand.as" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="55" />
+    <option name="y" value="24" />
+    <option name="width" value="664" />
+    <option name="height" value="720" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go Application" />
+    <property name="GO_FMT" value="false" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Projects/059/src/kabam/rotmg/account/core/view/AccountListContainer.as&#10;Clean&#9;ACTION&#9;CodeCleanup&#10;Cleanu&#9;ACTION&#9;CodeCleanup&#10;Cleanup&#9;ACTION&#9;CodeCleanup&#10;Full&#9;ACTION&#9;ToggleFullScreen" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543393189300" />
+    <property name="full.screen.before.presentation.mode" value="true" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="C:/Program Files (x86)/Adobe/Flash Projector/flashplayer_31_sa.exe" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2816092" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.ActionScript" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateActionScriptClassDialog.DESTINATION_PACKAGE_RECENT_KEY">
+      <recent name="io.decagames.rotmg.supportCampaign.data" />
+      <recent name="com.company.assembleegameclient.util" />
+      <recent name="com.company.assembleegameclient.ui.dialogs" />
+      <recent name="com.company.assembleegameclient.screens" />
+      <recent name="kabam.rotmg.account.core.view" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Go Build.Multi-Server">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Debug [Win]" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="Production" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="Player" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="D:/Programs/Apache_Flex/flashplayer_31_sa_debug.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="059" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Play [Win]" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="Production" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="Player" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="C:/Program Files (x86)/Adobe/Flash Projector/flashplayer_31_sa.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="059" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Steam [Win]" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="Steam" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="true" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="059" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="C:/Program Files (x86)/Steam/steamapps/common/Realm of the Mad God/Realm of the Mad God.exe" />
+      <option name="usbDebugPort" value="7936" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Multi-Server" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="059" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="DIRECTORY" />
+      <filePath value="$PROJECT_DIR$" />
+      <directory value="$PROJECT_DIR$/Server" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Flash App.Debug [Win]" />
+      <item itemvalue="Flash App.Play [Win]" />
+      <item itemvalue="Flash App.Steam [Win]" />
+      <item itemvalue="Go Build.Multi-Server" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Gravitir\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d42eab77-8cca-4611-b80f-8c08326a9b08" name="Default" comment="" />
+      <created>1536426450661</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1536426450661</updated>
+      <workItem from="1536426452411" duration="80000" />
+      <workItem from="1536426575007" duration="5655000" />
+      <workItem from="1536432251249" duration="309000" />
+      <workItem from="1536434808818" duration="2250000" />
+      <workItem from="1536478504888" duration="13843000" />
+      <workItem from="1536494071316" duration="7673000" />
+      <workItem from="1536506339752" duration="716000" />
+      <workItem from="1536507137852" duration="3484000" />
+      <workItem from="1536560337281" duration="626000" />
+      <workItem from="1536562410680" duration="883000" />
+      <workItem from="1536567710914" duration="935000" />
+      <workItem from="1536572954295" duration="1495000" />
+      <workItem from="1536582533175" duration="25000" />
+      <workItem from="1536683959283" duration="3035000" />
+      <workItem from="1536694406793" duration="5724000" />
+      <workItem from="1536700224883" duration="6147000" />
+      <workItem from="1536706802722" duration="4044000" />
+      <workItem from="1536710989114" duration="423000" />
+      <workItem from="1536828269262" duration="5552000" />
+      <workItem from="1536833894467" duration="18168000" />
+      <workItem from="1536868456627" duration="1926000" />
+      <workItem from="1536874776785" duration="695000" />
+      <workItem from="1536913032896" duration="595000" />
+      <workItem from="1536943458948" duration="9653000" />
+      <workItem from="1537009953751" duration="4416000" />
+      <workItem from="1537014387023" duration="7138000" />
+      <workItem from="1537023694617" duration="5917000" />
+      <workItem from="1537030913980" duration="1457000" />
+      <workItem from="1537032407782" duration="7606000" />
+      <workItem from="1537044829282" duration="17066000" />
+      <workItem from="1537062539982" duration="1941000" />
+      <workItem from="1537064550378" duration="9896000" />
+      <workItem from="1537074804921" duration="7251000" />
+      <workItem from="1537082519851" duration="384000" />
+      <workItem from="1537084159293" duration="21168000" />
+      <workItem from="1537174056994" duration="836000" />
+      <workItem from="1537174938786" duration="3744000" />
+      <workItem from="1537179290829" duration="317000" />
+      <workItem from="1537179999757" duration="2817000" />
+      <workItem from="1537186104532" duration="884000" />
+      <workItem from="1537200652792" duration="5573000" />
+      <workItem from="1537269096591" duration="10419000" />
+      <workItem from="1537359544287" duration="28411000" />
+      <workItem from="1537388930117" duration="87000" />
+      <workItem from="1537389058273" duration="2278000" />
+      <workItem from="1537409964717" duration="5541000" />
+      <workItem from="1537439497715" duration="8908000" />
+      <workItem from="1537457315530" duration="712000" />
+      <workItem from="1537523909940" duration="1098000" />
+      <workItem from="1537542865615" duration="588000" />
+      <workItem from="1537609584461" duration="19776000" />
+      <workItem from="1537633913143" duration="683000" />
+      <workItem from="1537987600763" duration="1168000" />
+      <workItem from="1538345742790" duration="1138000" />
+      <workItem from="1538347031534" duration="973000" />
+      <workItem from="1538349169988" duration="4660000" />
+      <workItem from="1538376396994" duration="2511000" />
+      <workItem from="1538387551161" duration="12420000" />
+      <workItem from="1538400780368" duration="409000" />
+      <workItem from="1538738717872" duration="4048000" />
+      <workItem from="1538743584341" duration="963000" />
+      <workItem from="1538844237666" duration="174000" />
+      <workItem from="1538844429252" duration="219000" />
+      <workItem from="1539019408649" duration="2325000" />
+      <workItem from="1539023295460" duration="172000" />
+      <workItem from="1539091362021" duration="1099000" />
+      <workItem from="1539102597574" duration="2539000" />
+      <workItem from="1539146301265" duration="3404000" />
+      <workItem from="1539167199615" duration="2335000" />
+      <workItem from="1539330567879" duration="1832000" />
+      <workItem from="1539335446970" duration="3086000" />
+      <workItem from="1539339603802" duration="37000" />
+      <workItem from="1539339657577" duration="1199000" />
+      <workItem from="1539535728829" duration="1936000" />
+      <workItem from="1539537694777" duration="1533000" />
+      <workItem from="1539549518969" duration="364000" />
+      <workItem from="1539623860269" duration="1361000" />
+      <workItem from="1539622871842" duration="5757000" />
+      <workItem from="1539629341766" duration="4696000" />
+      <workItem from="1539638284867" duration="5554000" />
+      <workItem from="1539698008658" duration="860000" />
+      <workItem from="1539699446287" duration="1594000" />
+      <workItem from="1539704383228" duration="6198000" />
+      <workItem from="1539778512735" duration="1531000" />
+      <workItem from="1539780097773" duration="624000" />
+      <workItem from="1539780861095" duration="2470000" />
+      <workItem from="1539784593325" duration="11825000" />
+      <workItem from="1539797258505" duration="2996000" />
+      <workItem from="1539818182364" duration="152000" />
+      <workItem from="1539855839606" duration="5130000" />
+      <workItem from="1539873773433" duration="797000" />
+      <workItem from="1539948709992" duration="1954000" />
+      <workItem from="1539955757073" duration="606000" />
+      <workItem from="1539957918186" duration="5565000" />
+      <workItem from="1539964923857" duration="9856000" />
+      <workItem from="1539986803875" duration="11403000" />
+      <workItem from="1540003213641" duration="148000" />
+      <workItem from="1540397441415" duration="107000" />
+      <workItem from="1540397831672" duration="4958000" />
+      <workItem from="1540402886155" duration="2228000" />
+      <workItem from="1540406074893" duration="807000" />
+      <workItem from="1540443555226" duration="63000" />
+      <workItem from="1540446237196" duration="9000" />
+      <workItem from="1540448393782" duration="937000" />
+      <workItem from="1540449766313" duration="2249000" />
+      <workItem from="1540464163311" duration="131000" />
+      <workItem from="1540467957739" duration="3565000" />
+      <workItem from="1540481988710" duration="1152000" />
+      <workItem from="1540486267417" duration="3846000" />
+      <workItem from="1540490365142" duration="4243000" />
+      <workItem from="1540577175452" duration="4194000" />
+      <workItem from="1540583498291" duration="3051000" />
+      <workItem from="1540588220487" duration="7521000" />
+      <workItem from="1540599700380" duration="1030000" />
+      <workItem from="1540813574385" duration="9645000" />
+      <workItem from="1540845916175" duration="3043000" />
+      <workItem from="1540888508634" duration="7000" />
+      <workItem from="1540888854423" duration="38687000" />
+      <workItem from="1540995053195" duration="680000" />
+      <workItem from="1541000762417" duration="8655000" />
+      <workItem from="1541011093335" duration="5985000" />
+      <workItem from="1541018331316" duration="13115000" />
+      <workItem from="1541081494413" duration="7855000" />
+      <workItem from="1541096414688" duration="4779000" />
+      <workItem from="1541104821988" duration="22731000" />
+      <workItem from="1541191802434" duration="6621000" />
+      <workItem from="1541231863765" duration="7046000" />
+      <workItem from="1541241496833" duration="1791000" />
+      <workItem from="1541249239557" duration="13000" />
+      <workItem from="1541262706523" duration="189000" />
+      <workItem from="1541271853968" duration="703000" />
+      <workItem from="1541349004906" duration="107000" />
+      <workItem from="1541447499937" duration="1036000" />
+      <workItem from="1541449148780" duration="12000" />
+      <workItem from="1541610859404" duration="525000" />
+      <workItem from="1541699334799" duration="826000" />
+      <workItem from="1542303961865" duration="1080000" />
+      <workItem from="1542310075876" duration="1197000" />
+      <workItem from="1542330472037" duration="578000" />
+      <workItem from="1542336916530" duration="838000" />
+      <workItem from="1542340339134" duration="53000" />
+      <workItem from="1542340947322" duration="943000" />
+      <workItem from="1542395398962" duration="231000" />
+      <workItem from="1542395777084" duration="83000" />
+      <workItem from="1542510145301" duration="620000" />
+      <workItem from="1542512690597" duration="1179000" />
+      <workItem from="1542549373473" duration="26093000" />
+      <workItem from="1542578502880" duration="4672000" />
+      <workItem from="1542583356936" duration="739000" />
+      <workItem from="1542586570847" duration="2202000" />
+      <workItem from="1542663277043" duration="4244000" />
+      <workItem from="1542742790078" duration="8671000" />
+      <workItem from="1542758189181" duration="12313000" />
+      <workItem from="1542771927795" duration="2874000" />
+      <workItem from="1542916707014" duration="15690000" />
+      <workItem from="1543281705403" duration="32216000" />
+      <workItem from="1543374917580" duration="17532000" />
+      <workItem from="1543555869134" duration="617000" />
+    </task>
+    <task id="LOCAL-00001" summary="Part 2.">
+      <created>1536706439911</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1536706439911</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Part 3.">
+      <created>1536851959327</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1536851959327</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Part 4.">
+      <created>1537060406860</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1537060406861</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Part 5.">
+      <created>1537410452396</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1537410452396</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Checkpoint.">
+      <created>1539785941698</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1539785941698</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Checkpoint.">
+      <created>1539992660291</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1539992660291</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Checkpoint. Test">
+      <created>1540399197669</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1540399197670</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Checkpoint.&#10;New:&#10;- /realm&#10;- /switch /swap /s&#10;- Vault swap">
+      <created>1540404740534</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1540404740534</updated>
+    </task>
+    <task id="LOCAL-00009" summary="X31.0.0">
+      <created>1540490709110</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1540490709110</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Checkpoint.&#10;New:&#10;- Low CPU Mode&#10;- Timers">
+      <created>1540494646766</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1540494646766</updated>
+    </task>
+    <task id="LOCAL-00011" summary="X31.0.1">
+      <created>1540908030428</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1540908030429</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Checkpoint.&#10;New:&#10;- Fixed custom UI on/after trade.&#10;- Connection to vault if right-click on character.">
+      <created>1540911174988</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1540911174988</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Checkpoint.&#10;Changed accounts list.&#10;Added Doer of Deeds bot.&#10;Deleted analytic.">
+      <created>1540931695298</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1540931695298</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Checkpoint.&#10;New:&#10;Changed account list.&#10;Vial Checker added.&#10;Added button to refresh account.&#10;New packet parsing.&#10;Loot Preview can be displayed only in vault.&#10;Deleted some analytic.">
+      <created>1541172494834</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1541172494836</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Checkpoint.&#10;New:&#10;RC-Instantly selecting items on trade.">
+      <created>1541174172459</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1541174172459</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Fixing issue #6.">
+      <created>1541195451957</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1541195451957</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Fixing issue #8.">
+      <created>1541196210679</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1541196210679</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Fixing issue #7.">
+      <created>1541241088829</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1541241088829</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Checkpoint.">
+      <created>1542512929686</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1542512929686</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Fixed full-screen in steam.&#10;Added dialog to select multibox leader.">
+      <created>1542750989440</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1542750989440</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="711276000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.28441754" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" weight="0.32980332" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49924356" weight="0.32786885" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.21639344" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4969743" weight="0.34918034" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3295082" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32786885" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5030257" side_tool="true" weight="0.34918034" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3295082" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4969743" weight="0.32459018" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" weight="0.32980332" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.28441754" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" weight="0.32980332" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49924356" weight="0.32786885" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.21639344" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4977307" visible="true" weight="0.34918034" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3295082" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32786885" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5015129" side_tool="true" weight="0.21639344" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3295082" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4969743" weight="0.32459018" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" weight="0.32980332" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Part 2." />
+    <MESSAGE value="Part 3." />
+    <MESSAGE value="Part 4." />
+    <MESSAGE value="Part 5." />
+    <MESSAGE value="Checkpoint. Test" />
+    <MESSAGE value="Checkpoint.&#10;New:&#10;- /realm&#10;- /switch /swap /s&#10;- Vault swap" />
+    <MESSAGE value="X31.0.0" />
+    <MESSAGE value="Checkpoint.&#10;New:&#10;- Low CPU Mode&#10;- Timers" />
+    <MESSAGE value="X31.0.1" />
+    <MESSAGE value="Checkpoint.&#10;New:&#10;- Fixed custom UI on/after trade.&#10;- Connection to vault if right-click on character." />
+    <MESSAGE value="Checkpoint.&#10;Changed accounts list.&#10;Added Doer of Deeds bot.&#10;Deleted analytic." />
+    <MESSAGE value="Checkpoint.&#10;New:&#10;Changed account list.&#10;Vial Checker added.&#10;Added button to refresh account.&#10;New packet parsing.&#10;Loot Preview can be displayed only in vault.&#10;Deleted some analytic." />
+    <MESSAGE value="Checkpoint.&#10;New:&#10;RC-Instantly selecting items on trade." />
+    <MESSAGE value="Fixing issue #6." />
+    <MESSAGE value="Fixing issue #8." />
+    <MESSAGE value="Fixing issue #7." />
+    <MESSAGE value="Checkpoint." />
+    <MESSAGE value="Fixed full-screen in steam.&#10;Added dialog to select multibox leader." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed full-screen in steam.&#10;Added dialog to select multibox leader." />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/company/util/CachingColorTransformer.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-612" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/decagames/rotmg/utils/colors/Tint.as">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/decagames/rotmg/utils/colors/RGB.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/decagames/rotmg/utils/colors/RandomColorGenerator.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3570" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/decagames/rotmg/utils/colors/GreyScale.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-254" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/util/ColorUtil.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-459" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/chat/view/ChatList.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="249" column="12" selection-start-line="249" selection-start-column="12" selection-end-line="249" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/stage3D/GraphicsFillExtra.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="101" column="32" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/text/view/stringBuilder/AppendingLineBuilder.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="100" column="35" selection-start-line="100" selection-start-column="35" selection-end-line="100" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/language/model/LanguageModel.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/chat/control/TextHandler.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="52" column="43" lean-forward="true" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/securityQuestions/data/SecurityQuestionsModel.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/account/ui/Frame.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/securityQuestions/view/SecurityQuestionsDialog.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="53" column="38" lean-forward="true" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/ui/options/Options.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="608" column="73" selection-start-line="608" selection-start-column="60" selection-end-line="608" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/account/ui/TextInputField.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/text/view/stringBuilder/LineBuilder.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="107" column="48" selection-start-line="107" selection-start-column="48" selection-end-line="107" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/web/view/WebAccountInfoView.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-178">
+          <caret line="162" column="132" selection-start-line="162" selection-start-column="132" selection-end-line="162" selection-end-column="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/objects/Sign.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/language/model/StringMap.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/web/view/WebLoginMediator.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/text/view/TextFieldDisplayConcrete.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="282" column="28" selection-start-line="282" selection-start-column="28" selection-end-line="282" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/text/model/TextKey.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/steam/services/SteamLoadApiTask.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-765" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/screens/CharacterSelectionAndNewsScreen.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-433">
+          <caret line="116" column="60" selection-start-line="116" selection-start-column="60" selection-end-line="116" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/securityQuestions/mediators/SecurityQuestionsMediator.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="108" column="20" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="232" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/steam/SteamAccount.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/web/WebAccount.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="49" column="28" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/core/Account.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/objects/Player.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="2716" column="99" selection-start-line="2716" selection-start-column="99" selection-end-line="2716" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/parameters/Parameters.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="1127" column="43" selection-start-line="1127" selection-start-column="43" selection-end-line="1127" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/web/model/AccountData.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/chat/control/ParseChatMessageCommand.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1649">
+          <caret line="706" column="46" selection-start-line="706" selection-start-column="46" selection-end-line="706" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/web/view/WebLoginDialog.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="96" column="36" selection-start-line="96" selection-start-column="36" selection-end-line="96" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/game/MapUserInput.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="1104" column="31" selection-start-line="1104" selection-start-column="31" selection-end-line="1104" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="444">
+            <caret line="97" column="43" lean-forward="true" selection-start-line="97" selection-start-column="43" selection-end-line="97" selection-end-column="43" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/maploading/view/MapLoadingScreen.swf">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/maploading/view/MapLoadingMediator.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/core/services/GetCharListTask.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2479">
+          <caret line="208" column="56" lean-forward="true" selection-start-line="208" selection-start-column="56" selection-end-line="208" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/language/service/GetLanguageService.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="34" column="163513" lean-forward="true" selection-start-line="34" selection-start-column="163513" selection-end-line="34" selection-end-column="163536" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/core/view/AccountListContainer.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="51" column="39" lean-forward="true" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/core/view/AccountListDialog.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1611">
+          <caret line="59" column="50" lean-forward="true" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/maploading/MapLoadingConfig.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="35" column="72" lean-forward="true" selection-start-line="35" selection-start-column="72" selection-end-line="35" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ROTMG.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="123" column="42" selection-start-line="123" selection-start-column="42" selection-end-line="123" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/maploading/view/MapLoadingView.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="54" column="49" selection-start-line="54" selection-start-column="49" selection-end-line="54" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/screens/ServersScreen.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/game/commands/PlayGameCommand.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-111">
+          <caret line="49" column="85" selection-start-line="49" selection-start-column="85" selection-end-line="49" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/servers/control/ParseServerDataCommand.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="30" column="57" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/screens/ServerBoxes.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="60" column="54" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/screens/ServerBox.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/ui/tooltip/PlayerToolTip.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="39" column="60" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2816092" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Detection</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2816092" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2816092" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>Apache_Flex</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2816092" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Production|059</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2816092" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>as3-signals</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2816092" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

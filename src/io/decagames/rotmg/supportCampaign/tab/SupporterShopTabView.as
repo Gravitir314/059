@@ -4,6 +4,7 @@ package io.decagames.rotmg.supportCampaign.tab
 	{
 	import flash.display.Bitmap;
 	import flash.display.Sprite;
+	import flash.text.TextFormatAlign;
 
 	import io.decagames.rotmg.shop.ShopBuyButton;
 	import io.decagames.rotmg.supportCampaign.data.vo.RankVO;
@@ -79,7 +80,7 @@ package io.decagames.rotmg.supportCampaign.tab
 					this.fieldBackground = TextureParser.instance.getSliceScalingBitmap("UI", "bordered_field", 150);
 					addChild(this.fieldBackground);
 					this.pointsInfo = new UILabel();
-					DefaultLabelFormat.createLabelFormat(this.pointsInfo, 18, 15585539, "center", true);
+					DefaultLabelFormat.createLabelFormat(this.pointsInfo, 18, 15585539, TextFormatAlign.CENTER, true);
 					addChild(this.pointsInfo);
 					this.supportIcon = TextureParser.instance.getSliceScalingBitmap("UI", "campaign_Points");
 					addChild(this.supportIcon);
@@ -112,7 +113,7 @@ package io.decagames.rotmg.supportCampaign.tab
 				if (!this.endDateInfo)
 				{
 					this.endDateInfo = new UILabel();
-					DefaultLabelFormat.createLabelFormat(this.endDateInfo, 14, 0xFE9700, "center", false);
+					DefaultLabelFormat.createLabelFormat(this.endDateInfo, 14, 0xFE9700, TextFormatAlign.CENTER, false);
 					addChild(this.endDateInfo);
 				}
 				this.endDateInfo.text = _local_3;
@@ -148,67 +149,63 @@ package io.decagames.rotmg.supportCampaign.tab
 
 			private function showUnlockScreen(_arg_1:Boolean, _arg_2:int, _arg_3:int):void
 			{
-				var _local_4:UILabel;
+				var _local_6:UILabel;
 				this.unlockScreenContainer = new Sprite();
 				this.unlockScreenContainer.x = 30;
 				this.unlockScreenContainer.y = 10;
-				var _local_6:SliceScalingBitmap = TextureParser.instance.getSliceScalingBitmap("UI", "support_campaign_unlock_screen");
-				this.unlockScreenContainer.addChild(_local_6);
-				var _local_7:UILabel = new UILabel();
-				_local_7.text = (("Welcome to the Unity Support Campaign, " + this.pName) + "!");
-				DefaultLabelFormat.createLabelFormat(_local_7, 18, 0xEAEAEA, "left", true);
-				_local_7.wordWrap = true;
-				_local_7.width = (_local_6.width - 20);
-				_local_7.y = 10;
-				_local_7.x = 10;
-				this.unlockScreenContainer.addChild(_local_7);
-				_local_4 = new UILabel();
-				_local_4.text = "We are bringing your favorite bullet-hell MMO to Unity! Being a small team we need your support to make it happen and you can start right here. Donate 500 Gold to the cause and get your name displayed on the Wall of Fame upon release, alongside all our avid supporters from across the globe!";
-				DefaultLabelFormat.createLabelFormat(_local_4, 14, 0xEAEAEA, "justify", false);
-				_local_4.wordWrap = true;
-				_local_4.width = (_local_6.width - 20);
-				_local_4.y = ((_local_7.y + _local_7.height) + 10);
-				_local_4.x = 10;
+				var _local_4:SliceScalingBitmap = TextureParser.instance.getSliceScalingBitmap("UI", "support_campaign_unlock_screen");
 				this.unlockScreenContainer.addChild(_local_4);
 				var _local_5:UILabel = new UILabel();
-				_local_5.text = "Add Your Name to the Wall of Fame";
-				DefaultLabelFormat.createLabelFormat(_local_5, 16, 0xEAEAEA, "center", true);
+				_local_5.text = (("Welcome to the Unity Support Campaign, " + this.pName) + "!");
+				DefaultLabelFormat.createLabelFormat(_local_5, 18, 0xEAEAEA, TextFormatAlign.LEFT, true);
 				_local_5.wordWrap = true;
-				_local_5.width = _local_6.width;
-				_local_5.y = ((_local_4.y + _local_4.height) + 15);
+				_local_5.width = (_local_4.width - 20);
+				_local_5.y = 10;
+				_local_5.x = 10;
 				this.unlockScreenContainer.addChild(_local_5);
-				var _local_8:SliceScalingBitmap = new TextureParser().getSliceScalingBitmap("UI", "main_button_decoration_dark", 150);
+				_local_6 = new UILabel();
+				_local_6.text = (("We are bringing your favorite bullet-hell MMO to Unity and we need your support to make it happen! You can start right here. Join the cause, unlock the campaign and get your name displayed on the Wall of Fame upon release, alongside all our avid supporters from across the globe!\n" + "\n") + "After leaving your lasting mark in the game, you will be able to push onward and claim some unique gifts on top of our heartfelt gratitude. Our greatest supporters will also unlock an exclusive character glow.");
+				DefaultLabelFormat.createLabelFormat(_local_6, 14, 0xEAEAEA, TextFormatAlign.JUSTIFY, false);
+				_local_6.wordWrap = true;
+				_local_6.width = (_local_4.width - 20);
+				_local_6.y = (_local_5.y + _local_5.height);
+				_local_6.x = 10;
+				this.unlockScreenContainer.addChild(_local_6);
+				var _local_7:SliceScalingBitmap = new TextureParser().getSliceScalingBitmap("UI", "uniqueGifts", 500);
+				this.unlockScreenContainer.addChild(_local_7);
+				_local_7.y = ((_local_6.y + _local_6.height) + 5);
+				_local_7.x = Math.round(((_local_4.width - _local_7.width) / 2));
+				var _local_8:UILabel = new UILabel();
+				_local_8.text = "Add Your Name to the Wall of Fame";
+				DefaultLabelFormat.createLabelFormat(_local_8, 16, 0xEAEAEA, TextFormatAlign.CENTER, true);
+				_local_8.wordWrap = true;
+				_local_8.width = _local_4.width;
+				_local_8.y = ((_local_6.y + _local_6.height) + 130);
 				this.unlockScreenContainer.addChild(_local_8);
+				var _local_9:SliceScalingBitmap = new TextureParser().getSliceScalingBitmap("UI", "main_button_decoration_dark", 150);
+				this.unlockScreenContainer.addChild(_local_9);
 				this._unlockButton = new ShopBuyButton(_arg_2);
-				this._unlockButton.width = (_local_8.width - 48);
+				this._unlockButton.width = (_local_9.width - 48);
 				this._unlockButton.disabled = (!(_arg_1));
 				this.unlockScreenContainer.addChild(this._unlockButton);
-				_local_8.y = ((_local_5.y + _local_5.height) + 3);
-				_local_8.x = Math.round(((_local_6.width - _local_8.width) / 2));
-				this._unlockButton.y = (_local_8.y + 6);
-				this._unlockButton.x = (_local_8.x + 24);
-				var _local_9:UILabel = new UILabel();
-				_local_9.text = "After leaving your lasting mark on the Realm of the Mad God Wall of Fame, you will be able to donate additional Gold if you so choose. We have placed some unique gifts at certain thresholds on top of our heartfelt gratitude and we hope you will have a lot of fun with them.\n\nWe are excited to have you join us on this journey!\n\nYour Realm Team";
-				DefaultLabelFormat.createLabelFormat(_local_9, 14, 0xEAEAEA, "justify", false);
-				_local_9.wordWrap = true;
-				_local_9.width = (_local_6.width - 20);
-				_local_9.y = ((_local_8.y + _local_8.height) + 40);
-				_local_9.x = 10;
-				this.unlockScreenContainer.addChild(_local_9);
+				_local_9.y = (_local_8.y + _local_8.height);
+				_local_9.x = Math.round(((_local_4.width - _local_9.width) / 2));
+				this._unlockButton.y = (_local_9.y + 6);
+				this._unlockButton.x = (_local_9.x + 24);
 				if (!_arg_1)
 				{
 					this._campaignTimer.text = "Supporter campaign will start in:";
-					DefaultLabelFormat.createLabelFormat(this._countdown, 18, 0xFE9700, "center", true);
+					DefaultLabelFormat.createLabelFormat(this._countdown, 18, 0xFE9700, TextFormatAlign.CENTER, true);
 					this._countdown.text = "";
 					this._countdown.wordWrap = true;
-					this._countdown.width = _local_6.width;
-					this._countdown.y = 205;
+					this._countdown.width = _local_4.width;
+					this._countdown.y = ((_local_7.y + _local_7.height) + 20);
 					this.unlockScreenContainer.addChild(this._countdown);
 				}
-				DefaultLabelFormat.createLabelFormat(this._campaignTimer, 14, 0xFE9700, "center", false);
+				DefaultLabelFormat.createLabelFormat(this._campaignTimer, 14, 0xFE9700, TextFormatAlign.CENTER, false);
 				this._campaignTimer.wordWrap = true;
-				this._campaignTimer.width = _local_6.width;
-				this._campaignTimer.y = 190;
+				this._campaignTimer.width = _local_4.width;
+				this._campaignTimer.y = ((_local_7.y + _local_7.height) + 5);
 				this.unlockScreenContainer.addChild(this._campaignTimer);
 				addChild(this.unlockScreenContainer);
 			}

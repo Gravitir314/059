@@ -322,7 +322,7 @@ package kabam.rotmg.chat.control
 
 			public function checkForEvent(_arg_1:String):void
 			{
-				if (_arg_1.indexOf(".new") == -1)
+				if (_arg_1.indexOf(".new") == -1 || !Parameters.data_.eventNotifier)
 				{
 					return;
 				}

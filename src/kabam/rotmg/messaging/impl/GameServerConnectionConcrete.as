@@ -89,6 +89,7 @@ package kabam.rotmg.messaging.impl
 	import io.decagames.rotmg.pets.signals.UpdateActivePet;
 	import io.decagames.rotmg.pets.signals.UpdatePetYardSignal;
 	import io.decagames.rotmg.social.model.SocialModel;
+	import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
 
 	import kabam.lib.net.api.MessageMap;
 	import kabam.lib.net.api.MessageProvider;
@@ -517,7 +518,7 @@ package kabam.rotmg.messaging.impl
 				this.updateActivePet.dispatch(_arg_1.instanceID);
 				var _local_2:String = ((_arg_1.instanceID > 0) ? this.petsModel.getPet(_arg_1.instanceID).name : "");
 				var _local_3:String = ((_arg_1.instanceID < 0) ? TextKey.PET_NOT_FOLLOWING : TextKey.PET_FOLLOWING);
-				this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, _local_3, -1, -1, "", false, {"petName": _local_2}));
+				this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, _local_3, false, -1, -1, "", false, {"petName": _local_2}));
 			}
 
 			private function unmapMessages():void
@@ -886,12 +887,12 @@ package kabam.rotmg.messaging.impl
 				{
 					if (!this.validStatInc(_local_3, _arg_1))
 					{
-						this.addTextLine.dispatch(ChatMessage.make("", (_local_4.attribute("id") + " not consumed. Already at Max.")));
+						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, (_local_4.attribute("id") + " not consumed. Already at Max.")));
 						return (false);
 					}
 					if (isStatPotion(_local_3))
 					{
-						this.addTextLine.dispatch(ChatMessage.make("", (_local_4.attribute("id") + " Consumed ++")));
+						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, (_local_4.attribute("id") + " Consumed ++")));
 					}
 					this.applyUseItem(_arg_1, _arg_2, _local_3, _local_4);
 					if (_local_4.hasOwnProperty("Key"))
@@ -1461,7 +1462,7 @@ package kabam.rotmg.messaging.impl
 				{
 					gs_.hudView.interactPanel.setOverride(new TradeRequestPanel(gs_, _arg_1.name_));
 				}
-				this.addTextLine.dispatch(ChatMessage.make("", (_arg_1.name_ + " wants to " + 'trade with you.  Type "/trade ' + _arg_1.name_ + '" to trade.')));
+				this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, _arg_1.name_ + " wants to " + 'trade with you.  Type "/trade ' + _arg_1.name_ + '" to trade.'));
 			}
 
 			private function onTradeStart(_arg_1:TradeStart):void
@@ -1500,7 +1501,7 @@ package kabam.rotmg.messaging.impl
 				catch (e:Error)
 				{
 				}
-				this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, _local_2, -1, -1, "", false, _local_3));
+				this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, _local_2, false, -1, -1, "", false, _local_3));
 				if (Parameters.autoDrink && _arg_1.code_ == 0)
 				{
 					Parameters.watchInv = true;
@@ -1589,6 +1590,33 @@ package kabam.rotmg.messaging.impl
 						player.questMob2 = null;
 						player.questMob3 = null;
 						break;
+				}
+				if (!Parameters.ssmode && Parameters.data_.portalQuest)
+				{
+					if (gs_.map && gs_.map.name_ == "Nexus")
+					{
+						this.checkPortals(_local_3);
+					}
+				}
+			}
+
+			private function checkPortals(_arg_1:GameObject):void
+			{
+				if (_arg_1 is Portal)
+				{
+					switch (_arg_1.objectType_)
+					{
+						case 0x0712: // Realms
+						case 0x075b: // Arena
+						case 0x0753: // Pet Yard
+						case 0x0750: // Bazaar
+						case 0x0720: // Vault
+						case 0x1756: // Daily Quest
+							return;
+						default:
+							this.gs_.map.quest_.setObject(_arg_1.objectId_);
+							return
+					}
 				}
 			}
 
@@ -2194,9 +2222,6 @@ package kabam.rotmg.messaging.impl
 						case StatData.FAME_STAT:
 							_local_4.setFame(_local_8);
 							break;
-						case StatData.FORTUNE_TOKEN_STAT:
-							_local_4.setTokens(_local_8);
-							break;
 						case StatData.MERCHANDISE_CURRENCY_STAT:
 							(_arg_1 as SellableObject).setCurrency(_local_8);
 							break;
@@ -2308,7 +2333,7 @@ package kabam.rotmg.messaging.impl
 								{
 									Parameters.playerSkin = _local_8;
 								}
-								if (!Parameters.data_.showSkins && _local_4 != player)
+								if (!Parameters.data_.showSkins && _local_4 != player && !Parameters.ssmode)
 								{
 									break;
 								}
@@ -2347,6 +2372,26 @@ package kabam.rotmg.messaging.impl
 						case StatData.NEW_CON_STAT:
 							_arg_1.condition_[ConditionEffect.CE_SECOND_BATCH] = _local_8;
 							_arg_1.updateStatuses();
+							break;
+						case StatData.FORTUNE_TOKEN_STAT:
+							_local_4.setTokens(_local_8);
+							break;
+						case StatData.SUPPORTER_POINTS_STAT:
+							if (_local_4)
+							{
+								_local_4.supporterPoints = _local_8;
+								_local_4.clearTextureCache();
+								if (_arg_3)
+								{
+									this.injector.getInstance(SupporterCampaignModel).updatePoints(_local_8);
+								}
+							}
+							break;
+						case StatData.SUPPORTER_STAT:
+							if (_local_4)
+							{
+								_local_4.setSupporterFlag(_local_8);
+							}
 							break;
 					}
 				}
@@ -2862,7 +2907,7 @@ package kabam.rotmg.messaging.impl
 				else
 				{
 					_local_2 = LineBuilder.fromJSON(_arg_1.lineBuilderJSON);
-					this.addTextLine.dispatch(ChatMessage.make(Parameters.ERROR_CHAT_NAME, _local_2.key, -1, -1, "", false, _local_2.tokens));
+					this.addTextLine.dispatch(ChatMessage.make(Parameters.ERROR_CHAT_NAME, _local_2.key, false, -1, -1, "", false, _local_2.tokens));
 					gs_.dispatchEvent(new GuildResultEvent(_arg_1.success_, _local_2.key, _local_2.tokens));
 				}
 			}
@@ -2874,7 +2919,7 @@ package kabam.rotmg.messaging.impl
 				{
 					if (!Parameters.usingPortal)
 					{
-						this.addTextLine.dispatch(ChatMessage.make(("#" + _arg_1.name_), _arg_1.value_.toString()));
+						this.addTextLine.dispatch(ChatMessage.make(("#" + _arg_1.name_), _arg_1.value_.toString(), true));
 						_local_2 = StaticInjectorContext.getInjector().getInstance(Account);
 						_local_2.reportIntStat(_arg_1.name_, _arg_1.value_);
 					}
@@ -2892,7 +2937,7 @@ package kabam.rotmg.messaging.impl
 				{
 					gs_.hudView.interactPanel.setOverride(new GuildInvitePanel(gs_, _arg_1.name_, _arg_1.guildName_));
 				}
-				this.addTextLine.dispatch(ChatMessage.make("", ("You have been invited by " + _arg_1.name_ + " to join the guild " + _arg_1.guildName_ + '.\n  If you wish to join type "/join ' + _arg_1.guildName_ + '"')));
+				this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ("You have been invited by " + _arg_1.name_ + " to join the guild " + _arg_1.guildName_ + '.\n  If you wish to join type "/join ' + _arg_1.guildName_ + '"')));
 			}
 
 			private function onPlaySound(_arg_1:PlaySound):void
@@ -3147,6 +3192,10 @@ package kabam.rotmg.messaging.impl
 			{
 				Parameters.data_.gameVersion = _arg_1.errorDescription_;
 				Parameters.save();
+				if (!Parameters.ssmode)
+				{
+					this.addTextLine.dispatch(ChatMessage.make(Parameters.ERROR_CHAT_NAME, "Game updated to version: " + Parameters.data_.gameVersion, true));
+				}
 				var _local_2:Dialog = new Dialog(TextKey.CLIENT_UPDATE_TITLE, "", TextKey.CLIENT_UPDATE_LEFT_BUTTON, null);
 				_local_2.setTextParams(TextKey.CLIENT_UPDATE_DESCRIPTION, {
 					"client": Parameters.data_.gameVersion,

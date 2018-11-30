@@ -17,7 +17,7 @@ package com.company.assembleegameclient.map
 
 			private var graphicsData:Vector.<IGraphicsData>;
 
-			public function DarknessOverlay(_arg_1:AGameSprite = null) // TODO need this?
+			public function DarknessOverlay(_arg_1:AGameSprite = null)
 			{
 				var _local_10:Number = Parameters.data_.mscale;
 				var _local_8:Number = (ROTMG.STAGE.stageWidth / _local_10);

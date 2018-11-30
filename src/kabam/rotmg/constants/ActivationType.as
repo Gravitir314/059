@@ -22,6 +22,7 @@ package kabam.rotmg.constants
 			public static const CLEAR_COND_EFFECT_SELF:String = "ClearConditionEffectSelf";
 			public static const COND_EFFECT_AURA:String = "ConditionEffectAura";
 			public static const CLEAR_COND_EFFECT_AURA:String = "ClearConditionEffectAura";
+			public static const GRANT_SUPPORTER_POINTS:String = "GrantSupporterPoints";
 			public static const POISON_GRENADE:String = "PoisonGrenade";
 			public static const VAMPIRE_BLAST:String = "VampireBlast";
 			public static const TRAP:String = "Trap";

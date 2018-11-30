@@ -13,7 +13,7 @@ package com.company.assembleegameclient.objects.animation
 
 			public function FrameData(_arg_1:XML)
 			{
-				this.time_ = (Number(_arg_1.@time) * 1000);
+				this.time_ = Number(_arg_1.@time) * 1000;
 				this.textureData_ = new TextureDataConcrete(_arg_1);
 			}
 

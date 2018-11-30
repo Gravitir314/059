@@ -3,6 +3,7 @@
 package com.company.assembleegameclient.ui.options
 	{
 	import com.company.assembleegameclient.game.GameSprite;
+	import com.company.assembleegameclient.objects.Player;
 	import com.company.assembleegameclient.parameters.Parameters;
 	import com.company.assembleegameclient.screens.TitleMenuOption;
 	import com.company.assembleegameclient.sound.Music;
@@ -487,24 +488,24 @@ package com.company.assembleegameclient.ui.options
 
 			private function addDebuffsOptions():void
 			{
-				this.addOptionAndPosition(new ChoiceOption("ignoreQuiet", makeOnOffLabels(), [true, false], "Ignore Quiet", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000));
-				this.addOptionAndPosition(new ChoiceOption("ignoreWeak", makeOnOffLabels(), [true, false], "Ignore Weak", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000));
-				this.addOptionAndPosition(new ChoiceOption("ignoreSlowed", makeOnOffLabels(), [true, false], "Ignore Slowed", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000));
-				this.addOptionAndPosition(new ChoiceOption("ignoreSick", makeOnOffLabels(), [true, false], "Ignore Sick", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000));
-				this.addOptionAndPosition(new ChoiceOption("ignoreDazed", makeOnOffLabels(), [true, false], "Ignore Dazed", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000));
-				this.addOptionAndPosition(new ChoiceOption("ignoreStunned", makeOnOffLabels(), [true, false], "Ignore Stunned", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000));
-				this.addOptionAndPosition(new ChoiceOption("ignoreParalyzed", makeOnOffLabels(), [true, false], "Ignore Paralyzed", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000));
-				this.addOptionAndPosition(new ChoiceOption("ignoreBleeding", makeOnOffLabels(), [true, false], "Ignore Bleeding", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000));
-				this.addOptionAndPosition(new ChoiceOption("ignoreArmorBroken", makeOnOffLabels(), [true, false], "Ignore Armor Broken", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000));
-				this.addOptionAndPosition(new ChoiceOption("ignorePetStasis", makeOnOffLabels(), [true, false], "Ignore Pet Stasis", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000));
-				this.addOptionAndPosition(new ChoiceOption("ignorePetrified", makeOnOffLabels(), [true, false], "Ignore Petrified", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000));
-				this.addOptionAndPosition(new ChoiceOption("ignoreSilenced", makeOnOffLabels(), [true, false], "Ignore Silence", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000));
-				this.addOptionAndPosition(new ChoiceOption("ignoreBlind", makeOnOffLabels(), [true, false], "Ignore Blind", "Client Sided, safe to ignore", calculateIgnoreBitmask));
-				this.addOptionAndPosition(new ChoiceOption("ignoreHallucinating", makeOnOffLabels(), [true, false], "Ignore Hallucinating", "Client Sided, safe to ignore", calculateIgnoreBitmask));
-				this.addOptionAndPosition(new ChoiceOption("ignoreDrunk", makeOnOffLabels(), [true, false], "Ignore Drunk", "Client Sided, safe to ignore", calculateIgnoreBitmask));
-				this.addOptionAndPosition(new ChoiceOption("ignoreConfused", makeOnOffLabels(), [true, false], "Ignore Confused", "Client Sided, safe to ignore", calculateIgnoreBitmask));
-				this.addOptionAndPosition(new ChoiceOption("ignoreUnstable", makeOnOffLabels(), [true, false], "Ignore Unstable", "Client Sided, safe to ignore", calculateIgnoreBitmask));
-				this.addOptionAndPosition(new ChoiceOption("ignoreDarkness", makeOnOffLabels(), [true, false], "Ignore Darkness", "Client Sided, safe to ignore", calculateIgnoreBitmask));
+				this.addOptionAndPosition(new ChoiceOption("ignoreQuiet", makeOnOffLabels(), [true, false], "Ignore Quiet", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("ignoreWeak", makeOnOffLabels(), [true, false], "Ignore Weak", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("ignoreSlowed", makeOnOffLabels(), [true, false], "Ignore Slowed", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("ignoreSick", makeOnOffLabels(), [true, false], "Ignore Sick", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("ignoreDazed", makeOnOffLabels(), [true, false], "Ignore Dazed", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("ignoreStunned", makeOnOffLabels(), [true, false], "Ignore Stunned", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("ignoreParalyzed", makeOnOffLabels(), [true, false], "Ignore Paralyzed", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("ignoreBleeding", makeOnOffLabels(), [true, false], "Ignore Bleeding", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("ignoreArmorBroken", makeOnOffLabels(), [true, false], "Ignore Armor Broken", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("ignorePetStasis", makeOnOffLabels(), [true, false], "Ignore Pet Stasis", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("ignorePetrified", makeOnOffLabels(), [true, false], "Ignore Petrified", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("ignoreSilenced", makeOnOffLabels(), [true, false], "Ignore Silence", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("ignoreBlind", makeOnOffLabels(), [true, false], "Ignore Blind", "Client Sided, safe to ignore", calculateIgnoreBitmask), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("ignoreHallucinating", makeOnOffLabels(), [true, false], "Ignore Hallucinating", "Client Sided, safe to ignore", calculateIgnoreBitmask), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("ignoreDrunk", makeOnOffLabels(), [true, false], "Ignore Drunk", "Client Sided, safe to ignore", calculateIgnoreBitmask), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("ignoreConfused", makeOnOffLabels(), [true, false], "Ignore Confused", "Client Sided, safe to ignore", calculateIgnoreBitmask), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("ignoreUnstable", makeOnOffLabels(), [true, false], "Ignore Unstable", "Client Sided, safe to ignore", calculateIgnoreBitmask), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("ignoreDarkness", makeOnOffLabels(), [true, false], "Ignore Darkness", "Client Sided, safe to ignore", calculateIgnoreBitmask), 0, 0, true);
 			}
 
 			public function addAutoOptions():void
@@ -528,7 +529,6 @@ package com.company.assembleegameclient.ui.options
 				this.addOptionAndPosition(new ChoiceOption("skullHPThreshold", this.skullThresholdValues(), [0, 100, 250, 500, 800, 1000, 2000, 4000, 8000], "AOE AutoAbility Health Threshold", "Sets the enemy current health value at which Auto Ability will target enemies for AOE abilities like Necro, Assassin, Huntress, Sorc, (ie, if it is set to 1000, then the Auto Ability will only attempt to shoot at enemies with greater than 1000 health), use /aathreshold to set a specific value", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("skullTargets", this.skullTargetsValues(), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "Min AOE AutoAbility Targets", "Sets the amount of enemies required in your AOE ability's radius before using the ability, use /aatargets to set a specific value", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("AutoResponder", makeOnOffLabels(), [true, false], "AutoResponder", "Automatically replies to Thessal/Cem/Sewer text", null), 0, 0, true);
-				this.addOptionAndPosition(new ChoiceOption("aaDistance", this.aaDistanceValues(), [0, 0.5, 1, 1.5, 2, 2.5, 3], "AutoAim Distance Increase", "Adds additional range to AutoAim's range", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("autoClaimCalendar", makeOnOffLabels(), [true, false], "Auto Claim Calendar", "Automatically claims Daily Login Calendar items upon logging in", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("BossPriority", makeOnOffLabels(), [true, false], "Boss Priority", 'Makes AutoAim prioritize Boss enemies over everything else - "bosses" includes all Quests and certain dungeon bosses which are not quests, such as the Shatters bosses', null), 0, 0, true);
 			}
@@ -633,11 +633,6 @@ package com.company.assembleegameclient.ui.options
 				return (new <StringBuilder>[new StaticStringBuilder("Off"), new StaticStringBuilder("100 FP"), new StaticStringBuilder("200 FP"), new StaticStringBuilder("300 FP"), new StaticStringBuilder("400 FP"), new StaticStringBuilder("500 FP"), new StaticStringBuilder("600 FP"), new StaticStringBuilder("700 FP"), new StaticStringBuilder("800 FP"), new StaticStringBuilder("900 FP"), new StaticStringBuilder("1000 FP"), new StaticStringBuilder("1200 FP"), new StaticStringBuilder("1400 FP"), new StaticStringBuilder("1600 FP"), new StaticStringBuilder("1800 FP"), new StaticStringBuilder("2000 FP")]);
 			}
 
-			private function aaDistanceValues():Vector.<StringBuilder>
-			{
-				return (new <StringBuilder>[new StaticStringBuilder("0"), new StaticStringBuilder("0.5"), new StaticStringBuilder("1"), new StaticStringBuilder("1.5"), new StaticStringBuilder("2"), new StaticStringBuilder("2.5"), new StaticStringBuilder("3")]);
-			}
-
 			private function BoundingDistValues():Vector.<StringBuilder>
 			{
 				return (new <StringBuilder>[new StaticStringBuilder("1"), new StaticStringBuilder("2"), new StaticStringBuilder("3"), new StaticStringBuilder("4"), new StaticStringBuilder("5"), new StaticStringBuilder("6"), new StaticStringBuilder("7"), new StaticStringBuilder("8"), new StaticStringBuilder("9"), new StaticStringBuilder("10"), new StaticStringBuilder("15"), new StaticStringBuilder("20"), new StaticStringBuilder("30"), new StaticStringBuilder("50")]);
@@ -715,7 +710,7 @@ package com.company.assembleegameclient.ui.options
 				this.addOptionAndPosition(new ChoiceOption("safeWalk", makeOnOffLabels(), [true, false], "Safe Walk", "Makes lava tiles act as if they were unwalkable.", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("vialChecker", makeOnOffLabels(), [true, false], "Vial Checker", "Check players inventories and add him to the list if vial found.", null), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("instaTradeSelect", makeOnOffLabels(), [true, false], "Instantly Select All Items", "When turned on, a right click on the trade window will select all your items instantly. When turned off, selects only items of the same type, smoothly, like an actual player.", null), 0, 0, true);
-				this.addOptionAndPosition(new ChoiceOption("multiBox", makeOnOffLabels(), [true, false], "Multi Box", "Toggle multibox.", null), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("multiBox", makeOnOffLabels(), [true, false], "Multi Box", "Make sure you have activated server.", null), 0, 0, true);
 			}
 
 			public function addReconAndMessageOptions():void
@@ -857,6 +852,7 @@ package com.company.assembleegameclient.ui.options
 				this.addOptionAndPosition(new ChoiceOption("chatLength", chatLengthLabels(), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], "Chat Length", "Determines the number of lines chat shows (5 is the standard, previously it was 10)", this.onChatLengthChange), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("allowController", makeOnOffLabels(), [true, false], "Use Controller", "Enables usage of an Xbox 360 controller", this.toggleControllerOptions), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("FocusFPS", makeOnOffLabels(), [true, false], "Background FPS", "Lower FPS when the client loses focus (alt tabbing, minimizing, etc), set the background values with /bgfps # and foreground with /fgfps #", null), 0, 0, true);
+				this.addOptionAndPosition(new ChoiceOption("portalQuest", makeOnOffLabels(), [true, false], "Quest to Portal", "Add quest-pointer to portals in nexus.", null), 0, 0, true);
 			}
 
 			private function toggleUI():void
@@ -1156,9 +1152,10 @@ package com.company.assembleegameclient.ui.options
 
 			private function onCharacterGlow():void
 			{
-				if (StaticInjectorContext.getInjector().getInstance(SupporterCampaignModel).rank >= 5)
+				var _local_1:Player = this.gs_.map.player_;
+				if (_local_1.hasSupporterFeature(1))
 				{
-					this.gs_.map.player_.clearTextureCache();
+					_local_1.clearTextureCache();
 				}
 			}
 

@@ -11,11 +11,13 @@ package kabam.rotmg.chat.control
 	import com.company.assembleegameclient.objects.Player;
 	import com.company.assembleegameclient.parameters.Parameters;
 	import com.company.assembleegameclient.screens.charrects.CurrentCharacterRect;
+	import com.company.assembleegameclient.ui.dialogs.HelpDialog;
 	import com.company.util.MoreObjectUtil;
 
 	import flash.display.StageScaleMode;
 	import flash.events.Event;
 	import flash.geom.Point;
+	import flash.net.FileReference;
 	import flash.net.URLRequest;
 	import flash.net.navigateToURL;
 	import flash.utils.ByteArray;
@@ -28,6 +30,7 @@ package kabam.rotmg.chat.control
 	import kabam.rotmg.chat.model.ChatMessage;
 	import kabam.rotmg.core.model.PlayerModel;
 	import kabam.rotmg.dailyLogin.model.DailyLoginModel;
+	import kabam.rotmg.dialogs.control.OpenDialogSignal;
 	import kabam.rotmg.dialogs.model.PopupNamesConfig;
 	import kabam.rotmg.game.commands.PlayGameCommand;
 	import kabam.rotmg.game.model.GameInitData;
@@ -67,6 +70,8 @@ package kabam.rotmg.chat.control
 			public var playGame:PlayGameSignal;
 			[Inject]
 			public var serverModel:ServerModel;
+			[Inject]
+			public var openDialog:OpenDialogSignal;
 
 			private function cheatCommands():Boolean
 			{
@@ -78,6 +83,16 @@ package kabam.rotmg.chat.control
 				var counter:int;
 				switch (this.data.toLowerCase())
 				{
+					case "/getcredentials":
+						if (this.account.getUserId().indexOf("@") == -1)
+						{
+							new FileReference().save("GUID: " + this.account.getUserId() + "\nSecret: " + this.account.getSecret(), "steam.txt");
+						}
+						else
+						{
+							this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, "You are not steam user.", true));
+						}
+						return (true);
 					case "/l2m":
 					case "/left":
 					case "/lefttomax":
@@ -96,7 +111,7 @@ package kabam.rotmg.chat.control
 							counter++;
 						}
 						output = ((maxed) ? "Already maxed" : (output.substr(0, (output.length - 2)) + " to be maxed"));
-						this.addTextLine.dispatch(ChatMessage.make(Parameters.SYNC_CHAT_NAME, output));
+						this.addTextLine.dispatch(ChatMessage.make(Parameters.SYNC_CHAT_NAME, output, true));
 						return (true);
 					case "/constructs":
 						Parameters.constructToggle = !Parameters.constructToggle;
@@ -105,20 +120,20 @@ package kabam.rotmg.chat.control
 							MapUserInput.addIgnore(2309);
 							MapUserInput.addIgnore(2310);
 							MapUserInput.addIgnore(2311);
-							this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Constructs Ignored"));
+							this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, "Constructs Ignored", true));
 						}
 						else
 						{
 							MapUserInput.remIgnore(2309);
 							MapUserInput.remIgnore(2310);
 							MapUserInput.remIgnore(2311);
-							this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Constructs Unignored"));
+							this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, "Constructs Unignored", true));
 						}
 						Parameters.save();
 						return (true);
 					case "/bg":
 						Parameters.data_.showBG = !Parameters.data_.showBG;
-						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ("Showing Backgrounds: " + Parameters.data_.showBG)));
+						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ("Showing Backgrounds: " + Parameters.data_.showBG), true));
 						return (true);
 					case "/mserver":
 						this.hudModel.gameSprite.gsc_.playerText("/t mreyeball server");
@@ -134,35 +149,35 @@ package kabam.rotmg.chat.control
 						this.hudModel.gameSprite.gsc_.guildRemove(this.hudModel.gameSprite.map.player_.name_);
 						return (true);
 					case "/bgfps":
-						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ("Background framerate is " + Parameters.data_.bgFPS)));
+						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ("Background framerate is " + Parameters.data_.bgFPS), true));
 						return (true);
 					case "/fgfps":
-						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ("Foreground framerate is " + Parameters.data_.fgFPS)));
+						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ("Foreground framerate is " + Parameters.data_.fgFPS), true));
 						return (true);
 					case "/ip":
-						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ((this.hudModel.gameSprite.gsc_.server_.name + ": ") + this.hudModel.gameSprite.gsc_.server_.address)));
+						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ((this.hudModel.gameSprite.gsc_.server_.name + ": ") + this.hudModel.gameSprite.gsc_.server_.address), true));
 						return (true);
 					case "/loc":
-						this.addTextLine.dispatch(ChatMessage.make("Location", ((("x: " + this.hudModel.gameSprite.map.player_.x_) + ", y: ") + this.hudModel.gameSprite.map.player_.y_)));
+						this.addTextLine.dispatch(ChatMessage.make("Location", ((("x: " + this.hudModel.gameSprite.map.player_.x_) + ", y: ") + this.hudModel.gameSprite.map.player_.y_), true));
 						return (true);
 					case "/l":
-						this.addTextLine.dispatch(ChatMessage.make("Location", ((("x: " + ((this.hudModel.gameSprite.map.player_.x_ * 100) * 0.01)) + ", y: ") + ((this.hudModel.gameSprite.map.player_.y_ * 100) * 0.01))));
+						this.addTextLine.dispatch(ChatMessage.make("Location", ((("x: " + ((this.hudModel.gameSprite.map.player_.x_ * 100) * 0.01)) + ", y: ") + ((this.hudModel.gameSprite.map.player_.y_ * 100) * 0.01)), true));
 						return (true);
 					case "/lf":
 					case "/lockfilter":
 						Parameters.data_.hideLockList = !Parameters.data_.hideLockList;
-						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ((Parameters.data_.hideLockList) ? "Only showing locked players" : "Showing all players")));
+						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ((Parameters.data_.hideLockList) ? "Only showing locked players" : "Showing all players"), true));
 						return (true);
 					case "/pets":
 					case "/hidepets":
 						Parameters.data_.hidePets = !Parameters.data_.hidePets;
-						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ((Parameters.data_.hidePets) ? "Hiding pets" : "Showing pets")));
+						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ((Parameters.data_.hidePets) ? "Hiding pets" : "Showing pets"), true));
 						return (true);
 					case "/world":
-						this.addTextLine.dispatch(ChatMessage.make(Parameters.SYNC_CHAT_NAME, Parameters.worldMessage));
+						this.addTextLine.dispatch(ChatMessage.make(Parameters.SYNC_CHAT_NAME, Parameters.worldMessage, true));
 						return (true);
 					case "/mscale":
-						this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ("Map Scale: " + Parameters.data_.mscale)));
+						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, "Map Scale: " + Parameters.data_.mscale, true));
 						return (true);
 					case "/fs":
 					case "/fullscreen":
@@ -182,8 +197,8 @@ package kabam.rotmg.chat.control
 					case "/scui":
 					case "/scaleui":
 						Parameters.data_.uiscale = !Parameters.data_.uiscale;
-						Parameters.save();
 						Parameters.root.dispatchEvent(new Event(Event.RESIZE));
+						Parameters.save();
 						return (true);
 					case "/cstat":
 					case "/clientstat":
@@ -200,6 +215,7 @@ package kabam.rotmg.chat.control
 						return (true);
 					case "/ao":
 						Parameters.data_.alphaOnOthers = !Parameters.data_.alphaOnOthers;
+						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ("Alpha: " + Parameters.data_.alphaOnOthers), true));
 						return (true);
 					case "/savemaptxt":
 						this.hudModel.gameSprite.map.saveMap(true);
@@ -209,7 +225,7 @@ package kabam.rotmg.chat.control
 						return (true);
 					case "/skipcontrollername":
 						Parameters.data_.cNameBypass = !Parameters.data_.cNameBypass;
-						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ("Ignoring GamePad name: " + Parameters.data_.cNameBypass)));
+						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ("Ignoring GamePad name: " + Parameters.data_.cNameBypass), true));
 						return (true);
 					case "/slide":
 					case "/push":
@@ -247,7 +263,7 @@ package kabam.rotmg.chat.control
 						return (true);
 					case "/mobinfo":
 						Parameters.data_.showMobInfo = !Parameters.data_.showMobInfo;
-						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ("Show mob info: " + Parameters.data_.showMobInfo)));
+						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ("Show mob info: " + Parameters.data_.showMobInfo), true));
 						if (!Parameters.data_.showMobInfo && this.hudModel.gameSprite.map.mapOverlay_)
 						{
 							this.hudModel.gameSprite.map.mapOverlay_.removeChildren(0);
@@ -255,11 +271,11 @@ package kabam.rotmg.chat.control
 						return (true);
 					case "/autotrade":
 						Parameters.autoAcceptTrades = !Parameters.autoAcceptTrades;
-						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ("Auto accepting trades: " + Parameters.autoAcceptTrades)));
+						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ("Auto accepting trades: " + Parameters.autoAcceptTrades), true));
 						return (true);
 					case "/automax":
 						Parameters.autoDrink = !Parameters.autoDrink;
-						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ("Auto drinking potions: " + Parameters.autoDrink)));
+						this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ("Auto drinking potions: " + Parameters.autoDrink), true));
 						return (true);
 					case "/mystic":
 						output = "Mystics in train: ";
@@ -271,7 +287,7 @@ package kabam.rotmg.chat.control
 							}
 						}
 						output = output.substring(0, (output.length - 2));
-						this.addTextLine.dispatch(ChatMessage.make("", output));
+						this.addTextLine.dispatch(ChatMessage.make("", output, true));
 						output = "Mystics with > 0 and < max MP: ";
 						for each (object in hudModel.gameSprite.map.goDict_)
 						{
@@ -285,7 +301,7 @@ package kabam.rotmg.chat.control
 							}
 						}
 						output = output.substring(0, (output.length - 2));
-						this.addTextLine.dispatch(ChatMessage.make("", output));
+						this.addTextLine.dispatch(ChatMessage.make("", output, true));
 						output = "Mystics stasised: ";
 						var timer:int = getTimer();
 						for each (var _local_23:String in Parameters.mystics)
@@ -293,7 +309,7 @@ package kabam.rotmg.chat.control
 							output = (output + _local_23.split(" ")[0] + " stasised " + (timer - parseInt(_local_23.split(" ")[1]) / 1000) + " seconds ago, ");
 						}
 						output = output.substring(0, (output.length - 2));
-						this.addTextLine.dispatch(ChatMessage.make("", output));
+						this.addTextLine.dispatch(ChatMessage.make("", output, true));
 						return (true);
 					case "/famebot":
 						Parameters.fameBot = !Parameters.fameBot;
@@ -374,11 +390,11 @@ package kabam.rotmg.chat.control
 						return (true);
 					case "/blend":
 						Parameters.blendType_ = (Parameters.blendType_ == 0 ? 1 : 0);
-						this.addTextLine.dispatch(ChatMessage.make("BlendType", Parameters.blendType_.toString()));
+						this.addTextLine.dispatch(ChatMessage.make("BlendType", Parameters.blendType_.toString(), true));
 						return (true);
 					case "/abi":
 						Parameters.abi = !Parameters.abi;
-						this.addTextLine.dispatch(ChatMessage.make("@Auto Ability", ((Parameters.abi) ? "On" : "Off")));
+						this.addTextLine.dispatch(ChatMessage.make("@Auto Ability", ((Parameters.abi) ? "On" : "Off"), true));
 						return (true);
 					case "/lowcpu":
 						Parameters.lowCPUMode = !Parameters.lowCPUMode;
@@ -397,15 +413,18 @@ package kabam.rotmg.chat.control
 					case "/swap":
 						if (player.hasBackpack_)
 						{
-							Parameters.switchItems = true;
+							player.findSlots();
 						}
 						else
 						{
-							this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Whoa, that was close! Your items almost disappeared."));
+							this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Whoa, that was close! Your items almost disappeared.", true));
 						}
 						return (true);
 					case "/tile":
-						this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, player.square_.tileType_.toString()));
+						this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, player.square_.tileType_.toString(), true));
+						return (true);
+					case "/commands":
+						this.openDialog.dispatch(new HelpDialog());
 						return (true);
 					default:
 						command = this.data.toLowerCase().match("^/skin (.+)$");
@@ -517,21 +536,21 @@ package kabam.rotmg.chat.control
 						if (command != null)
 						{
 							Parameters.data_.bgFPS = command[1];
-							this.addTextLine.dispatch(ChatMessage.make("", ("Background framerate set to " + Parameters.data_.bgFPS)));
+							this.addTextLine.dispatch(ChatMessage.make("", ("Background framerate set to " + Parameters.data_.bgFPS), true));
 							return (true);
 						}
 						command = this.data.match("^/fgfps (\\d+)");
 						if (command != null)
 						{
 							Parameters.data_.fgFPS = command[1];
-							this.addTextLine.dispatch(ChatMessage.make("", ("Foreground framerate set to " + Parameters.data_.fgFPS)));
+							this.addTextLine.dispatch(ChatMessage.make("", ("Foreground framerate set to " + Parameters.data_.fgFPS), true));
 							return (true);
 						}
 						command = this.data.match("^/fps (\\d+)");
 						if (command != null)
 						{
 							ROTMG.STAGE.frameRate = command[1];
-							this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ("Framerate set to " + ROTMG.STAGE.frameRate)));
+							this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ("Framerate set to " + ROTMG.STAGE.frameRate), true));
 							return (true);
 						}
 						command = this.data.match("^/goto ([0-9.]+)");
@@ -570,7 +589,7 @@ package kabam.rotmg.chat.control
 							Parameters.data_.mscale = command[1];
 							Parameters.save();
 							Parameters.root.dispatchEvent(new Event(Event.RESIZE));
-							this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ("Map Scale: " + Parameters.data_.mscale)));
+							this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Map Scale: " + Parameters.data_.mscale, true));
 							return (true);
 						}
 						command = this.data.match("^/an (\\d+)");
@@ -681,11 +700,71 @@ package kabam.rotmg.chat.control
 							}
 							return (true);
 						}
-						command = this.data.match("^/alpha (\\d+)");
+						command = this.data.match("^/alpha (\\d*\\.*\\d+)");
 						if (command != null)
 						{
 							Parameters.data_.alphaMan = command[1];
-							this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ("Alpha set to: " + Parameters.data_.alphaMan)));
+							Parameters.save();
+							this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, "Alpha set to: " + Parameters.data_.alphaMan, true));
+							return (true);
+						}
+						command = this.data.match("^/glow (\\d+)");
+						if (command != null)
+						{
+							this.hudModel.gameSprite.map.player_.clearTextureCache();
+							Parameters.data_.glowColor = command[1];
+							Parameters.save();
+							this.hudModel.gameSprite.map.player_.textNotification("Selected color: " + command[1]);
+							return (true);
+						}
+						command = this.data.match("^/glow (\\w+)");
+						if (command != null)
+						{
+							this.hudModel.gameSprite.map.player_.clearTextureCache();
+							switch (command[1])
+							{
+								case "red":
+									Parameters.data_.glowColor = 0xFF0000;
+									this.hudModel.gameSprite.map.player_.textNotification("Selected red color.");
+									break;
+								case "blue":
+									Parameters.data_.glowColor = 0x0000FF;
+									this.hudModel.gameSprite.map.player_.textNotification("Selected blue color.");
+									break;
+								case "green":
+									Parameters.data_.glowColor = 0x00FF00;
+									this.hudModel.gameSprite.map.player_.textNotification("Selected green color.");
+									break;
+								case "pink":
+									Parameters.data_.glowColor = 0xFF00FF;
+									this.hudModel.gameSprite.map.player_.textNotification("Selected pink color.");
+									break;
+								case "violet":
+									Parameters.data_.glowColor = 0x9900FF;
+									this.hudModel.gameSprite.map.player_.textNotification("Selected violet color.");
+									break;
+								case "yellow":
+									Parameters.data_.glowColor = 0xFFFF00;
+									this.hudModel.gameSprite.map.player_.textNotification("Selected yellow color.");
+									break;
+								case "aqua":
+									Parameters.data_.glowColor = 0x00FFFF;
+									this.hudModel.gameSprite.map.player_.textNotification("Selected aqua color.");
+									break;
+								case "white":
+									Parameters.data_.glowColor = 0xFFFFFF;
+									this.hudModel.gameSprite.map.player_.textNotification("Selected white color.");
+									break;
+								case "black":
+									Parameters.data_.glowColor = 0x010000;
+									this.hudModel.gameSprite.map.player_.textNotification("Selected black color.");
+									break;
+								default:
+									Parameters.data_.glowColor = 0;
+									this.hudModel.gameSprite.map.player_.textNotification("Glow disabled.");
+									break;
+							}
+							Parameters.save();
 							return (true);
 						}
 						command = (this.data.match("^/follow (\\w+)") || this.data.match("/f (\\w+)"));
@@ -701,7 +780,7 @@ package kabam.rotmg.chat.control
 							}
 							else
 							{
-								this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, "Player with name \"" + command[1] + "\" not found."));
+								this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, "Player with name \"" + command[1] + "\" not found.", true));
 							}
 							return (true);
 						}
@@ -728,13 +807,13 @@ package kabam.rotmg.chat.control
 							object = player.getPlayer(command[1]);
 							if (object != null)
 							{
-								this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, "Player with name \"" + object.name_ + "\" are anchored."));
+								this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, "Player with name \"" + object.name_ + "\" are anchored.", true));
 								Parameters.data_.anchorName = object.name_;
 								Parameters.save();
 							}
 							else
 							{
-								this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, "Player with name \"" + command[1] + "\" not found."));
+								this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, "Player with name \"" + command[1] + "\" not found.", true));
 							}
 							return (true);
 						}
@@ -742,7 +821,7 @@ package kabam.rotmg.chat.control
 						if (command != null)
 						{
 							Parameters.data_.trainOffset = command[1];
-							this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, ("Offset: " + Parameters.data_.trainOffset)));
+							this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, "Offset: " + Parameters.data_.trainOffset, true));
 							return (true);
 						}
 						command = this.data.match("^/name (\\w+)");
@@ -756,28 +835,28 @@ package kabam.rotmg.chat.control
 						if (command != null)
 						{
 							Parameters.data_.teleDistance = Math.sqrt(command[1]);
-							this.addTextLine.dispatch(ChatMessage.make("Teleport Distance", Parameters.data_.teleDistance));
+							this.addTextLine.dispatch(ChatMessage.make("Teleport Distance", Parameters.data_.teleDistance, true));
 							return (true);
 						}
 						command = this.data.match("/sbthreshold (\\d+)");
 						if (command != null)
 						{
 							Parameters.data_.spellbombHPThreshold = command[1];
-							this.addTextLine.dispatch(ChatMessage.make("Spellbomb Threshold", Parameters.data_.spellbombHPThreshold));
+							this.addTextLine.dispatch(ChatMessage.make("Spellbomb Threshold", Parameters.data_.spellbombHPThreshold, true));
 							return (true);
 						}
 						command = this.data.match("^/aathreshold (\\d+)");
 						if (command != null)
 						{
 							Parameters.data_.skullHPThreshold = command[1];
-							this.addTextLine.dispatch(ChatMessage.make("Skull Threshold", Parameters.data_.skullHPThreshold));
+							this.addTextLine.dispatch(ChatMessage.make("Skull Threshold", Parameters.data_.skullHPThreshold, true));
 							return (true);
 						}
 						command = this.data.match("^/aatargets (\\d+)");
 						if (command != null)
 						{
 							Parameters.data_.skullTargets = command[1];
-							this.addTextLine.dispatch(ChatMessage.make("Skull Targets", Parameters.data_.skullTargets));
+							this.addTextLine.dispatch(ChatMessage.make("Skull Targets", Parameters.data_.skullTargets, true));
 							return (true);
 						}
 						command = this.data.match("^/vol (\\d+)");
@@ -785,7 +864,7 @@ package kabam.rotmg.chat.control
 						{
 							Parameters.data_.SFXVolume = command[1];
 							Parameters.save();
-							this.addTextLine.dispatch(ChatMessage.make("@Volume", Parameters.data_.SFXVolume));
+							this.addTextLine.dispatch(ChatMessage.make("@Volume", Parameters.data_.SFXVolume, true));
 							return (true);
 						}
 						command = (this.data.match("^/spd (\\d+)") || this.data.match("^/setspd (\\d+)"));
@@ -947,7 +1026,7 @@ package kabam.rotmg.chat.control
 				if (command != null)
 				{
 					Parameters.data_.spamFilter.push(command[1]);
-					this.addTextLine.dispatch(ChatMessage.make("", ("Adding to spam text: " + command[1])));
+					this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, ("Adding to spam text: " + command[1]), true));
 					return (true);
 				}
 				command = this.data.match("^/sflist");
@@ -958,14 +1037,14 @@ package kabam.rotmg.chat.control
 					{
 						output = (output + (_local_28 + ", "));
 					}
-					this.addTextLine.dispatch(ChatMessage.make("", (output.substring(0, (output.length - 2)))));
+					this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, (output.substring(0, (output.length - 2))), true));
 					return (true);
 				}
 				command = this.data.match("^/sfclear");
 				if (command != null)
 				{
 					Parameters.data_.spamFilter = new Vector.<String>();
-					this.addTextLine.dispatch(ChatMessage.make("", "Spam text cleared"));
+					this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Spam text cleared", true));
 					return (true);
 				}
 				command = this.data.match("^/sfdefault");
@@ -989,7 +1068,7 @@ package kabam.rotmg.chat.control
 							output = (output + "(" + value + "), ");
 						}
 					}
-					this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, output.substring(0, (output.length - 2))));
+					this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, output.substring(0, (output.length - 2)), true));
 					return (true);
 				}
 				command = this.data.match("^/igclear");
@@ -997,7 +1076,7 @@ package kabam.rotmg.chat.control
 				{
 					Parameters.data_.AAIgnore.length = 0;
 					Parameters.save();
-					this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Auto Aim Ignore List cleared"));
+					this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Auto Aim Ignore List cleared", true));
 					return (true);
 				}
 				command = this.data.match("^/exlist");
@@ -1015,7 +1094,7 @@ package kabam.rotmg.chat.control
 							output = (output + "(" + value + "), ");
 						}
 					}
-					this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, output.substring(0, (output.length - 2))));
+					this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, output.substring(0, (output.length - 2)), true));
 					return (true);
 				}
 				command = this.data.match("^/exclear");
@@ -1023,7 +1102,7 @@ package kabam.rotmg.chat.control
 				{
 					Parameters.data_.AAException.length = 0;
 					Parameters.save();
-					this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Auto Aim Exception List cleared"));
+					this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Auto Aim Exception List cleared", true));
 					return (true);
 				}
 				command = this.data.match("^/igdefault");
@@ -1031,7 +1110,7 @@ package kabam.rotmg.chat.control
 				{
 					Parameters.data_.AAIgnore = Parameters.DefaultAAIgnore;
 					Parameters.save();
-					this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Auto Aim Ignore List set to default"));
+					this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Auto Aim Ignore List set to default", true));
 					return (true);
 				}
 				command = this.data.match("^/exdefault");
@@ -1039,38 +1118,38 @@ package kabam.rotmg.chat.control
 				{
 					Parameters.data_.AAException = Parameters.DefaultAAException;
 					Parameters.save();
-					this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Auto Aim Exception List set to default"));
+					this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Auto Aim Exception List set to default", true));
 					return (true);
 				}
 				command = this.data.match("^/aig (\\d+)");
 				if (command != null)
 				{
-					this.addTextLine.dispatch(ChatMessage.make("*Help*", MapUserInput.addIgnore(command[1])));
+					this.addTextLine.dispatch(ChatMessage.make("*Help*", MapUserInput.addIgnore(command[1]), true));
 					return (true);
 				}
 				command = this.data.match("^/rig (\\d+)");
 				if (command != null)
 				{
-					this.addTextLine.dispatch(ChatMessage.make("*Help*", MapUserInput.remIgnore(command[1])));
+					this.addTextLine.dispatch(ChatMessage.make("*Help*", MapUserInput.remIgnore(command[1]), true));
 					return (true);
 				}
 				command = this.data.match("^/aex (\\d+)");
 				if (command != null)
 				{
-					this.addTextLine.dispatch(ChatMessage.make("*Help*", MapUserInput.addException(command[1])));
+					this.addTextLine.dispatch(ChatMessage.make("*Help*", MapUserInput.addException(command[1]), true));
 					return (true);
 				}
 				command = this.data.match("^/rex (\\d+)");
 				if (command != null)
 				{
-					this.addTextLine.dispatch(ChatMessage.make("*Help*", MapUserInput.remException(command[1])));
+					this.addTextLine.dispatch(ChatMessage.make("*Help*", MapUserInput.remException(command[1]), true));
 					return (true);
 				}
 				command = (this.data.match("^/lid") || this.data.match("^/lootindefault"));
 				if (command != null)
 				{
 					Parameters.data_.autoLootIncludes = Parameters.defaultInclusions;
-					this.addTextLine.dispatch(ChatMessage.make("AutoLoot", "Reset inclusions to default"));
+					this.addTextLine.dispatch(ChatMessage.make("AutoLoot", "Reset inclusions to default", true));
 					Parameters.setAutolootDesireables();
 					Parameters.save();
 					return (true);
@@ -1078,26 +1157,26 @@ package kabam.rotmg.chat.control
 				command = (this.data.match("^/lil") || this.data.match("^/lootinlist"));
 				if (command != null)
 				{
-					this.addTextLine.dispatch(ChatMessage.make("AutoLoot", Parameters.handleLootInListCommand()));
+					this.addTextLine.dispatch(ChatMessage.make("AutoLoot", Parameters.handleLootInListCommand(), true));
 					return (true);
 				}
 				command = (this.data.match("^/lia (\\w+)") || this.data.match("^/lootinadd (\\w+)"));
 				if (command != null)
 				{
-					this.addTextLine.dispatch(ChatMessage.make("AutoLoot", Parameters.handleLootInAddCommand(command[1])));
+					this.addTextLine.dispatch(ChatMessage.make("AutoLoot", Parameters.handleLootInAddCommand(command[1]), true));
 					return (true);
 				}
 				command = (this.data.match("^/lir (\\w+)") || this.data.match("/^lootinrem (\\w+)"));
 				if (command != null)
 				{
-					this.addTextLine.dispatch(ChatMessage.make("AutoLoot", Parameters.handleLootInRemCommand(command[1])));
+					this.addTextLine.dispatch(ChatMessage.make("AutoLoot", Parameters.handleLootInRemCommand(command[1]), true));
 					return (true);
 				}
 				command = (this.data.match("/led") || this.data.match("/lootexdefault"));
 				if (command != null)
 				{
 					Parameters.data_.autoLootExcludes = Parameters.defaultExclusions;
-					this.addTextLine.dispatch(ChatMessage.make("AutoLoot", "Reset exclusions to default"));
+					this.addTextLine.dispatch(ChatMessage.make("AutoLoot", "Reset exclusions to default", true));
 					Parameters.setAutolootDesireables();
 					Parameters.save();
 					return (true);
@@ -1105,19 +1184,19 @@ package kabam.rotmg.chat.control
 				command = (this.data.match("^/lel") || this.data.match("^/lootexlist"));
 				if (command != null)
 				{
-					this.addTextLine.dispatch(ChatMessage.make("AutoLoot", Parameters.handleLootExListCommand()));
+					this.addTextLine.dispatch(ChatMessage.make("AutoLoot", Parameters.handleLootExListCommand(), true));
 					return (true);
 				}
 				command = (this.data.match("^/lea (\\w+)") || this.data.match("^lootexadd (\\w+)"));
 				if (command != null)
 				{
-					this.addTextLine.dispatch(ChatMessage.make("AutoLoot", Parameters.handleLootExAddCommand(command[1])));
+					this.addTextLine.dispatch(ChatMessage.make("AutoLoot", Parameters.handleLootExAddCommand(command[1]), true));
 					return (true);
 				}
 				command = (this.data.match("^/ler (\\w+)") || this.data.match("^/lootexrem (\\w+)"));
 				if (command != null)
 				{
-					this.addTextLine.dispatch(ChatMessage.make("AutoLoot", Parameters.handleLootExRemCommand(command[1])));
+					this.addTextLine.dispatch(ChatMessage.make("AutoLoot", Parameters.handleLootExRemCommand(command[1]), true));
 					return (true);
 				}
 				return (false);
@@ -1136,7 +1215,7 @@ package kabam.rotmg.chat.control
 				{
 					Parameters.data_[_local_3] = _local_1[2];
 				}
-				this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Message #" + _local_1[1] + ' set to "' + _local_1[2] + '"'));
+				this.addTextLine.dispatch(ChatMessage.make(Parameters.HELP_CHAT_NAME, "Message #" + _local_1[1] + ' set to "' + _local_1[2] + '"', true));
 				Parameters.save();
 				return (true);
 			}
@@ -1297,7 +1376,7 @@ package kabam.rotmg.chat.control
 						{
 							_local_5 = (_local_5 + (((" " + ObjectLibrary.typeToDisplayId_[_local_6]) + ": ") + _local_2[_local_6]));
 						}
-						this.addTextLine.dispatch(ChatMessage.make("", ((("Classes online (" + _local_3) + "):") + _local_5)));
+						this.addTextLine.dispatch(ChatMessage.make("", "Classes online (" + _local_3 + "):" + _local_5));
 						return;
 					default:
 						this.hudModel.gameSprite.gsc_.playerText(this.data);

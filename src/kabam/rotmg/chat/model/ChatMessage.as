@@ -17,19 +17,19 @@ package kabam.rotmg.chat.model
 			public var bad:Boolean;
 
 
-			public static function make(_arg_1:String, _arg_2:String, _arg_3:int = -1, _arg_4:int = -1, _arg_5:String = "", _arg_6:Boolean = false, _arg_7:Object = null, _arg_8:Boolean = false, _arg_9:Boolean = false, _arg_10:Boolean = false):ChatMessage
+			public static function make(_arg_1:String, _arg_2:String, _arg_3:Boolean = false, _arg_4:int = -1, _arg_5:int = -1, _arg_6:String = "", _arg_7:Boolean = false, _arg_8:Object = null, _arg_9:Boolean = false, _arg_10:Boolean = false):ChatMessage
 			{
 				var _local_9:ChatMessage = new (ChatMessage)();
 				_local_9.name = _arg_1;
 				_local_9.text = _arg_2;
-				_local_9.objectId = _arg_3;
-				_local_9.numStars = _arg_4;
-				_local_9.recipient = _arg_5;
-				_local_9.isToMe = _arg_6;
-				_local_9.isWhisper = _arg_8;
-				_local_9.isFromSupporter = _arg_9;
-				_local_9.tokens = ((_arg_7 == null) ? {} : _arg_7);
-				_local_9.bad = _arg_10;
+				_local_9.bad = _arg_3;
+				_local_9.objectId = _arg_4;
+				_local_9.numStars = _arg_5;
+				_local_9.recipient = _arg_6;
+				_local_9.isToMe = _arg_7;
+				_local_9.tokens = ((_arg_8 == null) ? {} : _arg_8);
+				_local_9.isWhisper = _arg_9;
+				_local_9.isFromSupporter = _arg_10;
 				return (_local_9);
 			}
 

@@ -6,6 +6,7 @@ package com.company.assembleegameclient.ui
 	import com.company.assembleegameclient.objects.ObjectLibrary;
 	import com.company.assembleegameclient.objects.Player;
 	import com.company.assembleegameclient.parameters.Parameters;
+	import com.company.assembleegameclient.util.PlayerUtil;
 	import com.company.util.MoreColorUtil;
 	import com.greensock.plugins.DropShadowFilterPlugin;
 
@@ -156,17 +157,9 @@ package com.company.assembleegameclient.ui
 			private function getDrawColor():int
 			{
 				var _local_1:Player = (this.go as Player);
-				if (_local_1 == null)
+				if (_local_1)
 				{
-					return (this.color);
-				}
-				if (_local_1.isFellowGuild_)
-				{
-					return (Parameters.FELLOW_GUILD_COLOR);
-				}
-				if (_local_1.nameChosen_)
-				{
-					return (Parameters.NAME_CHOSEN_COLOR);
+					return (PlayerUtil.getPlayerNameColor(_local_1));
 				}
 				return (this.color);
 			}

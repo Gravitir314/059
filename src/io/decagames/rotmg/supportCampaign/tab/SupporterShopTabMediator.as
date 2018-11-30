@@ -122,10 +122,11 @@ package io.decagames.rotmg.supportCampaign.tab
 				this.view.drawProgress(this.model.points, this.model.rankConfig, this.model.rank, this.model.claimed);
 				this.updateTooltip();
 				this.selectedSignal.dispatch(this.model.nextClaimableTier);
-				if (this.model.rank >= 5)
+				var _local_1:Player = this.gameModel.player;
+				if (_local_1.hasSupporterFeature(1))
 				{
-					this.gameModel.player.supporterPoints = this.model.points;
-					this.gameModel.player.clearTextureCache();
+					_local_1.supporterPoints = this.model.points;
+					_local_1.clearTextureCache();
 				}
 			}
 

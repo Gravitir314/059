@@ -19,6 +19,8 @@ package kabam.rotmg.account.core.view
 	import flash.filters.DropShadowFilter;
 	import flash.net.FileReference;
 
+	import flashx.textLayout.formats.TextAlign;
+
 	import kabam.lib.tasks.Task;
 	import kabam.rotmg.account.core.signals.LoginSignal;
 	import kabam.rotmg.account.web.model.AccountData;
@@ -96,10 +98,10 @@ package kabam.rotmg.account.core.view
 			private function onLoginError(_arg_1:Task):void
 			{
 				AccountListContainer.setColor(16549442);
-				this.errorText_ = new TextFieldDisplayConcrete().setSize(12).setColor(16549442);
+				this.errorText_ = new TextFieldDisplayConcrete().setSize(12).setColor(16549442).setHorizontalAlign(TextAlign.RIGHT);
 				this.errorText_.setStringBuilder(new LineBuilder().setParams(_arg_1.error));
 				this.errorText_.setMultiLine(true);
-				this.errorText_.x = AccountListContainer.selectedContainer.x + (w_ - 200);
+				this.errorText_.x = AccountListContainer.selectedContainer.x + (w_ - 300);
 				this.errorText_.y = AccountListContainer.selectedContainer.y + 3;
 				this.errorText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
 				addChild(this.errorText_);

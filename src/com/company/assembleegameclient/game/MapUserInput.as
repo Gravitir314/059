@@ -56,6 +56,7 @@ package com.company.assembleegameclient.game
 	import kabam.rotmg.messaging.impl.GameServerConnection;
 	import kabam.rotmg.minimap.control.MiniMapZoomSignal;
 	import kabam.rotmg.ui.UIUtils;
+	import kabam.rotmg.ui.model.HUDModel;
 	import kabam.rotmg.ui.model.TabStripModel;
 
 	import net.hires.debug.Stats;
@@ -107,8 +108,8 @@ package com.company.assembleegameclient.game
 			public var heldX:int = 0;
 			public var heldY:int = 0;
 			public var heldAngle:Number = 0;
-			[Inject]
 			public var pcmc:ParseChatMessageSignal;
+			public var hudModel:HUDModel;
 
 			public function MapUserInput(_arg_1:GameSprite)
 			{
@@ -133,6 +134,7 @@ package com.company.assembleegameclient.game
 				this.areFKeysAvailable = _local_3.areDeveloperHotkeysEnabled();
 				this.gs_.map.signalRenderSwitch.add(this.onRenderSwitch);
 				this.pcmc = _local_2.getInstance(ParseChatMessageSignal);
+				this.hudModel = _local_2.getInstance(HUDModel);
 				if (Parameters.data_.allowController)
 				{
 					setController();
@@ -1100,6 +1102,7 @@ package com.company.assembleegameclient.game
 						break;
 					case Parameters.data_.sskey:
 						Parameters.ssmode = !Parameters.ssmode;
+						this.hudModel.gameSprite.map.player_.clearTextureCache();
 						if (Parameters.ssmode)
 						{
 							if (Parameters.PlayerTex1 != -1)
@@ -1144,6 +1147,7 @@ package com.company.assembleegameclient.game
 						this.gs_.chatBox_.list.setVisibleItemCount();
 						this.gs_.chatBox_.list.removeOldestExcessVisible();
 						this.gs_.chatBox_.model.setVisibleItemCount();
+						this.gs_.chatBox_.list.removeBadMessages();
 						if (this.gs_.map.partyOverlay_ != null)
 						{
 							this.gs_.map.partyOverlay_.draw(this.gs_.camera_, getTimer());
@@ -1159,6 +1163,7 @@ package com.company.assembleegameclient.game
 						TextureRedrawer.clearCache2();
 						GlowRedrawer.clearCache();
 						Parameters.root.stage.dispatchEvent(new Event(Event.RESIZE));
+						Parameters.save();
 						break;
 					case Parameters.data_.aimAtQuest:
 						if (this.gs_.map.quest_.objectId_ >= 0)

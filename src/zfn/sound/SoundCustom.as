@@ -96,16 +96,9 @@ package zfn.sound
 
 			public static function play(_arg_1:String):void
 			{
-				if (_arg_1.indexOf("event") != -1)
+				if (Parameters.data_.customSounds || _arg_1.indexOf("event") != -1 && Parameters.data_.eventNotifier)
 				{
-					SoundEffectLibrary.play(_arg_1, Parameters.data_.eventNotifierVolume, true);
-				}
-				else
-				{
-					if (Parameters.data_.customSounds)
-					{
-						SoundEffectLibrary.playCustomSFX(_arg_1);
-					}
+					SoundEffectLibrary.playCustomSFX(_arg_1);
 				}
 			}
 

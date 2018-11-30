@@ -35,33 +35,6 @@ package com.company.assembleegameclient.sound
 			public static function makeSound(_arg_1:String):Sound
 			{
 				return (SoundAssets.grab(_arg_1));
-				var _local_2:Sound = new Sound();
-				_local_2.addEventListener(IOErrorEvent.IO_ERROR, onIOError);
-				_local_2.load(makeSoundRequest(_arg_1));
-				return (_local_2);
-			}
-
-			private static function getUrlBase():String
-			{
-				var setup:ApplicationSetup;
-				var base:String = "";
-				try
-				{
-					setup = StaticInjectorContext.getInjector().getInstance(ApplicationSetup);
-					base = setup.getAppEngineUrl(true);
-				}
-				catch (error:Error)
-				{
-					base = "localhost";
-				}
-				return (base);
-			}
-
-			private static function makeSoundRequest(_arg_1:String):URLRequest
-			{
-				urlBase = ((urlBase) || (getUrlBase()));
-				var _local_2:String = URL_PATTERN.replace("{URLBASE}", urlBase).replace("{NAME}", _arg_1);
-				return (new URLRequest(_local_2));
 			}
 
 			public static function playCustomSFX(_arg_1:String, _arg_2:Number = 1):void

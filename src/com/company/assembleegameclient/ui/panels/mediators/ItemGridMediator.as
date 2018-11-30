@@ -371,7 +371,7 @@ package com.company.assembleegameclient.ui.panels.mediators
 			private function swapTooSoon():Boolean
 			{
 				var _local_1:int = getTimer();
-				if ((this.view.curPlayer.lastSwap_ + 520) > _local_1)
+				if ((this.view.curPlayer.lastSwap_ + 600) > _local_1)
 				{
 					SoundEffectLibrary.play("error");
 					return (true);

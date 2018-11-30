@@ -7,6 +7,8 @@ package kabam.rotmg.game.view
 	import com.company.assembleegameclient.game.events.ReconnectEvent;
 	import com.company.assembleegameclient.objects.Player;
 
+	import flash.system.System;
+
 	import flash.utils.getTimer;
 
 	import io.decagames.rotmg.pets.signals.ShowPetTooltip;
@@ -225,7 +227,8 @@ package kabam.rotmg.game.view
 				this.closeAllPopups.dispatch();
 				var _local_1:HideMapLoadingSignal = StaticInjectorContext.getInjector().getInstance(HideMapLoadingSignal);
 				_local_1.dispatch();
-				sleepForMs(100);
+				System.pauseForGCIfCollectionImminent(0);
+				System.pauseForGCIfCollectionImminent(0);
 			}
 
 			private function onReconnect(_arg_1:ReconnectEvent):void

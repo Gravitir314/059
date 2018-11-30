@@ -76,8 +76,10 @@ package com.company.assembleegameclient.util
 			private var vault:Class;
 			[Embed(source="AssetLoader_Shatters.dat", mimeType="application/octet-stream")]
 			private var shatters:Class;
-			[Embed(source="AssetLoader_Nexus.dat", mimeType="application/octet-stream")]
+			[Embed(source="AssetLoader_Nexus_Autumn.dat", mimeType="application/octet-stream")]
 			private var nexus:Class;
+			[Embed(source="AssetLoader_Nexus_Halloween.dat", mimeType="application/octet-stream")]
+			private var nexus_halloween:Class;
 			[Embed(source="AssetLoader_Nexus_Day.dat", mimeType="application/octet-stream")]
 			private var nexus_day:Class;
 			[Embed(source="AssetLoader_Nexus_Night.dat", mimeType="application/octet-stream")]

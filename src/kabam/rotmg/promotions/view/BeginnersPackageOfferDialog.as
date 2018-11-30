@@ -27,8 +27,8 @@ package kabam.rotmg.promotions.view
 
 			public function centerOnScreen():void
 			{
-				x = ((stage.stageWidth - width) * 0.5);
-				y = ((stage.stageHeight - height) * 0.5);
+				x = ((800 - width) * 0.5);
+				y = ((600 - height) * 0.5);
 			}
 
 			private function makeBackground():void

@@ -34,6 +34,8 @@ git clone https://github.com/Gravitir314/059.git
 8. Close the "Project Structure", in the upper right corner you can find your build configurations and buttons to build client.
 ## Finished
 - /con (CC Edition)
+- Auto Aim
+- Auto Ability
 - Accounts list
 - Anti-Debuffs
 - Auto Claim Calendar
@@ -48,6 +50,7 @@ git clone https://github.com/Gravitir314/059.git
 - Chat Length
 - Custom Hotkeys
 - Custom Sounds
+- Custom Glow
 - Disable Shot Rotation
 - Even Lower Graphics Mode
 - Event Notification
@@ -89,8 +92,7 @@ git clone https://github.com/Gravitir314/059.git
 - Vial Checker (Not tested)
 - Weapon Offset
 ## TODO
-- Auto Aim
-- Auto Ability
 - DB Keys
 - Tomb Hack
 - Controller Input (Can't test)
+- Fix Hardware Acceleration with Fullscreen

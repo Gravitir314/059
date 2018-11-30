@@ -248,6 +248,22 @@ package kabam.rotmg.chat.view
 				}
 			}
 
+			public function removeBadMessages():void
+			{
+				var _local_1:ChatListItem;
+				for each (_local_1 in this.visibleItems)
+				{
+					if (_local_1.bad)
+					{
+						removeChild(_local_1);
+						this.visibleItems.splice(this.visibleItems.indexOf(_local_1), 1);
+						removeBadMessages();
+						return;
+					}
+				}
+				this.positionItems();
+			}
+
 			private function canScrollUp():Boolean
 			{
 				return (this.index > this.visibleItemCount);

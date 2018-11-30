@@ -66,8 +66,8 @@ package kabam.rotmg.account.web.commands
 				_local_1.add(new DispatchSignalTask(this.closeDialogs));
 				_local_1.add(new DispatchSignalTask(this.updateLogin));
 				_local_1.add(new DispatchSignalTask(this.invalidate));
-				//_local_1.add(this.getPackageTask); TODO need this?
-				//_local_1.add(this.mysteryBoxTask);
+				_local_1.add(this.getPackageTask);
+				_local_1.add(this.mysteryBoxTask);
 				_local_1.add(this.setScreenTask);
 				return (_local_1);
 			}

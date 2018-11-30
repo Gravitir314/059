@@ -1640,4 +1640,602 @@
       <BagType>7</BagType>
       <Treasure/>
    </Object>
+   <Object type="0x71a0" id="Lesser Nexus Fragment x 1">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Nexus power radiates from this fragment.</Description>
+      <Quantity>1</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="1">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71a1" id="Lesser Nexus Fragment x 2">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Nexus power radiates from this fragment.</Description>
+      <Quantity>2</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="2">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71a2" id="Lesser Nexus Fragment x 3">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Nexus power radiates from this fragment.</Description>
+      <Quantity>3</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="3">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71a3" id="Lesser Nexus Fragment x 4">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Nexus power radiates from this fragment.</Description>
+      <Quantity>4</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="4">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71a4" id="Lesser Nexus Fragment x 5">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Nexus power radiates from this fragment.</Description>
+      <Quantity>5</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="5">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71a5" id="Lesser Nexus Fragment x 6">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Nexus power radiates from this fragment.</Description>
+      <Quantity>6</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="6">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71a6" id="Lesser Nexus Fragment x 7">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Nexus power radiates from this fragment.</Description>
+      <Quantity>7</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="7">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71a7" id="Lesser Nexus Fragment x 8">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Nexus power radiates from this fragment.</Description>
+      <Quantity>8</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="8">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71a8" id="Lesser Nexus Fragment x 9">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Nexus power radiates from this fragment.</Description>
+      <Quantity>9</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="9">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71a9" id="Lesser Nexus Fragment x 10">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Nexus power radiates from this fragment.\n\nUse it to obtain a Greater Nexus Fragment!</Description>
+      <Quantity>10</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate id="Greater Nexus Fragment x 1">Exchange</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71aa" id="Greater Nexus Fragment x 1">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>This huge fragment sparks with Nexus power.</Description>
+      <Quantity>1</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="10">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71ab" id="Greater Nexus Fragment x 2">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>This huge fragment sparks with Nexus power.</Description>
+      <Quantity>2</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="20">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71ac" id="Greater Nexus Fragment x 3">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>This huge fragment sparks with Nexus power.</Description>
+      <Quantity>3</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="30">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71ad" id="Greater Nexus Fragment x 4">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>This huge fragment sparks with Nexus power.</Description>
+      <Quantity>4</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="40">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71ae" id="Greater Nexus Fragment x 5">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>This huge fragment sparks with Nexus power.</Description>
+      <Quantity>5</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="50">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71af" id="Greater Nexus Fragment x 6">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>This huge fragment sparks with Nexus power.</Description>
+      <Quantity>6</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="60">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71b0" id="Greater Nexus Fragment x 7">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>This huge fragment sparks with Nexus power.</Description>
+      <Quantity>7</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="70">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71b1" id="Greater Nexus Fragment x 8">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>This huge fragment sparks with Nexus power.</Description>
+      <Quantity>8</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="80">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71b2" id="Greater Nexus Fragment x 9">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>This huge fragment sparks with Nexus power.</Description>
+      <Quantity>9</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="90">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71b3" id="Greater Nexus Fragment x 10">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>This huge fragment sparks with Nexus power.\n\nUse it to obtain a Nexus Crystal!</Description>
+      <Quantity>10</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate id="Nexus Crystal x 1">Exchange</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71b4" id="Nexus Crystal x 1">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13b</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>It is made of pure Nexus power!</Description>
+      <Quantity>1</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="100">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71b5" id="Nexus Crystal x 2">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13b</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>It is made of pure Nexus power!</Description>
+      <Quantity>2</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="200">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71b6" id="Nexus Crystal x 3">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13b</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>It is made of pure Nexus power!</Description>
+      <Quantity>3</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="300">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71b7" id="Nexus Crystal x 4">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13b</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>It is made of pure Nexus power!</Description>
+      <Quantity>4</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="400">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71b8" id="Nexus Crystal x 5">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13b</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>It is made of pure Nexus power!</Description>
+      <Quantity>5</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="500">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71b9" id="Nexus Crystal x 6">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13b</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>It is made of pure Nexus power!</Description>
+      <Quantity>6</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="600">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71ba" id="Nexus Crystal x 7">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13b</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>It is made of pure Nexus power!</Description>
+      <Quantity>7</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="700">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71bb" id="Nexus Crystal x 8">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13b</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>It is made of pure Nexus power!</Description>
+      <Quantity>8</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="800">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71bc" id="Nexus Crystal x 9">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13b</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>It is made of pure Nexus power!</Description>
+      <Quantity>9</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="900">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x71bd" id="Nexus Crystal x 10">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x13b</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>It is made of pure Nexus power!</Description>
+      <Quantity>10</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate amount="1000">GrantSupporterPoints</Activate>
+      <BagType>7</BagType>
+      <Treasure/>
+      <Track/>
+      <Consumable/>
+   </Object>
 </Objects>

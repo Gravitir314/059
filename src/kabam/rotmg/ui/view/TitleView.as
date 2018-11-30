@@ -28,8 +28,11 @@ package kabam.rotmg.ui.view
 	public class TitleView extends Sprite
 		{
 
-			internal static var TitleScreenGraphic:Class = TitleView_TitleScreenGraphic;
-			internal static var TitleScreenBackground:Class = TitleView_TitleScreenBackground;
+			[Embed(source="TitleView_TitleScreenGraphic.png")]
+			internal static var TitleScreenGraphic:Class;
+			[Embed(source="TitleView_TitleScreenBackground.png")]
+			internal static var TitleScreenBackground:Class;
+
 			public static const MIDDLE_OF_BOTTOM_BAND:Number = 589.45;
 			public static var queueEmailConfirmation:Boolean = false;
 			public static var queuePasswordPrompt:Boolean = false;
@@ -58,7 +61,7 @@ package kabam.rotmg.ui.view
 				this.menuOptionsBar = this.makeMenuOptionsBar();
 				this.optionalButtonsAdded = new Signal();
 				super();
-				//addChild(new TitleScreenBackground()); TODO need this?
+				addChild(new TitleScreenBackground());
 				addChild(new DarkLayer());
 				addChild(new TitleScreenGraphic());
 				addChild(this.menuOptionsBar);

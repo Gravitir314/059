@@ -14,6 +14,7 @@ package kabam.rotmg.account.web.view
 	import flash.events.MouseEvent;
 
 	import kabam.rotmg.account.web.model.AccountData;
+	import kabam.rotmg.language.model.StringMap;
 	import kabam.rotmg.text.model.TextKey;
 
 	import org.osflash.signals.Signal;
@@ -28,10 +29,9 @@ package kabam.rotmg.account.web.view
 			public var register:Signal;
 			private var email:TextInputField;
 			private var password:TextInputField;
-			private var secret:TextInputField;
 			private var forgotText:DeprecatedClickableText;
 			private var registerText:DeprecatedClickableText;
-			private var rememberMeCheckbox:CheckBoxField;
+			private var isSteamUser:Boolean;
 
 			public function WebLoginDialog()
 			{
@@ -45,14 +45,11 @@ package kabam.rotmg.account.web.view
 
 			private function makeUI():void
 			{
-				this.email = new TextInputField(TextKey.WEB_LOGIN_DIALOG_EMAIL, false);
+				var _local_1:Boolean = Parameters.ssmode;
+				this.email = new TextInputField(_local_1 ? TextKey.WEB_LOGIN_DIALOG_EMAIL : "Email or GUID", false);
 				addTextInputField(this.email);
-				this.password = new TextInputField(TextKey.WEB_LOGIN_DIALOG_PASSWORD, true);
+				this.password = new TextInputField(_local_1 ? TextKey.WEB_LOGIN_DIALOG_PASSWORD : "Password or Secret", true);
 				addTextInputField(this.password);
-				this.secret = new TextInputField("Secret (Kong/Steam)", true);
-				addTextInputField(this.secret);
-				this.rememberMeCheckbox = new CheckBoxField("Remember me", false);
-				this.rememberMeCheckbox.text_.y = 4;
 				this.forgotText = new DeprecatedClickableText(12, false, TextKey.WEB_LOGIN_DIALOG_FORGOT);
 				addNavigationText(this.forgotText);
 				this.registerText = new DeprecatedClickableText(12, false, TextKey.WEB_LOGIN_DIALOG_REGISTER);
@@ -82,28 +79,33 @@ package kabam.rotmg.account.web.view
 				this.onSignInSub();
 			}
 
+			private function checkPlatform():void
+			{
+				this.isSteamUser = (this.email.text().indexOf("@") == -1)
+			}
+
 			private function onSignInSub():void
 			{
 				var _local_1:AccountData;
 				if (this.isEmailValid() && this.isPasswordValid())
 				{
+					this.checkPlatform();
 					_local_1 = new AccountData();
 					_local_1.username = this.email.text();
-					_local_1.password = this.password.text();
-					_local_1.secret = this.secret.text();
+					if (this.isSteamUser)
+					{
+						_local_1.secret = this.password.text();
+					}
+					else
+					{
+						_local_1.password = this.password.text();
+					}
 					this.signIn.dispatch(_local_1);
 					if (Parameters.data_.logins.indexOf(this.email.text()) == -1)
 					{
 						Parameters.data_.usernames.push("");
 						Parameters.data_.logins.push(this.email.text());
-						if (this.secret.text() != "")
-						{
-							Parameters.data_.passwords.push(this.secret.text());
-						}
-						else
-						{
-							Parameters.data_.passwords.push(this.password.text());
-						}
+						Parameters.data_.passwords.push(this.password.text());
 						Parameters.save();
 					}
 				}
@@ -126,12 +128,7 @@ package kabam.rotmg.account.web.view
 			private function isPasswordValid():Boolean
 			{
 				var _local_1:Boolean = this.password.text() != "";
-				var _local_2:Boolean = this.secret.text() != "";
 				if (_local_1)
-				{
-					return (true);
-				}
-				if (_local_2)
 				{
 					return (true);
 				}

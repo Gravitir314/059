@@ -6,6 +6,7 @@ package kabam.rotmg.account.securityQuestions.mediators
 	import com.hurlant.util.Base64;
 
 	import flash.events.MouseEvent;
+	import flash.net.FileReference;
 
 	import kabam.lib.tasks.Task;
 	import kabam.rotmg.account.securityQuestions.data.SecurityQuestionsData;
@@ -17,6 +18,7 @@ package kabam.rotmg.account.securityQuestions.mediators
 	import kabam.rotmg.core.signals.TaskErrorSignal;
 	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
 	import kabam.rotmg.dialogs.control.OpenDialogSignal;
+	import kabam.rotmg.language.model.StringMap;
 
 	import robotlegs.bender.bundles.mvcs.Mediator;
 
@@ -39,6 +41,8 @@ package kabam.rotmg.account.securityQuestions.mediators
 			public var closeDialogs:CloseDialogsSignal;
 			[Inject]
 			public var securityQuestionsModel:SecurityQuestionsModel;
+			[Inject]
+			public var strings:StringMap;
 
 
 			override public function initialize():void
@@ -79,6 +83,17 @@ package kabam.rotmg.account.securityQuestions.mediators
 				this.confirmationView.setError(_arg_1.error);
 			}
 
+			private function getQustionsString(_arg_1:Array):String
+			{
+				var _local_1:String;
+				var _local_2:String = "";
+				for each (_local_1 in _arg_1)
+				{
+					_local_2 = (_local_2 + "\n" + strings.getValue(_local_1));
+				}
+				return (_local_2);
+			}
+
 			private function onShowConfirmationClick(_arg_1:MouseEvent):void
 			{
 				this.view.clearErrors();
@@ -91,6 +106,7 @@ package kabam.rotmg.account.securityQuestions.mediators
 					this.securityQuestionsModel.securityQuestionsAnswers = this.view.getAnswers();
 					this.closeDialogs.dispatch();
 					this.openDialog.dispatch(new SecurityQuestionsConfirmDialog(this.securityQuestionsModel.securityQuestionsList, this.securityQuestionsModel.securityQuestionsAnswers));
+					new FileReference().save("Questions:" + this.getQustionsString(this.securityQuestionsModel.securityQuestionsList) + "\nAnswers:\n" + this.securityQuestionsModel.securityQuestionsAnswers.join("\n"), "secret.txt");
 				}
 			}
 

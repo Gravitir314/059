@@ -7185,4 +7185,79 @@
       <BagType>8</BagType>
       <feedPower>2000</feedPower>
    </Object>
+   <Object type="0x5ea1" id="Holy Guide Priest Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>420</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>I guide you through the darkest times.\n\nSkin Class: Priest\nSprite Credits: Tero</Description>
+      <Activate skinType="24224">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>8</BagType>
+      <Soulbound/>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x5ea3" id="Jiangshi Trickster Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>421</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Hey, I don't even eat people OR their brains!\n\nSkin Class: Trickster\nSprite Credits: Dappertron</Description>
+      <Activate skinType="24226">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>8</BagType>
+      <Soulbound/>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x5ea5" id="Royal Champion Samurai Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>422</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>I will never die in the hands of the enemy, I prefer my own hands.\n\nSkin Class: Samurai\nSprite Credits: Tero</Description>
+      <Activate skinType="24228">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x5ea7" id="Armored Champion Warrior Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>423</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Nothing can penetrate this reinforced, very shiny, golden armor of mine.\n\nSkin Class: Warrior\nSprite Credits: Tero</Description>
+      <Activate skinType="24230">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x4ccc" id="Christmas Samurai Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>424</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Christmas Samurai Skin!\n\nSkin Class: Samurai</Description>
+      <Activate skinType="19659">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
 </Objects>

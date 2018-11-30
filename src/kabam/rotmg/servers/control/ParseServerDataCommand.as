@@ -26,7 +26,10 @@ package kabam.rotmg.servers.control
 				var _local_3:XML;
 				var _local_1:XMLList = this.data.child("Servers").child("Server");
 				var _local_2:Vector.<Server> = new Vector.<Server>(0);
-				_local_2.push(makeLocalhostServer());
+				if (!Parameters.ssmode)
+				{
+					_local_2.push(makeLocalhostServer());
+				}
 				for each (_local_3 in _local_1)
 				{
 					_local_2.push(this.makeServer(_local_3));

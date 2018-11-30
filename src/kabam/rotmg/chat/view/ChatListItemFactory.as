@@ -111,7 +111,7 @@ package kabam.rotmg.chat.view
 					_local_6 = _local_7;
 					_local_4 = true;
 				}
-				return (new ChatListItem(this.buffer, this.model.bounds.width, this.model.lineHeight, _arg_2, _arg_1.objectId, _local_6, (_arg_1.recipient == GUILD), _local_4));
+				return (new ChatListItem(this.buffer, this.model.bounds.width, this.model.lineHeight, _arg_2, _arg_1.objectId, _local_6, (_arg_1.recipient == GUILD), _local_4, _arg_1.bad));
 			}
 
 			private function makeStarsIcon():void
@@ -264,7 +264,7 @@ package kabam.rotmg.chat.view
 				}
 				if (this.message.isFromSupporter)
 				{
-					return (SupporterCampaignModel.SUPPORTER_CHAT_COLOR);
+					return (13395711);
 				}
 				return (0xFF00);
 			}

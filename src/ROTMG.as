@@ -5,6 +5,7 @@ package
 	import com.company.assembleegameclient.parameters.Parameters;
 	import com.company.assembleegameclient.util.AssetLoader;
 	import com.company.assembleegameclient.util.StageProxy;
+	import com.junkbyte.console.Cc;
 
 	import flash.display.LoaderInfo;
 	import flash.display.Sprite;
@@ -120,8 +121,9 @@ package
 
 			private function setup():void
 			{
+				Cc.startOnStage(this, "");
 				STAGE = stage;
-				stage.scaleMode = StageScaleMode.EXACT_FIT;
+				stage.scaleMode = StageScaleMode.NO_SCALE;
 				this.hackParameters();
 				GameServerConnectionConcrete.parsePackets();
 				this.createContext();

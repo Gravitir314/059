@@ -37,8 +37,8 @@ package kabam.rotmg.characters.reskin.control
 			{
 				var _local_1:ReskinCharacterView = new ReskinCharacterView();
 				_local_1.setList(this.makeList());
-				_local_1.x = ((800 - _local_1.width) * 0.5);
-				_local_1.y = ((600 - _local_1.viewHeight) * 0.5);
+				_local_1.x = ((800 - _local_1.width) / 2);
+				_local_1.y = ((600 - _local_1.viewHeight) / 2);
 				return (_local_1);
 			}
 

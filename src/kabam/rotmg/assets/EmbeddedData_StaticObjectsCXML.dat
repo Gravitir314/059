@@ -2068,8 +2068,8 @@
    <Object type="0x01e5" id="Guild Chronicle">
       <Class>GuildChronicle</Class>
       <Texture>
-         <File>parasiteDenObjects8x8</File>
-         <Index>0x3b</Index>
+         <File>lofiEnvironment2</File>
+         <Index>0x5c</Index>
       </Texture>
       <OccupySquare/>
       <ShadowSize>0</ShadowSize>

@@ -2,6 +2,7 @@
 
 package kabam.rotmg.account.web.view
 	{
+	import com.company.assembleegameclient.parameters.Parameters;
 	import com.company.assembleegameclient.screens.TitleMenuOption;
 
 	import flash.display.DisplayObject;
@@ -160,15 +161,28 @@ package kabam.rotmg.account.web.view
 			private function showUIForRegisteredAccount():void
 			{
 				this.accountText.setStringBuilder(new LineBuilder().setParams(TextKey.LOGGED_IN_TEXT, {"userName": this.userName}));
-				var _local_1:BuildData = StaticInjectorContext.getInjector().getInstance(BuildData);
 				this.loginButton.setTextKey(TextKey.LOG_OUT);
-				this.addAndAlignHorizontally(this.moreButton, this.makeDividerText(), this.accountText, this.makeDividerText(), this.loginButton);
+				if (Parameters.ssmode)
+				{
+					this.addAndAlignHorizontally(this.accountText, this.makeDividerText(), this.loginButton);
+				}
+				else
+				{
+					this.addAndAlignHorizontally(this.moreButton, this.makeDividerText(), this.accountText, this.makeDividerText(), this.loginButton);
+				}
 			}
 
 			private function showUIForGuestAccount():void
 			{
 				this.loginButton.setTextKey(TextKey.LOG_IN);
-				this.addAndAlignHorizontally(this.moreButton, this.makeDividerText(), this.registerButton, this.makeDividerText(), this.loginButton);
+				if (Parameters.ssmode)
+				{
+					this.addAndAlignHorizontally(this.registerButton, this.makeDividerText(), this.loginButton);
+				}
+				else
+				{
+					this.addAndAlignHorizontally(this.moreButton, this.makeDividerText(), this.registerButton, this.makeDividerText(), this.loginButton);
+				}
 			}
 
 			private function addAndAlignHorizontally(..._args):void

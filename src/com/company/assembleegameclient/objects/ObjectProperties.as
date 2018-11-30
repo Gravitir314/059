@@ -157,6 +157,7 @@ package com.company.assembleegameclient.objects
 					_local_4 = int(_local_2.@id);
 					this.projectiles_[_local_4] = new ProjectileProperties(_local_2);
 				}
+				this.rateOfFire_ = _arg_1.hasOwnProperty("RateOfFire") ? _arg_1.RateOfFire : 0;
 				this.angleCorrection_ = ((_arg_1.hasOwnProperty("AngleCorrection")) ? ((Number(_arg_1.AngleCorrection) * Math.PI) / 4) : 0);
 				this.rotation_ = ((_arg_1.hasOwnProperty("Rotation")) ? _arg_1.Rotation : 0);
 				if (_arg_1.hasOwnProperty("BloodProb"))

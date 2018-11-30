@@ -33,7 +33,7 @@ package kabam.rotmg.chat.view
 			public var isTrade:Boolean = false;
 			public var bad:Boolean = false;
 
-			public function ChatListItem(_arg_1:Vector.<DisplayObject>, _arg_2:int, _arg_3:int, _arg_4:Boolean, _arg_5:int, _arg_6:String, _arg_7:Boolean, _arg_8:Boolean, _arg_9:Boolean = false)
+			public function ChatListItem(_arg_1:Vector.<DisplayObject>, _arg_2:int, _arg_3:int, _arg_4:Boolean, _arg_5:int, _arg_6:String, _arg_7:Boolean, _arg_8:Boolean, _arg_9:Boolean)
 			{
 				mouseEnabled = true;
 				this.itemWidth = _arg_2;

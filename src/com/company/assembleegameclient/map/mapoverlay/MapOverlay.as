@@ -3,9 +3,11 @@
 package com.company.assembleegameclient.map.mapoverlay
 	{
 	import com.company.assembleegameclient.map.Camera;
+	import com.company.assembleegameclient.map.Map;
 	import com.company.assembleegameclient.parameters.Parameters;
 
 	import flash.display.Sprite;
+	import flash.events.MouseEvent;
 
 	import kabam.rotmg.game.view.components.QueuedStatusText;
 	import kabam.rotmg.game.view.components.QueuedStatusTextList;
@@ -20,6 +22,15 @@ package com.company.assembleegameclient.map.mapoverlay
 			{
 				mouseEnabled = true;
 				mouseChildren = true;
+				addEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
+			}
+
+			private function onMouseDown(_arg_1:MouseEvent):void
+			{
+				if (Parameters.isGpuRender())
+				{
+					(parent as Map).mapHitArea.dispatchEvent(_arg_1);
+				}
 			}
 
 			public function addSpeechBalloon(_arg_1:SpeechBalloon):void

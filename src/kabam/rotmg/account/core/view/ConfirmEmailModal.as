@@ -157,7 +157,7 @@ package kabam.rotmg.account.core.view
 			}
 
 			private function positionAndStuff():void
-			{// TODO check
+			{
 				this.x = (400 - (this.w_ / 2));
 				this.y = (300 - (this.h_ / 2));
 			}

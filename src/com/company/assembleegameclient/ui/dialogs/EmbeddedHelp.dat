@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<Articles>
+   <Article>
+      <Command>Autoloot</Command>
+      <Explanation>/lootinlist&#xA;/lootinadd - adds item to looting list&#xA;/lootinrem - removes item from lootlist&#xA;/lootexdefault - resets exceptionlist to default&#xA;/lootexlist - prints exception list&#xA;/lootexadd - adds item to exception list&#xA;/lootexrem - removes item from exceptionlist</Explanation>
+   </Article>
+
+   <Article>
+      <Command>Auto Stuff</Command>
+      <Explanation>/an (Number) - Set at what % autonexus should nexus.&#xA;/ah (Number) - Set at what % Autoheal triggers.&#xA;/automax - Drinks pots automatically after trade success.&#xA;/aathreshold (Number) - Set Autoability Threshold for Skull/Traps etc.&#xA;/sbthreshold (Number) - Set Minimum health autospellbomb will aim on.&#xA;/aatargets (Number) - Set Skull/Trap/Poison Targets.</Explanation>
+   </Article>
+
+   <Article>
+      <Command>Mob Stuff</Command>
+      <Explanation>/iglist - Print Autoaim/Ability Ignore list.&#xA;/igclear - Clears Ignore list.&#xA;/exlist - Prints Exception list.&#xA;/exclear - Clears Exception List.&#xA;/igdefault - Resets Ignore list to Defaults.&#xA;/exdefault - Sets Exception list to Defaults.&#xA;/aig (Mobid) - Add Mob to Ignore list.&#xA;/rig (Mobid) - Remove Mob from Ignore list.&#xA;/aex (Mobid) - Add Mob to Exception list.&#xA;/rex (Mobid) - Remove mob from Exception list.&#xA;/apr (mobid) - Add mob to AUTOAIM Priority list.</Explanation>
+   </Article>
+
+   <Article>
+      <Command>Guild Commands</Command>
+      <Explanation>/gmake (Name) - Creates guild.&#xA;/gkick (Name) - Kicks player from guild.&#xA;/grank (Name) (Value) - Sets player's Guildrank</Explanation>
+   </Article>
+
+   <Article>
+      <Command>Fame/Famebot</Command>
+      <Explanation>/offset - Set Train Offset from Cluster.&#xA;/tdlist - Set Teleport Distance.&#xA;/follow (name) - Follows the selected Player.&#xA;/mystic - Reveals Mystics in train.&#xA;/suicide - Spawns all shots on you and disables Autonexus</Explanation>
+   </Article>
+
+   <Article>
+      <Command>Character Commands</Command>
+      <Explanation>/l2m - Left To Max, Prints how many pots you need in chat.&#xA;/loc - Prints your current location in X and Y.&#xA;/skin (Skin name) - Set character skin.&#xA;/dye (Dye name) - Set Dye color for char.</Explanation>
+   </Article>
+
+   <Article>
+      <Command>Spam Shit</Command>
+      <Explanation>/sfadd (String) - Adds the word to Spamlist.&#xA;/sflist - Prints spamfilter list&#xA;/sfdefault - Resets spamfilter to default values.</Explanation>
+   </Article>
+
+   <Article>
+      <Command>Connect</Command>
+      <Explanation>/conn (server) (char) (realm) - Connect to a server.</Explanation>
+   </Article>
+
+
+
+   <Article>
+      <Command>Custom Msgs</Command>
+      <Explanation>/setmsg 1-3 - Set a Custom Message. Set Hotkeys in Extra|Recon tab.</Explanation>
+   </Article>
+
+
+
+
+</Articles>

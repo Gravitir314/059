@@ -93,7 +93,7 @@ package com.company.assembleegameclient.engine3d
 			public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:uint, _arg_4:BitmapData):void
 			{
 				var _local_5:ObjectFace3D;
-				if (Parameters.lowCPUMode)
+				if (Parameters.lowCPUMode && !Parameters.ssmode)
 				{
 					return;
 				}

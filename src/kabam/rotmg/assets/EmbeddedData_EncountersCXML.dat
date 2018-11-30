@@ -1206,6 +1206,7 @@
       <Hero/>
       <Quest/>
       <God/>
+      <Encounter/>
       <StasisImmune/>
       <Level>20</Level>
       <Projectile>
@@ -1276,7 +1277,6 @@
       <Hero/>
       <Quest/>
       <God/>
-      <Encounter/>
       <StasisImmune/>
       <Level>20</Level>
       <Projectile>
@@ -1343,7 +1343,6 @@
       <Hero/>
       <Quest/>
       <God/>
-      <Encounter/>
       <StasisImmune/>
       <Level>20</Level>
       <Cube/>
@@ -1452,6 +1451,7 @@
       <Hero/>
       <Quest/>
       <God/>
+      <Encounter/>
       <StasisImmune/>
       <Level>20</Level>
       <Projectile id="0">
@@ -1955,9 +1955,8 @@
       <God/>
       <Hero/>
       <Quest/>
-      <Encounter/>
       <Level>20</Level>
-      <PerRealmMax>10</PerRealmMax>
+      <PerRealmMax>1</PerRealmMax>
       <Invincible/>
    </Object>
    <Object type="0x0e5c" id="Bonegrind 2">

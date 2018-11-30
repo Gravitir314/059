@@ -12214,4 +12214,45 @@
       <BagType>8</BagType>
       <feedPower>2000</feedPower>
    </Object>
+   <Object id="Autumn Ent" type="0x7f02">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Woodland</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Autumn Ent Pet Skin</DefaultSkin>
+      <Size>80</Size>
+      <NoHatchOrFuse/>
+   </Object>
+   <Object type="0x7f03" id="Autumn Ent Pet Skin">
+      <PetSkin/>
+      <DisplayId>Autumn Ent</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>91</Index>
+      </AnimatedTexture>
+      <Family>Woodland</Family>
+      <Rarity>Divine</Rarity>
+   </Object>
+   <Object type="0x7f04" id="Autumn Ent Pet Stone">
+      <DisplayId>Autumn Ent Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>91</Index>
+      </AnimatedTexture>
+      <ScaleValue>10</ScaleValue>
+      <SlotType>10</SlotType>
+      <Description>An ancient being that quite enjoys the fall, hence retains an orange foliage year round in spirit of it all...\n\nSprite Credits: Trensient\n\nUnlocks Autumn Ent Skin of the Woodland family. The skin will be added to your Pet Wardrobe in the Pet Yard and can be used to change the appearance of your pet!</Description>
+      <Activate skinType="32515">UnlockPetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
 </Objects>

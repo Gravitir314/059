@@ -10,6 +10,8 @@ package com.company.assembleegameclient.map
 	import com.company.assembleegameclient.objects.BasicObject;
 	import com.company.assembleegameclient.objects.GameObject;
 	import com.company.assembleegameclient.objects.Party;
+	import com.company.assembleegameclient.objects.Pet;
+	import com.company.assembleegameclient.objects.Player;
 	import com.company.assembleegameclient.objects.particles.ParticleEffect;
 	import com.company.assembleegameclient.parameters.Parameters;
 	import com.company.assembleegameclient.util.ConditionEffect;
@@ -130,7 +132,7 @@ package com.company.assembleegameclient.map
 
 			private function forceSoftwareRenderCheck(_arg_1:String):void
 			{
-				forceSoftwareRender = ((!(this.forceSoftwareMap[_arg_1] == null)) || ((!(ROTMG.STAGE == null)) && (ROTMG.STAGE.stage3Ds[0].context3D == null)));
+				forceSoftwareRender = (this.forceSoftwareMap[_arg_1] != null || ROTMG.STAGE != null && ROTMG.STAGE.stage3Ds[0].context3D == null);
 			}
 
 			override public function initialize():void
@@ -614,12 +616,15 @@ package com.company.assembleegameclient.map
 						_local_14.draw(this.graphicsData_, _arg_1, _arg_2);
 					}
 				}
-				this.visible_.sortOn(VISIBLE_SORT_FIELDS, VISIBLE_SORT_PARAMS);
-				if (Parameters.data_.drawShadows)
+				if (Parameters.ssmode || !Parameters.lowCPUMode)
+				{
+					this.visible_.sortOn(VISIBLE_SORT_FIELDS, VISIBLE_SORT_PARAMS);
+				}
+				if (Parameters.data_.drawShadows && !Parameters.data_.lowCPUMode)
 				{
 					for each (_local_14 in this.visible_)
 					{
-						if (_local_14.hasShadow_)
+						if (_local_14.hasShadow_ && (!Parameters.data_.hideLockList && _local_14 is Player || !Parameters.data_.hidePets && _local_14 is Pet || Parameters.ssmode))
 						{
 							_local_14.drawShadow(this.graphicsData_, _arg_1, _arg_2);
 						}
@@ -677,7 +682,7 @@ package com.company.assembleegameclient.map
 						gradientOverlay_.visible = false;
 					}
 				}
-				if (((Parameters.isGpuRender()) && (Renderer.inGame)))
+				if (Parameters.isGpuRender() && Renderer.inGame)
 				{
 					_local_21 = this.getFilterIndex();
 					_local_22 = StaticInjectorContext.getInjector().getInstance(Render3D);

@@ -22,7 +22,7 @@ package kabam.rotmg.account.securityQuestions.view
 			public function SecurityQuestionsDialog(_arg_1:Array, _arg_2:Array)
 			{
 				this.questionsList = _arg_1;
-				super(TextKey.SECURITY_QUESTIONS_DIALOG_TITLE, "", TextKey.SECURITY_QUESTIONS_DIALOG_SAVE);
+				super(TextKey.SECURITY_QUESTIONS_DIALOG_TITLE, "Ignore", TextKey.SECURITY_QUESTIONS_DIALOG_SAVE);
 				this.createAssets();
 				if (_arg_1.length == _arg_2.length)
 				{

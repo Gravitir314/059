@@ -59,6 +59,14 @@ package kabam.rotmg.ui.view
 				this.createButton(_arg_2);
 			}
 
+			public function dispose():void
+			{
+				while (this.numChildren > 0)
+				{
+					this.removeChildAt(0);
+				}
+			}
+
 			private function createButton(_arg_1:String):void
 			{
 				if (_arg_1 == NEXUS_BUTTON)

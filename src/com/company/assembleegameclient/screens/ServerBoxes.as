@@ -21,20 +21,23 @@ package com.company.assembleegameclient.screens
 				var _local_5:Server;
 				_local_4 = new ServerBox(null);
 				_local_4.setSelected(true);
-				_local_4.x = 0;
+				_local_4.x = Parameters.ssmode ? (ServerBox.WIDTH / 2) + 2 : 0;
 				_local_4.addEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
 				addChild(_local_4);
 				this.boxes_.push(_local_4);
-				var _local_3:Server = makeLocalhostServer();
-				_local_4 = new ServerBox(_local_3);
-				if (_local_3.name == Parameters.data_.preferredServer)
+				if (!Parameters.ssmode)
 				{
-					this.setSelected(_local_4);
+					var _local_3:Server = makeLocalhostServer();
+					_local_4 = new ServerBox(_local_3);
+					if (_local_3.name == Parameters.data_.preferredServer)
+					{
+						this.setSelected(_local_4);
+					}
+					_local_4.x = (ServerBox.WIDTH + 4);
+					_local_4.addEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
+					addChild(_local_4);
+					this.boxes_.push(_local_4);
 				}
-				_local_4.x = (ServerBox.WIDTH + 4);
-				_local_4.addEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
-				addChild(_local_4);
-				this.boxes_.push(_local_4);
 				_local_2 = 2;
 				for each (_local_5 in _arg_1)
 				{

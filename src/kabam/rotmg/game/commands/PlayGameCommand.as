@@ -47,7 +47,7 @@ package kabam.rotmg.game.commands
 			{
 				if (!this.data.isNewGame)
 				{
-					this.socketServerModel.connectDelayMS = Parameters.data_.reconDelay;
+					this.socketServerModel.connectDelayMS = (Parameters.ssmode ? 1500 : Parameters.data_.reconDelay);
 				}
 				this.recordCharacterUseInSharedObject();
 				this.makeGameView();

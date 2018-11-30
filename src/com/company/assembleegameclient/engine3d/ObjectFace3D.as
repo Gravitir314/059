@@ -90,14 +90,14 @@ package com.company.assembleegameclient.engine3d
 				{
 					return;
 				}
-				if (((!(Parameters.data_.GPURender)) && ((!(this.useTexture_)) || (_arg_3 == null))))
+				if (!Parameters.data_.GPURender && (!this.useTexture_ || _arg_3 == null))
 				{
 					this.solidFill_.color = MoreColorUtil.transformColor(new ColorTransform(this.shade_, this.shade_, this.shade_), _arg_2);
 					_arg_1.push(this.solidFill_);
 				}
 				else
 				{
-					if (((_arg_3 == null) && (Parameters.data_.GPURender)))
+					if (_arg_3 == null && Parameters.data_.GPURender)
 					{
 						_arg_3 = blackBitmap;
 					}

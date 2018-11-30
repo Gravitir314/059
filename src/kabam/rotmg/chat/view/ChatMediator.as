@@ -201,7 +201,7 @@ package kabam.rotmg.chat.view
 							{
 								if (_arg_1 == this.shortcuts.getTellShortcut())
 								{
-									this.triggerOrPromptRegistration(((((Parameters.ssmode) ? "/tell " : "/t ") + this.tellModel.getNext()) + " "));
+									this.triggerOrPromptRegistration(Parameters.ssmode ? "/tell " : "/t " + this.tellModel.getNext() + " ");
 								}
 							}
 						}

@@ -27,8 +27,8 @@ package com.company.assembleegameclient.objects.particles
 				}
 				var _local_3:Number = (Math.random() * this.noise);
 				_local_4 = (Math.random() * this.noise);
-				x_ = (x_ + (dx_ * _local_3 * _arg_2));
-				y_ = (y_ + (dy_ * _local_4 * _arg_2));
+				x_ = (x_ + (((dx_ * _local_3) * _arg_2) / 1000));
+				y_ = (y_ + (((dy_ * _local_4) * _arg_2) / 1000));
 				setSize(((timeLeft_ / lifetime_) * initialSize_));
 				return (true);
 			}

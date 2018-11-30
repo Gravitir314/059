@@ -16,6 +16,7 @@ package com.company.assembleegameclient.objects
 	import com.company.assembleegameclient.util.FameUtil;
 	import com.company.assembleegameclient.util.FreeList;
 	import com.company.assembleegameclient.util.MaskedImage;
+	import com.company.assembleegameclient.util.PlayerUtil;
 	import com.company.assembleegameclient.util.TextureRedrawer;
 	import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
 	import com.company.util.CachingColorTransformer;
@@ -89,6 +90,7 @@ package com.company.assembleegameclient.objects
 			public var isShooting:Boolean;
 			public var creditsWereChanged:Signal = new Signal();
 			public var fameWasChanged:Signal = new Signal();
+			public var supporterFlagWasChanged:Signal = new Signal();
 			private var exitGame:ExitGameSignal;
 			private var closeAllPopups:CloseAllPopupsSignal;
 			private var famePortrait_:BitmapData = null;
@@ -135,6 +137,7 @@ package com.company.assembleegameclient.objects
 			public var maxHPMax_:int = 0;
 			public var maxMPMax_:int = 0;
 			public var hasBackpack_:Boolean = false;
+			public var supporterFlag:int = 0;
 			public var starred_:Boolean = false;
 			public var ignored_:Boolean = false;
 			public var distSqFromThisPlayer_:Number = 0;
@@ -376,6 +379,17 @@ package com.company.assembleegameclient.objects
 				this.fameWasChanged.dispatch();
 			}
 
+			public function setSupporterFlag(_arg_1:int):void
+			{
+				this.supporterFlag = _arg_1;
+				this.supporterFlagWasChanged.dispatch();
+			}
+
+			public function hasSupporterFeature(_arg_1:int):Boolean
+			{
+				return ((this.supporterFlag & _arg_1) == _arg_1);
+			}
+
 			public function setTokens(_arg_1:int):void
 			{
 				this.tokens_ = _arg_1;
@@ -429,7 +443,7 @@ package com.company.assembleegameclient.objects
 
 			private function makeErrorMessage(_arg_1:String, _arg_2:Object = null):ChatMessage
 			{
-				return (ChatMessage.make(Parameters.ERROR_CHAT_NAME, _arg_1, -1, -1, "", false, _arg_2));
+				return (ChatMessage.make(Parameters.ERROR_CHAT_NAME, _arg_1, false, -1, -1, "", false, _arg_2));
 			}
 
 			public function levelUpEffect(_arg_1:String, _arg_2:Boolean = true):void
@@ -937,9 +951,9 @@ package com.company.assembleegameclient.objects
 
 			public function shootAutoAimWeaponAngle(_arg_1:int, _arg_2:int):Boolean
 			{
-				var _local_8:* = null;
+				var _local_8:Vector3D;
 				var _local_6:Number;
-				if ((((this.isStunned_()) || (this.isPaused_())) || (this.isPetrified_())))
+				if (this.isStunned || this.isPaused || this.isPetrified)
 				{
 					return (false);
 				}
@@ -950,17 +964,18 @@ package com.company.assembleegameclient.objects
 					return (false);
 				}
 				var _local_5:Vector3D = new Vector3D(this.x_, this.y_);
-				var _local_4:Point = this.sToW(this.mousePos_.x, this.mousePos_.y);
-				var _local_3:Vector3D = new Vector3D(_local_4.x, _local_4.y);
-				var _local_7:ProjectileProperties = _local_9.projectiles_[0];
+				var point:Point = this.sToW(this.mousePos_.x, this.mousePos_.y);
+				var _local_3:Vector3D = new Vector3D(point.x, point.y);
+				var projProps:ProjectileProperties = _local_9.projectiles_[0];
+				var speed:Number = (projProps.speed_ / 10000);
 				if (this.isUnstable)
 				{
 					this.attackStart_ = _arg_2;
-					this.attackAngle_ = (Math.random() * 6.28318530717959);
+					this.attackAngle_ = (Math.random() * (Math.PI * 2));
 					this.doShoot(_arg_2, _arg_1, ObjectLibrary.xmlLibrary_[_arg_1], this.attackAngle_, true);
 					return (true);
 				}
-				_local_8 = this.calcAimAngle(_local_7.speed_, (_local_7.maxProjTravel_ + Parameters.data_.aaDistance), _local_5, _local_3);
+				_local_8 = this.calcAimAngle(speed, (projProps.lifetime_ * speed), _local_5, _local_3);
 				if (_local_8)
 				{
 					_local_6 = Math.atan2((_local_8.y - this.y_), (_local_8.x - this.x_));
@@ -1508,7 +1523,7 @@ package com.company.assembleegameclient.objects
 
 			public function getNecroTarget():Point
 			{
-				var _local_2:* = null;
+				var _local_2:GameObject;
 				var _local_4:int = -1;
 				var _local_6:int;
 				var _local_7:int = Parameters.data_.skullHPThreshold;
@@ -1516,21 +1531,24 @@ package com.company.assembleegameclient.objects
 				var _local_5:Number = Number(ObjectLibrary.xmlLibrary_[this.equipment_[1]].Activate.@radius);
 				for each (var _local_3:GameObject in map_.vulnEnemyDict_)
 				{
-					if ((((_local_3.maxHP_ >= _local_7) && (_local_3 is Character)) && (PointUtil.distanceSquaredXY(_local_3.x_, _local_3.y_, this.x_, this.y_) <= 225)))
+					if (!_local_3.isInvulnerable)
 					{
-						_local_4 = this.getNumNearbyEnemies(_local_3, _local_5);
-						if (((_local_4 > _local_1) && (_local_4 > _local_6)))
+						if (_local_3.maxHP_ >= _local_7 && _local_3 is Character && PointUtil.distanceSquaredXY(_local_3.x_, _local_3.y_, this.x_, this.y_) <= 225)
 						{
-							_local_2 = _local_3;
-							_local_6 = _local_4;
+							_local_4 = this.getNumNearbyEnemies(_local_3, _local_5);
+							if (_local_4 > _local_1 && _local_4 > _local_6)
+							{
+								_local_2 = _local_3;
+								_local_6 = _local_4;
+							}
 						}
 					}
 				}
-				if (((_local_6 < _local_1) || (_local_2 == null)))
+				if (_local_6 < _local_1 || _local_2 == null)
 				{
 					return (null);
 				}
-				return (new Point(_local_2.x_, _local_2.y_));
+				return new Point(_local_2.x_, _local_2.y_);
 			}
 
 			public function getNumNearbyEnemies(_arg_1:GameObject, _arg_2:int):int
@@ -2020,7 +2038,7 @@ package com.company.assembleegameclient.objects
 							{
 								Parameters.data_.dodComplete++;
 								Parameters.save();
-								addTextLine.dispatch(ChatMessage.make("DoD Complete", "Completed " + Parameters.data_.dodComplete + " quests."));
+								addTextLine.dispatch(ChatMessage.make("DoD Complete", "Completed " + Parameters.data_.dodComplete + " quests.", true));
 								dodCounter = 0;
 								this.map_.gs_.gsc_.playerText("/tutorial");
 								return (true);
@@ -2182,11 +2200,6 @@ package com.company.assembleegameclient.objects
 					}
 					// Switch Vaults END //
 					// Switch Inventories //
-					if (Parameters.switchItems)
-					{
-						this.findSlots();
-						Parameters.switchItems = false;
-					}
 					counter = 0;
 					while (counter < 8)
 					{
@@ -2447,15 +2460,7 @@ package com.company.assembleegameclient.objects
 
 			private function getNameColor():uint
 			{
-				if (this.isFellowGuild_)
-				{
-					return (Parameters.FELLOW_GUILD_COLOR);
-				}
-				if (this.nameChosen_)
-				{
-					return (Parameters.NAME_CHOSEN_COLOR);
-				}
-				return (0xFFFFFF);
+				return (PlayerUtil.getPlayerNameColor(this));
 			}
 
 			protected function drawBreathBar(_arg_1:Vector.<IGraphicsData>, _arg_2:int):void
@@ -2707,13 +2712,33 @@ package com.company.assembleegameclient.objects
 							}
 							else
 							{
-								_local_9 = GlowRedrawer.outlineGlow(_local_8, ((this.legendaryRank_ == -1) ? 0 : 0xFF0000));
+								if (!Parameters.ssmode && Parameters.data_.glowColor != 0)
+								{
+									_local_9 = GlowRedrawer.outlineGlow(_local_8, Parameters.data_.glowColor)
+								}
+								else
+								{
+									if (this.hasSupporterFeature(1))
+									{
+										_local_9 = GlowRedrawer.outlineGlow(_local_8, 13395711, 1.4, false, 0, true);
+									}
+									else
+									{
+										_local_9 = GlowRedrawer.outlineGlow(_local_8, ((this.legendaryRank_ == -1) ? 0 : 0xFF0000));
+									}
+								}
 							}
 						}
 					}
 					else
 					{
-						_local_9 = GlowRedrawer.outlineGlow(_local_8, ((this.legendaryRank_ == -1) ? 0 : 0xFF0000));
+						if (this.hasSupporterFeature(1))
+						{
+							_local_9 = GlowRedrawer.outlineGlow(_local_8, 13395711, 1.4, false, 0, true);
+						}
+						{
+							_local_9 = GlowRedrawer.outlineGlow(_local_8, ((this.legendaryRank_ == -1) ? 0 : 0xFF0000));
+						}
 					}
 					texturingCache_[_local_8] = _local_9;
 				}
@@ -3350,6 +3375,9 @@ package com.company.assembleegameclient.objects
 							case 596: // Colossus sword
 								_local_14 = _local_14 + ((_local_7 % 2 != 0) ? 19 : -(19));
 								break;
+							case 3113: // Spirit dagger
+								_local_14 = _local_14 + ((_local_7 % 2 != 0) ? 0.0423332312998582 : -0.0433332312998582);
+								break;
 						}
 					}
 					_local_10 = (FreeList.newObject(Projectile) as Projectile);
@@ -3699,11 +3727,11 @@ package com.company.assembleegameclient.objects
 				}
 				if (_local_2.indexOf(true) > -1)
 				{
-					this.addTextLine.dispatch(ChatMessage.make("Potions", (("We have a potion " + _local_3.name_) + " needs!")));
+					this.addTextLine.dispatch(ChatMessage.make("Potions", "We have a potion " + _local_3.name_ + " needs!", true));
 				}
 				else
 				{
-					this.addTextLine.dispatch(ChatMessage.make("Potions", "We have nothing they need"));
+					this.addTextLine.dispatch(ChatMessage.make("Potions", "We have nothing they need", true));
 					return;
 				}
 				this.map_.gs_.gsc_.playerText(("/trade " + _arg_1.name_));
@@ -3979,7 +4007,7 @@ package com.company.assembleegameclient.objects
 					{
 						if (this.name_ == Parameters.vialHolders[counter])
 						{
-							this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, "Player " + this.name_ + " with vial left from dungeon."));
+							this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, "Player " + this.name_ + " with vial left from dungeon.", true));
 							Parameters.vialHolders.splice(counter, 1);
 							break;
 						}
@@ -4010,7 +4038,7 @@ package com.company.assembleegameclient.objects
 				return (map_.gs_.hudView.tradePanel.myInv_.slots_[_local_2[_arg_1]]);
 			}
 
-			private function findSlots():void
+			public function findSlots():void
 			{
 				var _local_1:Player;
 				var _local_2:int;

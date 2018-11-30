@@ -20,7 +20,7 @@ package com.company.assembleegameclient.map
 			private var gradientPath_:GraphicsPath = GraphicsUtil.getRectPath(0, 0, 600, 600);
 			private var gradientGraphicsData_:Vector.<IGraphicsData> = new <IGraphicsData>[gradientFill_, gradientPath_, GraphicsUtil.END_FILL];
 
-			public function HurtOverlay(_arg_1:AGameSprite = null) // TODO need this?
+			public function HurtOverlay(_arg_1:AGameSprite = null)
 			{
 				var _local_8:Number = Parameters.data_.mscale;
 				var _local_7:Number = (ROTMG.STAGE.stageWidth / _local_8);

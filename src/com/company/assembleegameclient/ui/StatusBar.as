@@ -50,7 +50,7 @@ package com.company.assembleegameclient.ui
 			private var direction:int = -1;
 			private var speed:Number = 0.1;
 
-			public function StatusBar(_arg_1:int, _arg_2:int, _arg_3:uint, _arg_4:uint, _arg_5:String = null, _arg_6:Boolean = false, _arg_7:Boolean = false) // TODO fix text location
+			public function StatusBar(_arg_1:int, _arg_2:int, _arg_3:uint, _arg_4:uint, _arg_5:String = null, _arg_6:Boolean = false, _arg_7:Boolean = false)
 			{
 				this.isProgressBar_ = _arg_7;
 				addChild(this.colorSprite);

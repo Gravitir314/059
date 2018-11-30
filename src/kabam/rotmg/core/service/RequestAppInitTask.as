@@ -25,14 +25,6 @@ package kabam.rotmg.core.service
 
 			override protected function startTask():void
 			{
-				this.client.setMaxRetries(2);
-				//this.client.complete.addOnce(this.onComplete); TODO check response
-				//this.client.sendRequest("/app/init", {"game_net": this.account.gameNetwork()});
-				this.localComplete();
-			}
-
-			private function localComplete():void
-			{
 				var _local_1:XML = XML("<AppSettings><UseExternalPayments>1</UseExternalPayments><MaxStackablePotions>6</MaxStackablePotions><PotionPurchaseCooldown>400</PotionPurchaseCooldown><PotionPurchaseCostCooldown>8000</PotionPurchaseCostCooldown><PotionPurchaseCosts><cost>5</cost><cost>10</cost><cost>20</cost><cost>40</cost><cost>80</cost><cost>120</cost><cost>200</cost><cost>300</cost><cost>450</cost><cost>600</cost></PotionPurchaseCosts><FilterList></FilterList><DisableRegist>0</DisableRegist><MysteryBoxRefresh>600</MysteryBoxRefresh><SalesforceMobile>0</SalesforceMobile><UGDOpenSubmission>1</UGDOpenSubmission></AppSettings>");
 				this.appInitConfigData.dispatch(_local_1);
 				this.initDynamicSettingsClass(_local_1);

@@ -49,7 +49,7 @@ package kabam.rotmg.dailyLogin.controller
 				if (_arg_1.gold > 0)
 				{
 					_local_2 = "gold";
-					this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, (((((_arg_1.gold > 0) ? _arg_1.gold : _arg_1.quantity) + "x ") + _local_2) + " was claimed."), -1, -1, "", false));
+					this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, (_arg_1.gold > 0) ? _arg_1.gold.toString() : _arg_1.quantity + "x " + _local_2 + " was claimed."));
 					if (this.hudModel.gameSprite.map.player_ != null)
 					{
 						this.hudModel.gameSprite.map.player_.credits_ = (this.hudModel.gameSprite.map.player_.credits_ + _arg_1.gold);
@@ -58,7 +58,7 @@ package kabam.rotmg.dailyLogin.controller
 				else
 				{
 					_local_2 = LineBuilder.getLocalizedStringFromKey(ObjectLibrary.typeToDisplayId_[_arg_1.itemId]);
-					this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, (((((_arg_1.gold > 0) ? _arg_1.gold : _arg_1.quantity) + "x ") + _local_2) + " was claimed and will be sent to the gift chests in your vault."), -1, -1, "", false));
+					this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, (_arg_1.gold > 0) ? _arg_1.gold.toString() : _arg_1.quantity + "x " + _local_2 + " was claimed and will be sent to the gift chests in your vault."));
 				}
 			}
 

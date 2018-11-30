@@ -15,8 +15,6 @@ package io.decagames.rotmg.supportCampaign.data
 			public static const DEFAULT_DONATE_SPINNER_STEP:int = 100;
 			public static const DONATE_MAX_INPUT_CHARS:int = 5;
 			public static const SUPPORT_COLOR:Number = 13395711;
-			public static const SUPPORTER_CHAT_COLOR:Number = 13395711;
-			public static const CHARACTER_GLOW_RANK:int = 5;
 			public static const RANKS_NAMES:Array = ["Basic", "Greater", "Superior", "Paramount", "Exalted", "Unbound"];
 
 			private var _unlockPrice:int;

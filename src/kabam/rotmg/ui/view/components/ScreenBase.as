@@ -9,7 +9,8 @@ package kabam.rotmg.ui.view.components
 	public class ScreenBase extends Sprite
 		{
 
-			internal static var TitleScreenBackground:Class = ScreenBase_TitleScreenBackground;
+			[Embed(source="ScreenBase_TitleScreenBackground.png")]
+			internal static var TitleScreenBackground:Class;
 
 			public function ScreenBase()
 			{

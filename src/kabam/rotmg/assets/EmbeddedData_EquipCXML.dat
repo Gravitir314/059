@@ -7411,7 +7411,7 @@
       <Sound>use_key</Sound>
       <Consumable/>
       <BagType>8</BagType>
-      <Activate dungeonName="Wine Cellar" lockedName="Locked Wine Cellar Portal">UnlockPortal</Activate>
+      <Activate onlyInArea="Oryx's Chamber" dungeonName="Wine Cellar" lockedName="Locked Wine Cellar Portal">UnlockPortal</Activate>
       <feedPower>500</feedPower>
       <Track/>
    </Object>
@@ -9052,6 +9052,23 @@
       <Activate>ShurikenAbility</Activate>
       <feedPower>850</feedPower>
       <Soulbound/>
+   </Object>
+   <Object type="0x2235" id="Sheath0">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>lofiObj6</File>
+         <Index>0xd0</Index>
+      </Texture>
+      <SlotType>27</SlotType>
+      <Description>maxDistance="6.0" radius="1.2" damage="80"\nTP: maxDistance="2.125"</Description>
+      <Usable/>
+      <BagType>1</BagType>
+      <MpCost>40</MpCost>
+      <Activate maxDistance="6.0" radius="1.2" damage="80" color="0xBFBFBF">LineAoE</Activate>
+      <Activate maxDistance="2.125">TeleportLimit</Activate>
+      <feedPower>5</feedPower>
+      <DropTradable/>
    </Object>
    <Object type="0x1aaa" id="Simple Wakizashi">
       <Class>Equipment</Class>
@@ -14492,7 +14509,7 @@
       <BagType>4</BagType>
       <feedPower>500</feedPower>
       <Soulbound/>
-      <Activate id="LH Vial Effect">Create</Activate>
+      <Activate onlyInArea="Lost Halls" id="LH Vial Effect">Create</Activate>
    </Object>
    <Object type="0x0248" id="Gravel">
       <Class>Equipment</Class>
@@ -15266,7 +15283,7 @@
       <Description>An old looking chest from the Tinkerer's vault. It contains valuable items.</Description>
       <Consumable/>
       <Soulbound/>
-      <Activate id="Quest Chest" onlyInVault="1">Create</Activate>
+      <Activate id="Quest Chest" onlyIn="vault">Create</Activate>
       <ExtraTooltipData>
          <EffectInfo name="Info" description="Only usable in the Vault. Use to spawn a destructible chest containing rewards."/>
       </ExtraTooltipData>
@@ -15286,7 +15303,7 @@
       <Description>A rich looking chest from the Tinkerer's vault. It contains wonderful items.</Description>
       <Consumable/>
       <Soulbound/>
-      <Activate id="Epic Quest Chest" onlyInVault="1">Create</Activate>
+      <Activate id="Epic Quest Chest" onlyIn="vault">Create</Activate>
       <ExtraTooltipData>
          <EffectInfo name="Info" description="Only usable in the Vault. Use to spawn a destructible chest containing rewards."/>
       </ExtraTooltipData>
@@ -18438,12 +18455,12 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
          <Index>0x8c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Temporarily transform players around you to Deca mini Djinja.</Description>
-      <Activate skin="0x17f6" duration="15">GroupTransform</Activate>
-      <Consumable/>
+      <Description>Temporarily transform players around you to Deca mini Djinjas!</Description>
+      <Sound>use_key</Sound>
+      <Activate skin="0x17f6" duration="15" cooldown="30">GroupTransform</Activate>
       <Soulbound/>
       <BagType>8</BagType>
-      <Track/>
+      <InvUse/>
    </Object>
    <Object type="0x5b22" id="Random Spell Extraction Device">
       <Class>Equipment</Class>
@@ -18924,7 +18941,7 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       </Texture>
       <SlotType>10</SlotType>
       <Description>"Very rich in calcium!" - Dr. Terrible.</Description>
-      <Activate skin="0x73cc" duration="30">GroupTransform</Activate>
+      <Activate onlyIn="realm" skin="0x73cc" duration="30">GroupTransform</Activate>
       <Activate stat="21" amount="5" duration="30" range="8">StatBoostAura</Activate>
       <Consumable/>
       <Soulbound/>

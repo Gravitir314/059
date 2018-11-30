@@ -105,7 +105,8 @@ package kabam.rotmg.messaging.impl.data
 			public static const PET_THIRDABILITY_TYPE_STAT:int = 95;
 			public static const NEW_CON_STAT:int = 96;
 			public static const FORTUNE_TOKEN_STAT:int = 97;
-			public const SUPPORTER_POINTS_STAT:int = 98;
+			public static const SUPPORTER_POINTS_STAT:int = 98;
+			public static const SUPPORTER_STAT:int = 99;
 
 			public var statType_:uint = 0;
 			public var statValue_:int;
