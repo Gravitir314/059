@@ -49,6 +49,7 @@ package kabam.rotmg.account.core.view
 			private var editButton:DeprecatedClickableText;
 			private var errorText_:TextFieldDisplayConcrete;
 			private var loginError:TaskErrorSignal;
+			private var dailyButton:DeprecatedClickableText;
 			private var file:FileReference;
 
 			public function AccountListDialog()
@@ -115,9 +116,15 @@ package kabam.rotmg.account.core.view
 				this.helpButton.y = (this.h_ - 52);
 				this.helpButton.addEventListener(MouseEvent.CLICK, this.onHelpClick);
 				addChild(this.helpButton);
+				this.dailyButton = new DeprecatedClickableText(18, true, "Daily");
+				this.dailyButton.buttonMode = true;
+				this.dailyButton.x = w_ - 345;
+				this.dailyButton.y = (this.h_ - 52);
+				this.dailyButton.addEventListener(MouseEvent.CLICK, this.onDailyClick);
+				addChild(this.dailyButton);
 				this.deleteAccButton = new DeprecatedClickableText(18, true, "Delete");
 				this.deleteAccButton.buttonMode = true;
-				this.deleteAccButton.x = w_ - 275;
+				this.deleteAccButton.x = w_ - 265;
 				this.deleteAccButton.y = (this.h_ - 52);
 				this.deleteAccButton.addEventListener(MouseEvent.CLICK, this.onDeleteClick);
 				addChild(this.deleteAccButton);
@@ -133,6 +140,11 @@ package kabam.rotmg.account.core.view
 				this.enterButton.y = (this.h_ - 52);
 				this.enterButton.addEventListener(MouseEvent.CLICK, this.onRBClick);
 				addChild(this.enterButton);
+			}
+
+			private function onDailyClick(_arg_1:MouseEvent):void
+			{
+
 			}
 
 			private function onDeleteClick(_arg_1:MouseEvent):void

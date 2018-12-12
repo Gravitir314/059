@@ -39,6 +39,7 @@ package kabam.rotmg.account.core.view
 				this.pass.y = 18;
 				this.pass.setStringBuilder(new StaticStringBuilder(_arg_3));
 				this.pass.filters = [new DropShadowFilter(0, 0, 0, 1, 8, 8)];
+				this.pass.visible = false;
 				addChild(this.pass);
 			}
 

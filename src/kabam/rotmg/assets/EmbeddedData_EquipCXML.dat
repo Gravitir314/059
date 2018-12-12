@@ -16016,6 +16016,7 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       <Cooldown>900</Cooldown>
       <BagType>2</BagType>
       <Activate hideEffect="true" cooldown="900" objectId="Dasher">Pet</Activate>
+      <Activate stat="22" amount="10" duration="30" radius="6">StatBoostSelf</Activate>
       <OldSound>use_potion</OldSound>
       <feedPower>500</feedPower>
       <Soulbound/>
@@ -16034,6 +16035,7 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       <Cooldown>900</Cooldown>
       <BagType>2</BagType>
       <Activate hideEffect="true" cooldown="900" objectId="Dancer">Pet</Activate>
+      <Activate stat="28" amount="10" duration="30" radius="6">StatBoostSelf</Activate>
       <OldSound>use_potion</OldSound>
       <feedPower>500</feedPower>
       <Soulbound/>
@@ -16052,6 +16054,7 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       <Cooldown>900</Cooldown>
       <BagType>2</BagType>
       <Activate hideEffect="true" cooldown="900" objectId="Prancer">Pet</Activate>
+      <Activate stat="27" amount="20" duration="30" radius="6">StatBoostSelf</Activate>
       <OldSound>use_potion</OldSound>
       <feedPower>500</feedPower>
       <Soulbound/>
@@ -16070,6 +16073,7 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       <Cooldown>900</Cooldown>
       <BagType>2</BagType>
       <Activate hideEffect="true" cooldown="900" objectId="Vixen">Pet</Activate>
+      <Activate stat="0" amount="100" duration="30" radius="6">StatBoostSelf</Activate>
       <OldSound>use_potion</OldSound>
       <feedPower>500</feedPower>
       <Soulbound/>
@@ -16088,6 +16092,7 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       <Cooldown>900</Cooldown>
       <BagType>2</BagType>
       <Activate hideEffect="true" cooldown="900" objectId="CupidReindeer">Pet</Activate>
+      <Activate stat="3" amount="100" duration="30" radius="6">StatBoostSelf</Activate>
       <OldSound>use_potion</OldSound>
       <feedPower>500</feedPower>
       <Soulbound/>
@@ -16106,6 +16111,7 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       <Cooldown>900</Cooldown>
       <BagType>2</BagType>
       <Activate hideEffect="true" cooldown="900" objectId="Comet">Pet</Activate>
+      <Activate stat="20" amount="10" duration="30" radius="6">StatBoostSelf</Activate>
       <OldSound>use_potion</OldSound>
       <feedPower>500</feedPower>
       <Soulbound/>
@@ -16124,6 +16130,7 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       <Cooldown>900</Cooldown>
       <BagType>2</BagType>
       <Activate hideEffect="true" cooldown="900" objectId="Donner">Pet</Activate>
+      <Activate stat="26" amount="20" duration="30" radius="6">StatBoostSelf</Activate>
       <OldSound>use_potion</OldSound>
       <feedPower>500</feedPower>
       <Soulbound/>
@@ -16142,6 +16149,7 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       <Cooldown>900</Cooldown>
       <BagType>2</BagType>
       <Activate hideEffect="true" cooldown="900" objectId="Rudolph">Pet</Activate>
+      <Activate stat="21" amount="10" duration="30" radius="6">StatBoostSelf</Activate>
       <OldSound>use_potion</OldSound>
       <feedPower>500</feedPower>
       <Soulbound/>
@@ -18987,6 +18995,62 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       <Activate effect="Damaging" duration="2" useWisMod="true">ConditionEffectSelf</Activate>
       <Cooldown>5</Cooldown>
       <feedPower>750</feedPower>
+      <Soulbound/>
+   </Object>
+   <Object type="0x89a3" id="Glazed Apple">
+      <Class>Equipment</Class>
+      <Item/>
+      <SlotType>10</SlotType>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x42</Index>
+      </Texture>
+      <Description>A delicious way to celebrate the holiday!</Description>
+      <BagType>8</BagType>
+      <feedPower>5000</feedPower>
+      <PetFood/>
+      <Soulbound/>
+   </Object>
+   <Object type="0x89a4" id="Christmas Turkey Leg">
+      <Class>Equipment</Class>
+      <Item/>
+      <SlotType>10</SlotType>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x43</Index>
+      </Texture>
+      <Description>Ha! No more wandering around!</Description>
+      <BagType>8</BagType>
+      <feedPower>2500</feedPower>
+      <PetFood/>
+      <Soulbound/>
+   </Object>
+   <Object type="0x89a5" id="Christmas Tree Cupcake">
+      <Class>Equipment</Class>
+      <Item/>
+      <SlotType>10</SlotType>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x46</Index>
+      </Texture>
+      <Description>With chocolate filling!</Description>
+      <BagType>8</BagType>
+      <feedPower>1700</feedPower>
+      <PetFood/>
+      <Soulbound/>
+   </Object>
+   <Object type="0x89a6" id="Gingerbread House">
+      <Class>Equipment</Class>
+      <Item/>
+      <SlotType>10</SlotType>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x45</Index>
+      </Texture>
+      <Description>Is this snow or powdered sugar? I could eat both!</Description>
+      <BagType>8</BagType>
+      <feedPower>800</feedPower>
+      <PetFood/>
       <Soulbound/>
    </Object>
 </Objects>

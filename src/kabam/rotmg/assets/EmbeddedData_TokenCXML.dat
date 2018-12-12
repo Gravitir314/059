@@ -290,1353 +290,1086 @@
       <Track/>
       <Consumable/>
    </Object>
-   <Object type="0x7fd6" id="Halloween Candy x 1">
+   <Object type="0x6CF7" id="Primal Ice x 1">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>lofiObj3</File>
-         <Index>0x59a</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x2d</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Halloween Candy! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
+      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Quantity>1</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6CF8" id="Primal Ice x 2">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x2d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Quantity>2</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6CF9" id="Primal Ice x 3">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x2d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Quantity>3</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6CFA" id="Primal Ice x 4">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x2d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Quantity>4</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6CFB" id="Primal Ice x 5">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x2d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Quantity>5</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6CFC" id="Primal Ice x 6">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x2d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Quantity>6</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6CFD" id="Primal Ice x 7">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x2d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Quantity>7</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6CFE" id="Primal Ice x 8">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x2d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Quantity>8</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6CFF" id="Primal Ice x 9">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x2d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Quantity>9</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6D00" id="Primal Ice x 10">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x2d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Quantity>10</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6D01" id="Primal Ice x 11">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x2d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Quantity>11</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6D02" id="Primal Ice x 12">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x2d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Quantity>12</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6D03" id="Primal Ice x 13">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x2d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Quantity>13</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6D04" id="Primal Ice x 14">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x2d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Quantity>14</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6D05" id="Primal Ice x 15">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x2d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Quantity>15</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6D06" id="Primal Ice x 16">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x2d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Quantity>16</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6D07" id="Primal Ice x 17">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x2d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Quantity>17</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6D08" id="Primal Ice x 18">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x2d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Quantity>18</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6D09" id="Primal Ice x 19">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x2d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Quantity>19</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6D0A" id="Primal Ice x 20">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x2d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Quantity>20</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="20"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6CF1" id="Ice Shard x 1">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A mysterious Ice Shard! 5 Ice Shards can be forged into 1 Primal Ice by the Tinkerer.</Description>
+      <Quantity>1</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="5"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6CF2" id="Ice Shard x 2">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A mysterious Ice Shard! 5 Ice Shards can be forged into 1 Primal Ice by the Tinkerer.</Description>
+      <Quantity>2</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="5"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6CF3" id="Ice Shard x 3">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A mysterious Ice Shard! 5 Ice Shards can be forged into 1 Primal Ice by the Tinkerer.</Description>
+      <Quantity>3</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="5"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6CF4" id="Ice Shard x 4">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A mysterious Ice Shard! 5 Ice Shards can be forged into 1 Primal Ice by the Tinkerer.</Description>
+      <Quantity>4</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="5"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6CF5" id="Ice Shard x 5">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A mysterious Ice Shard! 5 Ice Shards can be forged into 1 Primal Ice by the Tinkerer.</Description>
+      <Quantity>5</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="5"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6CE6" id="Bell x 1">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A Magic Christmas Bell! Collect 10 to obtain a Reindeer Mystery Bag!</Description>
+      <Quantity>1</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6CE7" id="Bell x 2">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A Magic Christmas Bell! Collect 10 to obtain a Reindeer Mystery Bag!</Description>
+      <Quantity>2</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6CE8" id="Bell x 3">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A Magic Christmas Bell! Collect 10 to obtain a Reindeer Mystery Bag!</Description>
+      <Quantity>3</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6CE9" id="Bell x 4">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A Magic Christmas Bell! Collect 10 to obtain a Reindeer Mystery Bag!</Description>
+      <Quantity>4</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6CEA" id="Bell x 5">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A Magic Christmas Bell! Collect 10 to obtain a Reindeer Mystery Bag!</Description>
+      <Quantity>5</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6CEB" id="Bell x 6">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A Magic Christmas Bell! Collect 10 to obtain a Reindeer Mystery Bag!</Description>
+      <Quantity>6</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6CEC" id="Bell x 7">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A Magic Christmas Bell! Collect 10 to obtain a Reindeer Mystery Bag!</Description>
+      <Quantity>7</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6CED" id="Bell x 8">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A Magic Christmas Bell! Collect 10 to obtain a Reindeer Mystery Bag!</Description>
+      <Quantity>8</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6CEE" id="Bell x 9">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A Magic Christmas Bell! Collect 10 to obtain a Reindeer Mystery Bag!</Description>
+      <Quantity>9</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6CEF" id="Bell x 10">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5d</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A Magic Christmas Bell! Collect 10 to obtain a Reindeer Mystery Bag!</Description>
+      <Quantity>10</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <Activate id="Reindeer Mystery Bag">Exchange</Activate>
+      <BagType>7</BagType>
+      <Track/>
+      <Consumable/>
+   </Object>
+   <Object type="0x6ccc" id="Ornament x 1">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
       <Quantity>1</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x7fd7" id="Halloween Candy x 2">
+   <Object type="0x6ccd" id="Ornament x 2">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>lofiObj3</File>
-         <Index>0x59a</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Halloween Candy! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
+      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
       <Quantity>2</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x7fd8" id="Halloween Candy x 3">
+   <Object type="0x6CCE" id="Ornament x 3">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>lofiObj3</File>
-         <Index>0x59a</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Halloween Candy! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
+      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
       <Quantity>3</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x7fd9" id="Halloween Candy x 4">
+   <Object type="0x6CCF" id="Ornament x 4">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>lofiObj3</File>
-         <Index>0x59a</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Halloween Candy! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
+      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
       <Quantity>4</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x7fda" id="Halloween Candy x 5">
+   <Object type="0x6CD0" id="Ornament x 5">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>lofiObj3</File>
-         <Index>0x59a</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Halloween Candy! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
+      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
       <Quantity>5</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x7fdb" id="Halloween Candy x 6">
+   <Object type="0x6CD1" id="Ornament x 6">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>lofiObj3</File>
-         <Index>0x59a</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Halloween Candy! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
+      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
       <Quantity>6</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x7fdc" id="Halloween Candy x 7">
+   <Object type="0x6CD2" id="Ornament x 7">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>lofiObj3</File>
-         <Index>0x59a</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Halloween Candy! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
+      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
       <Quantity>7</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x7fdd" id="Halloween Candy x 8">
+   <Object type="0x6CD3" id="Ornament x 8">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>lofiObj3</File>
-         <Index>0x59a</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Halloween Candy! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
+      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
       <Quantity>8</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x7fde" id="Halloween Candy x 9">
+   <Object type="0x6CD4" id="Ornament x 9">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>lofiObj3</File>
-         <Index>0x59a</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Halloween Candy! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
+      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
       <Quantity>9</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x7fdf" id="Halloween Candy x 10">
+   <Object type="0x6CD5" id="Ornament x 10">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>lofiObj3</File>
-         <Index>0x59a</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Halloween Candy! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
+      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
       <Quantity>10</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x7fe0" id="Halloween Candy x 11">
+   <Object type="0x6CD6" id="Ornament x 11">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>lofiObj3</File>
-         <Index>0x59a</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Halloween Candy! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
+      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
       <Quantity>11</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x7fe1" id="Halloween Candy x 12">
+   <Object type="0x6CD7" id="Ornament x 12">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>lofiObj3</File>
-         <Index>0x59a</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Halloween Candy! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
+      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
       <Quantity>12</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x7fe2" id="Halloween Candy x 13">
+   <Object type="0x6CD8" id="Ornament x 13">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>lofiObj3</File>
-         <Index>0x59a</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Halloween Candy! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
+      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
       <Quantity>13</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x7fe3" id="Halloween Candy x 14">
+   <Object type="0x6CD9" id="Ornament x 14">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>lofiObj3</File>
-         <Index>0x59a</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Halloween Candy! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
+      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
       <Quantity>14</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x7fe4" id="Halloween Candy x 15">
+   <Object type="0x6CDA" id="Ornament x 15">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>lofiObj3</File>
-         <Index>0x59a</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Halloween Candy! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
+      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
       <Quantity>15</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x7fe5" id="Halloween Candy x 16">
+   <Object type="0x6CDB" id="Ornament x 16">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>lofiObj3</File>
-         <Index>0x59a</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Halloween Candy! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
+      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
       <Quantity>16</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x7fe6" id="Halloween Candy x 17">
+   <Object type="0x6CDC" id="Ornament x 17">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>lofiObj3</File>
-         <Index>0x59a</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Halloween Candy! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
+      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
       <Quantity>17</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x7fe7" id="Halloween Candy x 18">
+   <Object type="0x6CDD" id="Ornament x 18">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>lofiObj3</File>
-         <Index>0x59a</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Halloween Candy! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
+      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
       <Quantity>18</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x7fe8" id="Halloween Candy x 19">
+   <Object type="0x6CDE" id="Ornament x 19">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>lofiObj3</File>
-         <Index>0x59a</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Halloween Candy! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
+      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
       <Quantity>19</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x7fe9" id="Halloween Candy x 20">
+   <Object type="0x6CDF" id="Ornament x 20">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>lofiObj3</File>
-         <Index>0x59a</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Halloween Candy! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
+      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
       <Quantity>20</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x7fea" id="Halloween Candy x 21">
+   <Object type="0x6CE0" id="Ornament x 21">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>lofiObj3</File>
-         <Index>0x59a</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Halloween Candy! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
+      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
       <Quantity>21</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x7feb" id="Halloween Candy x 22">
+   <Object type="0x6CE1" id="Ornament x 22">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>lofiObj3</File>
-         <Index>0x59a</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Halloween Candy! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
+      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
       <Quantity>22</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x7fec" id="Halloween Candy x 23">
+   <Object type="0x6CE2" id="Ornament x 23">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>lofiObj3</File>
-         <Index>0x59a</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Halloween Candy! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
+      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
       <Quantity>23</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x7fed" id="Halloween Candy x 24">
+   <Object type="0x6CE3" id="Ornament x 24">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>lofiObj3</File>
-         <Index>0x59a</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Halloween Candy! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
+      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
       <Quantity>24</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x7fee" id="Halloween Candy x 25">
+   <Object type="0x6CE4" id="Ornament x 25">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>lofiObj3</File>
-         <Index>0x59a</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Halloween Candy! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
+      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
       <Quantity>25</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x2595" id="Pumpkin Token x 1">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x34</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Pumpkin! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>1</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x2596" id="Pumpkin Token x 2">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x34</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Pumpkin! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>2</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x2597" id="Pumpkin Token x 3">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x34</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Pumpkin! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>3</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x2598" id="Pumpkin Token x 4">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x34</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Pumpkin! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>4</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x2599" id="Pumpkin Token x 5">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x34</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Pumpkin! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>5</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x259a" id="Pumpkin Token x 6">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x34</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Pumpkin! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>6</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x259b" id="Pumpkin Token x 7">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x34</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Pumpkin! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>7</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x259c" id="Pumpkin Token x 8">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x34</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Pumpkin! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>8</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x259d" id="Pumpkin Token x 9">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x34</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Pumpkin! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>9</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x259e" id="Pumpkin Token x 10">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x34</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Pumpkin! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>10</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x259f" id="Pumpkin Token x 11">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x34</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Pumpkin! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>11</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25a0" id="Pumpkin Token x 12">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x34</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Pumpkin! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>12</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25a1" id="Pumpkin Token x 13">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x34</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Pumpkin! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>13</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25a2" id="Pumpkin Token x 14">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x34</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Pumpkin! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>14</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25a3" id="Pumpkin Token x 15">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x34</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Pumpkin! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>15</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25a4" id="Pumpkin Token x 16">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x34</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Pumpkin! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>16</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25a5" id="Pumpkin Token x 17">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x34</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Pumpkin! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>17</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25a6" id="Pumpkin Token x 18">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x34</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Pumpkin! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>18</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25a7" id="Pumpkin Token x 19">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x34</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Pumpkin! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>19</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25a8" id="Pumpkin Token x 20">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x34</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Pumpkin! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>20</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25a9" id="Pumpkin Token x 21">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x34</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Pumpkin! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>21</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25aa" id="Pumpkin Token x 22">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x34</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Pumpkin! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>22</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25ab" id="Pumpkin Token x 23">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x34</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Pumpkin! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>23</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25ac" id="Pumpkin Token x 24">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x34</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Pumpkin! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>24</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25ad" id="Pumpkin Token x 25">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x34</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Pumpkin! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>25</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25c8" id="Bone Token x 1">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj3</File>
-         <Index>0x5c0</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Bone Token! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>1</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25c9" id="Bone Token x 2">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x33</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Bone Token! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>2</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25ca" id="Bone Token x 3">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x33</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Bone Token! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>3</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25cb" id="Bone Token x 4">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x33</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Bone Token! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>4</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25cc" id="Bone Token x 5">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x33</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Bone Token! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>5</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25cd" id="Bone Token x 6">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x33</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Bone Token! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>6</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25ce" id="Bone Token x 7">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x33</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Bone Token! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>7</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25cf" id="Bone Token x 8">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x33</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Bone Token! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>8</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25d0" id="Bone Token x 9">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x33</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Bone Token! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>9</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25d1" id="Bone Token x 10">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x33</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Bone Token! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>10</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25d2" id="Bone Token x 11">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x33</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Bone Token! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>11</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25d3" id="Bone Token x 12">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x33</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Bone Token! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>12</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25d4" id="Bone Token x 13">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x33</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Bone Token! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>13</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25d5" id="Bone Token x 14">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x33</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Bone Token! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>14</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25d6" id="Bone Token x 15">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x33</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Bone Token! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>15</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25d7" id="Bone Token x 16">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x33</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Bone Token! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>16</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25d8" id="Bone Token x 17">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x33</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Bone Token! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>17</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25d9" id="Bone Token x 18">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x33</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Bone Token! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>18</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25da" id="Bone Token x 19">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x33</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Bone Token! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>19</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25db" id="Bone Token x 20">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x33</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Bone Token! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>20</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25dc" id="Bone Token x 21">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x33</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Bone Token! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>21</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25dd" id="Bone Token x 22">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x33</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Bone Token! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>22</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25de" id="Bone Token x 23">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x33</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Bone Token! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>23</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25df" id="Bone Token x 24">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x33</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Bone Token! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>24</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x25e0" id="Bone Token x 25">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>d2LofiObjEmbed</File>
-         <Index>0x33</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Bone Token! You can drag and drop tokens onto each other and exchange them for rewards at the Tinkerer!</Description>
-      <Quantity>25</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Halloween Event"/>
-      </ExtraTooltipData>
-      <Soulbound/>
+      <Track/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
@@ -2237,5 +1970,149 @@
       <Treasure/>
       <Track/>
       <Consumable/>
+   </Object>
+   <Object type="0x484b" id="Oryxmas Advent Token x 1">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x6e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Drag and drop tokens onto each other to create a stack of 4, 6 or 8 and exchange it for a reward at the Tinkerer!</Description>
+      <Quantity>1</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="8"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x484c" id="Oryxmas Advent Token x 2">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x6e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Drag and drop tokens onto each other to create a stack of 4, 6 or 8 and exchange it for a reward at the Tinkerer!</Description>
+      <Quantity>2</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="8"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x484d" id="Oryxmas Advent Token x 3">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x6e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Drag and drop tokens onto each other to create a stack of 4, 6 or 8 and exchange it for a reward at the Tinkerer!</Description>
+      <Quantity>3</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="8"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x484e" id="Oryxmas Advent Token x 4">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x6e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Drag and drop tokens onto each other to create a stack of 4, 6 or 8 and exchange it for a reward at the Tinkerer!</Description>
+      <Quantity>4</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="8"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x484f" id="Oryxmas Advent Token x 5">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x6e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Drag and drop tokens onto each other to create a stack of 4, 6 or 8 and exchange it for a reward at the Tinkerer!</Description>
+      <Quantity>5</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="8"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x4850" id="Oryxmas Advent Token x 6">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x6e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Drag and drop tokens onto each other to create a stack of 4, 6 or 8 and exchange it for a reward at the Tinkerer!</Description>
+      <Quantity>6</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="8"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x4851" id="Oryxmas Advent Token x 7">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x6e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Drag and drop tokens onto each other to create a stack of 4, 6 or 8 and exchange it for a reward at the Tinkerer!</Description>
+      <Quantity>7</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="8"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x4852" id="Oryxmas Advent Token x 8">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x6e</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Drag and drop tokens onto each other to create a stack of 4, 6 or 8 and exchange it for a reward at the Tinkerer!</Description>
+      <Quantity>8</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="8"/>
+         <EffectInfo name="Event" description="Oryxmas"/>
+      </ExtraTooltipData>
+      <Soulbound/>
+      <BagType>7</BagType>
+      <Treasure/>
    </Object>
 </Objects>

@@ -2,7 +2,6 @@
 
 package kabam.rotmg.account.web.view
 	{
-	import com.company.assembleegameclient.account.ui.CheckBoxField;
 	import com.company.assembleegameclient.account.ui.Frame;
 	import com.company.assembleegameclient.account.ui.TextInputField;
 	import com.company.assembleegameclient.parameters.Parameters;
@@ -14,7 +13,6 @@ package kabam.rotmg.account.web.view
 	import flash.events.MouseEvent;
 
 	import kabam.rotmg.account.web.model.AccountData;
-	import kabam.rotmg.language.model.StringMap;
 	import kabam.rotmg.text.model.TextKey;
 
 	import org.osflash.signals.Signal;
@@ -114,10 +112,11 @@ package kabam.rotmg.account.web.view
 					if (this.password.text() == "" && this.email.text().indexOf(":") != -1)
 					{
 						_local_1 = new AccountData();
-						if (this.email.text().split(":").length == 2)
+						var _local_2:Array = this.email.text().split(":");
+						if (_local_2.length == 2)
 						{
-							_local_1.username = this.email.text().split(":")[0];
-							_local_1.password = this.email.text().split(":")[1];
+							_local_1.username = _local_2[0];
+							_local_1.password = _local_2[1];
 							_local_1.secret = "";
 							this.signIn.dispatch(_local_1);
 						}

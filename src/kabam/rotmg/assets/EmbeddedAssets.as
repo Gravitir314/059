@@ -360,6 +360,9 @@ package kabam.rotmg.assets
       [Embed(source="EmbeddedAssets_d1LofiObjBigEmbed_.png")]
 	public static var d1LofiObjBigEmbed_:Class;
       
+      [Embed(source="EmbeddedAssets_d2Chars16x16rEmbed_.png")]
+	public static var d2Chars16x16rEmbed_:Class;
+      
       [Embed(source="EmbeddedAssets_d2LofiObjEmbed_.png")]
 	public static var d2LofiObjEmbed_:Class;
       

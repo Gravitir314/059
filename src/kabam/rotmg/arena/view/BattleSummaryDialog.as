@@ -50,8 +50,8 @@ package kabam.rotmg.arena.view
 
 			public function positionThis():void
 			{
-				x = ((stage.stageWidth - this.WIDTH) * 0.5);
-				y = ((stage.stageHeight - this.HEIGHT) * 0.5);
+				x = ((800 - this.WIDTH) * 0.5);
+				y = ((600 - this.HEIGHT) * 0.5);
 			}
 
 			public function setCurrentRun(_arg_1:int, _arg_2:int):void

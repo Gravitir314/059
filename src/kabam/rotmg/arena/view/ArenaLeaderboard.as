@@ -206,10 +206,10 @@ package kabam.rotmg.arena.view
 
 			private function onAlignTitle():void
 			{
-				this.title.x = (stage.stageWidth / 2);
-				this.leftSword.x = ((((stage.stageWidth / 2) - (this.title.width / 2)) - this.leftSword.width) + 10);
+				this.title.x = (800 / 2);
+				this.leftSword.x = ((((800 / 2) - (this.title.width / 2)) - this.leftSword.width) + 10);
 				this.leftSword.y = 15;
-				this.rightSword.x = (((stage.stageWidth / 2) + (this.title.width / 2)) - 10);
+				this.rightSword.x = (((800 / 2) + (this.title.width / 2)) - 10);
 				this.rightSword.y = 15;
 			}
 

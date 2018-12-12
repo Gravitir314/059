@@ -3,6 +3,8 @@
 <Objects>
    <Object type="0x1548" id="Arena Tomb Bosses">
       <Class>GameObject</Class>
+      <Enemy/>
+      <Invincible/>
       <Texture>
          <File>lofiObjBig</File>
          <Index>0xb6</Index>
