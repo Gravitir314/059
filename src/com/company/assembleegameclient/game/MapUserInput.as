@@ -58,6 +58,7 @@ package com.company.assembleegameclient.game
 	import kabam.rotmg.ui.UIUtils;
 	import kabam.rotmg.ui.model.HUDModel;
 	import kabam.rotmg.ui.model.TabStripModel;
+	import kabam.rotmg.ui.signals.ToggleRealmQuestsDisplaySignal;
 
 	import net.hires.debug.Stats;
 
@@ -89,6 +90,7 @@ package com.company.assembleegameclient.game
 			private var addTextLine:AddTextLineSignal;
 			private var setTextBoxVisibility:SetTextBoxVisibilitySignal;
 			private var statsTabHotKeyInputSignal:StatsTabHotKeyInputSignal;
+			private var toggleRealmQuestsDisplaySignal:ToggleRealmQuestsDisplaySignal;
 			private var miniMapZoom:MiniMapZoomSignal;
 			public var useBuyPotionSignal:UseBuyPotionSignal;
 			private var potionInventoryModel:PotionInventoryModel;
@@ -126,6 +128,7 @@ package com.company.assembleegameclient.game
 				this.tabStripModel = _local_2.getInstance(TabStripModel);
 				this.layers = _local_2.getInstance(Layers);
 				this.statsTabHotKeyInputSignal = _local_2.getInstance(StatsTabHotKeyInputSignal);
+				this.toggleRealmQuestsDisplaySignal = _local_2.getInstance(ToggleRealmQuestsDisplaySignal);
 				this.exitGame = _local_2.getInstance(ExitGameSignal);
 				this.openDialogSignal = _local_2.getInstance(OpenDialogSignal);
 				this.closeDialogSignal = _local_2.getInstance(CloseDialogsSignal);
@@ -924,6 +927,9 @@ package com.company.assembleegameclient.game
 						break;
 					case Parameters.data_.testOne:
 						break;
+					case Parameters.data_.toggleRealmQuestDisplay:
+						this.toggleRealmQuestsDisplaySignal.dispatch();
+						break;
 					case Parameters.data_.TombCycleKey: // TODO unused
 						switch (Parameters.data_.TombCycleBoss)
 						{
@@ -1124,6 +1130,7 @@ package com.company.assembleegameclient.game
 							Parameters.oldFSmode = Parameters.root.stage.scaleMode;
 							Parameters.root.stage.scaleMode = StageScaleMode.EXACT_FIT;
 							Parameters.data_.stageScale = StageScaleMode.EXACT_FIT;
+							this.gs_.realmQuestsDisplay.y = 10;
 						}
 						else
 						{
@@ -1141,6 +1148,7 @@ package com.company.assembleegameclient.game
 							}
 							Parameters.root.stage.scaleMode = Parameters.oldFSmode;
 							Parameters.data_.stageScale = Parameters.oldFSmode;
+							this.gs_.realmQuestsDisplay.y = 40;
 						}
 						this.gs_.hudView.toggleUI();
 						this.gs_.hudView.characterDetails.setName(player.name_);

@@ -1305,7 +1305,7 @@
       <Size>100</Size>
       <MaxHitPoints>100000</MaxHitPoints>
       <Defense>65</Defense>
-      <Exp>7000</Exp>
+      <Exp>20000</Exp>
       <EventChestBoss/>
       <AltTexture id="1">
          <AnimatedTexture>
@@ -1962,6 +1962,7 @@
       <Defense>35</Defense>
       <Size>160</Size>
       <Exp>0</Exp>
+      <StasisImmune/>
    </Object>
    <Object type="0x737b" id="shtrs Loot Balloon Mage">
       <DisplayId>Mage Chest</DisplayId>
@@ -1976,6 +1977,7 @@
       <Defense>35</Defense>
       <Size>160</Size>
       <Exp>0</Exp>
+      <StasisImmune/>
    </Object>
    <Object type="0x737c" id="shtrs Loot Balloon King">
       <DisplayId>King Chest</DisplayId>
@@ -1990,6 +1992,7 @@
       <Defense>35</Defense>
       <Size>160</Size>
       <Exp>0</Exp>
+      <StasisImmune/>
    </Object>
    <Object type="0x7380" id="shtrs Pause Watcher">
       <Class>GameObject</Class>

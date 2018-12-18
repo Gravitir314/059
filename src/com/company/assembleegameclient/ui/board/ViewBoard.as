@@ -64,6 +64,7 @@ package com.company.assembleegameclient.ui.board
 				this.boardText_.mouseEnabled = true;
 				this.boardText_.multiline = true;
 				this.boardText_.wordWrap = true;
+				this.boardText_.embedFonts = true;
 				this.boardText_.htmlText = _local_5;
 				this.boardText_.useTextDimensions();
 				this.mainSprite_.addChild(this.boardText_);

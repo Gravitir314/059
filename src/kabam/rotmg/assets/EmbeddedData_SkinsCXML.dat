@@ -2993,7 +2993,7 @@
       <PlayerClassType>0x0320</PlayerClassType>
       <NoSkinSelect/>
    </Object>
-   <Object type="0x2071" id="Christmas Rogue">
+   <Object type="0x2071" id="Oryxmas Rogue">
       <Skin/>
       <Class>Skin</Class>
       <AnimatedTexture>
@@ -3003,7 +3003,7 @@
       <PlayerClassType>0x0300</PlayerClassType>
       <NoSkinSelect/>
    </Object>
-   <Object type="0x2072" id="Christmas Archer">
+   <Object type="0x2072" id="Oryxmas Archer">
       <Skin/>
       <Class>Skin</Class>
       <AnimatedTexture>
@@ -3013,7 +3013,7 @@
       <PlayerClassType>0x307</PlayerClassType>
       <NoSkinSelect/>
    </Object>
-   <Object type="0x2073" id="Christmas Wizard">
+   <Object type="0x2073" id="Oryxmas Wizard">
       <Skin/>
       <Class>Skin</Class>
       <AnimatedTexture>
@@ -3023,7 +3023,7 @@
       <PlayerClassType>0x30e</PlayerClassType>
       <NoSkinSelect/>
    </Object>
-   <Object type="0x2074" id="Christmas Priestess">
+   <Object type="0x2074" id="Oryxmas Priest">
       <Skin/>
       <Class>Skin</Class>
       <AnimatedTexture>
@@ -3033,7 +3033,7 @@
       <PlayerClassType>0x0310</PlayerClassType>
       <NoSkinSelect/>
    </Object>
-   <Object type="0x2075" id="Christmas Warrior">
+   <Object type="0x2075" id="Oryxmas Warrior">
       <Skin/>
       <Class>Skin</Class>
       <AnimatedTexture>
@@ -3043,7 +3043,7 @@
       <PlayerClassType>0x031d</PlayerClassType>
       <NoSkinSelect/>
    </Object>
-   <Object type="0x2076" id="Christmas Knight">
+   <Object type="0x2076" id="Oryxmas Knight">
       <Skin/>
       <Class>Skin</Class>
       <AnimatedTexture>
@@ -3053,7 +3053,7 @@
       <PlayerClassType>0x031e</PlayerClassType>
       <NoSkinSelect/>
    </Object>
-   <Object type="0x2077" id="Christmas Paladin">
+   <Object type="0x2077" id="Oryxmas Paladin">
       <Skin/>
       <Class>Skin</Class>
       <AnimatedTexture>
@@ -3063,7 +3063,7 @@
       <PlayerClassType>0x031f</PlayerClassType>
       <NoSkinSelect/>
    </Object>
-   <Object type="0x2078" id="Christmas Assassin">
+   <Object type="0x2078" id="Oryxmas Assassin">
       <Skin/>
       <Class>Skin</Class>
       <AnimatedTexture>
@@ -3073,7 +3073,7 @@
       <PlayerClassType>0x0320</PlayerClassType>
       <NoSkinSelect/>
    </Object>
-   <Object type="0x2079" id="Christmas Necromancer">
+   <Object type="0x2079" id="Oryxmas Necromancer">
       <Skin/>
       <Class>Skin</Class>
       <AnimatedTexture>
@@ -3083,7 +3083,7 @@
       <PlayerClassType>0x0321</PlayerClassType>
       <NoSkinSelect/>
    </Object>
-   <Object type="0x207a" id="Christmas Hunter">
+   <Object type="0x207a" id="Oryxmas Huntress">
       <Skin/>
       <Class>Skin</Class>
       <AnimatedTexture>
@@ -3093,7 +3093,7 @@
       <PlayerClassType>0x0322</PlayerClassType>
       <NoSkinSelect/>
    </Object>
-   <Object type="0x207b" id="Christmas Mystic">
+   <Object type="0x207b" id="Oryxmas Mystic">
       <Skin/>
       <Class>Skin</Class>
       <AnimatedTexture>
@@ -3103,7 +3103,7 @@
       <PlayerClassType>0x0323</PlayerClassType>
       <NoSkinSelect/>
    </Object>
-   <Object type="0x207c" id="Christmas Trickster">
+   <Object type="0x207c" id="Oryxmas Trickster">
       <Skin/>
       <Class>Skin</Class>
       <AnimatedTexture>
@@ -3113,7 +3113,7 @@
       <PlayerClassType>0x0324</PlayerClassType>
       <NoSkinSelect/>
    </Object>
-   <Object type="0x207d" id="Christmas Sorceress">
+   <Object type="0x207d" id="Oryxmas Sorcerer">
       <Skin/>
       <Class>Skin</Class>
       <AnimatedTexture>
@@ -3123,7 +3123,7 @@
       <PlayerClassType>0x0325</PlayerClassType>
       <NoSkinSelect/>
    </Object>
-   <Object type="0x207e" id="Christmas Ninja">
+   <Object type="0x207e" id="Oryxmas Ninja">
       <Skin/>
       <Class>Skin</Class>
       <AnimatedTexture>
@@ -4733,12 +4733,72 @@
       <PlayerClassType>0x031d</PlayerClassType>
       <NoSkinSelect/>
    </Object>
-   <Object type="0x4ccb" id="Christmas Samurai">
+   <Object type="0x4ccb" id="Oryxmas Samurai">
       <Skin/>
       <Class>Skin</Class>
       <AnimatedTexture>
          <File>playerskins</File>
          <Index>424</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0311</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x5ea8" id="Time Traveler Trickster">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>425</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0324</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x5eaa" id="Skeleton Knight">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>426</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x031e</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x5eac" id="Skeleton Archer">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>427</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x307</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x5eae" id="Scrooge Priest">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>428</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x0310</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x5eb0" id="Glacius Knight">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>429</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x031e</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
+   <Object type="0x5eb2" id="Guillotiner Samurai">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>430</Index>
       </AnimatedTexture>
       <PlayerClassType>0x0311</PlayerClassType>
       <NoSkinSelect/>

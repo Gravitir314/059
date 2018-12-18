@@ -29,7 +29,7 @@
       <Flying/>
       <MaxHitPoints>12000</MaxHitPoints>
       <Defense>30</Defense>
-      <Exp>175</Exp>
+      <Exp>2500</Exp>
       <LeachHealth/>
       <EventChestBoss/>
       <God/>

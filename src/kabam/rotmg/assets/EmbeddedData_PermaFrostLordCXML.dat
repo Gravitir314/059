@@ -64,6 +64,9 @@
       <Defense>20</Defense>
       <Exp>350</Exp>
       <God/>
+      <Terrain>Mountains</Terrain>
+      <SpawnProb>0.75</SpawnProb>
+      <PerRealmMax>50</PerRealmMax>
       <Projectile id="0">
          <ObjectId>FR God Wave</ObjectId>
          <Damage>110</Damage>
@@ -223,6 +226,12 @@
          <Index>0x46</Index>
       </Texture>
       <Size>140</Size>
+      <Terrain>Mountains</Terrain>
+      <SpawnProb>1.0</SpawnProb>
+      <PerRealmMax>1</PerRealmMax>
+      <Enemy/>
+      <NoMiniMap/>
+      <Invincible/>
    </Object>
    <Object type="0x1fee" id="FR Boss">
       <DisplayId>Permafrost Lord</DisplayId>
@@ -291,6 +300,7 @@
          <Amplitude>1.8</Amplitude>
          <Frequency>1.0</Frequency>
          <PassesCover/>
+         <ConditionEffect duration="5">Weak</ConditionEffect>
       </Projectile>
       <Projectile id="5">
          <ObjectId>FR Boss Flake</ObjectId>
@@ -303,6 +313,7 @@
          <Amplitude>2.0</Amplitude>
          <Frequency>1.0</Frequency>
          <PassesCover/>
+         <ConditionEffect duration="5">Weak</ConditionEffect>
       </Projectile>
       <Projectile id="6">
          <ObjectId>FR Boss Flake</ObjectId>

@@ -233,7 +233,6 @@
          <Index>0x7c</Index>
       </Texture>
    </Object>
-   Wine Cellar Short
    <Object type="0x242" id="Wine Cellar Portal">
       <Class>Portal</Class>
       <IntergamePortal/>

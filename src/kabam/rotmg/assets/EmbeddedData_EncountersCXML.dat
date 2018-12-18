@@ -247,8 +247,8 @@
       <Enemy/>
       <Class>Character</Class>
       <Texture>
-         <File>lofiObjBig</File>
-         <Index>0xc0</Index>
+         <File>oryxHordeObjects16x16</File>
+         <Index>0x1a</Index>
       </Texture>
       <MaxHitPoints>3000</MaxHitPoints>
       <Defense>10</Defense>
@@ -259,8 +259,8 @@
       <ShadowSize>80</ShadowSize>
       <AltTexture id="1">
          <Texture>
-            <File>lofiObjBig</File>
-            <Index>0xc1</Index>
+            <File>oryxHordeObjects16x16</File>
+            <Index>0x1b</Index>
          </Texture>
       </AltTexture>
       <Projectile id="0">
@@ -298,15 +298,15 @@
       <DisplayId>Body Segment Bomb</DisplayId>
       <Class>Character</Class>
       <Texture>
-         <File>lofiObjBig</File>
-         <Index>0xb9</Index>
+         <File>oryxHordeObjects16x16</File>
+         <Index>0x23</Index>
       </Texture>
       <Exp>0</Exp>
       <Size>100</Size>
       <AltTexture id="1">
          <Texture>
-            <File>lofiObjBig</File>
-            <Index>0xaf</Index>
+            <File>oryxHordeObjects16x16</File>
+            <Index>0x20</Index>
          </Texture>
       </AltTexture>
       <Projectile id="0">
@@ -385,8 +385,8 @@
       <DisplayId>Eye of the Dragon</DisplayId>
       <Class>Character</Class>
       <AnimatedTexture>
-         <File>chars16x16rEncounters</File>
-         <Index>99</Index>
+         <File>oryxHordeChars16x16</File>
+         <Index>14</Index>
       </AnimatedTexture>
       <HitSound>monster/bats_hit</HitSound>
       <DeathSound>monster/bats_death</DeathSound>
@@ -403,38 +403,38 @@
       <Level>20</Level>
       <AltTexture id="1">
          <Texture>
-            <File>lofiObjBig</File>
-            <Index>0xb5</Index>
+            <File>oryxHordeObjects16x16</File>
+            <Index>0x29</Index>
          </Texture>
       </AltTexture>
       <AltTexture id="2">
          <Texture>
-            <File>lofiObjBig</File>
-            <Index>0xb6</Index>
+            <File>oryxHordeObjects16x16</File>
+            <Index>0x2a</Index>
          </Texture>
       </AltTexture>
       <AltTexture id="3">
          <Texture>
-            <File>lofiObjBig</File>
-            <Index>0xb7</Index>
+            <File>oryxHordeObjects16x16</File>
+            <Index>0x2b</Index>
          </Texture>
       </AltTexture>
       <AltTexture id="4">
          <Texture>
-            <File>lofiObjBig</File>
-            <Index>0xb8</Index>
+            <File>oryxHordeObjects16x16</File>
+            <Index>0x2c</Index>
          </Texture>
       </AltTexture>
       <AltTexture id="5">
          <Texture>
-            <File>lofiObjBig</File>
-            <Index>0xc6</Index>
+            <File>oryxHordeObjects16x16</File>
+            <Index>0x27</Index>
          </Texture>
       </AltTexture>
       <AltTexture id="6">
          <Texture>
-            <File>lofiObjBig</File>
-            <Index>0xc7</Index>
+            <File>oryxHordeObjects16x16</File>
+            <Index>0x28</Index>
          </Texture>
       </AltTexture>
       <Projectile id="0">
@@ -474,32 +474,32 @@
       <Class>Character</Class>
       <Group>Body Segments</Group>
       <Texture>
-         <File>lofiObjBig</File>
-         <Index>0xb0</Index>
+         <File>oryxHordeObjects16x16</File>
+         <Index>0x21</Index>
       </Texture>
       <Animation prob="1" period="1.2">
          <Frame time="0.4">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xaf</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x20</Index>
             </Texture>
          </Frame>
          <Frame time="0.2">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb0</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x21</Index>
             </Texture>
          </Frame>
          <Frame time="0.4">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb1</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x22</Index>
             </Texture>
          </Frame>
          <Frame time="0.2">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb0</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x21</Index>
             </Texture>
          </Frame>
       </Animation>
@@ -526,32 +526,32 @@
       <Class>Character</Class>
       <Group>Body Segments</Group>
       <Texture>
-         <File>lofiObjBig</File>
-         <Index>0xb0</Index>
+         <File>oryxHordeObjects16x16</File>
+         <Index>0x21</Index>
       </Texture>
       <Animation prob="1" period="1.2">
          <Frame time="0.4">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xaf</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x20</Index>
             </Texture>
          </Frame>
          <Frame time="0.2">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb0</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x21</Index>
             </Texture>
          </Frame>
          <Frame time="0.4">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb1</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x22</Index>
             </Texture>
          </Frame>
          <Frame time="0.2">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb0</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x21</Index>
             </Texture>
          </Frame>
       </Animation>
@@ -578,32 +578,32 @@
       <Class>Character</Class>
       <Group>Body Segments</Group>
       <Texture>
-         <File>lofiObjBig</File>
-         <Index>0xb0</Index>
+         <File>oryxHordeObjects16x16</File>
+         <Index>0x21</Index>
       </Texture>
       <Animation prob="1" period="1.2">
          <Frame time="0.4">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xaf</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x20</Index>
             </Texture>
          </Frame>
          <Frame time="0.2">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb0</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x21</Index>
             </Texture>
          </Frame>
          <Frame time="0.4">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb1</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x22</Index>
             </Texture>
          </Frame>
          <Frame time="0.2">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb0</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x21</Index>
             </Texture>
          </Frame>
       </Animation>
@@ -630,32 +630,32 @@
       <Class>Character</Class>
       <Group>Body Segments</Group>
       <Texture>
-         <File>lofiObjBig</File>
-         <Index>0xb0</Index>
+         <File>oryxHordeObjects16x16</File>
+         <Index>0x21</Index>
       </Texture>
       <Animation prob="1" period="1.2">
          <Frame time="0.4">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xaf</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x20</Index>
             </Texture>
          </Frame>
          <Frame time="0.2">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb0</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x21</Index>
             </Texture>
          </Frame>
          <Frame time="0.4">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb1</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x22</Index>
             </Texture>
          </Frame>
          <Frame time="0.2">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb0</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x21</Index>
             </Texture>
          </Frame>
       </Animation>
@@ -682,32 +682,32 @@
       <Class>Character</Class>
       <Group>Body Segments</Group>
       <Texture>
-         <File>lofiObjBig</File>
-         <Index>0xb0</Index>
+         <File>oryxHordeObjects16x16</File>
+         <Index>0x21</Index>
       </Texture>
       <Animation prob="1" period="1.2">
          <Frame time="0.4">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xaf</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x20</Index>
             </Texture>
          </Frame>
          <Frame time="0.2">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb0</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x21</Index>
             </Texture>
          </Frame>
          <Frame time="0.4">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb1</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x22</Index>
             </Texture>
          </Frame>
          <Frame time="0.2">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb0</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x21</Index>
             </Texture>
          </Frame>
       </Animation>
@@ -734,32 +734,32 @@
       <Class>Character</Class>
       <Group>Body Segments</Group>
       <Texture>
-         <File>lofiObjBig</File>
-         <Index>0xb0</Index>
+         <File>oryxHordeObjects16x16</File>
+         <Index>0x21</Index>
       </Texture>
       <Animation prob="1" period="1.2">
          <Frame time="0.4">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xaf</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x20</Index>
             </Texture>
          </Frame>
          <Frame time="0.2">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb0</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x21</Index>
             </Texture>
          </Frame>
          <Frame time="0.4">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb1</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x22</Index>
             </Texture>
          </Frame>
          <Frame time="0.2">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb0</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x21</Index>
             </Texture>
          </Frame>
       </Animation>
@@ -786,32 +786,32 @@
       <Class>Character</Class>
       <Group>Body Segments</Group>
       <Texture>
-         <File>lofiObjBig</File>
-         <Index>0xb0</Index>
+         <File>oryxHordeObjects16x16</File>
+         <Index>0x21</Index>
       </Texture>
       <Animation prob="1" period="1.2">
          <Frame time="0.4">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xaf</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x20</Index>
             </Texture>
          </Frame>
          <Frame time="0.2">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb0</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x21</Index>
             </Texture>
          </Frame>
          <Frame time="0.4">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb1</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x22</Index>
             </Texture>
          </Frame>
          <Frame time="0.2">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb0</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x21</Index>
             </Texture>
          </Frame>
       </Animation>
@@ -838,32 +838,32 @@
       <Class>Character</Class>
       <Group>Body Segments</Group>
       <Texture>
-         <File>lofiObjBig</File>
-         <Index>0xb0</Index>
+         <File>oryxHordeObjects16x16</File>
+         <Index>0x21</Index>
       </Texture>
       <Animation prob="1" period="1.2">
          <Frame time="0.4">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xaf</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x20</Index>
             </Texture>
          </Frame>
          <Frame time="0.2">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb0</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x21</Index>
             </Texture>
          </Frame>
          <Frame time="0.4">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb1</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x22</Index>
             </Texture>
          </Frame>
          <Frame time="0.2">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb0</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x21</Index>
             </Texture>
          </Frame>
       </Animation>
@@ -890,32 +890,32 @@
       <Class>Character</Class>
       <Group>Body Segments</Group>
       <Texture>
-         <File>lofiObjBig</File>
-         <Index>0xb0</Index>
+         <File>oryxHordeObjects16x16</File>
+         <Index>0x21</Index>
       </Texture>
       <Animation prob="1" period="1.2">
          <Frame time="0.4">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xaf</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x20</Index>
             </Texture>
          </Frame>
          <Frame time="0.2">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb0</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x21</Index>
             </Texture>
          </Frame>
          <Frame time="0.4">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb1</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x22</Index>
             </Texture>
          </Frame>
          <Frame time="0.2">
             <Texture>
-               <File>lofiObjBig</File>
-               <Index>0xb0</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x21</Index>
             </Texture>
          </Frame>
       </Animation>
@@ -941,8 +941,8 @@
       <Enemy/>
       <Class>Character</Class>
       <AnimatedTexture>
-         <File>chars16x16rEncounters</File>
-         <Index>100</Index>
+         <File>oryxHordeChars16x16</File>
+         <Index>15</Index>
       </AnimatedTexture>
       <HitSound>monster/bats_hit</HitSound>
       <DeathSound>monster/bats_death</DeathSound>
@@ -1331,10 +1331,11 @@
       </Projectile>
    </Object>
    <Object type="0x0d59" id="Cube God">
+      <DisplayId>Ice Cube God</DisplayId>
       <Class>Character</Class>
       <Texture>
-         <File>lofiChar216x16</File>
-         <Index>0x37</Index>
+         <File>oryxHordeObjects16x16</File>
+         <Index>0x0f</Index>
       </Texture>
       <HitSound>monster/cubes_hit</HitSound>
       <DeathSound>monster/cubes_death</DeathSound>
@@ -1343,6 +1344,7 @@
       <Hero/>
       <Quest/>
       <God/>
+      <Encounter/>
       <StasisImmune/>
       <Level>20</Level>
       <Cube/>
@@ -1365,8 +1367,8 @@
       <Class>Character</Class>
       <Enemy/>
       <Texture>
-         <File>lofiChar28x8</File>
-         <Index>0x40</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x59</Index>
       </Texture>
       <HitSound>monster/cubes_hit</HitSound>
       <DeathSound>monster/cubes_death</DeathSound>
@@ -1392,8 +1394,8 @@
       <Class>Character</Class>
       <Enemy/>
       <Texture>
-         <File>lofiChar28x8</File>
-         <Index>0x41</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5a</Index>
       </Texture>
       <HitSound>monster/cubes_hit</HitSound>
       <DeathSound>monster/cubes_death</DeathSound>
@@ -1414,8 +1416,8 @@
       <Class>Character</Class>
       <Enemy/>
       <Texture>
-         <File>lofiChar28x8</File>
-         <Index>0x42</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x5b</Index>
       </Texture>
       <HitSound>monster/cubes_hit</HitSound>
       <DeathSound>monster/cubes_death</DeathSound>
@@ -1451,7 +1453,6 @@
       <Hero/>
       <Quest/>
       <God/>
-      <Encounter/>
       <StasisImmune/>
       <Level>20</Level>
       <Projectile id="0">
@@ -1548,9 +1549,10 @@
    <Object type="0x0d5d" id="Pentaract Eye">
       <Enemy/>
       <Class>Character</Class>
+      <DisplayId>Frostaract</DisplayId>
       <Texture>
-         <File>lofiChar8x8</File>
-         <Index>0xb5</Index>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x2c</Index>
       </Texture>
       <MaxHitPoints>650</MaxHitPoints>
       <Size>80</Size>
@@ -1573,50 +1575,50 @@
       <Animation prob="1.0" period="0.0">
          <Frame time="0.2">
             <Texture>
-               <File>lofiCharBig</File>
-               <Index>0x00</Index>
-            </Texture>
-         </Frame>
-         <Frame time="0.4">
-            <Texture>
-               <File>lofiChar216x16</File>
+               <File>oryxHordeObjects16x16</File>
                <Index>0x38</Index>
             </Texture>
          </Frame>
+         <Frame time="0.4">
+            <Texture>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x3b</Index>
+            </Texture>
+         </Frame>
          <Frame time="0.2">
             <Texture>
-               <File>lofiCharBig</File>
-               <Index>0x00</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x38</Index>
             </Texture>
          </Frame>
          <Frame time="0.1">
             <Texture>
-               <File>lofiCharBig</File>
-               <Index>0x01</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x39</Index>
             </Texture>
          </Frame>
          <Frame time="0.2">
             <Texture>
-               <File>lofiCharBig</File>
-               <Index>0x02</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x3a</Index>
             </Texture>
          </Frame>
          <Frame time="0.4">
             <Texture>
-               <File>lofiCharBig</File>
-               <Index>0x03</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x3b</Index>
             </Texture>
          </Frame>
          <Frame time="0.2">
             <Texture>
-               <File>lofiCharBig</File>
-               <Index>0x02</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x3a</Index>
             </Texture>
          </Frame>
          <Frame time="0.1">
             <Texture>
-               <File>lofiCharBig</File>
-               <Index>0x01</Index>
+               <File>oryxHordeObjects16x16</File>
+               <Index>0x39</Index>
             </Texture>
          </Frame>
       </Animation>
@@ -1739,7 +1741,7 @@
       <Size>0</Size>
    </Object>
    <Object type="0x0d61" id="Hermit God">
-      <DisplayId>Hermit God</DisplayId>
+      <DisplayId>Hat God</DisplayId>
       <Group>Hermit God Encounter</Group>
       <Enemy/>
       <Class>Character</Class>
@@ -1752,25 +1754,25 @@
       <PerRealmMax>1</PerRealmMax>
       <KeepDamageRecord/>
       <AnimatedTexture>
-         <File>chars16x16dEncounters2</File>
-         <Index>11</Index>
+         <File>oryxHordeChars16x16</File>
+         <Index>22</Index>
       </AnimatedTexture>
       <Portrait>
          <AnimatedTexture>
-            <File>chars16x16dEncounters2</File>
-            <Index>11</Index>
+            <File>oryxHordeChars16x16</File>
+            <Index>22</Index>
          </AnimatedTexture>
       </Portrait>
       <AltTexture id="1">
          <AnimatedTexture>
-            <File>chars16x16dEncounters2</File>
-            <Index>12</Index>
+            <File>oryxHordeChars16x16</File>
+            <Index>24</Index>
          </AnimatedTexture>
       </AltTexture>
       <AltTexture id="2">
          <AnimatedTexture>
-            <File>chars16x16dEncounters2</File>
-            <Index>13</Index>
+            <File>oryxHordeChars16x16</File>
+            <Index>25</Index>
          </AnimatedTexture>
       </AltTexture>
       <AltTexture id="3">
@@ -1781,8 +1783,8 @@
       </AltTexture>
       <AltTexture id="4">
          <AnimatedTexture>
-            <File>chars16x16dEncounters2</File>
-            <Index>14</Index>
+            <File>oryxHordeChars16x16</File>
+            <Index>23</Index>
          </AnimatedTexture>
       </AltTexture>
       <HitSound>monster/skeletons_hit</HitSound>
@@ -1835,8 +1837,8 @@
       <HitSound>monster/wooden_walls_hit</HitSound>
       <DeathSound>monster/stone_walls_death</DeathSound>
       <AnimatedTexture>
-         <File>chars8x8rEncounters</File>
-         <Index>21</Index>
+         <File>oryxHordeChars8x8</File>
+         <Index>10</Index>
       </AnimatedTexture>
       <Projectile id="0">
          <ObjectId>Snake Shot Yellow</ObjectId>
@@ -1885,13 +1887,13 @@
       <Class>Character</Class>
       <ShadowSize>100</ShadowSize>
       <AnimatedTexture>
-         <File>chars16x16rEncounters</File>
-         <Index>11</Index>
+         <File>oryxHordeChars16x16</File>
+         <Index>26</Index>
       </AnimatedTexture>
       <AltTexture id="1">
          <AnimatedTexture>
-            <File>chars16x16rEncounters</File>
-            <Index>12</Index>
+            <File>oryxHordeChars16x16</File>
+            <Index>27</Index>
          </AnimatedTexture>
       </AltTexture>
       <HitSound>monster/dwarves_death</HitSound>
@@ -2072,10 +2074,10 @@
    <Object type="0x0e4f" id="Water Mine">
       <Enemy/>
       <Class>Character</Class>
-      <DisplayId>Water Mine</DisplayId>
+      <DisplayId>Ice Mine</DisplayId>
       <AnimatedTexture>
-         <File>chars16x16rEncounters</File>
-         <Index>38</Index>
+         <File>oryxHordeChars16x16</File>
+         <Index>18</Index>
       </AnimatedTexture>
       <HitSound>monster/traps_hit</HitSound>
       <DeathSound>monster/traps_death</DeathSound>
@@ -2085,7 +2087,7 @@
       <Defense>30</Defense>
       <Exp>0</Exp>
       <Projectile id="0">
-         <ObjectId>LavaBombBlast</ObjectId>
+         <ObjectId>XMAS LavaBombBlast</ObjectId>
          <Damage>80</Damage>
          <Speed>60</Speed>
          <Size>120</Size>
@@ -2095,10 +2097,10 @@
    <Object type="0x0e4e" id="Water Mine Path">
       <Enemy/>
       <Class>Character</Class>
-      <DisplayId>Water Mine</DisplayId>
+      <DisplayId>Ice Mine</DisplayId>
       <AnimatedTexture>
-         <File>chars16x16rEncounters</File>
-         <Index>38</Index>
+         <File>oryxHordeChars16x16</File>
+         <Index>18</Index>
       </AnimatedTexture>
       <HitSound>monster/traps_hit</HitSound>
       <DeathSound>monster/traps_death</DeathSound>
@@ -2108,7 +2110,7 @@
       <Defense>30</Defense>
       <Exp>0</Exp>
       <Projectile id="0">
-         <ObjectId>LavaBombBlast</ObjectId>
+         <ObjectId>XMAS LavaBombBlast</ObjectId>
          <Damage>80</Damage>
          <Speed>60</Speed>
          <Size>120</Size>
@@ -2118,10 +2120,10 @@
    <Object type="0x0e3d" id="Beach Spectre">
       <Enemy/>
       <Class>Character</Class>
-      <DisplayId>Beach Spectre</DisplayId>
+      <DisplayId>Ice Spectre</DisplayId>
       <AnimatedTexture>
-         <File>chars8x8rEncounters</File>
-         <Index>35</Index>
+         <File>oryxHordeChars8x8</File>
+         <Index>9</Index>
       </AnimatedTexture>
       <HitSound>monster/dragons_hit</HitSound>
       <DeathSound>monster/dragons_death</DeathSound>
@@ -2134,7 +2136,7 @@
       <Z>0.2</Z>
       <Exp>0</Exp>
       <Projectile>
-         <ObjectId>Ghostly Arrow</ObjectId>
+         <ObjectId>XMAS Ghostly Arrow</ObjectId>
          <Speed>66</Speed>
          <Damage>35</Damage>
          <Size>50</Size>
@@ -2142,81 +2144,85 @@
       </Projectile>
    </Object>
    <Object type="0x0e3c" id="Beach Spectre Spawner">
-      <Class>GameObject</Class>
+      <Class>Character</Class>
       <AnimatedTexture>
          <File>chars8x8rEncounters</File>
          <Index>36</Index>
       </AnimatedTexture>
       <Size>0</Size>
+      <ShadowSize>0</ShadowSize>
+      <NoMiniMap/>
    </Object>
    <Object type="0x0e3b" id="Tempest Cloud">
       <Enemy/>
-      <Class>GameObject</Class>
+      <Class>Character</Class>
       <Texture>
          <File>invisible</File>
          <Index>0</Index>
       </Texture>
-      <DisplayId>Tempest Cloud</DisplayId>
+      <DisplayId>Blizzard Cloud</DisplayId>
       <AltTexture id="1">
          <Texture>
-            <File>lofiObjBig</File>
-            <Index>0x33</Index>
+            <File>oryxHordeObjects16x16</File>
+            <Index>0x30</Index>
          </Texture>
       </AltTexture>
       <AltTexture id="2">
          <Texture>
-            <File>lofiObjBig</File>
-            <Index>0x33</Index>
+            <File>oryxHordeObjects16x16</File>
+            <Index>0x30</Index>
          </Texture>
       </AltTexture>
       <AltTexture id="3">
          <Texture>
-            <File>lofiObjBig</File>
-            <Index>0x34</Index>
+            <File>oryxHordeObjects16x16</File>
+            <Index>0x31</Index>
          </Texture>
       </AltTexture>
       <AltTexture id="4">
          <Texture>
-            <File>lofiObjBig</File>
-            <Index>0x35</Index>
+            <File>oryxHordeObjects16x16</File>
+            <Index>0x32</Index>
          </Texture>
       </AltTexture>
       <AltTexture id="5">
          <Texture>
-            <File>lofiObjBig</File>
-            <Index>0x36</Index>
+            <File>oryxHordeObjects16x16</File>
+            <Index>0x33</Index>
          </Texture>
       </AltTexture>
       <AltTexture id="6">
          <Texture>
-            <File>lofiObjBig</File>
-            <Index>0x37</Index>
+            <File>oryxHordeObjects16x16</File>
+            <Index>0x34</Index>
          </Texture>
       </AltTexture>
       <AltTexture id="7">
          <Texture>
-            <File>lofiObjBig</File>
-            <Index>0x38</Index>
+            <File>oryxHordeObjects16x16</File>
+            <Index>0x35</Index>
          </Texture>
       </AltTexture>
       <AltTexture id="8">
          <Texture>
-            <File>lofiObjBig</File>
-            <Index>0x39</Index>
+            <File>oryxHordeObjects16x16</File>
+            <Index>0x36</Index>
          </Texture>
       </AltTexture>
       <AltTexture id="9">
          <Texture>
-            <File>lofiObjBig</File>
-            <Index>0x3a</Index>
+            <File>oryxHordeObjects16x16</File>
+            <Index>0x37</Index>
          </Texture>
       </AltTexture>
+      <Invincible/>
+      <HitSound>monster/sprites_hit</HitSound>
+      <DeathSound>monster/sprites_death</DeathSound>
       <Size>0</Size>
       <Flying/>
       <Z>0.8</Z>
-      <Invincible/>
       <Projectile id="0">
-         <ObjectId>Lightning Bolt</ObjectId>
+         <ObjectId>XMAS Lightning Bolt</ObjectId>
          <Damage>66</Damage>
          <Speed>40</Speed>
          <Size>80</Size>
@@ -2225,10 +2231,10 @@
    </Object>
    <Object type="0x0e39" id="Vengeful Spirit">
       <Class>Character</Class>
-      <DisplayId>Vengeful Spirit</DisplayId>
+      <DisplayId>Glacial Spirit</DisplayId>
       <AnimatedTexture>
-         <File>chars16x16rEncounters</File>
-         <Index>39</Index>
+         <File>oryxHordeChars16x16</File>
+         <Index>19</Index>
       </AnimatedTexture>
       <HitSound>monster/flaming_skulls_hit</HitSound>
       <DeathSound>monster/beholder_death</DeathSound>
@@ -2240,7 +2246,7 @@
       <Z>0.3</Z>
       <Flying/>
       <Projectile>
-         <ObjectId>Ghostly Blast</ObjectId>
+         <ObjectId>XMAS Ghostly Blast</ObjectId>
          <Speed>85</Speed>
          <Damage>65</Damage>
          <Size>100</Size>
@@ -2262,27 +2268,34 @@
       <NoMiniMap/>
       <PerRealmMax>1</PerRealmMax>
       <Encounter/>
-      <Level>20</Level>
+      <Projectile id="0">
+         <ObjectId>Invisible</ObjectId>
+         <Damage>75</Damage>
+         <Speed>0</Speed>
+         <Size>100</Size>
+         <LifetimeMS>5000</LifetimeMS>
+         <MultiHit/>
+      </Projectile>
       <Invincible/>
    </Object>
    <Object type="0x0e37" id="Ghost Ship">
       <Enemy/>
       <Class>Character</Class>
-      <DisplayId>Ghost Ship</DisplayId>
+      <DisplayId>Frozen Ship</DisplayId>
       <AnimatedTexture>
-         <File>chars16x16rEncounters</File>
-         <Index>37</Index>
+         <File>oryxHordeChars16x16</File>
+         <Index>16</Index>
       </AnimatedTexture>
       <AltTexture id="1">
          <AnimatedTexture>
-            <File>chars16x16rEncounters</File>
-            <Index>36</Index>
+            <File>oryxHordeChars16x16</File>
+            <Index>17</Index>
          </AnimatedTexture>
       </AltTexture>
       <AltTexture id="2">
          <AnimatedTexture>
-            <File>chars16x16rEncounters</File>
-            <Index>37</Index>
+            <File>oryxHordeChars16x16</File>
+            <Index>16</Index>
          </AnimatedTexture>
          <Effect particle="SwirlingMist" cooldown="0.2">XMLEffect</Effect>
       </AltTexture>
@@ -2290,7 +2303,7 @@
       <DeathSound>monster/flaming_skulls_death</DeathSound>
       <Size>130</Size>
       <ShadowSize>100</ShadowSize>
-      <MaxHitPoints>50000</MaxHitPoints>
+      <MaxHitPoints>66000</MaxHitPoints>
       <Defense>40</Defense>
       <Flying/>
       <Hero/>
@@ -2302,7 +2315,7 @@
       <ParalyzeImmune/>
       <KeepDamageRecord/>
       <Projectile id="0">
-         <ObjectId>Cannonball</ObjectId>
+         <ObjectId>XMAS Cannonball</ObjectId>
          <Damage>80</Damage>
          <Speed>60</Speed>
          <Size>80</Size>
@@ -2310,7 +2323,7 @@
          <MultiHit/>
       </Projectile>
       <Projectile id="1">
-         <ObjectId>Giant Cannonball</ObjectId>
+         <ObjectId>XMAS Giant Cannonball</ObjectId>
          <Damage>250</Damage>
          <Speed>40</Speed>
          <Size>180</Size>

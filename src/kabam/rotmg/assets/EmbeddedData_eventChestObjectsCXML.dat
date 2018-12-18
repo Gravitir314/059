@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <Objects>
+   <Object type="0x76f" id="Frozen Chest">
+      <Group>Crystals</Group>
+      <Enemy/>
+      <Class>Character</Class>
+      <Texture>
+         <File>battleOryxObjects16x16</File>
+         <Index>0x10</Index>
+      </Texture>
+      <HitSound>monster/stone_walls_hit</HitSound>
+      <DeathSound>monster/stone_walls_death</DeathSound>
+      <Size>120</Size>
+      <MaxHitPoints>50000</MaxHitPoints>
+      <Defense>0</Defense>
+      <Exp>0</Exp>
+   </Object>
    <Object type="0x5b4a" id="Halloween Haunted Event Chest">
       <DisplayId>Event Chest</DisplayId>
       <Class>Character</Class>
@@ -1170,6 +1185,21 @@
       <Exp>1000</Exp>
       <StasisImmune/>
    </Object>
+   <Object type="0x7513" id="Xmas Event Chest">
+      <DisplayId>Santa's Sleigh</DisplayId>
+      <Class>Character</Class>
+      <Enemy/>
+      <KeepDamageRecord/>
+      <Texture>
+         <File>battleOryxObjects16x16</File>
+         <Index>0x20</Index>
+      </Texture>
+      <MaxHitPoints>60000</MaxHitPoints>
+      <Defense>0</Defense>
+      <Size>160</Size>
+      <Exp>1000</Exp>
+      <StasisImmune/>
+   </Object>
    <Object type="0x3cdd" id="Realm Closed Event Chest">
       <DisplayId>Event Chest</DisplayId>
       <Class>Character</Class>
@@ -1204,5 +1234,462 @@
       <ShadowSize>0</ShadowSize>
       <Exp>1000</Exp>
       <StasisImmune/>
+   </Object>
+   <Object type="0x7381" id="bs">
+      <DisplayId>????</DisplayId>
+      <Class>Character</Class>
+      <Enemy/>
+      <AnimatedTexture>
+         <File>chars16x16dEncounters2</File>
+         <Index>58</Index>
+      </AnimatedTexture>
+      <AltTexture id="1">
+         <AnimatedTexture>
+            <File>chars16x16dEncounters2</File>
+            <Index>59</Index>
+         </AnimatedTexture>
+      </AltTexture>
+      <AltTexture id="2">
+         <AnimatedTexture>
+            <File>chars16x16dEncounters2</File>
+            <Index>60</Index>
+         </AnimatedTexture>
+      </AltTexture>
+      <MaxHitPoints>20000</MaxHitPoints>
+      <Defense>20</Defense>
+      <Size>100</Size>
+      <Exp>1000</Exp>
+      <StasisImmune/>
+      <Projectile id="0">
+         <ObjectId>White Bullet</ObjectId>
+         <Speed>70</Speed>
+         <Damage>60</Damage>
+         <Size>60</Size>
+         <LifetimeMS>2000</LifetimeMS>
+         <MultiHit/>
+      </Projectile>
+      <Projectile id="1">
+         <ObjectId>White Bullet</ObjectId>
+         <Speed>40</Speed>
+         <Damage>160</Damage>
+         <Size>80</Size>
+         <LifetimeMS>4000</LifetimeMS>
+         <MultiHit/>
+      </Projectile>
+   </Object>
+   <Object type="0x226d" id="Dimitus">
+      <DisplayId>Dimitus</DisplayId>
+      <Class>Character</Class>
+      <Enemy/>
+      <AnimatedTexture>
+         <File>chars16x16dEncounters</File>
+         <Index>39</Index>
+      </AnimatedTexture>
+      <HitSound>weapon/dirk</HitSound>
+      <DeathSound>monster/archdemon_death</DeathSound>
+      <MaxHitPoints>40000</MaxHitPoints>
+      <Defense>20</Defense>
+      <Size>100</Size>
+      <Exp>2000</Exp>
+      <StasisImmune/>
+      <StunImmune/>
+      <ParalyzeImmune/>
+      <Projectile id="0">
+         <ObjectId>White Flame</ObjectId>
+         <Speed>50</Speed>
+         <Damage>120</Damage>
+         <Size>100</Size>
+         <LifetimeMS>5000</LifetimeMS>
+         <MultiHit/>
+      </Projectile>
+      <Projectile id="1">
+         <ObjectId>White Superblast</ObjectId>
+         <Speed>40</Speed>
+         <Damage>200</Damage>
+         <Size>140</Size>
+         <LifetimeMS>6000</LifetimeMS>
+         <MultiHit/>
+      </Projectile>
+      <Projectile id="2">
+         <ObjectId>Cursed Slash</ObjectId>
+         <Speed>65</Speed>
+         <Damage>80</Damage>
+         <Size>80</Size>
+         <LifetimeMS>4000</LifetimeMS>
+         <MultiHit/>
+         <ConditionEffect duration="4">Bleeding</ConditionEffect>
+      </Projectile>
+      <Projectile id="3">
+         <ObjectId>Green Boomerang</ObjectId>
+         <Speed>50</Speed>
+         <Damage>60</Damage>
+         <Size>80</Size>
+         <LifetimeMS>4000</LifetimeMS>
+         <MultiHit/>
+         <ConditionEffect duration="4">Slowed</ConditionEffect>
+      </Projectile>
+      <Projectile id="4">
+         <ObjectId>Ice Magic</ObjectId>
+         <Speed>30</Speed>
+         <Damage>30</Damage>
+         <Size>120</Size>
+         <LifetimeMS>5000</LifetimeMS>
+         <MultiHit/>
+         <ConditionEffect duration="1.0">Paralyzed</ConditionEffect>
+      </Projectile>
+      <Projectile id="5">
+         <ObjectId>Dark Gray Spinner</ObjectId>
+         <Speed>50</Speed>
+         <Damage>60</Damage>
+         <Size>100</Size>
+         <LifetimeMS>5000</LifetimeMS>
+         <MultiHit/>
+         <ConditionEffect duration="4">Weak</ConditionEffect>
+      </Projectile>
+      <Projectile id="6">
+         <ObjectId>Purple Shuriken</ObjectId>
+         <Speed>50</Speed>
+         <Damage>60</Damage>
+         <Size>100</Size>
+         <LifetimeMS>5000</LifetimeMS>
+         <MultiHit/>
+         <ConditionEffect duration="4">Dazed</ConditionEffect>
+      </Projectile>
+      <Projectile id="7">
+         <ObjectId>Mute Spell</ObjectId>
+         <Speed>50</Speed>
+         <Damage>60</Damage>
+         <Size>100</Size>
+         <LifetimeMS>5000</LifetimeMS>
+         <MultiHit/>
+         <ConditionEffect duration="5">Silenced</ConditionEffect>
+      </Projectile>
+   </Object>
+   <Object type="0x7512" id="Realm Closed Oryxmas Gift">
+      <DisplayId>Oryxmas Gift</DisplayId>
+      <Class>Character</Class>
+      <Enemy/>
+      <KeepDamageRecord/>
+      <Quest/>
+      <Level>20</Level>
+      <RandomTexture>
+         <Texture>
+            <File>santaWorkshopObjects16x16</File>
+            <Index>0x1e</Index>
+         </Texture>
+         <Texture>
+            <File>santaWorkshopObjects16x16</File>
+            <Index>0x2e</Index>
+         </Texture>
+         <Texture>
+            <File>santaWorkshopObjects16x16</File>
+            <Index>0x3e</Index>
+         </Texture>
+      </RandomTexture>
+      <MaxHitPoints>60000</MaxHitPoints>
+      <Defense>0</Defense>
+      <Size>180</Size>
+      <Exp>1000</Exp>
+      <StasisImmune/>
+   </Object>
+   <Object type="0x750f" id="Oryxmas Event Gift Small">
+      <DisplayId>Small Oryxmas Gift</DisplayId>
+      <Enemy/>
+      <Class>Character</Class>
+      <RandomTexture>
+         <Texture>
+            <File>santaWorkshopObjects8x8</File>
+            <Index>0x40</Index>
+         </Texture>
+         <Texture>
+            <File>santaWorkshopObjects8x8</File>
+            <Index>0x43</Index>
+         </Texture>
+         <Texture>
+            <File>santaWorkshopObjects8x8</File>
+            <Index>0x41</Index>
+         </Texture>
+         <Texture>
+            <File>santaWorkshopObjects8x8</File>
+            <Index>0x42</Index>
+         </Texture>
+         <Texture>
+            <File>santaWorkshopObjects8x8</File>
+            <Index>0x44</Index>
+         </Texture>
+         <Texture>
+            <File>santaWorkshopObjects8x8</File>
+            <Index>0x45</Index>
+         </Texture>
+         <Texture>
+            <File>santaWorkshopObjects8x8</File>
+            <Index>0x46</Index>
+         </Texture>
+         <Texture>
+            <File>santaWorkshopObjects8x8</File>
+            <Index>0x47</Index>
+         </Texture>
+      </RandomTexture>
+      <HitSound>monster/default_hit</HitSound>
+      <DeathSound>monster/default_death</DeathSound>
+      <Size>80</Size>
+      <ShadowSize>80</ShadowSize>
+      <MaxHitPoints>2000</MaxHitPoints>
+      <Defense>0</Defense>
+      <Exp>30</Exp>
+      <StasisImmune/>
+   </Object>
+   <Object type="0x7510" id="Oryxmas Event Gift Medium">
+      <DisplayId>Medium Oryxmas Gift</DisplayId>
+      <Enemy/>
+      <Class>Character</Class>
+      <RandomTexture>
+         <Texture>
+            <File>santaWorkshopObjects8x8</File>
+            <Index>0x48</Index>
+         </Texture>
+         <Texture>
+            <File>santaWorkshopObjects8x8</File>
+            <Index>0x49</Index>
+         </Texture>
+         <Texture>
+            <File>santaWorkshopObjects8x8</File>
+            <Index>0x4a</Index>
+         </Texture>
+         <Texture>
+            <File>santaWorkshopObjects8x8</File>
+            <Index>0x4b</Index>
+         </Texture>
+         <Texture>
+            <File>santaWorkshopObjects8x8</File>
+            <Index>0x4c</Index>
+         </Texture>
+         <Texture>
+            <File>santaWorkshopObjects8x8</File>
+            <Index>0x4d</Index>
+         </Texture>
+         <Texture>
+            <File>santaWorkshopObjects8x8</File>
+            <Index>0x4e</Index>
+         </Texture>
+         <Texture>
+            <File>santaWorkshopObjects8x8</File>
+            <Index>0x4f</Index>
+         </Texture>
+      </RandomTexture>
+      <HitSound>monster/default_hit</HitSound>
+      <DeathSound>monster/default_death</DeathSound>
+      <Size>80</Size>
+      <ShadowSize>80</ShadowSize>
+      <MaxHitPoints>2000</MaxHitPoints>
+      <Defense>0</Defense>
+      <Exp>30</Exp>
+      <StasisImmune/>
+   </Object>
+   <Object type="0x7511" id="Oryxmas Event Gift Large">
+      <DisplayId>Large Oryxmas Gift</DisplayId>
+      <Enemy/>
+      <Class>Character</Class>
+      <RandomTexture>
+         <Texture>
+            <File>santaWorkshopObjects16x16</File>
+            <Index>0x1a</Index>
+         </Texture>
+         <Texture>
+            <File>santaWorkshopObjects16x16</File>
+            <Index>0x1b</Index>
+         </Texture>
+         <Texture>
+            <File>santaWorkshopObjects16x16</File>
+            <Index>0x1c</Index>
+         </Texture>
+         <Texture>
+            <File>santaWorkshopObjects16x16</File>
+            <Index>0x1d</Index>
+         </Texture>
+         <Texture>
+            <File>santaWorkshopObjects16x16</File>
+            <Index>0x1e</Index>
+         </Texture>
+      </RandomTexture>
+      <HitSound>monster/default_hit</HitSound>
+      <DeathSound>monster/default_death</DeathSound>
+      <Size>80</Size>
+      <ShadowSize>80</ShadowSize>
+      <MaxHitPoints>2000</MaxHitPoints>
+      <Defense>0</Defense>
+      <Exp>30</Exp>
+      <StasisImmune/>
+      s
+   </Object>
+   <Object type="0x6413" id="Ice Spike">
+      <Group>Snowmonsters</Group>
+      <Enemy/>
+      <Class>Character</Class>
+      <Texture>
+         <File>lofiObj3</File>
+         <Index>0x45d</Index>
+      </Texture>
+      <Size>100</Size>
+      <Exp>0</Exp>
+      <Invincible/>
+      <Projectile id="0">
+         <ObjectId>Invisible</ObjectId>
+         <Damage>130</Damage>
+         <Speed>400</Speed>
+         <LifetimeMS>100</LifetimeMS>
+         <Size>75</Size>
+         <MultiHit/>
+         <ConditionEffect duration="3">Armor Broken</ConditionEffect>
+      </Projectile>
+   </Object>
+   <Object type="0x640f" id="Snowflakes Orbit">
+      <Group>Snowmonsters</Group>
+      <Enemy/>
+      <Class>Character</Class>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x29</Index>
+      </Texture>
+      <Size>50</Size>
+      <MaxHitPoints>5000</MaxHitPoints>
+      <Defense>0</Defense>
+      <Exp>0</Exp>
+      <StasisImmune/>
+      <Projectile id="0">
+         <ObjectId>Invisible</ObjectId>
+         <Damage>100</Damage>
+         <Speed>0</Speed>
+         <Size>80</Size>
+         <LifetimeMS>100</LifetimeMS>
+         <ConditionEffect duration="3">Armor Broken</ConditionEffect>
+         <ConditionEffect duration="3">Weak</ConditionEffect>
+      </Projectile>
+   </Object>
+   <Object type="0x6412" id="Big Snowflakes Orbit">
+      <Group>Snowmonsters</Group>
+      <Enemy/>
+      <Class>Character</Class>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x29</Index>
+      </Texture>
+      <Size>120</Size>
+      <MaxHitPoints>10000</MaxHitPoints>
+      <Defense>0</Defense>
+      <Exp>0</Exp>
+      <StasisImmune/>
+      <Projectile id="0">
+         <ObjectId>Invisible</ObjectId>
+         <Damage>120</Damage>
+         <Speed>0</Speed>
+         <Size>80</Size>
+         <LifetimeMS>100</LifetimeMS>
+         <ConditionEffect duration="1">Slowed</ConditionEffect>
+      </Projectile>
+   </Object>
+   <Object type="0x640c" id="Presentenichko">
+      <Group>Snowmonsters</Group>
+      <Enemy/>
+      <Class>Character</Class>
+      <Texture>
+         <File>santaWorkshopObjects8x8</File>
+         <Index>0x5b</Index>
+      </Texture>
+      <Size>150</Size>
+      <MaxHitPoints>20000</MaxHitPoints>
+      <Defense>0</Defense>
+      <Exp>0</Exp>
+      <StasisImmune/>
+   </Object>
+   <Object type="0xb046" id="Snowmonster">
+      <Group>Snowmonsters</Group>
+      <Enemy/>
+      <Class>Character</Class>
+      <Texture>
+         <File>santaWorkshopObjects8x8</File>
+         <Index>0x0b</Index>
+      </Texture>
+      <Size>100</Size>
+      <MaxHitPoints>3000</MaxHitPoints>
+      <Defense>0</Defense>
+      <Exp>0</Exp>
+      <StasisImmune/>
+      <Projectile id="0">
+         <ObjectId>snow flakes</ObjectId>
+         <Damage>130</Damage>
+         <Speed>40</Speed>
+         <LifetimeMS>2000</LifetimeMS>
+      </Projectile>
+   </Object>
+   <Object type="0x640b" id="Snowy The Frost God">
+      <DisplayId>Snowy The Frost God</DisplayId>
+      <Class>Character</Class>
+      <Enemy/>
+      <KeepDamageRecord/>
+      <Quest/>
+      <Level>20</Level>
+      <Projectile id="0">
+         <ObjectId>Ice Spinner</ObjectId>
+         <Damage>160</Damage>
+         <Speed>50</Speed>
+         <LifetimeMS>3000</LifetimeMS>
+         <Size>120</Size>
+      </Projectile>
+      <Projectile id="1">
+         <ObjectId>Snowy Boulder</ObjectId>
+         <Damage>200</Damage>
+         <Speed>65</Speed>
+         <LifetimeMS>5000</LifetimeMS>
+         <Size>200</Size>
+         <ConditionEffect duration="5">Slowed</ConditionEffect>
+      </Projectile>
+      <Projectile id="2">
+         <ObjectId>Invisible</ObjectId>
+         <Damage>0</Damage>
+         <Speed>0</Speed>
+         <LifetimeMS>0</LifetimeMS>
+         <Size>0</Size>
+      </Projectile>
+      <Projectile id="4">
+         <ObjectId>Snowy God Bullet 2</ObjectId>
+         <Damage>140</Damage>
+         <Speed>50</Speed>
+         <LifetimeMS>3000</LifetimeMS>
+         <Size>120</Size>
+         <MultiHit/>
+      </Projectile>
+      <AnimatedTexture>
+         <File>chars16x16rEncounters</File>
+         <Index>136</Index>
+      </AnimatedTexture>
+      <MaxHitPoints>60000</MaxHitPoints>
+      <Defense>0</Defense>
+      <Size>240</Size>
+      <ShadowSize>0</ShadowSize>
+      <Exp>1000</Exp>
+      <StasisImmune/>
+      <StunImmune/>
+   </Object>
+   <Object type="0x640e" id="Snowball Thrower">
+      <DisplayId>Snowball Thrower</DisplayId>
+      <Class>Character</Class>
+      <Group>Snowmonsters</Group>
+      <Enemy/>
+      <Texture>
+         <File>lofiObjBig</File>
+         <Index>0x149</Index>
+      </Texture>
+      <MaxHitPoints>10000</MaxHitPoints>
+      <Defense>10</Defense>
+      <Exp>0</Exp>
+      <Projectile id="0">
+         <ObjectId>Snowball Bullet</ObjectId>
+         <Speed>30</Speed>
+         <Amplitude>0.6</Amplitude>
+         <Damage>150</Damage>
+         <LifetimeMS>6000</LifetimeMS>
+         <MultiHit/>
+      </Projectile>
    </Object>
 </Objects>

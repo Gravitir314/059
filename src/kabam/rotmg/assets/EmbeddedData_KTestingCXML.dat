@@ -305,20 +305,6 @@
       <feedPower>100000</feedPower>
       <Soulbound/>
    </Object>
-   <Object type="0x705e" id="InvinceMe">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x4e</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Renders the user invincible for a day.</Description>
-      <InvUse/>
-      <BagType>6</BagType>
-      <Activate effect="Invincible" duration="86400">ConditionEffectSelf</Activate>
-      <Soulbound/>
-   </Object>
    <Object type="0x108f" id="TG TP">
       <Class>GameObject</Class>
       <Enemy/>

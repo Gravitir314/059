@@ -12,7 +12,7 @@
       <DeathSound>monster/bats_death</DeathSound>
       <MaxHitPoints>1000</MaxHitPoints>
       <Defense>5</Defense>
-      <Exp>120</Exp>
+      <Exp>200</Exp>
       <Size>140</Size>
       <Flying/>
       <Z>0.2</Z>

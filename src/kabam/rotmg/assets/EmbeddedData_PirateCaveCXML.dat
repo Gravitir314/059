@@ -16,7 +16,7 @@
       <Quest/>
       <StasisImmune/>
       <Level>1</Level>
-      <Exp>64</Exp>
+      <Exp>100</Exp>
       <NoArticle/>
       <EventChestBoss/>
       <Projectile id="0">

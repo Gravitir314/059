@@ -180,7 +180,7 @@
       <ShadowSize>50</ShadowSize>
       <MaxHitPoints>60000</MaxHitPoints>
       <Defense>20</Defense>
-      <Exp>9750</Exp>
+      <Exp>10000</Exp>
       <Quest/>
       <StasisImmune/>
       <StunImmune/>

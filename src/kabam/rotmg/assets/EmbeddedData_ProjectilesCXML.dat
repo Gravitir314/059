@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <Objects>
+   <Object type="0x267" id="Wakizashi Slash Xmas">
+      <Class>Projectile</Class>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0xcf</Index>
+      </Texture>
+      <AngleCorrection>1</AngleCorrection>
+   </Object>
    <Object type="0xf3d" id="Knight DPS Shield">
       <Class>Projectile</Class>
       <Texture>
@@ -2914,6 +2922,7 @@
          <File>lofiObj3</File>
          <Index>0x374</Index>
       </Texture>
+      <AngleCorrection>1</AngleCorrection>
    </Object>
    <Object type="0x214d" id="Icey Magic Attack">
       <Class>Projectile</Class>
@@ -4857,5 +4866,29 @@
          <Index>0x174</Index>
       </Texture>
       <AngleCorrection>1</AngleCorrection>
+   </Object>
+   <Object type="0x640d" id="Snowy God Bullet">
+      <Class>Projectile</Class>
+      <Texture>
+         <File>d3LofiObjEmbed</File>
+         <Index>0xfd</Index>
+      </Texture>
+      <Rotation>185</Rotation>
+   </Object>
+   <Object type="0x6410" id="Snowy God Bullet 2">
+      <Class>Projectile</Class>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x28</Index>
+      </Texture>
+      <AngleCorrection>1</AngleCorrection>
+   </Object>
+   <Object type="0x6411" id="Snowy Boulder">
+      <Class>Projectile</Class>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x2c</Index>
+      </Texture>
+      <Rotation>180</Rotation>
    </Object>
 </Objects>

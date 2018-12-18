@@ -5,6 +5,7 @@ package com.company.assembleegameclient.map.partyoverlay
 	import com.company.assembleegameclient.map.Camera;
 	import com.company.assembleegameclient.map.Map;
 	import com.company.assembleegameclient.map.Quest;
+	import com.company.assembleegameclient.objects.Character;
 	import com.company.assembleegameclient.objects.GameObject;
 	import com.company.assembleegameclient.parameters.Parameters;
 	import com.company.assembleegameclient.ui.tooltip.PortraitToolTip;
@@ -17,15 +18,20 @@ package com.company.assembleegameclient.map.partyoverlay
 	import flash.events.MouseEvent;
 	import flash.utils.getTimer;
 
+	import kabam.rotmg.core.StaticInjectorContext;
+	import kabam.rotmg.game.model.QuestModel;
+
 	public class QuestArrow extends GameObjectArrow
 		{
 			private var questArrowTween:TimelineMax;
+			private var questModel:QuestModel;
 
 			public function QuestArrow(_arg_1:Map)
 			{
 				super(16352321, 12919330, true);
 				this.mouseEnabled = false;
 				this.map_ = _arg_1;
+				this.questModel = StaticInjectorContext.getInjector().getInstance(QuestModel);
 			}
 
 			public function refreshToolTip():void
@@ -75,9 +81,20 @@ package com.company.assembleegameclient.map.partyoverlay
 
 			override public function draw(_arg_1:int, _arg_2:Camera):void
 			{
-				var _local_4:Boolean;
-				var _local_5:Boolean;
-				var _local_3:GameObject = this.map_.quest_.getObject();
+				var _local_4:Character;
+				var _local_5:String;
+				var _local_6:Boolean;
+				var _local_7:Boolean;
+				var _local_3:GameObject = map_.quest_.getObject();
+				if (_local_3 && _local_3 is Character)
+				{
+					_local_4 = (_local_3 as Character);
+					_local_5 = _local_4.getName();
+					if (_local_5 != this.questModel.currentQuestHero)
+					{
+						this.questModel.currentQuestHero = _local_5;
+					}
+				}
 				if (_local_3 != go_)
 				{
 					setGameObject(_local_3);
@@ -108,9 +125,9 @@ package com.company.assembleegameclient.map.partyoverlay
 				{
 					if (go_ != null)
 					{
-						_local_4 = (tooltip_ is QuestToolTip);
-						_local_5 = this.shouldShowFullQuest(_arg_1);
-						if (_local_4 != _local_5)
+						_local_6 = (tooltip_ is QuestToolTip);
+						_local_7 = this.shouldShowFullQuest(_arg_1);
+						if (_local_6 != _local_7)
 						{
 							setToolTip(this.getToolTip(_local_3, _arg_1));
 						}

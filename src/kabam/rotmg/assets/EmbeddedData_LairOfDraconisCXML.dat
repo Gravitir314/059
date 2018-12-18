@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <Objects>
+   0x202f
    <Object type="0x7500" id="NM Altar of Draconis">
       <DisplayId>Altar of Draconis</DisplayId>
       <Class>Character</Class>
+      <Enemy/>
+      <EventChestBoss/>
+      <Invincible/>
+      <Color>0x30BBFB</Color>
       <Texture>
          <File>lofiObjBig</File>
          <Index>0xda</Index>
@@ -1694,7 +1699,7 @@
       <ShadowSize>25</ShadowSize>
       <MaxHitPoints>50000</MaxHitPoints>
       <Defense>50</Defense>
-      <Exp>1462</Exp>
+      <Exp>10000</Exp>
       <Level>20</Level>
       <ParalyzeImmune/>
       <StasisImmune/>

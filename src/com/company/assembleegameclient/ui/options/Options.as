@@ -32,8 +32,6 @@ package com.company.assembleegameclient.ui.options
 	import flash.ui.MouseCursor;
 	import flash.ui.MouseCursorData;
 
-	import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
-
 	import kabam.rotmg.core.StaticInjectorContext;
 	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
 	import kabam.rotmg.game.view.components.StatView;
@@ -992,6 +990,7 @@ package com.company.assembleegameclient.ui.options
 				this.addOptionAndPosition(new KeyMapper("options", TextKey.OPTIONS_SHOW_OPTIONS, TextKey.OPTIONS_SHOW_OPTIONS_DESC));
 				this.addOptionAndPosition(new KeyMapper("switchTabs", TextKey.OPTIONS_SWITCH_TABS, TextKey.OPTIONS_SWITCH_TABS_DESC));
 				this.addOptionAndPosition(new KeyMapper("GPURenderToggle", TextKey.OPTIONS_HARDWARE_ACC_HOTKEY_TITLE, TextKey.OPTIONS_HARDWARE_ACC_HOTKEY_DESC));
+				this.addOptionAndPosition(new KeyMapper("toggleRealmQuestDisplay", "Toggle Realm Quests Display", "Toggle Expand/Collapse of the Realm Quests Display")); // TODO change to TextKey
 				this.addOptionsChoiceOption();
 				if (this.isAirApplication())
 				{

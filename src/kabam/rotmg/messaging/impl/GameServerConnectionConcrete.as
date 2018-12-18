@@ -160,6 +160,7 @@ package kabam.rotmg.messaging.impl
 	import kabam.rotmg.messaging.impl.incoming.PlaySound;
 	import kabam.rotmg.messaging.impl.incoming.QuestObjId;
 	import kabam.rotmg.messaging.impl.incoming.QuestRedeemResponse;
+	import kabam.rotmg.messaging.impl.incoming.RealmHeroesResponse;
 	import kabam.rotmg.messaging.impl.incoming.Reconnect;
 	import kabam.rotmg.messaging.impl.incoming.ReskinUnlock;
 	import kabam.rotmg.messaging.impl.incoming.ServerPlayerShoot;
@@ -226,6 +227,8 @@ package kabam.rotmg.messaging.impl
 	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 	import kabam.rotmg.ui.model.Key;
 	import kabam.rotmg.ui.model.UpdateGameObjectTileVO;
+	import kabam.rotmg.ui.signals.RealmHeroesSignal;
+	import kabam.rotmg.ui.signals.RealmQuestLevelSignal;
 	import kabam.rotmg.ui.signals.ShowHideKeyUISignal;
 	import kabam.rotmg.ui.signals.ShowKeySignal;
 	import kabam.rotmg.ui.signals.UpdateBackpackTabSignal;
@@ -269,6 +272,8 @@ package kabam.rotmg.messaging.impl
 			private var keyInfoResponse:KeyInfoResponseSignal;
 			private var claimDailyRewardResponse:ClaimDailyRewardResponseSignal;
 			private var newClassUnlockSignal:NewClassUnlockSignal;
+			private var realmHeroesSignal:RealmHeroesSignal;
+			private var realmQuestLevelSignal:RealmQuestLevelSignal;
 			private var currentArenaRun:CurrentArenaRunModel;
 			private var classesModel:ClassesModel;
 			private var injector:Injector;
@@ -301,6 +306,8 @@ package kabam.rotmg.messaging.impl
 				this.keyInfoResponse = this.injector.getInstance(KeyInfoResponseSignal);
 				this.claimDailyRewardResponse = this.injector.getInstance(ClaimDailyRewardResponseSignal);
 				this.newClassUnlockSignal = this.injector.getInstance(NewClassUnlockSignal);
+				this.realmHeroesSignal = this.injector.getInstance(RealmHeroesSignal);
+				this.realmQuestLevelSignal = this.injector.getInstance(RealmQuestLevelSignal);
 				this.statsTracker = this.injector.getInstance(CharactersMetricsTracker);
 				this.logger = this.injector.getInstance(ILogger);
 				this.handleDeath = this.injector.getInstance(HandleDeathSignal);
@@ -476,6 +483,7 @@ package kabam.rotmg.messaging.impl
 				_local_1.map(QUESTREDEEMRESPONSE).toMessage(QuestRedeemResponse).toMethod(this.onQuestRedeemResponse);
 				_local_1.map(KEYINFORESPONSE).toMessage(KeyInfoResponse).toMethod(this.onKeyInfoResponse);
 				_local_1.map(LOGINREWARDMSG).toMessage(ClaimDailyRewardResponse).toMethod(this.onLoginRewardResponse);
+				_local_1.map(REALMHEROLEFTMSG).toMessage(RealmHeroesResponse).toMethod(this.onRealmHeroesResponse);
 			}
 
 			private function onHatchPet(_arg_1:HatchPetMessage):void
@@ -594,6 +602,7 @@ package kabam.rotmg.messaging.impl
 				_local_1.unmap(FILE);
 				_local_1.unmap(INVITEDTOGUILD);
 				_local_1.unmap(PLAYSOUND);
+				_local_1.unmap(REALMHEROLEFTMSG);
 			}
 
 			private function encryptConnection():void
@@ -875,14 +884,7 @@ package kabam.rotmg.messaging.impl
 				{
 					return (false);
 				}
-				if (((_local_3 >= 0x9000) && (_local_3 < 0xF000)))
-				{
-					_local_4 = ObjectLibrary.xmlLibrary_[36863];
-				}
-				else
-				{
-					_local_4 = ObjectLibrary.xmlLibrary_[_local_3];
-				}
+				_local_4 = ObjectLibrary.xmlLibrary_[_local_3];
 				if ((_local_4 && !_arg_1.isPaused && _local_4.hasOwnProperty("Consumable")) || _local_4.hasOwnProperty("InvUse"))
 				{
 					if (!this.validStatInc(_local_3, _arg_1))
@@ -2105,6 +2107,10 @@ package kabam.rotmg.messaging.impl
 							break;
 						case StatData.LEVEL_STAT:
 							_arg_1.level_ = _local_8;
+							if (_local_4 != null && _arg_1.objectId_ == this.playerId_)
+							{
+								this.realmQuestLevelSignal.dispatch(_local_8);
+							}
 							break;
 						case StatData.ATTACK_STAT:
 							_local_4.attack_ = _local_8;
@@ -3049,6 +3055,11 @@ package kabam.rotmg.messaging.impl
 			private function onLoginRewardResponse(_arg_1:ClaimDailyRewardResponse):void
 			{
 				this.claimDailyRewardResponse.dispatch(_arg_1);
+			}
+
+			private function onRealmHeroesResponse(_arg_1:RealmHeroesResponse):void
+			{
+				this.realmHeroesSignal.dispatch(_arg_1.numberOfRealmHeroes);
 			}
 
 			override public function petUpgradeRequest(_arg_1:int, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:int, _arg_6:int):void

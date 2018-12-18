@@ -311,7 +311,7 @@
       </Projectile>
       <Size>120</Size>
       <Defense>80</Defense>
-      <Exp>26</Exp>
+      <Exp>1000</Exp>
    </Object>
    <Object type="0x0d79" id="Oryx Stone Guardian Left">
       <DisplayId>Stone Guardian</DisplayId>
@@ -377,7 +377,7 @@
       </Projectile>
       <Size>120</Size>
       <Defense>80</Defense>
-      <Exp>26</Exp>
+      <Exp>1000</Exp>
    </Object>
    <Object type="0x0d7a" id="Oryx Guardian TaskMaster">
       <Group>Oryx Minions</Group>

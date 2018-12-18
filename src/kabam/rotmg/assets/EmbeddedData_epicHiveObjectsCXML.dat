@@ -483,7 +483,7 @@
       <DeathSound>monster/snake_queen_death</DeathSound>
       <MaxHitPoints>300000</MaxHitPoints>
       <Defense>50</Defense>
-      <Exp>5500</Exp>
+      <Exp>50000</Exp>
       <Size>120</Size>
       <StasisImmune/>
       <ParalyzeImmune/>

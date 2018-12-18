@@ -389,4 +389,8 @@
 		<PacketName>PETCHANGESKINMSG</PacketName>
 		<PacketID>105</PacketID>
 	</Packet>
+	<Packet>
+		<PacketName>REALMHEROLEFTMSG</PacketName>
+		<PacketID>111</PacketID>
+	</Packet>
 </Packets>

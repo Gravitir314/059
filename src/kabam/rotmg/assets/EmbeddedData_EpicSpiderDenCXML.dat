@@ -185,7 +185,7 @@
       <Size>200</Size>
       <MaxHitPoints>50000</MaxHitPoints>
       <Defense>30</Defense>
-      <Exp>117</Exp>
+      <Exp>5000</Exp>
       <Enemy/>
       <God/>
       <StasisImmune/>

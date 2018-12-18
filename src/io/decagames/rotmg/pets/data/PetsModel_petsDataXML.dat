@@ -12255,4 +12255,338 @@
       <BagType>8</BagType>
       <feedPower>2000</feedPower>
    </Object>
+   <Object id="Ivory Narwhal" type="0x756a">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Aquatic</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Ivory Narwhal Pet Skin</DefaultSkin>
+      <Size>80</Size>
+      <NoHatchOrFuse/>
+   </Object>
+   <Object type="0x756b" id="Ivory Narwhal Pet Skin">
+      <PetSkin/>
+      <DisplayId>Ivory Narwhal</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>92</Index>
+      </AnimatedTexture>
+      <Family>Aquatic</Family>
+      <Rarity>Divine</Rarity>
+   </Object>
+   <Object type="0x756c" id="Ivory Narwhal Pet Stone">
+      <DisplayId>Ivory Narwhal Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>92</Index>
+      </AnimatedTexture>
+      <ScaleValue>10</ScaleValue>
+      <SlotType>10</SlotType>
+      <Description>Note: Anatomy not accurate to life.\n\nSprite Credits: Piggby\n\nUnlocks Ivory Narwhal Skin of the Aquatic family. The skin will be added to your Pet Wardrobe in the Pet Yard and can be used to change the appearance of your pet!</Description>
+      <Activate skinType="30059">UnlockPetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Armored Orc" type="0x756d">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Humanoid</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Armored Orc Pet Skin</DefaultSkin>
+      <Size>80</Size>
+      <NoHatchOrFuse/>
+   </Object>
+   <Object type="0x756e" id="Armored Orc Pet Skin">
+      <PetSkin/>
+      <DisplayId>Armored Orc</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>93</Index>
+      </AnimatedTexture>
+      <Family>Humanoid</Family>
+      <Rarity>Divine</Rarity>
+   </Object>
+   <Object type="0x756f" id="Armored Orc Pet Stone">
+      <DisplayId>Armored Orc Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>93</Index>
+      </AnimatedTexture>
+      <ScaleValue>10</ScaleValue>
+      <SlotType>10</SlotType>
+      <Description>A brutish orc clad in a full suit of armor, it&#8217;s not advised to be on the other side of this creature&#8217;s fist.\n\nSprite Credits: Trensient\n\nUnlocks Armored Orc Skin of the Humanoid family. The skin will be added to your Pet Wardrobe in the Pet Yard and can be used to change the appearance of your pet!</Description>
+      <Activate skinType="30062">UnlockPetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Enchanted Broom" type="0x7570">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>? ? ? ?</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Enchanted Broom Pet Skin</DefaultSkin>
+      <Size>80</Size>
+      <NoHatchOrFuse/>
+   </Object>
+   <Object type="0x7571" id="Enchanted Broom Pet Skin">
+      <PetSkin/>
+      <DisplayId>Enchanted Broom</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>94</Index>
+      </AnimatedTexture>
+      <Family>? ? ? ?</Family>
+      <Rarity>Divine</Rarity>
+   </Object>
+   <Object type="0x7572" id="Enchanted Broom Pet Stone">
+      <DisplayId>Enchanted Broom Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>94</Index>
+      </AnimatedTexture>
+      <ScaleValue>10</ScaleValue>
+      <SlotType>10</SlotType>
+      <Description>When I said I wanted a "clean sweep against Oryx," this isn't exactly what I had in mind.\n\nSprite Credits: Dappertron\n\nUnlocks Enchanted Broom Skin of the ? ? ? ? family. The skin will be added to your Pet Wardrobe in the Pet Yard and can be used to change the appearance of your pet!</Description>
+      <Activate skinType="30065">UnlockPetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Hollow Wendigo" type="0x7573">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Spooky</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Hollow Wendigo Pet Skin</DefaultSkin>
+      <Size>80</Size>
+      <NoHatchOrFuse/>
+   </Object>
+   <Object type="0x7574" id="Hollow Wendigo Pet Skin">
+      <PetSkin/>
+      <DisplayId>Hollow Wendigo</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>95</Index>
+      </AnimatedTexture>
+      <Family>Spooky</Family>
+      <Rarity>Divine</Rarity>
+   </Object>
+   <Object type="0x7575" id="Hollow Wendigo Pet Stone">
+      <DisplayId>Hollow Wendigo Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>95</Index>
+      </AnimatedTexture>
+      <ScaleValue>10</ScaleValue>
+      <SlotType>10</SlotType>
+      <Description>Once human, this insatiable creature is cursed with the gluttonous taboo of cannibalism. It endlessly lurks the wintry forest, hungering for the flesh of monsters.\n\nSprite Credits: Piggby\n\nUnlocks Hollow Wendigo Skin of the Spooky family. The skin will be added to your Pet Wardrobe in the Pet Yard and can be used to change the appearance of your pet!</Description>
+      <Activate skinType="30068">UnlockPetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Tree Sparrow" type="0x7576">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Avian</Family>
+      <Rarity>Common</Rarity>
+      <DefaultSkin>Tree Sparrow Pet Skin</DefaultSkin>
+      <FirstAbility>Attack Mid</FirstAbility>
+      <WhileMoving>
+         <Z>0.35</Z>
+         <Flying/>
+      </WhileMoving>
+      <Size>60</Size>
+   </Object>
+   <Object type="0x7577" id="Tree Sparrow Pet Skin">
+      <PetSkin/>
+      <DisplayId>Tree Sparrow</DisplayId>
+      <Class>PetSkin</Class>
+      <Family>Avian</Family>
+      <Rarity>Common</Rarity>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>245</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x7578" id="Tree Sparrow Pet Stone">
+      <DisplayId>Tree Sparrow Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>245</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Customize your pet with this orient bird costume!\n\nSprite Credits: Nazoado\n\nUnlocks Tree Sparrow Skin of the Avian family. The skin will be added to your Pet Wardrobe in the Pet Yard and can be used to change the appearance of your pet!</Description>
+      <Activate skinType="30071">UnlockPetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="White Eyed" type="0x7579">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Avian</Family>
+      <Rarity>Common</Rarity>
+      <DefaultSkin>White Eyed Pet Skin</DefaultSkin>
+      <FirstAbility>Electric</FirstAbility>
+      <WhileMoving>
+         <Z>0.35</Z>
+         <Flying/>
+      </WhileMoving>
+      <Size>60</Size>
+   </Object>
+   <Object type="0x757a" id="White Eyed Pet Skin">
+      <PetSkin/>
+      <DisplayId>White Eyed</DisplayId>
+      <Class>PetSkin</Class>
+      <Family>Avian</Family>
+      <Rarity>Common</Rarity>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>246</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x757b" id="White Eyed Pet Stone">
+      <DisplayId>White Eyed Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>246</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Customize your pet with this cutie-eyed bird costume!\n\nSprite Credits: Nazoado\n\nUnlocks White Eyed Skin of the Avian family. The skin will be added to your Pet Wardrobe in the Pet Yard and can be used to change the appearance of your pet!</Description>
+      <Activate skinType="30074">UnlockPetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Polar Bear" type="0x757c">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Exotic</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Polar Bear Pet Skin</DefaultSkin>
+      <Size>80</Size>
+      <NoHatchOrFuse/>
+   </Object>
+   <Object type="0x757d" id="Polar Bear Pet Skin">
+      <PetSkin/>
+      <DisplayId>Polar Bear</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>96</Index>
+      </AnimatedTexture>
+      <Family>Exotic</Family>
+      <Rarity>Divine</Rarity>
+   </Object>
+   <Object type="0x757e" id="Polar Bear Pet Stone">
+      <DisplayId>Polar Bear Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>96</Index>
+      </AnimatedTexture>
+      <ScaleValue>10</ScaleValue>
+      <SlotType>10</SlotType>
+      <Description>No matter how far away you are, I will catch your scent, find you and tear you to pieces!\n\nUnlocks Polar Bear Skin of the Exotic family. The skin will be added to your Pet Wardrobe in the Pet Yard and can be used to change the appearance of your pet!</Description>
+      <Activate skinType="30077">UnlockPetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Snow Monster" type="0x757f">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Spooky</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Snow Monster Pet Skin</DefaultSkin>
+      <Size>80</Size>
+      <NoHatchOrFuse/>
+   </Object>
+   <Object type="0x7580" id="Snow Monster Pet Skin">
+      <PetSkin/>
+      <DisplayId>Snow Monster</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>97</Index>
+      </AnimatedTexture>
+      <Family>Spooky</Family>
+      <Rarity>Divine</Rarity>
+   </Object>
+   <Object type="0x7581" id="Snow Monster Pet Stone">
+      <DisplayId>Snow Monster Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>97</Index>
+      </AnimatedTexture>
+      <ScaleValue>10</ScaleValue>
+      <SlotType>10</SlotType>
+      <Description>A distant cousin of the Cookie Monster, he often looks for frosted cookies around the Nexus.\n\nUnlocks Snow Monster Skin of the Spooky family. The skin will be added to your Pet Wardrobe in the Pet Yard and can be used to change the appearance of your pet!</Description>
+      <Activate skinType="30080">UnlockPetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
 </Objects>

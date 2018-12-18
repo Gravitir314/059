@@ -12,7 +12,6 @@
       <Size>120</Size>
       <HitSound>monster/chicken_hit</HitSound>
       <DeathSound>monster/chicken_death</DeathSound>
-      <EventChestBoss/>
       <MaxHitPoints>1100</MaxHitPoints>
       <Defense>35</Defense>
       <Exp>0</Exp>
@@ -102,6 +101,7 @@
       <DisplayId>Giant Oryx Chicken</DisplayId>
       <Enemy/>
       <Class>Character</Class>
+      <EventChestBoss/>
       <AnimatedTexture>
          <File>chars16x16rEncounters</File>
          <Index>22</Index>

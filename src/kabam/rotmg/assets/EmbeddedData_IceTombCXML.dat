@@ -38,7 +38,7 @@
          <Index>0x466</Index>
       </Texture>
       <Size>160</Size>
-      <MaxHitPoints>100000</MaxHitPoints>
+      <MaxHitPoints>60000</MaxHitPoints>
       <Defense>0</Defense>
       <Exp>0</Exp>
    </Object>
@@ -382,6 +382,7 @@
       <MaxHitPoints>65000</MaxHitPoints>
       <Size>140</Size>
       <Defense>15</Defense>
+      <Exp>400</Exp>
       <God/>
       <NoArticle/>
       <Projectile id="0">
@@ -479,6 +480,7 @@
       <MaxHitPoints>75000</MaxHitPoints>
       <Size>140</Size>
       <Defense>30</Defense>
+      <Exp>400</Exp>
       <God/>
       <NoArticle/>
       <Projectile id="0">
@@ -548,6 +550,7 @@
       <MaxHitPoints>85000</MaxHitPoints>
       <Size>140</Size>
       <Defense>50</Defense>
+      <Exp>400</Exp>
       <God/>
       <NoArticle/>
       <Projectile id="0">

@@ -1947,7 +1947,7 @@
       </AnimatedTexture>
       <MaxHitPoints>120000</MaxHitPoints>
       <Defense>30</Defense>
-      <Exp>5000</Exp>
+      <Exp>10000</Exp>
       <Size>135</Size>
       <HitSound>monster/archdemon_hit</HitSound>
       <DeathSound>monster/archdemon_death</DeathSound>

@@ -105,10 +105,6 @@ package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
 			public function updateUseability(_arg_1:Player):void
 			{
 				var _local_2:int = this.itemSprite.itemId;
-				if (((_local_2 >= 0x9000) && (_local_2 < 0xF000)))
-				{
-					_local_2 = 36863;
-				}
 				if (this.itemSprite.itemId != ItemConstants.NO_ITEM)
 				{
 					this.restrictedUseIndicator.visible = (!(ObjectLibrary.isUsableByPlayer(_local_2, _arg_1)));
@@ -131,10 +127,6 @@ package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
 
 			public function getItemId():int
 			{
-				if (((this.itemSprite.itemId >= 0x9000) && (this.itemSprite.itemId < 0xF000)))
-				{
-					return (36863);
-				}
 				return (this.itemSprite.itemId);
 			}
 

@@ -359,8 +359,11 @@ package kabam.rotmg.assets
       
       [Embed(source="EmbeddedAssets_d1LofiObjBigEmbed_.png")]
 	public static var d1LofiObjBigEmbed_:Class;
-      
-      [Embed(source="EmbeddedAssets_d2Chars16x16rEmbed_.png")]
+
+	   /*[Embed(source="EmbeddedAssets_d2Chars8x8rEmbed_.png")]
+	 public static var d2Chars8x8rEmbed_:Class;*/
+
+	   [Embed(source="EmbeddedAssets_d2Chars16x16rEmbed_.png")]
 	public static var d2Chars16x16rEmbed_:Class;
       
       [Embed(source="EmbeddedAssets_d2LofiObjEmbed_.png")]
@@ -500,8 +503,20 @@ package kabam.rotmg.assets
       
       [Embed(source="EmbeddedAssets_autumnNexusChars16x16Embed_.png")]
 	public static var autumnNexusChars16x16Embed_:Class;
-      
-      [Embed(source="EmbeddedAssets_epicHiveChars8x8Embed_.png")]
+
+	   [Embed(source="EmbeddedAssets_xmasNexusObjects8x8Embed_.png")]
+	   public static var xmasNexusObjects8x8Embed_:Class;
+
+	   [Embed(source="EmbeddedAssets_xmasNexusObjects16x16Embed_.png")]
+	   public static var xmasNexusObjects16x16Embed_:Class;
+
+	   [Embed(source="EmbeddedAssets_xmasNexusChars16x16Embed_.png")]
+	   public static var xmasNexusChars16x16Embed_:Class;
+
+	   [Embed(source="EmbeddedAssets_xmasNexusChars8x8Embed_.png")]
+	   public static var xmasNexusChars8x8Embed_:Class;
+
+	   [Embed(source="EmbeddedAssets_epicHiveChars8x8Embed_.png")]
 	public static var epicHiveChars8x8Embed_:Class;
       
       [Embed(source="EmbeddedAssets_epicHiveChars16x16Embed_.png")]

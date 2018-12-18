@@ -60,7 +60,7 @@
       <MaxHitPoints>12000</MaxHitPoints>
       <Size>100</Size>
       <Defense>20</Defense>
-      <Exp>136</Exp>
+      <Exp>2000</Exp>
       <EventChestBoss/>
       <Projectile id="0">
          <ObjectId>White Bullet</ObjectId>

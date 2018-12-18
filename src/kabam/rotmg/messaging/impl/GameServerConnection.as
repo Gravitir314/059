@@ -117,6 +117,7 @@ package kabam.rotmg.messaging.impl
 			public static var LOGINREWARDMSG:int;
 			public static var QUESTROOMMSG:int;
 			public static var PETCHANGESKINMSG:int;
+			public static var REALMHEROLEFTMSG:int;
 			public static var instance:GameServerConnection;
 
 			public var changeMapSignal:Signal;

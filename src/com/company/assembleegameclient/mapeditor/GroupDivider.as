@@ -45,7 +45,7 @@ package com.company.assembleegameclient.mapeditor
 					_local_11 = _local_14.@id;
 					_local_10 = int(_local_14.@type);
 					_local_8[_local_10] = _local_14;
-					if (!((((((_local_14.hasOwnProperty("Item")) || (_local_14.hasOwnProperty("Player"))) || (_local_14.Class == "Projectile")) || (_local_14.Class == "PetSkin")) || (_local_14.Class == "Pet")) || ((_local_11.search("Spawner") >= 0) && (!(_local_13.isAdmin())))))
+					if (!(((((_local_14.hasOwnProperty("Item")) || (_local_14.hasOwnProperty("Player"))) || (_local_14.Class == "Projectile")) || (_local_14.Class == "PetSkin")) || (_local_14.Class == "Pet")))
 					{
 						if (!((!(_local_13.isAdmin())) && (HIDE_OBJECTS_IDS.indexOf(_local_11) >= 0)))
 						{
@@ -82,10 +82,8 @@ package com.company.assembleegameclient.mapeditor
 										}
 										else
 										{
-											if (_local_13.isAdmin())
-											{
-												_local_7[_local_10] = _local_14;
-											}
+											_local_7[_local_10] = _local_14;
+											_local_12 = true;
 										}
 									}
 								}

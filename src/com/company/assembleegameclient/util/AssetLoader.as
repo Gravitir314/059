@@ -76,8 +76,10 @@ package com.company.assembleegameclient.util
 			private var vault:Class;
 			[Embed(source="AssetLoader_Shatters.dat", mimeType="application/octet-stream")]
 			private var shatters:Class;
-			[Embed(source="AssetLoader_Nexus_Autumn.dat", mimeType="application/octet-stream")]
+			[Embed(source="AssetLoader_Nexus_Winter.dat", mimeType="application/octet-stream")]
 			private var nexus:Class;
+			[Embed(source="AssetLoader_Nexus_Autumn.dat", mimeType="application/octet-stream")]
+			private var nexus_autumn:Class;
 			[Embed(source="AssetLoader_Nexus_Halloween.dat", mimeType="application/octet-stream")]
 			private var nexus_halloween:Class;
 			[Embed(source="AssetLoader_Nexus_Day.dat", mimeType="application/octet-stream")]
@@ -264,6 +266,8 @@ package com.company.assembleegameclient.util
 				AssetLibrary.addImageSet("summerNexusObjects16x16", new EmbeddedAssets.summerNexusObjects16x16Embed_().bitmapData, 16, 16);
 				AssetLibrary.addImageSet("autumnNexusObjects8x8", new EmbeddedAssets.autumnNexusObjects8x8Embed_().bitmapData, 8, 8);
 				AssetLibrary.addImageSet("autumnNexusObjects16x16", new EmbeddedAssets.autumnNexusObjects16x16Embed_().bitmapData, 16, 16);
+				AssetLibrary.addImageSet("xmasNexusObjects8x8", new EmbeddedAssets.xmasNexusObjects8x8Embed_().bitmapData, 8, 8);
+				AssetLibrary.addImageSet("xmasNexusObjects16x16", new EmbeddedAssets.xmasNexusObjects16x16Embed_().bitmapData, 16, 16);
 				AssetLibrary.addImageSet("epicHiveObjects8x8", new EmbeddedAssets.epicHiveObjects8x8Embed_().bitmapData, 8, 8);
 				AssetLibrary.addImageSet("epicHiveObjects16x16", new EmbeddedAssets.epicHiveObjects16x16Embed_().bitmapData, 16, 16);
 				AssetLibrary.addImageSet("lostHallsObjects8x8", new EmbeddedAssets.lostHallsObjects8x8Embed_().bitmapData, 8, 8);
@@ -329,6 +333,8 @@ package com.company.assembleegameclient.util
 				AnimatedChars.add("summerNexusChars16x16", new EmbeddedAssets.summerNexusChars16x16Embed_().bitmapData, null, 16, 16, 112, 16, AnimatedChar.RIGHT);
 				AnimatedChars.add("autumnNexusChars16x16", new EmbeddedAssets.autumnNexusChars16x16Embed_().bitmapData, null, 16, 16, 112, 16, AnimatedChar.RIGHT);
 				AnimatedChars.add("autumnNexusChars8x8", new EmbeddedAssets.autumnNexusChars8x8Embed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
+				AnimatedChars.add("xmasNexusChars8x8", new EmbeddedAssets.xmasNexusChars8x8Embed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
+				AnimatedChars.add("xmasNexusChars16x16", new EmbeddedAssets.xmasNexusChars16x16Embed_().bitmapData, null, 16, 16, 112, 16, AnimatedChar.RIGHT);
 				AnimatedChars.add("epicHiveChars8x8", new EmbeddedAssets.epicHiveChars8x8Embed_().bitmapData, null, 8, 8, 56, 8, AnimatedChar.RIGHT);
 				AnimatedChars.add("epicHiveChars16x16", new EmbeddedAssets.epicHiveChars16x16Embed_().bitmapData, null, 16, 16, 112, 16, AnimatedChar.RIGHT);
 				AnimatedChars.add("lostHallsChars16x16", new EmbeddedAssets.lostHallsChars16x16Embed_().bitmapData, null, 16, 16, 112, 16, AnimatedChar.RIGHT);

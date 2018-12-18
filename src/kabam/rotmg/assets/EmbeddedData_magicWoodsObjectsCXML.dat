@@ -1395,6 +1395,7 @@
       <Flying/>
       <MaxHitPoints>15000</MaxHitPoints>
       <Defense>20</Defense>
+      <Exp>1500</Exp>
       <Quest/>
       <God/>
       <StasisImmune/>

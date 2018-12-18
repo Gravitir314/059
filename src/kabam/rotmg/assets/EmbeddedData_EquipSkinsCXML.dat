@@ -4393,7 +4393,7 @@
       <Soulbound/>
       <feedPower>2000</feedPower>
    </Object>
-   <Object type="0x207f" id="Christmas Rogue Skin">
+   <Object type="0x207f" id="Oryxmas Rogue Skin">
       <Class>Equipment</Class>
       <Item/>
       <AnimatedTexture>
@@ -4401,14 +4401,16 @@
          <Index>265</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>Christmas Rogue Skin!\n\nSkin Class: Rogue\nSprite Credits: Polokai</Description>
+      <Description>Oryxmas Rogue Skin!\n\nSkin Class: Rogue\nSprite Credits: Polokai</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Oryxmas Skins"/>
+      </ExtraTooltipData>
       <Activate skinType="8305">UnlockSkin</Activate>
       <Consumable/>
       <BagType>8</BagType>
-      <Soulbound/>
-      <feedPower>2000</feedPower>
+      <feedPower>250</feedPower>
    </Object>
-   <Object type="0x2080" id="Christmas Archer Skin">
+   <Object type="0x2080" id="Oryxmas Archer Skin">
       <Class>Equipment</Class>
       <Item/>
       <AnimatedTexture>
@@ -4416,14 +4418,16 @@
          <Index>266</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>Christmas Archer Skin!\n\nSkin Class: Archer\nSprite Credits: Polokai</Description>
+      <Description>Oryxmas Archer Skin!\n\nSkin Class: Archer\nSprite Credits: Polokai</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Oryxmas Skins"/>
+      </ExtraTooltipData>
       <Activate skinType="8306">UnlockSkin</Activate>
       <Consumable/>
       <BagType>8</BagType>
-      <Soulbound/>
-      <feedPower>2000</feedPower>
+      <feedPower>250</feedPower>
    </Object>
-   <Object type="0x2081" id="Christmas Wizard Skin">
+   <Object type="0x2081" id="Oryxmas Wizard Skin">
       <Class>Equipment</Class>
       <Item/>
       <AnimatedTexture>
@@ -4431,14 +4435,16 @@
          <Index>267</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>Christmas Wizard Skin!\n\nSkin Class: Wizard\nSprite Credits: Polokai</Description>
+      <Description>Oryxmas Wizard Skin!\n\nSkin Class: Wizard\nSprite Credits: Polokai</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Oryxmas Skins"/>
+      </ExtraTooltipData>
       <Activate skinType="8307">UnlockSkin</Activate>
       <Consumable/>
       <BagType>8</BagType>
-      <Soulbound/>
-      <feedPower>2000</feedPower>
+      <feedPower>250</feedPower>
    </Object>
-   <Object type="0x2082" id="Christmas Priestess Skin">
+   <Object type="0x2082" id="Oryxmas Priest Skin">
       <Class>Equipment</Class>
       <Item/>
       <AnimatedTexture>
@@ -4446,14 +4452,16 @@
          <Index>268</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>Christmas Priestess Skin!\n\nSkin Class: Priestess\nSprite Credits: Polokai</Description>
+      <Description>Oryxmas Priest Skin!\n\nSkin Class: Priest\nSprite Credits: Polokai</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Oryxmas Skins"/>
+      </ExtraTooltipData>
       <Activate skinType="8308">UnlockSkin</Activate>
       <Consumable/>
       <BagType>8</BagType>
-      <Soulbound/>
-      <feedPower>2000</feedPower>
+      <feedPower>250</feedPower>
    </Object>
-   <Object type="0x2083" id="Christmas Warrior Skin">
+   <Object type="0x2083" id="Oryxmas Warrior Skin">
       <Class>Equipment</Class>
       <Item/>
       <AnimatedTexture>
@@ -4461,14 +4469,16 @@
          <Index>269</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>Christmas Warrior Skin!\n\nSkin Class: Warrior\nSprite Credits: Polokai</Description>
+      <Description>Oryxmas Warrior Skin!\n\nSkin Class: Warrior\nSprite Credits: Polokai</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Oryxmas Skins"/>
+      </ExtraTooltipData>
       <Activate skinType="8309">UnlockSkin</Activate>
       <Consumable/>
       <BagType>8</BagType>
-      <Soulbound/>
-      <feedPower>2000</feedPower>
+      <feedPower>250</feedPower>
    </Object>
-   <Object type="0x2084" id="Christmas Knight Skin">
+   <Object type="0x2084" id="Oryxmas Knight Skin">
       <Class>Equipment</Class>
       <Item/>
       <AnimatedTexture>
@@ -4476,14 +4486,16 @@
          <Index>270</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>Christmas Knight Skin!\n\nSkin Class: Knight\nSprite Credits: Polokai</Description>
+      <Description>Oryxmas Knight Skin!\n\nSkin Class: Knight\nSprite Credits: Polokai</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Oryxmas Skins"/>
+      </ExtraTooltipData>
       <Activate skinType="8310">UnlockSkin</Activate>
       <Consumable/>
       <BagType>8</BagType>
-      <Soulbound/>
-      <feedPower>2000</feedPower>
+      <feedPower>250</feedPower>
    </Object>
-   <Object type="0x2085" id="Christmas Paladin Skin">
+   <Object type="0x2085" id="Oryxmas Paladin Skin">
       <Class>Equipment</Class>
       <Item/>
       <AnimatedTexture>
@@ -4491,14 +4503,16 @@
          <Index>271</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>Christmas Paladin Skin!\n\nSkin Class: Paladin\nSprite Credits: Polokai</Description>
+      <Description>Oryxmas Paladin Skin!\n\nSkin Class: Paladin\nSprite Credits: Polokai</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Oryxmas Skins"/>
+      </ExtraTooltipData>
       <Activate skinType="8311">UnlockSkin</Activate>
       <Consumable/>
       <BagType>8</BagType>
-      <Soulbound/>
-      <feedPower>2000</feedPower>
+      <feedPower>250</feedPower>
    </Object>
-   <Object type="0x2086" id="Christmas Assassin Skin">
+   <Object type="0x2086" id="Oryxmas Assassin Skin">
       <Class>Equipment</Class>
       <Item/>
       <AnimatedTexture>
@@ -4506,14 +4520,16 @@
          <Index>272</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>Christmas Assassin Skin!\n\nSkin Class: Assassin\nSprite Credits: Polokai</Description>
+      <Description>Oryxmas Assassin Skin!\n\nSkin Class: Assassin\nSprite Credits: Polokai</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Oryxmas Skins"/>
+      </ExtraTooltipData>
       <Activate skinType="8312">UnlockSkin</Activate>
       <Consumable/>
       <BagType>8</BagType>
-      <Soulbound/>
-      <feedPower>2000</feedPower>
+      <feedPower>250</feedPower>
    </Object>
-   <Object type="0x2087" id="Christmas Necromancer Skin">
+   <Object type="0x2087" id="Oryxmas Necromancer Skin">
       <Class>Equipment</Class>
       <Item/>
       <AnimatedTexture>
@@ -4521,14 +4537,16 @@
          <Index>273</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>Christmas Necromancer Skin!\n\nSkin Class: Necromancer\nSprite Credits: Polokai</Description>
+      <Description>Oryxmas Necromancer Skin!\n\nSkin Class: Necromancer\nSprite Credits: Polokai</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Oryxmas Skins"/>
+      </ExtraTooltipData>
       <Activate skinType="8313">UnlockSkin</Activate>
       <Consumable/>
       <BagType>8</BagType>
-      <Soulbound/>
-      <feedPower>2000</feedPower>
+      <feedPower>250</feedPower>
    </Object>
-   <Object type="0x2088" id="Christmas Hunter Skin">
+   <Object type="0x2088" id="Oryxmas Huntress Skin">
       <Class>Equipment</Class>
       <Item/>
       <AnimatedTexture>
@@ -4536,14 +4554,16 @@
          <Index>274</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>Christmas Hunter Skin!\n\nSkin Class: Hunter\nSprite Credits: Polokai</Description>
+      <Description>Oryxmas Huntress Skin!\n\nSkin Class: Huntress\nSprite Credits: Polokai</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Oryxmas Skins"/>
+      </ExtraTooltipData>
       <Activate skinType="8314">UnlockSkin</Activate>
       <Consumable/>
       <BagType>8</BagType>
-      <Soulbound/>
-      <feedPower>2000</feedPower>
+      <feedPower>250</feedPower>
    </Object>
-   <Object type="0x2089" id="Christmas Mystic Skin">
+   <Object type="0x2089" id="Oryxmas Mystic Skin">
       <Class>Equipment</Class>
       <Item/>
       <AnimatedTexture>
@@ -4551,14 +4571,16 @@
          <Index>275</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>Christmas Mystic Skin!\n\nSkin Class: Mystic\nSprite Credits: Polokai</Description>
+      <Description>Oryxmas Mystic Skin!\n\nSkin Class: Mystic\nSprite Credits: Polokai</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Oryxmas Skins"/>
+      </ExtraTooltipData>
       <Activate skinType="8315">UnlockSkin</Activate>
       <Consumable/>
       <BagType>8</BagType>
-      <Soulbound/>
-      <feedPower>2000</feedPower>
+      <feedPower>250</feedPower>
    </Object>
-   <Object type="0x208a" id="Christmas Trickster Skin">
+   <Object type="0x208a" id="Oryxmas Trickster Skin">
       <Class>Equipment</Class>
       <Item/>
       <AnimatedTexture>
@@ -4566,14 +4588,16 @@
          <Index>276</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>Christmas Trickster Skin!\n\nSkin Class: Trickster\nSprite Credits: Polokai</Description>
+      <Description>Oryxmas Trickster Skin!\n\nSkin Class: Trickster\nSprite Credits: Polokai</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Oryxmas Skins"/>
+      </ExtraTooltipData>
       <Activate skinType="8316">UnlockSkin</Activate>
       <Consumable/>
       <BagType>8</BagType>
-      <Soulbound/>
-      <feedPower>2000</feedPower>
+      <feedPower>250</feedPower>
    </Object>
-   <Object type="0x208b" id="Christmas Sorceress Skin">
+   <Object type="0x208b" id="Oryxmas Sorcerer Skin">
       <Class>Equipment</Class>
       <Item/>
       <AnimatedTexture>
@@ -4581,14 +4605,16 @@
          <Index>277</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>Christmas Sorceress Skin!\n\nSkin Class: Sorceress\nSprite Credits: Polokai</Description>
+      <Description>Oryxmas Sorcerer Skin!\n\nSkin Class: Sorcerer\nSprite Credits: Polokai</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Oryxmas Skins"/>
+      </ExtraTooltipData>
       <Activate skinType="8317">UnlockSkin</Activate>
       <Consumable/>
       <BagType>8</BagType>
-      <Soulbound/>
-      <feedPower>2000</feedPower>
+      <feedPower>250</feedPower>
    </Object>
-   <Object type="0x208c" id="Christmas Ninja Skin">
+   <Object type="0x208c" id="Oryxmas Ninja Skin">
       <Class>Equipment</Class>
       <Item/>
       <AnimatedTexture>
@@ -4596,12 +4622,14 @@
          <Index>278</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>Christmas Ninja Skin!\n\nSkin Class: Ninja\nSprite Credits: Polokai</Description>
+      <Description>Oryxmas Ninja Skin!\n\nSkin Class: Ninja\nSprite Credits: Polokai</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Oryxmas Skins"/>
+      </ExtraTooltipData>
       <Activate skinType="8318">UnlockSkin</Activate>
       <Consumable/>
       <BagType>8</BagType>
-      <Soulbound/>
-      <feedPower>2000</feedPower>
+      <feedPower>250</feedPower>
    </Object>
    <Object type="0x1ada" id="Santa Trickster Skin">
       <Class>Equipment</Class>
@@ -4615,7 +4643,6 @@
       <Activate skinType="24593">UnlockSkin</Activate>
       <Consumable/>
       <BagType>8</BagType>
-      <Soulbound/>
       <feedPower>2000</feedPower>
    </Object>
    <Object type="0x1adb" id="Helping Huntress Skin">
@@ -7245,7 +7272,7 @@
       <BagType>8</BagType>
       <feedPower>2000</feedPower>
    </Object>
-   <Object type="0x4ccc" id="Christmas Samurai Skin">
+   <Object type="0x4ccc" id="Oryxmas Samurai Skin">
       <Class>Equipment</Class>
       <Item/>
       <AnimatedTexture>
@@ -7253,8 +7280,101 @@
          <Index>424</Index>
       </AnimatedTexture>
       <SlotType>10</SlotType>
-      <Description>Christmas Samurai Skin!\n\nSkin Class: Samurai</Description>
+      <Description>Oryxmas Samurai Skin!\n\nSkin Class: Samurai</Description>
+      <ExtraTooltipData>
+         <EffectInfo name="Collection" description="Oryxmas Skins"/>
+      </ExtraTooltipData>
       <Activate skinType="19659">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>500</feedPower>
+   </Object>
+   <Object type="0x5ea9" id="Time Traveler Trickster Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>425</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>You'll find I'm universally recognized as a responsible adult.\n\nSkin Class: Trickster\nSprite Credits: Trensient</Description>
+      <Activate skinType="24232">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>8</BagType>
+      <Soulbound/>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x5eab" id="Skeleton Knight Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>426</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>The remains held a weapon in its left hand. A sword, but to my surprise, no rust to be seen...\n\nSkin Class: Knight\nSprite Credits: Nazoado</Description>
+      <Activate skinType="24234">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>8</BagType>
+      <Soulbound/>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x5ead" id="Skeleton Archer Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>427</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>It happened so suddenly! I heard the sound of bones rattling, then I beheld...an arrow pierced my ally's body.\n\nSkin Class: Archer\nSprite Credits: Nazoado</Description>
+      <Activate skinType="24236">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>8</BagType>
+      <Soulbound/>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x5eaf" id="Scrooge Priest Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>428</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Bah! Humbug!\n\nSkin Class: Priest</Description>
+      <Activate skinType="24238">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>8</BagType>
+      <Soulbound/>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x5eb1" id="Glacius Knight Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>429</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Customize your Knight with this Glacius Skin, though it cannot look as great as Papa Glacius.\n\nSkin Class: Knight\nSprite Credits: Nazoado</Description>
+      <Activate skinType="24240">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>8</BagType>
+      <Soulbound/>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x5eb3" id="Guillotiner Samurai Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>430</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>A master of the flying guillotine, and a slayer of the unarmed.\n\nSkin Class: Samurai\nSprite Credits: Dappertron</Description>
+      <Activate skinType="24242">UnlockSkin</Activate>
       <Consumable/>
       <Soulbound/>
       <BagType>8</BagType>

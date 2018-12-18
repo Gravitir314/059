@@ -785,6 +785,7 @@ package com.company.assembleegameclient.parameters
 				setDefaultKey("toggleHPBar", KeyCodes.H);
 				setDefaultKey("toggleProjectiles", KeyCodes.N);
 				setDefaultKey("toggleMasterParticles", KeyCodes.M);
+				setDefaultKey("toggleRealmQuestDisplay", KeyCodes.C);
 				setDefault("playerObjectType", 782);
 				setDefault("playMusic", false);
 				setDefault("playSFX", true);
@@ -908,7 +909,7 @@ package com.company.assembleegameclient.parameters
 							return;
 					}
 				}
-				setDefault("gameVersion", "X31.1.2");
+				setDefault("gameVersion", "X31.2.0");
 				setDefault("AABoundingDist", 4);
 				setDefault("AAException", DefaultAAException);
 				setDefault("AAIgnore", DefaultAAIgnore);
@@ -986,7 +987,7 @@ package com.company.assembleegameclient.parameters
 				setDefault("fameTpCdTime", 5000);
 				setDefault("fgFPS", 60);
 				setDefault("FocusFPS", false);
-				setDefault("glowColor", 0);
+				setDefault("glowColor", 0xFFFF00);
 				setDefault("hideLockList", false);
 				setDefault("hideLowCPUModeChat", false);
 				setDefault("hideOtherDamage", false);

@@ -16,7 +16,7 @@
       <ShadowSize>25</ShadowSize>
       <MaxHitPoints>65000</MaxHitPoints>
       <Defense>60</Defense>
-      <Exp>253</Exp>
+      <Exp>8000</Exp>
       <ParalyzeImmune/>
       <DazedImmune/>
       <StasisImmune/>

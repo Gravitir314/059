@@ -127,11 +127,15 @@ package kabam.rotmg.ui
 	import kabam.rotmg.ui.signals.HUDSetupStarted;
 	import kabam.rotmg.ui.signals.HideKeySignal;
 	import kabam.rotmg.ui.signals.NameChangedSignal;
+	import kabam.rotmg.ui.signals.RealmHeroesSignal;
+	import kabam.rotmg.ui.signals.RealmOryxSignal;
+	import kabam.rotmg.ui.signals.RealmQuestLevelSignal;
 	import kabam.rotmg.ui.signals.RefreshScreenAfterLoginSignal;
 	import kabam.rotmg.ui.signals.ShowHideKeyUISignal;
 	import kabam.rotmg.ui.signals.ShowKeySignal;
 	import kabam.rotmg.ui.signals.ShowLoadingUISignal;
 	import kabam.rotmg.ui.signals.ShowTitleUISignal;
+	import kabam.rotmg.ui.signals.ToggleRealmQuestsDisplaySignal;
 	import kabam.rotmg.ui.signals.ToggleShowTierTagSignal;
 	import kabam.rotmg.ui.signals.UpdateBackpackTabSignal;
 	import kabam.rotmg.ui.signals.UpdateHUDSignal;
@@ -213,6 +217,11 @@ package kabam.rotmg.ui
 				this.injector.map(RemoveLockFade).asSingleton();
 				this.injector.map(ToggleShowTierTagSignal).asSingleton();
 				this.injector.map(ShowHideKeyUISignal).asSingleton();
+				this.injector.map(RealmHeroesSignal).asSingleton();
+				this.injector.map(RealmQuestLevelSignal).asSingleton();
+				this.injector.map(RealmOryxSignal).asSingleton();
+				this.injector.map(RealmOryxSignal).asSingleton();
+				this.injector.map(ToggleRealmQuestsDisplaySignal).asSingleton();
 				this.injector.map(CharactersMetricsTracker).asSingleton();
 				this.injector.map(FameTracker).asSingleton();
 				this.commandMap.map(ShowLoadingUISignal).toCommand(ShowLoadingUICommand);

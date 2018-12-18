@@ -8,6 +8,7 @@ package com.company.assembleegameclient.game
 	import com.company.assembleegameclient.objects.IInteractiveObject;
 	import com.company.assembleegameclient.objects.Pet;
 	import com.company.assembleegameclient.objects.Player;
+	import com.company.assembleegameclient.objects.Portal;
 	import com.company.assembleegameclient.objects.Projectile;
 	import com.company.assembleegameclient.parameters.Parameters;
 	import com.company.assembleegameclient.tutorial.Tutorial;
@@ -36,7 +37,6 @@ package com.company.assembleegameclient.game
 
 	import kabam.lib.loopedprocs.LoopedCallback;
 	import kabam.lib.loopedprocs.LoopedProcess;
-	import kabam.rotmg.account.core.Account;
 	import kabam.rotmg.arena.view.ArenaTimer;
 	import kabam.rotmg.arena.view.ArenaWaveCounter;
 	import kabam.rotmg.chat.view.Chat;
@@ -52,9 +52,11 @@ package com.company.assembleegameclient.game
 	import kabam.rotmg.dialogs.control.OpenDialogSignal;
 	import kabam.rotmg.dialogs.model.DialogsModel;
 	import kabam.rotmg.dialogs.model.PopupNamesConfig;
+	import kabam.rotmg.game.model.QuestModel;
 	import kabam.rotmg.game.view.CreditDisplay;
 	import kabam.rotmg.game.view.GiftStatusDisplay;
 	import kabam.rotmg.game.view.NewsModalButton;
+	import kabam.rotmg.game.view.RealmQuestsDisplay;
 	import kabam.rotmg.game.view.ShopDisplay;
 	import kabam.rotmg.maploading.signals.HideMapLoadingSignal;
 	import kabam.rotmg.maploading.signals.MapLoadedSignal;
@@ -67,7 +69,6 @@ package com.company.assembleegameclient.game
 	import kabam.rotmg.promotions.signals.ShowBeginnersPackageSignal;
 	import kabam.rotmg.promotions.view.BeginnersPackageButton;
 	import kabam.rotmg.promotions.view.SpecialOfferButton;
-	import kabam.rotmg.protip.signals.ShowProTipSignal;
 	import kabam.rotmg.servers.api.Server;
 	import kabam.rotmg.stage3D.Renderer;
 	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
@@ -101,6 +102,7 @@ package com.company.assembleegameclient.game
 			public var guildText_:GuildText;
 			public var shopDisplay:ShopDisplay;
 			public var creditDisplay_:CreditDisplay;
+			public var realmQuestsDisplay:RealmQuestsDisplay;
 			public var giftStatusDisplay:GiftStatusDisplay;
 			public var newsModalButton:NewsModalButton;
 			public var newsTicker:NewsTicker;
@@ -126,6 +128,8 @@ package com.company.assembleegameclient.game
 			private var packageY:Number;
 			public var chatPlayerMenu:PlayerMenu;
 			private var specialOfferButton:SpecialOfferButton;
+			private var questModel:QuestModel;
+			private var mapName:String;
 
 			private var timerCounter:TextFieldDisplayConcrete;
 			private var timerCounterStringBuilder:StaticStringBuilder;
@@ -413,11 +417,12 @@ package com.company.assembleegameclient.game
 
 			override public function initialize():void
 			{
-				var _local_1:Account;
-				var _local_4:ShowProTipSignal;
+				var _local_5:String;
+				var _local_6:String;
+				this.questModel = StaticInjectorContext.getInjector().getInstance(QuestModel);
 				map.initialize();
 				this.modelInitialized.dispatch();
-				var mapName:String = this.map.name_;
+				this.mapName = this.map.name_;
 				this.showHideKeyUISignal.dispatch((mapName == "Davy Jones' Locker"));
 				this.isNexus_ = (mapName == Map.NEXUS);
 				this.map.isTrench = (mapName == "Ocean Trench");
@@ -463,8 +468,29 @@ package com.company.assembleegameclient.game
 					this.creditDisplay_ = new CreditDisplay(this);
 				}
 				this.creditDisplay_.x = 594;
-				this.creditDisplay_.y = 0;
 				addChild(this.creditDisplay_);
+				if (!this.evalIsNotInCombatMapArea() && this.canShowRealmQuestDisplay(this.mapName))
+				{
+					var portal:Portal = (this.mapModel.currentInteractiveTarget as Portal);
+					if (portal)
+					{
+						_local_5 = portal.name_;
+					}
+					this.realmQuestsDisplay = new RealmQuestsDisplay(map);
+					if (this.questModel.currentRealm == "" && _local_5 != null)
+					{
+						_local_6 = _local_5.substring((_local_5.indexOf("NexusPortal.") + 12), _local_5.indexOf(" "));
+						this.questModel.currentRealm = _local_6;
+					}
+					this.realmQuestsDisplay.x = 10;
+					this.realmQuestsDisplay.y = (Parameters.ssmode ? 10 : 40);
+					addChild(this.realmQuestsDisplay);
+				}
+				else
+				{
+					this.questModel.currentRealm = "";
+					this.questModel.previousRealm = "";
+				}
 				if (mapName == Map.DAILY_QUEST_ROOM)
 				{
 					gsc_.questFetch();
@@ -483,6 +509,33 @@ package com.company.assembleegameclient.game
 				hidePreloader();
 				this.parent.parent.setChildIndex((this.parent.parent as Layers).top, 2);
 				stage.dispatchEvent(new Event(Event.RESIZE));
+			}
+
+			private function canShowRealmQuestDisplay(_arg_1:String):Boolean
+			{
+				var _local_2:Boolean;
+				if (_arg_1 == Map.REALM)
+				{
+					this.questModel.previousRealm = _arg_1;
+					this.questModel.requirementsStates[QuestModel.REMAINING_HEROES_REQUIREMENT] = false;
+					this.questModel.remainingHeroes = -1;
+					if (this.questModel.hasOryxBeenKilled)
+					{
+						this.questModel.hasOryxBeenKilled = false;
+						this.questModel.resetRequirementsStates();
+					}
+					_local_2 = true;
+				}
+				else
+				{
+					if (this.questModel.previousRealm == Map.REALM && _arg_1.indexOf("Oryx") != -1)
+					{
+						this.questModel.requirementsStates[QuestModel.REMAINING_HEROES_REQUIREMENT] = true;
+						this.questModel.remainingHeroes = 0;
+						_local_2 = true;
+					}
+				}
+				return (_local_2);
 			}
 
 			public function chatMenuPositionFixed():void
@@ -612,6 +665,19 @@ package com.company.assembleegameclient.game
 					}
 					this.guildText_.x = (64 * this.guildText_.scaleX);
 					this.guildText_.y = (2 * this.guildText_.scaleY);
+				}
+				if (this.realmQuestsDisplay != null)
+				{
+					if (_local_2)
+					{
+						this.realmQuestsDisplay.scaleX = _local_7;
+						this.realmQuestsDisplay.scaleY = 1;
+					}
+					else
+					{
+						this.realmQuestsDisplay.scaleX = _local_3;
+						this.realmQuestsDisplay.scaleY = _local_6;
+					}
 				}
 				if (this.creditDisplay_ != null)
 				{

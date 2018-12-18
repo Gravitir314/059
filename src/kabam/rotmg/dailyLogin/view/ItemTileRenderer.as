@@ -104,10 +104,6 @@ package kabam.rotmg.dailyLogin.view
 				var _local_1:int = this.itemId;
 				if (_local_1 != ItemConstants.NO_ITEM)
 				{
-					if (((_local_1 >= 0x9000) && (_local_1 < 0xF000)))
-					{
-						_local_1 = 36863;
-					}
 					_local_2 = ObjectLibrary.getRedrawnTextureFromType(_local_1, CalendarSettings.ITEM_SIZE, true);
 					_local_3 = ObjectLibrary.xmlLibrary_[_local_1];
 					if ((((_local_3) && (_local_3.hasOwnProperty("Doses"))) && (this.bitmapFactory)))

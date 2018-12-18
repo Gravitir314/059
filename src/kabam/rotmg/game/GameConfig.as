@@ -40,6 +40,7 @@ package kabam.rotmg.game
 	import kabam.rotmg.game.logging.RollingMeanLoopMonitor;
 	import kabam.rotmg.game.model.ChatFilter;
 	import kabam.rotmg.game.model.GameModel;
+	import kabam.rotmg.game.model.QuestModel;
 	import kabam.rotmg.game.model.TextPanelData;
 	import kabam.rotmg.game.signals.AddSpeechBalloonSignal;
 	import kabam.rotmg.game.signals.ExitGameSignal;
@@ -60,6 +61,8 @@ package kabam.rotmg.game
 	import kabam.rotmg.game.view.MoneyChangerPanel;
 	import kabam.rotmg.game.view.MoneyChangerPanelMediator;
 	import kabam.rotmg.game.view.PortalPanelMediator;
+	import kabam.rotmg.game.view.RealmQuestsDisplay;
+	import kabam.rotmg.game.view.RealmQuestsDisplayMediator;
 	import kabam.rotmg.game.view.SellableObjectPanel;
 	import kabam.rotmg.game.view.SellableObjectPanelMediator;
 	import kabam.rotmg.game.view.ShopDisplay;
@@ -110,6 +113,7 @@ package kabam.rotmg.game
 				this.injector.map(ExitGameSignal).asSingleton();
 				this.injector.map(QueueStatusTextSignal).asSingleton();
 				this.injector.map(SocketServerModel).asSingleton();
+				this.injector.map(QuestModel).asSingleton();
 				this.makeTextPanelMappings();
 				this.makeGiftStatusDisplayMappings();
 				this.mediatorMap.map(PortalPanel).toMediator(PortalPanelMediator);
@@ -125,6 +129,7 @@ package kabam.rotmg.game
 				this.mediatorMap.map(StatView).toMediator(StatMediator);
 				this.mediatorMap.map(StatsView).toMediator(StatsMediator);
 				this.mediatorMap.map(TabStripView).toMediator(TabStripMediator);
+				this.mediatorMap.map(RealmQuestsDisplay).toMediator(RealmQuestsDisplayMediator);
 				this.commandMap.map(AppInitDataReceivedSignal).toCommand(ParsePotionDataCommand);
 				this.commandMap.map(GiftStatusUpdateSignal).toCommand(GiftStatusUpdateCommand);
 				this.commandMap.map(UseBuyPotionSignal).toCommand(UseBuyPotionCommand);

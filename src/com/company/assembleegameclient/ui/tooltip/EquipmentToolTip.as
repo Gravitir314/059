@@ -21,7 +21,6 @@ package com.company.assembleegameclient.ui.tooltip
 	import io.decagames.rotmg.ui.labels.UILabel;
 
 	import kabam.rotmg.constants.ActivationType;
-	import kabam.rotmg.core.StaticInjectorContext;
 	import kabam.rotmg.messaging.impl.data.StatData;
 	import kabam.rotmg.messaging.impl.incoming.KeyInfoResponse;
 	import kabam.rotmg.text.model.TextKey;
@@ -30,7 +29,6 @@ package com.company.assembleegameclient.ui.tooltip
 	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 	import kabam.rotmg.text.view.stringBuilder.StringBuilder;
-	import kabam.rotmg.ui.model.HUDModel;
 
 	public class EquipmentToolTip extends ToolTip
 		{
@@ -75,7 +73,6 @@ package com.company.assembleegameclient.ui.tooltip
 
 			public function EquipmentToolTip(_arg_1:int, _arg_2:Player, _arg_3:int, _arg_4:String)
 			{
-				var _local_8:HUDModel;
 				this.objectType = _arg_1;
 				this.originalObjectType = this.objectType;
 				this.player = _arg_2;
@@ -86,10 +83,6 @@ package com.company.assembleegameclient.ui.tooltip
 				var _local_5:uint = (((this.playerCanUse) || (this.player == null)) ? 0x363636 : 6036765);
 				var _local_6:uint = (((this.playerCanUse) || (_arg_2 == null)) ? 0x9B9B9B : 10965039);
 				super(_local_5, 1, _local_6, 1, true);
-				if (((this.objectType >= 0x9000) && (this.objectType <= 0xF000)))
-				{
-					this.objectType = 36863;
-				}
 				var _local_7:int = ((_arg_2) ? ObjectLibrary.getMatchingSlotIndex(this.objectType, _arg_2) : -1);
 				this.slotTypeToTextBuilder = new SlotComparisonFactory();
 				this.objectXML = ObjectLibrary.xmlLibrary_[this.objectType];
@@ -112,30 +105,8 @@ package com.company.assembleegameclient.ui.tooltip
 					}
 				}
 				this.addIcon();
-				if (((this.originalObjectType >= 0x9000) && (this.originalObjectType <= 0xF000)))
-				{
-					if (keyInfo[this.originalObjectType] == null)
-					{
-						this.addTitle();
-						this.addDescriptionText();
-						this.keyInfoResponse = StaticInjectorContext.getInjector().getInstance(KeyInfoResponseSignal);
-						this.keyInfoResponse.add(this.onKeyInfoResponse);
-						_local_8 = StaticInjectorContext.getInjector().getInstance(HUDModel);
-						_local_8.gameSprite.gsc_.keyInfoRequest(this.originalObjectType);
-					}
-					else
-					{
-						this.titleOverride = (keyInfo[this.originalObjectType][0] + " Key");
-						this.descriptionOverride = (((keyInfo[this.originalObjectType][1] + "\n") + "Created By: ") + keyInfo[this.originalObjectType][2]);
-						this.addTitle();
-						this.addDescriptionText();
-					}
-				}
-				else
-				{
-					this.addTitle();
-					this.addDescriptionText();
-				}
+				this.addTitle();
+				this.addDescriptionText();
 				this.addTierText();
 				this.handleWisMod();
 				this.buildCategorySpecificText();

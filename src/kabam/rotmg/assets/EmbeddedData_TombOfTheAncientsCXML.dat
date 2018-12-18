@@ -632,6 +632,7 @@
       <MaxHitPoints>50000</MaxHitPoints>
       <Size>140</Size>
       <Defense>15</Defense>
+      <Exp>4000</Exp>
       <God/>
       <NoArticle/>
       <Projectile id="0">
@@ -729,6 +730,7 @@
       <MaxHitPoints>55000</MaxHitPoints>
       <Size>140</Size>
       <Defense>30</Defense>
+      <Exp>4000</Exp>
       <God/>
       <NoArticle/>
       <Projectile id="0">
@@ -798,6 +800,7 @@
       <MaxHitPoints>65000</MaxHitPoints>
       <Size>140</Size>
       <Defense>50</Defense>
+      <Exp>4000</Exp>
       <God/>
       <NoArticle/>
       <Projectile id="0">

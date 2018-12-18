@@ -408,6 +408,7 @@
       <ShadowSize>0</ShadowSize>
       <MaxHitPoints>25000</MaxHitPoints>
       <Defense>30</Defense>
+      <Exp>2000</Exp>
       <Projectile id="1">
          <ObjectId>Golden Blast</ObjectId>
          <Damage>80</Damage>

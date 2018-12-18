@@ -2728,7 +2728,7 @@
       <Defense>65</Defense>
       <StasisImmune/>
       <StunImmune/>
-      <Exp>1000</Exp>
+      <Exp>5000</Exp>
       <ParalyzeImmune/>
       <EventChestBoss/>
       <Projectile id="0">

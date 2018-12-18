@@ -5,8 +5,8 @@
       <Class>Player</Class>
       <Description>The rogue relies on his speed to deal damage at medium range while avoiding attacks.</Description>
       <AnimatedTexture>
-         <File>players</File>
-         <Index>0</Index>
+         <File>playerskins</File>
+         <Index>265</Index>
       </AnimatedTexture>
       <HitSound>player/rogue_hit</HitSound>
       <DeathSound>player/rogue_death</DeathSound>
@@ -37,8 +37,8 @@
       <Class>Player</Class>
       <Description>The archer has a long-range attack and can acquire very powerful weapons.</Description>
       <AnimatedTexture>
-         <File>players</File>
-         <Index>1</Index>
+         <File>playerskins</File>
+         <Index>266</Index>
       </AnimatedTexture>
       <HitSound>player/archer_hit</HitSound>
       <DeathSound>player/archer_death</DeathSound>
@@ -69,8 +69,8 @@
       <Class>Player</Class>
       <Description>The wizard deals damage from a long distance and blasts enemies with powerful spells.</Description>
       <AnimatedTexture>
-         <File>players</File>
-         <Index>2</Index>
+         <File>playerskins</File>
+         <Index>267</Index>
       </AnimatedTexture>
       <HitSound>player/wizard_hit</HitSound>
       <DeathSound>player/wizard_death</DeathSound>
@@ -100,8 +100,8 @@
       <Class>Player</Class>
       <Description>The priest attacks at long range and can heal himself and his allies.</Description>
       <AnimatedTexture>
-         <File>players</File>
-         <Index>3</Index>
+         <File>playerskins</File>
+         <Index>268</Index>
       </AnimatedTexture>
       <HitSound>player/priest_hit</HitSound>
       <DeathSound>player/priest_death</DeathSound>
@@ -132,8 +132,8 @@
       <Class>Player</Class>
       <Description>The warrior wears strong armor and uses his magic helmet to inspire his allies in battle.</Description>
       <AnimatedTexture>
-         <File>players</File>
-         <Index>4</Index>
+         <File>playerskins</File>
+         <Index>269</Index>
       </AnimatedTexture>
       <HitSound>player/warrior_hit</HitSound>
       <DeathSound>player/warrior_death</DeathSound>
@@ -164,8 +164,8 @@
       <Class>Player</Class>
       <Description>The knight fights at close range, wears very heavy armor, and uses his shield to stun enemies.</Description>
       <AnimatedTexture>
-         <File>players</File>
-         <Index>5</Index>
+         <File>playerskins</File>
+         <Index>270</Index>
       </AnimatedTexture>
       <HitSound>player/knight_hit</HitSound>
       <DeathSound>player/knight_death</DeathSound>
@@ -196,8 +196,8 @@
       <Class>Player</Class>
       <Description>The paladin can deal damage at close range, wear armor and heal himself and his allies.</Description>
       <AnimatedTexture>
-         <File>players</File>
-         <Index>6</Index>
+         <File>playerskins</File>
+         <Index>271</Index>
       </AnimatedTexture>
       <HitSound>player/paladin_hit</HitSound>
       <DeathSound>player/paladin_death</DeathSound>
@@ -229,8 +229,8 @@
       <Class>Player</Class>
       <Description>The assassin fights from medium range and uses poison to damage his enemies over time.</Description>
       <AnimatedTexture>
-         <File>players</File>
-         <Index>7</Index>
+         <File>playerskins</File>
+         <Index>272</Index>
       </AnimatedTexture>
       <HitSound>player/rogue_hit</HitSound>
       <DeathSound>player/rogue_death</DeathSound>
@@ -262,8 +262,8 @@
       <Class>Player</Class>
       <Description>The necromancer drains life from his enemies to heal himself and his allies.</Description>
       <AnimatedTexture>
-         <File>players</File>
-         <Index>8</Index>
+         <File>playerskins</File>
+         <Index>273</Index>
       </AnimatedTexture>
       <HitSound>player/wizard_hit</HitSound>
       <DeathSound>player/wizard_death</DeathSound>
@@ -295,8 +295,8 @@
       <Class>Player</Class>
       <Description>The huntress uses arrows and traps to defeat her enemies.</Description>
       <AnimatedTexture>
-         <File>players</File>
-         <Index>9</Index>
+         <File>playerskins</File>
+         <Index>274</Index>
       </AnimatedTexture>
       <HitSound>player/archer_hit</HitSound>
       <DeathSound>player/archer_death</DeathSound>
@@ -328,8 +328,8 @@
       <Class>Player</Class>
       <Description>The mystic fights with a staff and uses her crystal orb to bind enemies to a distant plane. </Description>
       <AnimatedTexture>
-         <File>players</File>
-         <Index>10</Index>
+         <File>playerskins</File>
+         <Index>275</Index>
       </AnimatedTexture>
       <HitSound>player/wizard_hit</HitSound>
       <DeathSound>player/wizard_death</DeathSound>
@@ -361,8 +361,8 @@
       <Class>Player</Class>
       <Description>The trickster fights with a dagger while using her magical prism to distract enemies.</Description>
       <AnimatedTexture>
-         <File>players</File>
-         <Index>11</Index>
+         <File>playerskins</File>
+         <Index>276</Index>
       </AnimatedTexture>
       <HitSound>player/rogue_hit</HitSound>
       <DeathSound>player/rogue_death</DeathSound>
@@ -394,8 +394,8 @@
       <Class>Player</Class>
       <Description>The sorcerer uses his scepter to fire blasts of chain lightning at his enemies.</Description>
       <AnimatedTexture>
-         <File>players</File>
-         <Index>12</Index>
+         <File>playerskins</File>
+         <Index>277</Index>
       </AnimatedTexture>
       <HitSound>player/priest_hit</HitSound>
       <DeathSound>player/priest_death</DeathSound>
@@ -427,8 +427,8 @@
       <Class>Player</Class>
       <Description>The ninja relies on speed and skill, using katanas and ninja stars to deal big damage.</Description>
       <AnimatedTexture>
-         <File>players</File>
-         <Index>13</Index>
+         <File>playerskins</File>
+         <Index>278</Index>
       </AnimatedTexture>
       <HitSound>player/rogue_hit</HitSound>
       <DeathSound>player/rogue_death</DeathSound>
@@ -460,8 +460,8 @@
       <Class>Player</Class>
       <Description>The samurai fights with a katana and uses his wakizashi sidearm to expose enemy weak points.</Description>
       <AnimatedTexture>
-         <File>players</File>
-         <Index>14</Index>
+         <File>playerskins</File>
+         <Index>424</Index>
       </AnimatedTexture>
       <HitSound>player/warrior_hit</HitSound>
       <DeathSound>player/warrior_death</DeathSound>

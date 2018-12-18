@@ -8,6 +8,7 @@ package com.company.assembleegameclient.map
 	import com.company.assembleegameclient.map.mapoverlay.MapOverlay;
 	import com.company.assembleegameclient.map.partyoverlay.PartyOverlay;
 	import com.company.assembleegameclient.objects.BasicObject;
+	import com.company.assembleegameclient.objects.Character;
 	import com.company.assembleegameclient.objects.GameObject;
 	import com.company.assembleegameclient.objects.Party;
 	import com.company.assembleegameclient.objects.Pet;
@@ -35,12 +36,14 @@ package com.company.assembleegameclient.map
 	import kabam.rotmg.core.StaticInjectorContext;
 	import kabam.rotmg.game.logging.RollingMeanLoopMonitor;
 	import kabam.rotmg.game.model.GameModel;
+	import kabam.rotmg.game.model.QuestModel;
 	import kabam.rotmg.stage3D.GraphicsFillExtra;
 	import kabam.rotmg.stage3D.Object3D.Object3DStage3D;
 	import kabam.rotmg.stage3D.Render3D;
 	import kabam.rotmg.stage3D.Renderer;
 	import kabam.rotmg.stage3D.graphic3D.Program3DFactory;
 	import kabam.rotmg.stage3D.graphic3D.TextureFactory;
+	import kabam.rotmg.ui.signals.RealmOryxSignal;
 
 	public class Map extends AbstractMap
 		{
@@ -55,6 +58,8 @@ package com.company.assembleegameclient.map
 			public static const PET_YARD_3:String = "Pet Yard 3";
 			public static const PET_YARD_4:String = "Pet Yard 4";
 			public static const PET_YARD_5:String = "Pet Yard 5";
+			public static const REALM:String = "Realm of the Mad God";
+			public static const ORYX_CHAMBER:String = "Oryx's Chamber";
 			public static const GUILD_HALL:String = "Guild Hall";
 			public static const NEXUS_EXPLANATION:String = "Nexus_Explanation";
 			public static const VAULT:String = "Vault";
@@ -75,6 +80,7 @@ package com.company.assembleegameclient.map
 			private var lastSoftwareClear:Boolean = false;
 			private var darknessOverlay_:DisplayObject = new EmbeddedAssets.DarknessBackground();
 			private var bgCont:Sprite = new Sprite();
+			private var oryxObjectId:int;
 			private var graphicsData_:Vector.<IGraphicsData> = new Vector.<IGraphicsData>();
 			private var graphicsDataStageSoftware_:Vector.<IGraphicsData> = new Vector.<IGraphicsData>();
 			private var graphicsData3d_:Vector.<Object3DStage3D> = new Vector.<Object3DStage3D>();
@@ -339,6 +345,13 @@ package com.company.assembleegameclient.map
 						return;
 					}
 				}
+				if (name_ == ORYX_CHAMBER && this.oryxObjectId == 0)
+				{
+					if (_arg_1 is Character && (_arg_1 as Character).getName() == QuestModel.ORYX_THE_MAD_GOD)
+					{
+						this.oryxObjectId = _arg_1.objectId_;
+					}
+				}
 				_local_2[_arg_1.objectId_] = _arg_1;
 			}
 
@@ -368,6 +381,10 @@ package com.company.assembleegameclient.map
 					}
 				}
 				_local_3.removeFromMap();
+				if (name_ == ORYX_CHAMBER && _arg_1 == this.oryxObjectId)
+				{
+					StaticInjectorContext.getInjector().getInstance(RealmOryxSignal).dispatch();
+				}
 				delete _local_2[_arg_1];
 			}
 

@@ -18,7 +18,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/059.iml" filepath="$PROJECT_DIR$/059.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Server/Server.iml" filepath="$PROJECT_DIR$/Server/Server.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="false" project-jdk-name="Apache_Flex" project-jdk-type="Flex SDK Type (new)">

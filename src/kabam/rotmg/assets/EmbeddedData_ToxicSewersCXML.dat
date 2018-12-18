@@ -277,7 +277,7 @@
       <StasisImmune/>
       <NoArticle/>
       <Level>1</Level>
-      <Exp>500</Exp>
+      <Exp>2000</Exp>
       <EventChestBoss/>
       <Projectile id="0">
          <ObjectId>Poison Fireball</ObjectId>

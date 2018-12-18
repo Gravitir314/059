@@ -32,7 +32,7 @@
       <ShadowSize>50</ShadowSize>
       <MaxHitPoints>45000</MaxHitPoints>
       <Defense>25</Defense>
-      <Exp>136</Exp>
+      <Exp>1000</Exp>
       <StasisImmune/>
       <ParalyzeImmune/>
       <EventChestBoss/>
@@ -577,7 +577,7 @@
       <ShadowSize>50</ShadowSize>
       <MaxHitPoints>50000</MaxHitPoints>
       <Defense>30</Defense>
-      <Exp>156</Exp>
+      <Exp>2000</Exp>
       <StasisImmune/>
       <ParalyzeImmune/>
       <Projectile id="1">
