@@ -70,7 +70,7 @@ package io.decagames.rotmg.supportCampaign.tab
 			override public function initialize():void
 			{
 				this.updatePointsSignal.add(this.onPointsUpdate);
-				this.view.show(this.hudModel.getPlayerName(), this.model.isUnlocked, this.model.isStarted, this.model.unlockPrice, this.model.donatePointsRatio);
+                this.view.show(this.hudModel.getPlayerName(), this.model.isUnlocked, this.model.isStarted, this.model.unlockPrice, this.model.donatePointsRatio, this.model.isEnded);
 				if (!this.model.isStarted)
 				{
 					this.view.addEventListener("enterFrame", this.updateStartCountdown);
@@ -180,7 +180,7 @@ package io.decagames.rotmg.supportCampaign.tab
 						{
 							this.updateUserGold(_local_4.Gold);
 						}
-						this.view.show(null, true, this.model.isStarted, this.model.unlockPrice, this.model.donatePointsRatio);
+                        this.view.show(null, true, this.model.isStarted, this.model.unlockPrice, this.model.donatePointsRatio, this.model.isEnded);
 						this.model.parseUpdateData(_local_4);
 						this.updateCampaignInformation();
 					}

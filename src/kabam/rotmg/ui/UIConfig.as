@@ -135,6 +135,7 @@ package kabam.rotmg.ui
 	import kabam.rotmg.ui.signals.ShowKeySignal;
 	import kabam.rotmg.ui.signals.ShowLoadingUISignal;
 	import kabam.rotmg.ui.signals.ShowTitleUISignal;
+    import kabam.rotmg.ui.signals.RealmServerNameSignal;
 	import kabam.rotmg.ui.signals.ToggleRealmQuestsDisplaySignal;
 	import kabam.rotmg.ui.signals.ToggleShowTierTagSignal;
 	import kabam.rotmg.ui.signals.UpdateBackpackTabSignal;
@@ -220,7 +221,7 @@ package kabam.rotmg.ui
 				this.injector.map(RealmHeroesSignal).asSingleton();
 				this.injector.map(RealmQuestLevelSignal).asSingleton();
 				this.injector.map(RealmOryxSignal).asSingleton();
-				this.injector.map(RealmOryxSignal).asSingleton();
+                this.injector.map(RealmServerNameSignal).asSingleton();
 				this.injector.map(ToggleRealmQuestsDisplaySignal).asSingleton();
 				this.injector.map(CharactersMetricsTracker).asSingleton();
 				this.injector.map(FameTracker).asSingleton();

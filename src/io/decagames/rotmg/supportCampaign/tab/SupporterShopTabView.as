@@ -45,7 +45,7 @@ package io.decagames.rotmg.supportCampaign.tab
 				this._campaignTimer = new UILabel();
 			}
 
-			public function show(_arg_1:String, _arg_2:Boolean, _arg_3:Boolean, _arg_4:int, _arg_5:int):void
+            public function show(_arg_1:String, _arg_2:Boolean, _arg_3:Boolean, _arg_4:int, _arg_5:int, _arg_6:Boolean):void
 			{
 				this.pName = _arg_1;
 				this.drawBackground(_arg_2);
@@ -56,11 +56,11 @@ package io.decagames.rotmg.supportCampaign.tab
 						removeChild(this.unlockScreenContainer);
 						this.unlockScreenContainer = null;
 					}
-					this.drawDonatePanel(_arg_5);
+                    this.drawDonatePanel(_arg_5, _arg_6);
 				}
 				else
 				{
-					this.showUnlockScreen(_arg_3, _arg_4, _arg_5);
+                    this.showUnlockScreen(_arg_3, _arg_4, _arg_5, _arg_6);
 				}
 			}
 
@@ -102,13 +102,20 @@ package io.decagames.rotmg.supportCampaign.tab
 			{
 				var _local_2:TimeSpan = new TimeSpan(_arg_1);
 				var _local_3:String = "Supporter campaign will end in: ";
-				if (_local_2.totalDays == 0)
-				{
-					_local_3 = (_local_3 + (((((_local_2.hours > 9) ? _local_2.hours.toString() : ("0" + _local_2.hours.toString())) + "h ") + ((_local_2.minutes > 9) ? _local_2.minutes.toString() : ("0" + _local_2.minutes.toString()))) + "m"));
+                if (_local_2.totalMilliseconds <= 0)
+                {
+                    _local_3 = "Campaign has ended!";
 				}
 				else
 				{
-					_local_3 = (_local_3 + (((((_local_2.days > 9) ? _local_2.days.toString() : ("0" + _local_2.days.toString())) + "d ") + ((_local_2.hours > 9) ? _local_2.hours.toString() : ("0" + _local_2.hours.toString()))) + "h"));
+                    if (_local_2.totalDays == 0)
+                    {
+                        _local_3 = (_local_3 + (((((_local_2.hours > 9) ? _local_2.hours.toString() : ("0" + _local_2.hours.toString())) + "h ") + ((_local_2.minutes > 9) ? _local_2.minutes.toString() : ("0" + _local_2.minutes.toString()))) + "m"));
+                    }
+                    else
+                    {
+                        _local_3 = (_local_3 + (((((_local_2.days > 9) ? _local_2.days.toString() : ("0" + _local_2.days.toString())) + "d ") + ((_local_2.hours > 9) ? _local_2.hours.toString() : ("0" + _local_2.hours.toString()))) + "h"));
+                    };
 				}
 				if (!this.endDateInfo)
 				{
@@ -147,65 +154,78 @@ package io.decagames.rotmg.supportCampaign.tab
 				this.progressBar.show(_arg_1, _arg_3, _arg_4);
 			}
 
-			private function showUnlockScreen(_arg_1:Boolean, _arg_2:int, _arg_3:int):void
-			{
-				var _local_6:UILabel;
+            private function showUnlockScreen(_arg_1:Boolean, _arg_2:int, _arg_3:int, _arg_4:Boolean):void
+            {
+                var _local_7:UILabel;
 				this.unlockScreenContainer = new Sprite();
 				this.unlockScreenContainer.x = 30;
 				this.unlockScreenContainer.y = 10;
-				var _local_4:SliceScalingBitmap = TextureParser.instance.getSliceScalingBitmap("UI", "support_campaign_unlock_screen");
-				this.unlockScreenContainer.addChild(_local_4);
-				var _local_5:UILabel = new UILabel();
-				_local_5.text = (("Welcome to the Unity Support Campaign, " + this.pName) + "!");
-				DefaultLabelFormat.createLabelFormat(_local_5, 18, 0xEAEAEA, TextFormatAlign.LEFT, true);
-				_local_5.wordWrap = true;
-				_local_5.width = (_local_4.width - 20);
-				_local_5.y = 10;
-				_local_5.x = 10;
+                var _local_5:SliceScalingBitmap = TextureParser.instance.getSliceScalingBitmap("UI", "support_campaign_unlock_screen");
 				this.unlockScreenContainer.addChild(_local_5);
-				_local_6 = new UILabel();
-				_local_6.text = (("We are bringing your favorite bullet-hell MMO to Unity and we need your support to make it happen! You can start right here. Join the cause, unlock the campaign and get your name displayed on the Wall of Fame upon release, alongside all our avid supporters from across the globe!\n" + "\n") + "After leaving your lasting mark in the game, you will be able to push onward and claim some unique gifts on top of our heartfelt gratitude. Our greatest supporters will also unlock an exclusive character glow.");
-				DefaultLabelFormat.createLabelFormat(_local_6, 14, 0xEAEAEA, TextFormatAlign.JUSTIFY, false);
+                var _local_6:UILabel = new UILabel();
+                _local_6.text = (("Welcome to the Unity Support Campaign, " + this.pName) + "!");
+                DefaultLabelFormat.createLabelFormat(_local_6, 18, 0xEAEAEA, TextFormatAlign.LEFT, true);
 				_local_6.wordWrap = true;
-				_local_6.width = (_local_4.width - 20);
-				_local_6.y = (_local_5.y + _local_5.height);
+                _local_6.width = (_local_5.width - 20);
+                _local_6.y = 10;
 				_local_6.x = 10;
 				this.unlockScreenContainer.addChild(_local_6);
-				var _local_7:SliceScalingBitmap = new TextureParser().getSliceScalingBitmap("UI", "uniqueGifts", 500);
+                _local_7 = new UILabel();
+                _local_7.text = (("We are bringing your favorite bullet-hell MMO to Unity and we need your support to make it happen! You can start right here. Join the cause, unlock the campaign and get your name displayed on the Wall of Fame upon release, alongside all our avid supporters from across the globe!\n" + "\n") + "After leaving your lasting mark in the game, you will be able to push onward and claim some unique gifts on top of our heartfelt gratitude. Our greatest supporters will also unlock an exclusive character glow.");
+                DefaultLabelFormat.createLabelFormat(_local_7, 14, 0xEAEAEA, TextFormatAlign.JUSTIFY, false);
+                _local_7.wordWrap = true;
+                _local_7.width = (_local_5.width - 20);
+                _local_7.y = (_local_6.y + _local_6.height);
+                _local_7.x = 10;
 				this.unlockScreenContainer.addChild(_local_7);
-				_local_7.y = ((_local_6.y + _local_6.height) + 5);
-				_local_7.x = Math.round(((_local_4.width - _local_7.width) / 2));
-				var _local_8:UILabel = new UILabel();
-				_local_8.text = "Add Your Name to the Wall of Fame";
-				DefaultLabelFormat.createLabelFormat(_local_8, 16, 0xEAEAEA, TextFormatAlign.CENTER, true);
-				_local_8.wordWrap = true;
-				_local_8.width = _local_4.width;
-				_local_8.y = ((_local_6.y + _local_6.height) + 130);
+                var _local_8:SliceScalingBitmap = new TextureParser().getSliceScalingBitmap("UI", "uniqueGifts", 500);
 				this.unlockScreenContainer.addChild(_local_8);
-				var _local_9:SliceScalingBitmap = new TextureParser().getSliceScalingBitmap("UI", "main_button_decoration_dark", 150);
+                _local_8.y = ((_local_7.y + _local_7.height) + 5);
+                _local_8.x = Math.round(((_local_5.width - _local_8.width) / 2));
+                var _local_9:UILabel = new UILabel();
+                _local_9.text = "Add Your Name to the Wall of Fame";
+                DefaultLabelFormat.createLabelFormat(_local_9, 16, 0xEAEAEA, TextFormatAlign.CENTER, true);
+                _local_9.wordWrap = true;
+                _local_9.width = _local_5.width;
+                _local_9.y = ((_local_7.y + _local_7.height) + 130);
 				this.unlockScreenContainer.addChild(_local_9);
+                var _local_10:SliceScalingBitmap = new TextureParser().getSliceScalingBitmap("UI", "main_button_decoration_dark", 150);
+                this.unlockScreenContainer.addChild(_local_10);
 				this._unlockButton = new ShopBuyButton(_arg_2);
-				this._unlockButton.width = (_local_9.width - 48);
-				this._unlockButton.disabled = (!(_arg_1));
+                this._unlockButton.width = (_local_10.width - 48);
+                this._unlockButton.disabled = ((!(_arg_1)) || (_arg_4));
 				this.unlockScreenContainer.addChild(this._unlockButton);
-				_local_9.y = (_local_8.y + _local_8.height);
-				_local_9.x = Math.round(((_local_4.width - _local_9.width) / 2));
-				this._unlockButton.y = (_local_9.y + 6);
-				this._unlockButton.x = (_local_9.x + 24);
+                _local_10.y = (_local_9.y + _local_9.height);
+                _local_10.x = Math.round(((_local_5.width - _local_10.width) / 2));
+                this._unlockButton.y = (_local_10.y + 6);
+                this._unlockButton.x = (_local_10.x + 24);
 				if (!_arg_1)
 				{
 					this._campaignTimer.text = "Supporter campaign will start in:";
 					DefaultLabelFormat.createLabelFormat(this._countdown, 18, 0xFE9700, TextFormatAlign.CENTER, true);
 					this._countdown.text = "";
 					this._countdown.wordWrap = true;
-					this._countdown.width = _local_4.width;
-					this._countdown.y = ((_local_7.y + _local_7.height) + 20);
+                    this._countdown.width = _local_5.width;
+                    this._countdown.y = ((_local_8.y + _local_8.height) + 20);
 					this.unlockScreenContainer.addChild(this._countdown);
 				}
+                else
+                {
+                    if (_arg_4)
+                    {
+                        this._campaignTimer.text = "Campaign has ended!";
+                        DefaultLabelFormat.createLabelFormat(this._countdown, 18, 0xFE9700, TextFormatAlign.CENTER, true);
+                        this._countdown.text = "";
+                        this._countdown.wordWrap = true;
+                        this._countdown.width = _local_5.width;
+                        this._countdown.y = 197;
+                        this.unlockScreenContainer.addChild(this._countdown);
+                    };
+                };
 				DefaultLabelFormat.createLabelFormat(this._campaignTimer, 14, 0xFE9700, TextFormatAlign.CENTER, false);
 				this._campaignTimer.wordWrap = true;
-				this._campaignTimer.width = _local_4.width;
-				this._campaignTimer.y = ((_local_7.y + _local_7.height) + 5);
+                this._campaignTimer.width = _local_5.width;
+                this._campaignTimer.y = ((_local_8.y + _local_8.height) + 5);
 				this.unlockScreenContainer.addChild(this._campaignTimer);
 				addChild(this.unlockScreenContainer);
 			}
@@ -223,13 +243,13 @@ package io.decagames.rotmg.supportCampaign.tab
 				this.background.y = 0;
 			}
 
-			private function drawDonatePanel(_arg_1:int):void
-			{
-				var _local_2:DonatePanel = new DonatePanel(_arg_1);
-				addChild(_local_2);
-				_local_2.x = (this.background.x + Math.round(((this.backgroundWidth - _local_2.width) / 2)));
-				_local_2.y = (this.background.height - 55);
-			}
+            private function drawDonatePanel(_arg_1:int, _arg_2:Boolean):void
+            {
+                var _local_3:DonatePanel = new DonatePanel(_arg_1, _arg_2);
+                addChild(_local_3);
+                _local_3.x = (this.background.x + Math.round(((this.backgroundWidth - _local_3.width) / 2)));
+                _local_3.y = (this.background.height - 55);
+            }
 
 			public function get unlockButton():ShopBuyButton
 			{

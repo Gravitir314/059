@@ -1,38 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="Flex" version="4">
-  <component name="FlexBuildConfigurationManager" active="Production">
+  <component name="FlexBuildConfigurationManager" active="059">
     <configurations>
-      <configuration name="Production" pure-as="true" main-class="ROTMG" output-file="059.swf" output-folder="$MODULE_DIR$/out/production/059">
-        <dependencies target-player="31.0">
+      <configuration name="059" pure-as="true" main-class="ROTMG" output-file="059.swf" output-folder="$MODULE_DIR$/out/production/059">
+        <dependencies target-player="11.1">
           <entries>
-            <entry library-name="as3-signals" library-level="project">
+            <entry library-name="libs" library-level="project">
               <dependency linkage="Merged" />
             </entry>
           </entries>
-          <sdk name="Apache_Flex" />
+          <sdk name="FlexSDK" />
         </dependencies>
         <compiler-options>
-          <map>
-            <entry key="compiler.debug.swf" value="true" />
-          </map>
-          <option name="resourceFilesMode" value="None" />
-          <option name="additionalOptions" value="-default-size 800 600 -default-frame-rate 60 -default-background-color #000000 -swf-version=31 -optimize -use-network=true" />
-        </compiler-options>
-        <packaging-air-desktop />
-        <packaging-android />
-        <packaging-ios />
-      </configuration>
-      <configuration name="Steam" pure-as="true" main-class="ROTMG" output-file="AssembleeGameClientProxy.swf" output-folder="C:/Program Files (x86)/Steam/steamapps/common/Realm of the Mad God">
-        <dependencies target-player="31.0">
-          <entries>
-            <entry library-name="as3-signals" library-level="project">
-              <dependency linkage="Merged" />
-            </entry>
-          </entries>
-          <sdk name="Apache_Flex" />
-        </dependencies>
-        <compiler-options>
-          <option name="resourceFilesMode" value="None" />
           <option name="additionalOptions" value="-default-size 800 600 -default-frame-rate 60 -default-background-color #000000 -swf-version=31 -optimize -use-network=true" />
         </compiler-options>
         <packaging-air-desktop />
@@ -47,8 +26,8 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Apache_Flex" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="jdk" jdkName="FlexSDK" jdkType="Flex SDK Type (new)" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="as3-signals" level="project" />
+    <orderEntry type="library" exported="" name="libs" level="project" />
   </component>
 </module>

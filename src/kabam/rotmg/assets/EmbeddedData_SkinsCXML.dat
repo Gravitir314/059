@@ -4803,4 +4803,14 @@
       <PlayerClassType>0x0311</PlayerClassType>
       <NoSkinSelect/>
    </Object>
+   <Object type="0x5eb4" id="Bolt Caster Wizard">
+      <Skin/>
+      <Class>Skin</Class>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>431</Index>
+      </AnimatedTexture>
+      <PlayerClassType>0x30e</PlayerClassType>
+      <NoSkinSelect/>
+   </Object>
 </Objects>

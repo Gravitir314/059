@@ -375,7 +375,7 @@
       <Class>Character</Class>
       <AnimatedTexture>
          <File>d3Chars8x8rEmbed</File>
-         <Index>22</Index>
+         <Index>19</Index>
       </AnimatedTexture>
       <HitSound>monster/slimes_death</HitSound>
       <DeathSound>monster/flying_brain_death</DeathSound>

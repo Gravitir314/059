@@ -27,11 +27,11 @@ package kabam.rotmg.chat.view
 		{
 
 			private static const IDENTITY_MATRIX:Matrix = new Matrix();
-			private static const SERVER:String = Parameters.SERVER_CHAT_NAME;
-			private static const CLIENT:String = Parameters.CLIENT_CHAT_NAME;
-			private static const HELP:String = Parameters.HELP_CHAT_NAME;
-			private static const ERROR:String = Parameters.ERROR_CHAT_NAME;
-			private static const GUILD:String = Parameters.GUILD_CHAT_NAME;
+            private static const SERVER:String = Parameters.SERVER_CHAT_NAME;//""
+            private static const CLIENT:String = Parameters.CLIENT_CHAT_NAME;//"*Client*"
+            private static const HELP:String = Parameters.HELP_CHAT_NAME;//"*Help*"
+            private static const ERROR:String = Parameters.ERROR_CHAT_NAME;//"*Error*"
+            private static const GUILD:String = Parameters.GUILD_CHAT_NAME;//"*Guild*"
 			private static const SYNC:String = Parameters.SYNC_CHAT_NAME;
 			private static const ASTRAL:String = Parameters.ASTRAL_CHAT_NAME;
 			private static const testField:TextField = makeTestTextField();

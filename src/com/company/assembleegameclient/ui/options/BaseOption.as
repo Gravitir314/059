@@ -54,7 +54,7 @@ package com.company.assembleegameclient.ui.options
 
 			private function onMouseOver(_arg_1:MouseEvent):void
 			{
-				parent.addChild(this.tooltip_);
+                parent.parent.addChild(this.tooltip_);
 			}
 
 			private function onRollOut(_arg_1:MouseEvent):void
@@ -71,9 +71,9 @@ package com.company.assembleegameclient.ui.options
 
 			private function removeToolTip():void
 			{
-				if (((!(this.tooltip_ == null)) && (parent.contains(this.tooltip_))))
+                if (((!(this.tooltip_ == null)) && (parent.parent.contains(this.tooltip_))))
 				{
-					parent.removeChild(this.tooltip_);
+                    parent.parent.removeChild(this.tooltip_);
 				}
 			}
 

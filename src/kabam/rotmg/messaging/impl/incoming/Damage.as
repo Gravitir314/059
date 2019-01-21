@@ -24,8 +24,8 @@ package kabam.rotmg.messaging.impl.incoming
 			{
 				this.targetId_ = _arg_1.readInt();
 				this.effects_.length = 0;
-				var _local_2:int = _arg_1.readUnsignedByte();
-				var _local_3:uint;
+                var _local_2:int = _arg_1.readUnsignedByte();
+                var _local_3:uint;
 				while (_local_3 < _local_2)
 				{
 					this.effects_.push(_arg_1.readUnsignedByte());

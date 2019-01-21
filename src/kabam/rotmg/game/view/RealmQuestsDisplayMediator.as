@@ -9,6 +9,7 @@ package kabam.rotmg.game.view
 	import kabam.rotmg.ui.signals.RealmOryxSignal;
 	import kabam.rotmg.ui.signals.RealmQuestLevelSignal;
 	import kabam.rotmg.ui.signals.ToggleRealmQuestsDisplaySignal;
+    import kabam.rotmg.ui.signals.RealmServerNameSignal;
 
 	import robotlegs.bender.bundles.mvcs.Mediator;
 
@@ -27,6 +28,8 @@ package kabam.rotmg.game.view
 			public var toggleRealmQuestsDisplay:ToggleRealmQuestsDisplaySignal;
 			[Inject]
 			public var questModel:QuestModel;
+            [Inject]
+            public var realmServerNameSignal:RealmServerNameSignal;
 
 
 			override public function initialize():void
@@ -34,15 +37,20 @@ package kabam.rotmg.game.view
 				this.realmHeroesSignal.add(this.onRealmHeroes);
 				this.realmQuestLevelSignal.add(this.onRealmQuestLevel);
 				this.realmOryxSignal.add(this.onOryxKill);
+                this.realmServerNameSignal.add(this.onServerName);
 				this.toggleRealmQuestsDisplay.add(this.onToggleDisplay);
 				this.initView();
 			}
+
+            private function onServerName(_arg_1:String):void
+            {
+                this.view.realmName = _arg_1;
+            }
 
 			private function initView():void
 			{
 				this.view.requirementsStates = this.questModel.requirementsStates;
 				this.view.init();
-				this.view.realmName = this.questModel.currentRealm;
 				if (((this.questModel.previousRealm == Map.REALM) && (this.view.requirementsStates[QuestModel.REMAINING_HEROES_REQUIREMENT])))
 				{
 					this.view.remainingHeroes = 0;

@@ -7,7 +7,7 @@ package kabam.rotmg.messaging.impl.outgoing
 	public class PlayerText extends OutgoingMessage
 		{
 
-			public var text_:String;
+            public var text_:String;
 
 			public function PlayerText(_arg_1:uint, _arg_2:Function)
 			{

@@ -30,6 +30,7 @@ package kabam.rotmg.chat.control
 	import kabam.rotmg.servers.api.ServerModel;
 	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 	import kabam.rotmg.ui.model.HUDModel;
+    import kabam.rotmg.ui.signals.RealmServerNameSignal;
 
 	import zfn.sound.SoundCustom;
 
@@ -63,6 +64,8 @@ package kabam.rotmg.chat.control
 			public var socialModel:SocialModel;
 			[Inject]
 			public var setup:ApplicationSetup;
+            [Inject]
+            public var realmServerNameSignal:RealmServerNameSignal;
 
 
 			public function execute(_arg_1:Text):void
@@ -452,6 +455,10 @@ package kabam.rotmg.chat.control
 				_local_2.isWhisper = ((_arg_1.recipient_) && (!(this.isSpecialRecipientChat(_arg_1.recipient_))));
 				_local_2.isToMe = (this.model.player != null && _arg_1.recipient_ == this.model.player.name_);
 				_local_2.isFromSupporter = _arg_1.isSupporter;
+                if (_arg_1.text_.search("NexusPortal.") != -1)
+                {
+                    this.dispatchServerName(_arg_1.text_);
+                };
 				this.addMessageText(_arg_1, _local_2);
 				this.addTextLine.dispatch(_local_2);
 			}
@@ -470,6 +477,12 @@ package kabam.rotmg.chat.control
 					message.text = ((useCleanString(text)) ? text.cleanText_ : text.text_);
 				}
 			}
+
+            private function dispatchServerName(_arg_1:String):void
+            {
+                var _local_2:String = _arg_1.substring((_arg_1.indexOf(".") + 1));
+                this.realmServerNameSignal.dispatch(_local_2);
+            }
 
 			private function replaceIfSlashServerCommand(_arg_1:String):String
 			{

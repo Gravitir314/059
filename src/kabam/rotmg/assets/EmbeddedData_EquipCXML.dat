@@ -15694,7 +15694,6 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
          <Index>0x50</Index>
       </Texture>
       <SlotType>23</SlotType>
-      <Tier>6</Tier>
       <Description>A holy shepherd's hook that creates sacred light to guide the innocent to salvation.\n\nSprite Credits: Dappertron</Description>
       <Sound>spell/magic_nova</Sound>
       <ActivateOnEquip stat="26" amount="2">IncrementStat</ActivateOnEquip>
@@ -15714,7 +15713,6 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
          <Index>0x51</Index>
       </Texture>
       <SlotType>21</SlotType>
-      <Tier>6</Tier>
       <Description>A skillfully decorated snowglobe that is actually a warlock's sinister tool of inquisition, imprisoning foes in a realm of infinite winter.\n\nSprite Credits: Dappertron</Description>
       <Usable/>
       <BagType>4</BagType>
@@ -15733,7 +15731,6 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
          <Index>0x52</Index>
       </Texture>
       <SlotType>16</SlotType>
-      <Tier>6</Tier>
       <Description>A finely sculpted helm worn by commanders of the northern realms, its enormous display of regal antlers make their authorative presense known in the chaos of war.\n\nSprite Credits: Dappertron</Description>
       <ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip>
       <ActivateOnEquip stat="26" amount="2">IncrementStat</ActivateOnEquip>
@@ -15755,7 +15752,6 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
          <Index>0x53</Index>
       </Texture>
       <SlotType>15</SlotType>
-      <Tier>6</Tier>
       <Description>A giant sock-like quiver woven from elventhread, concentrating evil energy into a lump of coal to create powerful arrows.\n\nSprite Credits: Dappertron</Description>
       <Sound>spell/fire_spray</Sound>
       <Projectile>
@@ -15789,7 +15785,6 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
          <Index>0x54</Index>
       </Texture>
       <SlotType>19</SlotType>
-      <Tier>6</Tier>
       <Description>A monstrous skull hewed with incantations of darkness to absorb life energy from the souls of the wicked.\n\nSprite Credits: Dappertron</Description>
       <Usable/>
       <BagType>4</BagType>
@@ -15809,7 +15804,6 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
          <Index>0x55</Index>
       </Texture>
       <SlotType>11</SlotType>
-      <Tier>6</Tier>
       <Description>A seraphic wardspell that burns the unworthy with molten wax from the heavenly vigil.\n\nSprite Credits: Dappertron</Description>
       <Sound>spell/magic_nova</Sound>
       <Projectile>
@@ -15836,7 +15830,6 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
          <Index>0x56</Index>
       </Texture>
       <SlotType>20</SlotType>
-      <Tier>6</Tier>
       <Description>A seemingly harmless present that actually contains a magical hyperspace pocket stuffed to the brim with explosives and shrapnel.\n\nSprite Credits: Dappertron</Description>
       <ActivateOnEquip stat="20" amount="3">IncrementStat</ActivateOnEquip>
       <ActivateOnEquip stat="26" amount="2">IncrementStat</ActivateOnEquip>
@@ -15856,7 +15849,6 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
          <Index>0x60</Index>
       </Texture>
       <SlotType>5</SlotType>
-      <Tier>6</Tier>
       <Description>An enormous, brazen shield taken from an ancient belfry, long believed to have been enchanted by centuries of ringing for angelic favor.\n\nSprite Credits: Dappertron</Description>
       <Sound>spell/fire_spray</Sound>
       <Projectile>
@@ -15891,7 +15883,6 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
          <Index>0x62</Index>
       </Texture>
       <SlotType>22</SlotType>
-      <Tier>6</Tier>
       <Description>A brilliantly shining prism of berylstone, cut to resemble a tree topper as a means of hiding eidolon agents in plain sight.\n\nSprite Credits: Dappertron</Description>
       <ActivateOnEquip stat="26" amount="2">IncrementStat</ActivateOnEquip>
       <ActivateOnEquip stat="27" amount="2">IncrementStat</ActivateOnEquip>
@@ -15911,7 +15902,6 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
          <Index>0x63</Index>
       </Texture>
       <SlotType>4</SlotType>
-      <Tier>6</Tier>
       <Description>A most holy manuscript taken from an ancient celestial library, brimming with golden light that wrests the innocent from the clutches of death.\n\nSprite Credits: Dappertron</Description>
       <Sound>spell/major_heal</Sound>
       <Usable/>
@@ -15931,7 +15921,6 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
          <Index>0x64</Index>
       </Texture>
       <SlotType>18</SlotType>
-      <Tier>6</Tier>
       <Description>The bitter poison of evergreen berries that has also absorbed a great deal of of energy from evil spirits.\n\nSprite Credits: Dappertron</Description>
       <ActivateOnEquip stat="26" amount="2">IncrementStat</ActivateOnEquip>
       <ActivateOnEquip stat="27" amount="2">IncrementStat</ActivateOnEquip>
@@ -15950,7 +15939,6 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
          <Index>0x65</Index>
       </Texture>
       <SlotType>13</SlotType>
-      <Tier>6</Tier>
       <Description>A snug cloak crafted by a band of seclusive snowthieves to help pilfer riches and disappear into the heart of winter.\n\nSprite Credits: Dappertron</Description>
       <Sound>spell/fire_nova</Sound>
       <ActivateOnEquip stat="22" amount="5">IncrementStat</ActivateOnEquip>
@@ -15973,7 +15961,6 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
          <Index>0x61</Index>
       </Texture>
       <SlotType>12</SlotType>
-      <Tier>6</Tier>
       <Description>A sacred seal of the bitter Frost Kingdoms, bearing a wreathlike design that invokes a symbol of strength and endurance in the midst of winter.\n\nSprite Credits: Dappertron</Description>
       <Sound>spell/light_heal</Sound>
       <Usable/>
@@ -15993,7 +15980,6 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
          <Index>0x66</Index>
       </Texture>
       <SlotType>25</SlotType>
-      <Tier>6</Tier>
       <Description>A razor-sharp arrangement of holly plants that has been enchanted to vanquish spirits of darkness.\n\nSprite Credits: Dappertron</Description>
       <Sound>spell/fire_spray</Sound>
       <ExtraTooltipData>
@@ -19081,7 +19067,6 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
          <Index>0xce</Index>
       </Texture>
       <SlotType>27</SlotType>
-      <Tier>6</Tier>
       <Description>A wakizashi fashioned from perennial ice. Its innocent, festive appearance belies its lethal edge.\n\nSprite Credits: Dappertron</Description>
       <Projectile>
          <ObjectId>Wakizashi Slash Xmas</ObjectId>

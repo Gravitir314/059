@@ -7286,9 +7286,8 @@
       </ExtraTooltipData>
       <Activate skinType="19659">UnlockSkin</Activate>
       <Consumable/>
-      <Soulbound/>
       <BagType>8</BagType>
-      <feedPower>500</feedPower>
+      <feedPower>250</feedPower>
    </Object>
    <Object type="0x5ea9" id="Time Traveler Trickster Skin">
       <Class>Equipment</Class>
@@ -7378,6 +7377,21 @@
       <Consumable/>
       <Soulbound/>
       <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x5eb5" id="Bolt Caster Wizard Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>431</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>A big fan of smiting his enemies in a fashion not unlike that of Xolotl.\n\nSkin Class: Wizard\nSprite Credits: Trensient</Description>
+      <Activate skinType="24244">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>8</BagType>
+      <Soulbound/>
       <feedPower>2000</feedPower>
    </Object>
 </Objects>

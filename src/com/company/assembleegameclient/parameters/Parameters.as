@@ -877,6 +877,7 @@ package com.company.assembleegameclient.parameters
 				setDefault("characterGlow", 0);
 				setDefault("gravestones", 0);
 				setDefault("chatNameColor", 0);
+                setDefault("expandRealmQuestsDisplay", true);
 				if (!data_.hasOwnProperty("needsSurvey"))
 				{
 					data_.needsSurvey = data_.needsTutorial;
@@ -909,7 +910,7 @@ package com.company.assembleegameclient.parameters
 							return;
 					}
 				}
-				setDefault("gameVersion", "X31.2.0");
+				setDefault("gameVersion", "X31.2.3");
 				setDefault("AABoundingDist", 4);
 				setDefault("AAException", DefaultAAException);
 				setDefault("AAIgnore", DefaultAAIgnore);

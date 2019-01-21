@@ -1057,15 +1057,14 @@
    <Object type="0x5e25" id="Beer God">
       <Enemy/>
       <Class>Character</Class>
-      <DisplayId>Mad Santa</DisplayId>
       <AnimatedTexture>
-         <File>oryxHordeChars16x16</File>
-         <Index>20</Index>
+         <File>chars16x16rEncounters</File>
+         <Index>52</Index>
       </AnimatedTexture>
       <AltTexture id="1">
          <AnimatedTexture>
-            <File>oryxHordeChars16x16</File>
-            <Index>21</Index>
+            <File>chars16x16rEncounters</File>
+            <Index>53</Index>
          </AnimatedTexture>
       </AltTexture>
       <HitSound>monster/lizard_god_hit</HitSound>
@@ -1078,7 +1077,7 @@
       <Exp>273</Exp>
       <SpawnProb>0.05</SpawnProb>
       <Projectile id="0">
-         <ObjectId>Xmas Barrel</ObjectId>
+         <ObjectId>Beer Barrel</ObjectId>
          <Damage>75</Damage>
          <Speed>65</Speed>
          <Size>130</Size>
@@ -1086,7 +1085,7 @@
          <ConditionEffect duration="4">Drunk</ConditionEffect>
       </Projectile>
       <Projectile id="1">
-         <ObjectId>Xmas Shockwave</ObjectId>
+         <ObjectId>Beer Shockwave</ObjectId>
          <Damage>100</Damage>
          <Speed>55</Speed>
          <Size>140</Size>

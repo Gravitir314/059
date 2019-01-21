@@ -2,10 +2,10 @@
 
 package kabam.lib.signals
 	{
-	import org.osflash.signals.ISlot;
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.ISlot;
+    import org.osflash.signals.Signal;
 
-	public class DeferredQueueSignal extends Signal
+    public class DeferredQueueSignal extends Signal
 		{
 
 			private var data:Array = [];
@@ -16,13 +16,13 @@ package kabam.lib.signals
 				super(_args);
 			}
 
-			override public function dispatch(..._args):void
+			override public function dispatch(... rest):void
 			{
 				if (this.log)
 				{
-					this.data.push(_args);
+					this.data.push(rest);
 				}
-				super.dispatch.apply(this, _args);
+				super.dispatch.apply(this, rest);
 			}
 
 			override public function add(_arg_1:Function):ISlot
