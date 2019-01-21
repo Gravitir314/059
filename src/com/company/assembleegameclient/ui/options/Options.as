@@ -31,6 +31,9 @@ package com.company.assembleegameclient.ui.options
 	import flash.ui.Mouse;
 	import flash.ui.MouseCursor;
 	import flash.ui.MouseCursorData;
+    import flash.display.Shape;
+
+    import io.decagames.rotmg.ui.scroll.UIScrollbar;
 
 	import kabam.rotmg.core.StaticInjectorContext;
 	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
@@ -46,12 +49,15 @@ package com.company.assembleegameclient.ui.options
 	public class Options extends Sprite
 		{
 			public static const Y_POSITION:int = 550;
+            public static const SCROLL_HEIGHT:int = 420;
+            public static const SCROLL_Y_OFFSET:int = 102;
 			public static const CHAT_COMMAND:String = "chatCommand";
 			public static const CHAT:String = "chat";
 			public static const TELL:String = "tell";
 			public static const GUILD_CHAT:String = "guildChat";
 			public static const SCROLL_CHAT_UP:String = "scrollChatUp";
 			public static const SCROLL_CHAT_DOWN:String = "scrollChatDown";
+            private static const TABS:Vector.<String> = new <String>[TextKey.OPTIONS_CONTROLS, TextKey.OPTIONS_HOTKEYS, TextKey.OPTIONS_CHAT, TextKey.OPTIONS_GRAPHICS, TextKey.OPTIONS_SOUND, TextKey.OPTIONS_FRIEND, TextKey.OPTIONS_MISC];
 			private static var registeredCursors:Vector.<String> = new Vector.<String>(0);
 
 			private var gs_:GameSprite;
@@ -61,6 +67,9 @@ package com.company.assembleegameclient.ui.options
 			private var tabs_:Vector.<OptionsTabTitle> = new Vector.<OptionsTabTitle>();
 			private var selected_:OptionsTabTitle;
 			private var options_:Vector.<Sprite> = new Vector.<Sprite>();
+            private var scroll:UIScrollbar;
+            private var scrollContainer:Sprite;
+            private var scrollContainerBottom:Shape;
 			private var defaultTab_:OptionsTabTitle;
 
 			public function Options(_arg_1:GameSprite)
@@ -160,6 +169,7 @@ package com.company.assembleegameclient.ui.options
 				addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
 				var _local_5:CloseDialogsSignal = StaticInjectorContext.getInjector().getInstance(CloseDialogsSignal);
 				_local_5.dispatch();
+                this.createScrollWindow();
 			}
 
 			private static function makePotionBuy():ChoiceOption
@@ -378,6 +388,27 @@ package com.company.assembleegameclient.ui.options
 				return (new <StringBuilder>[new StaticStringBuilder("Off"), new StaticStringBuilder("Recon"), new StaticStringBuilder("Walk")]);
 			}
 
+            private function createScrollWindow():void
+            {
+                this.scrollContainerBottom = new Shape();
+                this.scrollContainerBottom.graphics.beginFill(0xCCFF00, 0);
+                this.scrollContainerBottom.graphics.drawRect(0, 0, 800, 60);
+                var _local_1:Shape = new Shape();
+                _local_1.graphics.beginFill(0xCCFF00, 0.6);
+                _local_1.graphics.drawRect(0, SCROLL_Y_OFFSET, 800, SCROLL_HEIGHT);
+                addChild(_local_1);
+                this.scrollContainer = new Sprite();
+                this.scrollContainer.mask = _local_1;
+                addChild(this.scrollContainer);
+                this.scroll = new UIScrollbar(SCROLL_HEIGHT);
+                this.scroll.mouseRollSpeedFactor = 1.5;
+                this.scroll.content = this.scrollContainer;
+                this.scroll.x = 780;
+                this.scroll.y = SCROLL_Y_OFFSET;
+                this.scroll.visible = false;
+                addChild(this.scroll);
+            }
+
 			private function onContinueClick(_arg_1:MouseEvent):void
 			{
 				this.close();
@@ -428,63 +459,80 @@ package com.company.assembleegameclient.ui.options
 				this.selected_ = _arg_1;
 				this.selected_.setSelected(true);
 				this.removeOptions();
+                this.scrollContainer.y = 0;
 				switch (this.selected_.text_)
 				{
 					case TextKey.OPTIONS_CONTROLS:
 						this.addControlsOptions();
-						return;
+						break;
 					case TextKey.OPTIONS_HOTKEYS:
 						this.addHotKeysOptions();
-						return;
+                        break;
 					case TextKey.OPTIONS_CHAT:
 						this.addChatOptions();
-						return;
+                        break;
 					case TextKey.OPTIONS_GRAPHICS:
 						this.addGraphicsOptions();
-						return;
+                        break;
 					case TextKey.OPTIONS_SOUND:
 						this.addSoundOptions();
-						return;
+                        break;
 					case TextKey.OPTIONS_MISC:
 						this.addMiscOptions();
-						return;
+                        break;
 					case TextKey.OPTIONS_FRIEND:
 						this.addFriendOptions();
-						return;
+                        break;
 					case "Experimental":
 						this.addExperimentalOptions();
-						return;
+                        break;
 					case "Event":
 						this.addEventOptions();
-						return;
+                        break;
 					case "Debuffs":
 						this.addDebuffsOptions();
-						return;
+                        break;
 					case "Auto":
 						this.addAutoOptions();
-						return;
+                        break;
 					case "Loot":
 						this.addAutoLootOptions();
-						return;
+                        break;
 					case "World":
 						this.addWorldOptions();
-						return;
+                        break;
 					case "Recon|Msg":
 						this.addReconAndMessageOptions();
-						return;
+                        break;
 					case "Visual":
 						this.addVisualOptions();
-						return;
+                        break;
 					case "Fame":
 						this.addFameOptions();
-						return;
+                        break;
 					case "Other":
 						this.addOtherOptions();
-						return;
+                        break;
 				}
+                this.checkForScroll();
 			}
 
-			private function addDebuffsOptions():void
+            private function checkForScroll():void
+            {
+                if (this.scrollContainer.height >= SCROLL_HEIGHT)
+                {
+                    this.scrollContainerBottom.y = (SCROLL_Y_OFFSET + this.scrollContainer.height);
+                    this.scrollContainer.addChild(this.scrollContainerBottom);
+                    this.scroll.visible = true;
+                }
+                else
+                {
+                    this.scroll.visible = false;
+                };
+            }
+
+
+            private function addDebuffsOptions():void
 			{
 				this.addOptionAndPosition(new ChoiceOption("ignoreQuiet", makeOnOffLabels(), [true, false], "Ignore Quiet", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000), 0, 0, true);
 				this.addOptionAndPosition(new ChoiceOption("ignoreWeak", makeOnOffLabels(), [true, false], "Ignore Weak", "Server Sided, can DC, On means ignoring shot", calculateIgnoreBitmask, 0xFF0000), 0, 0, true);
@@ -923,9 +971,13 @@ package com.company.assembleegameclient.ui.options
 			private function removeOptions():void
 			{
 				var _local_1:Sprite;
+                if (this.scrollContainer.contains(this.scrollContainerBottom))
+                {
+                    this.scrollContainer.removeChild(this.scrollContainerBottom);
+                };
 				for each (_local_1 in this.options_)
 				{
-					removeChild(_local_1);
+                    this.scrollContainer.removeChild(_local_1);
 				}
 				this.options_.length = 0;
 			}
@@ -1142,6 +1194,7 @@ package com.company.assembleegameclient.ui.options
 				this.addOptionAndPosition(new ChoiceOption("showTierTag", makeOnOffLabels(), [true, false], "Show Tier level", "Show Tier level on gear", this.onToggleTierTag));
 				this.addOptionAndPosition(new KeyMapper("toggleProjectiles", "Toggle Ally Projectiles", "This key will toggle rendering of friendly projectiles"));
 				this.addOptionAndPosition(new KeyMapper("toggleMasterParticles", "Toggle Particles", "This key will toggle rendering of nonessential particles (Particles Master option)"));
+                this.addOptionAndPosition(new ChoiceOption("expandRealmQuestsDisplay", makeOnOffLabels(), [true, false], "Expand Realm Quests", "Expand the Realm Quests Display when entering the realm", null));
 			}
 
 			private function onToggleTierTag():void
@@ -1288,7 +1341,7 @@ package com.company.assembleegameclient.ui.options
 
 			private function addOption(_arg_1:Option):void
 			{
-				addChild(_arg_1);
+                this.scrollContainer.addChild(_arg_1);
 				_arg_1.addEventListener(Event.CHANGE, this.onChange);
 				this.options_.push(_arg_1);
 			}

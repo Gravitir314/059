@@ -22,16 +22,16 @@ package kabam.rotmg.messaging.impl.outgoing
 
 			override public function writeToOutput(_arg_1:IDataOutput):void
 			{
-				_arg_1.writeInt(this.tickId_);
-				_arg_1.writeInt(this.time_);
-				this.newPosition_.writeToOutput(_arg_1);
-				_arg_1.writeShort(this.records_.length);
-				var _local_2:int;
-				while (_local_2 < this.records_.length)
-				{
-					this.records_[_local_2].writeToOutput(_arg_1);
-					_local_2++;
-				}
+                _arg_1.writeInt(this.tickId_);
+                _arg_1.writeInt(this.time_);
+                this.newPosition_.writeToOutput(_arg_1);
+                _arg_1.writeShort(this.records_.length);
+                var _local_2:int;
+                while (_local_2 < this.records_.length)
+                {
+                    this.records_[_local_2].writeToOutput(_arg_1);
+                    _local_2++;
+                }
 			}
 
 			override public function toString():String

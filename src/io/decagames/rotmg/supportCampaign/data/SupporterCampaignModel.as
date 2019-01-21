@@ -24,6 +24,7 @@ package io.decagames.rotmg.supportCampaign.data
 			private var _donatePointsRatio:int;
 			private var _shopPurchasePointsRatio:int;
 			private var _endDate:Date;
+            private var _activeUntil:Date;
 			private var _startDate:Date;
 			private var _ranks:Array;
 			private var _isUnlocked:Boolean;
@@ -105,6 +106,7 @@ package io.decagames.rotmg.supportCampaign.data
 				this._unlockPrice = this.getXMLData(_arg_1.CampaignConfig, "UnlockPrice", true);
 				this._donatePointsRatio = this.getXMLData(_arg_1.CampaignConfig, "DonatePointsRatio", true);
 				this._endDate = new Date((this.getXMLData(_arg_1.CampaignConfig, "CampaignEndDate", true) * 1000));
+                this._activeUntil = new Date((int(this.getXMLData(_arg_1.CampaignConfig, "CampaignActiveUntil", true)) * 1000));
 				this._startDate = new Date((this.getXMLData(_arg_1.CampaignConfig, "CampaignStartDate", true) * 1000));
 				this._ranks = this.getXMLData(_arg_1.CampaignConfig, "RanksList", true).split(",");
 				this._shopPurchasePointsRatio = this.getXMLData(_arg_1.CampaignConfig, "ShopPurchasePointsRatio", true);
@@ -150,7 +152,7 @@ package io.decagames.rotmg.supportCampaign.data
 
 			public function get isActive():Boolean
 			{
-				return ((this.isStarted) && (!(this.isEnded)));
+                return ((this.isStarted) && (new Date().time < this._activeUntil.time));
 			}
 
 			public function get nextClaimableTier():int

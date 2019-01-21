@@ -112,12 +112,12 @@
       <Class>Character</Class>
       <AnimatedTexture>
          <File>d3Chars8x8rEmbed</File>
-         <Index>20</Index>
+         <Index>17</Index>
       </AnimatedTexture>
       <AltTexture id="1">
          <AnimatedTexture>
             <File>d3Chars8x8rEmbed</File>
-            <Index>21</Index>
+            <Index>18</Index>
          </AnimatedTexture>
       </AltTexture>
       <Projectile id="0">
@@ -136,40 +136,10 @@
       <MaxHitPoints>2000</MaxHitPoints>
       <Exp>0</Exp>
       <Size>80</Size>
-      <RandomTexture>
-         <Texture>
-            <File>santaWorkshopObjects8x8</File>
-            <Index>0x40</Index>
-         </Texture>
-         <Texture>
-            <File>santaWorkshopObjects8x8</File>
-            <Index>0x41</Index>
-         </Texture>
-         <Texture>
-            <File>santaWorkshopObjects8x8</File>
-            <Index>0x42</Index>
-         </Texture>
-         <Texture>
-            <File>santaWorkshopObjects8x8</File>
-            <Index>0x43</Index>
-         </Texture>
-         <Texture>
-            <File>santaWorkshopObjects8x8</File>
-            <Index>0x44</Index>
-         </Texture>
-         <Texture>
-            <File>santaWorkshopObjects8x8</File>
-            <Index>0x45</Index>
-         </Texture>
-         <Texture>
-            <File>santaWorkshopObjects8x8</File>
-            <Index>0x46</Index>
-         </Texture>
-         <Texture>
-            <File>santaWorkshopObjects8x8</File>
-            <Index>0x47</Index>
-         </Texture>
-      </RandomTexture>
+      <Texture>
+         <File>lofiObj</File>
+         <Index>0x02</Index>
+      </Texture>
    </Object>
    <Object type="0x0c26" id="Craig Portal">
       <Class>GameObject</Class>
@@ -219,7 +189,7 @@
       <Class>Character</Class>
       <AnimatedTexture>
          <File>d3Chars8x8rEmbed</File>
-         <Index>22</Index>
+         <Index>19</Index>
       </AnimatedTexture>
       <ShadowSize>50</ShadowSize>
    </Object>

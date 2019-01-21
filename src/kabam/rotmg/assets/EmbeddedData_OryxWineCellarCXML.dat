@@ -6,8 +6,8 @@
       <Enemy/>
       <Class>Character</Class>
       <Texture>
-         <File>d3LofiObjEmbed16</File>
-         <Index>0x19</Index>
+         <File>lofiChar16x16</File>
+         <Index>0x54</Index>
       </Texture>
       <HitSound>monster/oryx_hit</HitSound>
       <DeathSound>monster/oryx_death</DeathSound>

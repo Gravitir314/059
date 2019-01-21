@@ -11,23 +11,12 @@ package kabam.rotmg.game.model
 			public static const ORYX_KILLED:int = 2;
 			public static const ORYX_THE_MAD_GOD:String = "Oryx the Mad God";
 
-			private var _currentRealm:String;
-			private var _previousRealm:String;
+            private var _previousRealm:String = "";
+
 			private var _currentQuestHero:String;
 			private var _remainingHeroes:int = -1;
 			private var _requirementsStates:Vector.<Boolean> = new <Boolean>[false, false, false];
 			private var _hasOryxBeenKilled:Boolean;
-
-
-			public function get currentRealm():String
-			{
-				return (this._currentRealm);
-			}
-
-			public function set currentRealm(_arg_1:String):void
-			{
-				this._currentRealm = _arg_1;
-			}
 
 			public function get currentQuestHero():String
 			{

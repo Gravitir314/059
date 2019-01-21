@@ -12589,4 +12589,48 @@
       <BagType>8</BagType>
       <feedPower>2000</feedPower>
    </Object>
+   <Object id="Longtailed Tit" type="0x7582">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Avian</Family>
+      <Rarity>Common</Rarity>
+      <DefaultSkin>Longtailed Tit Pet Skin</DefaultSkin>
+      <FirstAbility>Rising Fury</FirstAbility>
+      <WhileMoving>
+         <Z>0.35</Z>
+         <Flying/>
+      </WhileMoving>
+      <Size>60</Size>
+   </Object>
+   <Object type="0x7583" id="Longtailed Tit Pet Skin">
+      <PetSkin/>
+      <DisplayId>Longtailed Tit</DisplayId>
+      <Class>PetSkin</Class>
+      <Family>Avian</Family>
+      <Rarity>Common</Rarity>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>247</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x7584" id="Longtailed Tit Pet Stone">
+      <DisplayId>Longtailed Tit Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>chars8x8rPets1</File>
+         <Index>247</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Customize your pet with this bird costume! Let it fly like snow fairy!\n\nSprite Credits: Nazoado\n\nUnlocks Longtailed Tit Skin of the Avian family. The skin will be added to your Pet Wardrobe in the Pet Yard and can be used to change the appearance of your pet!</Description>
+      <Activate skinType="30083">UnlockPetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
 </Objects>

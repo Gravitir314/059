@@ -24,6 +24,7 @@ package io.decagames.rotmg.ui.scroll
 				this.view.addEventListener(Event.ENTER_FRAME, this.onUpdateHandler);
 				this.view.slider.addEventListener(MouseEvent.MOUSE_DOWN, this.onMouseDown);
 				ROTMG.STAGE.addEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
+                ROTMG.STAGE.addEventListener(MouseEvent.MOUSE_WHEEL, this.onMouseWheel);
 			}
 
 			private function onMouseWheel(_arg_1:MouseEvent):void
@@ -53,6 +54,7 @@ package io.decagames.rotmg.ui.scroll
 					this.view.scrollObject.removeEventListener(MouseEvent.MOUSE_WHEEL, this.onMouseWheel);
 				}
 				ROTMG.STAGE.removeEventListener(MouseEvent.MOUSE_UP, this.onMouseUp);
+                ROTMG.STAGE.removeEventListener(MouseEvent.MOUSE_WHEEL, this.onMouseWheel);
 				this.view.dispose();
 			}
 

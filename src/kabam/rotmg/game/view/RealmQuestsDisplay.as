@@ -63,6 +63,7 @@ package kabam.rotmg.game.view
 				this._buttonDiamondContainer.visible = (!(this._isOpen));
 				this._buttonNameContainer.visible = this._isOpen;
 				this._buttonContent.visible = this._isOpen;
+                Parameters.data_.expandRealmQuestsDisplay = this._isOpen;
 			}
 
 			public function init():void
@@ -77,7 +78,10 @@ package kabam.rotmg.game.view
 				this.createRealmLabel();
 				this.createDiamonds();
 				this.createRealmQuestItems();
-				this.toggleOpenState();
+                if (Parameters.data_.expandRealmQuestsDisplay)
+                {
+                    this.toggleOpenState();
+                };
 			}
 
 			private function createContainers():void

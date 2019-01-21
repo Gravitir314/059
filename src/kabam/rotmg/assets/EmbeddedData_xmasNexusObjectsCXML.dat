@@ -5489,14 +5489,48 @@
       </Projectile>
       <StasisImmune/>
    </Object>
-   <Object type="0x3fdc" id="XN Sn Jm spwnr">
+   <Object type="0x3ff4" id="XN IceTrack Tree">
       <Class>Character</Class>
       <NoMiniMap/>
       <Texture>
          <File>xmasNexusObjects16x16</File>
-         <Index>0x146</Index>
+         <Index>0x158</Index>
       </Texture>
-      <Size>0</Size>
+      <AltTexture id="1">
+         <Texture>
+            <File>xmasNexusObjects16x16</File>
+            <Index>0x159</Index>
+         </Texture>
+      </AltTexture>
+      <AltTexture id="2">
+         <Texture>
+            <File>xmasNexusObjects16x16</File>
+            <Index>0x15a</Index>
+         </Texture>
+      </AltTexture>
+      <AltTexture id="3">
+         <Texture>
+            <File>xmasNexusObjects16x16</File>
+            <Index>0x15b</Index>
+         </Texture>
+      </AltTexture>
+      <AltTexture id="4">
+         <Texture>
+            <File>xmasNexusObjects16x16</File>
+            <Index>0x158</Index>
+         </Texture>
+      </AltTexture>
+      <Size>100</Size>
+   </Object>
+   <Object type="0x3ff5" id="XN IceTrack Snowman">
+      <Class>Character</Class>
+      <DisplayId>Race Expert</DisplayId>
+      <NoMiniMap/>
+      <Texture>
+         <File>xmasNexusObjects8x8</File>
+         <Index>0x8f</Index>
+      </Texture>
+      <Size>100</Size>
    </Object>
    <Object type="0x3fce" id="XN S spwnr">
       <DisplayId>S spawner</DisplayId>

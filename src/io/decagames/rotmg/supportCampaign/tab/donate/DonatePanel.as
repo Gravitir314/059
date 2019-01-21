@@ -29,30 +29,31 @@ package io.decagames.rotmg.supportCampaign.tab.donate
 			private var rightPanel:SliceScalingBitmap;
 			private var ratio:int;
 
-			public function DonatePanel(_arg_1:int)
-			{
-				var _local_2:SliceScalingBitmap;
+            public function DonatePanel(_arg_1:int, _arg_2:Boolean)
+            {
+                var _local_3:SliceScalingBitmap;
+                var _local_6:SliceScalingBitmap;
 				super();
 				this.ratio = _arg_1;
 				this.leftPanel = TextureParser.instance.getSliceScalingBitmap("UI", "black_field_background", 130);
 				this.leftPanel.height = 30;
 				this.leftPanel.y = 6;
 				addChild(this.leftPanel);
-				_local_2 = TextureParser.instance.getSliceScalingBitmap("UI", "spinner_up_arrow");
-				this._upArrow = new SliceScalingButton(_local_2.clone());
+                _local_3 = TextureParser.instance.getSliceScalingBitmap("UI", "spinner_up_arrow");
+                this._upArrow = new SliceScalingButton(_local_3.clone());
 				this._upArrow.x = (this.leftPanel.width - 40);
 				this._upArrow.y = (this.leftPanel.y + 2);
 				addChild(this._upArrow);
-				this._downArrow = new SliceScalingButton(_local_2.clone());
+                this._downArrow = new SliceScalingButton(_local_3.clone());
 				this._downArrow.rotation = 180;
 				this._downArrow.x = (this._upArrow.x + this._downArrow.width);
 				this._downArrow.y = (this.leftPanel.y + 28);
 				addChild(this._downArrow);
-				var _local_3:BitmapData = IconFactory.makeCoin();
-				var _local_4:Bitmap = new Bitmap(_local_3);
-				_local_4.y = (this.leftPanel.y + 6);
-				_local_4.x = (this.leftPanel.width - 64);
-				addChild(_local_4);
+                var _local_4:BitmapData = IconFactory.makeCoin();
+                var _local_5:Bitmap = new Bitmap(_local_4);
+                _local_5.y = (this.leftPanel.y + 6);
+                _local_5.x = (this.leftPanel.width - 64);
+                addChild(_local_5);
 				this._amountTextfield = new UILabel();
 				this._amountTextfield.type = "input";
 				this._amountTextfield.restrict = "0-9";
@@ -80,9 +81,9 @@ package io.decagames.rotmg.supportCampaign.tab.donate
 				this.supportIcon.y = (this.pointAmountTextfield.y + 1);
 				this.supportIcon.x = (this.pointAmountTextfield.x + this.pointAmountTextfield.width);
 				this.updatePoints((100 * this.ratio));
-				var _local_5:SliceScalingBitmap = TextureParser.instance.getSliceScalingBitmap("UI", "buy_button_background", 119);
-				_local_5.x = 112;
-				addChild(_local_5);
+                _local_6 = TextureParser.instance.getSliceScalingBitmap("UI", "buy_button_background", 119);
+                _local_6.x = 112;
+                addChild(_local_6);
 				this._donateButton = new SliceScalingButton(TextureParser.instance.getSliceScalingBitmap("UI", "generic_green_button"));
 				this._donateButton.setLabel("Donate", DefaultLabelFormat.defaultButtonLabel);
 				this._donateButton.width = (_local_5.width - 14);

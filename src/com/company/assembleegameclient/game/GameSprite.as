@@ -8,7 +8,6 @@ package com.company.assembleegameclient.game
 	import com.company.assembleegameclient.objects.IInteractiveObject;
 	import com.company.assembleegameclient.objects.Pet;
 	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.objects.Portal;
 	import com.company.assembleegameclient.objects.Projectile;
 	import com.company.assembleegameclient.parameters.Parameters;
 	import com.company.assembleegameclient.tutorial.Tutorial;
@@ -69,7 +68,8 @@ package com.company.assembleegameclient.game
 	import kabam.rotmg.promotions.signals.ShowBeginnersPackageSignal;
 	import kabam.rotmg.promotions.view.BeginnersPackageButton;
 	import kabam.rotmg.promotions.view.SpecialOfferButton;
-	import kabam.rotmg.servers.api.Server;
+    import kabam.rotmg.protip.signals.ShowProTipSignal;
+    import kabam.rotmg.servers.api.Server;
 	import kabam.rotmg.stage3D.Renderer;
 	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
@@ -417,8 +417,8 @@ package com.company.assembleegameclient.game
 
 			override public function initialize():void
 			{
-				var _local_5:String;
-				var _local_6:String;
+                var _local_4:ShowProTipSignal;
+
 				this.questModel = StaticInjectorContext.getInjector().getInstance(QuestModel);
 				map.initialize();
 				this.modelInitialized.dispatch();
@@ -471,24 +471,15 @@ package com.company.assembleegameclient.game
 				addChild(this.creditDisplay_);
 				if (!this.evalIsNotInCombatMapArea() && this.canShowRealmQuestDisplay(this.mapName))
 				{
-					var portal:Portal = (this.mapModel.currentInteractiveTarget as Portal);
-					if (portal)
-					{
-						_local_5 = portal.name_;
-					}
 					this.realmQuestsDisplay = new RealmQuestsDisplay(map);
-					if (this.questModel.currentRealm == "" && _local_5 != null)
-					{
-						_local_6 = _local_5.substring((_local_5.indexOf("NexusPortal.") + 12), _local_5.indexOf(" "));
-						this.questModel.currentRealm = _local_6;
-					}
+
 					this.realmQuestsDisplay.x = 10;
 					this.realmQuestsDisplay.y = (Parameters.ssmode ? 10 : 40);
 					addChild(this.realmQuestsDisplay);
+                    gsc_.playerText("/server");
 				}
 				else
 				{
-					this.questModel.currentRealm = "";
 					this.questModel.previousRealm = "";
 				}
 				if (mapName == Map.DAILY_QUEST_ROOM)
