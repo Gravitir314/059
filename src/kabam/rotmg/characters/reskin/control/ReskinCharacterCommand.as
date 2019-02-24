@@ -2,18 +2,18 @@
 
 package kabam.rotmg.characters.reskin.control
 	{
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import kabam.lib.net.api.MessageProvider;
-	import kabam.lib.net.impl.SocketServer;
-	import kabam.rotmg.classes.model.CharacterSkin;
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.game.model.GameModel;
-	import kabam.rotmg.messaging.impl.GameServerConnection;
-	import kabam.rotmg.messaging.impl.outgoing.Reskin;
+    import kabam.lib.net.api.MessageProvider;
+    import kabam.lib.net.impl.SocketServer;
+    import kabam.rotmg.classes.model.CharacterSkin;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.game.model.GameModel;
+    import kabam.rotmg.messaging.impl.GameServerConnection;
+    import kabam.rotmg.messaging.impl.outgoing.Reskin;
 
-	public class ReskinCharacterCommand
+    public class ReskinCharacterCommand
 		{
 
 			[Inject]

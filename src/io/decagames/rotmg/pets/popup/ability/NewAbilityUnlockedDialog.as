@@ -2,16 +2,16 @@
 
 package io.decagames.rotmg.pets.popup.ability
 	{
-	import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.labels.UILabel;
-	import io.decagames.rotmg.ui.popups.modal.ModalPopup;
-	import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-	import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.ui.popups.modal.ModalPopup;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import io.decagames.rotmg.ui.texture.TextureParser;
 
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	public class NewAbilityUnlockedDialog extends ModalPopup
+    public class NewAbilityUnlockedDialog extends ModalPopup
 		{
 
 			private var _okButton:SliceScalingButton;

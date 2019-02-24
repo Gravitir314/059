@@ -2,20 +2,20 @@
 
 package com.company.assembleegameclient.screens
 	{
-	import com.company.assembleegameclient.ui.GuildText;
-	import com.company.assembleegameclient.ui.RankText;
-	import com.company.assembleegameclient.ui.tooltip.RankToolTip;
+    import com.company.assembleegameclient.ui.GuildText;
+    import com.company.assembleegameclient.ui.RankText;
+    import com.company.assembleegameclient.ui.tooltip.RankToolTip;
 
-	import flash.display.DisplayObject;
-	import flash.display.Shape;
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
+    import flash.display.DisplayObject;
+    import flash.display.Shape;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.account.core.view.AccountInfoView;
+    import kabam.rotmg.account.core.view.AccountInfoView;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class AccountScreen extends Sprite
+    public class AccountScreen extends Sprite
 		{
 
 			public var tooltip:Signal;

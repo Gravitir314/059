@@ -2,13 +2,13 @@
 
 package com.company.assembleegameclient.objects
 	{
-	import com.company.assembleegameclient.objects.particles.EffectProperties;
-	import com.company.assembleegameclient.util.AnimatedChar;
+    import com.company.assembleegameclient.objects.particles.EffectProperties;
+    import com.company.assembleegameclient.util.AnimatedChar;
 
-	import flash.display.BitmapData;
-	import flash.utils.Dictionary;
+    import flash.display.BitmapData;
+    import flash.utils.Dictionary;
 
-	public class TextureData
+    public class TextureData
 		{
 
 			public var texture_:BitmapData = null;

@@ -2,10 +2,10 @@
 
 package kabam.rotmg.stage3D.proxies
 	{
-	import flash.display3D.Context3D;
-	import flash.geom.Matrix3D;
+    import flash.display3D.Context3D;
+    import flash.geom.Matrix3D;
 
-	public class Context3DProxy
+    public class Context3DProxy
 		{
 
 			private var context3D:Context3D;

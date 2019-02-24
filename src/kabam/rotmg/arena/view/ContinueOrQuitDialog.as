@@ -2,23 +2,23 @@
 
 package kabam.rotmg.arena.view
 	{
-	import com.company.assembleegameclient.util.Currency;
+    import com.company.assembleegameclient.util.Currency;
 
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
+    import flash.filters.DropShadowFilter;
 
-	import kabam.rotmg.editor.view.StaticTextButton;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.StaticTextDisplay;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-	import kabam.rotmg.util.components.DialogBackground;
-	import kabam.rotmg.util.components.LegacyBuyButton;
+    import kabam.rotmg.editor.view.StaticTextButton;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.StaticTextDisplay;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.util.components.DialogBackground;
+    import kabam.rotmg.util.components.LegacyBuyButton;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class ContinueOrQuitDialog extends Sprite
+    public class ContinueOrQuitDialog extends Sprite
 		{
 
 			public const quit:Signal = new Signal();

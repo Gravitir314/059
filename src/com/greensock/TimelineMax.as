@@ -2,15 +2,15 @@
 
 package com.greensock
 	{
-	import com.greensock.core.Animation;
-	import com.greensock.easing.Ease;
-	import com.greensock.events.TweenEvent;
+    import com.greensock.core.Animation;
+    import com.greensock.easing.Ease;
+    import com.greensock.events.TweenEvent;
 
-	import flash.events.Event;
-	import flash.events.EventDispatcher;
-	import flash.events.IEventDispatcher;
+    import flash.events.Event;
+    import flash.events.EventDispatcher;
+    import flash.events.IEventDispatcher;
 
-	public class TimelineMax extends TimelineLite implements IEventDispatcher
+    public class TimelineMax extends TimelineLite implements IEventDispatcher
 		{
 
 			public static const version:String = "12.1.5";

@@ -2,66 +2,66 @@
 
 package com.company.assembleegameclient.objects
 	{
-	import com.company.assembleegameclient.map.Camera;
-	import com.company.assembleegameclient.map.Map;
-	import com.company.assembleegameclient.map.Square;
-	import com.company.assembleegameclient.map.mapoverlay.CharacterStatusText;
-	import com.company.assembleegameclient.objects.particles.HealingEffect;
-	import com.company.assembleegameclient.objects.particles.LevelUpEffect;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.sound.SoundEffectLibrary;
-	import com.company.assembleegameclient.ui.TradeSlot;
-	import com.company.assembleegameclient.util.AnimatedChar;
-	import com.company.assembleegameclient.util.ConditionEffect;
-	import com.company.assembleegameclient.util.FameUtil;
-	import com.company.assembleegameclient.util.FreeList;
-	import com.company.assembleegameclient.util.MaskedImage;
-	import com.company.assembleegameclient.util.PlayerUtil;
-	import com.company.assembleegameclient.util.TextureRedrawer;
-	import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
-	import com.company.util.CachingColorTransformer;
-	import com.company.util.ConversionUtil;
-	import com.company.util.GraphicsUtil;
-	import com.company.util.IntPoint;
-	import com.company.util.MoreColorUtil;
-	import com.company.util.MoreStringUtil;
-	import com.company.util.PointUtil;
+    import com.company.assembleegameclient.map.Camera;
+    import com.company.assembleegameclient.map.Map;
+    import com.company.assembleegameclient.map.Square;
+    import com.company.assembleegameclient.map.mapoverlay.CharacterStatusText;
+    import com.company.assembleegameclient.objects.particles.HealingEffect;
+    import com.company.assembleegameclient.objects.particles.LevelUpEffect;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.sound.SoundEffectLibrary;
+    import com.company.assembleegameclient.ui.TradeSlot;
+    import com.company.assembleegameclient.util.AnimatedChar;
+    import com.company.assembleegameclient.util.ConditionEffect;
+    import com.company.assembleegameclient.util.FameUtil;
+    import com.company.assembleegameclient.util.FreeList;
+    import com.company.assembleegameclient.util.MaskedImage;
+    import com.company.assembleegameclient.util.PlayerUtil;
+    import com.company.assembleegameclient.util.TextureRedrawer;
+    import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
+    import com.company.util.CachingColorTransformer;
+    import com.company.util.ConversionUtil;
+    import com.company.util.GraphicsUtil;
+    import com.company.util.IntPoint;
+    import com.company.util.MoreColorUtil;
+    import com.company.util.MoreStringUtil;
+    import com.company.util.PointUtil;
 
-	import flash.display.BitmapData;
-	import flash.display.GraphicsPath;
-	import flash.display.GraphicsSolidFill;
-	import flash.display.IGraphicsData;
-	import flash.geom.ColorTransform;
-	import flash.geom.Matrix;
-	import flash.geom.Point;
-	import flash.geom.Vector3D;
-	import flash.utils.Dictionary;
-	import flash.utils.getTimer;
+    import flash.display.BitmapData;
+    import flash.display.GraphicsPath;
+    import flash.display.GraphicsSolidFill;
+    import flash.display.IGraphicsData;
+    import flash.geom.ColorTransform;
+    import flash.geom.Matrix;
+    import flash.geom.Point;
+    import flash.geom.Vector3D;
+    import flash.utils.Dictionary;
+    import flash.utils.getTimer;
 
-	import io.decagames.rotmg.ui.popups.signals.CloseAllPopupsSignal;
+    import io.decagames.rotmg.ui.popups.signals.CloseAllPopupsSignal;
 
-	import kabam.rotmg.assets.services.CharacterFactory;
-	import kabam.rotmg.chat.model.ChatMessage;
-	import kabam.rotmg.constants.GeneralConstants;
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.game.model.PotionInventoryModel;
-	import kabam.rotmg.game.model.UseBuyPotionVO;
-	import kabam.rotmg.game.signals.AddTextLineSignal;
-	import kabam.rotmg.game.signals.ExitGameSignal;
-	import kabam.rotmg.messaging.impl.data.StatData;
-	import kabam.rotmg.messaging.impl.incoming.Text;
-	import kabam.rotmg.stage3D.GraphicsFillExtra;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.BitmapTextFactory;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StringBuilder;
-	import kabam.rotmg.ui.model.TabStripModel;
+    import kabam.rotmg.assets.services.CharacterFactory;
+    import kabam.rotmg.chat.model.ChatMessage;
+    import kabam.rotmg.constants.GeneralConstants;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.game.model.PotionInventoryModel;
+    import kabam.rotmg.game.model.UseBuyPotionVO;
+    import kabam.rotmg.game.signals.AddTextLineSignal;
+    import kabam.rotmg.game.signals.ExitGameSignal;
+    import kabam.rotmg.messaging.impl.data.StatData;
+    import kabam.rotmg.messaging.impl.incoming.Text;
+    import kabam.rotmg.stage3D.GraphicsFillExtra;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.BitmapTextFactory;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StringBuilder;
+    import kabam.rotmg.ui.model.TabStripModel;
 
-	import org.osflash.signals.Signal;
-	import org.swiftsuspenders.Injector;
+    import org.osflash.signals.Signal;
+    import org.swiftsuspenders.Injector;
 
-	public class Player extends Character
+    public class Player extends Character
 		{
 
 			public static const MS_BETWEEN_TELEPORT:int = 10000;

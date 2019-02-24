@@ -2,11 +2,11 @@
 
 package com.company.assembleegameclient.ui.panels
 	{
-	import com.company.assembleegameclient.game.AGameSprite;
+    import com.company.assembleegameclient.game.AGameSprite;
 
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	public class Panel extends Sprite
+    public class Panel extends Sprite
 		{
 
 			public static const WIDTH:int = (200 - 12);//188

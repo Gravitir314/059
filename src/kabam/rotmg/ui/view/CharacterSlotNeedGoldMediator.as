@@ -2,13 +2,13 @@
 
 package kabam.rotmg.ui.view
 	{
-	import kabam.rotmg.account.core.signals.OpenMoneyWindowSignal;
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
+    import kabam.rotmg.account.core.signals.OpenMoneyWindowSignal;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.dialogs.control.CloseDialogsSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class CharacterSlotNeedGoldMediator extends Mediator
+    public class CharacterSlotNeedGoldMediator extends Mediator
 		{
 
 			[Inject]

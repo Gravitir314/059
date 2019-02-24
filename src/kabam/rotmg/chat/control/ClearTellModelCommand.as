@@ -2,11 +2,11 @@
 
 package kabam.rotmg.chat.control
 	{
-	import kabam.rotmg.chat.model.TellModel;
+    import kabam.rotmg.chat.model.TellModel;
 
-	import robotlegs.bender.bundles.mvcs.Command;
+    import robotlegs.bender.bundles.mvcs.Command;
 
-	public class ClearTellModelCommand extends Command
+    public class ClearTellModelCommand extends Command
 		{
 
 			[Inject]

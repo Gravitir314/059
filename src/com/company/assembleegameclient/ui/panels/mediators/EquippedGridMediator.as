@@ -2,13 +2,13 @@
 
 package com.company.assembleegameclient.ui.panels.mediators
 	{
-	import com.company.assembleegameclient.ui.panels.itemgrids.EquippedGrid;
+    import com.company.assembleegameclient.ui.panels.itemgrids.EquippedGrid;
 
-	import kabam.rotmg.ui.signals.ToggleShowTierTagSignal;
+    import kabam.rotmg.ui.signals.ToggleShowTierTagSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class EquippedGridMediator extends Mediator
+    public class EquippedGridMediator extends Mediator
 		{
 
 			[Inject]

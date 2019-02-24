@@ -2,18 +2,18 @@
 
 package kabam.rotmg.dailyLogin.view
 	{
-	import com.company.assembleegameclient.game.GameSprite;
-	import com.company.assembleegameclient.ui.DeprecatedTextButtonStatic;
-	import com.company.assembleegameclient.ui.panels.Panel;
+    import com.company.assembleegameclient.game.GameSprite;
+    import com.company.assembleegameclient.ui.DeprecatedTextButtonStatic;
+    import com.company.assembleegameclient.ui.panels.Panel;
 
-	import flash.display.Bitmap;
+    import flash.display.Bitmap;
 
-	import io.decagames.rotmg.pets.utils.PetsViewAssetFactory;
+    import io.decagames.rotmg.pets.utils.PetsViewAssetFactory;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	public class DailyLoginPanel extends Panel
+    public class DailyLoginPanel extends Panel
 		{
 
 			private const titleText:TextFieldDisplayConcrete = PetsViewAssetFactory.returnTextfield(0xFFFFFF, 18, true);

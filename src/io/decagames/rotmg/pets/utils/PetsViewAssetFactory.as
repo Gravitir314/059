@@ -2,17 +2,17 @@
 
 package io.decagames.rotmg.pets.utils
 	{
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.assembleegameclient.ui.LineBreakDesign;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.assembleegameclient.ui.LineBreakDesign;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.Bitmap;
-	import flash.display.Shape;
+    import flash.display.Bitmap;
+    import flash.display.Shape;
 
-	import kabam.rotmg.pets.view.components.DialogCloseButton;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.pets.view.components.DialogCloseButton;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 
-	public class PetsViewAssetFactory
+    public class PetsViewAssetFactory
 		{
 
 

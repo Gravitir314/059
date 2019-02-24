@@ -2,12 +2,12 @@
 
 package com.company.assembleegameclient.util
 	{
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
 
-	import kabam.rotmg.constants.ItemConstants;
+    import kabam.rotmg.constants.ItemConstants;
 
-	public class EquipmentUtil
+    public class EquipmentUtil
 		{
 
 			public static const NUM_SLOTS:uint = 4;

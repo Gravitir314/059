@@ -2,11 +2,11 @@
 
 package com.greensock.plugins
 	{
-	import com.greensock.TweenLite;
+    import com.greensock.TweenLite;
 
-	import flash.media.SoundTransform;
+    import flash.media.SoundTransform;
 
-	public class VolumePlugin extends TweenPlugin
+    public class VolumePlugin extends TweenPlugin
 		{
 
 			public static const API:Number = 2;

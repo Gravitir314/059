@@ -2,17 +2,17 @@
 
 package kabam.rotmg.account.securityQuestions.commands
 	{
-	import kabam.lib.tasks.BranchingTask;
-	import kabam.lib.tasks.DispatchSignalTask;
-	import kabam.lib.tasks.Task;
-	import kabam.lib.tasks.TaskMonitor;
-	import kabam.lib.tasks.TaskSequence;
-	import kabam.rotmg.account.securityQuestions.data.SecurityQuestionsModel;
-	import kabam.rotmg.account.securityQuestions.tasks.SaveSecurityQuestionsTask;
-	import kabam.rotmg.core.signals.TaskErrorSignal;
-	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
+    import kabam.lib.tasks.BranchingTask;
+    import kabam.lib.tasks.DispatchSignalTask;
+    import kabam.lib.tasks.Task;
+    import kabam.lib.tasks.TaskMonitor;
+    import kabam.lib.tasks.TaskSequence;
+    import kabam.rotmg.account.securityQuestions.data.SecurityQuestionsModel;
+    import kabam.rotmg.account.securityQuestions.tasks.SaveSecurityQuestionsTask;
+    import kabam.rotmg.core.signals.TaskErrorSignal;
+    import kabam.rotmg.dialogs.control.CloseDialogsSignal;
 
-	public class SaveSecurityQuestionsCommand
+    public class SaveSecurityQuestionsCommand
 		{
 
 			[Inject]

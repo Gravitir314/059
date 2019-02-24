@@ -2,11 +2,11 @@
 
 package kabam.rotmg.game.signals
 	{
-	import kabam.rotmg.game.model.UseBuyPotionVO;
+    import kabam.rotmg.game.model.UseBuyPotionVO;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class UseBuyPotionSignal extends Signal
+    public class UseBuyPotionSignal extends Signal
 		{
 
 			public function UseBuyPotionSignal()

@@ -2,9 +2,9 @@
 
 package kabam.rotmg.stage3D.Object3D
 	{
-	import flash.display3D.IndexBuffer3D;
+    import flash.display3D.IndexBuffer3D;
 
-	public class OBJGroup
+    public class OBJGroup
 		{
 
 			public var name:String;

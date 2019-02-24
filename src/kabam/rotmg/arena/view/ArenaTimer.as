@@ -2,15 +2,15 @@
 
 package kabam.rotmg.arena.view
 	{
-	import flash.display.Sprite;
-	import flash.events.TimerEvent;
-	import flash.filters.DropShadowFilter;
-	import flash.utils.Timer;
+    import flash.display.Sprite;
+    import flash.events.TimerEvent;
+    import flash.filters.DropShadowFilter;
+    import flash.utils.Timer;
 
-	import kabam.rotmg.text.view.StaticTextDisplay;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.text.view.StaticTextDisplay;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	public class ArenaTimer extends Sprite
+    public class ArenaTimer extends Sprite
 		{
 
 			private const timerText:StaticTextDisplay = makeTimerText();

@@ -2,16 +2,16 @@
 
 package kabam.rotmg.arena.model
 	{
-	import io.decagames.rotmg.pets.data.PetsModel;
+    import io.decagames.rotmg.pets.data.PetsModel;
 
-	import kabam.rotmg.assets.services.CharacterFactory;
-	import kabam.rotmg.classes.model.CharacterSkin;
-	import kabam.rotmg.classes.model.ClassesModel;
-	import kabam.rotmg.game.model.GameModel;
+    import kabam.rotmg.assets.services.CharacterFactory;
+    import kabam.rotmg.classes.model.CharacterSkin;
+    import kabam.rotmg.classes.model.ClassesModel;
+    import kabam.rotmg.game.model.GameModel;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class CurrentArenaRunModel
+    public class CurrentArenaRunModel
 		{
 
 			[Inject]

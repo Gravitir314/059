@@ -2,27 +2,27 @@
 
 package kabam.rotmg.stage3D
 	{
-	import com.company.assembleegameclient.engine3d.Model3D;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.util.Stage3DProxy;
-	import com.company.assembleegameclient.util.StageProxy;
+    import com.company.assembleegameclient.engine3d.Model3D;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.util.Stage3DProxy;
+    import com.company.assembleegameclient.util.StageProxy;
 
-	import flash.display3D.Context3DBlendFactor;
-	import flash.display3D.Context3DCompareMode;
-	import flash.events.ErrorEvent;
-	import flash.events.Event;
+    import flash.display3D.Context3DBlendFactor;
+    import flash.display3D.Context3DCompareMode;
+    import flash.events.ErrorEvent;
+    import flash.events.Event;
 
-	import kabam.rotmg.stage3D.graphic3D.Graphic3DHelper;
-	import kabam.rotmg.stage3D.graphic3D.IndexBufferFactory;
-	import kabam.rotmg.stage3D.graphic3D.TextureFactory;
-	import kabam.rotmg.stage3D.graphic3D.VertexBufferFactory;
-	import kabam.rotmg.stage3D.proxies.Context3DProxy;
+    import kabam.rotmg.stage3D.graphic3D.Graphic3DHelper;
+    import kabam.rotmg.stage3D.graphic3D.IndexBufferFactory;
+    import kabam.rotmg.stage3D.graphic3D.TextureFactory;
+    import kabam.rotmg.stage3D.graphic3D.VertexBufferFactory;
+    import kabam.rotmg.stage3D.proxies.Context3DProxy;
 
-	import org.swiftsuspenders.Injector;
+    import org.swiftsuspenders.Injector;
 
-	import robotlegs.bender.framework.api.IConfig;
+    import robotlegs.bender.framework.api.IConfig;
 
-	public class Stage3DConfig implements IConfig
+    public class Stage3DConfig implements IConfig
 		{
 
 			public static const WIDTH:int = 600;

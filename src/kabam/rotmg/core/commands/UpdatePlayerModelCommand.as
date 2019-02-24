@@ -2,12 +2,12 @@
 
 package kabam.rotmg.core.commands
 	{
-	import com.company.assembleegameclient.appengine.SavedCharactersList;
-	import com.company.assembleegameclient.editor.Command;
+    import com.company.assembleegameclient.appengine.SavedCharactersList;
+    import com.company.assembleegameclient.editor.Command;
 
-	import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.core.model.PlayerModel;
 
-	public class UpdatePlayerModelCommand extends Command
+    public class UpdatePlayerModelCommand extends Command
 		{
 
 			[Inject]

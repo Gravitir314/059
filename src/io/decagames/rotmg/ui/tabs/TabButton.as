@@ -2,16 +2,16 @@
 
 package io.decagames.rotmg.ui.tabs
 	{
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
-	import flash.geom.Point;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
+    import flash.geom.Point;
 
-	import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-	import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import io.decagames.rotmg.ui.texture.TextureParser;
 
-	public class TabButton extends SliceScalingButton
+    public class TabButton extends SliceScalingButton
 		{
 
 			public static const SELECTED_MARGIN:int = 3;

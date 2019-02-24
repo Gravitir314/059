@@ -2,29 +2,29 @@
 
 package kabam.rotmg.packages.view
 	{
-	import com.company.assembleegameclient.ui.DeprecatedTextButton;
+    import com.company.assembleegameclient.ui.DeprecatedTextButton;
 
-	import flash.display.DisplayObject;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.IOErrorEvent;
-	import flash.events.MouseEvent;
-	import flash.geom.Rectangle;
-	import flash.net.URLRequest;
-	import flash.text.TextFieldAutoSize;
+    import flash.display.DisplayObject;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.IOErrorEvent;
+    import flash.events.MouseEvent;
+    import flash.geom.Rectangle;
+    import flash.net.URLRequest;
+    import flash.text.TextFieldAutoSize;
 
-	import kabam.display.Loader.LoaderProxy;
-	import kabam.display.Loader.LoaderProxyConcrete;
-	import kabam.lib.resizing.view.Resizable;
-	import kabam.rotmg.packages.model.PackageInfo;
-	import kabam.rotmg.pets.view.components.DialogCloseButton;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.display.Loader.LoaderProxy;
+    import kabam.display.Loader.LoaderProxyConcrete;
+    import kabam.lib.resizing.view.Resizable;
+    import kabam.rotmg.packages.model.PackageInfo;
+    import kabam.rotmg.pets.view.components.DialogCloseButton;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class PackageOfferDialog extends Sprite implements Resizable
+    public class PackageOfferDialog extends Sprite implements Resizable
 		{
 
 			internal const paddingTop:Number = 6;

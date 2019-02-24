@@ -2,28 +2,28 @@
 
 package com.company.assembleegameclient.objects
 	{
-	import com.company.assembleegameclient.game.GameSprite;
-	import com.company.assembleegameclient.map.Camera;
-	import com.company.assembleegameclient.map.Map;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.ui.panels.Panel;
-	import com.company.assembleegameclient.ui.tooltip.TextToolTip;
-	import com.company.assembleegameclient.ui.tooltip.ToolTip;
-	import com.company.assembleegameclient.util.AnimatedChar;
-	import com.company.assembleegameclient.util.AnimatedChars;
-	import com.company.assembleegameclient.util.MaskedImage;
+    import com.company.assembleegameclient.game.GameSprite;
+    import com.company.assembleegameclient.map.Camera;
+    import com.company.assembleegameclient.map.Map;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.ui.panels.Panel;
+    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+    import com.company.assembleegameclient.ui.tooltip.ToolTip;
+    import com.company.assembleegameclient.util.AnimatedChar;
+    import com.company.assembleegameclient.util.AnimatedChars;
+    import com.company.assembleegameclient.util.MaskedImage;
 
-	import flash.display.IGraphicsData;
+    import flash.display.IGraphicsData;
 
-	import io.decagames.rotmg.pets.data.PetsModel;
-	import io.decagames.rotmg.pets.data.vo.PetVO;
-	import io.decagames.rotmg.pets.panels.PetPanel;
+    import io.decagames.rotmg.pets.data.PetsModel;
+    import io.decagames.rotmg.pets.data.vo.PetVO;
+    import io.decagames.rotmg.pets.panels.PetPanel;
 
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.game.signals.TextPanelMessageUpdateSignal;
-	import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.game.signals.TextPanelMessageUpdateSignal;
+    import kabam.rotmg.text.model.TextKey;
 
-	public class Pet extends GameObject implements IInteractiveObject
+    public class Pet extends GameObject implements IInteractiveObject
 		{
 
 			private var textPanelUpdateSignal:TextPanelMessageUpdateSignal;

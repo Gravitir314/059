@@ -2,23 +2,23 @@
 
 package kabam.rotmg.text
 	{
-	import com.company.ui.BaseSimpleText;
+    import com.company.ui.BaseSimpleText;
 
-	import kabam.rotmg.application.api.ApplicationSetup;
-	import kabam.rotmg.language.DebugTextAndMapProvider;
-	import kabam.rotmg.text.controller.TextFieldDisplayMediator;
-	import kabam.rotmg.text.model.FontModel;
-	import kabam.rotmg.text.model.TextAndMapProvider;
-	import kabam.rotmg.text.view.BaseSimpleTextMediator;
-	import kabam.rotmg.text.view.BitmapTextFactory;
-	import kabam.rotmg.text.view.TextFieldDisplay;
+    import kabam.rotmg.application.api.ApplicationSetup;
+    import kabam.rotmg.language.DebugTextAndMapProvider;
+    import kabam.rotmg.text.controller.TextFieldDisplayMediator;
+    import kabam.rotmg.text.model.FontModel;
+    import kabam.rotmg.text.model.TextAndMapProvider;
+    import kabam.rotmg.text.view.BaseSimpleTextMediator;
+    import kabam.rotmg.text.view.BitmapTextFactory;
+    import kabam.rotmg.text.view.TextFieldDisplay;
 
-	import org.swiftsuspenders.Injector;
+    import org.swiftsuspenders.Injector;
 
-	import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
-	import robotlegs.bender.framework.api.IConfig;
+    import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
+    import robotlegs.bender.framework.api.IConfig;
 
-	public class TextConfig implements IConfig
+    public class TextConfig implements IConfig
 		{
 
 			[Inject]

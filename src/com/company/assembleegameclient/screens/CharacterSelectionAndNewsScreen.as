@@ -2,40 +2,38 @@
 
 package com.company.assembleegameclient.screens
 	{
-	import com.company.assembleegameclient.account.ui.TextInputField;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.ui.DeprecatedClickableText;
-	import com.company.assembleegameclient.ui.Scrollbar;
+    import com.company.assembleegameclient.account.ui.TextInputField;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.ui.DeprecatedClickableText;
+    import com.company.assembleegameclient.ui.Scrollbar;
 
-	import flash.display.DisplayObject;
+    import flash.display.Shape;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
+    import flash.filters.DropShadowFilter;
+    import flash.geom.Rectangle;
+    import flash.text.TextFieldAutoSize;
 
-	import flash.display.Shape;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
-	import flash.geom.Rectangle;
-	import flash.text.TextFieldAutoSize;
+    import kabam.rotmg.account.core.signals.LoginSignal;
+    import kabam.rotmg.account.web.model.AccountData;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.game.view.CreditDisplay;
+    import kabam.rotmg.news.view.NewsView;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.ui.view.ButtonFactory;
+    import kabam.rotmg.ui.view.components.MenuOptionsBar;
+    import kabam.rotmg.ui.view.components.ScreenBase;
 
-	import kabam.rotmg.account.core.signals.LoginSignal;
-	import kabam.rotmg.account.web.model.AccountData;
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.game.view.CreditDisplay;
-	import kabam.rotmg.news.view.NewsView;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-	import kabam.rotmg.ui.view.ButtonFactory;
-	import kabam.rotmg.ui.view.components.MenuOptionsBar;
-	import kabam.rotmg.ui.view.components.ScreenBase;
+    import org.osflash.signals.Signal;
+    import org.swiftsuspenders.Injector;
 
-	import org.osflash.signals.Signal;
-	import org.swiftsuspenders.Injector;
-
-	public class CharacterSelectionAndNewsScreen extends Sprite
+    public class CharacterSelectionAndNewsScreen extends Sprite
 		{
 
 			private static const NEWS_X:int = 475;

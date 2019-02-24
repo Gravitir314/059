@@ -2,23 +2,23 @@
 
 package io.decagames.rotmg.nexusShop
 	{
-	import flash.events.MouseEvent;
+    import flash.events.MouseEvent;
 
-	import io.decagames.rotmg.ui.buttons.BaseButton;
-	import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-	import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
-	import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
-	import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.ui.buttons.BaseButton;
+    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+    import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
+    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+    import io.decagames.rotmg.ui.texture.TextureParser;
 
-	import kabam.rotmg.core.signals.HideTooltipsSignal;
-	import kabam.rotmg.core.signals.ShowTooltipSignal;
-	import kabam.rotmg.ui.model.HUDModel;
+    import kabam.rotmg.core.signals.HideTooltipsSignal;
+    import kabam.rotmg.core.signals.ShowTooltipSignal;
+    import kabam.rotmg.ui.model.HUDModel;
 
-	import org.osflash.signals.natives.NativeSignal;
+    import org.osflash.signals.natives.NativeSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class NexusShopPopupMediator extends Mediator
+    public class NexusShopPopupMediator extends Mediator
 		{
 
 			[Inject]

@@ -2,19 +2,19 @@
 
 package kabam.rotmg.account.web.commands
 	{
-	import kabam.lib.tasks.BranchingTask;
-	import kabam.lib.tasks.DispatchSignalTask;
-	import kabam.lib.tasks.Task;
-	import kabam.lib.tasks.TaskMonitor;
-	import kabam.lib.tasks.TaskSequence;
-	import kabam.rotmg.account.core.services.RegisterAccountTask;
-	import kabam.rotmg.account.core.signals.UpdateAccountInfoSignal;
-	import kabam.rotmg.account.web.view.WebAccountDetailDialog;
-	import kabam.rotmg.core.signals.TaskErrorSignal;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.ui.signals.EnterGameSignal;
+    import kabam.lib.tasks.BranchingTask;
+    import kabam.lib.tasks.DispatchSignalTask;
+    import kabam.lib.tasks.Task;
+    import kabam.lib.tasks.TaskMonitor;
+    import kabam.lib.tasks.TaskSequence;
+    import kabam.rotmg.account.core.services.RegisterAccountTask;
+    import kabam.rotmg.account.core.signals.UpdateAccountInfoSignal;
+    import kabam.rotmg.account.web.view.WebAccountDetailDialog;
+    import kabam.rotmg.core.signals.TaskErrorSignal;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.ui.signals.EnterGameSignal;
 
-	public class WebRegisterAccountCommand
+    public class WebRegisterAccountCommand
 		{
 
 			[Inject]

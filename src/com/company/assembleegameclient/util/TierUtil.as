@@ -2,12 +2,12 @@
 
 package com.company.assembleegameclient.util
 	{
-	import com.company.assembleegameclient.ui.tooltip.TooltipHelper;
+    import com.company.assembleegameclient.ui.tooltip.TooltipHelper;
 
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.labels.UILabel;
 
-	public class TierUtil
+    public class TierUtil
 		{
 
 

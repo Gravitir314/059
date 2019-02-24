@@ -2,21 +2,21 @@
 
 package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
 	{
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.util.PointUtil;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.util.PointUtil;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.Sprite;
-	import flash.filters.ColorMatrixFilter;
-	import flash.geom.Matrix;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.Sprite;
+    import flash.filters.ColorMatrixFilter;
+    import flash.geom.Matrix;
 
-	import kabam.rotmg.constants.ItemConstants;
-	import kabam.rotmg.text.view.BitmapTextFactory;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-	import kabam.rotmg.ui.view.components.PotionSlotView;
+    import kabam.rotmg.constants.ItemConstants;
+    import kabam.rotmg.text.view.BitmapTextFactory;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.ui.view.components.PotionSlotView;
 
-	public class ItemTileSprite extends Sprite
+    public class ItemTileSprite extends Sprite
 		{
 
 			protected static const DIM_FILTER:Array = [new ColorMatrixFilter([0.4, 0, 0, 0, 0, 0, 0.4, 0, 0, 0, 0, 0, 0.4, 0, 0, 0, 0, 0, 1, 0])];

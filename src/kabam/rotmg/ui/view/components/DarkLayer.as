@@ -2,9 +2,9 @@
 
 package kabam.rotmg.ui.view.components
 	{
-	import flash.display.Shape;
+    import flash.display.Shape;
 
-	public class DarkLayer extends Shape
+    public class DarkLayer extends Shape
 		{
 
 			public function DarkLayer()

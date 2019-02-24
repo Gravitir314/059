@@ -2,11 +2,11 @@
 
 package com.company.assembleegameclient.objects
 	{
-	import com.company.assembleegameclient.util.ConditionEffect;
+    import com.company.assembleegameclient.util.ConditionEffect;
 
-	import flash.utils.Dictionary;
+    import flash.utils.Dictionary;
 
-	public class ProjectileProperties
+    public class ProjectileProperties
 		{
 
 			public var bulletType_:int;

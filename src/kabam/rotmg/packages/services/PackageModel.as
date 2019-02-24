@@ -2,11 +2,11 @@
 
 package kabam.rotmg.packages.services
 	{
-	import kabam.rotmg.packages.model.PackageInfo;
+    import kabam.rotmg.packages.model.PackageInfo;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class PackageModel
+    public class PackageModel
 		{
 			public const updateSignal:Signal = new Signal();
 

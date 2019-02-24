@@ -2,13 +2,13 @@
 
 package com.company.assembleegameclient.tutorial
 	{
-	import com.company.util.ConversionUtil;
-	import com.company.util.PointUtil;
+    import com.company.util.ConversionUtil;
+    import com.company.util.PointUtil;
 
-	import flash.display.Graphics;
-	import flash.geom.Point;
+    import flash.display.Graphics;
+    import flash.geom.Point;
 
-	public class UIDrawArrow
+    public class UIDrawArrow
 		{
 
 			public const ANIMATION_MS:int = 500;

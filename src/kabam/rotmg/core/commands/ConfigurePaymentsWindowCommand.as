@@ -2,16 +2,16 @@
 
 package kabam.rotmg.core.commands
 	{
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.account.core.commands.ExternalOpenMoneyWindowCommand;
-	import kabam.rotmg.account.core.commands.InternalOpenMoneyWindowCommand;
-	import kabam.rotmg.account.core.signals.OpenMoneyWindowSignal;
-	import kabam.rotmg.account.kabam.KabamAccount;
-	import kabam.rotmg.account.web.WebAccount;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.account.core.commands.ExternalOpenMoneyWindowCommand;
+    import kabam.rotmg.account.core.commands.InternalOpenMoneyWindowCommand;
+    import kabam.rotmg.account.core.signals.OpenMoneyWindowSignal;
+    import kabam.rotmg.account.kabam.KabamAccount;
+    import kabam.rotmg.account.web.WebAccount;
 
-	import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
+    import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
 
-	public class ConfigurePaymentsWindowCommand
+    public class ConfigurePaymentsWindowCommand
 		{
 
 			[Inject]

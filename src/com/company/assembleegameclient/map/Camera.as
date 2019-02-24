@@ -2,17 +2,17 @@
 
 package com.company.assembleegameclient.map
 	{
-	import com.company.assembleegameclient.objects.GameObject;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.util.RandomUtil;
+    import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.util.RandomUtil;
 
-	import flash.display.StageScaleMode;
-	import flash.geom.Matrix3D;
-	import flash.geom.PerspectiveProjection;
-	import flash.geom.Rectangle;
-	import flash.geom.Vector3D;
+    import flash.display.StageScaleMode;
+    import flash.geom.Matrix3D;
+    import flash.geom.PerspectiveProjection;
+    import flash.geom.Rectangle;
+    import flash.geom.Vector3D;
 
-	public class Camera
+    public class Camera
 		{
 
 			public static const lN_:Vector3D = new Vector3D(0, 0, 1);

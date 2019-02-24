@@ -2,11 +2,11 @@
 
 package kabam.rotmg.dialogs.model
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class DialogsModel
+    public class DialogsModel
 		{
 
 			private var popupPriority:Array = [PopupNamesConfig.BEGINNERS_OFFER_POPUP, PopupNamesConfig.NEWS_POPUP, PopupNamesConfig.DAILY_LOGIN_POPUP, PopupNamesConfig.PACKAGES_OFFER_POPUP];

@@ -2,11 +2,11 @@
 
 package com.company.assembleegameclient.objects.particles
 	{
-	import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.objects.GameObject;
 
-	import flash.geom.Vector3D;
+    import flash.geom.Vector3D;
 
-	public class HealParticle extends Particle
+    public class HealParticle extends Particle
 		{
 
 			public var timeLeft_:int;

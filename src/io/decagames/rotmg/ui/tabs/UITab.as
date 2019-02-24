@@ -2,12 +2,12 @@
 
 package io.decagames.rotmg.ui.tabs
 	{
-	import flash.display.Sprite;
-	import flash.geom.Point;
+    import flash.display.Sprite;
+    import flash.geom.Point;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class UITab extends Sprite
+    public class UITab extends Sprite
 		{
 
 			private var _tabName:String;

@@ -2,24 +2,24 @@
 
 package com.company.assembleegameclient.ui.tooltip
 	{
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.ui.GameObjectListItem;
-	import com.company.assembleegameclient.ui.GuildText;
-	import com.company.assembleegameclient.ui.RankText;
-	import com.company.assembleegameclient.ui.StatusBar;
-	import com.company.assembleegameclient.ui.panels.itemgrids.EquippedGrid;
-	import com.company.assembleegameclient.ui.panels.itemgrids.InventoryGrid;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.ui.GameObjectListItem;
+    import com.company.assembleegameclient.ui.GuildText;
+    import com.company.assembleegameclient.ui.RankText;
+    import com.company.assembleegameclient.ui.StatusBar;
+    import com.company.assembleegameclient.ui.panels.itemgrids.EquippedGrid;
+    import com.company.assembleegameclient.ui.panels.itemgrids.InventoryGrid;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.text.TextFieldAutoSize;
+    import flash.text.TextFieldAutoSize;
 
-	import kabam.rotmg.game.view.components.StatsView;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.game.view.components.StatsView;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	public class PlayerToolTip extends ToolTip
+    public class PlayerToolTip extends ToolTip
 		{
 
 			public var player_:Player;

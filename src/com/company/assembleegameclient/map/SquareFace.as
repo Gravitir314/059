@@ -2,15 +2,15 @@
 
 package com.company.assembleegameclient.map
 	{
-	import com.company.assembleegameclient.engine3d.Face3D;
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.engine3d.Face3D;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import flash.display.BitmapData;
-	import flash.display.IGraphicsData;
+    import flash.display.BitmapData;
+    import flash.display.IGraphicsData;
 
-	import kabam.rotmg.stage3D.GraphicsFillExtra;
+    import kabam.rotmg.stage3D.GraphicsFillExtra;
 
-	public class SquareFace
+    public class SquareFace
 		{
 
 			public var animate_:int;

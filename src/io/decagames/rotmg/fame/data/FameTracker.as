@@ -2,18 +2,18 @@
 
 package io.decagames.rotmg.fame.data
 	{
-	import com.company.assembleegameclient.appengine.SavedCharacter;
+    import com.company.assembleegameclient.appengine.SavedCharacter;
 
-	import io.decagames.rotmg.characterMetrics.data.MetricsID;
-	import io.decagames.rotmg.characterMetrics.tracker.CharactersMetricsTracker;
-	import io.decagames.rotmg.fame.data.bonus.FameBonus;
-	import io.decagames.rotmg.fame.data.bonus.FameBonusConfig;
-	import io.decagames.rotmg.fame.data.bonus.FameBonusID;
+    import io.decagames.rotmg.characterMetrics.data.MetricsID;
+    import io.decagames.rotmg.characterMetrics.tracker.CharactersMetricsTracker;
+    import io.decagames.rotmg.fame.data.bonus.FameBonus;
+    import io.decagames.rotmg.fame.data.bonus.FameBonusConfig;
+    import io.decagames.rotmg.fame.data.bonus.FameBonusID;
 
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.ui.model.HUDModel;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.ui.model.HUDModel;
 
-	public class FameTracker
+    public class FameTracker
 		{
 
 			[Inject]

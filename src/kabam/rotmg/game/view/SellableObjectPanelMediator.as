@@ -2,18 +2,18 @@
 
 package kabam.rotmg.game.view
 	{
-	import com.company.assembleegameclient.objects.SellableObject;
-	import com.company.assembleegameclient.util.Currency;
+    import com.company.assembleegameclient.objects.SellableObject;
+    import com.company.assembleegameclient.util.Currency;
 
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.account.core.view.RegisterPromptDialog;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.game.model.GameModel;
-	import kabam.rotmg.ui.view.NotEnoughGoldDialog;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.account.core.view.RegisterPromptDialog;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.game.model.GameModel;
+    import kabam.rotmg.ui.view.NotEnoughGoldDialog;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class SellableObjectPanelMediator extends Mediator
+    public class SellableObjectPanelMediator extends Mediator
 		{
 
 			public static const TEXT:String = "SellableObjectPanelMediator.text";

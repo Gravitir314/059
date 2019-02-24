@@ -2,11 +2,11 @@
 
 package kabam.rotmg.game.model
 	{
-	import flash.utils.ByteArray;
+    import flash.utils.ByteArray;
 
-	import kabam.rotmg.servers.api.Server;
+    import kabam.rotmg.servers.api.Server;
 
-	public class GameInitData
+    public class GameInitData
 		{
 
 			public var server:Server;

@@ -2,18 +2,18 @@
 
 package kabam.rotmg.game.view
 	{
-	import com.company.assembleegameclient.map.Map;
+    import com.company.assembleegameclient.map.Map;
 
-	import kabam.rotmg.game.model.QuestModel;
-	import kabam.rotmg.ui.signals.RealmHeroesSignal;
-	import kabam.rotmg.ui.signals.RealmOryxSignal;
-	import kabam.rotmg.ui.signals.RealmQuestLevelSignal;
-	import kabam.rotmg.ui.signals.ToggleRealmQuestsDisplaySignal;
+    import kabam.rotmg.game.model.QuestModel;
+    import kabam.rotmg.ui.signals.RealmHeroesSignal;
+    import kabam.rotmg.ui.signals.RealmOryxSignal;
+    import kabam.rotmg.ui.signals.RealmQuestLevelSignal;
     import kabam.rotmg.ui.signals.RealmServerNameSignal;
+    import kabam.rotmg.ui.signals.ToggleRealmQuestsDisplaySignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class RealmQuestsDisplayMediator extends Mediator
+    public class RealmQuestsDisplayMediator extends Mediator
 		{
 
 			[Inject]

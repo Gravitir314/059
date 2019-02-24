@@ -2,9 +2,9 @@
 
 package kabam.rotmg.game.model
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	public class ChatFilter
+    public class ChatFilter
 		{
 
 

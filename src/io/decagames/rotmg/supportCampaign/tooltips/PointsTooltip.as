@@ -2,18 +2,18 @@
 
 package io.decagames.rotmg.supportCampaign.tooltips
 	{
-	import com.company.assembleegameclient.ui.tooltip.ToolTip;
+    import com.company.assembleegameclient.ui.tooltip.ToolTip;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
 
-	import io.decagames.rotmg.shop.ShopBuyButton;
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.shop.ShopBuyButton;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.labels.UILabel;
 
-	import kabam.rotmg.assets.services.IconFactory;
+    import kabam.rotmg.assets.services.IconFactory;
 
-	public class PointsTooltip extends ToolTip
+    public class PointsTooltip extends ToolTip
 		{
 
 			private var pointsInfo:UILabel;

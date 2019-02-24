@@ -2,12 +2,12 @@
 
 package com.company.assembleegameclient.objects
 	{
-	import flash.display.BitmapData;
-	import flash.geom.ColorTransform;
+    import flash.display.BitmapData;
+    import flash.geom.ColorTransform;
 
-	import kabam.rotmg.stage3D.GraphicsFillExtra;
+    import kabam.rotmg.stage3D.GraphicsFillExtra;
 
-	public class FlashDescription
+    public class FlashDescription
 		{
 
 			public var startTime_:int;

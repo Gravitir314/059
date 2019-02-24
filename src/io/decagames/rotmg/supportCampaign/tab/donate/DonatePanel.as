@@ -2,20 +2,20 @@
 
 package io.decagames.rotmg.supportCampaign.tab.donate
 	{
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.Sprite;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.Sprite;
 
-	import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
-	import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.labels.UILabel;
-	import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-	import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
+    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import io.decagames.rotmg.ui.texture.TextureParser;
 
-	import kabam.rotmg.assets.services.IconFactory;
+    import kabam.rotmg.assets.services.IconFactory;
 
-	public class DonatePanel extends Sprite
+    public class DonatePanel extends Sprite
 		{
 
 			private var _downArrow:SliceScalingButton;

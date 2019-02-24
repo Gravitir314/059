@@ -2,9 +2,9 @@
 
 package kabam.rotmg.game.view.components
 	{
-	import flash.display.DisplayObjectContainer;
+    import flash.display.DisplayObjectContainer;
 
-	public class QueuedStatusTextList
+    public class QueuedStatusTextList
 		{
 
 			public var target:DisplayObjectContainer;

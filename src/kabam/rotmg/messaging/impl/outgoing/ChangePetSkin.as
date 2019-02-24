@@ -2,9 +2,9 @@
 
 package kabam.rotmg.messaging.impl.outgoing
 	{
-	import flash.utils.IDataOutput;
+    import flash.utils.IDataOutput;
 
-	public class ChangePetSkin extends OutgoingMessage
+    public class ChangePetSkin extends OutgoingMessage
 		{
 
 			public var petId:int;

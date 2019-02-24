@@ -2,10 +2,10 @@
 
 package kabam.rotmg.account.web.commands
 	{
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.account.web.WebAccount;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.account.web.WebAccount;
 
-	public class WebSetPaymentDataCommand
+    public class WebSetPaymentDataCommand
 		{
 
 			[Inject]

@@ -2,10 +2,10 @@
 
 package com.company.assembleegameclient.engine3d
 	{
-	import flash.display.BitmapData;
-	import flash.geom.Matrix;
+    import flash.display.BitmapData;
+    import flash.geom.Matrix;
 
-	public class TextureMatrix
+    public class TextureMatrix
 		{
 
 			public var texture_:BitmapData = null;

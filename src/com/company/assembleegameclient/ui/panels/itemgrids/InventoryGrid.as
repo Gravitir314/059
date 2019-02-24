@@ -2,12 +2,12 @@
 
 package com.company.assembleegameclient.ui.panels.itemgrids
 	{
-	import com.company.assembleegameclient.objects.GameObject;
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.InventoryTile;
-	import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.ItemTile;
+    import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.InventoryTile;
+    import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.ItemTile;
 
-	public class InventoryGrid extends ItemGrid
+    public class InventoryGrid extends ItemGrid
 		{
 
 			private const NUM_SLOTS:uint = 8;

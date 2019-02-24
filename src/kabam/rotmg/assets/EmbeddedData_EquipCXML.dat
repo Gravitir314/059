@@ -7410,7 +7410,7 @@
       <Description>An incantation that unlocks the Wine Cellar. \n\nKeys can only be used once you have 10 or more stars!</Description>
       <Sound>use_key</Sound>
       <Consumable/>
-      <BagType>8</BagType>
+      <BagType>4</BagType>
       <Activate onlyInArea="Oryx's Chamber" dungeonName="Wine Cellar" lockedName="Locked Wine Cellar Portal">UnlockPortal</Activate>
       <feedPower>500</feedPower>
       <Track/>
@@ -11828,7 +11828,8 @@
       <feedPower>800</feedPower>
       <Soulbound/>
    </Object>
-   <Object type="0x235C" id="Shendyt of Geb" setType="0x0002" setName="Priest of Geb Set">
+   <Object type="0x235C" id="PriestST2" setType="0x0002" setName="Priest of Geb Set">
+      <DisplayId>Shendyt of Geb</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -11846,7 +11847,8 @@
       <FameBonus>4</FameBonus>
       <feedPower>435</feedPower>
    </Object>
-   <Object type="0x235D" id="Geb's Ring of Wisdom" setType="0x0002" setName="Priest of Geb Set">
+   <Object type="0x235D" id="PriestST3" setType="0x0002" setName="Priest of Geb Set">
+      <DisplayId>Geb's Ring of Wisdom</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -11863,7 +11865,8 @@
       <FameBonus>5</FameBonus>
       <feedPower>500</feedPower>
    </Object>
-   <Object type="0x235E" id="Book of Geb" setType="0x0002" setName="Priest of Geb Set">
+   <Object type="0x235E" id="PriestST1" setType="0x0002" setName="Priest of Geb Set">
+      <DisplayId>Book of Geb</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -11887,7 +11890,7 @@
       <Activate range="5">RemoveNegativeConditions</Activate>
       <feedPower>380</feedPower>
    </Object>
-   <Object type="0x235F" id="Scepter of Geb" setType="0x0002" setName="Priest of Geb Set">
+   <Object type="0x235F" id="PriestST0" setType="0x0002" setName="Priest of Geb Set">
       <DisplayId>Wand of Geb</DisplayId>
       <Class>Equipment</Class>
       <Item/>
@@ -11916,7 +11919,8 @@
       <OldSound>bladeSwing</OldSound>
       <feedPower>800</feedPower>
    </Object>
-   <Object type="0x2360" id="Soulless Robe" setType="0x0004" setName="Phylactery Mystic Set">
+   <Object type="0x2360" id="MysticST2" setType="0x0004" setName="Phylactery Mystic Set">
+      <DisplayId>Soulless Robe</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -11931,7 +11935,8 @@
       <FameBonus>4</FameBonus>
       <feedPower>435</feedPower>
    </Object>
-   <Object type="0x2361" id="Ring of the Covetous Heart" setType="0x0004" setName="Phylactery Mystic Set">
+   <Object type="0x2361" id="MysticST3" setType="0x0004" setName="Phylactery Mystic Set">
+      <DisplayId>Ring of the Covetous Heart</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -11948,7 +11953,8 @@
       <FameBonus>5</FameBonus>
       <feedPower>500</feedPower>
    </Object>
-   <Object type="0x2362" id="Soul of the Bearer" setType="0x0004" setName="Phylactery Mystic Set">
+   <Object type="0x2362" id="MysticST1" setType="0x0004" setName="Phylactery Mystic Set">
+      <DisplayId>Soul of the Bearer</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -11972,7 +11978,8 @@
       <MpCost>150</MpCost>
       <feedPower>600</feedPower>
    </Object>
-   <Object type="0x2363" id="The Phylactery" setType="0x0004" setName="Phylactery Mystic Set">
+   <Object type="0x2363" id="MysticST0" setType="0x0004" setName="Phylactery Mystic Set">
+      <DisplayId>The Phylactery</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -12000,7 +12007,8 @@
       <ArcGap>0</ArcGap>
       <feedPower>500</feedPower>
    </Object>
-   <Object type="0x2364" id="Fairy Plate" setType="0x0003" setName="Swoll Paladin Set">
+   <Object type="0x2364" id="PaladinST2" setType="0x0003" setName="Swoll Paladin Set">
+      <DisplayId>Fairy Plate</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -12016,7 +12024,8 @@
       <FameBonus>4</FameBonus>
       <feedPower>500</feedPower>
    </Object>
-   <Object type="0x2365" id="Ring of Pure Wishes" setType="0x0003" setName="Swoll Paladin Set">
+   <Object type="0x2365" id="PaladinST3" setType="0x0003" setName="Swoll Paladin Set">
+      <DisplayId>Ring of Pure Wishes</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -12033,7 +12042,8 @@
       <FameBonus>5</FameBonus>
       <feedPower>500</feedPower>
    </Object>
-   <Object type="0x2366" id="Seal of the Enchanted Forest" setType="0x0003" setName="Swoll Paladin Set">
+   <Object type="0x2366" id="PaladinST1" setType="0x0003" setName="Swoll Paladin Set">
+      <DisplayId>Seal of the Enchanted Forest</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -12055,7 +12065,8 @@
       <MpCost>100</MpCost>
       <feedPower>500</feedPower>
    </Object>
-   <Object type="0x2367" id="Pixie-Enchanted Sword" setType="0x0003" setName="Swoll Paladin Set">
+   <Object type="0x2367" id="PaladinST0" setType="0x0003" setName="Swoll Paladin Set">
+      <DisplayId>Pixie-Enchanted Sword</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -12081,7 +12092,8 @@
       <OldSound>bladeSwing</OldSound>
       <feedPower>500</feedPower>
    </Object>
-   <Object type="0x21a0" id="Etherite Dagger" setType="0x0005" setName="Skuld 2 The ReGhostening Set">
+   <Object type="0x21a0" id="RogueST0" setType="0x0005" setName="Skuld 2 The ReGhostening Set">
+      <DisplayId>Etherite Dagger</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -12106,7 +12118,8 @@
       <OldSound>daggerSwing</OldSound>
       <feedPower>500</feedPower>
    </Object>
-   <Object type="0x21a1" id="Mantle of Skuld" setType="0x0005" setName="Skuld 2 The ReGhostening Set">
+   <Object type="0x21a1" id="RogueST2" setType="0x0005" setName="Skuld 2 The ReGhostening Set">
+      <DisplayId>Mantle of Skuld</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -12122,7 +12135,8 @@
       <FameBonus>4</FameBonus>
       <feedPower>500</feedPower>
    </Object>
-   <Object type="0x21a2" id="Ghastly Drape" setType="0x0005" setName="Skuld 2 The ReGhostening Set">
+   <Object type="0x21a2" id="RogueST1" setType="0x0005" setName="Skuld 2 The ReGhostening Set">
+      <DisplayId>Ghastly Drape</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -12141,7 +12155,8 @@
       <Cooldown>6.5</Cooldown>
       <feedPower>500</feedPower>
    </Object>
-   <Object type="0x21a3" id="Spectral Ring of Horrors" setType="0x0005" setName="Skuld 2 The ReGhostening Set">
+   <Object type="0x21a3" id="RogueST3" setType="0x0005" setName="Skuld 2 The ReGhostening Set">
+      <DisplayId>Spectral Ring of Horrors</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -12159,7 +12174,8 @@
       <FameBonus>4</FameBonus>
       <feedPower>500</feedPower>
    </Object>
-   <Object type="0x21a7" id="Sentient Staff" setType="0x0006" setName="Twilight Archmage Set">
+   <Object type="0x21a7" id="WizardST0" setType="0x0006" setName="Twilight Archmage Set">
+      <DisplayId>Sentient Staff</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -12189,7 +12205,8 @@
       <ArcGap>0</ArcGap>
       <OldSound>magicShoot</OldSound>
    </Object>
-   <Object type="0x21a8" id="The Robe of Twilight" setType="0x0006" setName="Twilight Archmage Set">
+   <Object type="0x21a8" id="WizardST2" setType="0x0006" setName="Twilight Archmage Set">
+      <DisplayId>The Robe of Twilight</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -12207,7 +12224,8 @@
       <FameBonus>4</FameBonus>
       <feedPower>500</feedPower>
    </Object>
-   <Object type="0x21a9" id="Ancient Spell: Pierce" setType="0x0006" setName="Twilight Archmage Set">
+   <Object type="0x21a9" id="WizardST1" setType="0x0006" setName="Twilight Archmage Set">
+      <DisplayId>Ancient Spell: Pierce</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -12232,7 +12250,8 @@
       <MpCost>80</MpCost>
       <Activate>BulletNova</Activate>
    </Object>
-   <Object type="0x21aa" id="The Forgotten Ring" setType="0x0006" setName="Twilight Archmage Set">
+   <Object type="0x21aa" id="WizardST3" setType="0x0006" setName="Twilight Archmage Set">
+      <DisplayId>The Forgotten Ring</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -12249,7 +12268,8 @@
       <FameBonus>4</FameBonus>
       <feedPower>500</feedPower>
    </Object>
-   <Object type="0x7fb9" id="Zaarvox's Heart" setType="0x7fcb" setName="Dragon Tamer Set">
+   <Object type="0x7fb9" id="WarriorST2" setType="0x7fcb" setName="Dragon Tamer Set">
+      <DisplayId>Zaarvox's Heart</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -12265,7 +12285,8 @@
       <feedPower>500</feedPower>
       <Soulbound/>
    </Object>
-   <Object type="0x7fba" id="Amulet of Drakefyre" setType="0x7fcb" setName="Dragon Tamer Set">
+   <Object type="0x7fba" id="WarriorST3" setType="0x7fcb" setName="Dragon Tamer Set">
+      <DisplayId>Amulet of Drakefyre</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -12281,7 +12302,8 @@
       <feedPower>500</feedPower>
       <Soulbound/>
    </Object>
-   <Object type="0x7fbb" id="Helm of Draconic Dominance" setType="0x7fcb" setName="Dragon Tamer Set">
+   <Object type="0x7fbb" id="WarriorST1" setType="0x7fcb" setName="Dragon Tamer Set">
+      <DisplayId>Helm of Draconic Dominance</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -12306,7 +12328,8 @@
       <feedPower>800</feedPower>
       <Soulbound/>
    </Object>
-   <Object type="0x7fbc" id="Indomptable" setType="0x7fcb" setName="Dragon Tamer Set">
+   <Object type="0x7fbc" id="WarriorST0" setType="0x7fcb" setName="Dragon Tamer Set">
+      <DisplayId>Indomptable</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -13002,6 +13025,7 @@
       <SlotType>10</SlotType>
       <Description>It's healthy!\nMaxes any class to 8/8 and adds a Backpack.</Description>
       <Sound>use_potion</Sound>
+      <Activate stat="6" amount="18050">IncrementStat</Activate>
       <Activate stat="0" amount="2000">IncrementStat</Activate>
       <Activate stat="3" amount="2000">IncrementStat</Activate>
       <Activate stat="20" amount="2000">IncrementStat</Activate>
@@ -14199,7 +14223,7 @@
       <feedPower>750</feedPower>
       <Soulbound/>
    </Object>
-   <Object type="0x08f7" id="EH Nectar Crossfire" setType="0x000f" setName="Swarming Huntress Set">
+   <Object type="0x08f7" id="HuntressST0" setType="0x000f" setName="Swarming Huntress Set">
       <DisplayId>Nectar Crossfire</DisplayId>
       <Class>Equipment</Class>
       <Item/>
@@ -14229,7 +14253,7 @@
       <Soulbound/>
       <OldSound>arrowShoot</OldSound>
    </Object>
-   <Object type="0x08f8" id="EH Honeytomb Snare" setType="0x000f" setName="Swarming Huntress Set">
+   <Object type="0x08f8" id="HuntressST1" setType="0x000f" setName="Swarming Huntress Set">
       <DisplayId>Honeytomb Snare</DisplayId>
       <Class>Equipment</Class>
       <Item/>
@@ -14247,7 +14271,7 @@
       <BagType>8</BagType>
       <Soulbound/>
    </Object>
-   <Object type="0x08f9" id="EH Apiary Armor" setType="0x000f" setName="Swarming Huntress Set">
+   <Object type="0x08f9" id="HuntressST2" setType="0x000f" setName="Swarming Huntress Set">
       <DisplayId>Apiary Armor</DisplayId>
       <Class>Equipment</Class>
       <Item/>
@@ -14266,7 +14290,7 @@
       <BagType>8</BagType>
       <Soulbound/>
    </Object>
-   <Object type="0x08fa" id="EH Honey Circlet" setType="0x000f" setName="Swarming Huntress Set">
+   <Object type="0x08fa" id="HuntressST3" setType="0x000f" setName="Swarming Huntress Set">
       <DisplayId>Honey Circlet</DisplayId>
       <Class>Equipment</Class>
       <Item/>
@@ -14300,7 +14324,7 @@
       <Sound>use_potion</Sound>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>2</BagType>
    </Object>
    <Object type="0x13e" id="Clothing Dye Remover">
       <Class>Dye</Class>
@@ -14317,7 +14341,7 @@
       <Sound>use_potion</Sound>
       <Consumable/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>2</BagType>
    </Object>
    <Object type="0x998" id="Magical Accessory Dye Remover">
       <Class>Dye</Class>
@@ -14334,7 +14358,7 @@
       <Activate>Dye</Activate>
       <Sound>use_potion</Sound>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>2</BagType>
    </Object>
    <Object type="0x999" id="Magical Clothing Dye Remover">
       <Class>Dye</Class>
@@ -14351,7 +14375,7 @@
       <Sound>use_potion</Sound>
       <InvUse/>
       <Soulbound/>
-      <BagType>8</BagType>
+      <BagType>2</BagType>
    </Object>
    <Object type="0x025c" id="LH Lost Halls Debug Item">
       <Class>Equipment</Class>
@@ -14368,7 +14392,8 @@
       <Soulbound/>
       <Activate id="LH Lost Halls Debug">Create</Activate>
    </Object>
-   <Object type="0x0258" id="Carved Golem Remains" setType="0x0010" setName="Lost Golem Set">
+   <Object type="0x0258" id="TricksterST0" setType="0x0010" setName="Lost Golem Set">
+      <DisplayId>Carved Golem Remains</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -14392,7 +14417,8 @@
       <feedPower>900</feedPower>
       <Soulbound/>
    </Object>
-   <Object type="0x0259" id="Brain of the Golem" setType="0x0010" setName="Lost Golem Set">
+   <Object type="0x0259" id="TricksterST1" setType="0x0010" setName="Lost Golem Set">
+      <DisplayId>Brain of the Golem</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -14412,7 +14438,8 @@
       <feedPower>900</feedPower>
       <Soulbound/>
    </Object>
-   <Object type="0x025a" id="Golem Garments" setType="0x0010" setName="Lost Golem Set">
+   <Object type="0x025a" id="TricksterST2" setType="0x0010" setName="Lost Golem Set">
+      <DisplayId>Golem Garments</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Description>Formed of the tissue surrounding a golem core.</Description>
@@ -14429,7 +14456,8 @@
       <feedPower>435</feedPower>
       <Soulbound/>
    </Object>
-   <Object type="0x025b" id="Rusty Cuffs" setType="0x0010" setName="Lost Golem Set">
+   <Object type="0x025b" id="TricksterST3" setType="0x0010" setName="Lost Golem Set">
+      <DisplayId>Rusty Cuffs</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <Texture>
@@ -16022,7 +16050,6 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       <Cooldown>900</Cooldown>
       <BagType>2</BagType>
       <Activate hideEffect="true" cooldown="900" objectId="Dasher">Pet</Activate>
-      <Activate stat="22" amount="10" duration="30">StatBoostSelf</Activate>
       <OldSound>use_potion</OldSound>
       <feedPower>500</feedPower>
       <Soulbound/>
@@ -16041,7 +16068,6 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       <Cooldown>900</Cooldown>
       <BagType>2</BagType>
       <Activate hideEffect="true" cooldown="900" objectId="Dancer">Pet</Activate>
-      <Activate stat="28" amount="10" duration="30">StatBoostSelf</Activate>
       <OldSound>use_potion</OldSound>
       <feedPower>500</feedPower>
       <Soulbound/>
@@ -16060,7 +16086,6 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       <Cooldown>900</Cooldown>
       <BagType>2</BagType>
       <Activate hideEffect="true" cooldown="900" objectId="Prancer">Pet</Activate>
-      <Activate stat="27" amount="20" duration="30">StatBoostSelf</Activate>
       <OldSound>use_potion</OldSound>
       <feedPower>500</feedPower>
       <Soulbound/>
@@ -16079,7 +16104,6 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       <Cooldown>900</Cooldown>
       <BagType>2</BagType>
       <Activate hideEffect="true" cooldown="900" objectId="Vixen">Pet</Activate>
-      <Activate stat="0" amount="100" duration="30">StatBoostSelf</Activate>
       <OldSound>use_potion</OldSound>
       <feedPower>500</feedPower>
       <Soulbound/>
@@ -16098,7 +16122,6 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       <Cooldown>900</Cooldown>
       <BagType>2</BagType>
       <Activate hideEffect="true" cooldown="900" objectId="CupidReindeer">Pet</Activate>
-      <Activate stat="3" amount="100" duration="30">StatBoostSelf</Activate>
       <OldSound>use_potion</OldSound>
       <feedPower>500</feedPower>
       <Soulbound/>
@@ -16117,7 +16140,6 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       <Cooldown>900</Cooldown>
       <BagType>2</BagType>
       <Activate hideEffect="true" cooldown="900" objectId="Comet">Pet</Activate>
-      <Activate stat="20" amount="10" duration="30">StatBoostSelf</Activate>
       <OldSound>use_potion</OldSound>
       <feedPower>500</feedPower>
       <Soulbound/>
@@ -16136,7 +16158,6 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       <Cooldown>900</Cooldown>
       <BagType>2</BagType>
       <Activate hideEffect="true" cooldown="900" objectId="Donner">Pet</Activate>
-      <Activate stat="26" amount="20" duration="30">StatBoostSelf</Activate>
       <OldSound>use_potion</OldSound>
       <feedPower>500</feedPower>
       <Soulbound/>
@@ -16155,7 +16176,6 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       <Cooldown>900</Cooldown>
       <BagType>2</BagType>
       <Activate hideEffect="true" cooldown="900" objectId="Rudolph">Pet</Activate>
-      <Activate stat="21" amount="10" duration="30">StatBoostSelf</Activate>
       <OldSound>use_potion</OldSound>
       <feedPower>500</feedPower>
       <Soulbound/>
@@ -16529,7 +16549,7 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
          <EffectInfo name="" description="Warning:"/>
          <EffectInfo name="Buffs disappear when switching zone." description=""/>
       </ExtraTooltipData>
-      <Description>Who would win? Oryxmas or one sugary boi? Use this item to buff your Attack for 15 minutes.</Description>
+      <Description>Who would win? Oryx or one sugary boi? Use this item to buff your Attack for 15 minutes.</Description>
       <Sound>use_potion</Sound>
       <Consumable/>
       <BagType>2</BagType>
@@ -16764,7 +16784,7 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       </Projectile>
       <ActivateOnEquip stat="22" amount="5">IncrementStat</ActivateOnEquip>
       <BagType>6</BagType>
-      <FameBonus>5</FameBonus>
+      <FameBonus>7</FameBonus>
       <NumProjectiles>1</NumProjectiles>
       <OldSound>arrowShoot</OldSound>
       <feedPower>800</feedPower>
@@ -18353,7 +18373,6 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       </ExtraTooltipData>
       <Activate>LevelTwenty</Activate>
       <Sound>use_potion</Sound>
-      <Doses>1</Doses>
       <Consumable/>
       <Soulbound/>
       <BagType>8</BagType>
@@ -18556,7 +18575,7 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       <BagType>6</BagType>
       <NumProjectiles>3</NumProjectiles>
       <FameBonus>6</FameBonus>
-      <OldSound>arrowShoot</OldSound>
+      <OldSound>weapon/blunt_sword</OldSound>
       <Soulbound/>
    </Object>
    <Object type="0x5b1e" id="Jade Storm">
@@ -18932,6 +18951,7 @@ Donning this cursed piece of equipment is said to cause the wearer to fly into a
       <Description>Forged eons ago in the fires of Shaitan's domain, this infamous blade has cut down countless mighty heroes throughout the ages.</Description>
       <RateOfFire>1.1</RateOfFire>
       <Sound>weapon/mithril_sword</Sound>
+      <OldSound>bladeSwing</OldSound>
       <Projectile>
          <ObjectId>Knight DPS Bolt</ObjectId>
          <Speed>70</Speed>

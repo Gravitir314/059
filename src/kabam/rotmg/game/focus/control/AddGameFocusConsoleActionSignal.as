@@ -2,9 +2,9 @@
 
 package kabam.rotmg.game.focus.control
 	{
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class AddGameFocusConsoleActionSignal extends Signal
+    public class AddGameFocusConsoleActionSignal extends Signal
 		{
 
 

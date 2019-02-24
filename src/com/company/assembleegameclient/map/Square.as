@@ -2,16 +2,16 @@
 
 package com.company.assembleegameclient.map
 	{
-	import com.company.assembleegameclient.engine3d.TextureMatrix;
-	import com.company.assembleegameclient.objects.GameObject;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.util.TileRedrawer;
+    import com.company.assembleegameclient.engine3d.TextureMatrix;
+    import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.util.TileRedrawer;
 
-	import flash.display.BitmapData;
-	import flash.display.IGraphicsData;
-	import flash.geom.Vector3D;
+    import flash.display.BitmapData;
+    import flash.display.IGraphicsData;
+    import flash.geom.Vector3D;
 
-	public class Square
+    public class Square
 		{
 
 			public static const UVT:Vector.<Number> = new <Number>[0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0];

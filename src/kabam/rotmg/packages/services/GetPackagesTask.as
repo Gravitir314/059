@@ -2,17 +2,17 @@
 
 package kabam.rotmg.packages.services
 	{
-	import com.company.assembleegameclient.util.TimeUtil;
+    import com.company.assembleegameclient.util.TimeUtil;
 
-	import kabam.lib.tasks.BaseTask;
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.appengine.api.AppEngineClient;
-	import kabam.rotmg.language.model.LanguageModel;
-	import kabam.rotmg.packages.model.PackageInfo;
+    import kabam.lib.tasks.BaseTask;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.appengine.api.AppEngineClient;
+    import kabam.rotmg.language.model.LanguageModel;
+    import kabam.rotmg.packages.model.PackageInfo;
 
-	import robotlegs.bender.framework.api.ILogger;
+    import robotlegs.bender.framework.api.ILogger;
 
-	public class GetPackagesTask extends BaseTask
+    public class GetPackagesTask extends BaseTask
 		{
 			private static var version:String = "0";
 

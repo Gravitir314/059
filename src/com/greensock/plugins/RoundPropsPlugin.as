@@ -2,10 +2,10 @@
 
 package com.greensock.plugins
 	{
-	import com.greensock.TweenLite;
-	import com.greensock.core.PropTween;
+    import com.greensock.TweenLite;
+    import com.greensock.core.PropTween;
 
-	public class RoundPropsPlugin extends TweenPlugin
+    public class RoundPropsPlugin extends TweenPlugin
 		{
 
 			public static const API:Number = 2;

@@ -2,9 +2,9 @@
 
 package com.company.assembleegameclient.objects.particles
 	{
-	import flash.geom.Point;
+    import flash.geom.Point;
 
-	public class ThrowEffect extends ParticleEffect
+    public class ThrowEffect extends ParticleEffect
 		{
 
 			public var start_:Point;

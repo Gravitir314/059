@@ -2,14 +2,14 @@
 
 package com.greensock.plugins
 	{
-	import com.greensock.TweenLite;
-	import com.greensock.core.PropTween;
+    import com.greensock.TweenLite;
+    import com.greensock.core.PropTween;
 
-	import flash.display.DisplayObject;
-	import flash.geom.ColorTransform;
-	import flash.geom.Transform;
+    import flash.display.DisplayObject;
+    import flash.geom.ColorTransform;
+    import flash.geom.Transform;
 
-	public class TintPlugin extends TweenPlugin
+    public class TintPlugin extends TweenPlugin
 		{
 
 			public static const API:Number = 2;

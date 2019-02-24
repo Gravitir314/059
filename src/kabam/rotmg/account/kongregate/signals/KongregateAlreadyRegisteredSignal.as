@@ -2,11 +2,11 @@
 
 package kabam.rotmg.account.kongregate.signals
 	{
-	import kabam.rotmg.account.web.model.AccountData;
+    import kabam.rotmg.account.web.model.AccountData;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class KongregateAlreadyRegisteredSignal extends Signal
+    public class KongregateAlreadyRegisteredSignal extends Signal
 		{
 
 			public function KongregateAlreadyRegisteredSignal()

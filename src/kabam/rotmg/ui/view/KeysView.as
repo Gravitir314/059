@@ -2,13 +2,13 @@
 
 package kabam.rotmg.ui.view
 	{
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	import kabam.rotmg.ui.model.Key;
+    import kabam.rotmg.ui.model.Key;
 
-	import mx.core.BitmapAsset;
+    import mx.core.BitmapAsset;
 
-	public class KeysView extends Sprite
+    public class KeysView extends Sprite
 		{
 
 			private static var keyBackgroundPng:Class = KeysView_keyBackgroundPng;

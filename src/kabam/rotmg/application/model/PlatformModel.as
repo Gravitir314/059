@@ -2,11 +2,11 @@
 
 package kabam.rotmg.application.model
 	{
-	import flash.display.DisplayObjectContainer;
-	import flash.display.LoaderInfo;
-	import flash.system.Capabilities;
+    import flash.display.DisplayObjectContainer;
+    import flash.display.LoaderInfo;
+    import flash.system.Capabilities;
 
-	public class PlatformModel
+    public class PlatformModel
 		{
 
 			private static var platform:PlatformType;

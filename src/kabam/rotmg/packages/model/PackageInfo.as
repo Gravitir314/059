@@ -2,17 +2,17 @@
 
 package kabam.rotmg.packages.model
 	{
-	import flash.display.Loader;
-	import flash.events.Event;
-	import flash.events.IOErrorEvent;
-	import flash.events.SecurityErrorEvent;
-	import flash.net.URLRequest;
+    import flash.display.Loader;
+    import flash.events.Event;
+    import flash.events.IOErrorEvent;
+    import flash.events.SecurityErrorEvent;
+    import flash.net.URLRequest;
 
-	import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
+    import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class PackageInfo extends GenericBoxInfo
+    public class PackageInfo extends GenericBoxInfo
 		{
 
 			public static const PURCHASE_TYPE_MIXED:String = "PURCHASE_TYPE_MIXED";

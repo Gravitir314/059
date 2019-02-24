@@ -2,20 +2,20 @@
 
 package kabam.rotmg.stage3D
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import flash.display.BitmapData;
-	import flash.display.GraphicsBitmapFill;
-	import flash.display.GraphicsSolidFill;
-	import flash.display3D.Context3DVertexBufferFormat;
-	import flash.display3D.VertexBuffer3D;
-	import flash.geom.ColorTransform;
-	import flash.utils.Dictionary;
+    import flash.display.BitmapData;
+    import flash.display.GraphicsBitmapFill;
+    import flash.display.GraphicsSolidFill;
+    import flash.display3D.Context3DVertexBufferFormat;
+    import flash.display3D.VertexBuffer3D;
+    import flash.geom.ColorTransform;
+    import flash.utils.Dictionary;
 
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.stage3D.proxies.Context3DProxy;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.stage3D.proxies.Context3DProxy;
 
-	public class GraphicsFillExtra
+    public class GraphicsFillExtra
 		{
 
 			private static var textureOffsets:Dictionary = new Dictionary();

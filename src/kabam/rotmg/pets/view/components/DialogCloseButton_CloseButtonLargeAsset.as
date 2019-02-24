@@ -1,8 +1,8 @@
 package kabam.rotmg.pets.view.components
 	{
-	import mx.core.*;
+    import mx.core.*;
 
-	[Embed(source="DialogCloseButton_CloseButtonLargeAsset.png")]
+    [Embed(source="DialogCloseButton_CloseButtonLargeAsset.png")]
 	public class DialogCloseButton_CloseButtonLargeAsset extends BitmapAsset
 		{
 			public function DialogCloseButton_CloseButtonLargeAsset()

@@ -2,16 +2,16 @@
 
 package io.decagames.rotmg.nexusShop.config
 	{
-	import io.decagames.rotmg.nexusShop.NexusShopPopupMediator;
-	import io.decagames.rotmg.nexusShop.NexusShopPopupView;
+    import io.decagames.rotmg.nexusShop.NexusShopPopupMediator;
+    import io.decagames.rotmg.nexusShop.NexusShopPopupView;
 
-	import org.swiftsuspenders.Injector;
+    import org.swiftsuspenders.Injector;
 
-	import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
-	import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
-	import robotlegs.bender.framework.api.IConfig;
+    import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
+    import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
+    import robotlegs.bender.framework.api.IConfig;
 
-	public class NexusShopConfig implements IConfig
+    public class NexusShopConfig implements IConfig
 		{
 
 			[Inject]

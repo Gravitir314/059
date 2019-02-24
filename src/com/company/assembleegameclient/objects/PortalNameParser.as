@@ -2,10 +2,10 @@
 
 package com.company.assembleegameclient.objects
 	{
-	import kabam.rotmg.text.view.stringBuilder.PatternBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StringBuilder;
+    import kabam.rotmg.text.view.stringBuilder.PatternBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StringBuilder;
 
-	public class PortalNameParser
+    public class PortalNameParser
 		{
 
 			public static const NAME_PARSER:RegExp = /(.+)\s\((.+)\)/;

@@ -2,19 +2,19 @@
 
 package io.decagames.rotmg.pets.popup.upgradeYard
 	{
-	import com.company.assembleegameclient.util.Currency;
+    import com.company.assembleegameclient.util.Currency;
 
-	import io.decagames.rotmg.pets.data.rarity.PetRarityEnum;
-	import io.decagames.rotmg.shop.ShopBuyButton;
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.labels.UILabel;
-	import io.decagames.rotmg.ui.popups.modal.ModalPopup;
-	import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-	import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.pets.data.rarity.PetRarityEnum;
+    import io.decagames.rotmg.shop.ShopBuyButton;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.ui.popups.modal.ModalPopup;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import io.decagames.rotmg.ui.texture.TextureParser;
 
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	public class PetYardUpgradeDialog extends ModalPopup
+    public class PetYardUpgradeDialog extends ModalPopup
 		{
 
 			private var _upgradeGoldButton:ShopBuyButton;

@@ -2,18 +2,18 @@
 
 package kabam.rotmg.death.view
 	{
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.death.model.DeathModel;
-	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.game.model.GameInitData;
-	import kabam.rotmg.game.signals.PlayGameSignal;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.death.model.DeathModel;
+    import kabam.rotmg.dialogs.control.CloseDialogsSignal;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.game.model.GameInitData;
+    import kabam.rotmg.game.signals.PlayGameSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class ResurrectionViewMediator extends Mediator
+    public class ResurrectionViewMediator extends Mediator
 		{
 
 			[Inject]

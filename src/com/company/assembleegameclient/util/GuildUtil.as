@@ -2,14 +2,14 @@
 
 package com.company.assembleegameclient.util
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.util.AssetLibrary;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.util.AssetLibrary;
 
-	import flash.display.BitmapData;
+    import flash.display.BitmapData;
 
-	import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.model.TextKey;
 
-	public class GuildUtil
+    public class GuildUtil
 		{
 
 			public static const INITIATE:int = 0;

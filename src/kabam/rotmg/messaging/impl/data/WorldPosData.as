@@ -2,11 +2,11 @@
 
 package kabam.rotmg.messaging.impl.data
 	{
-	import flash.geom.Point;
-	import flash.utils.IDataInput;
-	import flash.utils.IDataOutput;
+    import flash.geom.Point;
+    import flash.utils.IDataInput;
+    import flash.utils.IDataOutput;
 
-	public class WorldPosData
+    public class WorldPosData
 		{
 
 			public var x_:Number;

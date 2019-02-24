@@ -2,25 +2,25 @@
 
 package com.company.assembleegameclient.screens
 	{
-	import com.company.assembleegameclient.ui.Scrollbar;
+    import com.company.assembleegameclient.ui.Scrollbar;
 
-	import flash.display.Graphics;
-	import flash.display.Shape;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.filters.DropShadowFilter;
+    import flash.display.Graphics;
+    import flash.display.Shape;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.filters.DropShadowFilter;
 
-	import kabam.rotmg.servers.api.Server;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.ui.view.ButtonFactory;
-	import kabam.rotmg.ui.view.components.MenuOptionsBar;
-	import kabam.rotmg.ui.view.components.ScreenBase;
+    import kabam.rotmg.servers.api.Server;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.ui.view.ButtonFactory;
+    import kabam.rotmg.ui.view.components.MenuOptionsBar;
+    import kabam.rotmg.ui.view.components.ScreenBase;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class ServersScreen extends Sprite
+    public class ServersScreen extends Sprite
 		{
 
 			private var selectServerText_:TextFieldDisplayConcrete;

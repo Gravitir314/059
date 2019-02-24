@@ -2,44 +2,44 @@
 
 package kabam.rotmg.game.view
 	{
-	import com.company.assembleegameclient.game.GameSprite;
-	import com.company.assembleegameclient.objects.Merchant;
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.objects.SellableObject;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.ui.ConfirmBuyModal;
-	import com.company.assembleegameclient.ui.RankText;
-	import com.company.assembleegameclient.ui.panels.Panel;
-	import com.company.assembleegameclient.util.Currency;
-	import com.company.assembleegameclient.util.GuildUtil;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.game.GameSprite;
+    import com.company.assembleegameclient.objects.Merchant;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.objects.SellableObject;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.ui.ConfirmBuyModal;
+    import com.company.assembleegameclient.ui.RankText;
+    import com.company.assembleegameclient.ui.panels.Panel;
+    import com.company.assembleegameclient.util.Currency;
+    import com.company.assembleegameclient.util.GuildUtil;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.Bitmap;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.KeyboardEvent;
-	import flash.events.MouseEvent;
-	import flash.text.TextFieldAutoSize;
+    import flash.display.Bitmap;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.KeyboardEvent;
+    import flash.events.MouseEvent;
+    import flash.text.TextFieldAutoSize;
 
-	import io.decagames.rotmg.nexusShop.NexusShopPopupView;
-	import io.decagames.rotmg.ui.popups.signals.ClosePopupByClassSignal;
-	import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+    import io.decagames.rotmg.nexusShop.NexusShopPopupView;
+    import io.decagames.rotmg.ui.popups.signals.ClosePopupByClassSignal;
+    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.core.signals.HideTooltipsSignal;
-	import kabam.rotmg.core.signals.ShowTooltipSignal;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.tooltips.HoverTooltipDelegate;
-	import kabam.rotmg.tooltips.TooltipAble;
-	import kabam.rotmg.util.components.LegacyBuyButton;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.core.signals.HideTooltipsSignal;
+    import kabam.rotmg.core.signals.ShowTooltipSignal;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.tooltips.HoverTooltipDelegate;
+    import kabam.rotmg.tooltips.TooltipAble;
+    import kabam.rotmg.util.components.LegacyBuyButton;
 
-	import org.osflash.signals.Signal;
-	import org.swiftsuspenders.Injector;
+    import org.osflash.signals.Signal;
+    import org.swiftsuspenders.Injector;
 
-	public class SellableObjectPanel extends Panel implements TooltipAble
+    public class SellableObjectPanel extends Panel implements TooltipAble
 		{
 
 			private const BUTTON_OFFSET:int = 17;

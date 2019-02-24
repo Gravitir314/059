@@ -2,24 +2,24 @@
 
 package kabam.rotmg.dialogs.view
 	{
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	import kabam.rotmg.dialogs.control.AddPopupToStartupQueueSignal;
-	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
-	import kabam.rotmg.dialogs.control.FlushPopupStartupQueueSignal;
-	import kabam.rotmg.dialogs.control.OpenDialogNoModalSignal;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.dialogs.control.PopDialogSignal;
-	import kabam.rotmg.dialogs.control.PushDialogSignal;
-	import kabam.rotmg.dialogs.control.ShowDialogBackgroundSignal;
-	import kabam.rotmg.dialogs.model.DialogsModel;
-	import kabam.rotmg.dialogs.model.PopupQueueEntry;
+    import kabam.rotmg.dialogs.control.AddPopupToStartupQueueSignal;
+    import kabam.rotmg.dialogs.control.CloseDialogsSignal;
+    import kabam.rotmg.dialogs.control.FlushPopupStartupQueueSignal;
+    import kabam.rotmg.dialogs.control.OpenDialogNoModalSignal;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.dialogs.control.PopDialogSignal;
+    import kabam.rotmg.dialogs.control.PushDialogSignal;
+    import kabam.rotmg.dialogs.control.ShowDialogBackgroundSignal;
+    import kabam.rotmg.dialogs.model.DialogsModel;
+    import kabam.rotmg.dialogs.model.PopupQueueEntry;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class DialogsMediator extends Mediator
+    public class DialogsMediator extends Mediator
 		{
 
 			[Inject]

@@ -2,31 +2,31 @@
 
 package com.company.assembleegameclient.ui.dialogs
 	{
-	import com.company.assembleegameclient.ui.DeprecatedTextButton;
-	import com.company.assembleegameclient.util.StageProxy;
-	import com.company.util.GraphicsUtil;
+    import com.company.assembleegameclient.ui.DeprecatedTextButton;
+    import com.company.assembleegameclient.util.StageProxy;
+    import com.company.util.GraphicsUtil;
 
-	import flash.display.CapsStyle;
-	import flash.display.Graphics;
-	import flash.display.GraphicsPath;
-	import flash.display.GraphicsSolidFill;
-	import flash.display.GraphicsStroke;
-	import flash.display.IGraphicsData;
-	import flash.display.JointStyle;
-	import flash.display.LineScaleMode;
-	import flash.display.Shape;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
-	import flash.text.TextFieldAutoSize;
+    import flash.display.CapsStyle;
+    import flash.display.Graphics;
+    import flash.display.GraphicsPath;
+    import flash.display.GraphicsSolidFill;
+    import flash.display.GraphicsStroke;
+    import flash.display.IGraphicsData;
+    import flash.display.JointStyle;
+    import flash.display.LineScaleMode;
+    import flash.display.Shape;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
+    import flash.filters.DropShadowFilter;
+    import flash.text.TextFieldAutoSize;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StringBuilder;
-	import kabam.rotmg.ui.view.SignalWaiter;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StringBuilder;
+    import kabam.rotmg.ui.view.SignalWaiter;
 
-	public class StaticDialog extends Sprite
+    public class StaticDialog extends Sprite
 		{
 
 			public static const LEFT_BUTTON:String = "dialogLeftButton";

@@ -2,11 +2,11 @@
 
 package io.decagames.rotmg.pets.data.ability
 	{
-	import io.decagames.rotmg.pets.data.rarity.PetRarityEnum;
-	import io.decagames.rotmg.pets.data.vo.AbilityVO;
-	import io.decagames.rotmg.pets.data.vo.IPetVO;
+    import io.decagames.rotmg.pets.data.rarity.PetRarityEnum;
+    import io.decagames.rotmg.pets.data.vo.AbilityVO;
+    import io.decagames.rotmg.pets.data.vo.IPetVO;
 
-	public class AbilitiesUtil
+    public class AbilitiesUtil
 		{
 
 

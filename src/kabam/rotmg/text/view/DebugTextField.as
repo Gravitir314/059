@@ -2,12 +2,12 @@
 
 package kabam.rotmg.text.view
 	{
-	import flash.text.TextField;
+    import flash.text.TextField;
 
-	import kabam.rotmg.language.model.DebugStringMap;
-	import kabam.rotmg.text.model.DebugTextInfo;
+    import kabam.rotmg.language.model.DebugStringMap;
+    import kabam.rotmg.text.model.DebugTextInfo;
 
-	public class DebugTextField extends TextField
+    public class DebugTextField extends TextField
 		{
 
 			public static const WRONG_LANGUAGE_COLOR:uint = 977663;

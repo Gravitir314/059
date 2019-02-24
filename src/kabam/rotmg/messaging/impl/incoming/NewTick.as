@@ -2,13 +2,13 @@
 
 package kabam.rotmg.messaging.impl.incoming
 	{
-	import com.company.assembleegameclient.util.FreeList;
+    import com.company.assembleegameclient.util.FreeList;
 
-	import flash.utils.IDataInput;
+    import flash.utils.IDataInput;
 
-	import kabam.rotmg.messaging.impl.data.ObjectStatusData;
+    import kabam.rotmg.messaging.impl.data.ObjectStatusData;
 
-	public class NewTick extends IncomingMessage
+    public class NewTick extends IncomingMessage
 		{
 
 			public var tickId_:int;

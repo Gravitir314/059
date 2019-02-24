@@ -2,12 +2,12 @@
 
 package kabam.rotmg.messaging.impl.outgoing
 	{
-	import flash.utils.IDataOutput;
+    import flash.utils.IDataOutput;
 
-	import kabam.rotmg.messaging.impl.data.MoveRecord;
-	import kabam.rotmg.messaging.impl.data.WorldPosData;
+    import kabam.rotmg.messaging.impl.data.MoveRecord;
+    import kabam.rotmg.messaging.impl.data.WorldPosData;
 
-	public class Move extends OutgoingMessage
+    public class Move extends OutgoingMessage
 		{
 
 			public var tickId_:int;

@@ -2,10 +2,10 @@
 
 package kabam.lib.net.impl
 	{
-	import flash.utils.IDataInput;
-	import flash.utils.IDataOutput;
+    import flash.utils.IDataInput;
+    import flash.utils.IDataOutput;
 
-	public class Message
+    public class Message
 		{
 
 			public var pool:MessagePool;

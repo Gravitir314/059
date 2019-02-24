@@ -2,26 +2,26 @@
 
 package com.company.assembleegameclient.account.ui
 	{
-	import com.company.assembleegameclient.ui.dialogs.ErrorDialog;
-	import com.company.assembleegameclient.util.offer.Offer;
+    import com.company.assembleegameclient.ui.dialogs.ErrorDialog;
+    import com.company.assembleegameclient.util.offer.Offer;
 
-	import kabam.lib.tasks.Task;
-	import kabam.rotmg.account.core.model.MoneyConfig;
-	import kabam.rotmg.account.core.model.OfferModel;
-	import kabam.rotmg.account.core.services.GetOffersTask;
-	import kabam.rotmg.account.core.signals.PurchaseGoldSignal;
-	import kabam.rotmg.account.core.view.MoneyFrame;
-	import kabam.rotmg.arena.model.CurrentArenaRunModel;
-	import kabam.rotmg.arena.view.ContinueOrQuitDialog;
-	import kabam.rotmg.core.signals.MoneyFrameEnableCancelSignal;
-	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.ui.model.HUDModel;
+    import kabam.lib.tasks.Task;
+    import kabam.rotmg.account.core.model.MoneyConfig;
+    import kabam.rotmg.account.core.model.OfferModel;
+    import kabam.rotmg.account.core.services.GetOffersTask;
+    import kabam.rotmg.account.core.signals.PurchaseGoldSignal;
+    import kabam.rotmg.account.core.view.MoneyFrame;
+    import kabam.rotmg.arena.model.CurrentArenaRunModel;
+    import kabam.rotmg.arena.view.ContinueOrQuitDialog;
+    import kabam.rotmg.core.signals.MoneyFrameEnableCancelSignal;
+    import kabam.rotmg.dialogs.control.CloseDialogsSignal;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.ui.model.HUDModel;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
-	import robotlegs.bender.framework.api.ILogger;
+    import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.framework.api.ILogger;
 
-	public class MoneyFrameMediator extends Mediator
+    public class MoneyFrameMediator extends Mediator
 		{
 
 			[Inject]

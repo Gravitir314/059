@@ -2,10 +2,10 @@
 
 package io.decagames.rotmg.shop
 	{
-	import io.decagames.rotmg.ui.buttons.BaseButton;
-	import io.decagames.rotmg.ui.popups.modal.TextModal;
+    import io.decagames.rotmg.ui.buttons.BaseButton;
+    import io.decagames.rotmg.ui.popups.modal.TextModal;
 
-	public class PreparingPurchaseTransactionModal extends TextModal
+    public class PreparingPurchaseTransactionModal extends TextModal
 		{
 
 			public function PreparingPurchaseTransactionModal()

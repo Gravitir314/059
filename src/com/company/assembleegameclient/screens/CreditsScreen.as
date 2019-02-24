@@ -2,27 +2,27 @@
 
 package com.company.assembleegameclient.screens
 	{
-	import com.company.assembleegameclient.constants.ScreenConstants;
-	import com.company.rotmg.graphics.KabamLogo;
-	import com.company.rotmg.graphics.ScreenGraphic;
-	import com.company.rotmg.graphics.StackedLogoR;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.constants.ScreenConstants;
+    import com.company.rotmg.graphics.KabamLogo;
+    import com.company.rotmg.graphics.ScreenGraphic;
+    import com.company.rotmg.graphics.StackedLogoR;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
-	import flash.net.URLRequest;
-	import flash.net.navigateToURL;
-	import flash.text.TextFieldAutoSize;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
+    import flash.net.URLRequest;
+    import flash.net.navigateToURL;
+    import flash.text.TextFieldAutoSize;
 
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.ui.view.components.ScreenBase;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.ui.view.components.ScreenBase;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class CreditsScreen extends Sprite
+    public class CreditsScreen extends Sprite
 		{
 
 			private static const WILD_SHADOW_URL:String = "http://www.wildshadow.com/";

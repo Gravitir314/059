@@ -2,23 +2,23 @@
 
 package kabam.rotmg.friends.view
 	{
-	import com.company.assembleegameclient.ui.icons.IconButton;
-	import com.company.assembleegameclient.ui.icons.IconButtonFactory;
-	import com.company.util.AssetLibrary;
+    import com.company.assembleegameclient.ui.icons.IconButton;
+    import com.company.assembleegameclient.ui.icons.IconButtonFactory;
+    import com.company.util.AssetLibrary;
 
-	import flash.display.Bitmap;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
+    import flash.display.Bitmap;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
 
-	import io.decagames.rotmg.social.config.FriendsActions;
-	import io.decagames.rotmg.social.model.FriendVO;
+    import io.decagames.rotmg.social.config.FriendsActions;
+    import io.decagames.rotmg.social.model.FriendVO;
 
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	public class FriendListItem extends FListItem
+    public class FriendListItem extends FListItem
 		{
 
 			private const ONLINE_COLOR:uint = 3407650;

@@ -2,13 +2,13 @@
 
 package io.decagames.rotmg.pets.windows.yard
 	{
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	import io.decagames.rotmg.pets.components.petInfoSlot.PetInfoSlot;
-	import io.decagames.rotmg.pets.windows.yard.list.PetYardList;
-	import io.decagames.rotmg.ui.popups.UIPopup;
+    import io.decagames.rotmg.pets.components.petInfoSlot.PetInfoSlot;
+    import io.decagames.rotmg.pets.windows.yard.list.PetYardList;
+    import io.decagames.rotmg.ui.popups.UIPopup;
 
-	public class PetYardWindow extends UIPopup
+    public class PetYardWindow extends UIPopup
 		{
 
 			private var _closeButton:Sprite;

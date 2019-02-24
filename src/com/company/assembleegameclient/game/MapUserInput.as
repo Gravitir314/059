@@ -2,72 +2,72 @@
 
 package com.company.assembleegameclient.game
 	{
-	import com.company.assembleegameclient.game.events.ReconnectEvent;
-	import com.company.assembleegameclient.map.Square;
-	import com.company.assembleegameclient.objects.GameObject;
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.assembleegameclient.objects.ObjectProperties;
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.objects.Portal;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.tutorial.Tutorial;
-	import com.company.assembleegameclient.tutorial.doneAction;
-	import com.company.assembleegameclient.ui.options.Options;
-	import com.company.assembleegameclient.util.TextureRedrawer;
-	import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
-	import com.company.util.KeyCodes;
-	import com.company.util.PointUtil;
+    import com.company.assembleegameclient.game.events.ReconnectEvent;
+    import com.company.assembleegameclient.map.Square;
+    import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.assembleegameclient.objects.ObjectProperties;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.objects.Portal;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.tutorial.Tutorial;
+    import com.company.assembleegameclient.tutorial.doneAction;
+    import com.company.assembleegameclient.ui.options.Options;
+    import com.company.assembleegameclient.util.TextureRedrawer;
+    import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
+    import com.company.util.KeyCodes;
+    import com.company.util.PointUtil;
 
-	import flash.display.Stage;
-	import flash.display.StageDisplayState;
-	import flash.display.StageScaleMode;
-	import flash.events.Event;
-	import flash.events.KeyboardEvent;
-	import flash.events.MouseEvent;
-	import flash.geom.Matrix3D;
-	import flash.geom.Point;
-	import flash.geom.Vector3D;
-	import flash.system.Capabilities;
-	import flash.ui.GameInputDevice;
-	import flash.utils.getTimer;
+    import flash.display.Stage;
+    import flash.display.StageDisplayState;
+    import flash.display.StageScaleMode;
+    import flash.events.Event;
+    import flash.events.KeyboardEvent;
+    import flash.events.MouseEvent;
+    import flash.geom.Matrix3D;
+    import flash.geom.Point;
+    import flash.geom.Vector3D;
+    import flash.system.Capabilities;
+    import flash.ui.GameInputDevice;
+    import flash.utils.getTimer;
 
-	import io.decagames.rotmg.social.SocialPopupView;
-	import io.decagames.rotmg.ui.popups.signals.CloseAllPopupsSignal;
-	import io.decagames.rotmg.ui.popups.signals.ClosePopupByClassSignal;
-	import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+    import io.decagames.rotmg.social.SocialPopupView;
+    import io.decagames.rotmg.ui.popups.signals.CloseAllPopupsSignal;
+    import io.decagames.rotmg.ui.popups.signals.ClosePopupByClassSignal;
+    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
-	import kabam.rotmg.application.api.ApplicationSetup;
-	import kabam.rotmg.chat.control.ParseChatMessageSignal;
-	import kabam.rotmg.chat.model.ChatMessage;
-	import kabam.rotmg.constants.GeneralConstants;
-	import kabam.rotmg.constants.UseType;
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.core.view.Layers;
-	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.game.model.PotionInventoryModel;
-	import kabam.rotmg.game.model.UseBuyPotionVO;
-	import kabam.rotmg.game.signals.AddTextLineSignal;
-	import kabam.rotmg.game.signals.ExitGameSignal;
-	import kabam.rotmg.game.signals.GiftStatusUpdateSignal;
-	import kabam.rotmg.game.signals.SetTextBoxVisibilitySignal;
-	import kabam.rotmg.game.signals.UseBuyPotionSignal;
-	import kabam.rotmg.game.view.components.StatsTabHotKeyInputSignal;
-	import kabam.rotmg.messaging.impl.GameServerConnection;
-	import kabam.rotmg.minimap.control.MiniMapZoomSignal;
-	import kabam.rotmg.ui.UIUtils;
-	import kabam.rotmg.ui.model.HUDModel;
-	import kabam.rotmg.ui.model.TabStripModel;
-	import kabam.rotmg.ui.signals.ToggleRealmQuestsDisplaySignal;
+    import kabam.rotmg.application.api.ApplicationSetup;
+    import kabam.rotmg.chat.control.ParseChatMessageSignal;
+    import kabam.rotmg.chat.model.ChatMessage;
+    import kabam.rotmg.constants.GeneralConstants;
+    import kabam.rotmg.constants.UseType;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.core.view.Layers;
+    import kabam.rotmg.dialogs.control.CloseDialogsSignal;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.game.model.PotionInventoryModel;
+    import kabam.rotmg.game.model.UseBuyPotionVO;
+    import kabam.rotmg.game.signals.AddTextLineSignal;
+    import kabam.rotmg.game.signals.ExitGameSignal;
+    import kabam.rotmg.game.signals.GiftStatusUpdateSignal;
+    import kabam.rotmg.game.signals.SetTextBoxVisibilitySignal;
+    import kabam.rotmg.game.signals.UseBuyPotionSignal;
+    import kabam.rotmg.game.view.components.StatsTabHotKeyInputSignal;
+    import kabam.rotmg.messaging.impl.GameServerConnection;
+    import kabam.rotmg.minimap.control.MiniMapZoomSignal;
+    import kabam.rotmg.ui.UIUtils;
+    import kabam.rotmg.ui.model.HUDModel;
+    import kabam.rotmg.ui.model.TabStripModel;
+    import kabam.rotmg.ui.signals.ToggleRealmQuestsDisplaySignal;
 
-	import net.hires.debug.Stats;
+    import net.hires.debug.Stats;
 
-	import org.swiftsuspenders.Injector;
+    import org.swiftsuspenders.Injector;
 
-	import zfn.xinput.ControllerEvent;
-	import zfn.xinput.ControllerHandler;
+    import zfn.xinput.ControllerEvent;
+    import zfn.xinput.ControllerHandler;
 
-	public class MapUserInput
+    public class MapUserInput
 		{
 
 			private static var stats_:Stats = new Stats();

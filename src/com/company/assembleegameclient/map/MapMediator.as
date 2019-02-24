@@ -2,12 +2,12 @@
 
 package com.company.assembleegameclient.map
 	{
-	import kabam.rotmg.game.view.components.QueuedStatusText;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.game.view.components.QueuedStatusText;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class MapMediator extends Mediator
+    public class MapMediator extends Mediator
 		{
 
 			[Inject]

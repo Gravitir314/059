@@ -2,14 +2,14 @@
 
 package com.company.assembleegameclient.mapeditor
 	{
-	import com.company.util.IntPoint;
+    import com.company.util.IntPoint;
 
-	import flash.display.Graphics;
-	import flash.display.Shape;
-	import flash.display.Sprite;
-	import flash.events.Event;
+    import flash.display.Graphics;
+    import flash.display.Shape;
+    import flash.display.Sprite;
+    import flash.events.Event;
 
-	public class EditTileProperties extends Sprite
+    public class EditTileProperties extends Sprite
 		{
 
 			public var tiles_:Vector.<IntPoint>;

@@ -2,17 +2,17 @@
 
 package kabam.rotmg.arena.view
 	{
-	import kabam.rotmg.arena.control.ReloadLeaderboard;
-	import kabam.rotmg.arena.model.ArenaLeaderboardFilter;
-	import kabam.rotmg.arena.model.ArenaLeaderboardModel;
-	import kabam.rotmg.arena.service.GetArenaLeaderboardTask;
-	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
+    import kabam.rotmg.arena.control.ReloadLeaderboard;
+    import kabam.rotmg.arena.model.ArenaLeaderboardFilter;
+    import kabam.rotmg.arena.model.ArenaLeaderboardModel;
+    import kabam.rotmg.arena.service.GetArenaLeaderboardTask;
+    import kabam.rotmg.dialogs.control.CloseDialogsSignal;
 
-	import org.swiftsuspenders.Injector;
+    import org.swiftsuspenders.Injector;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class ArenaLeaderboardMediator extends Mediator
+    public class ArenaLeaderboardMediator extends Mediator
 		{
 
 			[Inject]

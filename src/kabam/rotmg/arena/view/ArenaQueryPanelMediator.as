@@ -2,16 +2,16 @@
 
 package kabam.rotmg.arena.view
 	{
-	import flash.events.MouseEvent;
+    import flash.events.MouseEvent;
 
-	import io.decagames.rotmg.pets.data.PetsModel;
+    import io.decagames.rotmg.pets.data.PetsModel;
 
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class ArenaQueryPanelMediator extends Mediator
+    public class ArenaQueryPanelMediator extends Mediator
 		{
 
 			[Inject]

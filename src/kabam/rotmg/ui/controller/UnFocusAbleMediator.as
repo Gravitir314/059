@@ -2,15 +2,15 @@
 
 package kabam.rotmg.ui.controller
 	{
-	import com.company.assembleegameclient.util.StageProxy;
+    import com.company.assembleegameclient.util.StageProxy;
 
-	import flash.events.MouseEvent;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.ui.view.UnFocusAble;
+    import kabam.rotmg.ui.view.UnFocusAble;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class UnFocusAbleMediator extends Mediator
+    public class UnFocusAbleMediator extends Mediator
 		{
 
 			[Inject]

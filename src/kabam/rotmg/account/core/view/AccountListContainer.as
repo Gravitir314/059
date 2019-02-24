@@ -2,10 +2,10 @@
 
 package kabam.rotmg.account.core.view
 	{
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
 
-	public class AccountListContainer extends Sprite
+    public class AccountListContainer extends Sprite
 		{
 			public static var selectedContainer:AccountListElement;
 			private var selectedContainerCached:AccountListElement;

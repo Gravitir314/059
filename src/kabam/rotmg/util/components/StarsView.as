@@ -2,13 +2,13 @@
 
 package kabam.rotmg.util.components
 	{
-	import com.company.rotmg.graphics.StarGraphic;
+    import com.company.rotmg.graphics.StarGraphic;
 
-	import flash.display.Graphics;
-	import flash.display.Sprite;
-	import flash.geom.ColorTransform;
+    import flash.display.Graphics;
+    import flash.display.Sprite;
+    import flash.geom.ColorTransform;
 
-	public class StarsView extends Sprite
+    public class StarsView extends Sprite
 		{
 
 			private static const TOTAL:int = 5;

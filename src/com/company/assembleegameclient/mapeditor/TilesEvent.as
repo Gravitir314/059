@@ -2,11 +2,11 @@
 
 package com.company.assembleegameclient.mapeditor
 	{
-	import com.company.util.IntPoint;
+    import com.company.util.IntPoint;
 
-	import flash.events.Event;
+    import flash.events.Event;
 
-	internal class TilesEvent extends Event
+    internal class TilesEvent extends Event
 		{
 
 			public static const TILES_EVENT:String = "TILES_EVENT";

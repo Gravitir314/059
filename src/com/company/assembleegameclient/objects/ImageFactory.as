@@ -2,12 +2,12 @@
 
 package com.company.assembleegameclient.objects
 	{
-	import com.company.assembleegameclient.util.TextureRedrawer;
-	import com.company.util.AssetLibrary;
+    import com.company.assembleegameclient.util.TextureRedrawer;
+    import com.company.util.AssetLibrary;
 
-	import flash.display.BitmapData;
+    import flash.display.BitmapData;
 
-	public class ImageFactory
+    public class ImageFactory
 		{
 
 

@@ -2,25 +2,25 @@
 
 package com.company.assembleegameclient.appengine
 	{
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.util.ParseUtils;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.util.ParseUtils;
 
-	import flash.events.Event;
-	import flash.system.System;
+    import flash.events.Event;
+    import flash.system.System;
 
-	import io.decagames.rotmg.tos.popups.ToSPopup;
-	import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+    import io.decagames.rotmg.tos.popups.ToSPopup;
+    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.promotions.model.BeginnersPackageModel;
-	import kabam.rotmg.servers.api.LatLong;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.promotions.model.BeginnersPackageModel;
+    import kabam.rotmg.servers.api.LatLong;
 
-	import org.swiftsuspenders.Injector;
+    import org.swiftsuspenders.Injector;
 
-	public class SavedCharactersList extends Event
+    public class SavedCharactersList extends Event
 		{
 
 			public static const SAVED_CHARS_LIST:String = "SAVED_CHARS_LIST";

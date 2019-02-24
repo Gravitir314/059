@@ -2,13 +2,13 @@
 
 package kabam.rotmg.ui.view
 	{
-	import com.company.assembleegameclient.screens.CreditsScreen;
+    import com.company.assembleegameclient.screens.CreditsScreen;
 
-	import kabam.rotmg.core.signals.SetScreenSignal;
+    import kabam.rotmg.core.signals.SetScreenSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class CreditsMediator extends Mediator
+    public class CreditsMediator extends Mediator
 		{
 
 			[Inject]

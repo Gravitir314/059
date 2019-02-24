@@ -2,17 +2,17 @@
 
 package io.decagames.rotmg.pets.commands
 	{
-	import io.decagames.rotmg.pets.data.PetsModel;
-	import io.decagames.rotmg.pets.utils.PetsConstants;
+    import io.decagames.rotmg.pets.data.PetsModel;
+    import io.decagames.rotmg.pets.utils.PetsConstants;
 
-	import kabam.lib.net.api.MessageProvider;
-	import kabam.lib.net.impl.SocketServer;
-	import kabam.rotmg.messaging.impl.GameServerConnection;
-	import kabam.rotmg.messaging.impl.outgoing.ActivePetUpdateRequest;
+    import kabam.lib.net.api.MessageProvider;
+    import kabam.lib.net.impl.SocketServer;
+    import kabam.rotmg.messaging.impl.GameServerConnection;
+    import kabam.rotmg.messaging.impl.outgoing.ActivePetUpdateRequest;
 
-	import robotlegs.bender.bundles.mvcs.Command;
+    import robotlegs.bender.bundles.mvcs.Command;
 
-	public class DeactivatePetCommand extends Command
+    public class DeactivatePetCommand extends Command
 		{
 
 			[Inject]

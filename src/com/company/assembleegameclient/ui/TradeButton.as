@@ -2,28 +2,28 @@
 
 package com.company.assembleegameclient.ui
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.util.GraphicsUtil;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.util.GraphicsUtil;
 
-	import flash.display.CapsStyle;
-	import flash.display.GraphicsSolidFill;
-	import flash.display.GraphicsStroke;
-	import flash.display.IGraphicsData;
-	import flash.display.JointStyle;
-	import flash.display.LineScaleMode;
-	import flash.display.Shape;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
-	import flash.text.TextFieldAutoSize;
-	import flash.utils.getTimer;
+    import flash.display.CapsStyle;
+    import flash.display.GraphicsSolidFill;
+    import flash.display.GraphicsStroke;
+    import flash.display.IGraphicsData;
+    import flash.display.JointStyle;
+    import flash.display.LineScaleMode;
+    import flash.display.Shape;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
+    import flash.text.TextFieldAutoSize;
+    import flash.utils.getTimer;
 
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.StaticTextDisplay;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.StaticTextDisplay;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	public class TradeButton extends BackgroundFilledText
+    public class TradeButton extends BackgroundFilledText
 		{
 
 			private static const WAIT_TIME:int = 2999;

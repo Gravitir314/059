@@ -2,18 +2,18 @@
 
 package kabam.lib.net
 	{
-	import flash.net.Socket;
+    import flash.net.Socket;
 
-	import kabam.lib.net.api.MessageMap;
-	import kabam.lib.net.api.MessageProvider;
-	import kabam.lib.net.impl.MessageCenter;
-	import kabam.lib.net.impl.SocketServer;
+    import kabam.lib.net.api.MessageMap;
+    import kabam.lib.net.api.MessageProvider;
+    import kabam.lib.net.impl.MessageCenter;
+    import kabam.lib.net.impl.SocketServer;
 
-	import org.swiftsuspenders.Injector;
+    import org.swiftsuspenders.Injector;
 
-	import robotlegs.bender.framework.api.IConfig;
+    import robotlegs.bender.framework.api.IConfig;
 
-	public class NetConfig implements IConfig
+    public class NetConfig implements IConfig
 		{
 
 			[Inject]

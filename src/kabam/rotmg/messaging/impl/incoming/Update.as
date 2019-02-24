@@ -2,14 +2,14 @@
 
 package kabam.rotmg.messaging.impl.incoming
 	{
-	import com.company.assembleegameclient.util.FreeList;
+    import com.company.assembleegameclient.util.FreeList;
 
-	import flash.utils.IDataInput;
+    import flash.utils.IDataInput;
 
-	import kabam.rotmg.messaging.impl.data.GroundTileData;
-	import kabam.rotmg.messaging.impl.data.ObjectData;
+    import kabam.rotmg.messaging.impl.data.GroundTileData;
+    import kabam.rotmg.messaging.impl.data.ObjectData;
 
-	public class Update extends IncomingMessage
+    public class Update extends IncomingMessage
 		{
 
 			public var tiles_:Vector.<GroundTileData> = new Vector.<GroundTileData>();

@@ -2,11 +2,11 @@
 
 package io.decagames.rotmg.supportCampaign.tab.tiers.popups
 	{
-	import io.decagames.rotmg.ui.buttons.BaseButton;
-	import io.decagames.rotmg.ui.popups.modal.TextModal;
-	import io.decagames.rotmg.ui.popups.modal.buttons.ClosePopupButton;
+    import io.decagames.rotmg.ui.buttons.BaseButton;
+    import io.decagames.rotmg.ui.popups.modal.TextModal;
+    import io.decagames.rotmg.ui.popups.modal.buttons.ClosePopupButton;
 
-	public class ClaimCompleteModal extends TextModal
+    public class ClaimCompleteModal extends TextModal
 		{
 
 			public function ClaimCompleteModal()

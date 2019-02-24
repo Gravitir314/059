@@ -2,11 +2,11 @@
 
 package kabam.rotmg.news.view
 	{
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	import kabam.rotmg.news.model.NewsCellVO;
+    import kabam.rotmg.news.model.NewsCellVO;
 
-	public class NewsView extends Sprite
+    public class NewsView extends Sprite
 		{
 
 			private const LARGE_CELL_WIDTH:Number = 306;

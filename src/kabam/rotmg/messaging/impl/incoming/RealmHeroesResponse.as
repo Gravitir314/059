@@ -2,9 +2,9 @@
 
 package kabam.rotmg.messaging.impl.incoming
 	{
-	import flash.utils.IDataInput;
+    import flash.utils.IDataInput;
 
-	public class RealmHeroesResponse extends IncomingMessage
+    public class RealmHeroesResponse extends IncomingMessage
 		{
 
 			public var numberOfRealmHeroes:int;

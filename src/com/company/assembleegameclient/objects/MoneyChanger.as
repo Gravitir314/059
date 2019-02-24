@@ -2,12 +2,12 @@
 
 package com.company.assembleegameclient.objects
 	{
-	import com.company.assembleegameclient.game.GameSprite;
-	import com.company.assembleegameclient.ui.panels.Panel;
+    import com.company.assembleegameclient.game.GameSprite;
+    import com.company.assembleegameclient.ui.panels.Panel;
 
-	import kabam.rotmg.game.view.MoneyChangerPanel;
+    import kabam.rotmg.game.view.MoneyChangerPanel;
 
-	public class MoneyChanger extends GameObject implements IInteractiveObject
+    public class MoneyChanger extends GameObject implements IInteractiveObject
 		{
 
 			public function MoneyChanger(_arg_1:XML)

@@ -2,22 +2,22 @@
 
 package com.company.assembleegameclient.screens
 	{
-	import com.company.assembleegameclient.ui.Scrollbar;
-	import com.company.assembleegameclient.util.FameUtil;
-	import com.company.util.BitmapUtil;
+    import com.company.assembleegameclient.ui.Scrollbar;
+    import com.company.assembleegameclient.util.FameUtil;
+    import com.company.util.BitmapUtil;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.DisplayObject;
-	import flash.display.Shape;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.geom.Rectangle;
-	import flash.utils.getTimer;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.DisplayObject;
+    import flash.display.Shape;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.geom.Rectangle;
+    import flash.utils.getTimer;
 
-	import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.model.TextKey;
 
-	public class ScoringBox extends Sprite
+    public class ScoringBox extends Sprite
 		{
 
 			private var rect_:Rectangle;

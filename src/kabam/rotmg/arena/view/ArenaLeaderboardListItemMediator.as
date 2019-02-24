@@ -2,15 +2,15 @@
 
 package kabam.rotmg.arena.view
 	{
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	import kabam.rotmg.core.signals.HideTooltipsSignal;
-	import kabam.rotmg.core.signals.ShowTooltipSignal;
-	import kabam.rotmg.game.model.GameModel;
+    import kabam.rotmg.core.signals.HideTooltipsSignal;
+    import kabam.rotmg.core.signals.ShowTooltipSignal;
+    import kabam.rotmg.game.model.GameModel;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class ArenaLeaderboardListItemMediator extends Mediator
+    public class ArenaLeaderboardListItemMediator extends Mediator
 		{
 
 			[Inject]

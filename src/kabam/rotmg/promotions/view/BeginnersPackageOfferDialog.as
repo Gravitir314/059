@@ -2,15 +2,15 @@
 
 package kabam.rotmg.promotions.view
 	{
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.promotions.view.components.TransparentButton;
+    import kabam.rotmg.promotions.view.components.TransparentButton;
 
-	import org.osflash.signals.Signal;
-	import org.osflash.signals.natives.NativeMappedSignal;
+    import org.osflash.signals.Signal;
+    import org.osflash.signals.natives.NativeMappedSignal;
 
-	public class BeginnersPackageOfferDialog extends Sprite
+    public class BeginnersPackageOfferDialog extends Sprite
 		{
 
 			public static var hifiBeginnerOfferEmbed:Class = BeginnersPackageOfferDialog_hifiBeginnerOfferEmbed;

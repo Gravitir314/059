@@ -2,13 +2,13 @@
 
 package kabam.rotmg.text.view
 	{
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.text.model.FontModel;
-	import kabam.rotmg.text.model.TextAndMapProvider;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.text.model.FontModel;
+    import kabam.rotmg.text.model.TextAndMapProvider;
 
-	import org.swiftsuspenders.Injector;
+    import org.swiftsuspenders.Injector;
 
-	public class StaticTextDisplay extends TextDisplay
+    public class StaticTextDisplay extends TextDisplay
 		{
 
 			public function StaticTextDisplay()

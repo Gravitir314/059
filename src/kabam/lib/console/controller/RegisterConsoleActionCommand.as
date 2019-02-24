@@ -2,12 +2,12 @@
 
 package kabam.lib.console.controller
 	{
-	import kabam.lib.console.model.Console;
-	import kabam.lib.console.vo.ConsoleAction;
+    import kabam.lib.console.model.Console;
+    import kabam.lib.console.vo.ConsoleAction;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class RegisterConsoleActionCommand
+    public class RegisterConsoleActionCommand
 		{
 
 			[Inject]

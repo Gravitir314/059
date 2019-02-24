@@ -2,13 +2,13 @@
 
 package kabam.rotmg.account.kongregate.services
 	{
-	import kabam.lib.tasks.BaseTask;
-	import kabam.lib.tasks.Task;
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.account.core.services.LoginTask;
-	import kabam.rotmg.account.kongregate.view.KongregateApi;
+    import kabam.lib.tasks.BaseTask;
+    import kabam.lib.tasks.Task;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.account.core.services.LoginTask;
+    import kabam.rotmg.account.kongregate.view.KongregateApi;
 
-	public class KongregateGetCredentialsTask extends BaseTask
+    public class KongregateGetCredentialsTask extends BaseTask
 		{
 
 			[Inject]

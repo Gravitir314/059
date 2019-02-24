@@ -2,15 +2,15 @@
 
 package kabam.rotmg.pets.view.components
 	{
-	import flash.display.CapsStyle;
-	import flash.display.JointStyle;
-	import flash.display.LineScaleMode;
-	import flash.display.Sprite;
+    import flash.display.CapsStyle;
+    import flash.display.JointStyle;
+    import flash.display.LineScaleMode;
+    import flash.display.Sprite;
 
-	import kabam.rotmg.util.graphics.BevelRect;
-	import kabam.rotmg.util.graphics.GraphicsHelper;
+    import kabam.rotmg.util.graphics.BevelRect;
+    import kabam.rotmg.util.graphics.GraphicsHelper;
 
-	public class PopupWindowBackground extends Sprite
+    public class PopupWindowBackground extends Sprite
 		{
 
 			public static const HORIZONTAL_DIVISION:String = "HORIZONTAL_DIVISION";

@@ -2,19 +2,19 @@
 
 package kabam.rotmg.ui.view
 	{
-	import com.company.assembleegameclient.mapeditor.MapEditor;
-	import com.company.assembleegameclient.ui.dialogs.ConfirmDialog;
+    import com.company.assembleegameclient.mapeditor.MapEditor;
+    import com.company.assembleegameclient.ui.dialogs.ConfirmDialog;
 
-	import flash.events.MouseEvent;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.game.signals.GameClosedSignal;
-	import kabam.rotmg.servers.api.ServerModel;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.game.signals.GameClosedSignal;
+    import kabam.rotmg.servers.api.ServerModel;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class MapEditorMediator extends Mediator
+    public class MapEditorMediator extends Mediator
 		{
 
 			[Inject]

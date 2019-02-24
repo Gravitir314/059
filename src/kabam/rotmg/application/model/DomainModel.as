@@ -2,9 +2,9 @@
 
 package kabam.rotmg.application.model
 	{
-	import flash.net.LocalConnection;
+    import flash.net.LocalConnection;
 
-	public class DomainModel
+    public class DomainModel
 		{
 
 			private const LOCALHOST:String = "localhost";

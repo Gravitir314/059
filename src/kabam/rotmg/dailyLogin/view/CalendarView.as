@@ -2,12 +2,12 @@
 
 package kabam.rotmg.dailyLogin.view
 	{
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	import kabam.rotmg.dailyLogin.config.CalendarSettings;
-	import kabam.rotmg.dailyLogin.model.CalendarDayModel;
+    import kabam.rotmg.dailyLogin.config.CalendarSettings;
+    import kabam.rotmg.dailyLogin.model.CalendarDayModel;
 
-	public class CalendarView extends Sprite
+    public class CalendarView extends Sprite
 		{
 
 

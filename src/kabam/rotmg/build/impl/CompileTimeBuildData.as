@@ -2,14 +2,14 @@
 
 package kabam.rotmg.build.impl
 	{
-	import flash.display.LoaderInfo;
-	import flash.net.LocalConnection;
-	import flash.system.Capabilities;
+    import flash.display.LoaderInfo;
+    import flash.net.LocalConnection;
+    import flash.system.Capabilities;
 
-	import kabam.rotmg.build.api.BuildData;
-	import kabam.rotmg.build.api.BuildEnvironment;
+    import kabam.rotmg.build.api.BuildData;
+    import kabam.rotmg.build.api.BuildEnvironment;
 
-	public class CompileTimeBuildData implements BuildData
+    public class CompileTimeBuildData implements BuildData
 		{
 
 			private static const DESKTOP:String = "Desktop";

@@ -2,11 +2,11 @@
 
 package kabam.rotmg.arena.view
 	{
-	import kabam.rotmg.arena.model.CurrentArenaRunModel;
+    import kabam.rotmg.arena.model.CurrentArenaRunModel;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class ArenaWaveCounterMediator extends Mediator
+    public class ArenaWaveCounterMediator extends Mediator
 		{
 
 			[Inject]

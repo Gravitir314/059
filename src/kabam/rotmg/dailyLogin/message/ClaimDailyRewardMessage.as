@@ -2,11 +2,11 @@
 
 package kabam.rotmg.dailyLogin.message
 	{
-	import flash.utils.IDataOutput;
+    import flash.utils.IDataOutput;
 
-	import kabam.rotmg.messaging.impl.outgoing.OutgoingMessage;
+    import kabam.rotmg.messaging.impl.outgoing.OutgoingMessage;
 
-	public class ClaimDailyRewardMessage extends OutgoingMessage
+    public class ClaimDailyRewardMessage extends OutgoingMessage
 		{
 
 			public var claimKey:String;

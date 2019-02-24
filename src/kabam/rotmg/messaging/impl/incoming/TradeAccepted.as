@@ -2,9 +2,9 @@
 
 package kabam.rotmg.messaging.impl.incoming
 	{
-	import flash.utils.IDataInput;
+    import flash.utils.IDataInput;
 
-	public class TradeAccepted extends IncomingMessage
+    public class TradeAccepted extends IncomingMessage
 		{
 
 			public var myOffer_:Vector.<Boolean> = new Vector.<Boolean>();

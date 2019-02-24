@@ -2,13 +2,13 @@
 
 package kabam.rotmg.messaging.impl.incoming
 	{
-	import com.company.assembleegameclient.util.FreeList;
+    import com.company.assembleegameclient.util.FreeList;
 
-	import flash.utils.IDataInput;
+    import flash.utils.IDataInput;
 
-	import kabam.rotmg.messaging.impl.data.TradeItem;
+    import kabam.rotmg.messaging.impl.data.TradeItem;
 
-	public class TradeStart extends IncomingMessage
+    public class TradeStart extends IncomingMessage
 		{
 
 			public var myItems_:Vector.<TradeItem> = new Vector.<TradeItem>();

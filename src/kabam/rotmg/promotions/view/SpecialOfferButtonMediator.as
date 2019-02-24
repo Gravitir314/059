@@ -2,16 +2,16 @@
 
 package kabam.rotmg.promotions.view
 	{
-	import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
-	import kabam.rotmg.packages.services.PackageModel;
-	import kabam.rotmg.promotions.model.BeginnersPackageModel;
-	import kabam.rotmg.promotions.signals.PackageStatusUpdateSignal;
-	import kabam.rotmg.promotions.signals.ShowBeginnersPackageSignal;
+    import kabam.rotmg.packages.services.PackageModel;
+    import kabam.rotmg.promotions.model.BeginnersPackageModel;
+    import kabam.rotmg.promotions.signals.PackageStatusUpdateSignal;
+    import kabam.rotmg.promotions.signals.ShowBeginnersPackageSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class SpecialOfferButtonMediator extends Mediator
+    public class SpecialOfferButtonMediator extends Mediator
 		{
 
 			[Inject]

@@ -2,11 +2,11 @@
 
 package io.decagames.rotmg.supportCampaign.tooltips
 	{
-	import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
+    import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class PointsTooltipMediator extends Mediator
+    public class PointsTooltipMediator extends Mediator
 		{
 
 			[Inject]

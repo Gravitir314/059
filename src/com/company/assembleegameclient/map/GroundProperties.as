@@ -2,13 +2,13 @@
 
 package com.company.assembleegameclient.map
 	{
-	import com.company.assembleegameclient.objects.TextureData;
-	import com.company.assembleegameclient.objects.TextureDataConcrete;
-	import com.company.util.BitmapUtil;
+    import com.company.assembleegameclient.objects.TextureData;
+    import com.company.assembleegameclient.objects.TextureDataConcrete;
+    import com.company.util.BitmapUtil;
 
-	import flash.display.BitmapData;
+    import flash.display.BitmapData;
 
-	public class GroundProperties
+    public class GroundProperties
 		{
 
 			public var type_:int;

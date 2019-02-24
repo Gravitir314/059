@@ -2,14 +2,14 @@
 
 package com.company.assembleegameclient.ui.options
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.util.MoreColorUtil;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.util.MoreColorUtil;
 
-	import flash.events.Event;
+    import flash.events.Event;
 
-	import kabam.rotmg.text.view.stringBuilder.StringBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StringBuilder;
 
-	public class ChoiceOption extends BaseOption
+    public class ChoiceOption extends BaseOption
 		{
 
 			private var callback_:Function;

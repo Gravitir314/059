@@ -2,18 +2,18 @@
 
 package io.decagames.rotmg.social.widgets
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.ui.icons.IconButton;
-	import com.company.assembleegameclient.util.TimeUtil;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.ui.icons.IconButton;
+    import com.company.assembleegameclient.util.TimeUtil;
 
-	import flash.events.Event;
+    import flash.events.Event;
 
-	import io.decagames.rotmg.social.data.SocialItemState;
-	import io.decagames.rotmg.social.model.FriendVO;
+    import io.decagames.rotmg.social.data.SocialItemState;
+    import io.decagames.rotmg.social.model.FriendVO;
 
-	import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.model.TextKey;
 
-	public class FriendListItem extends BaseListItem
+    public class FriendListItem extends BaseListItem
 		{
 
 			public var teleportButton:IconButton;

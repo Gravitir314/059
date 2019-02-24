@@ -2,11 +2,11 @@
 
 package kabam.lib.ui.impl
 	{
-	import flash.display.DisplayObject;
+    import flash.display.DisplayObject;
 
-	import kabam.lib.ui.api.Layout;
+    import kabam.lib.ui.api.Layout;
 
-	public class VerticalLayout implements Layout
+    public class VerticalLayout implements Layout
 		{
 
 			private var padding:int = 0;

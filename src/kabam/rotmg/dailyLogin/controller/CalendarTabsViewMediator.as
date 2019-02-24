@@ -2,17 +2,17 @@
 
 package kabam.rotmg.dailyLogin.controller
 	{
-	import flash.events.MouseEvent;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.dailyLogin.config.CalendarSettings;
-	import kabam.rotmg.dailyLogin.model.CalendarTypes;
-	import kabam.rotmg.dailyLogin.model.DailyLoginModel;
-	import kabam.rotmg.dailyLogin.view.CalendarTabButton;
-	import kabam.rotmg.dailyLogin.view.CalendarTabsView;
+    import kabam.rotmg.dailyLogin.config.CalendarSettings;
+    import kabam.rotmg.dailyLogin.model.CalendarTypes;
+    import kabam.rotmg.dailyLogin.model.DailyLoginModel;
+    import kabam.rotmg.dailyLogin.view.CalendarTabButton;
+    import kabam.rotmg.dailyLogin.view.CalendarTabsView;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class CalendarTabsViewMediator extends Mediator
+    public class CalendarTabsViewMediator extends Mediator
 		{
 
 			[Inject]

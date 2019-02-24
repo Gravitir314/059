@@ -2,10 +2,10 @@
 
 package com.company.assembleegameclient.util
 	{
-	import flash.display.BitmapData;
-	import flash.utils.Dictionary;
+    import flash.display.BitmapData;
+    import flash.utils.Dictionary;
 
-	public class BloodComposition
+    public class BloodComposition
 		{
 
 			public static var idDict_:Dictionary = new Dictionary();

@@ -2,40 +2,40 @@
 
 package io.decagames.rotmg.fame
 	{
-	import com.company.assembleegameclient.appengine.SavedCharacter;
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.ui.tooltip.TextToolTip;
-	import com.company.util.DateFormatterReplacement;
+    import com.company.assembleegameclient.appengine.SavedCharacter;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+    import com.company.util.DateFormatterReplacement;
 
-	import flash.utils.Dictionary;
+    import flash.utils.Dictionary;
 
-	import io.decagames.rotmg.characterMetrics.data.MetricsID;
-	import io.decagames.rotmg.characterMetrics.tracker.CharactersMetricsTracker;
-	import io.decagames.rotmg.fame.data.FameTracker;
-	import io.decagames.rotmg.fame.data.TotalFame;
-	import io.decagames.rotmg.fame.data.bonus.FameBonus;
-	import io.decagames.rotmg.fame.data.bonus.FameBonusConfig;
-	import io.decagames.rotmg.ui.buttons.BaseButton;
-	import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-	import io.decagames.rotmg.ui.popups.header.PopupHeader;
-	import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
-	import io.decagames.rotmg.ui.texture.TextureParser;
-	import io.decagames.rotmg.utils.date.TimeSpan;
+    import io.decagames.rotmg.characterMetrics.data.MetricsID;
+    import io.decagames.rotmg.characterMetrics.tracker.CharactersMetricsTracker;
+    import io.decagames.rotmg.fame.data.FameTracker;
+    import io.decagames.rotmg.fame.data.TotalFame;
+    import io.decagames.rotmg.fame.data.bonus.FameBonus;
+    import io.decagames.rotmg.fame.data.bonus.FameBonusConfig;
+    import io.decagames.rotmg.ui.buttons.BaseButton;
+    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+    import io.decagames.rotmg.ui.popups.header.PopupHeader;
+    import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
+    import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.utils.date.TimeSpan;
 
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.core.signals.HideTooltipsSignal;
-	import kabam.rotmg.core.signals.ShowTooltipSignal;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StringBuilder;
-	import kabam.rotmg.tooltips.HoverTooltipDelegate;
-	import kabam.rotmg.ui.model.HUDModel;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.core.signals.HideTooltipsSignal;
+    import kabam.rotmg.core.signals.ShowTooltipSignal;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StringBuilder;
+    import kabam.rotmg.tooltips.HoverTooltipDelegate;
+    import kabam.rotmg.ui.model.HUDModel;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class FameContentPopupMediator extends Mediator
+    public class FameContentPopupMediator extends Mediator
 		{
 
 			[Inject]

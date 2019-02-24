@@ -2,20 +2,20 @@
 
 package kabam.rotmg.mysterybox.services
 	{
-	import com.company.assembleegameclient.util.TimeUtil;
+    import com.company.assembleegameclient.util.TimeUtil;
 
-	import kabam.lib.tasks.BaseTask;
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.appengine.api.AppEngineClient;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.fortune.model.FortuneInfo;
-	import kabam.rotmg.fortune.services.FortuneModel;
-	import kabam.rotmg.language.model.LanguageModel;
-	import kabam.rotmg.mysterybox.model.MysteryBoxInfo;
+    import kabam.lib.tasks.BaseTask;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.appengine.api.AppEngineClient;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.fortune.model.FortuneInfo;
+    import kabam.rotmg.fortune.services.FortuneModel;
+    import kabam.rotmg.language.model.LanguageModel;
+    import kabam.rotmg.mysterybox.model.MysteryBoxInfo;
 
-	import robotlegs.bender.framework.api.ILogger;
+    import robotlegs.bender.framework.api.ILogger;
 
-	public class GetMysteryBoxesTask extends BaseTask
+    public class GetMysteryBoxesTask extends BaseTask
 		{
 			private static var version:String = "0";
 

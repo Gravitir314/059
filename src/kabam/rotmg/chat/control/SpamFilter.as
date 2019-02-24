@@ -2,9 +2,9 @@
 
 package kabam.rotmg.chat.control
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	public class SpamFilter
+    public class SpamFilter
 		{
 
 			private const filterTable:Array = createFilterTable();

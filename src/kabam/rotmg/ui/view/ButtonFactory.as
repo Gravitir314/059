@@ -2,15 +2,15 @@
 
 package kabam.rotmg.ui.view
 	{
-	import com.company.assembleegameclient.constants.ScreenTypes;
-	import com.company.assembleegameclient.screens.TitleMenuOption;
+    import com.company.assembleegameclient.constants.ScreenTypes;
+    import com.company.assembleegameclient.screens.TitleMenuOption;
 
-	import flash.text.TextFieldAutoSize;
+    import flash.text.TextFieldAutoSize;
 
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 
-	public class ButtonFactory
+    public class ButtonFactory
 		{
 
 			public static const BUTTON_SIZE_LARGE:uint = 36;

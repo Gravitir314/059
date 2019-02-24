@@ -2,12 +2,12 @@
 
 package kabam.rotmg.text.view
 	{
-	import flash.text.TextField;
+    import flash.text.TextField;
 
-	import kabam.rotmg.language.model.StringMap;
-	import kabam.rotmg.text.model.FontInfo;
+    import kabam.rotmg.language.model.StringMap;
+    import kabam.rotmg.text.model.FontInfo;
 
-	public interface TextFieldDisplay
+    public interface TextFieldDisplay
 		{
 
 			function setTextField(_arg_1:TextField):void;

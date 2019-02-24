@@ -2,34 +2,34 @@
 
 package kabam.rotmg.classes.view
 	{
-	import com.company.assembleegameclient.util.Currency;
-	import com.company.util.MoreColorUtil;
+    import com.company.assembleegameclient.util.Currency;
+    import com.company.util.MoreColorUtil;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.Graphics;
-	import flash.display.Shape;
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
-	import flash.filters.ColorMatrixFilter;
-	import flash.filters.DropShadowFilter;
-	import flash.geom.ColorTransform;
-	import flash.text.TextFieldAutoSize;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.Graphics;
+    import flash.display.Shape;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
+    import flash.filters.ColorMatrixFilter;
+    import flash.filters.DropShadowFilter;
+    import flash.geom.ColorTransform;
+    import flash.text.TextFieldAutoSize;
 
-	import kabam.rotmg.classes.model.CharacterSkin;
-	import kabam.rotmg.classes.model.CharacterSkinState;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StringBuilder;
-	import kabam.rotmg.util.components.RadioButton;
-	import kabam.rotmg.util.components.api.BuyButton;
+    import kabam.rotmg.classes.model.CharacterSkin;
+    import kabam.rotmg.classes.model.CharacterSkinState;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StringBuilder;
+    import kabam.rotmg.util.components.RadioButton;
+    import kabam.rotmg.util.components.api.BuyButton;
 
-	import org.osflash.signals.Signal;
-	import org.osflash.signals.natives.NativeMappedSignal;
+    import org.osflash.signals.Signal;
+    import org.osflash.signals.natives.NativeMappedSignal;
 
-	public class CharacterSkinListItem extends Sprite
+    public class CharacterSkinListItem extends Sprite
 		{
 
 			public static const WIDTH:int = 420;

@@ -2,17 +2,17 @@
 
 package com.company.assembleegameclient.map.mapoverlay
 	{
-	import com.company.assembleegameclient.map.Camera;
-	import com.company.assembleegameclient.map.Map;
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.map.Camera;
+    import com.company.assembleegameclient.map.Map;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.game.view.components.QueuedStatusText;
-	import kabam.rotmg.game.view.components.QueuedStatusTextList;
+    import kabam.rotmg.game.view.components.QueuedStatusText;
+    import kabam.rotmg.game.view.components.QueuedStatusTextList;
 
-	public class MapOverlay extends Sprite
+    public class MapOverlay extends Sprite
 		{
 
 			private const speechBalloons:Object = {};

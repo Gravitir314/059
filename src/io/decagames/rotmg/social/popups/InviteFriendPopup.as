@@ -2,16 +2,16 @@
 
 package io.decagames.rotmg.social.popups
 	{
-	import flash.text.TextFormatAlign;
+    import flash.text.TextFormatAlign;
 
-	import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.popups.modal.ModalPopup;
-	import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-	import io.decagames.rotmg.ui.textField.InputTextField;
-	import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.popups.modal.ModalPopup;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import io.decagames.rotmg.ui.textField.InputTextField;
+    import io.decagames.rotmg.ui.texture.TextureParser;
 
-	public class InviteFriendPopup extends ModalPopup
+    public class InviteFriendPopup extends ModalPopup
 		{
 
 			public var sendButton:SliceScalingButton;

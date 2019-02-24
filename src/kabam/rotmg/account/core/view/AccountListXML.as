@@ -2,9 +2,9 @@
 
 package kabam.rotmg.account.core.view
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	public class AccountListXML
+    public class AccountListXML
 		{
 
 			public static var usernamesVector:Array = Parameters.data_.usernames;

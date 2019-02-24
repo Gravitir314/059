@@ -2,13 +2,13 @@
 
 package com.company.assembleegameclient.ui.tooltip.slotcomparisons
 	{
-	import com.company.assembleegameclient.ui.tooltip.TooltipHelper;
+    import com.company.assembleegameclient.ui.tooltip.TooltipHelper;
 
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.stringBuilder.AppendingLineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.stringBuilder.AppendingLineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	public class OrbComparison extends SlotComparison
+    public class OrbComparison extends SlotComparison
 		{
 
 

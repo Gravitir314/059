@@ -2,23 +2,23 @@
 
 package kabam.rotmg.chat.view
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import flash.display.Stage;
-	import flash.events.KeyboardEvent;
-	import flash.text.TextField;
+    import flash.display.Stage;
+    import flash.events.KeyboardEvent;
+    import flash.text.TextField;
 
-	import kabam.rotmg.chat.control.ParseChatMessageSignal;
-	import kabam.rotmg.chat.control.ShowChatInputSignal;
-	import kabam.rotmg.chat.model.ChatModel;
-	import kabam.rotmg.chat.model.ChatShortcutModel;
-	import kabam.rotmg.chat.model.TellModel;
-	import kabam.rotmg.text.model.FontModel;
-	import kabam.rotmg.text.model.TextAndMapProvider;
+    import kabam.rotmg.chat.control.ParseChatMessageSignal;
+    import kabam.rotmg.chat.control.ShowChatInputSignal;
+    import kabam.rotmg.chat.model.ChatModel;
+    import kabam.rotmg.chat.model.ChatShortcutModel;
+    import kabam.rotmg.chat.model.TellModel;
+    import kabam.rotmg.text.model.FontModel;
+    import kabam.rotmg.text.model.TextAndMapProvider;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class ChatInputMediator extends Mediator
+    public class ChatInputMediator extends Mediator
 		{
 
 			[Inject]

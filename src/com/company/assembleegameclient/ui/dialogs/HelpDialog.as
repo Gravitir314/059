@@ -2,23 +2,23 @@
 
 package com.company.assembleegameclient.ui.dialogs
 	{
-	import com.company.assembleegameclient.account.ui.Frame;
-	import com.company.assembleegameclient.ui.Scrollbar;
-	import com.company.rotmg.graphics.DeleteXGraphic;
+    import com.company.assembleegameclient.account.ui.Frame;
+    import com.company.assembleegameclient.ui.Scrollbar;
+    import com.company.rotmg.graphics.DeleteXGraphic;
 
-	import flash.display.Graphics;
-	import flash.display.Shape;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
+    import flash.display.Graphics;
+    import flash.display.Shape;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
+    import flash.filters.DropShadowFilter;
 
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.dialogs.control.CloseDialogsSignal;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	public class HelpDialog extends Frame
+    public class HelpDialog extends Frame
 		{
 
 			private var closeDialogs:CloseDialogsSignal;
@@ -141,7 +141,6 @@ import flash.display.Sprite;
 import flash.filters.DropShadowFilter;
 
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-
 import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
 class HelpContainer extends Sprite

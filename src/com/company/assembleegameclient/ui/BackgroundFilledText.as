@@ -2,17 +2,17 @@
 
 package com.company.assembleegameclient.ui
 	{
-	import com.company.util.GraphicsUtil;
+    import com.company.util.GraphicsUtil;
 
-	import flash.display.GraphicsPath;
-	import flash.display.GraphicsSolidFill;
-	import flash.display.IGraphicsData;
-	import flash.display.Sprite;
-	import flash.text.TextFieldAutoSize;
+    import flash.display.GraphicsPath;
+    import flash.display.GraphicsSolidFill;
+    import flash.display.IGraphicsData;
+    import flash.display.Sprite;
+    import flash.text.TextFieldAutoSize;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 
-	public class BackgroundFilledText extends Sprite
+    public class BackgroundFilledText extends Sprite
 		{
 
 			protected static const MARGIN:int = 4;

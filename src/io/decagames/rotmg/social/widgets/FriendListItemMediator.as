@@ -2,35 +2,35 @@
 
 package io.decagames.rotmg.social.widgets
 	{
-	import com.company.assembleegameclient.appengine.SavedCharacter;
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.appengine.SavedCharacter;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import flash.events.MouseEvent;
+    import flash.events.MouseEvent;
 
-	import io.decagames.rotmg.social.config.FriendsActions;
-	import io.decagames.rotmg.social.model.FriendRequestVO;
-	import io.decagames.rotmg.social.model.SocialModel;
-	import io.decagames.rotmg.social.signals.FriendActionSignal;
-	import io.decagames.rotmg.social.signals.RefreshListSignal;
-	import io.decagames.rotmg.ui.buttons.BaseButton;
-	import io.decagames.rotmg.ui.popups.modal.ConfirmationModal;
-	import io.decagames.rotmg.ui.popups.modal.error.ErrorModal;
-	import io.decagames.rotmg.ui.popups.signals.CloseCurrentPopupSignal;
-	import io.decagames.rotmg.ui.popups.signals.RemoveLockFade;
-	import io.decagames.rotmg.ui.popups.signals.ShowLockFade;
-	import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+    import io.decagames.rotmg.social.config.FriendsActions;
+    import io.decagames.rotmg.social.model.FriendRequestVO;
+    import io.decagames.rotmg.social.model.SocialModel;
+    import io.decagames.rotmg.social.signals.FriendActionSignal;
+    import io.decagames.rotmg.social.signals.RefreshListSignal;
+    import io.decagames.rotmg.ui.buttons.BaseButton;
+    import io.decagames.rotmg.ui.popups.modal.ConfirmationModal;
+    import io.decagames.rotmg.ui.popups.modal.error.ErrorModal;
+    import io.decagames.rotmg.ui.popups.signals.CloseCurrentPopupSignal;
+    import io.decagames.rotmg.ui.popups.signals.RemoveLockFade;
+    import io.decagames.rotmg.ui.popups.signals.ShowLockFade;
+    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
-	import kabam.rotmg.chat.control.ShowChatInputSignal;
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.game.model.GameInitData;
-	import kabam.rotmg.game.signals.PlayGameSignal;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.ui.signals.EnterGameSignal;
+    import kabam.rotmg.chat.control.ShowChatInputSignal;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.game.model.GameInitData;
+    import kabam.rotmg.game.signals.PlayGameSignal;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.ui.signals.EnterGameSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class FriendListItemMediator extends Mediator
+    public class FriendListItemMediator extends Mediator
 		{
 
 			[Inject]

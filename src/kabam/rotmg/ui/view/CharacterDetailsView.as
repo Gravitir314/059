@@ -2,27 +2,27 @@
 
 package kabam.rotmg.ui.view
 	{
-	import com.company.assembleegameclient.objects.ImageFactory;
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.ui.BoostPanelButton;
-	import com.company.assembleegameclient.ui.ExperienceBoostTimerPopup;
-	import com.company.assembleegameclient.ui.icons.IconButton;
-	import com.company.assembleegameclient.ui.icons.IconButtonFactory;
+    import com.company.assembleegameclient.objects.ImageFactory;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.ui.BoostPanelButton;
+    import com.company.assembleegameclient.ui.ExperienceBoostTimerPopup;
+    import com.company.assembleegameclient.ui.icons.IconButton;
+    import com.company.assembleegameclient.ui.icons.IconButtonFactory;
 
-	import flash.display.Bitmap;
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
+    import flash.display.Bitmap;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
 
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.labels.UILabel;
 
-	import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.model.TextKey;
 
-	import org.osflash.signals.Signal;
-	import org.osflash.signals.natives.NativeSignal;
+    import org.osflash.signals.Signal;
+    import org.osflash.signals.natives.NativeSignal;
 
-	public class CharacterDetailsView extends Sprite
+    public class CharacterDetailsView extends Sprite
 		{
 
 			public static const NEXUS_BUTTON:String = "NEXUS_BUTTON";

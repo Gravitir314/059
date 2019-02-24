@@ -2,14 +2,14 @@
 
 package com.company.assembleegameclient.background
 	{
-	import com.company.assembleegameclient.map.Camera;
-	import com.company.util.AssetLibrary;
-	import com.company.util.ImageSet;
-	import com.company.util.PointUtil;
+    import com.company.assembleegameclient.map.Camera;
+    import com.company.util.AssetLibrary;
+    import com.company.util.ImageSet;
+    import com.company.util.PointUtil;
 
-	import flash.display.IGraphicsData;
+    import flash.display.IGraphicsData;
 
-	public class StarBackground extends Background
+    public class StarBackground extends Background
 		{
 
 			public var stars_:Vector.<Star> = new Vector.<Star>();

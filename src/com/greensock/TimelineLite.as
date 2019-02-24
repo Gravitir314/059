@@ -2,10 +2,10 @@
 
 package com.greensock
 	{
-	import com.greensock.core.Animation;
-	import com.greensock.core.SimpleTimeline;
+    import com.greensock.core.Animation;
+    import com.greensock.core.SimpleTimeline;
 
-	public class TimelineLite extends SimpleTimeline
+    public class TimelineLite extends SimpleTimeline
 		{
 
 			public static const version:String = "12.1.6";

@@ -2,13 +2,13 @@
 
 package com.company.assembleegameclient.tutorial
 	{
-	import com.company.util.ConversionUtil;
+    import com.company.util.ConversionUtil;
 
-	import flash.display.Graphics;
-	import flash.geom.Point;
-	import flash.geom.Rectangle;
+    import flash.display.Graphics;
+    import flash.geom.Point;
+    import flash.geom.Rectangle;
 
-	public class UIDrawBox
+    public class UIDrawBox
 		{
 
 			public const ANIMATION_MS:int = 500;

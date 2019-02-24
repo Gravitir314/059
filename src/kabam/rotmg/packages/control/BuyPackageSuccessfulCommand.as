@@ -2,11 +2,11 @@
 
 package kabam.rotmg.packages.control
 	{
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.packages.view.PackageInfoDialog;
-	import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.packages.view.PackageInfoDialog;
+    import kabam.rotmg.text.model.TextKey;
 
-	public class BuyPackageSuccessfulCommand
+    public class BuyPackageSuccessfulCommand
 		{
 
 			[Inject]

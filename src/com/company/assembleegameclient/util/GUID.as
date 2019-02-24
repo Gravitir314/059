@@ -2,9 +2,9 @@
 
 package com.company.assembleegameclient.util
 	{
-	import flash.system.Capabilities;
+    import flash.system.Capabilities;
 
-	public class GUID
+    public class GUID
 		{
 
 			private static var counter:Number = 0;

@@ -2,16 +2,16 @@
 
 package com.company.assembleegameclient.mapeditor
 	{
-	import com.company.assembleegameclient.account.ui.TextInputField;
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.assembleegameclient.ui.dropdown.DropDown;
-	import com.company.ui.BaseSimpleText;
+    import com.company.assembleegameclient.account.ui.TextInputField;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.assembleegameclient.ui.dropdown.DropDown;
+    import com.company.ui.BaseSimpleText;
 
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.FocusEvent;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.FocusEvent;
 
-	public class Filter extends Sprite
+    public class Filter extends Sprite
 		{
 
 			private static const GAP:int = 2;

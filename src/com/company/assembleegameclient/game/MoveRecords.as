@@ -2,9 +2,9 @@
 
 package com.company.assembleegameclient.game
 	{
-	import kabam.rotmg.messaging.impl.data.MoveRecord;
+    import kabam.rotmg.messaging.impl.data.MoveRecord;
 
-	public class MoveRecords
+    public class MoveRecords
 		{
 
 			public var lastClearTime_:int = -1;

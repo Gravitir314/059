@@ -2,9 +2,9 @@
 
 package kabam.lib.json
 	{
-	import com.hurlant.util.Base64;
+    import com.hurlant.util.Base64;
 
-	public class Base64Decoder
+    public class Base64Decoder
 		{
 
 

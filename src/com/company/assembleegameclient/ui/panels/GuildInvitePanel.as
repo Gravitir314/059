@@ -2,23 +2,23 @@
 
 package com.company.assembleegameclient.ui.panels
 	{
-	import com.company.assembleegameclient.game.AGameSprite;
-	import com.company.assembleegameclient.ui.DeprecatedTextButton;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.game.AGameSprite;
+    import com.company.assembleegameclient.ui.DeprecatedTextButton;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.events.Event;
-	import flash.events.MouseEvent;
-	import flash.events.TimerEvent;
-	import flash.text.TextFieldAutoSize;
-	import flash.utils.Timer;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
+    import flash.events.TimerEvent;
+    import flash.text.TextFieldAutoSize;
+    import flash.utils.Timer;
 
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-	import kabam.rotmg.ui.view.SignalWaiter;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.ui.view.SignalWaiter;
 
-	public class GuildInvitePanel extends Panel
+    public class GuildInvitePanel extends Panel
 		{
 
 			private const waiter:SignalWaiter = new SignalWaiter();

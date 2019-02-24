@@ -2,21 +2,21 @@
 
 package com.company.assembleegameclient.engine3d
 	{
-	import com.company.assembleegameclient.map.Camera;
-	import com.company.assembleegameclient.util.TextureRedrawer;
-	import com.company.util.GraphicsUtil;
-	import com.company.util.Triangle;
+    import com.company.assembleegameclient.map.Camera;
+    import com.company.assembleegameclient.util.TextureRedrawer;
+    import com.company.util.GraphicsUtil;
+    import com.company.util.Triangle;
 
-	import flash.display.BitmapData;
-	import flash.display.GraphicsBitmapFill;
-	import flash.display.GraphicsPath;
-	import flash.display.GraphicsPathCommand;
-	import flash.display.GraphicsSolidFill;
-	import flash.display.IGraphicsData;
-	import flash.geom.Utils3D;
-	import flash.geom.Vector3D;
+    import flash.display.BitmapData;
+    import flash.display.GraphicsBitmapFill;
+    import flash.display.GraphicsPath;
+    import flash.display.GraphicsPathCommand;
+    import flash.display.GraphicsSolidFill;
+    import flash.display.IGraphicsData;
+    import flash.geom.Utils3D;
+    import flash.geom.Vector3D;
 
-	public class Face3D
+    public class Face3D
 		{
 
 			private static const blackOutFill_:GraphicsSolidFill = new GraphicsSolidFill(0, 1);

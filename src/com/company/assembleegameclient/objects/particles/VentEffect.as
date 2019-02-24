@@ -2,10 +2,10 @@
 
 package com.company.assembleegameclient.objects.particles
 	{
-	import com.company.assembleegameclient.objects.GameObject;
-	import com.company.assembleegameclient.util.FreeList;
+    import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.util.FreeList;
 
-	public class VentEffect extends ParticleEffect
+    public class VentEffect extends ParticleEffect
 		{
 
 			private static const BUBBLE_PERIOD:int = 50;

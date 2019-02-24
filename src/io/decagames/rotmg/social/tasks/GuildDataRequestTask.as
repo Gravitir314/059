@@ -2,11 +2,11 @@
 
 package io.decagames.rotmg.social.tasks
 	{
-	import kabam.lib.tasks.BaseTask;
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.appengine.api.AppEngineClient;
+    import kabam.lib.tasks.BaseTask;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.appengine.api.AppEngineClient;
 
-	public class GuildDataRequestTask extends BaseTask implements ISocialTask
+    public class GuildDataRequestTask extends BaseTask implements ISocialTask
 		{
 
 			[Inject]

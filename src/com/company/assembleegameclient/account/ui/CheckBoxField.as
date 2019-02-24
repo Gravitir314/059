@@ -2,21 +2,21 @@
 
 package com.company.assembleegameclient.account.ui
 	{
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.CapsStyle;
-	import flash.display.Graphics;
-	import flash.display.JointStyle;
-	import flash.display.LineScaleMode;
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
+    import flash.display.CapsStyle;
+    import flash.display.Graphics;
+    import flash.display.JointStyle;
+    import flash.display.LineScaleMode;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StringBuilder;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StringBuilder;
 
-	public class CheckBoxField extends Sprite
+    public class CheckBoxField extends Sprite
 		{
 
 			private static const BOX_SIZE:int = 20;

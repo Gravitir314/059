@@ -2,14 +2,14 @@
 
 package zfn.xinput
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import flash.events.EventDispatcher;
-	import flash.events.GameInputEvent;
-	import flash.ui.GameInput;
-	import flash.ui.GameInputDevice;
+    import flash.events.EventDispatcher;
+    import flash.events.GameInputEvent;
+    import flash.ui.GameInput;
+    import flash.ui.GameInputDevice;
 
-	public class ControllerHandler extends EventDispatcher
+    public class ControllerHandler extends EventDispatcher
 		{
 
 			public static const LSTICK_X_AXIS:String = "AXIS_0";

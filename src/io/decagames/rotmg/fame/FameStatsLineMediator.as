@@ -2,15 +2,15 @@
 
 package io.decagames.rotmg.fame
 	{
-	import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
 
-	import kabam.rotmg.core.signals.HideTooltipsSignal;
-	import kabam.rotmg.core.signals.ShowTooltipSignal;
-	import kabam.rotmg.tooltips.HoverTooltipDelegate;
+    import kabam.rotmg.core.signals.HideTooltipsSignal;
+    import kabam.rotmg.core.signals.ShowTooltipSignal;
+    import kabam.rotmg.tooltips.HoverTooltipDelegate;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class FameStatsLineMediator extends Mediator
+    public class FameStatsLineMediator extends Mediator
 		{
 
 			[Inject]

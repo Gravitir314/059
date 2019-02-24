@@ -2,9 +2,9 @@
 
 package com.company.util
 	{
-	import flash.display.BitmapData;
+    import flash.display.BitmapData;
 
-	public class ImageSet
+    public class ImageSet
 		{
 
 			public var images_:Vector.<BitmapData>;

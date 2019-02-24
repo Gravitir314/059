@@ -2,18 +2,18 @@
 
 package kabam.rotmg.arena.view
 	{
-	import flash.events.TimerEvent;
-	import flash.utils.Timer;
+    import flash.events.TimerEvent;
+    import flash.utils.Timer;
 
-	import kabam.rotmg.arena.model.ArenaLeaderboardEntry;
-	import kabam.rotmg.arena.model.BestArenaRunModel;
-	import kabam.rotmg.arena.model.CurrentArenaRunModel;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.maploading.signals.HideMapLoadingSignal;
+    import kabam.rotmg.arena.model.ArenaLeaderboardEntry;
+    import kabam.rotmg.arena.model.BestArenaRunModel;
+    import kabam.rotmg.arena.model.CurrentArenaRunModel;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.maploading.signals.HideMapLoadingSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class BattleSummaryDialogMediator extends Mediator
+    public class BattleSummaryDialogMediator extends Mediator
 		{
 
 			[Inject]

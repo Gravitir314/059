@@ -2,9 +2,9 @@
 
 package kabam.rotmg.util.graphics
 	{
-	import flash.display.Graphics;
+    import flash.display.Graphics;
 
-	public class GraphicsHelper
+    public class GraphicsHelper
 		{
 
 

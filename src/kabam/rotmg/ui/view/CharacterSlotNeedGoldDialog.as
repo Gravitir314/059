@@ -2,16 +2,16 @@
 
 package kabam.rotmg.ui.view
 	{
-	import com.company.assembleegameclient.ui.dialogs.Dialog;
+    import com.company.assembleegameclient.ui.dialogs.Dialog;
 
-	import flash.display.Sprite;
-	import flash.events.Event;
+    import flash.display.Sprite;
+    import flash.events.Event;
 
-	import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.model.TextKey;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class CharacterSlotNeedGoldDialog extends Sprite
+    public class CharacterSlotNeedGoldDialog extends Sprite
 		{
 			public const buyGold:Signal = new Signal();
 			public const cancel:Signal = new Signal();

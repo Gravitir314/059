@@ -2,16 +2,16 @@
 
 package com.company.assembleegameclient.objects
 	{
-	import com.company.assembleegameclient.engine3d.Face3D;
-	import com.company.assembleegameclient.map.Camera;
-	import com.company.assembleegameclient.map.Square;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.util.BitmapUtil;
+    import com.company.assembleegameclient.engine3d.Face3D;
+    import com.company.assembleegameclient.map.Camera;
+    import com.company.assembleegameclient.map.Square;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.util.BitmapUtil;
 
-	import flash.display.BitmapData;
-	import flash.display.IGraphicsData;
+    import flash.display.BitmapData;
+    import flash.display.IGraphicsData;
 
-	public class Wall extends GameObject
+    public class Wall extends GameObject
 		{
 
 			private static const UVT:Vector.<Number> = new <Number>[0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0];

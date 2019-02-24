@@ -2,14 +2,14 @@
 
 package io.decagames.rotmg.pets.components.petItem
 	{
-	import com.company.util.GraphicsUtil;
+    import com.company.util.GraphicsUtil;
 
-	import flash.display.GraphicsPath;
-	import flash.display.GraphicsSolidFill;
-	import flash.display.IGraphicsData;
-	import flash.display.Sprite;
+    import flash.display.GraphicsPath;
+    import flash.display.GraphicsSolidFill;
+    import flash.display.IGraphicsData;
+    import flash.display.Sprite;
 
-	public class PetItemBackground extends Sprite
+    public class PetItemBackground extends Sprite
 		{
 
 			public function PetItemBackground(_arg_1:int, _arg_2:Array, _arg_3:uint, _arg_4:Number)

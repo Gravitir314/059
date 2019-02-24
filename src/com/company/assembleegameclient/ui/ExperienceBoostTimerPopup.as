@@ -2,15 +2,15 @@
 
 package com.company.assembleegameclient.ui
 	{
-	import com.company.assembleegameclient.ui.components.TimerDisplay;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.ui.components.TimerDisplay;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.Sprite;
-	import flash.filters.DropShadowFilter;
+    import flash.display.Sprite;
+    import flash.filters.DropShadowFilter;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 
-	public class ExperienceBoostTimerPopup extends Sprite
+    public class ExperienceBoostTimerPopup extends Sprite
 		{
 
 			private var timerDisplay:TimerDisplay;

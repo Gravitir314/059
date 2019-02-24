@@ -2,19 +2,19 @@
 
 package io.decagames.rotmg.supportCampaign.tab.tiers.button
 	{
-	import com.greensock.TimelineMax;
-	import com.greensock.TweenMax;
-	import com.greensock.easing.Expo;
+    import com.greensock.TimelineMax;
+    import com.greensock.TweenMax;
+    import com.greensock.easing.Expo;
 
-	import flash.display.Sprite;
-	import flash.filters.GlowFilter;
+    import flash.display.Sprite;
+    import flash.filters.GlowFilter;
 
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.labels.UILabel;
-	import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-	import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import io.decagames.rotmg.ui.texture.TextureParser;
 
-	public class TierButton extends Sprite
+    public class TierButton extends Sprite
 		{
 
 			private const OUTLINE_FILTER:GlowFilter = new GlowFilter(0xFFFFFF, 1, 3, 3, 16, 3, false, false);

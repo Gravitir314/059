@@ -2,10 +2,10 @@
 
 package com.company.util
 	{
-	import flash.geom.Matrix;
-	import flash.geom.Point;
+    import flash.geom.Matrix;
+    import flash.geom.Point;
 
-	public class IntPoint
+    public class IntPoint
 		{
 
 			public var x_:int;

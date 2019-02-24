@@ -2,17 +2,17 @@
 
 package kabam.rotmg.chat.view
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import flash.display.Sprite;
-	import flash.events.TimerEvent;
-	import flash.utils.Timer;
+    import flash.display.Sprite;
+    import flash.events.TimerEvent;
+    import flash.utils.Timer;
 
-	import kabam.rotmg.chat.model.ChatModel;
+    import kabam.rotmg.chat.model.ChatModel;
 
-	import zfn.IDisposable;
+    import zfn.IDisposable;
 
-	public class ChatList extends Sprite implements IDisposable
+    public class ChatList extends Sprite implements IDisposable
 		{
 
 			private const timer:Timer = new Timer(1000);

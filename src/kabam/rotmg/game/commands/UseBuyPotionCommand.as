@@ -2,21 +2,21 @@
 
 package kabam.rotmg.game.commands
 	{
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.sound.SoundEffectLibrary;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.sound.SoundEffectLibrary;
 
-	import flash.utils.getTimer;
+    import flash.utils.getTimer;
 
-	import kabam.rotmg.game.model.PotionInventoryModel;
-	import kabam.rotmg.game.model.UseBuyPotionVO;
-	import kabam.rotmg.messaging.impl.GameServerConnection;
-	import kabam.rotmg.ui.model.HUDModel;
-	import kabam.rotmg.ui.model.PotionModel;
+    import kabam.rotmg.game.model.PotionInventoryModel;
+    import kabam.rotmg.game.model.UseBuyPotionVO;
+    import kabam.rotmg.messaging.impl.GameServerConnection;
+    import kabam.rotmg.ui.model.HUDModel;
+    import kabam.rotmg.ui.model.PotionModel;
 
-	import robotlegs.bender.framework.api.ILogger;
+    import robotlegs.bender.framework.api.ILogger;
 
-	public class UseBuyPotionCommand
+    public class UseBuyPotionCommand
 		{
 
 			[Inject]

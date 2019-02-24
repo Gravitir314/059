@@ -2,17 +2,17 @@
 
 package kabam.rotmg.account.core.view
 	{
-	import com.company.assembleegameclient.account.ui.Frame;
+    import com.company.assembleegameclient.account.ui.Frame;
 
-	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
+    import flash.events.MouseEvent;
+    import flash.filters.DropShadowFilter;
 
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	public class AccountListHelpDialog extends Frame
+    public class AccountListHelpDialog extends Frame
 		{
 			private var openDialog:OpenDialogSignal;
 			private var title:TextFieldDisplayConcrete;

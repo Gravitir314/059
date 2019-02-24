@@ -2,15 +2,15 @@
 
 package com.company.assembleegameclient.account.ui
 	{
-	import com.company.assembleegameclient.game.AGameSprite;
-	import com.company.assembleegameclient.game.events.NameResultEvent;
+    import com.company.assembleegameclient.game.AGameSprite;
+    import com.company.assembleegameclient.game.events.NameResultEvent;
 
-	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
-	import kabam.rotmg.ui.signals.NameChangedSignal;
+    import kabam.rotmg.dialogs.control.CloseDialogsSignal;
+    import kabam.rotmg.ui.signals.NameChangedSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class ChooseNameFrameMediator extends Mediator
+    public class ChooseNameFrameMediator extends Mediator
 		{
 
 			[Inject]

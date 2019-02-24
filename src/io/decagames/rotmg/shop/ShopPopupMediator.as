@@ -2,48 +2,48 @@
 
 package io.decagames.rotmg.shop
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.ui.tooltip.TextToolTip;
-	import com.greensock.TweenMax;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+    import com.greensock.TweenMax;
 
-	import flash.events.TimerEvent;
-	import flash.text.TextFormatAlign;
-	import flash.utils.Timer;
+    import flash.events.TimerEvent;
+    import flash.text.TextFormatAlign;
+    import flash.utils.Timer;
 
-	import io.decagames.rotmg.shop.genericBox.GenericBoxTile;
-	import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
-	import io.decagames.rotmg.shop.mysteryBox.MysteryBoxTile;
-	import io.decagames.rotmg.shop.packages.PackageBoxTile;
-	import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
-	import io.decagames.rotmg.supportCampaign.tab.SupporterShopTabView;
-	import io.decagames.rotmg.ui.buttons.BaseButton;
-	import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.gird.UIGrid;
-	import io.decagames.rotmg.ui.labels.UILabel;
-	import io.decagames.rotmg.ui.popups.header.PopupHeader;
-	import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
-	import io.decagames.rotmg.ui.tabs.TabButton;
-	import io.decagames.rotmg.ui.tabs.UITab;
-	import io.decagames.rotmg.ui.tabs.UITabs;
-	import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.shop.genericBox.GenericBoxTile;
+    import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
+    import io.decagames.rotmg.shop.mysteryBox.MysteryBoxTile;
+    import io.decagames.rotmg.shop.packages.PackageBoxTile;
+    import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
+    import io.decagames.rotmg.supportCampaign.tab.SupporterShopTabView;
+    import io.decagames.rotmg.ui.buttons.BaseButton;
+    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.gird.UIGrid;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.ui.popups.header.PopupHeader;
+    import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
+    import io.decagames.rotmg.ui.tabs.TabButton;
+    import io.decagames.rotmg.ui.tabs.UITab;
+    import io.decagames.rotmg.ui.tabs.UITabs;
+    import io.decagames.rotmg.ui.texture.TextureParser;
 
-	import kabam.rotmg.account.core.signals.OpenMoneyWindowSignal;
-	import kabam.rotmg.application.DynamicSettings;
-	import kabam.rotmg.core.signals.HideTooltipsSignal;
-	import kabam.rotmg.core.signals.ShowTooltipSignal;
-	import kabam.rotmg.game.model.GameModel;
-	import kabam.rotmg.mysterybox.model.MysteryBoxInfo;
-	import kabam.rotmg.mysterybox.services.GetMysteryBoxesTask;
-	import kabam.rotmg.mysterybox.services.MysteryBoxModel;
-	import kabam.rotmg.packages.model.PackageInfo;
-	import kabam.rotmg.packages.services.GetPackagesTask;
-	import kabam.rotmg.packages.services.PackageModel;
-	import kabam.rotmg.tooltips.HoverTooltipDelegate;
+    import kabam.rotmg.account.core.signals.OpenMoneyWindowSignal;
+    import kabam.rotmg.application.DynamicSettings;
+    import kabam.rotmg.core.signals.HideTooltipsSignal;
+    import kabam.rotmg.core.signals.ShowTooltipSignal;
+    import kabam.rotmg.game.model.GameModel;
+    import kabam.rotmg.mysterybox.model.MysteryBoxInfo;
+    import kabam.rotmg.mysterybox.services.GetMysteryBoxesTask;
+    import kabam.rotmg.mysterybox.services.MysteryBoxModel;
+    import kabam.rotmg.packages.model.PackageInfo;
+    import kabam.rotmg.packages.services.GetPackagesTask;
+    import kabam.rotmg.packages.services.PackageModel;
+    import kabam.rotmg.tooltips.HoverTooltipDelegate;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class ShopPopupMediator extends Mediator
+    public class ShopPopupMediator extends Mediator
 		{
 
 			[Inject]
@@ -144,7 +144,8 @@ package io.decagames.rotmg.shop
 				this.tabs = new UITabs(590);
 				if (this.supporterModel.hasValidData)
 				{
-					this.tabs.addTab(new SupporterShopTabView(), true);
+					//this.tabs.addTab(new SupporterShopTabView(), true);
+                    this.tabs.addTab(new SupporterShopTabView(this.supporterModel.campaignTitle), true);
 				}
 				this.tabs.addTab(this.createMysteryBoxTab(), (!(this.supporterModel.hasValidData)));
 				this.tabs.addTab(this.createPackageBoxTab());

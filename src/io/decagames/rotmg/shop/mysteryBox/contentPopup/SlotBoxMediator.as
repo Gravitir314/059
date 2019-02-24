@@ -2,17 +2,17 @@
 
 package io.decagames.rotmg.shop.mysteryBox.contentPopup
 	{
-	import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
 
-	import kabam.rotmg.core.signals.HideTooltipsSignal;
-	import kabam.rotmg.core.signals.ShowTooltipSignal;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.tooltips.HoverTooltipDelegate;
-	import kabam.rotmg.ui.model.HUDModel;
+    import kabam.rotmg.core.signals.HideTooltipsSignal;
+    import kabam.rotmg.core.signals.ShowTooltipSignal;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.tooltips.HoverTooltipDelegate;
+    import kabam.rotmg.ui.model.HUDModel;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class SlotBoxMediator extends Mediator
+    public class SlotBoxMediator extends Mediator
 		{
 
 			[Inject]

@@ -2,13 +2,13 @@
 
 package kabam.rotmg.ui.model
 	{
-	import flash.events.TimerEvent;
-	import flash.utils.Timer;
+    import flash.events.TimerEvent;
+    import flash.utils.Timer;
 
-	import org.osflash.signals.Signal;
-	import org.osflash.signals.natives.NativeSignal;
+    import org.osflash.signals.Signal;
+    import org.osflash.signals.natives.NativeSignal;
 
-	public class PotionModel
+    public class PotionModel
 		{
 
 			public var objectId:uint;

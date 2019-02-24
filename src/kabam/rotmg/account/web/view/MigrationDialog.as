@@ -2,22 +2,22 @@
 
 package kabam.rotmg.account.web.view
 	{
-	import flash.events.MouseEvent;
-	import flash.events.TimerEvent;
-	import flash.utils.Timer;
+    import flash.events.MouseEvent;
+    import flash.events.TimerEvent;
+    import flash.utils.Timer;
 
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.account.core.view.EmptyFrame;
-	import kabam.rotmg.appengine.api.AppEngineClient;
-	import kabam.rotmg.appengine.impl.SimpleAppEngineClient;
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
-	import kabam.rotmg.util.components.SimpleButton;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.account.core.view.EmptyFrame;
+    import kabam.rotmg.appengine.api.AppEngineClient;
+    import kabam.rotmg.appengine.impl.SimpleAppEngineClient;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.dialogs.control.CloseDialogsSignal;
+    import kabam.rotmg.util.components.SimpleButton;
 
-	import org.osflash.signals.Signal;
-	import org.osflash.signals.natives.NativeMappedSignal;
+    import org.osflash.signals.Signal;
+    import org.osflash.signals.natives.NativeMappedSignal;
 
-	public class MigrationDialog extends EmptyFrame
+    public class MigrationDialog extends EmptyFrame
 		{
 
 			public var done:Signal;

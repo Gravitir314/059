@@ -2,25 +2,25 @@
 
 package kabam.rotmg.game.view
 	{
-	import com.company.assembleegameclient.map.AbstractMap;
-	import com.company.assembleegameclient.objects.GameObject;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.greensock.TweenMax;
+    import com.company.assembleegameclient.map.AbstractMap;
+    import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.greensock.TweenMax;
 
-	import flash.display.Bitmap;
-	import flash.display.Graphics;
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
-	import flash.text.TextFormatAlign;
+    import flash.display.Bitmap;
+    import flash.display.Graphics;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
+    import flash.filters.DropShadowFilter;
+    import flash.text.TextFormatAlign;
 
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.labels.UILabel;
-	import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.ui.texture.TextureParser;
 
-	import kabam.rotmg.game.model.QuestModel;
+    import kabam.rotmg.game.model.QuestModel;
 
-	public class RealmQuestsDisplay extends Sprite
+    public class RealmQuestsDisplay extends Sprite
 		{
 
 			public static const NUMBER_OF_QUESTS:int = 3;

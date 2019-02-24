@@ -2,15 +2,15 @@
 
 package com.company.assembleegameclient.mapeditor
 	{
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.assembleegameclient.objects.animation.Animations;
-	import com.company.assembleegameclient.objects.animation.AnimationsData;
-	import com.company.assembleegameclient.ui.tooltip.ToolTip;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.assembleegameclient.objects.animation.Animations;
+    import com.company.assembleegameclient.objects.animation.AnimationsData;
+    import com.company.assembleegameclient.ui.tooltip.ToolTip;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
 
-	internal class ObjectElement extends Element
+    internal class ObjectElement extends Element
 		{
 
 			public var objXML_:XML;

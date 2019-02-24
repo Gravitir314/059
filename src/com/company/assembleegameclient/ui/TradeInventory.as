@@ -2,24 +2,24 @@
 
 package com.company.assembleegameclient.ui
 	{
-	import com.company.assembleegameclient.game.AGameSprite;
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.ui.BaseSimpleText;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.game.AGameSprite;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.ui.BaseSimpleText;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.constants.GeneralConstants;
-	import kabam.rotmg.messaging.impl.data.TradeItem;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.constants.GeneralConstants;
+    import kabam.rotmg.messaging.impl.data.TradeItem;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	public class TradeInventory extends Sprite
+    public class TradeInventory extends Sprite
 		{
 
 			private static const NO_CUT:Array = [0, 0, 0, 0];

@@ -2,12 +2,12 @@
 
 package kabam.rotmg.messaging.impl.data
 	{
-	import com.company.assembleegameclient.util.FreeList;
+    import com.company.assembleegameclient.util.FreeList;
 
-	import flash.utils.IDataInput;
-	import flash.utils.IDataOutput;
+    import flash.utils.IDataInput;
+    import flash.utils.IDataOutput;
 
-	public class ObjectStatusData
+    public class ObjectStatusData
 		{
 
 			public var objectId_:int;

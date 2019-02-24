@@ -2,12 +2,12 @@
 
 package kabam.rotmg.ui.model
 	{
-	import com.company.assembleegameclient.game.GameSprite;
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.game.GameSprite;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import kabam.rotmg.ui.view.KeysView;
+    import kabam.rotmg.ui.view.KeysView;
 
-	public class HUDModel
+    public class HUDModel
 		{
 
 			public var gameSprite:GameSprite;

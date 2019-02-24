@@ -2,14 +2,14 @@
 
 package kabam.rotmg.news.model
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.news.controller.NewsButtonRefreshSignal;
-	import kabam.rotmg.news.controller.NewsDataUpdatedSignal;
-	import kabam.rotmg.news.view.NewsModalPage;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.news.controller.NewsButtonRefreshSignal;
+    import kabam.rotmg.news.controller.NewsDataUpdatedSignal;
+    import kabam.rotmg.news.view.NewsModalPage;
 
-	public class NewsModel
+    public class NewsModel
 		{
 
 			private static const COUNT:int = 3;

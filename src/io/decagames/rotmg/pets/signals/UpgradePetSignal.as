@@ -2,11 +2,11 @@
 
 package io.decagames.rotmg.pets.signals
 	{
-	import io.decagames.rotmg.pets.data.vo.requests.IUpgradePetRequestVO;
+    import io.decagames.rotmg.pets.data.vo.requests.IUpgradePetRequestVO;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class UpgradePetSignal extends Signal
+    public class UpgradePetSignal extends Signal
 		{
 
 			public function UpgradePetSignal()

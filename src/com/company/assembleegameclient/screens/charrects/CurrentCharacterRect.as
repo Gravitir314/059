@@ -2,37 +2,37 @@
 
 package com.company.assembleegameclient.screens.charrects
 	{
-	import com.company.assembleegameclient.appengine.CharacterStats;
-	import com.company.assembleegameclient.appengine.SavedCharacter;
-	import com.company.assembleegameclient.screens.events.DeleteCharacterEvent;
-	import com.company.assembleegameclient.ui.tooltip.MyPlayerToolTip;
-	import com.company.assembleegameclient.ui.tooltip.TextToolTip;
-	import com.company.assembleegameclient.util.FameUtil;
-	import com.company.rotmg.graphics.DeleteXGraphic;
+    import com.company.assembleegameclient.appengine.CharacterStats;
+    import com.company.assembleegameclient.appengine.SavedCharacter;
+    import com.company.assembleegameclient.screens.events.DeleteCharacterEvent;
+    import com.company.assembleegameclient.ui.tooltip.MyPlayerToolTip;
+    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+    import com.company.assembleegameclient.util.FameUtil;
+    import com.company.rotmg.graphics.DeleteXGraphic;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.DisplayObject;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.DisplayObject;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
 
-	import io.decagames.rotmg.fame.FameContentPopup;
-	import io.decagames.rotmg.pets.data.vo.PetVO;
-	import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+    import io.decagames.rotmg.fame.FameContentPopup;
+    import io.decagames.rotmg.pets.data.vo.PetVO;
+    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
-	import kabam.rotmg.assets.services.IconFactory;
-	import kabam.rotmg.classes.model.CharacterClass;
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.assets.services.IconFactory;
+    import kabam.rotmg.classes.model.CharacterClass;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	import org.osflash.signals.Signal;
-	import org.swiftsuspenders.Injector;
+    import org.osflash.signals.Signal;
+    import org.swiftsuspenders.Injector;
 
-	public class CurrentCharacterRect extends CharacterRect
+    public class CurrentCharacterRect extends CharacterRect
 		{
 
 			private static var toolTip_:MyPlayerToolTip = null;

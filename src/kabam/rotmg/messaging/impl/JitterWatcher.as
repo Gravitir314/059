@@ -2,19 +2,19 @@
 
 package kabam.rotmg.messaging.impl
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.text.TextFieldAutoSize;
-	import flash.utils.getTimer;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.text.TextFieldAutoSize;
+    import flash.utils.getTimer;
 
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	public class JitterWatcher extends Sprite
+    public class JitterWatcher extends Sprite
 		{
 
 			private static const lineBuilder:LineBuilder = new LineBuilder();

@@ -2,22 +2,22 @@
 
 package kabam.rotmg.game.focus
 	{
-	import com.company.assembleegameclient.game.GameSprite;
+    import com.company.assembleegameclient.game.GameSprite;
 
-	import kabam.rotmg.game.focus.control.AddGameFocusConsoleActionCommand;
-	import kabam.rotmg.game.focus.control.AddGameFocusConsoleActionSignal;
-	import kabam.rotmg.game.focus.control.SetGameFocusSignal;
-	import kabam.rotmg.game.focus.view.GameFocusMediator;
+    import kabam.rotmg.game.focus.control.AddGameFocusConsoleActionCommand;
+    import kabam.rotmg.game.focus.control.AddGameFocusConsoleActionSignal;
+    import kabam.rotmg.game.focus.control.SetGameFocusSignal;
+    import kabam.rotmg.game.focus.view.GameFocusMediator;
 
-	import org.osflash.signals.Signal;
-	import org.swiftsuspenders.Injector;
+    import org.osflash.signals.Signal;
+    import org.swiftsuspenders.Injector;
 
-	import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
-	import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
-	import robotlegs.bender.framework.api.IConfig;
-	import robotlegs.bender.framework.api.IContext;
+    import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
+    import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
+    import robotlegs.bender.framework.api.IConfig;
+    import robotlegs.bender.framework.api.IContext;
 
-	public class GameFocusConfig implements IConfig
+    public class GameFocusConfig implements IConfig
 		{
 
 			[Inject]

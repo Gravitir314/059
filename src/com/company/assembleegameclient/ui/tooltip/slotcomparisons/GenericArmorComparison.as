@@ -2,9 +2,9 @@
 
 package com.company.assembleegameclient.ui.tooltip.slotcomparisons
 	{
-	import kabam.rotmg.text.view.stringBuilder.AppendingLineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.AppendingLineBuilder;
 
-	public class GenericArmorComparison extends SlotComparison
+    public class GenericArmorComparison extends SlotComparison
 		{
 
 			private static const DEFENSE_STAT:String = "21";

@@ -2,14 +2,14 @@
 
 package io.decagames.rotmg.pets.data.vo
 	{
-	import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
 
-	import io.decagames.rotmg.pets.data.rarity.PetRarityEnum;
-	import io.decagames.rotmg.pets.data.skin.PetSkinRenderer;
+    import io.decagames.rotmg.pets.data.rarity.PetRarityEnum;
+    import io.decagames.rotmg.pets.data.skin.PetSkinRenderer;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class SkinVO extends PetSkinRenderer implements IPetVO
+    public class SkinVO extends PetSkinRenderer implements IPetVO
 		{
 
 			private var _family:String;

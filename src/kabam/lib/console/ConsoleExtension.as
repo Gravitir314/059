@@ -2,15 +2,15 @@
 
 package kabam.lib.console
 	{
-	import flash.display.DisplayObjectContainer;
+    import flash.display.DisplayObjectContainer;
 
-	import kabam.lib.resizing.ResizeExtension;
+    import kabam.lib.resizing.ResizeExtension;
 
-	import robotlegs.bender.extensions.signalCommandMap.SignalCommandMapExtension;
-	import robotlegs.bender.framework.api.IContext;
-	import robotlegs.bender.framework.api.IExtension;
+    import robotlegs.bender.extensions.signalCommandMap.SignalCommandMapExtension;
+    import robotlegs.bender.framework.api.IContext;
+    import robotlegs.bender.framework.api.IExtension;
 
-	public class ConsoleExtension implements IExtension
+    public class ConsoleExtension implements IExtension
 		{
 
 			[Inject]

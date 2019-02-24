@@ -2,11 +2,11 @@
 
 package kabam.rotmg.constants
 	{
-	import com.company.util.AssetLibrary;
+    import com.company.util.AssetLibrary;
 
-	import flash.display.BitmapData;
+    import flash.display.BitmapData;
 
-	public class ItemConstants
+    public class ItemConstants
 		{
 
 			public static const NO_ITEM:int = -1;

@@ -2,17 +2,17 @@
 
 package com.company.assembleegameclient.map
 	{
-	import com.company.assembleegameclient.game.AGameSprite;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.util.GraphicsUtil;
+    import com.company.assembleegameclient.game.AGameSprite;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.util.GraphicsUtil;
 
-	import flash.display.GradientType;
-	import flash.display.GraphicsGradientFill;
-	import flash.display.GraphicsPath;
-	import flash.display.IGraphicsData;
-	import flash.display.Shape;
+    import flash.display.GradientType;
+    import flash.display.GraphicsGradientFill;
+    import flash.display.GraphicsPath;
+    import flash.display.IGraphicsData;
+    import flash.display.Shape;
 
-	public class DarknessOverlay extends Shape
+    public class DarknessOverlay extends Shape
 		{
 
 			private var graphicsData:Vector.<IGraphicsData>;

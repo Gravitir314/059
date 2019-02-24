@@ -2,36 +2,36 @@
 
 package kabam.rotmg.game.view
 	{
-	import com.company.assembleegameclient.game.GameSprite;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.util.FameUtil;
-	import com.company.assembleegameclient.util.TextureRedrawer;
-	import com.company.assembleegameclient.util.TimeUtil;
-	import com.company.util.AssetLibrary;
+    import com.company.assembleegameclient.game.GameSprite;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.util.FameUtil;
+    import com.company.assembleegameclient.util.TextureRedrawer;
+    import com.company.assembleegameclient.util.TimeUtil;
+    import com.company.util.AssetLibrary;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
+    import flash.filters.DropShadowFilter;
 
-	import io.decagames.rotmg.fame.FameContentPopup;
-	import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-	import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
-	import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.fame.FameContentPopup;
+    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+    import io.decagames.rotmg.ui.texture.TextureParser;
 
-	import kabam.rotmg.assets.services.IconFactory;
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.fortune.model.FortuneInfo;
-	import kabam.rotmg.fortune.services.FortuneModel;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-	import kabam.rotmg.ui.view.SignalWaiter;
+    import kabam.rotmg.assets.services.IconFactory;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.fortune.model.FortuneInfo;
+    import kabam.rotmg.fortune.services.FortuneModel;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.ui.view.SignalWaiter;
 
-	import org.osflash.signals.Signal;
-	import org.swiftsuspenders.Injector;
+    import org.osflash.signals.Signal;
+    import org.swiftsuspenders.Injector;
 
-	public class CreditDisplay extends Sprite
+    public class CreditDisplay extends Sprite
 		{
 
 			private static const FONT_SIZE:int = 18;

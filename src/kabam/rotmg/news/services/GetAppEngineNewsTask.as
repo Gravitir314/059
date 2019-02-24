@@ -2,17 +2,17 @@
 
 package kabam.rotmg.news.services
 	{
-	import flash.utils.getTimer;
+    import flash.utils.getTimer;
 
-	import kabam.lib.tasks.BaseTask;
-	import kabam.rotmg.appengine.api.AppEngineClient;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.language.model.LanguageModel;
-	import kabam.rotmg.news.model.NewsCellLinkType;
-	import kabam.rotmg.news.model.NewsCellVO;
-	import kabam.rotmg.news.model.NewsModel;
+    import kabam.lib.tasks.BaseTask;
+    import kabam.rotmg.appengine.api.AppEngineClient;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.language.model.LanguageModel;
+    import kabam.rotmg.news.model.NewsCellLinkType;
+    import kabam.rotmg.news.model.NewsCellVO;
+    import kabam.rotmg.news.model.NewsModel;
 
-	public class GetAppEngineNewsTask extends BaseTask implements GetNewsTask
+    public class GetAppEngineNewsTask extends BaseTask implements GetNewsTask
 		{
 
 			private static const TEN_MINUTES:int = 600;

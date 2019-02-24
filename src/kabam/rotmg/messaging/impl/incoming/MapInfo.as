@@ -2,9 +2,9 @@
 
 package kabam.rotmg.messaging.impl.incoming
 	{
-	import flash.utils.IDataInput;
+    import flash.utils.IDataInput;
 
-	public class MapInfo extends IncomingMessage
+    public class MapInfo extends IncomingMessage
 		{
 
 			public var width_:int;

@@ -2,14 +2,14 @@
 
 package com.company.assembleegameclient.ui.tooltip
 	{
-	import com.company.assembleegameclient.objects.GameObject;
-	import com.company.assembleegameclient.ui.GameObjectListItem;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.ui.GameObjectListItem;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	public class QuestToolTip extends ToolTip
+    public class QuestToolTip extends ToolTip
 		{
 
 			private var gameObject:GameObject;

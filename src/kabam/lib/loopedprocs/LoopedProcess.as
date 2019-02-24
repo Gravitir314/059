@@ -2,10 +2,10 @@
 
 package kabam.lib.loopedprocs
 	{
-	import flash.utils.Dictionary;
-	import flash.utils.getTimer;
+    import flash.utils.Dictionary;
+    import flash.utils.getTimer;
 
-	public class LoopedProcess
+    public class LoopedProcess
 		{
 
 			private static var maxId:uint;

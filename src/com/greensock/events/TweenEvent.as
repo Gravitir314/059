@@ -2,9 +2,9 @@
 
 package com.greensock.events
 	{
-	import flash.events.Event;
+    import flash.events.Event;
 
-	public class TweenEvent extends Event
+    public class TweenEvent extends Event
 		{
 
 			public static const VERSION:Number = 12;

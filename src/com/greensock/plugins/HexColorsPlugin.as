@@ -2,9 +2,9 @@
 
 package com.greensock.plugins
 	{
-	import com.greensock.TweenLite;
+    import com.greensock.TweenLite;
 
-	public class HexColorsPlugin extends TweenPlugin
+    public class HexColorsPlugin extends TweenPlugin
 		{
 
 			public static const API:Number = 2;

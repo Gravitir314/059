@@ -2,10 +2,10 @@
 
 package kabam.rotmg.packages.view
 	{
-	import flash.display.DisplayObject;
-	import flash.display.Sprite;
+    import flash.display.DisplayObject;
+    import flash.display.Sprite;
 
-	public class PackageBackground extends Sprite
+    public class PackageBackground extends Sprite
 		{
 
 			private static const Background:Class = PackageBackground_Background;

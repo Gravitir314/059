@@ -2,32 +2,32 @@
 
 package kabam.rotmg.util.components
 	{
-	import com.company.assembleegameclient.util.Currency;
-	import com.company.util.GraphicsUtil;
-	import com.company.util.MoreColorUtil;
+    import com.company.assembleegameclient.util.Currency;
+    import com.company.util.GraphicsUtil;
+    import com.company.util.MoreColorUtil;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.CapsStyle;
-	import flash.display.Graphics;
-	import flash.display.GraphicsPath;
-	import flash.display.GraphicsSolidFill;
-	import flash.display.GraphicsStroke;
-	import flash.display.IGraphicsData;
-	import flash.display.JointStyle;
-	import flash.display.LineScaleMode;
-	import flash.events.MouseEvent;
-	import flash.filters.ColorMatrixFilter;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.CapsStyle;
+    import flash.display.Graphics;
+    import flash.display.GraphicsPath;
+    import flash.display.GraphicsSolidFill;
+    import flash.display.GraphicsStroke;
+    import flash.display.IGraphicsData;
+    import flash.display.JointStyle;
+    import flash.display.LineScaleMode;
+    import flash.events.MouseEvent;
+    import flash.filters.ColorMatrixFilter;
 
-	import kabam.rotmg.assets.services.IconFactory;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StringBuilder;
-	import kabam.rotmg.ui.view.SignalWaiter;
-	import kabam.rotmg.util.components.api.BuyButton;
+    import kabam.rotmg.assets.services.IconFactory;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StringBuilder;
+    import kabam.rotmg.ui.view.SignalWaiter;
+    import kabam.rotmg.util.components.api.BuyButton;
 
-	public class LegacyBuyButton extends BuyButton
+    public class LegacyBuyButton extends BuyButton
 		{
 
 			private static const BEVEL:int = 4;

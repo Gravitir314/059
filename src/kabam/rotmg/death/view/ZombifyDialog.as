@@ -2,14 +2,14 @@
 
 package kabam.rotmg.death.view
 	{
-	import com.company.assembleegameclient.ui.dialogs.Dialog;
+    import com.company.assembleegameclient.ui.dialogs.Dialog;
 
-	import flash.display.Sprite;
-	import flash.events.Event;
+    import flash.display.Sprite;
+    import flash.events.Event;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class ZombifyDialog extends Sprite
+    public class ZombifyDialog extends Sprite
 		{
 
 			public static const TITLE:String = "ZombifyDialog.title";

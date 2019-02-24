@@ -2,19 +2,19 @@
 
 package io.decagames.rotmg.ui.texture
 	{
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.geom.Rectangle;
-	import flash.utils.ByteArray;
-	import flash.utils.Dictionary;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.geom.Rectangle;
+    import flash.utils.ByteArray;
+    import flash.utils.Dictionary;
 
-	import io.decagames.rotmg.ui.assets.UIAssets;
-	import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import io.decagames.rotmg.ui.assets.UIAssets;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
 
-	import kabam.lib.json.JsonParser;
-	import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.lib.json.JsonParser;
+    import kabam.rotmg.core.StaticInjectorContext;
 
-	public class TextureParser
+    public class TextureParser
 		{
 
 			private static var _instance:TextureParser;

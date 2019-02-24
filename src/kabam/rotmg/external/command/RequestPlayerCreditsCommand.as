@@ -2,16 +2,16 @@
 
 package kabam.rotmg.external.command
 	{
-	import kabam.lib.tasks.DispatchSignalTask;
-	import kabam.lib.tasks.TaskMonitor;
-	import kabam.lib.tasks.TaskSequence;
-	import kabam.rotmg.external.service.RequestPlayerCreditsTask;
+    import kabam.lib.tasks.DispatchSignalTask;
+    import kabam.lib.tasks.TaskMonitor;
+    import kabam.lib.tasks.TaskSequence;
+    import kabam.rotmg.external.service.RequestPlayerCreditsTask;
 
-	import org.swiftsuspenders.Injector;
+    import org.swiftsuspenders.Injector;
 
-	import robotlegs.bender.bundles.mvcs.Command;
+    import robotlegs.bender.bundles.mvcs.Command;
 
-	public class RequestPlayerCreditsCommand extends Command
+    public class RequestPlayerCreditsCommand extends Command
 		{
 
 			[Inject]

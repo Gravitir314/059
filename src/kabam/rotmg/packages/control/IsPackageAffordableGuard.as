@@ -2,13 +2,13 @@
 
 package kabam.rotmg.packages.control
 	{
-	import kabam.rotmg.account.core.signals.OpenMoneyWindowSignal;
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.packages.model.PackageInfo;
+    import kabam.rotmg.account.core.signals.OpenMoneyWindowSignal;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.packages.model.PackageInfo;
 
-	import robotlegs.bender.framework.api.IGuard;
+    import robotlegs.bender.framework.api.IGuard;
 
-	public class IsPackageAffordableGuard implements IGuard
+    public class IsPackageAffordableGuard implements IGuard
 		{
 
 			[Inject]

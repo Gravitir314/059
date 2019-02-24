@@ -2,9 +2,9 @@
 
 package kabam.lib.console.model
 	{
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	internal final class ActionHash
+    internal final class ActionHash
 		{
 
 			private var signalMap:Object;

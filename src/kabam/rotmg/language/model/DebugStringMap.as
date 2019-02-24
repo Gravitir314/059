@@ -2,9 +2,9 @@
 
 package kabam.rotmg.language.model
 	{
-	import kabam.rotmg.text.model.DebugTextInfo;
+    import kabam.rotmg.text.model.DebugTextInfo;
 
-	public class DebugStringMap implements StringMap
+    public class DebugStringMap implements StringMap
 		{
 
 			[Inject]

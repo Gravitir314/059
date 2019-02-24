@@ -2,11 +2,11 @@
 
 package com.company.assembleegameclient.ui.dialogs
 	{
-	import flash.events.Event;
+    import flash.events.Event;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class CloseDialogComponent
+    public class CloseDialogComponent
 		{
 
 			private const closeSignal:Signal = new Signal();

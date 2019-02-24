@@ -2,9 +2,9 @@
 
 package io.decagames.rotmg.ui.spinner
 	{
-	import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
 
-	public class FixedNumbersSpinner extends NumberSpinner
+    public class FixedNumbersSpinner extends NumberSpinner
 		{
 
 			private var _numbers:Vector.<int>;

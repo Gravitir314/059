@@ -2,13 +2,13 @@
 
 package com.company.assembleegameclient.map
 	{
-	import com.company.assembleegameclient.objects.GameObject;
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.util.PointUtil;
+    import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.util.PointUtil;
 
-	import flash.utils.getTimer;
+    import flash.utils.getTimer;
 
-	public class Quest
+    public class Quest
 		{
 
 			public var map_:Map;

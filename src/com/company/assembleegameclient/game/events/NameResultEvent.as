@@ -2,11 +2,11 @@
 
 package com.company.assembleegameclient.game.events
 	{
-	import flash.events.Event;
+    import flash.events.Event;
 
-	import kabam.rotmg.messaging.impl.incoming.NameResult;
+    import kabam.rotmg.messaging.impl.incoming.NameResult;
 
-	public class NameResultEvent extends Event
+    public class NameResultEvent extends Event
 		{
 
 			public static const NAMERESULTEVENT:String = "NAMERESULTEVENT";

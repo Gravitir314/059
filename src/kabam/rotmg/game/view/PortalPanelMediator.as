@@ -2,13 +2,13 @@
 
 package kabam.rotmg.game.view
 	{
-	import com.company.assembleegameclient.ui.panels.PortalPanel;
+    import com.company.assembleegameclient.ui.panels.PortalPanel;
 
-	import kabam.rotmg.game.signals.ExitGameSignal;
+    import kabam.rotmg.game.signals.ExitGameSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class PortalPanelMediator extends Mediator
+    public class PortalPanelMediator extends Mediator
 		{
 
 			[Inject]

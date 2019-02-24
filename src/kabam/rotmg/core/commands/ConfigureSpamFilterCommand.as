@@ -2,11 +2,11 @@
 
 package kabam.rotmg.core.commands
 	{
-	import kabam.rotmg.chat.control.SpamFilter;
+    import kabam.rotmg.chat.control.SpamFilter;
 
-	import robotlegs.bender.bundles.mvcs.Command;
+    import robotlegs.bender.bundles.mvcs.Command;
 
-	public class ConfigureSpamFilterCommand extends Command
+    public class ConfigureSpamFilterCommand extends Command
 		{
 
 			[Inject]

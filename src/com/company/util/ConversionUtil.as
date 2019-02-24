@@ -2,11 +2,11 @@
 
 package com.company.util
 	{
-	import flash.geom.Point;
-	import flash.geom.Rectangle;
-	import flash.geom.Vector3D;
+    import flash.geom.Point;
+    import flash.geom.Rectangle;
+    import flash.geom.Vector3D;
 
-	public class ConversionUtil
+    public class ConversionUtil
 		{
 
 			public function ConversionUtil(_arg_1:StaticEnforcer)

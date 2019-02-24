@@ -2,16 +2,16 @@
 
 package com.company.assembleegameclient.ui.panels
 	{
-	import com.company.assembleegameclient.game.GameSprite;
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.game.GameSprite;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import flash.events.Event;
-	import flash.events.KeyboardEvent;
-	import flash.events.MouseEvent;
+    import flash.events.Event;
+    import flash.events.KeyboardEvent;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.model.TextKey;
 
-	public class CharacterChangerPanel extends ButtonPanel
+    public class CharacterChangerPanel extends ButtonPanel
 		{
 
 			public function CharacterChangerPanel(_arg_1:GameSprite)

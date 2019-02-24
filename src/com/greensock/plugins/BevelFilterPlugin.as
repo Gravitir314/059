@@ -2,11 +2,11 @@
 
 package com.greensock.plugins
 	{
-	import com.greensock.TweenLite;
+    import com.greensock.TweenLite;
 
-	import flash.filters.BevelFilter;
+    import flash.filters.BevelFilter;
 
-	public class BevelFilterPlugin extends FilterPlugin
+    public class BevelFilterPlugin extends FilterPlugin
 		{
 
 			public static const API:Number = 2;

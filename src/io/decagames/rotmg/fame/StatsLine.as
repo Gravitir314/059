@@ -2,24 +2,24 @@
 
 package io.decagames.rotmg.fame
 	{
-	import com.company.assembleegameclient.util.TextureRedrawer;
-	import com.company.util.AssetLibrary;
-	import com.company.util.GraphicsUtil;
+    import com.company.assembleegameclient.util.TextureRedrawer;
+    import com.company.util.AssetLibrary;
+    import com.company.util.GraphicsUtil;
 
-	import flash.display.Bitmap;
-	import flash.display.GraphicsPath;
-	import flash.display.GraphicsSolidFill;
-	import flash.display.IGraphicsData;
-	import flash.display.Sprite;
-	import flash.text.TextFormat;
-	import flash.text.TextFormatAlign;
+    import flash.display.Bitmap;
+    import flash.display.GraphicsPath;
+    import flash.display.GraphicsSolidFill;
+    import flash.display.IGraphicsData;
+    import flash.display.Sprite;
+    import flash.text.TextFormat;
+    import flash.text.TextFormatAlign;
 
-	import io.decagames.rotmg.ui.labels.UILabel;
-	import io.decagames.rotmg.utils.colors.Tint;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.utils.colors.Tint;
 
-	import kabam.rotmg.text.model.FontModel;
+    import kabam.rotmg.text.model.FontModel;
 
-	public class StatsLine extends Sprite
+    public class StatsLine extends Sprite
 		{
 
 			public static const TYPE_BONUS:int = 0;

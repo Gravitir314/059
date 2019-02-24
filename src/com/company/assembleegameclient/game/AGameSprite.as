@@ -2,24 +2,24 @@
 
 package com.company.assembleegameclient.game
 	{
-	import com.company.assembleegameclient.map.AbstractMap;
-	import com.company.assembleegameclient.map.Camera;
-	import com.company.assembleegameclient.objects.GameObject;
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.tutorial.Tutorial;
+    import com.company.assembleegameclient.map.AbstractMap;
+    import com.company.assembleegameclient.map.Camera;
+    import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.tutorial.Tutorial;
 
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.messaging.impl.GameServerConnection;
-	import kabam.rotmg.messaging.impl.incoming.MapInfo;
-	import kabam.rotmg.ui.view.HUDView;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.messaging.impl.GameServerConnection;
+    import kabam.rotmg.messaging.impl.incoming.MapInfo;
+    import kabam.rotmg.ui.view.HUDView;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	import zfn.Hit;
+    import zfn.Hit;
 
-	public class AGameSprite extends Sprite
+    public class AGameSprite extends Sprite
 		{
 
 			public const closed:Signal = new Signal();

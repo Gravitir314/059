@@ -2,39 +2,39 @@
 
 package kabam.rotmg.account.core.view
 	{
-	import com.company.assembleegameclient.account.ui.Frame;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.ui.DeprecatedClickableText;
-	import com.company.assembleegameclient.ui.Scrollbar;
-	import com.company.rotmg.graphics.DeleteXGraphic;
-	import com.company.util.KeyCodes;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.account.ui.Frame;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.ui.DeprecatedClickableText;
+    import com.company.assembleegameclient.ui.Scrollbar;
+    import com.company.rotmg.graphics.DeleteXGraphic;
+    import com.company.util.KeyCodes;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.Graphics;
-	import flash.display.Shape;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.KeyboardEvent;
-	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
-	import flash.net.FileReference;
+    import flash.display.Graphics;
+    import flash.display.Shape;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.KeyboardEvent;
+    import flash.events.MouseEvent;
+    import flash.filters.DropShadowFilter;
+    import flash.net.FileReference;
 
-	import flashx.textLayout.formats.TextAlign;
+    import flashx.textLayout.formats.TextAlign;
 
-	import kabam.lib.tasks.Task;
-	import kabam.rotmg.account.core.signals.LoginSignal;
-	import kabam.rotmg.account.web.model.AccountData;
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.core.signals.TaskErrorSignal;
-	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.lib.tasks.Task;
+    import kabam.rotmg.account.core.signals.LoginSignal;
+    import kabam.rotmg.account.web.model.AccountData;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.core.signals.TaskErrorSignal;
+    import kabam.rotmg.dialogs.control.CloseDialogsSignal;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	import org.swiftsuspenders.Injector;
+    import org.swiftsuspenders.Injector;
 
-	public class AccountListDialog extends Frame
+    public class AccountListDialog extends Frame
 		{
 			public var login:LoginSignal;
 			private var closeDialogs:CloseDialogsSignal;

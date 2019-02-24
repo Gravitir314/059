@@ -2,12 +2,12 @@
 
 package kabam.rotmg.chat.view
 	{
-	import flash.display.Sprite;
-	import flash.events.Event;
+    import flash.display.Sprite;
+    import flash.events.Event;
 
-	import kabam.rotmg.chat.model.ChatModel;
+    import kabam.rotmg.chat.model.ChatModel;
 
-	public class Chat extends Sprite
+    public class Chat extends Sprite
 		{
 
 			public var list:ChatList;

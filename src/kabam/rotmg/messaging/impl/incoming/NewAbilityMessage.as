@@ -2,11 +2,11 @@
 
 package kabam.rotmg.messaging.impl.incoming
 	{
-	import flash.utils.IDataInput;
+    import flash.utils.IDataInput;
 
-	import kabam.lib.net.impl.Message;
+    import kabam.lib.net.impl.Message;
 
-	public class NewAbilityMessage extends Message
+    public class NewAbilityMessage extends Message
 		{
 
 			public var type:int;

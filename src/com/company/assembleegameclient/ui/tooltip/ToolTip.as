@@ -2,28 +2,28 @@
 
 package com.company.assembleegameclient.ui.tooltip
 	{
-	import com.company.assembleegameclient.map.partyoverlay.PlayerArrow;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.ui.options.Options;
-	import com.company.util.GraphicsUtil;
+    import com.company.assembleegameclient.map.partyoverlay.PlayerArrow;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.ui.options.Options;
+    import com.company.util.GraphicsUtil;
 
-	import flash.display.CapsStyle;
-	import flash.display.DisplayObject;
-	import flash.display.GraphicsPath;
-	import flash.display.GraphicsSolidFill;
-	import flash.display.GraphicsStroke;
-	import flash.display.IGraphicsData;
-	import flash.display.JointStyle;
-	import flash.display.LineScaleMode;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
+    import flash.display.CapsStyle;
+    import flash.display.DisplayObject;
+    import flash.display.GraphicsPath;
+    import flash.display.GraphicsSolidFill;
+    import flash.display.GraphicsStroke;
+    import flash.display.IGraphicsData;
+    import flash.display.JointStyle;
+    import flash.display.LineScaleMode;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
+    import flash.filters.DropShadowFilter;
 
-	import kabam.rotmg.tooltips.view.TooltipsView;
-	import kabam.rotmg.ui.view.SignalWaiter;
+    import kabam.rotmg.tooltips.view.TooltipsView;
+    import kabam.rotmg.ui.view.SignalWaiter;
 
-	public class ToolTip extends Sprite
+    public class ToolTip extends Sprite
 		{
 
 			private var background_:uint;

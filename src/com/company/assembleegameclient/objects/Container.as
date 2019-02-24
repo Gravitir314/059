@@ -2,23 +2,23 @@
 
 package com.company.assembleegameclient.objects
 	{
-	import com.company.assembleegameclient.game.GameSprite;
-	import com.company.assembleegameclient.map.Camera;
-	import com.company.assembleegameclient.map.Map;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.sound.SoundEffectLibrary;
-	import com.company.assembleegameclient.ui.panels.Panel;
-	import com.company.assembleegameclient.ui.panels.itemgrids.ContainerGrid;
-	import com.company.util.GraphicsUtil;
-	import com.company.util.PointUtil;
+    import com.company.assembleegameclient.game.GameSprite;
+    import com.company.assembleegameclient.map.Camera;
+    import com.company.assembleegameclient.map.Map;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.sound.SoundEffectLibrary;
+    import com.company.assembleegameclient.ui.panels.Panel;
+    import com.company.assembleegameclient.ui.panels.itemgrids.ContainerGrid;
+    import com.company.util.GraphicsUtil;
+    import com.company.util.PointUtil;
 
-	import flash.display.BitmapData;
-	import flash.display.GraphicsBitmapFill;
-	import flash.display.GraphicsPath;
-	import flash.display.IGraphicsData;
-	import flash.geom.Matrix;
+    import flash.display.BitmapData;
+    import flash.display.GraphicsBitmapFill;
+    import flash.display.GraphicsPath;
+    import flash.display.IGraphicsData;
+    import flash.geom.Matrix;
 
-	public class Container extends GameObject implements IInteractiveObject
+    public class Container extends GameObject implements IInteractiveObject
 		{
 
 			public var isLoot_:Boolean;

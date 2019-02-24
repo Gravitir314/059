@@ -2,23 +2,23 @@
 
 package zfn.screens.vault
 	{
-	import com.company.assembleegameclient.constants.InventoryOwnerTypes;
-	import com.company.assembleegameclient.ui.tooltip.EquipmentToolTip;
-	import com.company.assembleegameclient.ui.tooltip.TextToolTip;
-	import com.company.assembleegameclient.ui.tooltip.ToolTip;
+    import com.company.assembleegameclient.constants.InventoryOwnerTypes;
+    import com.company.assembleegameclient.ui.tooltip.EquipmentToolTip;
+    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+    import com.company.assembleegameclient.ui.tooltip.ToolTip;
 
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
 
-	import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-	import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import io.decagames.rotmg.ui.texture.TextureParser;
 
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.core.signals.ShowTooltipSignal;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.tooltips.HoverTooltipDelegate;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.core.signals.ShowTooltipSignal;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.tooltips.HoverTooltipDelegate;
 
-	public class VaultPreview extends Sprite
+    public class VaultPreview extends Sprite
 		{
 
 			private const padding:uint = 4;

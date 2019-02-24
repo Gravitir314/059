@@ -2,13 +2,13 @@
 
 package kabam.rotmg.application
 	{
-	import kabam.lib.console.ConsoleExtension;
-	import kabam.rotmg.application.api.ApplicationSetup;
+    import kabam.lib.console.ConsoleExtension;
+    import kabam.rotmg.application.api.ApplicationSetup;
 
-	import robotlegs.bender.framework.api.IConfig;
-	import robotlegs.bender.framework.api.IContext;
+    import robotlegs.bender.framework.api.IConfig;
+    import robotlegs.bender.framework.api.IContext;
 
-	public class ApplicationSpecificConfig implements IConfig
+    public class ApplicationSpecificConfig implements IConfig
 		{
 
 			[Inject]

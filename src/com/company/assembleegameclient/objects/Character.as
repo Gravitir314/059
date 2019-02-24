@@ -2,12 +2,12 @@
 
 package com.company.assembleegameclient.objects
 	{
-	import com.company.assembleegameclient.map.Camera;
-	import com.company.assembleegameclient.sound.SoundEffectLibrary;
+    import com.company.assembleegameclient.map.Camera;
+    import com.company.assembleegameclient.sound.SoundEffectLibrary;
 
-	import flash.display.IGraphicsData;
+    import flash.display.IGraphicsData;
 
-	public class Character extends GameObject
+    public class Character extends GameObject
 		{
 
 			public var hurtSound_:String;

@@ -2,17 +2,17 @@
 
 package io.decagames.rotmg.shop.genericBox
 	{
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.util.Currency;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.util.Currency;
 
-	import io.decagames.rotmg.shop.NotEnoughResources;
-	import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
-	import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+    import io.decagames.rotmg.shop.NotEnoughResources;
+    import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
+    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.game.model.GameModel;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.game.model.GameModel;
 
-	public class BoxUtils
+    public class BoxUtils
 		{
 
 

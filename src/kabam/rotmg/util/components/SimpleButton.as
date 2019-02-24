@@ -2,34 +2,34 @@
 
 package kabam.rotmg.util.components
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.util.Currency;
-	import com.company.util.GraphicsUtil;
-	import com.company.util.MoreColorUtil;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.util.Currency;
+    import com.company.util.GraphicsUtil;
+    import com.company.util.MoreColorUtil;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.CapsStyle;
-	import flash.display.Graphics;
-	import flash.display.GraphicsPath;
-	import flash.display.GraphicsSolidFill;
-	import flash.display.GraphicsStroke;
-	import flash.display.IGraphicsData;
-	import flash.display.JointStyle;
-	import flash.display.LineScaleMode;
-	import flash.events.MouseEvent;
-	import flash.filters.ColorMatrixFilter;
-	import flash.text.TextField;
-	import flash.text.TextFieldAutoSize;
-	import flash.text.TextFormat;
-	import flash.text.TextFormatAlign;
-	import flash.ui.Mouse;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.CapsStyle;
+    import flash.display.Graphics;
+    import flash.display.GraphicsPath;
+    import flash.display.GraphicsSolidFill;
+    import flash.display.GraphicsStroke;
+    import flash.display.IGraphicsData;
+    import flash.display.JointStyle;
+    import flash.display.LineScaleMode;
+    import flash.events.MouseEvent;
+    import flash.filters.ColorMatrixFilter;
+    import flash.text.TextField;
+    import flash.text.TextFieldAutoSize;
+    import flash.text.TextFormat;
+    import flash.text.TextFormatAlign;
+    import flash.ui.Mouse;
 
-	import kabam.rotmg.assets.services.IconFactory;
-	import kabam.rotmg.ui.view.SignalWaiter;
-	import kabam.rotmg.util.components.api.BuyButton;
+    import kabam.rotmg.assets.services.IconFactory;
+    import kabam.rotmg.ui.view.SignalWaiter;
+    import kabam.rotmg.util.components.api.BuyButton;
 
-	public class SimpleButton extends BuyButton
+    public class SimpleButton extends BuyButton
 		{
 
 			private static const BEVEL:int = 4;

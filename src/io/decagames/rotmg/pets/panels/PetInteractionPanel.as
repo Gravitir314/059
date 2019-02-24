@@ -2,18 +2,18 @@
 
 package io.decagames.rotmg.pets.panels
 	{
-	import com.company.assembleegameclient.game.GameSprite;
-	import com.company.assembleegameclient.ui.DeprecatedTextButton;
-	import com.company.assembleegameclient.ui.panels.Panel;
+    import com.company.assembleegameclient.game.GameSprite;
+    import com.company.assembleegameclient.ui.DeprecatedTextButton;
+    import com.company.assembleegameclient.ui.panels.Panel;
 
-	import flash.display.Bitmap;
+    import flash.display.Bitmap;
 
-	import io.decagames.rotmg.pets.utils.PetsViewAssetFactory;
+    import io.decagames.rotmg.pets.utils.PetsViewAssetFactory;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	public class PetInteractionPanel extends Panel
+    public class PetInteractionPanel extends Panel
 		{
 
 			private const titleText:TextFieldDisplayConcrete = PetsViewAssetFactory.returnTextfield(0xFFFFFF, 16, true);

@@ -2,10 +2,10 @@
 
 package io.decagames.rotmg.ui.popups
 	{
-	import flash.display.DisplayObject;
-	import flash.display.Sprite;
+    import flash.display.DisplayObject;
+    import flash.display.Sprite;
 
-	public class PopupView extends Sprite
+    public class PopupView extends Sprite
 		{
 
 			private var popupContainer:Sprite;

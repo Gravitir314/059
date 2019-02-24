@@ -2,11 +2,11 @@
 
 package io.decagames.rotmg.pets.utils
 	{
-	import flash.utils.Dictionary;
+    import flash.utils.Dictionary;
 
-	import io.decagames.rotmg.pets.data.rarity.PetRarityEnum;
+    import io.decagames.rotmg.pets.data.rarity.PetRarityEnum;
 
-	public class FeedFuseCostModel
+    public class FeedFuseCostModel
 		{
 
 			private static const feedCosts:Dictionary = makeFeedDictionary();

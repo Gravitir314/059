@@ -2,12 +2,12 @@
 
 package kabam.lib.util
 	{
-	import flash.display.DisplayObject;
-	import flash.events.Event;
+    import flash.display.DisplayObject;
+    import flash.events.Event;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class StageLifecycleUtil
+    public class StageLifecycleUtil
 		{
 
 			private var target:DisplayObject;

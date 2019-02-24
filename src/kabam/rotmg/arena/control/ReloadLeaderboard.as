@@ -2,9 +2,9 @@
 
 package kabam.rotmg.arena.control
 	{
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class ReloadLeaderboard extends Signal
+    public class ReloadLeaderboard extends Signal
 		{
 
 

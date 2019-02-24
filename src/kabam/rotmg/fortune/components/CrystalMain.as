@@ -2,17 +2,17 @@
 
 package kabam.rotmg.fortune.components
 	{
-	import com.company.assembleegameclient.util.TextureRedrawer;
-	import com.company.util.AssetLibrary;
-	import com.company.util.MoreColorUtil;
+    import com.company.assembleegameclient.util.TextureRedrawer;
+    import com.company.util.AssetLibrary;
+    import com.company.util.MoreColorUtil;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.filters.ColorMatrixFilter;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.filters.ColorMatrixFilter;
 
-	public class CrystalMain extends Sprite
+    public class CrystalMain extends Sprite
 		{
 
 			public static const ANIMATION_STAGE_PULSE:int = 0;

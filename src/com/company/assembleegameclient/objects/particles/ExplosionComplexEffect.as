@@ -2,9 +2,9 @@
 
 package com.company.assembleegameclient.objects.particles
 	{
-	import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.objects.GameObject;
 
-	public class ExplosionComplexEffect extends ParticleEffect
+    public class ExplosionComplexEffect extends ParticleEffect
 		{
 
 			public var go_:GameObject;

@@ -2,22 +2,22 @@
 
 package com.company.assembleegameclient.objects
 	{
-	import com.company.assembleegameclient.game.GameSprite;
-	import com.company.assembleegameclient.map.Camera;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.ui.panels.Panel;
-	import com.company.assembleegameclient.ui.panels.PortalPanel;
-	import com.company.assembleegameclient.util.RandomUtil;
+    import com.company.assembleegameclient.game.GameSprite;
+    import com.company.assembleegameclient.map.Camera;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.ui.panels.Panel;
+    import com.company.assembleegameclient.ui.panels.PortalPanel;
+    import com.company.assembleegameclient.util.RandomUtil;
 
-	import flash.display.BitmapData;
-	import flash.display.IGraphicsData;
-	import flash.geom.Point;
+    import flash.display.BitmapData;
+    import flash.display.IGraphicsData;
+    import flash.geom.Point;
 
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.text.view.BitmapTextFactory;
-	import kabam.rotmg.text.view.stringBuilder.StringBuilder;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.text.view.BitmapTextFactory;
+    import kabam.rotmg.text.view.stringBuilder.StringBuilder;
 
-	public class Portal extends GameObject implements IInteractiveObject
+    public class Portal extends GameObject implements IInteractiveObject
 		{
 
 			private static const NAME_PARSER:RegExp = /(^\s+)\s\(([0-9]+)\/[0-9]+\)/;

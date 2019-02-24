@@ -2,19 +2,19 @@
 
 package com.company.assembleegameclient.background
 	{
-	import com.company.assembleegameclient.map.Camera;
-	import com.company.util.GraphicsUtil;
+    import com.company.assembleegameclient.map.Camera;
+    import com.company.util.GraphicsUtil;
 
-	import flash.display.BitmapData;
-	import flash.display.BitmapDataChannel;
-	import flash.display.GraphicsBitmapFill;
-	import flash.display.GraphicsPath;
-	import flash.display.IGraphicsData;
-	import flash.geom.Matrix;
-	import flash.geom.Point;
-	import flash.geom.Rectangle;
+    import flash.display.BitmapData;
+    import flash.display.BitmapDataChannel;
+    import flash.display.GraphicsBitmapFill;
+    import flash.display.GraphicsPath;
+    import flash.display.IGraphicsData;
+    import flash.geom.Matrix;
+    import flash.geom.Point;
+    import flash.geom.Rectangle;
 
-	public class NexusBackground extends Background
+    public class NexusBackground extends Background
 		{
 
 			public static const MOVEMENT:Point = new Point(0.01, 0.01);

@@ -2,17 +2,17 @@
 
 package kabam.rotmg.editor.view.components.savedialog
 	{
-	import com.company.ui.BaseSimpleText;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.ui.BaseSimpleText;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.CapsStyle;
-	import flash.display.JointStyle;
-	import flash.display.LineScaleMode;
-	import flash.display.Sprite;
-	import flash.events.FocusEvent;
-	import flash.filters.DropShadowFilter;
+    import flash.display.CapsStyle;
+    import flash.display.JointStyle;
+    import flash.display.LineScaleMode;
+    import flash.display.Sprite;
+    import flash.events.FocusEvent;
+    import flash.filters.DropShadowFilter;
 
-	public class TagsInputField extends Sprite
+    public class TagsInputField extends Sprite
 		{
 
 			public static const HEIGHT:int = 88;

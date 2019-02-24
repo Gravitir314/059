@@ -2,20 +2,20 @@
 
 package kabam.rotmg.util.components
 	{
-	import com.greensock.plugins.DropShadowFilterPlugin;
-	import com.gskinner.motion.GTween;
+    import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.gskinner.motion.GTween;
 
-	import flash.display.Sprite;
-	import flash.events.TimerEvent;
-	import flash.filters.GlowFilter;
-	import flash.utils.Timer;
+    import flash.display.Sprite;
+    import flash.events.TimerEvent;
+    import flash.filters.GlowFilter;
+    import flash.utils.Timer;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class CountdownTimer extends Sprite
+    public class CountdownTimer extends Sprite
 		{
 
 			public static const MARGIN:int = 8;

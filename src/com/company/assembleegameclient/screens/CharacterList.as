@@ -2,17 +2,17 @@
 
 package com.company.assembleegameclient.screens
 	{
-	import com.company.assembleegameclient.screens.charrects.CharacterRectList;
+    import com.company.assembleegameclient.screens.charrects.CharacterRectList;
 
-	import flash.display.Graphics;
-	import flash.display.Shape;
-	import flash.display.Sprite;
+    import flash.display.Graphics;
+    import flash.display.Shape;
+    import flash.display.Sprite;
 
-	import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.core.model.PlayerModel;
 
-	import zfn.screens.vault.VaultList;
+    import zfn.screens.vault.VaultList;
 
-	public class CharacterList extends Sprite
+    public class CharacterList extends Sprite
 		{
 
 			public static const WIDTH:int = 760;

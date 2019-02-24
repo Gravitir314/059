@@ -2,9 +2,9 @@
 
 package kabam.rotmg.messaging.impl.outgoing
 	{
-	import flash.utils.IDataOutput;
+    import flash.utils.IDataOutput;
 
-	public class PlayerText extends OutgoingMessage
+    public class PlayerText extends OutgoingMessage
 		{
 
             public var text_:String;

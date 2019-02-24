@@ -2,25 +2,25 @@
 
 package com.company.assembleegameclient.ui.panels.itemgrids
 	{
-	import com.company.assembleegameclient.constants.InventoryOwnerTypes;
-	import com.company.assembleegameclient.objects.Container;
-	import com.company.assembleegameclient.objects.GameObject;
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.ui.panels.Panel;
-	import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.EquipmentTile;
-	import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.ItemTile;
-	import com.company.assembleegameclient.ui.tooltip.EquipmentToolTip;
-	import com.company.assembleegameclient.ui.tooltip.TextToolTip;
-	import com.company.assembleegameclient.ui.tooltip.ToolTip;
+    import com.company.assembleegameclient.constants.InventoryOwnerTypes;
+    import com.company.assembleegameclient.objects.Container;
+    import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.ui.panels.Panel;
+    import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.EquipmentTile;
+    import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.ItemTile;
+    import com.company.assembleegameclient.ui.tooltip.EquipmentToolTip;
+    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+    import com.company.assembleegameclient.ui.tooltip.ToolTip;
 
-	import flash.events.MouseEvent;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.constants.ItemConstants;
-	import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.constants.ItemConstants;
+    import kabam.rotmg.text.model.TextKey;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class ItemGrid extends Panel
+    public class ItemGrid extends Panel
 		{
 
 			private static const NO_CUT:Array = [0, 0, 0, 0];

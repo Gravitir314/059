@@ -2,13 +2,13 @@
 
 package kabam.rotmg.account.kabam.view
 	{
-	import flash.external.ExternalInterface;
-	import flash.net.URLRequest;
-	import flash.net.navigateToURL;
+    import flash.external.ExternalInterface;
+    import flash.net.URLRequest;
+    import flash.net.navigateToURL;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class AccountLoadErrorMediator extends Mediator
+    public class AccountLoadErrorMediator extends Mediator
 		{
 
 			private static const GET_KABAM_PAGE_JS:String = "rotmg.KabamDotComLib.getKabamGamePage";

@@ -2,20 +2,20 @@
 
 package kabam.rotmg.messaging.impl
 	{
-	import com.company.assembleegameclient.game.AGameSprite;
-	import com.company.assembleegameclient.objects.GameObject;
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.objects.Projectile;
+    import com.company.assembleegameclient.game.AGameSprite;
+    import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.objects.Projectile;
 
-	import flash.utils.ByteArray;
+    import flash.utils.ByteArray;
 
-	import kabam.lib.net.impl.SocketServer;
-	import kabam.rotmg.messaging.impl.data.SlotObjectData;
-	import kabam.rotmg.servers.api.Server;
+    import kabam.lib.net.impl.SocketServer;
+    import kabam.rotmg.messaging.impl.data.SlotObjectData;
+    import kabam.rotmg.servers.api.Server;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class GameServerConnection
+    public class GameServerConnection
 		{
 			[Embed(source="Packets.dat", mimeType="application/octet-stream")]
 			public static const packets:Class;

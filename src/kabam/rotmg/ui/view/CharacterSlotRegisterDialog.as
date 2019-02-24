@@ -2,14 +2,14 @@
 
 package kabam.rotmg.ui.view
 	{
-	import com.company.assembleegameclient.ui.dialogs.Dialog;
+    import com.company.assembleegameclient.ui.dialogs.Dialog;
 
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	import org.osflash.signals.Signal;
-	import org.osflash.signals.natives.NativeMappedSignal;
+    import org.osflash.signals.Signal;
+    import org.osflash.signals.natives.NativeMappedSignal;
 
-	public class CharacterSlotRegisterDialog extends Sprite
+    public class CharacterSlotRegisterDialog extends Sprite
 		{
 
 			private static const TEXT:String = "In order to have more than one character slot, you must be a registered user.";

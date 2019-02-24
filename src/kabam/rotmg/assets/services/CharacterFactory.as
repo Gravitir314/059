@@ -2,19 +2,19 @@
 
 package kabam.rotmg.assets.services
 	{
-	import com.company.assembleegameclient.util.AnimatedChar;
-	import com.company.assembleegameclient.util.AnimatedChars;
-	import com.company.assembleegameclient.util.MaskedImage;
-	import com.company.assembleegameclient.util.TextureRedrawer;
-	import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
-	import com.company.util.BitmapUtil;
+    import com.company.assembleegameclient.util.AnimatedChar;
+    import com.company.assembleegameclient.util.AnimatedChars;
+    import com.company.assembleegameclient.util.MaskedImage;
+    import com.company.assembleegameclient.util.TextureRedrawer;
+    import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
+    import com.company.util.BitmapUtil;
 
-	import flash.display.BitmapData;
+    import flash.display.BitmapData;
 
-	import kabam.rotmg.assets.model.Animation;
-	import kabam.rotmg.assets.model.CharacterTemplate;
+    import kabam.rotmg.assets.model.Animation;
+    import kabam.rotmg.assets.model.CharacterTemplate;
 
-	public class CharacterFactory
+    public class CharacterFactory
 		{
 
 			private var texture1:int;

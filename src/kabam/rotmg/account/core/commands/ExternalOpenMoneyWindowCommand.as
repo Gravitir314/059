@@ -2,34 +2,34 @@
 
 package kabam.rotmg.account.core.commands
 	{
-	import com.company.assembleegameclient.ui.dialogs.ErrorDialog;
+    import com.company.assembleegameclient.ui.dialogs.ErrorDialog;
 
-	import flash.external.ExternalInterface;
-	import flash.net.URLRequest;
-	import flash.net.URLRequestMethod;
-	import flash.net.URLVariables;
-	import flash.net.navigateToURL;
+    import flash.external.ExternalInterface;
+    import flash.net.URLRequest;
+    import flash.net.URLRequestMethod;
+    import flash.net.URLVariables;
+    import flash.net.navigateToURL;
 
-	import io.decagames.rotmg.shop.PreparingPurchaseTransactionModal;
-	import io.decagames.rotmg.ui.popups.modal.error.ErrorModal;
-	import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
-	import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+    import io.decagames.rotmg.shop.PreparingPurchaseTransactionModal;
+    import io.decagames.rotmg.ui.popups.modal.error.ErrorModal;
+    import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
+    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.account.core.model.JSInitializedModel;
-	import kabam.rotmg.account.core.model.MoneyConfig;
-	import kabam.rotmg.account.web.WebAccount;
-	import kabam.rotmg.appengine.api.AppEngineClient;
-	import kabam.rotmg.application.api.ApplicationSetup;
-	import kabam.rotmg.build.api.BuildData;
-	import kabam.rotmg.build.api.BuildEnvironment;
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.promotions.model.BeginnersPackageModel;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.account.core.model.JSInitializedModel;
+    import kabam.rotmg.account.core.model.MoneyConfig;
+    import kabam.rotmg.account.web.WebAccount;
+    import kabam.rotmg.appengine.api.AppEngineClient;
+    import kabam.rotmg.application.api.ApplicationSetup;
+    import kabam.rotmg.build.api.BuildData;
+    import kabam.rotmg.build.api.BuildEnvironment;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.promotions.model.BeginnersPackageModel;
 
-	import robotlegs.bender.framework.api.ILogger;
+    import robotlegs.bender.framework.api.ILogger;
 
-	public class ExternalOpenMoneyWindowCommand
+    public class ExternalOpenMoneyWindowCommand
 		{
 
 			private const TESTING_ERROR_MESSAGE:String = "You cannot purchase gold on the testing server";

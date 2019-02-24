@@ -2,16 +2,16 @@
 
 package kabam.rotmg.legends.view
 	{
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.legends.model.Timespan;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.legends.model.Timespan;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class LegendsTab extends Sprite
+    public class LegendsTab extends Sprite
 		{
 
 			private static const OVER_COLOR:int = 16567065;

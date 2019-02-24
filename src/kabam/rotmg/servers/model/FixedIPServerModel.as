@@ -2,12 +2,12 @@
 
 package kabam.rotmg.servers.model
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import kabam.rotmg.servers.api.Server;
-	import kabam.rotmg.servers.api.ServerModel;
+    import kabam.rotmg.servers.api.Server;
+    import kabam.rotmg.servers.api.ServerModel;
 
-	public class FixedIPServerModel implements ServerModel
+    public class FixedIPServerModel implements ServerModel
 		{
 
 			private var localhost:Server;

@@ -2,9 +2,9 @@
 
 package io.decagames.rotmg.social.signals
 	{
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class SocialDataSignal extends Signal
+    public class SocialDataSignal extends Signal
 		{
 
 			public static const FRIENDS_DATA_LOADED:String = "SocialDataSignal.FRIENDS_DATA_LOADED";

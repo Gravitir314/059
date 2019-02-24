@@ -2,28 +2,28 @@
 
 package io.decagames.rotmg.pets.components.selectedPetSkinInfo
 	{
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.util.Currency;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.util.Currency;
 
-	import io.decagames.rotmg.pets.data.PetsModel;
-	import io.decagames.rotmg.pets.data.skin.SelectedPetButtonType;
-	import io.decagames.rotmg.pets.data.vo.IPetVO;
-	import io.decagames.rotmg.pets.data.vo.PetVO;
-	import io.decagames.rotmg.pets.signals.ChangePetSkinSignal;
-	import io.decagames.rotmg.pets.signals.SelectPetSignal;
-	import io.decagames.rotmg.pets.signals.SelectPetSkinSignal;
-	import io.decagames.rotmg.shop.NotEnoughResources;
-	import io.decagames.rotmg.shop.ShopBuyButton;
-	import io.decagames.rotmg.ui.buttons.BaseButton;
-	import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+    import io.decagames.rotmg.pets.data.PetsModel;
+    import io.decagames.rotmg.pets.data.skin.SelectedPetButtonType;
+    import io.decagames.rotmg.pets.data.vo.IPetVO;
+    import io.decagames.rotmg.pets.data.vo.PetVO;
+    import io.decagames.rotmg.pets.signals.ChangePetSkinSignal;
+    import io.decagames.rotmg.pets.signals.SelectPetSignal;
+    import io.decagames.rotmg.pets.signals.SelectPetSkinSignal;
+    import io.decagames.rotmg.shop.NotEnoughResources;
+    import io.decagames.rotmg.shop.ShopBuyButton;
+    import io.decagames.rotmg.ui.buttons.BaseButton;
+    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.game.model.GameModel;
-	import kabam.rotmg.ui.model.HUDModel;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.game.model.GameModel;
+    import kabam.rotmg.ui.model.HUDModel;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class SelectedPetSkinInfoMediator extends Mediator
+    public class SelectedPetSkinInfoMediator extends Mediator
 		{
 
 			[Inject]

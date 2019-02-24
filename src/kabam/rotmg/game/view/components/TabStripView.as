@@ -2,23 +2,23 @@
 
 package kabam.rotmg.game.view.components
 	{
-	import com.company.assembleegameclient.objects.ImageFactory;
-	import com.company.assembleegameclient.ui.icons.IconButtonFactory;
-	import com.company.ui.BaseSimpleText;
-	import com.company.util.GraphicsUtil;
+    import com.company.assembleegameclient.objects.ImageFactory;
+    import com.company.assembleegameclient.ui.icons.IconButtonFactory;
+    import com.company.ui.BaseSimpleText;
+    import com.company.util.GraphicsUtil;
 
-	import flash.display.Bitmap;
-	import flash.display.GraphicsPath;
-	import flash.display.GraphicsSolidFill;
-	import flash.display.IGraphicsData;
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
+    import flash.display.Bitmap;
+    import flash.display.GraphicsPath;
+    import flash.display.GraphicsSolidFill;
+    import flash.display.IGraphicsData;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
 
-	import io.decagames.rotmg.pets.data.PetsModel;
+    import io.decagames.rotmg.pets.data.PetsModel;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class TabStripView extends Sprite
+    public class TabStripView extends Sprite
 		{
 
 			public const tabSelected:Signal = new Signal(String);

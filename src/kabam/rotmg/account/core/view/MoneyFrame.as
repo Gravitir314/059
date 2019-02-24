@@ -2,27 +2,27 @@
 
 package kabam.rotmg.account.core.view
 	{
-	import com.company.assembleegameclient.account.ui.Frame;
-	import com.company.assembleegameclient.account.ui.OfferRadioButtons;
-	import com.company.assembleegameclient.account.ui.PaymentMethodRadioButtons;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.ui.DeprecatedClickableText;
-	import com.company.assembleegameclient.ui.DeprecatedTextButton;
-	import com.company.assembleegameclient.util.PaymentMethod;
-	import com.company.assembleegameclient.util.offer.Offer;
-	import com.company.assembleegameclient.util.offer.Offers;
+    import com.company.assembleegameclient.account.ui.Frame;
+    import com.company.assembleegameclient.account.ui.OfferRadioButtons;
+    import com.company.assembleegameclient.account.ui.PaymentMethodRadioButtons;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.ui.DeprecatedClickableText;
+    import com.company.assembleegameclient.ui.DeprecatedTextButton;
+    import com.company.assembleegameclient.util.PaymentMethod;
+    import com.company.assembleegameclient.util.offer.Offer;
+    import com.company.assembleegameclient.util.offer.Offers;
 
-	import flash.display.Shape;
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
-	import flash.text.TextFieldAutoSize;
+    import flash.display.Shape;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
+    import flash.text.TextFieldAutoSize;
 
-	import kabam.rotmg.account.core.model.MoneyConfig;
-	import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.account.core.model.MoneyConfig;
+    import kabam.rotmg.text.model.TextKey;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class MoneyFrame extends Sprite
+    public class MoneyFrame extends Sprite
 		{
 
 			private static const TITLE:String = TextKey.MONEY_FRAME_TITLE;//"MoneyFrame.title"

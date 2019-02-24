@@ -2,9 +2,9 @@
 
 package kabam.rotmg.ui.model
 	{
-	import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.objects.GameObject;
 
-	public class UpdateGameObjectTileVO
+    public class UpdateGameObjectTileVO
 		{
 
 			public var tileX:int;

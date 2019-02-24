@@ -2,28 +2,28 @@
 
 package com.company.assembleegameclient.screens.charrects
 	{
-	import com.company.assembleegameclient.appengine.CharacterStats;
-	import com.company.assembleegameclient.appengine.SavedCharacter;
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.appengine.CharacterStats;
+    import com.company.assembleegameclient.appengine.SavedCharacter;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.DisplayObject;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.DisplayObject;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.assets.services.CharacterFactory;
-	import kabam.rotmg.classes.model.CharacterClass;
-	import kabam.rotmg.classes.model.CharacterSkin;
-	import kabam.rotmg.classes.model.ClassesModel;
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.assets.services.CharacterFactory;
+    import kabam.rotmg.classes.model.CharacterClass;
+    import kabam.rotmg.classes.model.CharacterSkin;
+    import kabam.rotmg.classes.model.ClassesModel;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.core.model.PlayerModel;
 
-	import org.osflash.signals.Signal;
-	import org.swiftsuspenders.Injector;
+    import org.osflash.signals.Signal;
+    import org.swiftsuspenders.Injector;
 
-	public class CharacterRectList extends Sprite
+    public class CharacterRectList extends Sprite
 		{
 
 			private var classes:ClassesModel;

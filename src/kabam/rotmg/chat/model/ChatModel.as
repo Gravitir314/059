@@ -2,11 +2,11 @@
 
 package kabam.rotmg.chat.model
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import flash.geom.Rectangle;
+    import flash.geom.Rectangle;
 
-	public class ChatModel
+    public class ChatModel
 		{
 
 			public var bounds:Rectangle;

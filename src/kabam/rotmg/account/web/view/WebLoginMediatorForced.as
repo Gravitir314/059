@@ -2,19 +2,19 @@
 
 package kabam.rotmg.account.web.view
 	{
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.account.core.signals.LoginSignal;
-	import kabam.rotmg.account.web.model.AccountData;
-	import kabam.rotmg.appengine.api.AppEngineClient;
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.core.signals.TaskErrorSignal;
-	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.account.core.signals.LoginSignal;
+    import kabam.rotmg.account.web.model.AccountData;
+    import kabam.rotmg.appengine.api.AppEngineClient;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.core.signals.TaskErrorSignal;
+    import kabam.rotmg.dialogs.control.CloseDialogsSignal;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.text.model.TextKey;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class WebLoginMediatorForced extends Mediator
+    public class WebLoginMediatorForced extends Mediator
 		{
 
 			[Inject]

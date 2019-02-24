@@ -2,11 +2,11 @@
 
 package kabam.rotmg.messaging.impl.incoming
 	{
-	import flash.utils.IDataInput;
+    import flash.utils.IDataInput;
 
-	import kabam.rotmg.messaging.impl.data.WorldPosData;
+    import kabam.rotmg.messaging.impl.data.WorldPosData;
 
-	public class Aoe extends IncomingMessage
+    public class Aoe extends IncomingMessage
 		{
 
 			public var pos_:WorldPosData = new WorldPosData();
@@ -16,6 +16,7 @@ package kabam.rotmg.messaging.impl.incoming
 			public var duration_:Number;
 			public var origType_:int;
 			public var color_:int;
+            public var armorPierce_:Boolean;
 
 			public function Aoe(_arg_1:uint, _arg_2:Function)
 			{
@@ -31,11 +32,12 @@ package kabam.rotmg.messaging.impl.incoming
 				this.duration_ = _arg_1.readFloat();
 				this.origType_ = _arg_1.readUnsignedShort();
 				this.color_ = _arg_1.readInt();
+                this.armorPierce_ = _arg_1.readBoolean();
 			}
 
 			override public function toString():String
 			{
-				return (formatToString("AOE", "pos_", "radius_", "damage_", "effect_", "duration_", "origType_", "color_"));
+                return (formatToString("AOE", "pos_", "radius_", "damage_", "effect_", "duration_", "origType_", "color_", "armorPierce_"));
 			}
 
 

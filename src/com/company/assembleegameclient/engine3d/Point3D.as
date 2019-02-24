@@ -2,22 +2,22 @@
 
 package com.company.assembleegameclient.engine3d
 	{
-	import com.company.assembleegameclient.map.Camera;
-	import com.company.util.Trig;
+    import com.company.assembleegameclient.map.Camera;
+    import com.company.util.Trig;
 
-	import flash.display.BitmapData;
-	import flash.display.GraphicsBitmapFill;
-	import flash.display.GraphicsEndFill;
-	import flash.display.GraphicsPath;
-	import flash.display.GraphicsPathCommand;
-	import flash.display.GraphicsSolidFill;
-	import flash.display.IGraphicsData;
-	import flash.geom.Matrix;
-	import flash.geom.Matrix3D;
-	import flash.geom.Utils3D;
-	import flash.geom.Vector3D;
+    import flash.display.BitmapData;
+    import flash.display.GraphicsBitmapFill;
+    import flash.display.GraphicsEndFill;
+    import flash.display.GraphicsPath;
+    import flash.display.GraphicsPathCommand;
+    import flash.display.GraphicsSolidFill;
+    import flash.display.IGraphicsData;
+    import flash.geom.Matrix;
+    import flash.geom.Matrix3D;
+    import flash.geom.Utils3D;
+    import flash.geom.Vector3D;
 
-	public class Point3D
+    public class Point3D
 		{
 
 			private static const commands_:Vector.<int> = new <int>[GraphicsPathCommand.MOVE_TO, GraphicsPathCommand.LINE_TO, GraphicsPathCommand.LINE_TO, GraphicsPathCommand.LINE_TO];

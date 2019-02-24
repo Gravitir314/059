@@ -2,28 +2,28 @@
 
 package com.company.assembleegameclient.ui
 	{
-	import com.company.assembleegameclient.objects.SellableObject;
-	import com.company.assembleegameclient.util.Currency;
+    import com.company.assembleegameclient.objects.SellableObject;
+    import com.company.assembleegameclient.util.Currency;
 
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
 
-	import io.decagames.rotmg.pets.utils.PetsViewAssetFactory;
+    import io.decagames.rotmg.pets.utils.PetsViewAssetFactory;
 
-	import kabam.rotmg.fortune.components.ItemWithTooltip;
-	import kabam.rotmg.pets.view.components.DialogCloseButton;
-	import kabam.rotmg.pets.view.components.PopupWindowBackground;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldConcreteBuilder;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.util.components.LegacyBuyButton;
-	import kabam.rotmg.util.components.UIAssetsHelper;
+    import kabam.rotmg.fortune.components.ItemWithTooltip;
+    import kabam.rotmg.pets.view.components.DialogCloseButton;
+    import kabam.rotmg.pets.view.components.PopupWindowBackground;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldConcreteBuilder;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.util.components.LegacyBuyButton;
+    import kabam.rotmg.util.components.UIAssetsHelper;
 
-	import org.osflash.signals.Signal;
-	import org.osflash.signals.natives.NativeSignal;
+    import org.osflash.signals.Signal;
+    import org.osflash.signals.natives.NativeSignal;
 
-	public class ConfirmBuyModal extends Sprite
+    public class ConfirmBuyModal extends Sprite
 		{
 
 			public static const WIDTH:int = 280;

@@ -2,11 +2,11 @@
 
 package kabam.lib.net.impl
 	{
-	import kabam.lib.net.api.MessageHandlerProxy;
+    import kabam.lib.net.api.MessageHandlerProxy;
 
-	import org.swiftsuspenders.Injector;
+    import org.swiftsuspenders.Injector;
 
-	public class ClassHandlerProxy implements MessageHandlerProxy
+    public class ClassHandlerProxy implements MessageHandlerProxy
 		{
 
 			private var injector:Injector;

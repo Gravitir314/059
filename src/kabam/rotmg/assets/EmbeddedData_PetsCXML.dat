@@ -7149,7 +7149,7 @@
       </AnimatedTexture>
    </Object>
    <Object type="0x17c5" id="Flying Eyeball Pet Stone">
-      <DisplayId>Flying Eyeball Skin</DisplayId>
+      <DisplayId>Flying Eyeball Pet Skin</DisplayId>
       <Class>Equipment</Class>
       <Item/>
       <AnimatedTexture>
@@ -12628,6 +12628,129 @@
       <SlotType>10</SlotType>
       <Description>Customize your pet with this bird costume! Let it fly like snow fairy!\n\nSprite Credits: Nazoado\n\nUnlocks Longtailed Tit Skin of the Avian family. The skin will be added to your Pet Wardrobe in the Pet Yard and can be used to change the appearance of your pet!</Description>
       <Activate skinType="30083">UnlockPetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Searing Soul" type="0x7585">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>? ? ? ?</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Searing Soul Pet Skin</DefaultSkin>
+      <Size>80</Size>
+      <NoHatchOrFuse/>
+   </Object>
+   <Object type="0x7586" id="Searing Soul Pet Skin">
+      <PetSkin/>
+      <DisplayId>Searing Soul</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>98</Index>
+      </AnimatedTexture>
+      <Family>? ? ? ?</Family>
+      <Rarity>Divine</Rarity>
+   </Object>
+   <Object type="0x7587" id="Searing Soul Pet Stone">
+      <DisplayId>Searing Soul Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>98</Index>
+      </AnimatedTexture>
+      <ScaleValue>10</ScaleValue>
+      <SlotType>10</SlotType>
+      <Description>It burns with the resolve of the fallen heroes of the nexus.\n\nSprite Credits: Aurum\n\nUnlocks Searing Soul Skin of the ? ? ? ? family. The skin will be added to your Pet Wardrobe in the Pet Yard and can be used to change the appearance of your pet!</Description>
+      <Activate skinType="30086">UnlockPetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Zodiac Pig" type="0x7588">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Farm</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Zodiac Pig Pet Skin</DefaultSkin>
+      <Size>80</Size>
+      <NoHatchOrFuse/>
+   </Object>
+   <Object type="0x7589" id="Zodiac Pig Pet Skin">
+      <PetSkin/>
+      <DisplayId>Zodiac Pig</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>99</Index>
+      </AnimatedTexture>
+      <Family>Farm</Family>
+      <Rarity>Divine</Rarity>
+   </Object>
+   <Object type="0x7590" id="Zodiac Pig Pet Stone">
+      <DisplayId>Zodiac Pig Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>99</Index>
+      </AnimatedTexture>
+      <ScaleValue>10</ScaleValue>
+      <SlotType>10</SlotType>
+      <Description>Limited Edition! Only obtainable during Lunar New Year 2019!\n\nUnlocks Zodiac Pig Skin of the Farm family. The skin will be added to your Pet Wardrobe in the Pet Yard and can be used to change the appearance of your pet!</Description>
+      <Activate skinType="30089">UnlockPetSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object id="Swan" type="0x7596">
+      <Pet/>
+      <Class>Pet</Class>
+      <Texture>
+         <File>lofiObj2</File>
+         <Index>0x32</Index>
+      </Texture>
+      <Family>Farm</Family>
+      <Rarity>Divine</Rarity>
+      <DefaultSkin>Swan Pet Skin</DefaultSkin>
+      <Size>80</Size>
+      <NoHatchOrFuse/>
+   </Object>
+   <Object type="0x7597" id="Swan Pet Skin">
+      <PetSkin/>
+      <DisplayId>Swan</DisplayId>
+      <Class>PetSkin</Class>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>100</Index>
+      </AnimatedTexture>
+      <Family>Farm</Family>
+      <Rarity>Divine</Rarity>
+   </Object>
+   <Object type="0x7598" id="Swan Pet Stone">
+      <DisplayId>Swan Pet Skin</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>petsDivine</File>
+         <Index>100</Index>
+      </AnimatedTexture>
+      <ScaleValue>10</ScaleValue>
+      <SlotType>10</SlotType>
+      <Description>Sharp-beaked, long-necked, pearly white-feathered looking for a mate for life.\n\nUnlocks Swan Skin of the Farm family. The skin will be added to your Pet Wardrobe in the Pet Yard and can be used to change the appearance of your pet!</Description>
+      <Activate skinType="30103">UnlockPetSkin</Activate>
       <Consumable/>
       <Soulbound/>
       <BagType>8</BagType>

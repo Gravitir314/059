@@ -2,14 +2,14 @@
 
 package kabam.rotmg.account.web.services
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import kabam.lib.tasks.BaseTask;
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.account.core.services.SendConfirmEmailAddressTask;
-	import kabam.rotmg.appengine.api.AppEngineClient;
+    import kabam.lib.tasks.BaseTask;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.account.core.services.SendConfirmEmailAddressTask;
+    import kabam.rotmg.appengine.api.AppEngineClient;
 
-	public class WebSendVerificationEmailTask extends BaseTask implements SendConfirmEmailAddressTask
+    public class WebSendVerificationEmailTask extends BaseTask implements SendConfirmEmailAddressTask
 		{
 
 			[Inject]

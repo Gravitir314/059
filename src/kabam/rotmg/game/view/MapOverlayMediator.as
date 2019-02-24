@@ -2,17 +2,17 @@
 
 package kabam.rotmg.game.view
 	{
-	import com.company.assembleegameclient.map.mapoverlay.MapOverlay;
-	import com.company.assembleegameclient.map.mapoverlay.SpeechBalloon;
+    import com.company.assembleegameclient.map.mapoverlay.MapOverlay;
+    import com.company.assembleegameclient.map.mapoverlay.SpeechBalloon;
 
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.game.model.AddSpeechBalloonVO;
-	import kabam.rotmg.game.model.ChatFilter;
-	import kabam.rotmg.game.signals.AddSpeechBalloonSignal;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.game.model.AddSpeechBalloonVO;
+    import kabam.rotmg.game.model.ChatFilter;
+    import kabam.rotmg.game.signals.AddSpeechBalloonSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class MapOverlayMediator extends Mediator
+    public class MapOverlayMediator extends Mediator
 		{
 
 			[Inject]

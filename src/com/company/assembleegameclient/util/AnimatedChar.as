@@ -2,15 +2,15 @@
 
 package com.company.assembleegameclient.util
 	{
-	import com.company.assembleegameclient.map.Camera;
-	import com.company.util.Trig;
+    import com.company.assembleegameclient.map.Camera;
+    import com.company.util.Trig;
 
-	import flash.display.BitmapData;
-	import flash.geom.Point;
-	import flash.geom.Rectangle;
-	import flash.utils.Dictionary;
+    import flash.display.BitmapData;
+    import flash.geom.Point;
+    import flash.geom.Rectangle;
+    import flash.utils.Dictionary;
 
-	public class AnimatedChar
+    public class AnimatedChar
 		{
 
 			public static const RIGHT:int = 0;

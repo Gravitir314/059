@@ -2,11 +2,11 @@
 
 package com.company.assembleegameclient.objects.particles
 	{
-	import com.company.assembleegameclient.util.RandomUtil;
+    import com.company.assembleegameclient.util.RandomUtil;
 
-	import flash.geom.Point;
+    import flash.geom.Point;
 
-	public class SparkerParticle extends Particle
+    public class SparkerParticle extends Particle
 		{
 
 			public var lifetime_:int;

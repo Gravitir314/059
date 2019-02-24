@@ -2,16 +2,16 @@
 
 package com.company.assembleegameclient.ui.options
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
+    import flash.filters.DropShadowFilter;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	public class OptionsTabTitle extends Sprite
+    public class OptionsTabTitle extends Sprite
 		{
 
 			private static const TEXT_SIZE:int = 16;

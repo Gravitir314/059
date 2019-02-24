@@ -2,16 +2,16 @@
 
 package com.company.assembleegameclient.game
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import flash.events.KeyboardEvent;
-	import flash.events.MouseEvent;
+    import flash.events.KeyboardEvent;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.chat.model.ChatMessage;
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.game.signals.AddTextLineSignal;
+    import kabam.rotmg.chat.model.ChatMessage;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.game.signals.AddTextLineSignal;
 
-	public class IdleWatcher
+    public class IdleWatcher
 		{
 
 			private static const MINUTE_IN_MS:int = (60 * 1000);//60000

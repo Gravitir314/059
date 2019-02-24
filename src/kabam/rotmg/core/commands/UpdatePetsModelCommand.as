@@ -2,15 +2,15 @@
 
 package kabam.rotmg.core.commands
 	{
-	import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
 
-	import io.decagames.rotmg.pets.data.PetsModel;
-	import io.decagames.rotmg.pets.data.vo.PetVO;
-	import io.decagames.rotmg.pets.data.yard.PetYardEnum;
+    import io.decagames.rotmg.pets.data.PetsModel;
+    import io.decagames.rotmg.pets.data.vo.PetVO;
+    import io.decagames.rotmg.pets.data.yard.PetYardEnum;
 
-	import robotlegs.bender.bundles.mvcs.Command;
+    import robotlegs.bender.bundles.mvcs.Command;
 
-	public class UpdatePetsModelCommand extends Command
+    public class UpdatePetsModelCommand extends Command
 		{
 
 			[Inject]

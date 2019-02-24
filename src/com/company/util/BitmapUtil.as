@@ -2,13 +2,13 @@
 
 package com.company.util
 	{
-	import flash.display.BitmapData;
-	import flash.geom.Matrix;
-	import flash.geom.Point;
-	import flash.geom.Rectangle;
-	import flash.utils.Dictionary;
+    import flash.display.BitmapData;
+    import flash.geom.Matrix;
+    import flash.geom.Point;
+    import flash.geom.Rectangle;
+    import flash.utils.Dictionary;
 
-	public class BitmapUtil
+    public class BitmapUtil
 		{
 
 			public function BitmapUtil(_arg_1:StaticEnforcer)

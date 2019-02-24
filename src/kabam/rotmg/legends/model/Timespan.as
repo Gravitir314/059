@@ -2,9 +2,9 @@
 
 package kabam.rotmg.legends.model
 	{
-	import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.model.TextKey;
 
-	public class Timespan
+    public class Timespan
 		{
 
 			public static const WEEK:Timespan = new Timespan(TextKey.TIMESPAN_WEEK, "week");

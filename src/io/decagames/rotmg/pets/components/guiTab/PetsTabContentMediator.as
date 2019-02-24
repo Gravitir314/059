@@ -2,11 +2,11 @@
 
 package io.decagames.rotmg.pets.components.guiTab
 	{
-	import io.decagames.rotmg.pets.data.PetsModel;
+    import io.decagames.rotmg.pets.data.PetsModel;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class PetsTabContentMediator extends Mediator
+    public class PetsTabContentMediator extends Mediator
 		{
 
 			[Inject]

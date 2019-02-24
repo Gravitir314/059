@@ -2,51 +2,51 @@
 
 package com.company.assembleegameclient.ui.options
 	{
-	import com.company.assembleegameclient.game.GameSprite;
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.screens.TitleMenuOption;
-	import com.company.assembleegameclient.sound.Music;
-	import com.company.assembleegameclient.sound.SFX;
-	import com.company.assembleegameclient.ui.StatusBar;
-	import com.company.assembleegameclient.util.TextureRedrawer;
-	import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
-	import com.company.rotmg.graphics.ScreenGraphic;
-	import com.company.util.AssetLibrary;
-	import com.company.util.KeyCodes;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.game.GameSprite;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.screens.TitleMenuOption;
+    import com.company.assembleegameclient.sound.Music;
+    import com.company.assembleegameclient.sound.SFX;
+    import com.company.assembleegameclient.ui.StatusBar;
+    import com.company.assembleegameclient.util.TextureRedrawer;
+    import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
+    import com.company.rotmg.graphics.ScreenGraphic;
+    import com.company.util.AssetLibrary;
+    import com.company.util.KeyCodes;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.BitmapData;
-	import flash.display.Sprite;
-	import flash.display.StageDisplayState;
-	import flash.events.Event;
-	import flash.events.KeyboardEvent;
-	import flash.events.MouseEvent;
-	import flash.geom.Point;
-	import flash.net.URLRequest;
-	import flash.net.URLRequestMethod;
-	import flash.net.navigateToURL;
-	import flash.system.Capabilities;
-	import flash.text.TextFieldAutoSize;
-	import flash.ui.Mouse;
-	import flash.ui.MouseCursor;
-	import flash.ui.MouseCursorData;
+    import flash.display.BitmapData;
     import flash.display.Shape;
+    import flash.display.Sprite;
+    import flash.display.StageDisplayState;
+    import flash.events.Event;
+    import flash.events.KeyboardEvent;
+    import flash.events.MouseEvent;
+    import flash.geom.Point;
+    import flash.net.URLRequest;
+    import flash.net.URLRequestMethod;
+    import flash.net.navigateToURL;
+    import flash.system.Capabilities;
+    import flash.text.TextFieldAutoSize;
+    import flash.ui.Mouse;
+    import flash.ui.MouseCursor;
+    import flash.ui.MouseCursorData;
 
     import io.decagames.rotmg.ui.scroll.UIScrollbar;
 
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
-	import kabam.rotmg.game.view.components.StatView;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StringBuilder;
-	import kabam.rotmg.ui.UIUtils;
-	import kabam.rotmg.ui.signals.ToggleShowTierTagSignal;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.dialogs.control.CloseDialogsSignal;
+    import kabam.rotmg.game.view.components.StatView;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StringBuilder;
+    import kabam.rotmg.ui.UIUtils;
+    import kabam.rotmg.ui.signals.ToggleShowTierTagSignal;
 
-	public class Options extends Sprite
+    public class Options extends Sprite
 		{
 			public static const Y_POSITION:int = 550;
             public static const SCROLL_HEIGHT:int = 420;

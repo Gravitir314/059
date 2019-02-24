@@ -2,12 +2,12 @@
 
 package kabam.rotmg.ui.commands
 	{
-	import flash.display.DisplayObjectContainer;
+    import flash.display.DisplayObjectContainer;
 
-	import kabam.rotmg.ui.model.HUDModel;
-	import kabam.rotmg.ui.view.KeysView;
+    import kabam.rotmg.ui.model.HUDModel;
+    import kabam.rotmg.ui.view.KeysView;
 
-	public class ShowHideKeyUICommand
+    public class ShowHideKeyUICommand
 		{
 
 			[Inject]

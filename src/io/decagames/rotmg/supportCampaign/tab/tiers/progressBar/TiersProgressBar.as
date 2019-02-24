@@ -2,15 +2,15 @@
 
 package io.decagames.rotmg.supportCampaign.tab.tiers.progressBar
 	{
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	import io.decagames.rotmg.supportCampaign.data.vo.RankVO;
-	import io.decagames.rotmg.supportCampaign.tab.tiers.button.TierButton;
-	import io.decagames.rotmg.ui.ProgressBar;
-	import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-	import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.supportCampaign.data.vo.RankVO;
+    import io.decagames.rotmg.supportCampaign.tab.tiers.button.TierButton;
+    import io.decagames.rotmg.ui.ProgressBar;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import io.decagames.rotmg.ui.texture.TextureParser;
 
-	public class TiersProgressBar extends Sprite
+    public class TiersProgressBar extends Sprite
 		{
 
 			private var ranks:Vector.<RankVO>;

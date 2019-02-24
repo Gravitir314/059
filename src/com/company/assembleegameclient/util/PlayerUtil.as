@@ -2,9 +2,9 @@
 
 package com.company.assembleegameclient.util
 	{
-	import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.objects.Player;
 
-	public class PlayerUtil
+    public class PlayerUtil
 		{
 
 

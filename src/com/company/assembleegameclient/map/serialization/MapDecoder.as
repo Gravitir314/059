@@ -2,20 +2,20 @@
 
 package com.company.assembleegameclient.map.serialization
 	{
-	import com.company.assembleegameclient.map.GroundLibrary;
-	import com.company.assembleegameclient.map.Map;
-	import com.company.assembleegameclient.objects.BasicObject;
-	import com.company.assembleegameclient.objects.GameObject;
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.util.IntPoint;
-	import com.hurlant.util.Base64;
+    import com.company.assembleegameclient.map.GroundLibrary;
+    import com.company.assembleegameclient.map.Map;
+    import com.company.assembleegameclient.objects.BasicObject;
+    import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.util.IntPoint;
+    import com.hurlant.util.Base64;
 
-	import flash.utils.ByteArray;
+    import flash.utils.ByteArray;
 
-	import kabam.lib.json.JsonParser;
-	import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.lib.json.JsonParser;
+    import kabam.rotmg.core.StaticInjectorContext;
 
-	public class MapDecoder
+    public class MapDecoder
 		{
 
 

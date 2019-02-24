@@ -2,11 +2,11 @@
 
 package kabam.rotmg.minimap.control
 	{
-	import com.company.assembleegameclient.map.Map;
+    import com.company.assembleegameclient.map.Map;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class SetMiniMapMapSignal extends Signal
+    public class SetMiniMapMapSignal extends Signal
 		{
 
 			public function SetMiniMapMapSignal()

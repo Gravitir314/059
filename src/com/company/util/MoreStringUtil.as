@@ -2,9 +2,9 @@
 
 package com.company.util
 	{
-	import flash.utils.ByteArray;
+    import flash.utils.ByteArray;
 
-	public class MoreStringUtil
+    public class MoreStringUtil
 		{
 
 

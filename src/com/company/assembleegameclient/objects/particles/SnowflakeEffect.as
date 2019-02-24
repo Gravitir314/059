@@ -2,12 +2,12 @@
 
 package com.company.assembleegameclient.objects.particles
 	{
-	import com.company.assembleegameclient.objects.GameObject;
-	import com.company.assembleegameclient.util.ColorUtil;
+    import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.util.ColorUtil;
 
-	import flash.geom.Point;
+    import flash.geom.Point;
 
-	public class SnowflakeEffect extends ParticleEffect
+    public class SnowflakeEffect extends ParticleEffect
 		{
 
 			public var start_:Point;

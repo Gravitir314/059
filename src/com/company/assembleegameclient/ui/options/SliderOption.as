@@ -2,11 +2,11 @@
 
 package com.company.assembleegameclient.ui.options
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import flash.events.Event;
+    import flash.events.Event;
 
-	public class SliderOption extends BaseOption
+    public class SliderOption extends BaseOption
 		{
 
 			private var sliderBar:VolumeSliderBar;

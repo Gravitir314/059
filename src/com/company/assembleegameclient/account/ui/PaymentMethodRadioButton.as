@@ -2,19 +2,19 @@
 
 package com.company.assembleegameclient.account.ui
 	{
-	import com.company.assembleegameclient.account.ui.components.Selectable;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.account.ui.components.Selectable;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.util.components.RadioButton;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.util.components.RadioButton;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class PaymentMethodRadioButton extends Sprite implements Selectable
+    public class PaymentMethodRadioButton extends Sprite implements Selectable
 		{
 
 			public static const HEIGHT:int = 28;

@@ -2,12 +2,12 @@
 
 package kabam.rotmg.protip.view
 	{
-	import com.gskinner.motion.GTween;
+    import com.gskinner.motion.GTween;
 
-	import flash.display.Sprite;
-	import flash.filters.GlowFilter;
+    import flash.display.Sprite;
+    import flash.filters.GlowFilter;
 
-	public class ProTipView extends Sprite
+    public class ProTipView extends Sprite
 		{
 
 			private var text:ProTipText;

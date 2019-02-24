@@ -2,16 +2,16 @@
 
 package io.decagames.rotmg.dailyQuests.view.list
 	{
-	import io.decagames.rotmg.dailyQuests.model.DailyQuest;
-	import io.decagames.rotmg.dailyQuests.model.DailyQuestsModel;
-	import io.decagames.rotmg.dailyQuests.view.info.DailyQuestInfo;
+    import io.decagames.rotmg.dailyQuests.model.DailyQuest;
+    import io.decagames.rotmg.dailyQuests.model.DailyQuestsModel;
+    import io.decagames.rotmg.dailyQuests.view.info.DailyQuestInfo;
 
-	import kabam.rotmg.constants.GeneralConstants;
-	import kabam.rotmg.ui.model.HUDModel;
+    import kabam.rotmg.constants.GeneralConstants;
+    import kabam.rotmg.ui.model.HUDModel;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class DailyQuestsListMediator extends Mediator
+    public class DailyQuestsListMediator extends Mediator
 		{
 
 			[Inject]

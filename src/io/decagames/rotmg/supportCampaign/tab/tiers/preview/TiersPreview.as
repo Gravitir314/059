@@ -2,22 +2,33 @@
 
 package io.decagames.rotmg.supportCampaign.tab.tiers.preview
 	{
-	import com.greensock.TimelineMax;
-	import com.greensock.TweenMax;
-	import com.greensock.easing.Expo;
+    import com.greensock.TimelineMax;
+    import com.greensock.TweenMax;
+    import com.greensock.easing.Expo;
 
-	import flash.display.Sprite;
+    import flash.display.DisplayObject;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.IOErrorEvent;
+    import flash.net.URLRequest;
 
-	import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.labels.UILabel;
-	import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-	import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import io.decagames.rotmg.ui.texture.TextureParser;
 
-	public class TiersPreview extends Sprite
+    import kabam.display.Loader.LoaderProxy;
+    import kabam.display.Loader.LoaderProxyConcrete;
+
+    public class TiersPreview extends Sprite
 		{
-
-			private var background:SliceScalingBitmap;
+            private var background:DisplayObject;
+			//private var background:SliceScalingBitmap;
+            private var _loader:LoaderProxy = new LoaderProxyConcrete();
+            private var _tier:int;
+            private var _currentRank:int;
+            private var _claimed:int;
 			private var _leftArrow:SliceScalingButton;
 			private var _rightArrow:SliceScalingButton;
 			private var _startTier:int;
@@ -29,14 +40,15 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
 			private var ranks:Array;
 			private var selectTween:TimelineMax;
 
-			public function TiersPreview(_arg_1:int, _arg_2:Array, _arg_3:int, _arg_4:int, _arg_5:int)
+			public function TiersPreview(_arg_1:int, _arg_2:Array, _arg_3:int, _arg_4:int, _arg_5:int, _arg_6:String)
 			{
 				this._startTier = _arg_1;
 				this.ranks = _arg_2;
 				this.componentWidth = _arg_5;
 				this._claimButton = new SliceScalingButton(TextureParser.instance.getSliceScalingBitmap("UI", "generic_green_button"));
 				this._claimButton.setLabel("Claim", DefaultLabelFormat.defaultButtonLabel);
-				this.showTier(_arg_1, _arg_3, _arg_4);
+                this.showTier(_arg_1, _arg_3, _arg_4, _arg_6);
+				//this.showTier(_arg_1, _arg_3, _arg_4)
 				this._rightArrow = new SliceScalingButton(TextureParser.instance.getSliceScalingBitmap("UI", "tier_arrow"));
 				addChild(this._rightArrow);
 				this._rightArrow.x = 533;
@@ -48,24 +60,23 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
 				addChild(this._leftArrow);
 			}
 
-			public function showTier(_arg_1:int, _arg_2:int, _arg_3:int):void
+			public function showTier(_arg_1:int, _arg_2:int, _arg_3:int, _arg_4:String):void
 			{
-				var _local_5:* = _arg_1;
-				var _local_4:* = _arg_2;
-				var _local_6:* = _arg_3;
+				/*var _local_5:*/ this._tier = _arg_1; //_tier
+				/*var _local_4:**/this._currentRank = _arg_2; //_currentRank
+				/*var _local_6:**/ this._claimed = _arg_3; //_claimed
+				if (_arg_4){
+                    if (((this.background) && (this.background.parent)))
+                    {
+                        removeChild(this.background);
+                    };
+                    this.loadPictureFromUrl(_arg_4);
+				}
 				if (((this.background) && (this.background.parent)))
 				{
 					removeChild(this.background);
 				}
-				try
-				{
-					this.background = TextureParser.instance.getSliceScalingBitmap("UI", ("Banner_Tier_" + _local_5));
-					addChildAt(this.background, 0);
-				}
-				catch (e:Error)
-				{
-				}
-				this.renderButtons(_local_5, _local_4, _local_6);
+
 			}
 
 			private function renderButtons(_arg_1:int, _arg_2:int, _arg_3:int):void
@@ -145,6 +156,31 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
 					this.selectTween.play(0);
 				}
 			}
+
+            private function loadPictureFromUrl(_arg_1:String):void
+            {
+                ((this._loader) && (this._loader.unload()));
+                this._loader.contentLoaderInfo.addEventListener(Event.COMPLETE, this.onComplete);
+                this._loader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, this.onError);
+                this._loader.contentLoaderInfo.addEventListener(IOErrorEvent.DISK_ERROR, this.onError);
+                this._loader.contentLoaderInfo.addEventListener(IOErrorEvent.NETWORK_ERROR, this.onError);
+                this._loader.load(new URLRequest(_arg_1));
+            }
+
+            private function onError(_arg_1:IOErrorEvent):void
+            {
+            }
+
+            private function onComplete(_arg_1:Event):void
+            {
+                this._loader.contentLoaderInfo.removeEventListener(Event.COMPLETE, this.onComplete);
+                this._loader.contentLoaderInfo.removeEventListener(IOErrorEvent.IO_ERROR, this.onError);
+                this._loader.contentLoaderInfo.removeEventListener(IOErrorEvent.DISK_ERROR, this.onError);
+                this._loader.contentLoaderInfo.removeEventListener(IOErrorEvent.NETWORK_ERROR, this.onError);
+                this.background = this._loader.content;
+                addChildAt(this.background, 0);
+                this.renderButtons(this._tier, this._currentRank, this._claimed);
+            }
 
 			public function get leftArrow():SliceScalingButton
 			{

@@ -2,9 +2,9 @@
 
 package kabam.rotmg.ui.signals
 	{
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class RealmQuestLevelSignal extends Signal
+    public class RealmQuestLevelSignal extends Signal
 		{
 
 			public function RealmQuestLevelSignal()

@@ -2,20 +2,20 @@
 
 package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
 	{
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.ui.panels.itemgrids.ItemGrid;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.ui.panels.itemgrids.ItemGrid;
 
-	import flash.display.DisplayObject;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
-	import flash.events.TimerEvent;
-	import flash.geom.Point;
-	import flash.utils.Timer;
+    import flash.display.DisplayObject;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
+    import flash.events.TimerEvent;
+    import flash.geom.Point;
+    import flash.utils.Timer;
 
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.game.model.GameModel;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.game.model.GameModel;
 
-	public class InteractiveItemTile extends ItemTile
+    public class InteractiveItemTile extends ItemTile
 		{
 
 			private static const DOUBLE_CLICK_PAUSE:uint = 250;

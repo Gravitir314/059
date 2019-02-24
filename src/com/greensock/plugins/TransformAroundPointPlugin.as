@@ -2,16 +2,16 @@
 
 package com.greensock.plugins
 	{
-	import com.greensock.TweenLite;
+    import com.greensock.TweenLite;
 
-	import flash.display.DisplayObject;
-	import flash.display.Sprite;
-	import flash.geom.Matrix;
-	import flash.geom.Point;
-	import flash.geom.Rectangle;
-	import flash.utils.getDefinitionByName;
+    import flash.display.DisplayObject;
+    import flash.display.Sprite;
+    import flash.geom.Matrix;
+    import flash.geom.Point;
+    import flash.geom.Rectangle;
+    import flash.utils.getDefinitionByName;
 
-	public class TransformAroundPointPlugin extends TweenPlugin
+    public class TransformAroundPointPlugin extends TweenPlugin
 		{
 
 			public static const API:Number = 2;

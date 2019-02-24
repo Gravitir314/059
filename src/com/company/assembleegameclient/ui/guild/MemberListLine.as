@@ -2,29 +2,29 @@
 
 package com.company.assembleegameclient.ui.guild
 	{
-	import com.company.assembleegameclient.ui.dialogs.Dialog;
-	import com.company.assembleegameclient.util.GuildUtil;
-	import com.company.rotmg.graphics.DeleteXGraphic;
-	import com.company.util.MoreColorUtil;
+    import com.company.assembleegameclient.ui.dialogs.Dialog;
+    import com.company.assembleegameclient.util.GuildUtil;
+    import com.company.rotmg.graphics.DeleteXGraphic;
+    import com.company.util.MoreColorUtil;
 
-	import flash.display.Bitmap;
-	import flash.display.Graphics;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
-	import flash.geom.ColorTransform;
-	import flash.text.TextFieldAutoSize;
+    import flash.display.Bitmap;
+    import flash.display.Graphics;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
+    import flash.filters.DropShadowFilter;
+    import flash.geom.ColorTransform;
+    import flash.text.TextFieldAutoSize;
 
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.dialogs.control.CloseDialogsSignal;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	internal class MemberListLine extends Sprite
+    internal class MemberListLine extends Sprite
 		{
 
 			public static const WIDTH:int = 756;

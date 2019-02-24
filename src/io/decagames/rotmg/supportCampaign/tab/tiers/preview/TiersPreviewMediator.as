@@ -2,28 +2,28 @@
 
 package io.decagames.rotmg.supportCampaign.tab.tiers.preview
 	{
-	import com.company.assembleegameclient.ui.tooltip.TextToolTip;
-	import com.company.assembleegameclient.ui.tooltip.ToolTip;
+    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+    import com.company.assembleegameclient.ui.tooltip.ToolTip;
 
-	import io.decagames.rotmg.shop.PurchaseInProgressModal;
-	import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
-	import io.decagames.rotmg.supportCampaign.signals.TierSelectedSignal;
-	import io.decagames.rotmg.supportCampaign.tab.tiers.popups.ClaimCompleteModal;
-	import io.decagames.rotmg.ui.buttons.BaseButton;
-	import io.decagames.rotmg.ui.popups.modal.error.ErrorModal;
-	import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
-	import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+    import io.decagames.rotmg.shop.PurchaseInProgressModal;
+    import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
+    import io.decagames.rotmg.supportCampaign.signals.TierSelectedSignal;
+    import io.decagames.rotmg.supportCampaign.tab.tiers.popups.ClaimCompleteModal;
+    import io.decagames.rotmg.ui.buttons.BaseButton;
+    import io.decagames.rotmg.ui.popups.modal.error.ErrorModal;
+    import io.decagames.rotmg.ui.popups.signals.ClosePopupSignal;
+    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.appengine.api.AppEngineClient;
-	import kabam.rotmg.core.signals.HideTooltipsSignal;
-	import kabam.rotmg.core.signals.ShowTooltipSignal;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.tooltips.HoverTooltipDelegate;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.appengine.api.AppEngineClient;
+    import kabam.rotmg.core.signals.HideTooltipsSignal;
+    import kabam.rotmg.core.signals.ShowTooltipSignal;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.tooltips.HoverTooltipDelegate;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class TiersPreviewMediator extends Mediator
+    public class TiersPreviewMediator extends Mediator
 		{
 
 			[Inject]
@@ -46,7 +46,7 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
 			public var hideTooltipSignal:HideTooltipsSignal;
 			private var displayedTier:int;
 			private var inProgressModal:PurchaseInProgressModal;
-			private var toolTip:ToolTip = null;
+			private var toolTip:ToolTip;
 			private var hoverTooltipDelegate:HoverTooltipDelegate;
 
 
@@ -145,10 +145,16 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
 					this.view.rightArrow.disabled = true;
 					this.view.rightArrow.alpha = 0.2;
 				}
-				this.view.showTier(_arg_1, this.model.rank, this.model.claimed);
+                this.showTier(_arg_1);
+				//this.view.showTier(_arg_1, this.model.rank, this.model.claimed);
 				this.view.selectAnimation();
 				this.checkClaimedTiers();
 			}
+
+            private function showTier(_arg_1:int):void
+            {
+                this.view.showTier(_arg_1, this.model.rank, this.model.claimed, this.model.getCampaignPictureUrl());
+            }
 
 			private function onLeftClick(_arg_1:BaseButton):void
 			{
@@ -164,7 +170,7 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
 					this.view.leftArrow.disabled = true;
 					this.view.leftArrow.alpha = 0.2;
 				}
-				this.view.showTier(this.displayedTier, this.model.rank, this.model.claimed);
+                this.showTier(this.displayedTier);//this.view.showTier(this.displayedTier, this.model.rank, this.model.claimed);
 				this.view.selectAnimation();
 				this.checkClaimedTiers();
 				this.selectedSignal.dispatch(this.displayedTier);
@@ -184,7 +190,7 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
 					this.view.rightArrow.disabled = true;
 					this.view.rightArrow.alpha = 0.2;
 				}
-				this.view.showTier(this.displayedTier, this.model.rank, this.model.claimed);
+                this.showTier(this.displayedTier);//this.view.showTier(this.displayedTier, this.model.rank, this.model.claimed);
 				this.view.selectAnimation();
 				this.checkClaimedTiers();
 				this.selectedSignal.dispatch(this.displayedTier);

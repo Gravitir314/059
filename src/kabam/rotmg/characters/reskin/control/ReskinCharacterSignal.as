@@ -2,11 +2,11 @@
 
 package kabam.rotmg.characters.reskin.control
 	{
-	import kabam.rotmg.classes.model.CharacterSkin;
+    import kabam.rotmg.classes.model.CharacterSkin;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class ReskinCharacterSignal extends Signal
+    public class ReskinCharacterSignal extends Signal
 		{
 
 			public function ReskinCharacterSignal()

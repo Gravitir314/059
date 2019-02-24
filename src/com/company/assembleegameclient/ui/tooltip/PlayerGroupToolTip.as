@@ -2,15 +2,15 @@
 
 package com.company.assembleegameclient.ui.tooltip
 	{
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.ui.GameObjectListItem;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.ui.GameObjectListItem;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	public class PlayerGroupToolTip extends ToolTip
+    public class PlayerGroupToolTip extends ToolTip
 		{
 
 			public var players_:Vector.<Player> = null;

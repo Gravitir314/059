@@ -2,16 +2,16 @@
 
 package kabam.rotmg.classes.control
 	{
-	import io.decagames.rotmg.characterMetrics.tracker.CharactersMetricsTracker;
+    import io.decagames.rotmg.characterMetrics.tracker.CharactersMetricsTracker;
 
-	import kabam.rotmg.classes.model.CharacterClass;
-	import kabam.rotmg.classes.model.CharacterSkin;
-	import kabam.rotmg.classes.model.CharacterSkinState;
-	import kabam.rotmg.classes.model.ClassesModel;
+    import kabam.rotmg.classes.model.CharacterClass;
+    import kabam.rotmg.classes.model.CharacterSkin;
+    import kabam.rotmg.classes.model.CharacterSkinState;
+    import kabam.rotmg.classes.model.ClassesModel;
 
-	import robotlegs.bender.framework.api.ILogger;
+    import robotlegs.bender.framework.api.ILogger;
 
-	public class ParseCharListXmlCommand
+    public class ParseCharListXmlCommand
 		{
 
 			[Inject]

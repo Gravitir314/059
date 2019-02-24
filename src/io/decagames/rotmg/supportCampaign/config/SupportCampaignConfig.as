@@ -2,29 +2,29 @@
 
 package io.decagames.rotmg.supportCampaign.config
 	{
-	import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
-	import io.decagames.rotmg.supportCampaign.signals.TierSelectedSignal;
-	import io.decagames.rotmg.supportCampaign.signals.UpdateCampaignProgress;
-	import io.decagames.rotmg.supportCampaign.tab.SupporterShopTabMediator;
-	import io.decagames.rotmg.supportCampaign.tab.SupporterShopTabView;
-	import io.decagames.rotmg.supportCampaign.tab.donate.DonatePanel;
-	import io.decagames.rotmg.supportCampaign.tab.donate.DonatePanelMediator;
-	import io.decagames.rotmg.supportCampaign.tab.donate.popup.DonateConfirmationPopup;
-	import io.decagames.rotmg.supportCampaign.tab.donate.popup.DonateConfirmationPopupMediator;
-	import io.decagames.rotmg.supportCampaign.tab.tiers.button.TierButton;
-	import io.decagames.rotmg.supportCampaign.tab.tiers.button.TierButtonMediator;
-	import io.decagames.rotmg.supportCampaign.tab.tiers.preview.TiersPreview;
-	import io.decagames.rotmg.supportCampaign.tab.tiers.preview.TiersPreviewMediator;
-	import io.decagames.rotmg.supportCampaign.tasks.GetCampaignStatusTask;
-	import io.decagames.rotmg.supportCampaign.tooltips.PointsTooltip;
-	import io.decagames.rotmg.supportCampaign.tooltips.PointsTooltipMediator;
+    import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
+    import io.decagames.rotmg.supportCampaign.signals.TierSelectedSignal;
+    import io.decagames.rotmg.supportCampaign.signals.UpdateCampaignProgress;
+    import io.decagames.rotmg.supportCampaign.tab.SupporterShopTabMediator;
+    import io.decagames.rotmg.supportCampaign.tab.SupporterShopTabView;
+    import io.decagames.rotmg.supportCampaign.tab.donate.DonatePanel;
+    import io.decagames.rotmg.supportCampaign.tab.donate.DonatePanelMediator;
+    import io.decagames.rotmg.supportCampaign.tab.donate.popup.DonateConfirmationPopup;
+    import io.decagames.rotmg.supportCampaign.tab.donate.popup.DonateConfirmationPopupMediator;
+    import io.decagames.rotmg.supportCampaign.tab.tiers.button.TierButton;
+    import io.decagames.rotmg.supportCampaign.tab.tiers.button.TierButtonMediator;
+    import io.decagames.rotmg.supportCampaign.tab.tiers.preview.TiersPreview;
+    import io.decagames.rotmg.supportCampaign.tab.tiers.preview.TiersPreviewMediator;
+    import io.decagames.rotmg.supportCampaign.tasks.GetCampaignStatusTask;
+    import io.decagames.rotmg.supportCampaign.tooltips.PointsTooltip;
+    import io.decagames.rotmg.supportCampaign.tooltips.PointsTooltipMediator;
 
-	import org.swiftsuspenders.Injector;
+    import org.swiftsuspenders.Injector;
 
-	import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
-	import robotlegs.bender.framework.api.IConfig;
+    import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
+    import robotlegs.bender.framework.api.IConfig;
 
-	public class SupportCampaignConfig implements IConfig
+    public class SupportCampaignConfig implements IConfig
 		{
 
 			[Inject]

@@ -2,23 +2,23 @@
 
 package com.company.assembleegameclient.util
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
-	import com.company.util.AssetLibrary;
-	import com.company.util.PointUtil;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
+    import com.company.util.AssetLibrary;
+    import com.company.util.PointUtil;
 
-	import flash.display.BitmapData;
-	import flash.display.Shader;
-	import flash.filters.BitmapFilterQuality;
-	import flash.filters.GlowFilter;
-	import flash.filters.ShaderFilter;
-	import flash.geom.ColorTransform;
-	import flash.geom.Matrix;
-	import flash.geom.Rectangle;
-	import flash.utils.ByteArray;
-	import flash.utils.Dictionary;
+    import flash.display.BitmapData;
+    import flash.display.Shader;
+    import flash.filters.BitmapFilterQuality;
+    import flash.filters.GlowFilter;
+    import flash.filters.ShaderFilter;
+    import flash.geom.ColorTransform;
+    import flash.geom.Matrix;
+    import flash.geom.Rectangle;
+    import flash.utils.ByteArray;
+    import flash.utils.Dictionary;
 
-	public class TextureRedrawer
+    public class TextureRedrawer
 		{
 
 			public static const magic:int = 12;

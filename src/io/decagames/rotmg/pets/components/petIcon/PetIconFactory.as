@@ -2,16 +2,16 @@
 
 package io.decagames.rotmg.pets.components.petIcon
 	{
-	import com.company.assembleegameclient.util.TextureRedrawer;
-	import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
+    import com.company.assembleegameclient.util.TextureRedrawer;
+    import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
 
-	import io.decagames.rotmg.pets.data.vo.IPetVO;
-	import io.decagames.rotmg.pets.data.vo.PetVO;
+    import io.decagames.rotmg.pets.data.vo.IPetVO;
+    import io.decagames.rotmg.pets.data.vo.PetVO;
 
-	public class PetIconFactory
+    public class PetIconFactory
 		{
 
 			public var outlineSize:Number = 1.4;

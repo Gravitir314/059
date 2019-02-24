@@ -2,14 +2,14 @@
 
 package com.company.assembleegameclient.objects
 	{
-	import com.company.assembleegameclient.ui.tooltip.TextToolTip;
-	import com.company.assembleegameclient.ui.tooltip.ToolTip;
-	import com.company.assembleegameclient.util.Currency;
-	import com.company.assembleegameclient.util.GuildUtil;
+    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+    import com.company.assembleegameclient.ui.tooltip.ToolTip;
+    import com.company.assembleegameclient.util.Currency;
+    import com.company.assembleegameclient.util.GuildUtil;
 
-	import flash.display.BitmapData;
+    import flash.display.BitmapData;
 
-	public class GuildMerchant extends SellableObject implements IInteractiveObject
+    public class GuildMerchant extends SellableObject implements IInteractiveObject
 		{
 
 			public var description_:String;

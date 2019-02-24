@@ -2,20 +2,20 @@
 
 package com.company.assembleegameclient.account.ui
 	{
-	import com.company.ui.BaseSimpleText;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.ui.BaseSimpleText;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.CapsStyle;
-	import flash.display.JointStyle;
-	import flash.display.LineScaleMode;
-	import flash.display.Sprite;
-	import flash.events.Event;
+    import flash.display.CapsStyle;
+    import flash.display.JointStyle;
+    import flash.display.LineScaleMode;
+    import flash.display.Sprite;
+    import flash.events.Event;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	public class TextInputField extends Sprite
+    public class TextInputField extends Sprite
 		{
 
 			public static const BACKGROUND_COLOR:uint = 0x333333;

@@ -2,17 +2,17 @@
 
 package kabam.rotmg.util.components
 	{
-	import flash.display.DisplayObject;
-	import flash.display.Sprite;
+    import flash.display.DisplayObject;
+    import flash.display.Sprite;
 
-	import kabam.lib.ui.api.List;
-	import kabam.lib.ui.api.Size;
-	import kabam.lib.ui.impl.LayoutList;
-	import kabam.lib.ui.impl.VerticalLayout;
+    import kabam.lib.ui.api.List;
+    import kabam.lib.ui.api.Size;
+    import kabam.lib.ui.impl.LayoutList;
+    import kabam.lib.ui.impl.VerticalLayout;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class VerticalScrollingList extends Sprite implements List
+    public class VerticalScrollingList extends Sprite implements List
 		{
 
 			public static const SCROLLBAR_PADDING:int = 2;

@@ -2,9 +2,9 @@
 
 package kabam.rotmg.messaging.impl.incoming
 	{
-	import flash.utils.IDataInput;
+    import flash.utils.IDataInput;
 
-	public class CreateSuccess extends IncomingMessage
+    public class CreateSuccess extends IncomingMessage
 		{
 
 			public var objectId_:int;

@@ -2,17 +2,17 @@
 
 package com.company.assembleegameclient.mapeditor
 	{
-	import com.company.assembleegameclient.map.GroundLibrary;
-	import com.company.assembleegameclient.map.RegionLibrary;
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.util.MoreStringUtil;
+    import com.company.assembleegameclient.map.GroundLibrary;
+    import com.company.assembleegameclient.map.RegionLibrary;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.util.MoreStringUtil;
 
-	import flash.utils.Dictionary;
+    import flash.utils.Dictionary;
 
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.core.model.PlayerModel;
 
-	public class GroupDivider
+    public class GroupDivider
 		{
 
 			public static const GROUP_LABELS:Vector.<String> = new <String>["Ground", "Basic Objects", "Enemies", "Walls", "3D Objects", "All Map Objects", "Regions", "Dungeons", "All Game Objects"];

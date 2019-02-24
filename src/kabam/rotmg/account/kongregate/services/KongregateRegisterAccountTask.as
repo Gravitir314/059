@@ -2,14 +2,14 @@
 
 package kabam.rotmg.account.kongregate.services
 	{
-	import kabam.lib.tasks.BaseTask;
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.account.core.services.RegisterAccountTask;
-	import kabam.rotmg.account.kongregate.view.KongregateApi;
-	import kabam.rotmg.account.web.model.AccountData;
-	import kabam.rotmg.appengine.api.AppEngineClient;
+    import kabam.lib.tasks.BaseTask;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.account.core.services.RegisterAccountTask;
+    import kabam.rotmg.account.kongregate.view.KongregateApi;
+    import kabam.rotmg.account.web.model.AccountData;
+    import kabam.rotmg.appengine.api.AppEngineClient;
 
-	public class KongregateRegisterAccountTask extends BaseTask implements RegisterAccountTask
+    public class KongregateRegisterAccountTask extends BaseTask implements RegisterAccountTask
 		{
 
 			[Inject]

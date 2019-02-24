@@ -2,14 +2,14 @@
 
 package kabam.rotmg.account.securityQuestions.view
 	{
-	import com.company.assembleegameclient.account.ui.Frame;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.account.ui.Frame;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	public class SecurityQuestionsConfirmDialog extends Frame
+    public class SecurityQuestionsConfirmDialog extends Frame
 		{
 
 			private var infoText:TextFieldDisplayConcrete;

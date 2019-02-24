@@ -2,14 +2,14 @@
 
 package kabam.rotmg.ui.view.components
 	{
-	import flash.display.DisplayObject;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.utils.getTimer;
+    import flash.display.DisplayObject;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.utils.getTimer;
 
-	import kabam.rotmg.assets.EmbeddedAssets;
+    import kabam.rotmg.assets.EmbeddedAssets;
 
-	public class Spinner extends Sprite
+    public class Spinner extends Sprite
 		{
 
 			public const graphic:DisplayObject = new EmbeddedAssets.StarburstSpinner();

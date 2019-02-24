@@ -2,16 +2,16 @@
 
 package com.company.assembleegameclient.ui
 	{
-	import com.adobe.images.PNGEncoder;
+    import com.adobe.images.PNGEncoder;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
-	import flash.net.FileReference;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
+    import flash.net.FileReference;
 
-	public class PicView extends Sprite
+    public class PicView extends Sprite
 		{
 
 			private var bitmap_:Bitmap;

@@ -2,29 +2,29 @@
 
 package io.decagames.rotmg.social.model
 	{
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.util.FameUtil;
-	import com.company.assembleegameclient.util.TimeUtil;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.util.FameUtil;
+    import com.company.assembleegameclient.util.TimeUtil;
 
-	import flash.utils.Dictionary;
+    import flash.utils.Dictionary;
 
-	import io.decagames.rotmg.social.config.FriendsActions;
-	import io.decagames.rotmg.social.config.GuildActions;
-	import io.decagames.rotmg.social.config.SocialConfig;
-	import io.decagames.rotmg.social.signals.SocialDataSignal;
-	import io.decagames.rotmg.social.tasks.FriendDataRequestTask;
-	import io.decagames.rotmg.social.tasks.GuildDataRequestTask;
-	import io.decagames.rotmg.social.tasks.ISocialTask;
+    import io.decagames.rotmg.social.config.FriendsActions;
+    import io.decagames.rotmg.social.config.GuildActions;
+    import io.decagames.rotmg.social.config.SocialConfig;
+    import io.decagames.rotmg.social.signals.SocialDataSignal;
+    import io.decagames.rotmg.social.tasks.FriendDataRequestTask;
+    import io.decagames.rotmg.social.tasks.GuildDataRequestTask;
+    import io.decagames.rotmg.social.tasks.ISocialTask;
 
-	import kabam.lib.tasks.BaseTask;
-	import kabam.rotmg.servers.api.Server;
-	import kabam.rotmg.servers.api.ServerModel;
-	import kabam.rotmg.ui.model.HUDModel;
+    import kabam.lib.tasks.BaseTask;
+    import kabam.rotmg.servers.api.Server;
+    import kabam.rotmg.servers.api.ServerModel;
+    import kabam.rotmg.ui.model.HUDModel;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class SocialModel
+    public class SocialModel
 		{
 
 			[Inject]

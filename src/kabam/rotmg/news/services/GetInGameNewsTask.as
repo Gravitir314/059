@@ -2,18 +2,18 @@
 
 package kabam.rotmg.news.services
 	{
-	import kabam.lib.tasks.BaseTask;
-	import kabam.rotmg.appengine.api.AppEngineClient;
-	import kabam.rotmg.dialogs.control.AddPopupToStartupQueueSignal;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.dialogs.model.PopupNamesConfig;
-	import kabam.rotmg.news.model.InGameNews;
-	import kabam.rotmg.news.model.NewsModel;
-	import kabam.rotmg.news.view.NewsModal;
+    import kabam.lib.tasks.BaseTask;
+    import kabam.rotmg.appengine.api.AppEngineClient;
+    import kabam.rotmg.dialogs.control.AddPopupToStartupQueueSignal;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.dialogs.model.PopupNamesConfig;
+    import kabam.rotmg.news.model.InGameNews;
+    import kabam.rotmg.news.model.NewsModel;
+    import kabam.rotmg.news.view.NewsModal;
 
-	import robotlegs.bender.framework.api.ILogger;
+    import robotlegs.bender.framework.api.ILogger;
 
-	public class GetInGameNewsTask extends BaseTask
+    public class GetInGameNewsTask extends BaseTask
 		{
 
 			[Inject]

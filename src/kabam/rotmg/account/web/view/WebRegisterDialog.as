@@ -2,25 +2,25 @@
 
 package kabam.rotmg.account.web.view
 	{
-	import com.company.assembleegameclient.account.ui.CheckBoxField;
-	import com.company.assembleegameclient.account.ui.Frame;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.util.EmailValidator;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.account.ui.CheckBoxField;
+    import com.company.assembleegameclient.account.ui.Frame;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.util.EmailValidator;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.events.MouseEvent;
-	import flash.events.TextEvent;
+    import flash.events.MouseEvent;
+    import flash.events.TextEvent;
 
-	import kabam.rotmg.account.ui.components.DateField;
-	import kabam.rotmg.account.web.model.AccountData;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.account.ui.components.DateField;
+    import kabam.rotmg.account.web.model.AccountData;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	import org.osflash.signals.Signal;
-	import org.osflash.signals.natives.NativeMappedSignal;
+    import org.osflash.signals.Signal;
+    import org.osflash.signals.natives.NativeMappedSignal;
 
-	public class WebRegisterDialog extends Frame
+    public class WebRegisterDialog extends Frame
 		{
 
 			private const errors:Array = [];

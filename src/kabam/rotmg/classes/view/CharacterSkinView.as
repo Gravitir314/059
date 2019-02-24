@@ -2,27 +2,27 @@
 
 package kabam.rotmg.classes.view
 	{
-	import com.company.assembleegameclient.constants.ScreenTypes;
-	import com.company.assembleegameclient.screens.AccountScreen;
-	import com.company.assembleegameclient.screens.TitleMenuOption;
-	import com.company.rotmg.graphics.ScreenGraphic;
+    import com.company.assembleegameclient.constants.ScreenTypes;
+    import com.company.assembleegameclient.screens.AccountScreen;
+    import com.company.assembleegameclient.screens.TitleMenuOption;
+    import com.company.rotmg.graphics.ScreenGraphic;
 
-	import flash.display.Shape;
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
-	import flash.text.TextFieldAutoSize;
+    import flash.display.Shape;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
+    import flash.text.TextFieldAutoSize;
 
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.game.view.CreditDisplay;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.ui.view.SignalWaiter;
-	import kabam.rotmg.ui.view.components.ScreenBase;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.game.view.CreditDisplay;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.ui.view.SignalWaiter;
+    import kabam.rotmg.ui.view.components.ScreenBase;
 
-	import org.osflash.signals.Signal;
-	import org.osflash.signals.natives.NativeMappedSignal;
+    import org.osflash.signals.Signal;
+    import org.osflash.signals.natives.NativeMappedSignal;
 
-	public class CharacterSkinView extends Sprite
+    public class CharacterSkinView extends Sprite
 		{
 
 			private const base:ScreenBase = makeScreenBase();
@@ -123,7 +123,9 @@ package kabam.rotmg.classes.view
 
 			private function makeClassDetailView():ClassDetailView
 			{
-                var _local_1:ClassDetailView = new ClassDetailView();
+                var _local_1:ClassDetailView;
+                _local_1 = new ClassDetailView();
+                //var _local_1:ClassDetailView = new ClassDetailView();
 				_local_1.x = 5;
 				_local_1.y = 110;
 				addChild(_local_1);

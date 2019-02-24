@@ -2,13 +2,13 @@
 
 package kabam.rotmg.ui.view.components.dropdown
 	{
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.ui.view.SignalWaiter;
+    import kabam.rotmg.ui.view.SignalWaiter;
 
-	public class LocalizedDropDown extends Sprite
+    public class LocalizedDropDown extends Sprite
 		{
 
 			protected const h_:int = 36;

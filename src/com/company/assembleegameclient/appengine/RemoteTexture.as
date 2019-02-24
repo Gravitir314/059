@@ -2,21 +2,21 @@
 
 package com.company.assembleegameclient.appengine
 	{
-	import flash.display.BitmapData;
-	import flash.net.URLLoaderDataFormat;
-	import flash.utils.ByteArray;
+    import flash.display.BitmapData;
+    import flash.net.URLLoaderDataFormat;
+    import flash.utils.ByteArray;
 
-	import ion.utils.png.PNGDecoder;
+    import ion.utils.png.PNGDecoder;
 
-	import kabam.rotmg.appengine.api.RetryLoader;
-	import kabam.rotmg.appengine.impl.AppEngineRetryLoader;
-	import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.appengine.api.RetryLoader;
+    import kabam.rotmg.appengine.impl.AppEngineRetryLoader;
+    import kabam.rotmg.core.StaticInjectorContext;
 
-	import org.swiftsuspenders.Injector;
+    import org.swiftsuspenders.Injector;
 
-	import robotlegs.bender.framework.api.ILogger;
+    import robotlegs.bender.framework.api.ILogger;
 
-	public class RemoteTexture
+    public class RemoteTexture
 		{
 
 			private static const URL_PATTERN:String = "https://{DOMAIN}/picture/get";

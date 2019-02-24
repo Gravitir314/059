@@ -2,9 +2,9 @@
 
 package kabam.rotmg.classes.model
 	{
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class CharacterClass
+    public class CharacterClass
 		{
 
 			public const selected:Signal = new Signal(CharacterClass);

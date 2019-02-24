@@ -2,19 +2,19 @@
 
 package kabam.rotmg.arena.view
 	{
-	import flash.display.Sprite;
-	import flash.events.TimerEvent;
-	import flash.filters.DropShadowFilter;
-	import flash.utils.Timer;
+    import flash.display.Sprite;
+    import flash.events.TimerEvent;
+    import flash.filters.DropShadowFilter;
+    import flash.utils.Timer;
 
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.StaticTextDisplay;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.StaticTextDisplay;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class ImminentWaveCountdownClock extends Sprite
+    public class ImminentWaveCountdownClock extends Sprite
 		{
 
 			private var count:int = 5;

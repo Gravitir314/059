@@ -2,22 +2,22 @@
 
 package com.company.assembleegameclient.map
 	{
-	import com.company.assembleegameclient.background.Background;
-	import com.company.assembleegameclient.game.AGameSprite;
-	import com.company.assembleegameclient.map.mapoverlay.MapOverlay;
-	import com.company.assembleegameclient.map.partyoverlay.PartyOverlay;
-	import com.company.assembleegameclient.objects.BasicObject;
-	import com.company.assembleegameclient.objects.GameObject;
-	import com.company.assembleegameclient.objects.Party;
-	import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.background.Background;
+    import com.company.assembleegameclient.game.AGameSprite;
+    import com.company.assembleegameclient.map.mapoverlay.MapOverlay;
+    import com.company.assembleegameclient.map.partyoverlay.PartyOverlay;
+    import com.company.assembleegameclient.objects.BasicObject;
+    import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.objects.Party;
+    import com.company.assembleegameclient.objects.Player;
 
-	import flash.display.Sprite;
-	import flash.geom.Point;
-	import flash.utils.Dictionary;
+    import flash.display.Sprite;
+    import flash.geom.Point;
+    import flash.utils.Dictionary;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class AbstractMap extends Sprite
+    public class AbstractMap extends Sprite
 		{
 
 			public var goDict_:Dictionary = new Dictionary();

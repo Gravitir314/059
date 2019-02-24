@@ -2,12 +2,12 @@
 
 package zfn.sound
 	{
-	import com.company.assembleegameclient.sound.SoundEffectLibrary;
+    import com.company.assembleegameclient.sound.SoundEffectLibrary;
 
-	import flash.media.Sound;
-	import flash.utils.Dictionary;
+    import flash.media.Sound;
+    import flash.utils.Dictionary;
 
-	public class SoundAssets
+    public class SoundAssets
 		{
 
 			[Embed(source="ParsedSounds/sorc.mp3")]

@@ -2,27 +2,27 @@
 
 package com.company.assembleegameclient.screens
 	{
-	import com.company.assembleegameclient.account.ui.Frame;
-	import com.company.assembleegameclient.account.ui.TextInputField;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.ui.DeprecatedClickableText;
-	import com.company.util.KeyCodes;
+    import com.company.assembleegameclient.account.ui.Frame;
+    import com.company.assembleegameclient.account.ui.TextInputField;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.ui.DeprecatedClickableText;
+    import com.company.util.KeyCodes;
 
-	import flash.events.Event;
-	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
+    import flash.filters.DropShadowFilter;
 
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.dialogs.control.CloseDialogsSignal;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	import org.swiftsuspenders.Injector;
+    import org.swiftsuspenders.Injector;
 
-	import starling.events.KeyboardEvent;
+    import starling.events.KeyboardEvent;
 
-	public class MultiDialog extends Frame
+    public class MultiDialog extends Frame
 		{
 			private var title:TextFieldDisplayConcrete;
 			private var closeDialog:CloseDialogsSignal;

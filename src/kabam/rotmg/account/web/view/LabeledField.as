@@ -2,15 +2,15 @@
 
 package kabam.rotmg.account.web.view
 	{
-	import com.company.ui.BaseSimpleText;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.ui.BaseSimpleText;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class LabeledField extends FormField
+    public class LabeledField extends FormField
 		{
 
 			public var nameText_:TextFieldDisplayConcrete;

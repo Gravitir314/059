@@ -2,36 +2,36 @@
 
 package kabam.rotmg.fame.view
 	{
-	import com.company.assembleegameclient.map.GroundLibrary;
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.assembleegameclient.screens.ScoreTextLine;
-	import com.company.assembleegameclient.screens.ScoringBox;
-	import com.company.assembleegameclient.screens.TitleMenuOption;
-	import com.company.assembleegameclient.sound.SoundEffectLibrary;
-	import com.company.assembleegameclient.util.FameUtil;
-	import com.company.rotmg.graphics.FameIconBackgroundDesign;
-	import com.company.rotmg.graphics.ScreenGraphic;
-	import com.company.util.BitmapUtil;
-	import com.gskinner.motion.GTween;
+    import com.company.assembleegameclient.map.GroundLibrary;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.assembleegameclient.screens.ScoreTextLine;
+    import com.company.assembleegameclient.screens.ScoringBox;
+    import com.company.assembleegameclient.screens.TitleMenuOption;
+    import com.company.assembleegameclient.sound.SoundEffectLibrary;
+    import com.company.assembleegameclient.util.FameUtil;
+    import com.company.rotmg.graphics.FameIconBackgroundDesign;
+    import com.company.rotmg.graphics.ScreenGraphic;
+    import com.company.util.BitmapUtil;
+    import com.gskinner.motion.GTween;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.DisplayObjectContainer;
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
-	import flash.geom.Rectangle;
-	import flash.text.TextFieldAutoSize;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.DisplayObjectContainer;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
+    import flash.filters.DropShadowFilter;
+    import flash.geom.Rectangle;
+    import flash.text.TextFieldAutoSize;
 
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.ui.view.components.ScreenBase;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.ui.view.components.ScreenBase;
 
-	import org.osflash.signals.Signal;
-	import org.osflash.signals.natives.NativeMappedSignal;
+    import org.osflash.signals.Signal;
+    import org.osflash.signals.natives.NativeMappedSignal;
 
-	public class FameView extends Sprite
+    public class FameView extends Sprite
 		{
 
 			public var closed:Signal;

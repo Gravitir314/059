@@ -2,11 +2,11 @@
 
 package com.company.assembleegameclient.util
 	{
-	import com.company.util.ImageSet;
+    import com.company.util.ImageSet;
 
-	import flash.display.BitmapData;
+    import flash.display.BitmapData;
 
-	public class MaskedImageSet
+    public class MaskedImageSet
 		{
 
 			public var images_:Vector.<MaskedImage> = new Vector.<MaskedImage>();

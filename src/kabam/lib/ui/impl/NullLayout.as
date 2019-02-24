@@ -2,11 +2,11 @@
 
 package kabam.lib.ui.impl
 	{
-	import flash.display.DisplayObject;
+    import flash.display.DisplayObject;
 
-	import kabam.lib.ui.api.Layout;
+    import kabam.lib.ui.api.Layout;
 
-	public class NullLayout implements Layout
+    public class NullLayout implements Layout
 		{
 
 

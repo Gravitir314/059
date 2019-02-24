@@ -2,15 +2,15 @@
 
 package kabam.rotmg.legends.model
 	{
-	import com.company.util.ConversionUtil;
+    import com.company.util.ConversionUtil;
 
-	import kabam.rotmg.assets.services.CharacterFactory;
-	import kabam.rotmg.classes.model.CharacterClass;
-	import kabam.rotmg.classes.model.CharacterSkin;
-	import kabam.rotmg.classes.model.ClassesModel;
-	import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.assets.services.CharacterFactory;
+    import kabam.rotmg.classes.model.CharacterClass;
+    import kabam.rotmg.classes.model.CharacterSkin;
+    import kabam.rotmg.classes.model.ClassesModel;
+    import kabam.rotmg.core.model.PlayerModel;
 
-	public class LegendFactory
+    public class LegendFactory
 		{
 
 			[Inject]

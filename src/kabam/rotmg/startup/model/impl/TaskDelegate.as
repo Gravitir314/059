@@ -2,12 +2,12 @@
 
 package kabam.rotmg.startup.model.impl
 	{
-	import kabam.lib.tasks.Task;
-	import kabam.rotmg.startup.model.api.StartupDelegate;
+    import kabam.lib.tasks.Task;
+    import kabam.rotmg.startup.model.api.StartupDelegate;
 
-	import org.swiftsuspenders.Injector;
+    import org.swiftsuspenders.Injector;
 
-	public class TaskDelegate implements StartupDelegate
+    public class TaskDelegate implements StartupDelegate
 		{
 
 			public var injector:Injector;

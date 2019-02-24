@@ -2,25 +2,25 @@
 
 package kabam.rotmg.account.core.view
 	{
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
-	import flash.text.TextFieldAutoSize;
-	import flash.text.TextFormatAlign;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
+    import flash.text.TextFieldAutoSize;
+    import flash.text.TextFormatAlign;
 
-	import io.decagames.rotmg.pets.utils.PetsViewAssetFactory;
+    import io.decagames.rotmg.pets.utils.PetsViewAssetFactory;
 
-	import kabam.rotmg.pets.view.components.DialogCloseButton;
-	import kabam.rotmg.pets.view.components.PopupWindowBackground;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.pets.view.components.DialogCloseButton;
+    import kabam.rotmg.pets.view.components.PopupWindowBackground;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class EmptyFrame extends Sprite
+    public class EmptyFrame extends Sprite
 		{
 
 			public static const TEXT_MARGIN:int = 20;

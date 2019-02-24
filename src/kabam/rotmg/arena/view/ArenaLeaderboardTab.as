@@ -2,17 +2,17 @@
 
 package kabam.rotmg.arena.view
 	{
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
+    import flash.filters.DropShadowFilter;
 
-	import kabam.rotmg.arena.model.ArenaLeaderboardFilter;
-	import kabam.rotmg.text.view.StaticTextDisplay;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.arena.model.ArenaLeaderboardFilter;
+    import kabam.rotmg.text.view.StaticTextDisplay;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class ArenaLeaderboardTab extends Sprite
+    public class ArenaLeaderboardTab extends Sprite
 		{
 
 			private static const OVER_COLOR:int = 16567065;

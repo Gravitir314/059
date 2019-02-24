@@ -2,21 +2,21 @@
 
 package io.decagames.rotmg.supportCampaign.tab.tiers.button
 	{
-	import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
 
-	import flash.events.MouseEvent;
+    import flash.events.MouseEvent;
 
-	import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
-	import io.decagames.rotmg.supportCampaign.signals.TierSelectedSignal;
-	import io.decagames.rotmg.supportCampaign.signals.UpdateCampaignProgress;
+    import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
+    import io.decagames.rotmg.supportCampaign.signals.TierSelectedSignal;
+    import io.decagames.rotmg.supportCampaign.signals.UpdateCampaignProgress;
 
-	import kabam.rotmg.core.signals.HideTooltipsSignal;
-	import kabam.rotmg.core.signals.ShowTooltipSignal;
-	import kabam.rotmg.tooltips.HoverTooltipDelegate;
+    import kabam.rotmg.core.signals.HideTooltipsSignal;
+    import kabam.rotmg.core.signals.ShowTooltipSignal;
+    import kabam.rotmg.tooltips.HoverTooltipDelegate;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class TierButtonMediator extends Mediator
+    public class TierButtonMediator extends Mediator
 		{
 
 			[Inject]

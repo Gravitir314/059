@@ -2,18 +2,18 @@
 
 package com.company.assembleegameclient.ui
 	{
-	import com.company.assembleegameclient.util.GuildUtil;
-	import com.company.util.SpriteUtil;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.util.GuildUtil;
+    import com.company.util.SpriteUtil;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.Bitmap;
-	import flash.display.Sprite;
-	import flash.text.TextFieldAutoSize;
+    import flash.display.Bitmap;
+    import flash.display.Sprite;
+    import flash.text.TextFieldAutoSize;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	public class GuildText extends Sprite
+    public class GuildText extends Sprite
 		{
 			private var name_:String;
 			private var rank_:int;

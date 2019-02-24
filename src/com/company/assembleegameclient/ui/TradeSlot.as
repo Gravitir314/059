@@ -2,34 +2,34 @@
 
 package com.company.assembleegameclient.ui
 	{
-	import com.company.assembleegameclient.constants.InventoryOwnerTypes;
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.util.GraphicsUtil;
-	import com.company.util.MoreColorUtil;
-	import com.company.util.SpriteUtil;
+    import com.company.assembleegameclient.constants.InventoryOwnerTypes;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.util.GraphicsUtil;
+    import com.company.util.MoreColorUtil;
+    import com.company.util.SpriteUtil;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.CapsStyle;
-	import flash.display.GraphicsPath;
-	import flash.display.GraphicsSolidFill;
-	import flash.display.GraphicsStroke;
-	import flash.display.IGraphicsData;
-	import flash.display.JointStyle;
-	import flash.display.LineScaleMode;
-	import flash.display.Shape;
-	import flash.geom.Matrix;
-	import flash.geom.Point;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.CapsStyle;
+    import flash.display.GraphicsPath;
+    import flash.display.GraphicsSolidFill;
+    import flash.display.GraphicsStroke;
+    import flash.display.IGraphicsData;
+    import flash.display.JointStyle;
+    import flash.display.LineScaleMode;
+    import flash.display.Shape;
+    import flash.geom.Matrix;
+    import flash.geom.Point;
 
-	import kabam.rotmg.core.signals.HideTooltipsSignal;
-	import kabam.rotmg.core.signals.ShowTooltipSignal;
-	import kabam.rotmg.text.view.BitmapTextFactory;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-	import kabam.rotmg.tooltips.HoverTooltipDelegate;
-	import kabam.rotmg.tooltips.TooltipAble;
+    import kabam.rotmg.core.signals.HideTooltipsSignal;
+    import kabam.rotmg.core.signals.ShowTooltipSignal;
+    import kabam.rotmg.text.view.BitmapTextFactory;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.tooltips.HoverTooltipDelegate;
+    import kabam.rotmg.tooltips.TooltipAble;
 
-	public class TradeSlot extends Slot implements TooltipAble
+    public class TradeSlot extends Slot implements TooltipAble
 		{
 
 			private static const IDENTITY_MATRIX:Matrix = new Matrix();

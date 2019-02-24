@@ -2,15 +2,15 @@
 
 package com.company.assembleegameclient.objects
 	{
-	import com.company.assembleegameclient.engine3d.ObjectFace3D;
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.engine3d.ObjectFace3D;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import flash.display.BitmapData;
-	import flash.geom.Vector3D;
+    import flash.display.BitmapData;
+    import flash.geom.Vector3D;
 
-	import kabam.rotmg.stage3D.GraphicsFillExtra;
+    import kabam.rotmg.stage3D.GraphicsFillExtra;
 
-	public class CaveWall extends ConnectedObject
+    public class CaveWall extends ConnectedObject
 		{
 
 			public function CaveWall(_arg_1:XML)

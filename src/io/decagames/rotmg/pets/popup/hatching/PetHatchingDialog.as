@@ -2,35 +2,35 @@
 
 package io.decagames.rotmg.pets.popup.hatching
 	{
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.assembleegameclient.util.AnimatedChar;
-	import com.company.assembleegameclient.util.AnimatedChars;
-	import com.company.assembleegameclient.util.MaskedImage;
-	import com.company.assembleegameclient.util.TextureRedrawer;
-	import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
-	import com.greensock.TimelineMax;
-	import com.greensock.TweenLite;
-	import com.greensock.easing.Sine;
-	import com.greensock.plugins.TransformAroundPointPlugin;
-	import com.greensock.plugins.TweenPlugin;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.assembleegameclient.util.AnimatedChar;
+    import com.company.assembleegameclient.util.AnimatedChars;
+    import com.company.assembleegameclient.util.MaskedImage;
+    import com.company.assembleegameclient.util.TextureRedrawer;
+    import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
+    import com.greensock.TimelineMax;
+    import com.greensock.TweenLite;
+    import com.greensock.easing.Sine;
+    import com.greensock.plugins.TransformAroundPointPlugin;
+    import com.greensock.plugins.TweenPlugin;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.Sprite;
-	import flash.geom.Point;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.Sprite;
+    import flash.geom.Point;
 
-	import io.decagames.rotmg.pets.config.AnimationConfig;
-	import io.decagames.rotmg.pets.data.vo.SkinVO;
-	import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.labels.UILabel;
-	import io.decagames.rotmg.ui.popups.modal.ModalPopup;
-	import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-	import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.pets.config.AnimationConfig;
+    import io.decagames.rotmg.pets.data.vo.SkinVO;
+    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.ui.popups.modal.ModalPopup;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import io.decagames.rotmg.ui.texture.TextureParser;
 
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	public class PetHatchingDialog extends ModalPopup
+    public class PetHatchingDialog extends ModalPopup
 		{
 
 			private var contentInset:SliceScalingBitmap;

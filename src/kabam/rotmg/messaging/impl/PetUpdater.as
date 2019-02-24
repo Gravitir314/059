@@ -2,17 +2,17 @@
 
 package kabam.rotmg.messaging.impl
 	{
-	import com.company.assembleegameclient.game.AGameSprite;
-	import com.company.assembleegameclient.objects.Pet;
-	import com.company.assembleegameclient.util.ConditionEffect;
+    import com.company.assembleegameclient.game.AGameSprite;
+    import com.company.assembleegameclient.objects.Pet;
+    import com.company.assembleegameclient.util.ConditionEffect;
 
-	import io.decagames.rotmg.pets.data.PetsModel;
-	import io.decagames.rotmg.pets.data.vo.AbilityVO;
-	import io.decagames.rotmg.pets.data.vo.PetVO;
+    import io.decagames.rotmg.pets.data.PetsModel;
+    import io.decagames.rotmg.pets.data.vo.AbilityVO;
+    import io.decagames.rotmg.pets.data.vo.PetVO;
 
-	import kabam.rotmg.messaging.impl.data.StatData;
+    import kabam.rotmg.messaging.impl.data.StatData;
 
-	public class PetUpdater
+    public class PetUpdater
 		{
 
 			[Inject]

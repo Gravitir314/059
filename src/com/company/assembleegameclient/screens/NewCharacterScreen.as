@@ -2,23 +2,23 @@
 
 package com.company.assembleegameclient.screens
 	{
-	import com.company.assembleegameclient.appengine.SavedCharactersList;
-	import com.company.assembleegameclient.constants.ScreenTypes;
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.rotmg.graphics.ScreenGraphic;
+    import com.company.assembleegameclient.appengine.SavedCharactersList;
+    import com.company.assembleegameclient.constants.ScreenTypes;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.rotmg.graphics.ScreenGraphic;
 
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.game.view.CreditDisplay;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.ui.view.components.ScreenBase;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.game.view.CreditDisplay;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.ui.view.components.ScreenBase;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class NewCharacterScreen extends Sprite
+    public class NewCharacterScreen extends Sprite
 		{
 
 			public var tooltip:Signal;

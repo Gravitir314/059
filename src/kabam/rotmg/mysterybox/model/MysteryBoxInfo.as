@@ -2,21 +2,21 @@
 
 package kabam.rotmg.mysterybox.model
 	{
-	import com.company.assembleegameclient.util.TimeUtil;
+    import com.company.assembleegameclient.util.TimeUtil;
 
-	import flash.display.DisplayObject;
-	import flash.events.Event;
-	import flash.events.IOErrorEvent;
-	import flash.net.URLRequest;
-	import flash.utils.Dictionary;
+    import flash.display.DisplayObject;
+    import flash.events.Event;
+    import flash.events.IOErrorEvent;
+    import flash.net.URLRequest;
+    import flash.utils.Dictionary;
 
-	import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
+    import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
 
-	import kabam.display.Loader.LoaderProxy;
-	import kabam.display.Loader.LoaderProxyConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.display.Loader.LoaderProxy;
+    import kabam.display.Loader.LoaderProxyConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	public class MysteryBoxInfo extends GenericBoxInfo
+    public class MysteryBoxInfo extends GenericBoxInfo
 		{
 			public var _iconImageUrl:String;
 			private var _iconImage:DisplayObject;

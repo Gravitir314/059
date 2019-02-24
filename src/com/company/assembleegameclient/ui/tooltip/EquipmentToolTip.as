@@ -2,35 +2,35 @@
 
 package com.company.assembleegameclient.ui.tooltip
 	{
-	import com.company.assembleegameclient.constants.InventoryOwnerTypes;
-	import com.company.assembleegameclient.game.events.KeyInfoResponseSignal;
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.ui.LineBreakDesign;
-	import com.company.assembleegameclient.util.FilterUtil;
-	import com.company.assembleegameclient.util.MathUtil;
-	import com.company.assembleegameclient.util.TierUtil;
-	import com.company.util.BitmapUtil;
-	import com.company.util.KeyCodes;
+    import com.company.assembleegameclient.constants.InventoryOwnerTypes;
+    import com.company.assembleegameclient.game.events.KeyInfoResponseSignal;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.ui.LineBreakDesign;
+    import com.company.assembleegameclient.util.FilterUtil;
+    import com.company.assembleegameclient.util.MathUtil;
+    import com.company.assembleegameclient.util.TierUtil;
+    import com.company.util.BitmapUtil;
+    import com.company.util.KeyCodes;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.utils.Dictionary;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.utils.Dictionary;
 
-	import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.ui.labels.UILabel;
 
-	import kabam.rotmg.constants.ActivationType;
-	import kabam.rotmg.messaging.impl.data.StatData;
-	import kabam.rotmg.messaging.impl.incoming.KeyInfoResponse;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.AppendingLineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StringBuilder;
+    import kabam.rotmg.constants.ActivationType;
+    import kabam.rotmg.messaging.impl.data.StatData;
+    import kabam.rotmg.messaging.impl.incoming.KeyInfoResponse;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.AppendingLineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StringBuilder;
 
-	public class EquipmentToolTip extends ToolTip
+    public class EquipmentToolTip extends ToolTip
 		{
 
 			private static const MAX_WIDTH:int = 230;

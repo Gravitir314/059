@@ -2,18 +2,18 @@
 
 package com.company.assembleegameclient.util
 	{
-	import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
-	import com.company.util.AssetLibrary;
-	import com.company.util.PointUtil;
+    import com.company.assembleegameclient.util.redrawers.GlowRedrawer;
+    import com.company.util.AssetLibrary;
+    import com.company.util.PointUtil;
 
-	import flash.display.BitmapData;
-	import flash.filters.BitmapFilterQuality;
-	import flash.filters.GlowFilter;
-	import flash.geom.Matrix;
+    import flash.display.BitmapData;
+    import flash.filters.BitmapFilterQuality;
+    import flash.filters.GlowFilter;
+    import flash.geom.Matrix;
 
-	import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.model.TextKey;
 
-	public class ConditionEffect
+    public class ConditionEffect
 		{
 
 			public static const NOTHING:uint = 0;

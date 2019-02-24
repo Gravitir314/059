@@ -2,14 +2,14 @@
 
 package io.decagames.rotmg.fame
 	{
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.assembleegameclient.objects.TextureDataConcrete;
-	import com.company.assembleegameclient.util.TextureRedrawer;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.assembleegameclient.objects.TextureDataConcrete;
+    import com.company.assembleegameclient.util.TextureRedrawer;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
 
-	public class DungeonLine extends StatsLine
+    public class DungeonLine extends StatsLine
 		{
 
 			private var dungeonTextureName:String;

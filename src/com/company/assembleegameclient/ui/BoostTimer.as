@@ -2,17 +2,17 @@
 
 package com.company.assembleegameclient.ui
 	{
-	import com.company.assembleegameclient.ui.components.TimerDisplay;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.ui.components.TimerDisplay;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.StringBuilder;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.StringBuilder;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class BoostTimer extends Sprite
+    public class BoostTimer extends Sprite
 		{
 
 			private var labelTextField:TextFieldDisplayConcrete;

@@ -2,13 +2,13 @@
 
 package kabam.rotmg.account.core.view
 	{
-	import flash.display.Sprite;
-	import flash.filters.DropShadowFilter;
+    import flash.display.Sprite;
+    import flash.filters.DropShadowFilter;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	public class AccountListElement extends Sprite
+    public class AccountListElement extends Sprite
 		{
 
 			public var username:TextFieldDisplayConcrete;

@@ -2,18 +2,18 @@
 
 package com.company.assembleegameclient.util.redrawers
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.util.TextureRedrawer;
-	import com.company.util.PointUtil;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.util.TextureRedrawer;
+    import com.company.util.PointUtil;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.Shape;
-	import flash.filters.GlowFilter;
-	import flash.geom.Matrix;
-	import flash.utils.Dictionary;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.Shape;
+    import flash.filters.GlowFilter;
+    import flash.geom.Matrix;
+    import flash.utils.Dictionary;
 
-	public class GlowRedrawer
+    public class GlowRedrawer
 		{
 
 			private static const GRADIENT_MAX_SUB:uint = 0x282828;

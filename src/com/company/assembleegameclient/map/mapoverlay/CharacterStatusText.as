@@ -2,20 +2,20 @@
 
 package com.company.assembleegameclient.map.mapoverlay
 	{
-	import com.company.assembleegameclient.map.Camera;
-	import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.map.Camera;
+    import com.company.assembleegameclient.objects.GameObject;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.Sprite;
-	import flash.filters.GlowFilter;
-	import flash.geom.Matrix;
-	import flash.geom.Point;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.Sprite;
+    import flash.filters.GlowFilter;
+    import flash.geom.Matrix;
+    import flash.geom.Point;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.StringBuilder;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.StringBuilder;
 
-	public class CharacterStatusText extends Sprite implements IMapOverlayElement
+    public class CharacterStatusText extends Sprite implements IMapOverlayElement
 		{
 			private const GLOW_FILTER:GlowFilter = new GlowFilter(0, 1, 4, 4, 2, 1);
 

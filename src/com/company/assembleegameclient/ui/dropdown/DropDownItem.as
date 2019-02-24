@@ -2,13 +2,13 @@
 
 package com.company.assembleegameclient.ui.dropdown
 	{
-	import com.company.ui.BaseSimpleText;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.ui.BaseSimpleText;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
 
-	public class DropDownItem extends Sprite
+    public class DropDownItem extends Sprite
 		{
 
 			public var w_:int;

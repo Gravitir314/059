@@ -2,14 +2,14 @@
 
 package kabam.rotmg.account.kongregate.model
 	{
-	import com.company.assembleegameclient.util.offer.Offer;
+    import com.company.assembleegameclient.util.offer.Offer;
 
-	import kabam.rotmg.account.core.model.MoneyConfig;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StringBuilder;
+    import kabam.rotmg.account.core.model.MoneyConfig;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StringBuilder;
 
-	public class KongregateMoneyConfig implements MoneyConfig
+    public class KongregateMoneyConfig implements MoneyConfig
 		{
 
 

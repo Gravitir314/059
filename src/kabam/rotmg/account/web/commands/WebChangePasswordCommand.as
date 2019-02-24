@@ -2,18 +2,18 @@
 
 package kabam.rotmg.account.web.commands
 	{
-	import kabam.lib.tasks.BranchingTask;
-	import kabam.lib.tasks.DispatchSignalTask;
-	import kabam.lib.tasks.Task;
-	import kabam.lib.tasks.TaskMonitor;
-	import kabam.lib.tasks.TaskSequence;
-	import kabam.rotmg.account.core.services.ChangePasswordTask;
-	import kabam.rotmg.account.web.view.WebAccountDetailDialog;
-	import kabam.rotmg.core.signals.TaskErrorSignal;
-	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.lib.tasks.BranchingTask;
+    import kabam.lib.tasks.DispatchSignalTask;
+    import kabam.lib.tasks.Task;
+    import kabam.lib.tasks.TaskMonitor;
+    import kabam.lib.tasks.TaskSequence;
+    import kabam.rotmg.account.core.services.ChangePasswordTask;
+    import kabam.rotmg.account.web.view.WebAccountDetailDialog;
+    import kabam.rotmg.core.signals.TaskErrorSignal;
+    import kabam.rotmg.dialogs.control.CloseDialogsSignal;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
 
-	public class WebChangePasswordCommand
+    public class WebChangePasswordCommand
 		{
 
 			[Inject]

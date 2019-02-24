@@ -2,13 +2,13 @@
 
 package kabam.rotmg.account.kabam.model
 	{
-	import com.company.assembleegameclient.util.offer.Offer;
+    import com.company.assembleegameclient.util.offer.Offer;
 
-	import kabam.rotmg.account.core.model.MoneyConfig;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StringBuilder;
+    import kabam.rotmg.account.core.model.MoneyConfig;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StringBuilder;
 
-	public class KabamMoneyConfig implements MoneyConfig
+    public class KabamMoneyConfig implements MoneyConfig
 		{
 
 

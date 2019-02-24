@@ -2,15 +2,15 @@
 
 package com.company.assembleegameclient.objects
 	{
-	import com.company.assembleegameclient.map.Map;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.util.PointUtil;
+    import com.company.assembleegameclient.map.Map;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.util.PointUtil;
 
-	import flash.utils.Dictionary;
+    import flash.utils.Dictionary;
 
-	import kabam.rotmg.messaging.impl.incoming.AccountList;
+    import kabam.rotmg.messaging.impl.incoming.AccountList;
 
-	public class Party
+    public class Party
 		{
 
 			public static const NUM_MEMBERS:int = 6;

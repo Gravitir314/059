@@ -2,13 +2,13 @@
 
 package kabam.rotmg.friends.view
 	{
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	import io.decagames.rotmg.social.model.FriendVO;
+    import io.decagames.rotmg.social.model.FriendVO;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class FListItem extends Sprite
+    public class FListItem extends Sprite
 		{
 
 			public var actionSignal:Signal = new Signal(String, String);

@@ -2,35 +2,35 @@
 
 package io.decagames.rotmg.social.widgets
 	{
-	import com.company.assembleegameclient.appengine.SavedCharacter;
-	import com.company.assembleegameclient.game.GameSprite;
-	import com.company.assembleegameclient.game.events.GuildResultEvent;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.ui.dialogs.Dialog;
-	import com.company.assembleegameclient.util.GuildUtil;
+    import com.company.assembleegameclient.appengine.SavedCharacter;
+    import com.company.assembleegameclient.game.GameSprite;
+    import com.company.assembleegameclient.game.events.GuildResultEvent;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.ui.dialogs.Dialog;
+    import com.company.assembleegameclient.util.GuildUtil;
 
-	import flash.events.Event;
-	import flash.events.MouseEvent;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
 
-	import io.decagames.rotmg.social.model.SocialModel;
-	import io.decagames.rotmg.social.signals.RefreshListSignal;
-	import io.decagames.rotmg.ui.popups.signals.CloseCurrentPopupSignal;
+    import io.decagames.rotmg.social.model.SocialModel;
+    import io.decagames.rotmg.social.signals.RefreshListSignal;
+    import io.decagames.rotmg.ui.popups.signals.CloseCurrentPopupSignal;
 
-	import kabam.rotmg.chat.control.ShowChatInputSignal;
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.game.model.GameInitData;
-	import kabam.rotmg.game.signals.PlayGameSignal;
-	import kabam.rotmg.messaging.impl.GameServerConnection;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.ui.model.HUDModel;
-	import kabam.rotmg.ui.signals.EnterGameSignal;
+    import kabam.rotmg.chat.control.ShowChatInputSignal;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.dialogs.control.CloseDialogsSignal;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.game.model.GameInitData;
+    import kabam.rotmg.game.signals.PlayGameSignal;
+    import kabam.rotmg.messaging.impl.GameServerConnection;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.ui.model.HUDModel;
+    import kabam.rotmg.ui.signals.EnterGameSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class GuildListItemMediator extends Mediator
+    public class GuildListItemMediator extends Mediator
 		{
 
 			[Inject]

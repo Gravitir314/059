@@ -2,10 +2,10 @@
 
 package kabam.rotmg.fortune.components
 	{
-	import flash.display.DisplayObject;
-	import flash.display.Sprite;
+    import flash.display.DisplayObject;
+    import flash.display.Sprite;
 
-	public class ImageSprite extends Sprite
+    public class ImageSprite extends Sprite
 		{
 
 			public var displayOb_:DisplayObject;

@@ -2,15 +2,15 @@
 
 package kabam.rotmg.ui.commands
 	{
-	import com.company.assembleegameclient.screens.AccountLoadingScreen;
+    import com.company.assembleegameclient.screens.AccountLoadingScreen;
 
-	import kabam.rotmg.application.model.DomainModel;
-	import kabam.rotmg.core.signals.SetScreenSignal;
-	import kabam.rotmg.core.view.BadDomainView;
+    import kabam.rotmg.application.model.DomainModel;
+    import kabam.rotmg.core.signals.SetScreenSignal;
+    import kabam.rotmg.core.view.BadDomainView;
 
-	import robotlegs.bender.framework.api.ILogger;
+    import robotlegs.bender.framework.api.ILogger;
 
-	public class ShowLoadingUICommand
+    public class ShowLoadingUICommand
 		{
 
 			[Inject]

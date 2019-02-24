@@ -2,13 +2,13 @@
 
 package io.decagames.rotmg.shop.mysteryBox.contentPopup
 	{
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.labels.UILabel;
-	import io.decagames.rotmg.ui.popups.modal.ModalPopup;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.ui.popups.modal.ModalPopup;
 
-	import kabam.rotmg.mysterybox.model.MysteryBoxInfo;
+    import kabam.rotmg.mysterybox.model.MysteryBoxInfo;
 
-	public class MysteryBoxContentPopup extends ModalPopup
+    public class MysteryBoxContentPopup extends ModalPopup
 		{
 
 			private var _info:MysteryBoxInfo;

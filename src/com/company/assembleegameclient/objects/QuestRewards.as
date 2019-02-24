@@ -2,12 +2,12 @@
 
 package com.company.assembleegameclient.objects
 	{
-	import com.company.assembleegameclient.game.GameSprite;
-	import com.company.assembleegameclient.ui.panels.Panel;
+    import com.company.assembleegameclient.game.GameSprite;
+    import com.company.assembleegameclient.ui.panels.Panel;
 
-	import io.decagames.rotmg.dailyQuests.view.panel.DailyQuestsPanel;
+    import io.decagames.rotmg.dailyQuests.view.panel.DailyQuestsPanel;
 
-	public class QuestRewards extends GameObject implements IInteractiveObject
+    public class QuestRewards extends GameObject implements IInteractiveObject
 		{
 
 			public function QuestRewards(_arg_1:XML)

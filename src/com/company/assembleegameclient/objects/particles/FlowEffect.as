@@ -2,13 +2,13 @@
 
 package com.company.assembleegameclient.objects.particles
 	{
-	import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.objects.GameObject;
 
-	import flash.geom.Point;
+    import flash.geom.Point;
 
-	import kabam.rotmg.messaging.impl.data.WorldPosData;
+    import kabam.rotmg.messaging.impl.data.WorldPosData;
 
-	public class FlowEffect extends ParticleEffect
+    public class FlowEffect extends ParticleEffect
 		{
 
 			public var start_:Point;

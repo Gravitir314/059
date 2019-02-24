@@ -2,50 +2,50 @@
 
 package com.company.assembleegameclient.map
 	{
-	import com.adobe.images.PNGEncoder;
-	import com.company.assembleegameclient.background.Background;
-	import com.company.assembleegameclient.game.AGameSprite;
-	import com.company.assembleegameclient.map.mapoverlay.MapOverlay;
-	import com.company.assembleegameclient.map.partyoverlay.PartyOverlay;
-	import com.company.assembleegameclient.objects.BasicObject;
-	import com.company.assembleegameclient.objects.Character;
-	import com.company.assembleegameclient.objects.GameObject;
-	import com.company.assembleegameclient.objects.Party;
-	import com.company.assembleegameclient.objects.Pet;
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.objects.particles.ParticleEffect;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.util.ConditionEffect;
+    import com.adobe.images.PNGEncoder;
+    import com.company.assembleegameclient.background.Background;
+    import com.company.assembleegameclient.game.AGameSprite;
+    import com.company.assembleegameclient.map.mapoverlay.MapOverlay;
+    import com.company.assembleegameclient.map.partyoverlay.PartyOverlay;
+    import com.company.assembleegameclient.objects.BasicObject;
+    import com.company.assembleegameclient.objects.Character;
+    import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.objects.Party;
+    import com.company.assembleegameclient.objects.Pet;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.objects.particles.ParticleEffect;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.util.ConditionEffect;
 
-	import flash.display.BitmapData;
-	import flash.display.DisplayObject;
-	import flash.display.GraphicsBitmapFill;
-	import flash.display.GraphicsSolidFill;
-	import flash.display.IGraphicsData;
-	import flash.display.Sprite;
-	import flash.display.StageScaleMode;
-	import flash.filters.BlurFilter;
-	import flash.filters.ColorMatrixFilter;
-	import flash.geom.ColorTransform;
-	import flash.geom.Point;
-	import flash.geom.Rectangle;
-	import flash.net.FileReference;
-	import flash.utils.Dictionary;
+    import flash.display.BitmapData;
+    import flash.display.DisplayObject;
+    import flash.display.GraphicsBitmapFill;
+    import flash.display.GraphicsSolidFill;
+    import flash.display.IGraphicsData;
+    import flash.display.Sprite;
+    import flash.display.StageScaleMode;
+    import flash.filters.BlurFilter;
+    import flash.filters.ColorMatrixFilter;
+    import flash.geom.ColorTransform;
+    import flash.geom.Point;
+    import flash.geom.Rectangle;
+    import flash.net.FileReference;
+    import flash.utils.Dictionary;
 
-	import kabam.rotmg.assets.EmbeddedAssets;
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.game.logging.RollingMeanLoopMonitor;
-	import kabam.rotmg.game.model.GameModel;
-	import kabam.rotmg.game.model.QuestModel;
-	import kabam.rotmg.stage3D.GraphicsFillExtra;
-	import kabam.rotmg.stage3D.Object3D.Object3DStage3D;
-	import kabam.rotmg.stage3D.Render3D;
-	import kabam.rotmg.stage3D.Renderer;
-	import kabam.rotmg.stage3D.graphic3D.Program3DFactory;
-	import kabam.rotmg.stage3D.graphic3D.TextureFactory;
-	import kabam.rotmg.ui.signals.RealmOryxSignal;
+    import kabam.rotmg.assets.EmbeddedAssets;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.game.logging.RollingMeanLoopMonitor;
+    import kabam.rotmg.game.model.GameModel;
+    import kabam.rotmg.game.model.QuestModel;
+    import kabam.rotmg.stage3D.GraphicsFillExtra;
+    import kabam.rotmg.stage3D.Object3D.Object3DStage3D;
+    import kabam.rotmg.stage3D.Render3D;
+    import kabam.rotmg.stage3D.Renderer;
+    import kabam.rotmg.stage3D.graphic3D.Program3DFactory;
+    import kabam.rotmg.stage3D.graphic3D.TextureFactory;
+    import kabam.rotmg.ui.signals.RealmOryxSignal;
 
-	public class Map extends AbstractMap
+    public class Map extends AbstractMap
 		{
 
 			public static const REALMS:Vector.<String> = new <String>["Medusa", "Beholder", "Cyclops", "Djinn", "Ogre", "Flayer", "Sprite", "Golem"];

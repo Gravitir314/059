@@ -2,26 +2,26 @@
 
 package io.decagames.rotmg.pets.components.caretaker
 	{
-	import com.company.assembleegameclient.ui.DeprecatedTextButton;
+    import com.company.assembleegameclient.ui.DeprecatedTextButton;
 
-	import flash.display.BitmapData;
-	import flash.display.DisplayObjectContainer;
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
-	import flash.text.TextFieldAutoSize;
+    import flash.display.BitmapData;
+    import flash.display.DisplayObjectContainer;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
+    import flash.text.TextFieldAutoSize;
 
-	import io.decagames.rotmg.pets.utils.PetsViewAssetFactory;
+    import io.decagames.rotmg.pets.utils.PetsViewAssetFactory;
 
-	import kabam.rotmg.pets.view.components.PopupWindowBackground;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.ui.view.SignalWaiter;
-	import kabam.rotmg.util.graphics.ButtonLayoutHelper;
+    import kabam.rotmg.pets.view.components.PopupWindowBackground;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.ui.view.SignalWaiter;
+    import kabam.rotmg.util.graphics.ButtonLayoutHelper;
 
-	import org.osflash.signals.Signal;
-	import org.osflash.signals.natives.NativeMappedSignal;
+    import org.osflash.signals.Signal;
+    import org.osflash.signals.natives.NativeMappedSignal;
 
-	public class CaretakerQueryDialog extends Sprite
+    public class CaretakerQueryDialog extends Sprite
 		{
 
 			public static const WIDTH:int = 480;

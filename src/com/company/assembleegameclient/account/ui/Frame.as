@@ -2,28 +2,28 @@
 
 package com.company.assembleegameclient.account.ui
 	{
-	import com.company.assembleegameclient.ui.DeprecatedClickableText;
-	import com.company.util.GraphicsUtil;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.ui.DeprecatedClickableText;
+    import com.company.util.GraphicsUtil;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.CapsStyle;
-	import flash.display.DisplayObject;
-	import flash.display.GraphicsPath;
-	import flash.display.GraphicsSolidFill;
-	import flash.display.GraphicsStroke;
-	import flash.display.IGraphicsData;
-	import flash.display.JointStyle;
-	import flash.display.LineScaleMode;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.filters.DropShadowFilter;
-	import flash.text.TextFieldAutoSize;
+    import flash.display.CapsStyle;
+    import flash.display.DisplayObject;
+    import flash.display.GraphicsPath;
+    import flash.display.GraphicsSolidFill;
+    import flash.display.GraphicsStroke;
+    import flash.display.IGraphicsData;
+    import flash.display.JointStyle;
+    import flash.display.LineScaleMode;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.filters.DropShadowFilter;
+    import flash.text.TextFieldAutoSize;
 
-	import kabam.rotmg.account.web.view.LabeledField;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.account.web.view.LabeledField;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	public class Frame extends Sprite
+    public class Frame extends Sprite
 		{
 
 			private static const INDENT:Number = 17;

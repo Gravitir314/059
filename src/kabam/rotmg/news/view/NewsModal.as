@@ -2,38 +2,38 @@
 
 package kabam.rotmg.news.view
 	{
-	import com.company.assembleegameclient.sound.SoundEffectLibrary;
-	import com.company.util.AssetLibrary;
-	import com.company.util.KeyCodes;
-	import com.company.util.MoreColorUtil;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.sound.SoundEffectLibrary;
+    import com.company.util.AssetLibrary;
+    import com.company.util.KeyCodes;
+    import com.company.util.MoreColorUtil;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.DisplayObject;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.KeyboardEvent;
-	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
-	import flash.filters.GlowFilter;
-	import flash.geom.ColorTransform;
-	import flash.text.TextField;
-	import flash.text.TextFieldAutoSize;
-	import flash.text.TextFormatAlign;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.DisplayObject;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.KeyboardEvent;
+    import flash.events.MouseEvent;
+    import flash.filters.DropShadowFilter;
+    import flash.filters.GlowFilter;
+    import flash.geom.ColorTransform;
+    import flash.text.TextField;
+    import flash.text.TextFieldAutoSize;
+    import flash.text.TextFormatAlign;
 
-	import kabam.rotmg.account.core.view.EmptyFrame;
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.dialogs.control.FlushPopupStartupQueueSignal;
-	import kabam.rotmg.news.model.NewsModel;
-	import kabam.rotmg.pets.view.components.PopupWindowBackground;
-	import kabam.rotmg.text.model.FontModel;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-	import kabam.rotmg.ui.model.HUDModel;
+    import kabam.rotmg.account.core.view.EmptyFrame;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.dialogs.control.FlushPopupStartupQueueSignal;
+    import kabam.rotmg.news.model.NewsModel;
+    import kabam.rotmg.pets.view.components.PopupWindowBackground;
+    import kabam.rotmg.text.model.FontModel;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.ui.model.HUDModel;
 
-	public class NewsModal extends EmptyFrame
+    public class NewsModal extends EmptyFrame
 		{
 
 			public static var backgroundImageEmbed:Class = NewsModal_backgroundImageEmbed;

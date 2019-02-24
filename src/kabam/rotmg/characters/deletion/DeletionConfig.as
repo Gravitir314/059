@@ -2,19 +2,19 @@
 
 package kabam.rotmg.characters.deletion
 	{
-	import kabam.rotmg.characters.deletion.control.DeleteCharacterCommand;
-	import kabam.rotmg.characters.deletion.control.DeleteCharacterSignal;
-	import kabam.rotmg.characters.deletion.service.DeleteCharacterTask;
-	import kabam.rotmg.characters.deletion.view.ConfirmDeleteCharacterDialog;
-	import kabam.rotmg.characters.deletion.view.ConfirmDeleteCharacterMediator;
+    import kabam.rotmg.characters.deletion.control.DeleteCharacterCommand;
+    import kabam.rotmg.characters.deletion.control.DeleteCharacterSignal;
+    import kabam.rotmg.characters.deletion.service.DeleteCharacterTask;
+    import kabam.rotmg.characters.deletion.view.ConfirmDeleteCharacterDialog;
+    import kabam.rotmg.characters.deletion.view.ConfirmDeleteCharacterMediator;
 
-	import org.swiftsuspenders.Injector;
+    import org.swiftsuspenders.Injector;
 
-	import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
-	import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
-	import robotlegs.bender.framework.api.IConfig;
+    import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
+    import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
+    import robotlegs.bender.framework.api.IConfig;
 
-	public class DeletionConfig implements IConfig
+    public class DeletionConfig implements IConfig
 		{
 
 			[Inject]

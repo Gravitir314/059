@@ -2,14 +2,14 @@
 
 package kabam.rotmg.account.core.view
 	{
-	import com.company.assembleegameclient.ui.dialogs.Dialog;
+    import com.company.assembleegameclient.ui.dialogs.Dialog;
 
-	import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.model.TextKey;
 
-	import org.osflash.signals.Signal;
-	import org.osflash.signals.natives.NativeMappedSignal;
+    import org.osflash.signals.Signal;
+    import org.osflash.signals.natives.NativeMappedSignal;
 
-	public class RegisterPromptDialog extends Dialog
+    public class RegisterPromptDialog extends Dialog
 		{
 
 			public var cancel:Signal;

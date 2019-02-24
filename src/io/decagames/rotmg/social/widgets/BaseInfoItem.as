@@ -2,12 +2,12 @@
 
 package io.decagames.rotmg.social.widgets
 	{
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-	import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import io.decagames.rotmg.ui.texture.TextureParser;
 
-	public class BaseInfoItem extends Sprite
+    public class BaseInfoItem extends Sprite
 		{
 
 			protected var _width:int;

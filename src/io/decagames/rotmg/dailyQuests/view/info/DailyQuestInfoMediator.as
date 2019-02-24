@@ -2,29 +2,29 @@
 
 package io.decagames.rotmg.dailyQuests.view.info
 	{
-	import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.InventoryTile;
-	import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+    import com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.InventoryTile;
+    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
 
-	import flash.events.MouseEvent;
+    import flash.events.MouseEvent;
 
-	import io.decagames.rotmg.dailyQuests.model.DailyQuest;
-	import io.decagames.rotmg.dailyQuests.model.DailyQuestsModel;
-	import io.decagames.rotmg.dailyQuests.signal.LockQuestScreenSignal;
-	import io.decagames.rotmg.dailyQuests.signal.QuestRedeemCompleteSignal;
-	import io.decagames.rotmg.dailyQuests.signal.SelectedItemSlotsSignal;
-	import io.decagames.rotmg.dailyQuests.signal.ShowQuestInfoSignal;
+    import io.decagames.rotmg.dailyQuests.model.DailyQuest;
+    import io.decagames.rotmg.dailyQuests.model.DailyQuestsModel;
+    import io.decagames.rotmg.dailyQuests.signal.LockQuestScreenSignal;
+    import io.decagames.rotmg.dailyQuests.signal.QuestRedeemCompleteSignal;
+    import io.decagames.rotmg.dailyQuests.signal.SelectedItemSlotsSignal;
+    import io.decagames.rotmg.dailyQuests.signal.ShowQuestInfoSignal;
 
-	import kabam.rotmg.core.signals.HideTooltipsSignal;
-	import kabam.rotmg.core.signals.ShowTooltipSignal;
-	import kabam.rotmg.game.view.components.BackpackTabContent;
-	import kabam.rotmg.game.view.components.InventoryTabContent;
-	import kabam.rotmg.messaging.impl.data.SlotObjectData;
-	import kabam.rotmg.tooltips.HoverTooltipDelegate;
-	import kabam.rotmg.ui.model.HUDModel;
+    import kabam.rotmg.core.signals.HideTooltipsSignal;
+    import kabam.rotmg.core.signals.ShowTooltipSignal;
+    import kabam.rotmg.game.view.components.BackpackTabContent;
+    import kabam.rotmg.game.view.components.InventoryTabContent;
+    import kabam.rotmg.messaging.impl.data.SlotObjectData;
+    import kabam.rotmg.tooltips.HoverTooltipDelegate;
+    import kabam.rotmg.ui.model.HUDModel;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class DailyQuestInfoMediator extends Mediator
+    public class DailyQuestInfoMediator extends Mediator
 		{
 
 			[Inject]

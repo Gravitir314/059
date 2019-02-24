@@ -2,35 +2,35 @@
 
 package kabam.rotmg.minimap.view
 	{
-	import com.company.assembleegameclient.map.AbstractMap;
-	import com.company.assembleegameclient.map.GroundLibrary;
-	import com.company.assembleegameclient.map.Map;
-	import com.company.assembleegameclient.map.Square;
-	import com.company.assembleegameclient.objects.Character;
-	import com.company.assembleegameclient.objects.GameObject;
-	import com.company.assembleegameclient.objects.GuildHallPortal;
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.objects.Portal;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.ui.menu.PlayerGroupMenu;
-	import com.company.assembleegameclient.ui.tooltip.PlayerGroupToolTip;
-	import com.company.assembleegameclient.util.AssetLoader;
-	import com.company.util.AssetLibrary;
-	import com.company.util.PointUtil;
-	import com.company.util.RectangleUtil;
+    import com.company.assembleegameclient.map.AbstractMap;
+    import com.company.assembleegameclient.map.GroundLibrary;
+    import com.company.assembleegameclient.map.Map;
+    import com.company.assembleegameclient.map.Square;
+    import com.company.assembleegameclient.objects.Character;
+    import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.objects.GuildHallPortal;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.objects.Portal;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.ui.menu.PlayerGroupMenu;
+    import com.company.assembleegameclient.ui.tooltip.PlayerGroupToolTip;
+    import com.company.assembleegameclient.util.AssetLoader;
+    import com.company.util.AssetLibrary;
+    import com.company.util.PointUtil;
+    import com.company.util.RectangleUtil;
 
-	import flash.display.BitmapData;
-	import flash.display.Graphics;
-	import flash.display.Shape;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
-	import flash.geom.ColorTransform;
-	import flash.geom.Matrix;
-	import flash.geom.Point;
-	import flash.geom.Rectangle;
-	import flash.utils.Dictionary;
+    import flash.display.BitmapData;
+    import flash.display.Graphics;
+    import flash.display.Shape;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
+    import flash.geom.ColorTransform;
+    import flash.geom.Matrix;
+    import flash.geom.Point;
+    import flash.geom.Rectangle;
+    import flash.utils.Dictionary;
 
-	public class MiniMapImp extends MiniMap
+    public class MiniMapImp extends MiniMap
 		{
 
 			public static const MOUSE_DIST_SQ:int = (5 * 5);//25

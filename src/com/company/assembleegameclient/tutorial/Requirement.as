@@ -2,9 +2,9 @@
 
 package com.company.assembleegameclient.tutorial
 	{
-	import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
 
-	public class Requirement
+    public class Requirement
 		{
 
 			public var type_:String;

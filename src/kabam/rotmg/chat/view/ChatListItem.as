@@ -2,21 +2,21 @@
 
 package kabam.rotmg.chat.view
 	{
-	import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.objects.Player;
 
-	import flash.display.Bitmap;
-	import flash.display.DisplayObject;
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
-	import flash.geom.Rectangle;
-	import flash.utils.getTimer;
+    import flash.display.Bitmap;
+    import flash.display.DisplayObject;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
+    import flash.geom.Rectangle;
+    import flash.utils.getTimer;
 
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.ui.model.HUDModel;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.ui.model.HUDModel;
 
-	import zfn.IDisposable;
+    import zfn.IDisposable;
 
-	public class ChatListItem extends Sprite
+    public class ChatListItem extends Sprite
 		{
 
 			private static const CHAT_ITEM_TIMEOUT:uint = 20000;

@@ -2,23 +2,23 @@
 
 package kabam.rotmg.friends.view
 	{
-	import com.company.ui.BaseSimpleText;
-	import com.company.util.GraphicsUtil;
+    import com.company.ui.BaseSimpleText;
+    import com.company.util.GraphicsUtil;
 
-	import flash.display.GraphicsPath;
-	import flash.display.GraphicsSolidFill;
-	import flash.display.IGraphicsData;
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
+    import flash.display.GraphicsPath;
+    import flash.display.GraphicsSolidFill;
+    import flash.display.IGraphicsData;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.game.view.components.TabBackground;
-	import kabam.rotmg.game.view.components.TabConstants;
-	import kabam.rotmg.game.view.components.TabTextView;
-	import kabam.rotmg.game.view.components.TabView;
+    import kabam.rotmg.game.view.components.TabBackground;
+    import kabam.rotmg.game.view.components.TabConstants;
+    import kabam.rotmg.game.view.components.TabTextView;
+    import kabam.rotmg.game.view.components.TabView;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class FriendTabView extends Sprite
+    public class FriendTabView extends Sprite
 		{
 
 			public const tabSelected:Signal = new Signal(String);

@@ -2,16 +2,16 @@
 
 package kabam.rotmg.characters.reskin.control
 	{
-	import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.objects.Player;
 
-	import kabam.rotmg.assets.services.CharacterFactory;
-	import kabam.rotmg.classes.model.CharacterClass;
-	import kabam.rotmg.classes.model.CharacterSkin;
-	import kabam.rotmg.classes.model.ClassesModel;
-	import kabam.rotmg.game.model.GameModel;
-	import kabam.rotmg.messaging.impl.outgoing.Reskin;
+    import kabam.rotmg.assets.services.CharacterFactory;
+    import kabam.rotmg.classes.model.CharacterClass;
+    import kabam.rotmg.classes.model.CharacterSkin;
+    import kabam.rotmg.classes.model.ClassesModel;
+    import kabam.rotmg.game.model.GameModel;
+    import kabam.rotmg.messaging.impl.outgoing.Reskin;
 
-	public class ReskinHandler
+    public class ReskinHandler
 		{
 
 			[Inject]

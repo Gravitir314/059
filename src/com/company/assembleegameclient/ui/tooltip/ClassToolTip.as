@@ -2,39 +2,39 @@
 
 package com.company.assembleegameclient.ui.tooltip
 	{
-	import com.company.assembleegameclient.appengine.CharacterStats;
-	import com.company.assembleegameclient.appengine.SavedCharactersList;
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.assembleegameclient.ui.LineBreakDesign;
-	import com.company.assembleegameclient.util.AnimatedChar;
-	import com.company.assembleegameclient.util.AnimatedChars;
-	import com.company.assembleegameclient.util.EquipmentUtil;
-	import com.company.assembleegameclient.util.FameUtil;
-	import com.company.assembleegameclient.util.FilterUtil;
-	import com.company.assembleegameclient.util.MaskedImage;
-	import com.company.assembleegameclient.util.TextureRedrawer;
-	import com.company.rotmg.graphics.StarGraphic;
-	import com.company.util.AssetLibrary;
-	import com.company.util.CachingColorTransformer;
-	import com.company.util.ConversionUtil;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.appengine.CharacterStats;
+    import com.company.assembleegameclient.appengine.SavedCharactersList;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.assembleegameclient.ui.LineBreakDesign;
+    import com.company.assembleegameclient.util.AnimatedChar;
+    import com.company.assembleegameclient.util.AnimatedChars;
+    import com.company.assembleegameclient.util.EquipmentUtil;
+    import com.company.assembleegameclient.util.FameUtil;
+    import com.company.assembleegameclient.util.FilterUtil;
+    import com.company.assembleegameclient.util.MaskedImage;
+    import com.company.assembleegameclient.util.TextureRedrawer;
+    import com.company.rotmg.graphics.StarGraphic;
+    import com.company.util.AssetLibrary;
+    import com.company.util.CachingColorTransformer;
+    import com.company.util.ConversionUtil;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.Graphics;
-	import flash.display.Sprite;
-	import flash.geom.ColorTransform;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.Graphics;
+    import flash.display.Sprite;
+    import flash.geom.ColorTransform;
 
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.labels.UILabel;
 
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.AppendingLineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.AppendingLineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	public class ClassToolTip extends ToolTip
+    public class ClassToolTip extends ToolTip
 		{
 
 			public static const CLASS_TOOL_TIP_WIDTH:int = 210;

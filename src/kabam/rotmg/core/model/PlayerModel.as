@@ -2,18 +2,18 @@
 
 package kabam.rotmg.core.model
 	{
-	import com.company.assembleegameclient.appengine.SavedCharacter;
-	import com.company.assembleegameclient.appengine.SavedCharactersList;
-	import com.company.assembleegameclient.appengine.SavedNewsItem;
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.appengine.SavedCharacter;
+    import com.company.assembleegameclient.appengine.SavedCharactersList;
+    import com.company.assembleegameclient.appengine.SavedNewsItem;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.account.kongregate.KongregateAccount;
-	import kabam.rotmg.servers.api.LatLong;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.account.kongregate.KongregateAccount;
+    import kabam.rotmg.servers.api.LatLong;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class PlayerModel
+    public class PlayerModel
 		{
 
 			public static const CHARACTER_SLOT_PRICES:Array = [600, 800, 1000];

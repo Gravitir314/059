@@ -2,19 +2,19 @@
 
 package com.company.assembleegameclient.screens.charrects
 	{
-	import com.company.rotmg.graphics.StarGraphic;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.rotmg.graphics.StarGraphic;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.Shape;
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
-	import flash.geom.ColorTransform;
+    import flash.display.Shape;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
+    import flash.filters.DropShadowFilter;
+    import flash.geom.ColorTransform;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.StringBuilder;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.StringBuilder;
 
-	public class CharacterRect extends Sprite
+    public class CharacterRect extends Sprite
 		{
 
 			public static const WIDTH:int = 419;

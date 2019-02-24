@@ -2,13 +2,13 @@
 
 package zfn.sound
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.sound.SoundEffectLibrary;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.sound.SoundEffectLibrary;
 
-	import flash.media.Sound;
-	import flash.utils.Dictionary;
+    import flash.media.Sound;
+    import flash.utils.Dictionary;
 
-	public class SoundCustom
+    public class SoundCustom
 		{
 			[Embed(source="EmbeddedSound_ding.mp3")]
 			private static const dingEmbed:Class;

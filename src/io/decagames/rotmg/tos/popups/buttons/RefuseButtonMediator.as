@@ -2,14 +2,14 @@
 
 package io.decagames.rotmg.tos.popups.buttons
 	{
-	import io.decagames.rotmg.tos.popups.RefusePopup;
-	import io.decagames.rotmg.ui.buttons.BaseButton;
-	import io.decagames.rotmg.ui.popups.signals.CloseCurrentPopupSignal;
-	import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+    import io.decagames.rotmg.tos.popups.RefusePopup;
+    import io.decagames.rotmg.ui.buttons.BaseButton;
+    import io.decagames.rotmg.ui.popups.signals.CloseCurrentPopupSignal;
+    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class RefuseButtonMediator extends Mediator
+    public class RefuseButtonMediator extends Mediator
 		{
 
 			[Inject]

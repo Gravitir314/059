@@ -2,19 +2,19 @@
 
 package io.decagames.rotmg.ui
 	{
-	import com.greensock.TweenMax;
-	import com.greensock.easing.Expo;
-	import com.gskinner.motion.easing.Linear;
+    import com.greensock.TweenMax;
+    import com.greensock.easing.Expo;
+    import com.gskinner.motion.easing.Linear;
 
-	import flash.display.Shape;
-	import flash.text.TextFormat;
+    import flash.display.Shape;
+    import flash.text.TextFormat;
 
-	import io.decagames.rotmg.pets.data.ability.AbilitiesUtil;
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.gird.UIGridElement;
-	import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.pets.data.ability.AbilitiesUtil;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.gird.UIGridElement;
+    import io.decagames.rotmg.ui.labels.UILabel;
 
-	public class PetFeedProgressBar extends UIGridElement
+    public class PetFeedProgressBar extends UIGridElement
 		{
 
 			private const MAX_COLOR:Number = 6538829;

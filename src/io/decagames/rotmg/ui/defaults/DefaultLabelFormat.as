@@ -2,19 +2,19 @@
 
 package io.decagames.rotmg.ui.defaults
 	{
-	import com.company.assembleegameclient.util.FilterUtil;
+    import com.company.assembleegameclient.util.FilterUtil;
 
-	import flash.filters.DropShadowFilter;
-	import flash.text.TextFormat;
-	import flash.text.TextFormatAlign;
+    import flash.filters.DropShadowFilter;
+    import flash.text.TextFormat;
+    import flash.text.TextFormatAlign;
 
-	import flashx.textLayout.formats.TextAlign;
+    import flashx.textLayout.formats.TextAlign;
 
-	import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.ui.labels.UILabel;
 
-	import kabam.rotmg.text.model.FontModel;
+    import kabam.rotmg.text.model.FontModel;
 
-	public class DefaultLabelFormat
+    public class DefaultLabelFormat
 		{
 
 

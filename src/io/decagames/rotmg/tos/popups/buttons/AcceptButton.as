@@ -2,11 +2,11 @@
 
 package io.decagames.rotmg.tos.popups.buttons
 	{
-	import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.texture.TextureParser;
 
-	public class AcceptButton extends SliceScalingButton
+    public class AcceptButton extends SliceScalingButton
 		{
 
 			public function AcceptButton()

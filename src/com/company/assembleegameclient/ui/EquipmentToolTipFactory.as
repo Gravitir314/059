@@ -2,12 +2,12 @@
 
 package com.company.assembleegameclient.ui
 	{
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.ui.tooltip.EquipmentToolTip;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.ui.tooltip.EquipmentToolTip;
 
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	public class EquipmentToolTipFactory
+    public class EquipmentToolTipFactory
 		{
 
 

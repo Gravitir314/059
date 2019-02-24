@@ -2,33 +2,33 @@
 
 package io.decagames.rotmg.shop.mysteryBox.rollModal
 	{
-	import com.company.assembleegameclient.map.ParticleModalMap;
-	import com.gskinner.motion.GTween;
-	import com.gskinner.motion.easing.Sine;
+    import com.company.assembleegameclient.map.ParticleModalMap;
+    import com.gskinner.motion.GTween;
+    import com.gskinner.motion.easing.Sine;
 
-	import flash.display.Bitmap;
-	import flash.display.Sprite;
-	import flash.geom.Point;
-	import flash.utils.Dictionary;
-	import flash.utils.clearTimeout;
-	import flash.utils.setTimeout;
+    import flash.display.Bitmap;
+    import flash.display.Sprite;
+    import flash.geom.Point;
+    import flash.utils.Dictionary;
+    import flash.utils.clearTimeout;
+    import flash.utils.setTimeout;
 
-	import io.decagames.rotmg.shop.ShopBuyButton;
-	import io.decagames.rotmg.shop.mysteryBox.contentPopup.UIItemContainer;
-	import io.decagames.rotmg.shop.mysteryBox.rollModal.elements.Spinner;
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.gird.UIGrid;
-	import io.decagames.rotmg.ui.labels.UILabel;
-	import io.decagames.rotmg.ui.popups.modal.ModalPopup;
-	import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-	import io.decagames.rotmg.ui.spinner.FixedNumbersSpinner;
-	import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.shop.ShopBuyButton;
+    import io.decagames.rotmg.shop.mysteryBox.contentPopup.UIItemContainer;
+    import io.decagames.rotmg.shop.mysteryBox.rollModal.elements.Spinner;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.gird.UIGrid;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.ui.popups.modal.ModalPopup;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import io.decagames.rotmg.ui.spinner.FixedNumbersSpinner;
+    import io.decagames.rotmg.ui.texture.TextureParser;
 
-	import kabam.rotmg.mysterybox.model.MysteryBoxInfo;
+    import kabam.rotmg.mysterybox.model.MysteryBoxInfo;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class MysteryBoxRollModal extends ModalPopup
+    public class MysteryBoxRollModal extends ModalPopup
 		{
 
 			private const iconSize:Number = 80;

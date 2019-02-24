@@ -2,36 +2,36 @@
 
 package io.decagames.rotmg.pets.components.petPortrait
 	{
-	import com.company.assembleegameclient.ui.icons.IconButton;
-	import com.company.assembleegameclient.ui.icons.IconButtonFactory;
-	import com.company.util.AssetLibrary;
-	import com.greensock.TweenLite;
-	import com.greensock.easing.Sine;
-	import com.greensock.plugins.TransformMatrixPlugin;
-	import com.greensock.plugins.TweenPlugin;
+    import com.company.assembleegameclient.ui.icons.IconButton;
+    import com.company.assembleegameclient.ui.icons.IconButtonFactory;
+    import com.company.util.AssetLibrary;
+    import com.greensock.TweenLite;
+    import com.greensock.easing.Sine;
+    import com.greensock.plugins.TransformMatrixPlugin;
+    import com.greensock.plugins.TweenPlugin;
 
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
 
-	import io.decagames.rotmg.pets.components.petIcon.PetIconFactory;
-	import io.decagames.rotmg.pets.components.petSkinSlot.PetSkinSlot;
-	import io.decagames.rotmg.pets.config.AnimationConfig;
-	import io.decagames.rotmg.pets.data.ability.AbilitiesUtil;
-	import io.decagames.rotmg.pets.data.family.PetFamilyColors;
-	import io.decagames.rotmg.pets.data.vo.AbilityVO;
-	import io.decagames.rotmg.pets.data.vo.IPetVO;
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.labels.UILabel;
-	import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-	import io.decagames.rotmg.ui.texture.TextureParser;
-	import io.decagames.rotmg.utils.colors.Tint;
+    import io.decagames.rotmg.pets.components.petIcon.PetIconFactory;
+    import io.decagames.rotmg.pets.components.petSkinSlot.PetSkinSlot;
+    import io.decagames.rotmg.pets.config.AnimationConfig;
+    import io.decagames.rotmg.pets.data.ability.AbilitiesUtil;
+    import io.decagames.rotmg.pets.data.family.PetFamilyColors;
+    import io.decagames.rotmg.pets.data.vo.AbilityVO;
+    import io.decagames.rotmg.pets.data.vo.IPetVO;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.utils.colors.Tint;
 
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class PetPortrait extends Sprite
+    public class PetPortrait extends Sprite
 		{
 
 			public static const INFO_HEIGHT:int = 207;

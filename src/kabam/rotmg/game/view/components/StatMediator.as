@@ -2,11 +2,11 @@
 
 package kabam.rotmg.game.view.components
 	{
-	import flash.events.MouseEvent;
+    import flash.events.MouseEvent;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class StatMediator extends Mediator
+    public class StatMediator extends Mediator
 		{
 
 			[Inject]

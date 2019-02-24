@@ -2,17 +2,17 @@
 
 package com.company.assembleegameclient.objects
 	{
-	import com.company.assembleegameclient.game.GameSprite;
-	import com.company.assembleegameclient.ui.panels.Panel;
-	import com.company.assembleegameclient.ui.tooltip.TextToolTip;
-	import com.company.assembleegameclient.ui.tooltip.ToolTip;
+    import com.company.assembleegameclient.game.GameSprite;
+    import com.company.assembleegameclient.ui.panels.Panel;
+    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+    import com.company.assembleegameclient.ui.tooltip.ToolTip;
 
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.game.signals.TextPanelMessageUpdateSignal;
-	import kabam.rotmg.game.view.TextPanel;
-	import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.game.signals.TextPanelMessageUpdateSignal;
+    import kabam.rotmg.game.view.TextPanel;
+    import kabam.rotmg.text.model.TextKey;
 
-	public class ClosedGiftChest extends GameObject implements IInteractiveObject
+    public class ClosedGiftChest extends GameObject implements IInteractiveObject
 		{
 
 			private var textPanelUpdateSignal:TextPanelMessageUpdateSignal;

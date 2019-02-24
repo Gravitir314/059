@@ -2,11 +2,11 @@
 
 package com.company.assembleegameclient.ui.dialogs
 	{
-	import flash.events.Event;
+    import flash.events.Event;
 
-	import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.model.TextKey;
 
-	public class NotEnoughFameDialog extends Dialog
+    public class NotEnoughFameDialog extends Dialog
 		{
 
 			public function NotEnoughFameDialog()

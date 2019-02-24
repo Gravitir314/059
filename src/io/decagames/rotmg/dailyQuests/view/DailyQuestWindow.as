@@ -2,17 +2,17 @@
 
 package io.decagames.rotmg.dailyQuests.view
 	{
-	import com.company.assembleegameclient.map.ParticleModalMap;
+    import com.company.assembleegameclient.map.ParticleModalMap;
 
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	import io.decagames.rotmg.dailyQuests.view.info.DailyQuestInfo;
-	import io.decagames.rotmg.dailyQuests.view.list.DailyQuestsList;
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.labels.UILabel;
-	import io.decagames.rotmg.ui.popups.UIPopup;
+    import io.decagames.rotmg.dailyQuests.view.info.DailyQuestInfo;
+    import io.decagames.rotmg.dailyQuests.view.list.DailyQuestsList;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.ui.popups.UIPopup;
 
-	public class DailyQuestWindow extends UIPopup
+    public class DailyQuestWindow extends UIPopup
 		{
 
 			public static const MODAL_WIDTH:int = 600;

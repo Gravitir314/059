@@ -2,16 +2,16 @@
 
 package io.decagames.rotmg.shop.packages
 	{
-	import flash.display.Loader;
-	import flash.display.Sprite;
+    import flash.display.Loader;
+    import flash.display.Sprite;
 
-	import io.decagames.rotmg.shop.genericBox.GenericBoxTile;
-	import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
-	import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import io.decagames.rotmg.shop.genericBox.GenericBoxTile;
+    import io.decagames.rotmg.shop.genericBox.data.GenericBoxInfo;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
 
-	import kabam.rotmg.packages.model.PackageInfo;
+    import kabam.rotmg.packages.model.PackageInfo;
 
-	public class PackageBoxTile extends GenericBoxTile
+    public class PackageBoxTile extends GenericBoxTile
 		{
 
 			private var imageMask:SliceScalingBitmap;

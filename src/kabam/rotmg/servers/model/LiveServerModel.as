@@ -2,14 +2,14 @@
 
 package kabam.rotmg.servers.model
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.servers.api.LatLong;
-	import kabam.rotmg.servers.api.Server;
-	import kabam.rotmg.servers.api.ServerModel;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.servers.api.LatLong;
+    import kabam.rotmg.servers.api.Server;
+    import kabam.rotmg.servers.api.ServerModel;
 
-	public class LiveServerModel implements ServerModel
+    public class LiveServerModel implements ServerModel
 		{
 
 			private const servers:Vector.<Server> = new Vector.<Server>(0);

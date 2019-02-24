@@ -2,14 +2,14 @@
 
 package com.company.assembleegameclient.ui.dropdown
 	{
-	import com.company.ui.BaseSimpleText;
+    import com.company.ui.BaseSimpleText;
 
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
-	import flash.geom.Point;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
+    import flash.geom.Point;
 
-	public class DropDown extends Sprite
+    public class DropDown extends Sprite
 		{
 
 			protected var strings_:Vector.<String>;

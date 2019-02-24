@@ -2,14 +2,14 @@
 
 package kabam.rotmg.arena.view
 	{
-	import flash.display.Sprite;
-	import flash.filters.DropShadowFilter;
+    import flash.display.Sprite;
+    import flash.filters.DropShadowFilter;
 
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.StaticTextDisplay;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.StaticTextDisplay;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	public class ArenaWaveCounter extends Sprite
+    public class ArenaWaveCounter extends Sprite
 		{
 
 			private const waveText:StaticTextDisplay = makeWaveText();

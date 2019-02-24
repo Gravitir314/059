@@ -2,27 +2,27 @@
 
 package kabam.rotmg.friends.view
 	{
-	import com.company.assembleegameclient.appengine.SavedCharacter;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.ui.dialogs.ErrorDialog;
+    import com.company.assembleegameclient.appengine.SavedCharacter;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.ui.dialogs.ErrorDialog;
 
-	import io.decagames.rotmg.social.config.FriendsActions;
-	import io.decagames.rotmg.social.model.FriendRequestVO;
-	import io.decagames.rotmg.social.model.SocialModel;
-	import io.decagames.rotmg.social.signals.FriendActionSignal;
+    import io.decagames.rotmg.social.config.FriendsActions;
+    import io.decagames.rotmg.social.model.FriendRequestVO;
+    import io.decagames.rotmg.social.model.SocialModel;
+    import io.decagames.rotmg.social.signals.FriendActionSignal;
 
-	import kabam.rotmg.chat.control.ShowChatInputSignal;
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.game.model.GameInitData;
-	import kabam.rotmg.game.signals.PlayGameSignal;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.ui.signals.EnterGameSignal;
+    import kabam.rotmg.chat.control.ShowChatInputSignal;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.dialogs.control.CloseDialogsSignal;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.game.model.GameInitData;
+    import kabam.rotmg.game.signals.PlayGameSignal;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.ui.signals.EnterGameSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class FriendListMediator extends Mediator
+    public class FriendListMediator extends Mediator
 		{
 
 			[Inject]

@@ -2,21 +2,21 @@
 
 package com.company.assembleegameclient.objects
 	{
-	import com.company.assembleegameclient.appengine.RemoteTexture;
-	import com.company.assembleegameclient.objects.particles.EffectProperties;
-	import com.company.assembleegameclient.util.AnimatedChar;
-	import com.company.assembleegameclient.util.AnimatedChars;
-	import com.company.assembleegameclient.util.AssetLoader;
-	import com.company.assembleegameclient.util.MaskedImage;
-	import com.company.util.AssetLibrary;
+    import com.company.assembleegameclient.appengine.RemoteTexture;
+    import com.company.assembleegameclient.objects.particles.EffectProperties;
+    import com.company.assembleegameclient.util.AnimatedChar;
+    import com.company.assembleegameclient.util.AnimatedChars;
+    import com.company.assembleegameclient.util.AssetLoader;
+    import com.company.assembleegameclient.util.MaskedImage;
+    import com.company.util.AssetLibrary;
 
-	import flash.display.BitmapData;
-	import flash.utils.Dictionary;
+    import flash.display.BitmapData;
+    import flash.utils.Dictionary;
 
-	import kabam.rotmg.application.api.ApplicationSetup;
-	import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.application.api.ApplicationSetup;
+    import kabam.rotmg.core.StaticInjectorContext;
 
-	public class TextureDataConcrete extends TextureData
+    public class TextureDataConcrete extends TextureData
 		{
 
 			public static var remoteTexturesUsed:Boolean = false;

@@ -2,24 +2,24 @@
 
 package kabam.rotmg.game.view.components
 	{
-	import com.company.assembleegameclient.objects.ImageFactory;
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.ui.icons.IconButtonFactory;
+    import com.company.assembleegameclient.objects.ImageFactory;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.ui.icons.IconButtonFactory;
 
-	import io.decagames.rotmg.pets.components.guiTab.PetsTabContentView;
-	import io.decagames.rotmg.pets.data.PetsModel;
-	import io.decagames.rotmg.pets.signals.NotifyActivePetUpdated;
+    import io.decagames.rotmg.pets.components.guiTab.PetsTabContentView;
+    import io.decagames.rotmg.pets.data.PetsModel;
+    import io.decagames.rotmg.pets.signals.NotifyActivePetUpdated;
 
-	import kabam.rotmg.assets.services.IconFactory;
-	import kabam.rotmg.ui.model.HUDModel;
-	import kabam.rotmg.ui.model.TabStripModel;
-	import kabam.rotmg.ui.signals.UpdateBackpackTabSignal;
-	import kabam.rotmg.ui.signals.UpdateHUDSignal;
-	import kabam.rotmg.ui.view.StatsDockedSignal;
+    import kabam.rotmg.assets.services.IconFactory;
+    import kabam.rotmg.ui.model.HUDModel;
+    import kabam.rotmg.ui.model.TabStripModel;
+    import kabam.rotmg.ui.signals.UpdateBackpackTabSignal;
+    import kabam.rotmg.ui.signals.UpdateHUDSignal;
+    import kabam.rotmg.ui.view.StatsDockedSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class TabStripMediator extends Mediator
+    public class TabStripMediator extends Mediator
 		{
 
 			[Inject]

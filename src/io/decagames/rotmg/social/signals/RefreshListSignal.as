@@ -2,9 +2,9 @@
 
 package io.decagames.rotmg.social.signals
 	{
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class RefreshListSignal extends Signal
+    public class RefreshListSignal extends Signal
 		{
 
 			public static const CONTEXT_FRIENDS_LIST:String = "RefreshListSignal.CONTEXT_FRIENDS_LIST";

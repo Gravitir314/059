@@ -2,28 +2,28 @@
 
 package com.company.assembleegameclient.ui.board
 	{
-	import com.company.assembleegameclient.ui.DeprecatedTextButton;
-	import com.company.assembleegameclient.ui.Scrollbar;
-	import com.company.ui.BaseSimpleText;
-	import com.company.util.GraphicsUtil;
-	import com.company.util.HTMLUtil;
+    import com.company.assembleegameclient.ui.DeprecatedTextButton;
+    import com.company.assembleegameclient.ui.Scrollbar;
+    import com.company.ui.BaseSimpleText;
+    import com.company.util.GraphicsUtil;
+    import com.company.util.HTMLUtil;
 
-	import flash.display.CapsStyle;
-	import flash.display.Graphics;
-	import flash.display.GraphicsPath;
-	import flash.display.GraphicsSolidFill;
-	import flash.display.GraphicsStroke;
-	import flash.display.IGraphicsData;
-	import flash.display.JointStyle;
-	import flash.display.LineScaleMode;
-	import flash.display.Shape;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
+    import flash.display.CapsStyle;
+    import flash.display.Graphics;
+    import flash.display.GraphicsPath;
+    import flash.display.GraphicsSolidFill;
+    import flash.display.GraphicsStroke;
+    import flash.display.IGraphicsData;
+    import flash.display.JointStyle;
+    import flash.display.LineScaleMode;
+    import flash.display.Shape;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.model.TextKey;
 
-	internal class ViewBoard extends Sprite
+    internal class ViewBoard extends Sprite
 		{
 
 			public static const TEXT_WIDTH:int = 400;

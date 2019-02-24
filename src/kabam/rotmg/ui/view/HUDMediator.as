@@ -2,19 +2,19 @@
 
 package kabam.rotmg.ui.view
 	{
-	import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.objects.Player;
 
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.game.view.components.StatsUndockedSignal;
-	import kabam.rotmg.game.view.components.StatsView;
-	import kabam.rotmg.ui.model.HUDModel;
-	import kabam.rotmg.ui.signals.UpdateHUDSignal;
+    import kabam.rotmg.game.view.components.StatsUndockedSignal;
+    import kabam.rotmg.game.view.components.StatsView;
+    import kabam.rotmg.ui.model.HUDModel;
+    import kabam.rotmg.ui.signals.UpdateHUDSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class HUDMediator extends Mediator
+    public class HUDMediator extends Mediator
 		{
 
 			[Inject]

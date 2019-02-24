@@ -2,18 +2,18 @@
 
 package io.decagames.rotmg.social.widgets
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.ui.icons.IconButton;
-	import com.company.assembleegameclient.util.GuildUtil;
-	import com.company.assembleegameclient.util.TimeUtil;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.ui.icons.IconButton;
+    import com.company.assembleegameclient.util.GuildUtil;
+    import com.company.assembleegameclient.util.TimeUtil;
 
-	import flash.events.Event;
+    import flash.events.Event;
 
-	import io.decagames.rotmg.social.model.GuildMemberVO;
+    import io.decagames.rotmg.social.model.GuildMemberVO;
 
-	import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.model.TextKey;
 
-	public class GuildListItem extends BaseListItem
+    public class GuildListItem extends BaseListItem
 		{
 
 			public var promoteButton:IconButton;

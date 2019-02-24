@@ -2,17 +2,17 @@
 
 package com.company.assembleegameclient.ui.panels
 	{
-	import com.company.assembleegameclient.game.GameSprite;
-	import com.company.assembleegameclient.ui.DeprecatedTextButton;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.game.GameSprite;
+    import com.company.assembleegameclient.ui.DeprecatedTextButton;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.events.MouseEvent;
-	import flash.text.TextFieldAutoSize;
+    import flash.events.MouseEvent;
+    import flash.text.TextFieldAutoSize;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	public class ButtonPanel extends Panel
+    public class ButtonPanel extends Panel
 		{
 
 			private var titleText_:TextFieldDisplayConcrete;

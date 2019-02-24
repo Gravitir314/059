@@ -2,29 +2,29 @@
 
 package kabam.rotmg.dailyLogin.view
 	{
-	import com.company.assembleegameclient.ui.DeprecatedTextButtonStatic;
-	import com.company.assembleegameclient.util.TextureRedrawer;
-	import com.company.util.AssetLibrary;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.ui.DeprecatedTextButtonStatic;
+    import com.company.assembleegameclient.util.TextureRedrawer;
+    import com.company.util.AssetLibrary;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.DisplayObject;
-	import flash.display.Sprite;
-	import flash.geom.Rectangle;
-	import flash.text.TextFieldAutoSize;
-	import flash.text.TextFormatAlign;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.DisplayObject;
+    import flash.display.Sprite;
+    import flash.geom.Rectangle;
+    import flash.text.TextFieldAutoSize;
+    import flash.text.TextFormatAlign;
 
-	import kabam.rotmg.dailyLogin.config.CalendarSettings;
-	import kabam.rotmg.dailyLogin.model.DailyLoginModel;
-	import kabam.rotmg.mysterybox.components.MysteryBoxSelectModal;
-	import kabam.rotmg.pets.view.components.DialogCloseButton;
-	import kabam.rotmg.pets.view.components.PopupWindowBackground;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.dailyLogin.config.CalendarSettings;
+    import kabam.rotmg.dailyLogin.model.DailyLoginModel;
+    import kabam.rotmg.mysterybox.components.MysteryBoxSelectModal;
+    import kabam.rotmg.pets.view.components.DialogCloseButton;
+    import kabam.rotmg.pets.view.components.PopupWindowBackground;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	public class DailyLoginModal extends Sprite
+    public class DailyLoginModal extends Sprite
 		{
 
 			private var content:Sprite;

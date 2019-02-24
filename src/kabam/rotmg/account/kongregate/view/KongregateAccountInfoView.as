@@ -2,23 +2,23 @@
 
 package kabam.rotmg.account.kongregate.view
 	{
-	import com.company.assembleegameclient.screens.TitleMenuOption;
+    import com.company.assembleegameclient.screens.TitleMenuOption;
 
-	import flash.display.DisplayObject;
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
-	import flash.text.TextFieldAutoSize;
+    import flash.display.DisplayObject;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
+    import flash.filters.DropShadowFilter;
+    import flash.text.TextFieldAutoSize;
 
-	import kabam.rotmg.account.core.view.AccountInfoView;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.account.core.view.AccountInfoView;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	import org.osflash.signals.Signal;
-	import org.osflash.signals.natives.NativeMappedSignal;
+    import org.osflash.signals.Signal;
+    import org.osflash.signals.natives.NativeMappedSignal;
 
-	public class KongregateAccountInfoView extends Sprite implements AccountInfoView
+    public class KongregateAccountInfoView extends Sprite implements AccountInfoView
 		{
 
 			private static const REGISTER:String = TextKey.KONGREGATEACCOUNTINFOVIEW_REGISTER;//"KongregateAccountInfoView.register"

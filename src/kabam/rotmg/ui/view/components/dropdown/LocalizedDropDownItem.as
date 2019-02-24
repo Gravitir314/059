@@ -2,17 +2,17 @@
 
 package kabam.rotmg.ui.view.components.dropdown
 	{
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class LocalizedDropDownItem extends Sprite
+    public class LocalizedDropDownItem extends Sprite
 		{
 
 			public var w_:int;

@@ -2,15 +2,15 @@
 
 package kabam.rotmg.text.view
 	{
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.text.TextFieldAutoSize;
-	import flash.text.TextFormatAlign;
+    import flash.text.TextFieldAutoSize;
+    import flash.text.TextFormatAlign;
 
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	public class TextFieldConcreteBuilder
+    public class TextFieldConcreteBuilder
 		{
 
 			private var _containerWidth:int = -1;

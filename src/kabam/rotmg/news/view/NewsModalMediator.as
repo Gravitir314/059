@@ -2,15 +2,15 @@
 
 package kabam.rotmg.news.view
 	{
-	import kabam.rotmg.dialogs.control.FlushPopupStartupQueueSignal;
-	import kabam.rotmg.news.controller.NewsDataUpdatedSignal;
-	import kabam.rotmg.news.model.NewsCellVO;
-	import kabam.rotmg.news.model.NewsModel;
-	import kabam.rotmg.news.services.GetAppEngineNewsTask;
+    import kabam.rotmg.dialogs.control.FlushPopupStartupQueueSignal;
+    import kabam.rotmg.news.controller.NewsDataUpdatedSignal;
+    import kabam.rotmg.news.model.NewsCellVO;
+    import kabam.rotmg.news.model.NewsModel;
+    import kabam.rotmg.news.services.GetAppEngineNewsTask;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class NewsModalMediator extends Mediator
+    public class NewsModalMediator extends Mediator
 		{
 
 			public static var firstRun:Boolean = true;

@@ -2,22 +2,22 @@
 
 package kabam.rotmg.dailyLogin.tasks
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.util.MoreObjectUtil;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.util.MoreObjectUtil;
 
-	import kabam.lib.tasks.BaseTask;
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.appengine.api.AppEngineClient;
-	import kabam.rotmg.build.api.BuildData;
-	import kabam.rotmg.build.api.BuildEnvironment;
-	import kabam.rotmg.core.signals.SetLoadingMessageSignal;
-	import kabam.rotmg.dailyLogin.model.CalendarDayModel;
-	import kabam.rotmg.dailyLogin.model.CalendarTypes;
-	import kabam.rotmg.dailyLogin.model.DailyLoginModel;
+    import kabam.lib.tasks.BaseTask;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.appengine.api.AppEngineClient;
+    import kabam.rotmg.build.api.BuildData;
+    import kabam.rotmg.build.api.BuildEnvironment;
+    import kabam.rotmg.core.signals.SetLoadingMessageSignal;
+    import kabam.rotmg.dailyLogin.model.CalendarDayModel;
+    import kabam.rotmg.dailyLogin.model.CalendarTypes;
+    import kabam.rotmg.dailyLogin.model.DailyLoginModel;
 
-	import robotlegs.bender.framework.api.ILogger;
+    import robotlegs.bender.framework.api.ILogger;
 
-	public class FetchPlayerCalendarTask extends BaseTask
+    public class FetchPlayerCalendarTask extends BaseTask
 		{
 
 			[Inject]

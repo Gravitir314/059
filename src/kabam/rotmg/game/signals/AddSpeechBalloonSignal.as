@@ -2,11 +2,11 @@
 
 package kabam.rotmg.game.signals
 	{
-	import kabam.rotmg.game.model.AddSpeechBalloonVO;
+    import kabam.rotmg.game.model.AddSpeechBalloonVO;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class AddSpeechBalloonSignal extends Signal
+    public class AddSpeechBalloonSignal extends Signal
 		{
 
 			public function AddSpeechBalloonSignal()

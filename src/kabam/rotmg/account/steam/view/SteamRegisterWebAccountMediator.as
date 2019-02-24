@@ -2,14 +2,14 @@
 
 package kabam.rotmg.account.steam.view
 	{
-	import kabam.rotmg.account.core.signals.RegisterAccountSignal;
-	import kabam.rotmg.account.core.view.RegisterWebAccountDialog;
-	import kabam.rotmg.account.web.model.AccountData;
-	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
+    import kabam.rotmg.account.core.signals.RegisterAccountSignal;
+    import kabam.rotmg.account.core.view.RegisterWebAccountDialog;
+    import kabam.rotmg.account.web.model.AccountData;
+    import kabam.rotmg.dialogs.control.CloseDialogsSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class SteamRegisterWebAccountMediator extends Mediator
+    public class SteamRegisterWebAccountMediator extends Mediator
 		{
 
 			[Inject]

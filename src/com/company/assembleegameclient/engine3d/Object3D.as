@@ -2,16 +2,16 @@
 
 package com.company.assembleegameclient.engine3d
 	{
-	import com.company.assembleegameclient.map.Camera;
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.map.Camera;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import flash.display.BitmapData;
-	import flash.display.IGraphicsData;
-	import flash.geom.Matrix3D;
-	import flash.geom.Utils3D;
-	import flash.geom.Vector3D;
+    import flash.display.BitmapData;
+    import flash.display.IGraphicsData;
+    import flash.geom.Matrix3D;
+    import flash.geom.Utils3D;
+    import flash.geom.Vector3D;
 
-	public class Object3D
+    public class Object3D
 		{
 
 			public var model_:Model3D = null;

@@ -2,10 +2,10 @@
 
 package com.company.assembleegameclient.objects.particles
 	{
-	import com.company.assembleegameclient.objects.GameObject;
-	import com.company.assembleegameclient.util.RandomUtil;
+    import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.util.RandomUtil;
 
-	public class GasEffect extends ParticleEffect
+    public class GasEffect extends ParticleEffect
 		{
 
 			public var go_:GameObject;

@@ -2,13 +2,13 @@
 
 package com.company.assembleegameclient.objects.particles
 	{
-	import com.company.assembleegameclient.objects.GameObject;
-	import com.company.assembleegameclient.util.TextureRedrawer;
-	import com.company.util.AssetLibrary;
+    import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.util.TextureRedrawer;
+    import com.company.util.AssetLibrary;
 
-	import flash.display.BitmapData;
+    import flash.display.BitmapData;
 
-	public class ParticleGenerator extends ParticleEffect
+    public class ParticleGenerator extends ParticleEffect
 		{
 
 			private var particlePool:Vector.<BaseParticle>;

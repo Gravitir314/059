@@ -2,17 +2,17 @@
 
 package kabam.rotmg.game.view
 	{
-	import flash.display.Bitmap;
-	import flash.display.Sprite;
-	import flash.filters.DropShadowFilter;
-	import flash.text.TextField;
-	import flash.text.TextFormat;
-	import flash.text.TextFormatAlign;
+    import flash.display.Bitmap;
+    import flash.display.Sprite;
+    import flash.filters.DropShadowFilter;
+    import flash.text.TextField;
+    import flash.text.TextFormat;
+    import flash.text.TextFormatAlign;
 
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.texture.TextureParser;
 
-	public class RealmQuestItem extends Sprite
+    public class RealmQuestItem extends Sprite
 		{
 
 			private var _content:Sprite;

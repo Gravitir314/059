@@ -2,26 +2,26 @@
 
 package com.company.assembleegameclient.map.partyoverlay
 	{
-	import com.company.assembleegameclient.map.Camera;
-	import com.company.assembleegameclient.map.Map;
-	import com.company.assembleegameclient.objects.GameObject;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.ui.menu.Menu;
-	import com.company.assembleegameclient.ui.tooltip.ToolTip;
-	import com.company.util.RectangleUtil;
-	import com.company.util.Trig;
+    import com.company.assembleegameclient.map.Camera;
+    import com.company.assembleegameclient.map.Map;
+    import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.ui.menu.Menu;
+    import com.company.assembleegameclient.ui.tooltip.ToolTip;
+    import com.company.util.RectangleUtil;
+    import com.company.util.Trig;
 
-	import flash.display.DisplayObjectContainer;
-	import flash.display.Graphics;
-	import flash.display.Shape;
-	import flash.display.Sprite;
-	import flash.display.StageScaleMode;
-	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
-	import flash.geom.Point;
-	import flash.geom.Rectangle;
+    import flash.display.DisplayObjectContainer;
+    import flash.display.Graphics;
+    import flash.display.Shape;
+    import flash.display.Sprite;
+    import flash.display.StageScaleMode;
+    import flash.events.MouseEvent;
+    import flash.filters.DropShadowFilter;
+    import flash.geom.Point;
+    import flash.geom.Rectangle;
 
-	public class GameObjectArrow extends Sprite
+    public class GameObjectArrow extends Sprite
 		{
 
 			public static const SMALL_SIZE:int = 8;

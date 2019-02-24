@@ -2,17 +2,17 @@
 
 package com.company.assembleegameclient.map
 	{
-	import com.company.assembleegameclient.game.AGameSprite;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.util.GraphicsUtil;
+    import com.company.assembleegameclient.game.AGameSprite;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.util.GraphicsUtil;
 
-	import flash.display.GradientType;
-	import flash.display.GraphicsGradientFill;
-	import flash.display.GraphicsPath;
-	import flash.display.IGraphicsData;
-	import flash.display.Shape;
+    import flash.display.GradientType;
+    import flash.display.GraphicsGradientFill;
+    import flash.display.GraphicsPath;
+    import flash.display.IGraphicsData;
+    import flash.display.Shape;
 
-	public class HurtOverlay extends Shape
+    public class HurtOverlay extends Shape
 		{
 
 			private const s:Number = (600 / Math.sin((Math.PI / 4)));

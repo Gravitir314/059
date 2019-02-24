@@ -2,20 +2,20 @@
 
 package io.decagames.rotmg.pets.windows.yard.fuse
 	{
-	import com.company.assembleegameclient.util.Currency;
+    import com.company.assembleegameclient.util.Currency;
 
-	import io.decagames.rotmg.pets.components.petItem.PetItem;
-	import io.decagames.rotmg.shop.ShopBuyButton;
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.gird.UIGrid;
-	import io.decagames.rotmg.ui.gird.UIGridElement;
-	import io.decagames.rotmg.ui.labels.UILabel;
-	import io.decagames.rotmg.ui.scroll.UIScrollbar;
-	import io.decagames.rotmg.ui.tabs.UITab;
+    import io.decagames.rotmg.pets.components.petItem.PetItem;
+    import io.decagames.rotmg.shop.ShopBuyButton;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.gird.UIGrid;
+    import io.decagames.rotmg.ui.gird.UIGridElement;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.ui.scroll.UIScrollbar;
+    import io.decagames.rotmg.ui.tabs.UITab;
 
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	public class FuseTab extends UITab
+    public class FuseTab extends UITab
 		{
 
 			public static const MAXED_COLOR:uint = 6735914;

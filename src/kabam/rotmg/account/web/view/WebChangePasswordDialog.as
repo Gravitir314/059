@@ -2,18 +2,18 @@
 
 package kabam.rotmg.account.web.view
 	{
-	import com.company.assembleegameclient.account.ui.Frame;
-	import com.company.assembleegameclient.account.ui.TextInputField;
+    import com.company.assembleegameclient.account.ui.Frame;
+    import com.company.assembleegameclient.account.ui.TextInputField;
 
-	import flash.events.MouseEvent;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.account.web.model.ChangePasswordData;
-	import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.account.web.model.ChangePasswordData;
+    import kabam.rotmg.text.model.TextKey;
 
-	import org.osflash.signals.Signal;
-	import org.osflash.signals.natives.NativeMappedSignal;
+    import org.osflash.signals.Signal;
+    import org.osflash.signals.natives.NativeMappedSignal;
 
-	public class WebChangePasswordDialog extends Frame
+    public class WebChangePasswordDialog extends Frame
 		{
 
 			public var cancel:Signal;

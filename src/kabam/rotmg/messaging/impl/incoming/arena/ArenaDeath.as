@@ -2,11 +2,11 @@
 
 package kabam.rotmg.messaging.impl.incoming.arena
 	{
-	import flash.utils.IDataInput;
+    import flash.utils.IDataInput;
 
-	import kabam.rotmg.messaging.impl.incoming.IncomingMessage;
+    import kabam.rotmg.messaging.impl.incoming.IncomingMessage;
 
-	public class ArenaDeath extends IncomingMessage
+    public class ArenaDeath extends IncomingMessage
 		{
 
 			public var cost:int;

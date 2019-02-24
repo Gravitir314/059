@@ -2,26 +2,26 @@
 
 package com.company.assembleegameclient.ui
 	{
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.util.TextureRedrawer;
-	import com.company.util.AssetLibrary;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.util.TextureRedrawer;
+    import com.company.util.AssetLibrary;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.Sprite;
-	import flash.events.TimerEvent;
-	import flash.utils.Timer;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.Sprite;
+    import flash.events.TimerEvent;
+    import flash.utils.Timer;
 
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StringBuilder;
-	import kabam.rotmg.ui.view.SignalWaiter;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StringBuilder;
+    import kabam.rotmg.ui.view.SignalWaiter;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class BoostPanel extends Sprite
+    public class BoostPanel extends Sprite
 		{
 
 			public const resized:Signal = new Signal();

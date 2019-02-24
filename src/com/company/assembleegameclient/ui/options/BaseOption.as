@@ -2,17 +2,17 @@
 
 package com.company.assembleegameclient.ui.options
 	{
-	import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
 
-	import flash.events.Event;
-	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
+    import flash.filters.DropShadowFilter;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StringBuilder;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StringBuilder;
 
-	public class BaseOption extends Option
+    public class BaseOption extends Option
 		{
 			public static const DROPSHADOW_FILTER:DropShadowFilter = new DropShadowFilter(0, 0, 0, 1, 4, 4, 2);
 

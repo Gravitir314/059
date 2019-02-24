@@ -2,9 +2,9 @@
 
 package com.company.assembleegameclient.util
 	{
-	import flash.utils.Dictionary;
+    import flash.utils.Dictionary;
 
-	public class FreeList
+    public class FreeList
 		{
 
 			private static var dict_:Dictionary = new Dictionary();

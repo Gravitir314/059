@@ -2,9 +2,9 @@
 
 package com.company.assembleegameclient.objects.animation
 	{
-	import flash.display.BitmapData;
+    import flash.display.BitmapData;
 
-	public class Animations
+    public class Animations
 		{
 
 			public var animationsData_:AnimationsData;

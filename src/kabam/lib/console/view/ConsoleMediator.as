@@ -2,14 +2,14 @@
 
 package kabam.lib.console.view
 	{
-	import kabam.lib.console.signals.HideConsoleSignal;
-	import kabam.lib.console.signals.RemoveConsoleSignal;
-	import kabam.lib.console.signals.ShowConsoleSignal;
-	import kabam.lib.console.signals.ToggleConsoleSignal;
+    import kabam.lib.console.signals.HideConsoleSignal;
+    import kabam.lib.console.signals.RemoveConsoleSignal;
+    import kabam.lib.console.signals.ShowConsoleSignal;
+    import kabam.lib.console.signals.ToggleConsoleSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class ConsoleMediator extends Mediator
+    public class ConsoleMediator extends Mediator
 		{
 
 			[Inject]

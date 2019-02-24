@@ -2,28 +2,28 @@
 
 package com.company.assembleegameclient.parameters
 	{
-	import com.company.assembleegameclient.game.events.ReconnectEvent;
-	import com.company.assembleegameclient.objects.GameObject;
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.assembleegameclient.objects.ObjectProperties;
-	import com.company.assembleegameclient.objects.Portal;
-	import com.company.assembleegameclient.ui.options.Options;
-	import com.company.util.KeyCodes;
-	import com.company.util.MoreDateUtil;
+    import com.company.assembleegameclient.game.events.ReconnectEvent;
+    import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.assembleegameclient.objects.ObjectProperties;
+    import com.company.assembleegameclient.objects.Portal;
+    import com.company.assembleegameclient.ui.options.Options;
+    import com.company.util.KeyCodes;
+    import com.company.util.MoreDateUtil;
 
-	import flash.display.DisplayObject;
-	import flash.display.StageScaleMode;
-	import flash.events.Event;
-	import flash.geom.Point;
-	import flash.net.SharedObject;
-	import flash.system.Capabilities;
-	import flash.utils.Dictionary;
+    import flash.display.DisplayObject;
+    import flash.display.StageScaleMode;
+    import flash.events.Event;
+    import flash.geom.Point;
+    import flash.net.SharedObject;
+    import flash.system.Capabilities;
+    import flash.utils.Dictionary;
 
-	import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.model.TextKey;
 
-	import zfn.xinput.ControllerHandler;
+    import zfn.xinput.ControllerHandler;
 
-	public class Parameters
+    public class Parameters
 		{
 			public static const PORT:int = 2050;
 			public static const ALLOW_SCREENSHOT_MODE:Boolean = false;
@@ -910,7 +910,7 @@ package com.company.assembleegameclient.parameters
 							return;
 					}
 				}
-				setDefault("gameVersion", "X31.2.3");
+				setDefault("gameVersion", "X31.3.1"); //X31.2.3
 				setDefault("AABoundingDist", 4);
 				setDefault("AAException", DefaultAAException);
 				setDefault("AAIgnore", DefaultAAIgnore);
@@ -967,7 +967,7 @@ package com.company.assembleegameclient.parameters
 				setDefault("chatLength", 10);
 				setDefault("cNameBypass", false);
 				setDefault("customSounds", true);
-				setDefault("customUI", true);
+				setDefault("customUI", false);
 				setDefault("customVolume", 1);
 				setDefault("damageIgnored", false);
 				setDefault("densityThreshold", 625);
@@ -1082,7 +1082,7 @@ package com.company.assembleegameclient.parameters
 				setDefault("tiltCam", false);
 				setDefault("TombCycleBoss", 3368);
 				setDefault("traceMessage", false);
-				setDefault("TradeDelay", true);
+				setDefault("TradeDelay", false);
 				setDefault("trainOffset", 500);
 				setDefault("uiscale", false);
 				setDefault("useControllerNumber", 0);

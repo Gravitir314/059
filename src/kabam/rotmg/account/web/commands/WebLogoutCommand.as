@@ -2,22 +2,22 @@
 
 package kabam.rotmg.account.web.commands
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
 
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	import io.decagames.rotmg.pets.data.PetsModel;
+    import io.decagames.rotmg.pets.data.PetsModel;
 
-	import kabam.lib.tasks.BaseTask;
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.core.model.ScreenModel;
-	import kabam.rotmg.core.signals.InvalidateDataSignal;
-	import kabam.rotmg.core.signals.SetScreenWithValidDataSignal;
-	import kabam.rotmg.fame.view.FameView;
-	import kabam.rotmg.packages.services.GetPackagesTask;
+    import kabam.lib.tasks.BaseTask;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.core.model.ScreenModel;
+    import kabam.rotmg.core.signals.InvalidateDataSignal;
+    import kabam.rotmg.core.signals.SetScreenWithValidDataSignal;
+    import kabam.rotmg.fame.view.FameView;
+    import kabam.rotmg.packages.services.GetPackagesTask;
 
-	public class WebLogoutCommand
+    public class WebLogoutCommand
 		{
 
 			[Inject]

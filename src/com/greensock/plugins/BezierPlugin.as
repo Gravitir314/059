@@ -2,11 +2,11 @@
 
 package com.greensock.plugins
 	{
-	import com.greensock.TweenLite;
+    import com.greensock.TweenLite;
 
-	import flash.geom.Point;
+    import flash.geom.Point;
 
-	public class BezierPlugin extends TweenPlugin
+    public class BezierPlugin extends TweenPlugin
 		{
 
 			public static const API:Number = 2;

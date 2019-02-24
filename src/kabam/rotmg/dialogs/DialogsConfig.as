@@ -2,25 +2,25 @@
 
 package kabam.rotmg.dialogs
 	{
-	import kabam.lib.console.signals.RegisterConsoleActionSignal;
-	import kabam.lib.console.vo.ConsoleAction;
-	import kabam.rotmg.dialogs.control.AddPopupToStartupQueueSignal;
-	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
-	import kabam.rotmg.dialogs.control.FlushPopupStartupQueueSignal;
-	import kabam.rotmg.dialogs.control.OpenDialogNoModalSignal;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.dialogs.control.PopDialogSignal;
-	import kabam.rotmg.dialogs.control.PushDialogSignal;
-	import kabam.rotmg.dialogs.control.ShowDialogBackgroundSignal;
-	import kabam.rotmg.dialogs.view.DialogsMediator;
-	import kabam.rotmg.dialogs.view.DialogsView;
+    import kabam.lib.console.signals.RegisterConsoleActionSignal;
+    import kabam.lib.console.vo.ConsoleAction;
+    import kabam.rotmg.dialogs.control.AddPopupToStartupQueueSignal;
+    import kabam.rotmg.dialogs.control.CloseDialogsSignal;
+    import kabam.rotmg.dialogs.control.FlushPopupStartupQueueSignal;
+    import kabam.rotmg.dialogs.control.OpenDialogNoModalSignal;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.dialogs.control.PopDialogSignal;
+    import kabam.rotmg.dialogs.control.PushDialogSignal;
+    import kabam.rotmg.dialogs.control.ShowDialogBackgroundSignal;
+    import kabam.rotmg.dialogs.view.DialogsMediator;
+    import kabam.rotmg.dialogs.view.DialogsView;
 
-	import org.swiftsuspenders.Injector;
+    import org.swiftsuspenders.Injector;
 
-	import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
-	import robotlegs.bender.framework.api.IConfig;
+    import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
+    import robotlegs.bender.framework.api.IConfig;
 
-	public class DialogsConfig implements IConfig
+    public class DialogsConfig implements IConfig
 		{
 
 			[Inject]

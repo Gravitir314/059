@@ -2,19 +2,19 @@
 
 package com.company.assembleegameclient.screens
 	{
-	import com.company.ui.BaseSimpleText;
+    import com.company.ui.BaseSimpleText;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
-	import flash.net.URLRequest;
-	import flash.net.navigateToURL;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
+    import flash.filters.DropShadowFilter;
+    import flash.net.URLRequest;
+    import flash.net.navigateToURL;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class GraveyardLine extends Sprite
+    public class GraveyardLine extends Sprite
 		{
 
 			public static const WIDTH:int = 415;

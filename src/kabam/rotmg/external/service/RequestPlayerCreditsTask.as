@@ -2,18 +2,18 @@
 
 package kabam.rotmg.external.service
 	{
-	import com.company.util.MoreObjectUtil;
+    import com.company.util.MoreObjectUtil;
 
-	import flash.events.TimerEvent;
-	import flash.utils.Timer;
+    import flash.events.TimerEvent;
+    import flash.utils.Timer;
 
-	import kabam.lib.tasks.BaseTask;
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.appengine.api.AppEngineClient;
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.game.model.GameModel;
+    import kabam.lib.tasks.BaseTask;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.appengine.api.AppEngineClient;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.game.model.GameModel;
 
-	public class RequestPlayerCreditsTask extends BaseTask
+    public class RequestPlayerCreditsTask extends BaseTask
 		{
 
 			private static const REQUEST:String = "account/getCredits";

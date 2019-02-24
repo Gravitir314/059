@@ -2,31 +2,31 @@
 
 package com.company.assembleegameclient.ui.panels
 	{
-	import com.company.assembleegameclient.game.GameSprite;
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.assembleegameclient.objects.Portal;
-	import com.company.assembleegameclient.objects.PortalNameParser;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.tutorial.Tutorial;
-	import com.company.assembleegameclient.tutorial.doneAction;
-	import com.company.assembleegameclient.ui.DeprecatedTextButton;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.game.GameSprite;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.assembleegameclient.objects.Portal;
+    import com.company.assembleegameclient.objects.PortalNameParser;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.tutorial.Tutorial;
+    import com.company.assembleegameclient.tutorial.doneAction;
+    import com.company.assembleegameclient.ui.DeprecatedTextButton;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.events.Event;
-	import flash.events.KeyboardEvent;
-	import flash.events.MouseEvent;
-	import flash.text.TextFieldAutoSize;
-	import flash.text.TextFormatAlign;
+    import flash.events.Event;
+    import flash.events.KeyboardEvent;
+    import flash.events.MouseEvent;
+    import flash.text.TextFieldAutoSize;
+    import flash.text.TextFormatAlign;
 
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StringBuilder;
-	import kabam.rotmg.ui.view.SignalWaiter;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StringBuilder;
+    import kabam.rotmg.ui.view.SignalWaiter;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class PortalPanel extends Panel
+    public class PortalPanel extends Panel
 		{
 
 			private const LOCKED:String = "Locked ";

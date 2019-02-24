@@ -2,14 +2,14 @@
 
 package kabam.rotmg.friends.view
 	{
-	import com.company.assembleegameclient.ui.Scrollbar;
+    import com.company.assembleegameclient.ui.Scrollbar;
 
-	import flash.display.DisplayObject;
-	import flash.display.Shape;
-	import flash.display.Sprite;
-	import flash.events.Event;
+    import flash.display.DisplayObject;
+    import flash.display.Shape;
+    import flash.display.Sprite;
+    import flash.events.Event;
 
-	public class FriendListContainer extends Sprite
+    public class FriendListContainer extends Sprite
 		{
 
 			private const GAP_Y:int = 3;

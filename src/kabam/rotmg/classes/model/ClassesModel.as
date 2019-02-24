@@ -2,9 +2,9 @@
 
 package kabam.rotmg.classes.model
 	{
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class ClassesModel
+    public class ClassesModel
 		{
 
 			public static const WIZARD_ID:int = 782;

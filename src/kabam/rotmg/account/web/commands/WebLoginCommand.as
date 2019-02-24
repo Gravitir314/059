@@ -2,28 +2,28 @@
 
 package kabam.rotmg.account.web.commands
 	{
-	import com.company.assembleegameclient.game.GameSprite;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
+    import com.company.assembleegameclient.game.GameSprite;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
 
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	import kabam.lib.tasks.BranchingTask;
-	import kabam.lib.tasks.DispatchSignalTask;
-	import kabam.lib.tasks.TaskMonitor;
-	import kabam.lib.tasks.TaskSequence;
-	import kabam.rotmg.account.core.services.LoginTask;
-	import kabam.rotmg.account.core.signals.UpdateAccountInfoSignal;
-	import kabam.rotmg.account.web.model.AccountData;
-	import kabam.rotmg.core.model.ScreenModel;
-	import kabam.rotmg.core.signals.InvalidateDataSignal;
-	import kabam.rotmg.core.signals.SetScreenWithValidDataSignal;
-	import kabam.rotmg.core.signals.TaskErrorSignal;
-	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
-	import kabam.rotmg.mysterybox.services.GetMysteryBoxesTask;
-	import kabam.rotmg.packages.services.GetPackagesTask;
+    import kabam.lib.tasks.BranchingTask;
+    import kabam.lib.tasks.DispatchSignalTask;
+    import kabam.lib.tasks.TaskMonitor;
+    import kabam.lib.tasks.TaskSequence;
+    import kabam.rotmg.account.core.services.LoginTask;
+    import kabam.rotmg.account.core.signals.UpdateAccountInfoSignal;
+    import kabam.rotmg.account.web.model.AccountData;
+    import kabam.rotmg.core.model.ScreenModel;
+    import kabam.rotmg.core.signals.InvalidateDataSignal;
+    import kabam.rotmg.core.signals.SetScreenWithValidDataSignal;
+    import kabam.rotmg.core.signals.TaskErrorSignal;
+    import kabam.rotmg.dialogs.control.CloseDialogsSignal;
+    import kabam.rotmg.mysterybox.services.GetMysteryBoxesTask;
+    import kabam.rotmg.packages.services.GetPackagesTask;
 
-	public class WebLoginCommand
+    public class WebLoginCommand
 		{
 
 			[Inject]

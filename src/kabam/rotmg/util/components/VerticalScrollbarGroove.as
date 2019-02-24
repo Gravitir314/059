@@ -2,15 +2,15 @@
 
 package kabam.rotmg.util.components
 	{
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.util.graphics.BevelRect;
-	import kabam.rotmg.util.graphics.GraphicsHelper;
+    import kabam.rotmg.util.graphics.BevelRect;
+    import kabam.rotmg.util.graphics.GraphicsHelper;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	internal final class VerticalScrollbarGroove extends Sprite
+    internal final class VerticalScrollbarGroove extends Sprite
 		{
 
 			public static const WIDTH:int = VerticalScrollbar.WIDTH;//20

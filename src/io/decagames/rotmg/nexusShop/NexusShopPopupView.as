@@ -2,28 +2,28 @@
 
 package io.decagames.rotmg.nexusShop
 	{
-	import com.company.assembleegameclient.objects.SellableObject;
-	import com.company.assembleegameclient.util.FilterUtil;
+    import com.company.assembleegameclient.objects.SellableObject;
+    import com.company.assembleegameclient.util.FilterUtil;
 
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
-	import flash.geom.Rectangle;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
+    import flash.geom.Rectangle;
 
-	import io.decagames.rotmg.shop.ShopBuyButton;
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.labels.UILabel;
-	import io.decagames.rotmg.ui.popups.modal.ModalPopup;
-	import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-	import io.decagames.rotmg.ui.spinner.FixedNumbersSpinner;
-	import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.shop.ShopBuyButton;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.ui.popups.modal.ModalPopup;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import io.decagames.rotmg.ui.spinner.FixedNumbersSpinner;
+    import io.decagames.rotmg.ui.texture.TextureParser;
 
-	import kabam.rotmg.fortune.components.ItemWithTooltip;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.fortune.components.ItemWithTooltip;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class NexusShopPopupView extends ModalPopup
+    public class NexusShopPopupView extends ModalPopup
 		{
 
 			public static const TITLE:String = "Purchase";

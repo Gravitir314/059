@@ -5,15 +5,15 @@ package io.decagames.rotmg.shop
     import com.company.assembleegameclient.util.Currency;
 
     import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
-	import io.decagames.rotmg.supportCampaign.tooltips.PointsTooltip;
+    import io.decagames.rotmg.supportCampaign.tooltips.PointsTooltip;
 
-	import kabam.rotmg.core.signals.HideTooltipsSignal;
-	import kabam.rotmg.core.signals.ShowTooltipSignal;
-	import kabam.rotmg.tooltips.HoverTooltipDelegate;
+    import kabam.rotmg.core.signals.HideTooltipsSignal;
+    import kabam.rotmg.core.signals.ShowTooltipSignal;
+    import kabam.rotmg.tooltips.HoverTooltipDelegate;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class ShopBuyButtonMediator extends Mediator
+    public class ShopBuyButtonMediator extends Mediator
 		{
 
 			[Inject]

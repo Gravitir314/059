@@ -2,15 +2,15 @@
 
 package kabam.rotmg.language.service
 	{
-	import io.decagames.rotmg.pets.data.rarity.PetRarityEnum;
+    import io.decagames.rotmg.pets.data.rarity.PetRarityEnum;
 
-	import kabam.lib.tasks.BaseTask;
-	import kabam.rotmg.appengine.api.AppEngineClient;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.language.model.LanguageModel;
-	import kabam.rotmg.language.model.StringMap;
+    import kabam.lib.tasks.BaseTask;
+    import kabam.rotmg.appengine.api.AppEngineClient;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.language.model.LanguageModel;
+    import kabam.rotmg.language.model.StringMap;
 
-	public class GetLanguageService extends BaseTask
+    public class GetLanguageService extends BaseTask
 		{
 
 			private static const LANGUAGE:String = "LANGUAGE";

@@ -2,11 +2,11 @@
 
 package com.greensock.plugins
 	{
-	import com.greensock.TweenLite;
+    import com.greensock.TweenLite;
 
-	import flash.filters.DropShadowFilter;
+    import flash.filters.DropShadowFilter;
 
-	public class DropShadowFilterPlugin extends FilterPlugin
+    public class DropShadowFilterPlugin extends FilterPlugin
 		{
 
 			public static const DEFAULT_FILTER:DropShadowFilter = new DropShadowFilter(0, 0, 0);

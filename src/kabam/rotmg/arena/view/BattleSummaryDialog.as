@@ -2,20 +2,20 @@
 
 package kabam.rotmg.arena.view
 	{
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
+    import flash.filters.DropShadowFilter;
 
-	import kabam.rotmg.arena.component.BattleSummaryText;
-	import kabam.rotmg.editor.view.StaticTextButton;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.StaticTextDisplay;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.util.components.DialogBackground;
+    import kabam.rotmg.arena.component.BattleSummaryText;
+    import kabam.rotmg.editor.view.StaticTextButton;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.StaticTextDisplay;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.util.components.DialogBackground;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class BattleSummaryDialog extends Sprite
+    public class BattleSummaryDialog extends Sprite
 		{
 
 			private const WIDTH:int = 264;

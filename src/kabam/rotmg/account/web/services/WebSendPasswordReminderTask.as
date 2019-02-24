@@ -2,11 +2,11 @@
 
 package kabam.rotmg.account.web.services
 	{
-	import kabam.lib.tasks.BaseTask;
-	import kabam.rotmg.account.core.services.SendPasswordReminderTask;
-	import kabam.rotmg.appengine.api.AppEngineClient;
+    import kabam.lib.tasks.BaseTask;
+    import kabam.rotmg.account.core.services.SendPasswordReminderTask;
+    import kabam.rotmg.appengine.api.AppEngineClient;
 
-	public class WebSendPasswordReminderTask extends BaseTask implements SendPasswordReminderTask
+    public class WebSendPasswordReminderTask extends BaseTask implements SendPasswordReminderTask
 		{
 
 			[Inject]

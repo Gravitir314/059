@@ -2,9 +2,9 @@
 
 package kabam.rotmg.chat.control
 	{
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class ParseChatMessageSignal extends Signal
+    public class ParseChatMessageSignal extends Signal
 		{
 
 			public function ParseChatMessageSignal()

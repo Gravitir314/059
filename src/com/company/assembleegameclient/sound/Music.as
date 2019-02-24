@@ -2,18 +2,18 @@
 
 package com.company.assembleegameclient.sound
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import flash.events.IOErrorEvent;
-	import flash.media.Sound;
-	import flash.media.SoundChannel;
-	import flash.media.SoundTransform;
-	import flash.net.URLRequest;
+    import flash.events.IOErrorEvent;
+    import flash.media.Sound;
+    import flash.media.SoundChannel;
+    import flash.media.SoundTransform;
+    import flash.net.URLRequest;
 
-	import kabam.rotmg.application.api.ApplicationSetup;
-	import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.application.api.ApplicationSetup;
+    import kabam.rotmg.core.StaticInjectorContext;
 
-	public class Music
+    public class Music
 		{
 
 			private static var music_:Sound = null;

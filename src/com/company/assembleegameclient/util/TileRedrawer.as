@@ -2,21 +2,21 @@
 
 package com.company.assembleegameclient.util
 	{
-	import com.company.assembleegameclient.map.GroundLibrary;
-	import com.company.assembleegameclient.map.GroundProperties;
-	import com.company.assembleegameclient.map.Map;
-	import com.company.assembleegameclient.map.Square;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.util.AssetLibrary;
-	import com.company.util.BitmapUtil;
-	import com.company.util.ImageSet;
-	import com.company.util.PointUtil;
+    import com.company.assembleegameclient.map.GroundLibrary;
+    import com.company.assembleegameclient.map.GroundProperties;
+    import com.company.assembleegameclient.map.Map;
+    import com.company.assembleegameclient.map.Square;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.util.AssetLibrary;
+    import com.company.util.BitmapUtil;
+    import com.company.util.ImageSet;
+    import com.company.util.PointUtil;
 
-	import flash.display.BitmapData;
-	import flash.geom.Point;
-	import flash.geom.Rectangle;
+    import flash.display.BitmapData;
+    import flash.geom.Point;
+    import flash.geom.Rectangle;
 
-	public class TileRedrawer
+    public class TileRedrawer
 		{
 
 			private static const rect0:Rectangle = new Rectangle(0, 0, 4, 4);

@@ -2,17 +2,17 @@
 
 package kabam.rotmg.ui.commands
 	{
-	import com.company.assembleegameclient.game.GameSprite;
-	import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
+    import com.company.assembleegameclient.game.GameSprite;
+    import com.company.assembleegameclient.screens.CharacterSelectionAndNewsScreen;
 
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	import kabam.rotmg.account.core.signals.UpdateAccountInfoSignal;
-	import kabam.rotmg.core.model.ScreenModel;
-	import kabam.rotmg.core.signals.InvalidateDataSignal;
-	import kabam.rotmg.core.signals.SetScreenWithValidDataSignal;
+    import kabam.rotmg.account.core.signals.UpdateAccountInfoSignal;
+    import kabam.rotmg.core.model.ScreenModel;
+    import kabam.rotmg.core.signals.InvalidateDataSignal;
+    import kabam.rotmg.core.signals.SetScreenWithValidDataSignal;
 
-	public class RefreshScreenAfterLoginCommand
+    public class RefreshScreenAfterLoginCommand
 		{
 
 			[Inject]

@@ -2,13 +2,13 @@
 
 package io.decagames.rotmg.shop.mysteryBox.contentPopup
 	{
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	import io.decagames.rotmg.ui.gird.UIGrid;
-	import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-	import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.ui.gird.UIGrid;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import io.decagames.rotmg.ui.texture.TextureParser;
 
-	public class JackpotContainer extends Sprite
+    public class JackpotContainer extends Sprite
 		{
 
 			private var background:SliceScalingBitmap;

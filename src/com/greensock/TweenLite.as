@@ -2,16 +2,16 @@
 
 package com.greensock
 	{
-	import com.greensock.core.Animation;
-	import com.greensock.core.PropTween;
-	import com.greensock.core.SimpleTimeline;
-	import com.greensock.easing.Ease;
+    import com.greensock.core.Animation;
+    import com.greensock.core.PropTween;
+    import com.greensock.core.SimpleTimeline;
+    import com.greensock.easing.Ease;
 
-	import flash.display.Shape;
-	import flash.events.Event;
-	import flash.utils.Dictionary;
+    import flash.display.Shape;
+    import flash.events.Event;
+    import flash.utils.Dictionary;
 
-	public class TweenLite extends Animation
+    public class TweenLite extends Animation
 		{
 
 			public static const version:String = "12.1.5";

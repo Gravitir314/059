@@ -2,9 +2,9 @@
 
 package kabam.rotmg.messaging.impl.outgoing
 	{
-	import flash.utils.IDataOutput;
+    import flash.utils.IDataOutput;
 
-	public class ChangeTrade extends OutgoingMessage
+    public class ChangeTrade extends OutgoingMessage
 		{
 
 			public var offer_:Vector.<Boolean> = new Vector.<Boolean>();

@@ -2,12 +2,12 @@
 
 package com.company.assembleegameclient.mapeditor
 	{
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.util.MoreStringUtil;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.util.MoreStringUtil;
 
-	import flash.utils.Dictionary;
+    import flash.utils.Dictionary;
 
-	public class WallChooser extends Chooser
+    public class WallChooser extends Chooser
 		{
 
 			private var cache:Dictionary;

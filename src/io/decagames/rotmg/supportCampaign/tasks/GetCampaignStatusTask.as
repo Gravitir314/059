@@ -2,15 +2,15 @@
 
 package io.decagames.rotmg.supportCampaign.tasks
 	{
-	import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
+    import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
 
-	import kabam.lib.tasks.BaseTask;
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.appengine.api.AppEngineClient;
+    import kabam.lib.tasks.BaseTask;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.appengine.api.AppEngineClient;
 
-	import robotlegs.bender.framework.api.ILogger;
+    import robotlegs.bender.framework.api.ILogger;
 
-	public class GetCampaignStatusTask extends BaseTask
+    public class GetCampaignStatusTask extends BaseTask
 		{
 
 			[Inject]

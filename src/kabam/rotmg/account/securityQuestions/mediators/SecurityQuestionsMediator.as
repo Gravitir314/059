@@ -2,27 +2,27 @@
 
 package kabam.rotmg.account.securityQuestions.mediators
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.hurlant.util.Base64;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.hurlant.util.Base64;
 
-	import flash.events.MouseEvent;
-	import flash.net.FileReference;
+    import flash.events.MouseEvent;
+    import flash.net.FileReference;
 
-	import kabam.lib.tasks.Task;
-	import kabam.rotmg.account.securityQuestions.data.SecurityQuestionsData;
-	import kabam.rotmg.account.securityQuestions.data.SecurityQuestionsModel;
-	import kabam.rotmg.account.securityQuestions.signals.SaveSecurityQuestionsSignal;
-	import kabam.rotmg.account.securityQuestions.view.SecurityQuestionsConfirmDialog;
-	import kabam.rotmg.account.securityQuestions.view.SecurityQuestionsDialog;
-	import kabam.rotmg.account.securityQuestions.view.SecurityQuestionsInfoDialog;
-	import kabam.rotmg.core.signals.TaskErrorSignal;
-	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.language.model.StringMap;
+    import kabam.lib.tasks.Task;
+    import kabam.rotmg.account.securityQuestions.data.SecurityQuestionsData;
+    import kabam.rotmg.account.securityQuestions.data.SecurityQuestionsModel;
+    import kabam.rotmg.account.securityQuestions.signals.SaveSecurityQuestionsSignal;
+    import kabam.rotmg.account.securityQuestions.view.SecurityQuestionsConfirmDialog;
+    import kabam.rotmg.account.securityQuestions.view.SecurityQuestionsDialog;
+    import kabam.rotmg.account.securityQuestions.view.SecurityQuestionsInfoDialog;
+    import kabam.rotmg.core.signals.TaskErrorSignal;
+    import kabam.rotmg.dialogs.control.CloseDialogsSignal;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.language.model.StringMap;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class SecurityQuestionsMediator extends Mediator
+    public class SecurityQuestionsMediator extends Mediator
 		{
 
 			[Inject]

@@ -2,19 +2,19 @@
 
 package com.company.assembleegameclient.screens
 	{
-	import com.company.rotmg.graphics.ScreenGraphic;
+    import com.company.rotmg.graphics.ScreenGraphic;
 
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.filters.DropShadowFilter;
-	import flash.text.TextFieldAutoSize;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.filters.DropShadowFilter;
+    import flash.text.TextFieldAutoSize;
 
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.ui.view.components.ScreenBase;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.ui.view.components.ScreenBase;
 
-	public class LoadingScreen extends Sprite
+    public class LoadingScreen extends Sprite
 		{
 			private static const DEFAULT_FILTER:DropShadowFilter = new DropShadowFilter(0, 0, 0, 1, 4, 4);
 

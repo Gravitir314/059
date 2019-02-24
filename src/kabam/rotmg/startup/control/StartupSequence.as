@@ -2,17 +2,17 @@
 
 package kabam.rotmg.startup.control
 	{
-	import kabam.lib.tasks.BaseTask;
-	import kabam.lib.tasks.Task;
-	import kabam.rotmg.startup.model.api.StartupDelegate;
-	import kabam.rotmg.startup.model.impl.SignalTaskDelegate;
-	import kabam.rotmg.startup.model.impl.TaskDelegate;
+    import kabam.lib.tasks.BaseTask;
+    import kabam.lib.tasks.Task;
+    import kabam.rotmg.startup.model.api.StartupDelegate;
+    import kabam.rotmg.startup.model.impl.SignalTaskDelegate;
+    import kabam.rotmg.startup.model.impl.TaskDelegate;
 
-	import org.swiftsuspenders.Injector;
+    import org.swiftsuspenders.Injector;
 
-	import robotlegs.bender.framework.api.ILogger;
+    import robotlegs.bender.framework.api.ILogger;
 
-	public class StartupSequence extends BaseTask
+    public class StartupSequence extends BaseTask
 		{
 
 			public static const LAST:int = int.MAX_VALUE;//2147483647

@@ -2,12 +2,12 @@
 
 package com.greensock.plugins
 	{
-	import com.greensock.TweenLite;
+    import com.greensock.TweenLite;
 
-	import flash.filters.BitmapFilter;
-	import flash.filters.BlurFilter;
+    import flash.filters.BitmapFilter;
+    import flash.filters.BlurFilter;
 
-	public class FilterPlugin extends TweenPlugin
+    public class FilterPlugin extends TweenPlugin
 		{
 
 			public static const API:Number = 2;

@@ -2,31 +2,31 @@
 
 package kabam.rotmg.dailyLogin.view
 	{
-	import com.company.assembleegameclient.util.TextureRedrawer;
-	import com.company.util.AssetLibrary;
-	import com.company.util.GraphicsUtil;
+    import com.company.assembleegameclient.util.TextureRedrawer;
+    import com.company.util.AssetLibrary;
+    import com.company.util.GraphicsUtil;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.CapsStyle;
-	import flash.display.GraphicsPath;
-	import flash.display.GraphicsSolidFill;
-	import flash.display.GraphicsStroke;
-	import flash.display.IGraphicsData;
-	import flash.display.JointStyle;
-	import flash.display.LineScaleMode;
-	import flash.display.Shape;
-	import flash.display.Sprite;
-	import flash.geom.Rectangle;
-	import flash.text.TextFieldAutoSize;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.CapsStyle;
+    import flash.display.GraphicsPath;
+    import flash.display.GraphicsSolidFill;
+    import flash.display.GraphicsStroke;
+    import flash.display.IGraphicsData;
+    import flash.display.JointStyle;
+    import flash.display.LineScaleMode;
+    import flash.display.Shape;
+    import flash.display.Sprite;
+    import flash.geom.Rectangle;
+    import flash.text.TextFieldAutoSize;
 
-	import kabam.rotmg.assets.services.IconFactory;
-	import kabam.rotmg.dailyLogin.config.CalendarSettings;
-	import kabam.rotmg.dailyLogin.model.CalendarDayModel;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.assets.services.IconFactory;
+    import kabam.rotmg.dailyLogin.config.CalendarSettings;
+    import kabam.rotmg.dailyLogin.model.CalendarDayModel;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	public class CalendarDayBox extends Sprite
+    public class CalendarDayBox extends Sprite
 		{
 
 			private var fill_:GraphicsSolidFill = new GraphicsSolidFill(0x363636, 1);

@@ -2,13 +2,13 @@
 
 package com.company.assembleegameclient.ui.panels.mediators
 	{
-	import com.company.assembleegameclient.ui.panels.PartyPanel;
+    import com.company.assembleegameclient.ui.panels.PartyPanel;
 
-	import kabam.rotmg.core.view.Layers;
+    import kabam.rotmg.core.view.Layers;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class PartyPanelMediator extends Mediator
+    public class PartyPanelMediator extends Mediator
 		{
 
 			[Inject]

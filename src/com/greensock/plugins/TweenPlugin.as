@@ -2,10 +2,10 @@
 
 package com.greensock.plugins
 	{
-	import com.greensock.TweenLite;
-	import com.greensock.core.PropTween;
+    import com.greensock.TweenLite;
+    import com.greensock.core.PropTween;
 
-	public class TweenPlugin
+    public class TweenPlugin
 		{
 
 			public static const version:String = "12.1.5";

@@ -2,14 +2,14 @@
 
 package com.company.assembleegameclient.objects
 	{
-	import com.company.assembleegameclient.ui.tooltip.TextToolTip;
-	import com.company.assembleegameclient.ui.tooltip.ToolTip;
+    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+    import com.company.assembleegameclient.ui.tooltip.ToolTip;
 
-	import flash.display.BitmapData;
+    import flash.display.BitmapData;
 
-	import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.model.TextKey;
 
-	public class ClosedVaultChest extends SellableObject
+    public class ClosedVaultChest extends SellableObject
 		{
 
 			public function ClosedVaultChest(_arg_1:XML)

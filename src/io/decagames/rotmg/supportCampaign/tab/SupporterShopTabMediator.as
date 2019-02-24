@@ -2,35 +2,35 @@
 
 package io.decagames.rotmg.supportCampaign.tab
 	{
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
 
-	import flash.events.Event;
+    import flash.events.Event;
 
-	import io.decagames.rotmg.shop.NotEnoughResources;
-	import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
-	import io.decagames.rotmg.supportCampaign.signals.TierSelectedSignal;
-	import io.decagames.rotmg.supportCampaign.signals.UpdateCampaignProgress;
-	import io.decagames.rotmg.ui.buttons.BaseButton;
-	import io.decagames.rotmg.ui.popups.modal.error.ErrorModal;
-	import io.decagames.rotmg.ui.popups.signals.RemoveLockFade;
-	import io.decagames.rotmg.ui.popups.signals.ShowLockFade;
-	import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+    import io.decagames.rotmg.shop.NotEnoughResources;
+    import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
+    import io.decagames.rotmg.supportCampaign.signals.TierSelectedSignal;
+    import io.decagames.rotmg.supportCampaign.signals.UpdateCampaignProgress;
+    import io.decagames.rotmg.ui.buttons.BaseButton;
+    import io.decagames.rotmg.ui.popups.modal.error.ErrorModal;
+    import io.decagames.rotmg.ui.popups.signals.RemoveLockFade;
+    import io.decagames.rotmg.ui.popups.signals.ShowLockFade;
+    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.appengine.api.AppEngineClient;
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.core.signals.HideTooltipsSignal;
-	import kabam.rotmg.core.signals.ShowTooltipSignal;
-	import kabam.rotmg.game.model.GameModel;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.tooltips.HoverTooltipDelegate;
-	import kabam.rotmg.ui.model.HUDModel;
-	import kabam.rotmg.ui.signals.HUDModelInitialized;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.appengine.api.AppEngineClient;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.core.signals.HideTooltipsSignal;
+    import kabam.rotmg.core.signals.ShowTooltipSignal;
+    import kabam.rotmg.game.model.GameModel;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.tooltips.HoverTooltipDelegate;
+    import kabam.rotmg.ui.model.HUDModel;
+    import kabam.rotmg.ui.signals.HUDModelInitialized;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class SupporterShopTabMediator extends Mediator
+    public class SupporterShopTabMediator extends Mediator
 		{
 
 			[Inject]
@@ -70,7 +70,7 @@ package io.decagames.rotmg.supportCampaign.tab
 			override public function initialize():void
 			{
 				this.updatePointsSignal.add(this.onPointsUpdate);
-                this.view.show(this.hudModel.getPlayerName(), this.model.isUnlocked, this.model.isStarted, this.model.unlockPrice, this.model.donatePointsRatio, this.model.isEnded);
+                this.showView();//this.view.show(this.hudModel.getPlayerName(), this.model.isUnlocked, this.model.isStarted, this.model.unlockPrice, this.model.donatePointsRatio, this.model.isEnded);
 				if (!this.model.isStarted)
 				{
 					this.view.addEventListener("enterFrame", this.updateStartCountdown);
@@ -85,14 +85,24 @@ package io.decagames.rotmg.supportCampaign.tab
 				}
 			}
 
+            private function showView():void
+            {
+                this.view.show(this.hudModel.getPlayerName(), this.model.isUnlocked, this.model.isStarted, this.model.unlockPrice, this.model.donatePointsRatio, this.model.isEnded);
+            }
+
 			private function updateCampaignInformation():void
 			{
 				this.view.updatePoints(this.model.points, this.model.rank);
 				this.view.drawProgress(this.model.points, this.model.rankConfig, this.model.rank, this.model.claimed);
 				this.updateTooltip();
-				this.view.showTier(this.model.nextClaimableTier, this.model.ranks, this.model.rank, this.model.claimed);
+                this.showTier();//this.view.showTier(this.model.nextClaimableTier, this.model.ranks, this.model.rank, this.model.claimed);
 				this.view.updateTime((this.model.endDate.time - new Date().time));
 			}
+
+            private function showTier():void
+            {
+                this.view.showTier(this.model.nextClaimableTier, this.model.ranks, this.model.rank, this.model.claimed, this.model.getCampaignPictureUrl());
+            }
 
 			private function updateStartCountdown(_arg_1:Event):void
 			{
@@ -118,7 +128,7 @@ package io.decagames.rotmg.supportCampaign.tab
 			private function onPointsUpdate():void
 			{
 				this.view.updatePoints(this.model.points, this.model.rank);
-				this.view.showTier(this.model.nextClaimableTier, this.model.ranks, this.model.rank, this.model.claimed);
+                this.showTier();//this.view.showTier(this.model.nextClaimableTier, this.model.ranks, this.model.rank, this.model.claimed);
 				this.view.drawProgress(this.model.points, this.model.rankConfig, this.model.rank, this.model.claimed);
 				this.updateTooltip();
 				this.selectedSignal.dispatch(this.model.nextClaimableTier);
@@ -180,14 +190,14 @@ package io.decagames.rotmg.supportCampaign.tab
 						{
 							this.updateUserGold(_local_4.Gold);
 						}
-                        this.view.show(null, true, this.model.isStarted, this.model.unlockPrice, this.model.donatePointsRatio, this.model.isEnded);
+                        this.showView();//this.view.show(null, true, this.model.isStarted, this.model.unlockPrice, this.model.donatePointsRatio, this.model.isEnded);
 						this.model.parseUpdateData(_local_4);
 						this.updateCampaignInformation();
 					}
 					catch (e:Error)
 					{
 						showPopup.dispatch(new ErrorModal(300, "Campaign Error", "General campaign error."));
-
+						//return;
 					}
 				}
 				else

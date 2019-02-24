@@ -2,22 +2,22 @@
 
 package com.company.assembleegameclient.screens
 	{
-	import com.company.assembleegameclient.sound.SoundEffectLibrary;
-	import com.company.util.MoreColorUtil;
+    import com.company.assembleegameclient.sound.SoundEffectLibrary;
+    import com.company.util.MoreColorUtil;
 
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
-	import flash.geom.ColorTransform;
-	import flash.utils.getTimer;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
+    import flash.filters.DropShadowFilter;
+    import flash.geom.ColorTransform;
+    import flash.utils.getTimer;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class TitleMenuOption extends Sprite
+    public class TitleMenuOption extends Sprite
 		{
 
 			protected static const OVER_COLOR_TRANSFORM:ColorTransform = new ColorTransform(1, (220 / 0xFF), (133 / 0xFF));

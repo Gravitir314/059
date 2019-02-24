@@ -2,27 +2,27 @@
 
 package io.decagames.rotmg.shop.mysteryBox
 	{
-	import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
 
-	import flash.events.MouseEvent;
+    import flash.events.MouseEvent;
 
-	import io.decagames.rotmg.shop.genericBox.BoxUtils;
-	import io.decagames.rotmg.shop.mysteryBox.contentPopup.MysteryBoxContentPopup;
-	import io.decagames.rotmg.shop.mysteryBox.rollModal.MysteryBoxRollModal;
-	import io.decagames.rotmg.ui.buttons.BaseButton;
-	import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+    import io.decagames.rotmg.shop.genericBox.BoxUtils;
+    import io.decagames.rotmg.shop.mysteryBox.contentPopup.MysteryBoxContentPopup;
+    import io.decagames.rotmg.shop.mysteryBox.rollModal.MysteryBoxRollModal;
+    import io.decagames.rotmg.ui.buttons.BaseButton;
+    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.core.signals.HideTooltipsSignal;
-	import kabam.rotmg.core.signals.ShowTooltipSignal;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.game.model.GameModel;
-	import kabam.rotmg.mysterybox.model.MysteryBoxInfo;
-	import kabam.rotmg.tooltips.HoverTooltipDelegate;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.core.signals.HideTooltipsSignal;
+    import kabam.rotmg.core.signals.ShowTooltipSignal;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.game.model.GameModel;
+    import kabam.rotmg.mysterybox.model.MysteryBoxInfo;
+    import kabam.rotmg.tooltips.HoverTooltipDelegate;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class MysteryBoxTileMediator extends Mediator
+    public class MysteryBoxTileMediator extends Mediator
 		{
 
 			[Inject]

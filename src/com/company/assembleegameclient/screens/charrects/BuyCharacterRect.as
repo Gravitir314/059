@@ -2,20 +2,20 @@
 
 package com.company.assembleegameclient.screens.charrects
 	{
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.Shape;
-	import flash.filters.DropShadowFilter;
-	import flash.text.TextFieldAutoSize;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.Shape;
+    import flash.filters.DropShadowFilter;
+    import flash.text.TextFieldAutoSize;
 
-	import kabam.rotmg.assets.services.IconFactory;
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.assets.services.IconFactory;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	public class BuyCharacterRect extends CharacterRect
+    public class BuyCharacterRect extends CharacterRect
 		{
 
 			public static const BUY_CHARACTER_RECT_CLASS_NAME_TEXT:String = "BuyCharacterRect.classNameText";

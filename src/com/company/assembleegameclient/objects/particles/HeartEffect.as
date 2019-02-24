@@ -2,10 +2,10 @@
 
 package com.company.assembleegameclient.objects.particles
 	{
-	import com.company.assembleegameclient.objects.GameObject;
-	import com.company.assembleegameclient.util.ColorUtil;
+    import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.util.ColorUtil;
 
-	public class HeartEffect extends ParticleEffect
+    public class HeartEffect extends ParticleEffect
 		{
 
 			public var go_:GameObject;

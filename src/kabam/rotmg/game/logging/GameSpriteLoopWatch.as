@@ -2,9 +2,9 @@
 
 package kabam.rotmg.game.logging
 	{
-	import kabam.lib.console.model.Watch;
+    import kabam.lib.console.model.Watch;
 
-	public class GameSpriteLoopWatch extends Watch
+    public class GameSpriteLoopWatch extends Watch
 		{
 
 			private static const WATCH_PATTERN:String = "[{NAME}] [0x33FF33:{/x {MEAN}ms (min {MIN}ms, max {MAX}ms)]";

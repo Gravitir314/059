@@ -2,12 +2,12 @@
 
 package com.company.assembleegameclient.ui.options
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.util.MoreColorUtil;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.util.MoreColorUtil;
 
-	import flash.events.Event;
+    import flash.events.Event;
 
-	public class KeyMapper extends BaseOption
+    public class KeyMapper extends BaseOption
 		{
 
 			private var keyCodeBox_:KeyCodeBox;

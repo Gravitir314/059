@@ -2,19 +2,19 @@
 
 package kabam.rotmg.packages.view
 	{
-	import com.company.assembleegameclient.util.TextureRedrawer;
-	import com.company.util.AssetLibrary;
-	import com.company.util.BitmapUtil;
+    import com.company.assembleegameclient.util.TextureRedrawer;
+    import com.company.util.AssetLibrary;
+    import com.company.util.BitmapUtil;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.DisplayObject;
-	import flash.display.Sprite;
-	import flash.geom.Rectangle;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.DisplayObject;
+    import flash.display.Sprite;
+    import flash.geom.Rectangle;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 
-	public class BasePackageButton extends Sprite
+    public class BasePackageButton extends Sprite
 		{
 
 			public static const IMAGE_NAME:String = "redLootBag";

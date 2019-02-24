@@ -2,12 +2,12 @@
 
 package io.decagames.rotmg.pets.commands
 	{
-	import io.decagames.rotmg.pets.data.PetsModel;
-	import io.decagames.rotmg.pets.signals.NotifyActivePetUpdated;
+    import io.decagames.rotmg.pets.data.PetsModel;
+    import io.decagames.rotmg.pets.signals.NotifyActivePetUpdated;
 
-	import robotlegs.bender.bundles.mvcs.Command;
+    import robotlegs.bender.bundles.mvcs.Command;
 
-	public class UpdateActivePetCommand extends Command
+    public class UpdateActivePetCommand extends Command
 		{
 
 			[Inject]

@@ -2,26 +2,26 @@
 
 package kabam.rotmg.account.ui.components
 	{
-	import com.company.ui.BaseSimpleText;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.ui.BaseSimpleText;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.CapsStyle;
-	import flash.display.JointStyle;
-	import flash.display.LineScaleMode;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.FocusEvent;
-	import flash.events.TextEvent;
-	import flash.text.TextFieldAutoSize;
+    import flash.display.CapsStyle;
+    import flash.display.JointStyle;
+    import flash.display.LineScaleMode;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.FocusEvent;
+    import flash.events.TextEvent;
+    import flash.text.TextFieldAutoSize;
 
-	import kabam.lib.util.DateValidator;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.lib.util.DateValidator;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class DateField extends Sprite
+    public class DateField extends Sprite
 		{
 
 			private static const BACKGROUND_COLOR:uint = 0x333333;

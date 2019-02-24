@@ -2,16 +2,16 @@
 
 package kabam.rotmg.promotions.model
 	{
-	import com.company.assembleegameclient.util.TimeUtil;
-	import com.company.assembleegameclient.util.offer.Offer;
+    import com.company.assembleegameclient.util.TimeUtil;
+    import com.company.assembleegameclient.util.offer.Offer;
 
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.account.core.model.OfferModel;
-	import kabam.rotmg.promotions.signals.PackageStatusUpdateSignal;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.account.core.model.OfferModel;
+    import kabam.rotmg.promotions.signals.PackageStatusUpdateSignal;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class BeginnersPackageModel
+    public class BeginnersPackageModel
 		{
 
 			public static const STATUS_CANNOT_BUY:int = 0;

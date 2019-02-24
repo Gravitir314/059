@@ -2,26 +2,26 @@
 
 package com.company.assembleegameclient.tutorial
 	{
-	import com.company.assembleegameclient.ui.DeprecatedTextButton;
-	import com.company.util.GraphicsUtil;
+    import com.company.assembleegameclient.ui.DeprecatedTextButton;
+    import com.company.util.GraphicsUtil;
 
-	import flash.display.CapsStyle;
-	import flash.display.GraphicsPath;
-	import flash.display.GraphicsSolidFill;
-	import flash.display.GraphicsStroke;
-	import flash.display.IGraphicsData;
-	import flash.display.JointStyle;
-	import flash.display.LineScaleMode;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
-	import flash.geom.Rectangle;
-	import flash.utils.getTimer;
+    import flash.display.CapsStyle;
+    import flash.display.GraphicsPath;
+    import flash.display.GraphicsSolidFill;
+    import flash.display.GraphicsStroke;
+    import flash.display.IGraphicsData;
+    import flash.display.JointStyle;
+    import flash.display.LineScaleMode;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
+    import flash.geom.Rectangle;
+    import flash.utils.getTimer;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	public class TutorialMessage extends Sprite
+    public class TutorialMessage extends Sprite
 		{
 
 			public static const BORDER:int = 8;

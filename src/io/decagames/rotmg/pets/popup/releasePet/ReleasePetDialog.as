@@ -2,17 +2,17 @@
 
 package io.decagames.rotmg.pets.popup.releasePet
 	{
-	import io.decagames.rotmg.ui.buttons.BaseButton;
-	import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.popups.modal.TextModal;
-	import io.decagames.rotmg.ui.popups.modal.buttons.ClosePopupButton;
-	import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.ui.buttons.BaseButton;
+    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.popups.modal.TextModal;
+    import io.decagames.rotmg.ui.popups.modal.buttons.ClosePopupButton;
+    import io.decagames.rotmg.ui.texture.TextureParser;
 
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	public class ReleasePetDialog extends TextModal
+    public class ReleasePetDialog extends TextModal
 		{
 
 			private var _releaseButton:SliceScalingButton;

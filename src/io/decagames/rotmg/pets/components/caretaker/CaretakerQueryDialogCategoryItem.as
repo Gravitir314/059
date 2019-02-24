@@ -2,19 +2,19 @@
 
 package io.decagames.rotmg.pets.components.caretaker
 	{
-	import flash.display.Shape;
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
-	import flash.text.TextFieldAutoSize;
+    import flash.display.Shape;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
+    import flash.text.TextFieldAutoSize;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.util.graphics.BevelRect;
-	import kabam.rotmg.util.graphics.GraphicsHelper;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.util.graphics.BevelRect;
+    import kabam.rotmg.util.graphics.GraphicsHelper;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class CaretakerQueryDialogCategoryItem extends Sprite
+    public class CaretakerQueryDialogCategoryItem extends Sprite
 		{
 
 			private static const WIDTH:int = (CaretakerQueryDialog.WIDTH - 40);

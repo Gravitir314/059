@@ -2,20 +2,20 @@
 
 package com.company.assembleegameclient.account.ui
 	{
-	import com.company.assembleegameclient.game.GameSprite;
-	import com.company.assembleegameclient.game.events.GuildResultEvent;
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.game.GameSprite;
+    import com.company.assembleegameclient.game.events.GuildResultEvent;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import flash.events.MouseEvent;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.game.model.GameModel;
-	import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.game.model.GameModel;
+    import kabam.rotmg.text.model.TextKey;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class CreateGuildFrame extends Frame
+    public class CreateGuildFrame extends Frame
 		{
 
 			public const close:Signal = new Signal();

@@ -2,11 +2,11 @@
 
 package com.company.assembleegameclient.util
 	{
-	import flash.events.Event;
-	import flash.events.IEventDispatcher;
-	import flash.utils.Dictionary;
+    import flash.events.Event;
+    import flash.events.IEventDispatcher;
+    import flash.utils.Dictionary;
 
-	public class ParameterizedHandlerContainer
+    public class ParameterizedHandlerContainer
 		{
 
 			internal var _handlers:Dictionary;

@@ -2,22 +2,22 @@
 
 package kabam.rotmg.core.commands
 	{
-	import com.company.assembleegameclient.screens.LoadingScreen;
+    import com.company.assembleegameclient.screens.LoadingScreen;
 
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	import io.decagames.rotmg.pets.tasks.GetOwnedPetSkinsTask;
-	import io.decagames.rotmg.supportCampaign.tasks.GetCampaignStatusTask;
+    import io.decagames.rotmg.pets.tasks.GetOwnedPetSkinsTask;
+    import io.decagames.rotmg.supportCampaign.tasks.GetCampaignStatusTask;
 
-	import kabam.lib.tasks.DispatchSignalTask;
-	import kabam.lib.tasks.TaskMonitor;
-	import kabam.lib.tasks.TaskSequence;
-	import kabam.rotmg.account.core.services.GetCharListTask;
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.core.signals.SetScreenSignal;
-	import kabam.rotmg.dailyLogin.tasks.FetchPlayerCalendarTask;
+    import kabam.lib.tasks.DispatchSignalTask;
+    import kabam.lib.tasks.TaskMonitor;
+    import kabam.lib.tasks.TaskSequence;
+    import kabam.rotmg.account.core.services.GetCharListTask;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.core.signals.SetScreenSignal;
+    import kabam.rotmg.dailyLogin.tasks.FetchPlayerCalendarTask;
 
-	public class SetScreenWithValidDataCommand
+    public class SetScreenWithValidDataCommand
 		{
 
 			[Inject]

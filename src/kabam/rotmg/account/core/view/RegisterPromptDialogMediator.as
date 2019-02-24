@@ -2,12 +2,12 @@
 
 package kabam.rotmg.account.core.view
 	{
-	import kabam.rotmg.account.core.signals.OpenAccountInfoSignal;
-	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
+    import kabam.rotmg.account.core.signals.OpenAccountInfoSignal;
+    import kabam.rotmg.dialogs.control.CloseDialogsSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class RegisterPromptDialogMediator extends Mediator
+    public class RegisterPromptDialogMediator extends Mediator
 		{
 
 			[Inject]

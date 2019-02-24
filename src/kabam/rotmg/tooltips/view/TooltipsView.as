@@ -2,10 +2,10 @@
 
 package kabam.rotmg.tooltips.view
 	{
-	import flash.display.DisplayObject;
-	import flash.display.Sprite;
+    import flash.display.DisplayObject;
+    import flash.display.Sprite;
 
-	public class TooltipsView extends Sprite
+    public class TooltipsView extends Sprite
 		{
 
 			private var toolTip:DisplayObject;

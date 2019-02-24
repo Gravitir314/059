@@ -2,10 +2,10 @@
 
 package com.company.assembleegameclient.util
 	{
-	import flash.display.BitmapData;
-	import flash.utils.Dictionary;
+    import flash.display.BitmapData;
+    import flash.utils.Dictionary;
 
-	public class AnimatedChars
+    public class AnimatedChars
 		{
 
 			private static var nameMap_:Dictionary = new Dictionary();

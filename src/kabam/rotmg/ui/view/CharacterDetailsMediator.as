@@ -2,28 +2,28 @@
 
 package kabam.rotmg.ui.view
 	{
-	import com.company.assembleegameclient.objects.ImageFactory;
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.ui.icons.IconButtonFactory;
-	import com.company.assembleegameclient.ui.options.Options;
+    import com.company.assembleegameclient.objects.ImageFactory;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.ui.icons.IconButtonFactory;
+    import com.company.assembleegameclient.ui.options.Options;
 
-	import flash.events.MouseEvent;
+    import flash.events.MouseEvent;
 
-	import io.decagames.rotmg.social.SocialPopupView;
-	import io.decagames.rotmg.social.model.SocialModel;
-	import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+    import io.decagames.rotmg.social.SocialPopupView;
+    import io.decagames.rotmg.social.model.SocialModel;
+    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
-	import kabam.rotmg.chat.model.TellModel;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.ui.model.HUDModel;
-	import kabam.rotmg.ui.signals.HUDModelInitialized;
-	import kabam.rotmg.ui.signals.NameChangedSignal;
-	import kabam.rotmg.ui.signals.UpdateHUDSignal;
+    import kabam.rotmg.chat.model.TellModel;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.ui.model.HUDModel;
+    import kabam.rotmg.ui.signals.HUDModelInitialized;
+    import kabam.rotmg.ui.signals.NameChangedSignal;
+    import kabam.rotmg.ui.signals.UpdateHUDSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class CharacterDetailsMediator extends Mediator
+    public class CharacterDetailsMediator extends Mediator
 		{
 
 			[Inject]

@@ -2,11 +2,11 @@
 
 package kabam.rotmg.text.model
 	{
-	import flash.text.TextField;
+    import flash.text.TextField;
 
-	import kabam.rotmg.language.model.StringMap;
+    import kabam.rotmg.language.model.StringMap;
 
-	public interface TextAndMapProvider
+    public interface TextAndMapProvider
 		{
 
 			function getTextField():TextField;

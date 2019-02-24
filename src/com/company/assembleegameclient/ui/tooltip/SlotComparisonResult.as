@@ -2,11 +2,11 @@
 
 package com.company.assembleegameclient.ui.tooltip
 	{
-	import flash.utils.Dictionary;
+    import flash.utils.Dictionary;
 
-	import kabam.rotmg.text.view.stringBuilder.AppendingLineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.AppendingLineBuilder;
 
-	public class SlotComparisonResult
+    public class SlotComparisonResult
 		{
 
 			public var lineBuilder:AppendingLineBuilder;

@@ -2,15 +2,15 @@
 
 package com.company.assembleegameclient.account.ui
 	{
-	import com.company.assembleegameclient.game.AGameSprite;
+    import com.company.assembleegameclient.game.AGameSprite;
 
-	import flash.events.MouseEvent;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.model.TextKey;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class ChooseNameFrame extends Frame
+    public class ChooseNameFrame extends Frame
 		{
 
 			public const cancel:Signal = new Signal();

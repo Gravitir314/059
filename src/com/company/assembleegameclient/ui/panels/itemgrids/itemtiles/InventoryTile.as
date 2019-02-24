@@ -2,17 +2,17 @@
 
 package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
 	{
-	import com.company.assembleegameclient.ui.panels.itemgrids.ItemGrid;
+    import com.company.assembleegameclient.ui.panels.itemgrids.ItemGrid;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.geom.Matrix;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.geom.Matrix;
 
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.text.view.BitmapTextFactory;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.text.view.BitmapTextFactory;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	public class InventoryTile extends InteractiveItemTile
+    public class InventoryTile extends InteractiveItemTile
 		{
 
 			private static const IDENTITY_MATRIX:Matrix = new Matrix();

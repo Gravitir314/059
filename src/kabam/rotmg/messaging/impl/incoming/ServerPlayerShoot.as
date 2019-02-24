@@ -2,11 +2,11 @@
 
 package kabam.rotmg.messaging.impl.incoming
 	{
-	import flash.utils.IDataInput;
+    import flash.utils.IDataInput;
 
-	import kabam.rotmg.messaging.impl.data.WorldPosData;
+    import kabam.rotmg.messaging.impl.data.WorldPosData;
 
-	public class ServerPlayerShoot extends IncomingMessage
+    public class ServerPlayerShoot extends IncomingMessage
 		{
 
 			public var bulletId_:uint;

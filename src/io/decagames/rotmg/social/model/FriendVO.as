@@ -2,11 +2,11 @@
 
 package io.decagames.rotmg.social.model
 	{
-	import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.objects.Player;
 
-	import flash.display.BitmapData;
+    import flash.display.BitmapData;
 
-	public class FriendVO
+    public class FriendVO
 		{
 
 			public var playerName:String;

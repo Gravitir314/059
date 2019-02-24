@@ -2,20 +2,20 @@
 
 package kabam.rotmg.dailyLogin.controller
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import flash.events.KeyboardEvent;
-	import flash.events.MouseEvent;
+    import flash.events.KeyboardEvent;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.dailyLogin.model.DailyLoginModel;
-	import kabam.rotmg.dailyLogin.view.DailyLoginModal;
-	import kabam.rotmg.dailyLogin.view.DailyLoginPanel;
-	import kabam.rotmg.dialogs.control.OpenDialogNoModalSignal;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.dailyLogin.model.DailyLoginModel;
+    import kabam.rotmg.dailyLogin.view.DailyLoginModal;
+    import kabam.rotmg.dailyLogin.view.DailyLoginPanel;
+    import kabam.rotmg.dialogs.control.OpenDialogNoModalSignal;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class DailyLoginPanelMediator extends Mediator
+    public class DailyLoginPanelMediator extends Mediator
 		{
 
 			[Inject]

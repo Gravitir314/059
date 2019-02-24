@@ -2,21 +2,21 @@
 
 package kabam.rotmg.account.web.view
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.ui.dialogs.ConfirmDialog;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.ui.dialogs.ConfirmDialog;
 
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.account.core.signals.LoginSignal;
-	import kabam.rotmg.account.core.signals.LogoutSignal;
-	import kabam.rotmg.account.core.view.AccountListDialog;
-	import kabam.rotmg.account.web.model.AccountData;
-	import kabam.rotmg.appengine.api.AppEngineClient;
-	import kabam.rotmg.build.api.BuildEnvironment;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.account.core.signals.LoginSignal;
+    import kabam.rotmg.account.core.signals.LogoutSignal;
+    import kabam.rotmg.account.core.view.AccountListDialog;
+    import kabam.rotmg.account.web.model.AccountData;
+    import kabam.rotmg.appengine.api.AppEngineClient;
+    import kabam.rotmg.build.api.BuildEnvironment;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class WebAccountInfoMediator extends Mediator
+    public class WebAccountInfoMediator extends Mediator
 		{
 
 			[Inject]

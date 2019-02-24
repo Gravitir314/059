@@ -2,9 +2,9 @@
 
 package kabam.rotmg.messaging.impl.incoming
 	{
-	import flash.utils.IDataInput;
+    import flash.utils.IDataInput;
 
-	public class InvResult extends IncomingMessage
+    public class InvResult extends IncomingMessage
 		{
 
 			public var result_:int;

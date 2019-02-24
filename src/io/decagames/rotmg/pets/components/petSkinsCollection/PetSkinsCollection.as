@@ -2,20 +2,20 @@
 
 package io.decagames.rotmg.pets.components.petSkinsCollection
 	{
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	import io.decagames.rotmg.pets.components.petSkinSlot.PetSkinSlot;
-	import io.decagames.rotmg.pets.data.vo.SkinVO;
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.gird.UIGrid;
-	import io.decagames.rotmg.ui.gird.UIGridElement;
-	import io.decagames.rotmg.ui.labels.UILabel;
-	import io.decagames.rotmg.ui.scroll.UIScrollbar;
-	import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-	import io.decagames.rotmg.ui.texture.TextureParser;
-	import io.decagames.rotmg.utils.colors.Tint;
+    import io.decagames.rotmg.pets.components.petSkinSlot.PetSkinSlot;
+    import io.decagames.rotmg.pets.data.vo.SkinVO;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.gird.UIGrid;
+    import io.decagames.rotmg.ui.gird.UIGridElement;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.ui.scroll.UIScrollbar;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.utils.colors.Tint;
 
-	public class PetSkinsCollection extends Sprite
+    public class PetSkinsCollection extends Sprite
 		{
 
 			public static var COLLECTION_WIDTH:int = 360;

@@ -2,12 +2,12 @@
 
 package kabam.rotmg.messaging.impl
 	{
-	import flash.utils.IDataOutput;
+    import flash.utils.IDataOutput;
 
-	import kabam.rotmg.messaging.impl.data.SlotObjectData;
-	import kabam.rotmg.messaging.impl.outgoing.OutgoingMessage;
+    import kabam.rotmg.messaging.impl.data.SlotObjectData;
+    import kabam.rotmg.messaging.impl.outgoing.OutgoingMessage;
 
-	public class PetUpgradeRequest extends OutgoingMessage
+    public class PetUpgradeRequest extends OutgoingMessage
 		{
 
 			public static const GOLD_PAYMENT_TYPE:int = 0;

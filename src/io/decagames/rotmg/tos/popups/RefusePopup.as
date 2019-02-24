@@ -2,11 +2,11 @@
 
 package io.decagames.rotmg.tos.popups
 	{
-	import io.decagames.rotmg.tos.popups.buttons.GoBackButton;
-	import io.decagames.rotmg.ui.buttons.BaseButton;
-	import io.decagames.rotmg.ui.popups.modal.TextModal;
+    import io.decagames.rotmg.tos.popups.buttons.GoBackButton;
+    import io.decagames.rotmg.ui.buttons.BaseButton;
+    import io.decagames.rotmg.ui.popups.modal.TextModal;
 
-	public class RefusePopup extends TextModal
+    public class RefusePopup extends TextModal
 		{
 
 			public function RefusePopup()

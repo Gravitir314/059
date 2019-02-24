@@ -2,9 +2,9 @@
 
 package kabam.rotmg.text.view.stringBuilder
 	{
-	import kabam.rotmg.language.model.StringMap;
+    import kabam.rotmg.language.model.StringMap;
 
-	public class AppendingLineBuilder implements StringBuilder
+    public class AppendingLineBuilder implements StringBuilder
 		{
 
 			private var data:Vector.<LineData> = new Vector.<LineData>();

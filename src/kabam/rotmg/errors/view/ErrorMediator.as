@@ -2,17 +2,17 @@
 
 package kabam.rotmg.errors.view
 	{
-	import flash.display.DisplayObjectContainer;
-	import flash.display.LoaderInfo;
-	import flash.events.ErrorEvent;
-	import flash.events.IEventDispatcher;
+    import flash.display.DisplayObjectContainer;
+    import flash.display.LoaderInfo;
+    import flash.events.ErrorEvent;
+    import flash.events.IEventDispatcher;
 
-	import kabam.rotmg.errors.control.ErrorSignal;
+    import kabam.rotmg.errors.control.ErrorSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
-	import robotlegs.bender.framework.api.ILogger;
+    import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.framework.api.ILogger;
 
-	public class ErrorMediator extends Mediator
+    public class ErrorMediator extends Mediator
 		{
 
 			private const UNCAUGHT_ERROR_EVENTS:String = "uncaughtErrorEvents";

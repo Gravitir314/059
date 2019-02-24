@@ -2,11 +2,11 @@
 
 package kabam.rotmg.messaging.impl.outgoing
 	{
-	import flash.utils.IDataOutput;
+    import flash.utils.IDataOutput;
 
-	import kabam.rotmg.messaging.impl.data.WorldPosData;
+    import kabam.rotmg.messaging.impl.data.WorldPosData;
 
-	public class AoeAck extends OutgoingMessage
+    public class AoeAck extends OutgoingMessage
 		{
 
 			public var time_:int;

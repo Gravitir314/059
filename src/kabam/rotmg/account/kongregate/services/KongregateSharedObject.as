@@ -2,11 +2,11 @@
 
 package kabam.rotmg.account.kongregate.services
 	{
-	import com.company.assembleegameclient.util.GUID;
+    import com.company.assembleegameclient.util.GUID;
 
-	import flash.net.SharedObject;
+    import flash.net.SharedObject;
 
-	public class KongregateSharedObject
+    public class KongregateSharedObject
 		{
 
 			private var guid:String;

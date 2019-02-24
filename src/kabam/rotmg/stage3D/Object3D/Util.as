@@ -2,10 +2,10 @@
 
 package kabam.rotmg.stage3D.Object3D
 	{
-	import flash.geom.Matrix3D;
-	import flash.utils.ByteArray;
+    import flash.geom.Matrix3D;
+    import flash.utils.ByteArray;
 
-	public class Util
+    public class Util
 		{
 
 

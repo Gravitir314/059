@@ -2,13 +2,13 @@
 
 package io.decagames.rotmg.dailyQuests.messages.incoming
 	{
-	import flash.utils.IDataInput;
+    import flash.utils.IDataInput;
 
-	import io.decagames.rotmg.dailyQuests.messages.data.QuestData;
+    import io.decagames.rotmg.dailyQuests.messages.data.QuestData;
 
-	import kabam.rotmg.messaging.impl.incoming.IncomingMessage;
+    import kabam.rotmg.messaging.impl.incoming.IncomingMessage;
 
-	public class QuestFetchResponse extends IncomingMessage
+    public class QuestFetchResponse extends IncomingMessage
 		{
 
 			public var quests:Vector.<QuestData> = new Vector.<QuestData>();

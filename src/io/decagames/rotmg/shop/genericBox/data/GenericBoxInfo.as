@@ -2,13 +2,13 @@
 
 package io.decagames.rotmg.shop.genericBox.data
 	{
-	import com.company.assembleegameclient.util.TimeUtil;
+    import com.company.assembleegameclient.util.TimeUtil;
 
-	import io.decagames.rotmg.utils.date.TimeLeft;
+    import io.decagames.rotmg.utils.date.TimeLeft;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class GenericBoxInfo
+    public class GenericBoxInfo
 		{
 			public const updateSignal:Signal = new Signal();
 

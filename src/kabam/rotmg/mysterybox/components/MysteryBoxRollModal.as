@@ -2,54 +2,54 @@
 
 package kabam.rotmg.mysterybox.components
 	{
-	import com.company.assembleegameclient.map.ParticleModalMap;
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.ui.dialogs.Dialog;
-	import com.company.assembleegameclient.ui.dialogs.NotEnoughFameDialog;
-	import com.company.assembleegameclient.util.Currency;
-	import com.greensock.plugins.DropShadowFilterPlugin;
-	import com.gskinner.motion.GTween;
-	import com.gskinner.motion.easing.Sine;
+    import com.company.assembleegameclient.map.ParticleModalMap;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.ui.dialogs.Dialog;
+    import com.company.assembleegameclient.ui.dialogs.NotEnoughFameDialog;
+    import com.company.assembleegameclient.util.Currency;
+    import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.gskinner.motion.GTween;
+    import com.gskinner.motion.easing.Sine;
 
-	import flash.display.Bitmap;
-	import flash.display.DisplayObject;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
-	import flash.events.TimerEvent;
-	import flash.filters.GlowFilter;
-	import flash.text.TextFieldAutoSize;
-	import flash.text.TextFormatAlign;
-	import flash.utils.Timer;
+    import flash.display.Bitmap;
+    import flash.display.DisplayObject;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
+    import flash.events.TimerEvent;
+    import flash.filters.GlowFilter;
+    import flash.text.TextFieldAutoSize;
+    import flash.text.TextFormatAlign;
+    import flash.utils.Timer;
 
-	import io.decagames.rotmg.pets.utils.PetsViewAssetFactory;
-	import io.decagames.rotmg.shop.ShopConfiguration;
-	import io.decagames.rotmg.shop.ShopPopupView;
+    import io.decagames.rotmg.pets.utils.PetsViewAssetFactory;
+    import io.decagames.rotmg.shop.ShopConfiguration;
+    import io.decagames.rotmg.shop.ShopPopupView;
 
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.appengine.api.AppEngineClient;
-	import kabam.rotmg.assets.EmbeddedAssets;
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.fortune.components.ItemWithTooltip;
-	import kabam.rotmg.game.model.GameModel;
-	import kabam.rotmg.mysterybox.model.MysteryBoxInfo;
-	import kabam.rotmg.mysterybox.services.GetMysteryBoxesTask;
-	import kabam.rotmg.pets.view.components.DialogCloseButton;
-	import kabam.rotmg.pets.view.components.PopupWindowBackground;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-	import kabam.rotmg.ui.view.NotEnoughGoldDialog;
-	import kabam.rotmg.ui.view.components.Spinner;
-	import kabam.rotmg.util.components.LegacyBuyButton;
-	import kabam.rotmg.util.components.UIAssetsHelper;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.appengine.api.AppEngineClient;
+    import kabam.rotmg.assets.EmbeddedAssets;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.fortune.components.ItemWithTooltip;
+    import kabam.rotmg.game.model.GameModel;
+    import kabam.rotmg.mysterybox.model.MysteryBoxInfo;
+    import kabam.rotmg.mysterybox.services.GetMysteryBoxesTask;
+    import kabam.rotmg.pets.view.components.DialogCloseButton;
+    import kabam.rotmg.pets.view.components.PopupWindowBackground;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.ui.view.NotEnoughGoldDialog;
+    import kabam.rotmg.ui.view.components.Spinner;
+    import kabam.rotmg.util.components.LegacyBuyButton;
+    import kabam.rotmg.util.components.UIAssetsHelper;
 
-	import org.swiftsuspenders.Injector;
+    import org.swiftsuspenders.Injector;
 
-	public class MysteryBoxRollModal extends Sprite
+    public class MysteryBoxRollModal extends Sprite
 		{
 
 			public static const WIDTH:int = 415;

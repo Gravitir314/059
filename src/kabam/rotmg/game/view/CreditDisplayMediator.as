@@ -2,20 +2,20 @@
 
 package kabam.rotmg.game.view
 	{
-	import com.company.assembleegameclient.map.Map;
-	import com.company.assembleegameclient.ui.tooltip.TextToolTip;
+    import com.company.assembleegameclient.map.Map;
+    import com.company.assembleegameclient.ui.tooltip.TextToolTip;
 
-	import flash.events.MouseEvent;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.account.core.signals.OpenMoneyWindowSignal;
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.core.signals.HideTooltipsSignal;
-	import kabam.rotmg.core.signals.ShowTooltipSignal;
-	import kabam.rotmg.tooltips.HoverTooltipDelegate;
+    import kabam.rotmg.account.core.signals.OpenMoneyWindowSignal;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.core.signals.HideTooltipsSignal;
+    import kabam.rotmg.core.signals.ShowTooltipSignal;
+    import kabam.rotmg.tooltips.HoverTooltipDelegate;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class CreditDisplayMediator extends Mediator
+    public class CreditDisplayMediator extends Mediator
 		{
 
 			[Inject]

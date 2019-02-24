@@ -2,9 +2,9 @@
 
 package com.company.assembleegameclient.engine3d
 	{
-	import flash.geom.Vector3D;
+    import flash.geom.Vector3D;
 
-	public class Line3D
+    public class Line3D
 		{
 
 			public var v0_:Vector3D;

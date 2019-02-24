@@ -2,21 +2,21 @@
 
 package io.decagames.rotmg.dailyQuests.view.slot
 	{
-	import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.Shape;
-	import flash.display.Sprite;
-	import flash.geom.Matrix;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.Shape;
+    import flash.display.Sprite;
+    import flash.geom.Matrix;
 
-	import io.decagames.rotmg.utils.colors.GreyScale;
+    import io.decagames.rotmg.utils.colors.GreyScale;
 
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.text.view.BitmapTextFactory;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.text.view.BitmapTextFactory;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	public class DailyQuestItemSlot extends Sprite
+    public class DailyQuestItemSlot extends Sprite
 		{
 
 			public static const SELECTED_BORDER_SIZE:int = 2;

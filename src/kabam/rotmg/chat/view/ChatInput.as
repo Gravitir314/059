@@ -2,19 +2,19 @@
 
 package kabam.rotmg.chat.view
 	{
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.KeyboardEvent;
-	import flash.filters.GlowFilter;
-	import flash.text.TextField;
-	import flash.text.TextFieldType;
-	import flash.ui.Keyboard;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.KeyboardEvent;
+    import flash.filters.GlowFilter;
+    import flash.text.TextField;
+    import flash.text.TextFieldType;
+    import flash.ui.Keyboard;
 
-	import kabam.rotmg.chat.model.ChatModel;
+    import kabam.rotmg.chat.model.ChatModel;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class ChatInput extends Sprite
+    public class ChatInput extends Sprite
 		{
 
 			public const message:Signal = new Signal(String);

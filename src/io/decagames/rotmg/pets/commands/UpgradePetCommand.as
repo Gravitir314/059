@@ -2,22 +2,22 @@
 
 package io.decagames.rotmg.pets.commands
 	{
-	import io.decagames.rotmg.pets.data.vo.requests.FeedPetRequestVO;
-	import io.decagames.rotmg.pets.data.vo.requests.FusePetRequestVO;
-	import io.decagames.rotmg.pets.data.vo.requests.IUpgradePetRequestVO;
-	import io.decagames.rotmg.pets.data.vo.requests.UpgradePetYardRequestVO;
+    import io.decagames.rotmg.pets.data.vo.requests.FeedPetRequestVO;
+    import io.decagames.rotmg.pets.data.vo.requests.FusePetRequestVO;
+    import io.decagames.rotmg.pets.data.vo.requests.IUpgradePetRequestVO;
+    import io.decagames.rotmg.pets.data.vo.requests.UpgradePetYardRequestVO;
 
-	import kabam.lib.net.api.MessageProvider;
-	import kabam.lib.net.impl.SocketServer;
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.account.core.view.RegisterPromptDialog;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.messaging.impl.GameServerConnection;
-	import kabam.rotmg.messaging.impl.PetUpgradeRequest;
+    import kabam.lib.net.api.MessageProvider;
+    import kabam.lib.net.impl.SocketServer;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.account.core.view.RegisterPromptDialog;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.messaging.impl.GameServerConnection;
+    import kabam.rotmg.messaging.impl.PetUpgradeRequest;
 
-	import robotlegs.bender.bundles.mvcs.Command;
+    import robotlegs.bender.bundles.mvcs.Command;
 
-	public class UpgradePetCommand extends Command
+    public class UpgradePetCommand extends Command
 		{
 
 			private static const PET_YARD_REGISTER_STRING:String = "In order to upgradeYard your yard you must be a registered user.";

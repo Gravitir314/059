@@ -2,18 +2,18 @@
 
 package io.decagames.rotmg.shop.genericBox
 	{
-	import com.company.assembleegameclient.util.Currency;
+    import com.company.assembleegameclient.util.Currency;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.Sprite;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.Sprite;
 
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.labels.UILabel;
 
-	import kabam.rotmg.assets.services.IconFactory;
+    import kabam.rotmg.assets.services.IconFactory;
 
-	public class SalePriceTag extends Sprite
+    public class SalePriceTag extends Sprite
 		{
 
 			private var coinBitmap:Bitmap;

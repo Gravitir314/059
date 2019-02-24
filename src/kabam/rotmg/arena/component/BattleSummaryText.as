@@ -2,15 +2,15 @@
 
 package kabam.rotmg.arena.component
 	{
-	import flash.display.Sprite;
-	import flash.filters.DropShadowFilter;
+    import flash.display.Sprite;
+    import flash.filters.DropShadowFilter;
 
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.text.view.StaticTextDisplay;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.text.view.StaticTextDisplay;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	public class BattleSummaryText extends Sprite
+    public class BattleSummaryText extends Sprite
 		{
 
 			private var titleText:StaticTextDisplay;

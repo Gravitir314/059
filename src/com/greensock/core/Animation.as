@@ -2,11 +2,11 @@
 
 package com.greensock.core
 	{
-	import flash.display.Shape;
-	import flash.events.Event;
-	import flash.utils.getTimer;
+    import flash.display.Shape;
+    import flash.events.Event;
+    import flash.utils.getTimer;
 
-	public class Animation
+    public class Animation
 		{
 
 			public static const version:String = "12.1.1";

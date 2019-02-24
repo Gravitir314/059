@@ -2,13 +2,13 @@
 
 package com.company.assembleegameclient.util
 	{
-	import com.company.util.MoreColorUtil;
+    import com.company.util.MoreColorUtil;
 
-	import flash.filters.ColorMatrixFilter;
-	import flash.filters.DropShadowFilter;
-	import flash.filters.GlowFilter;
+    import flash.filters.ColorMatrixFilter;
+    import flash.filters.DropShadowFilter;
+    import flash.filters.GlowFilter;
 
-	public class FilterUtil
+    public class FilterUtil
 		{
 
 			private static const UILABEL_DROP_SHADOW_FILTER_01:Array = [new DropShadowFilter(0, 90, 212992, 0.6, 4, 4)];

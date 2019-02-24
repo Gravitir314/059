@@ -2,12 +2,12 @@
 
 package com.company.assembleegameclient.mapeditor
 	{
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.util.MoreStringUtil;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.util.MoreStringUtil;
 
-	import flash.utils.Dictionary;
+    import flash.utils.Dictionary;
 
-	internal class AllObjectChooser extends Chooser
+    internal class AllObjectChooser extends Chooser
 		{
 
 			public static const GROUP_NAME_MAP_OBJECTS:String = "All Map Objects";

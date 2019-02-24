@@ -2,13 +2,13 @@
 
 package io.decagames.rotmg.supportCampaign.data
 	{
-	import io.decagames.rotmg.supportCampaign.data.vo.RankVO;
-	import io.decagames.rotmg.supportCampaign.signals.UpdateCampaignProgress;
-	import io.decagames.rotmg.utils.date.TimeLeft;
+    import io.decagames.rotmg.supportCampaign.data.vo.RankVO;
+    import io.decagames.rotmg.supportCampaign.signals.UpdateCampaignProgress;
+    import io.decagames.rotmg.utils.date.TimeLeft;
 
-	import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.core.StaticInjectorContext;
 
-	public class SupporterCampaignModel
+    public class SupporterCampaignModel
 		{
 
 			public static const DEFAULT_DONATE_AMOUNT:int = 100;
@@ -31,6 +31,8 @@ package io.decagames.rotmg.supportCampaign.data
 			private var _hasValidData:Boolean;
 			private var _claimed:int;
 			private var _rankConfig:Vector.<RankVO>;
+            private var _picUrls:Vector.<String>;
+            private var _campaignTitle:String;
 
 
 			public function parseConfigData(_arg_1:XML):void
@@ -103,6 +105,8 @@ package io.decagames.rotmg.supportCampaign.data
 
 			private function parseConfig(_arg_1:XML):void
 			{
+                var _local_4:XML;
+                this._campaignTitle = this.getXMLData(_arg_1.CampaignConfig, "Title", true);
 				this._unlockPrice = this.getXMLData(_arg_1.CampaignConfig, "UnlockPrice", true);
 				this._donatePointsRatio = this.getXMLData(_arg_1.CampaignConfig, "DonatePointsRatio", true);
 				this._endDate = new Date((this.getXMLData(_arg_1.CampaignConfig, "CampaignEndDate", true) * 1000));
@@ -117,6 +121,12 @@ package io.decagames.rotmg.supportCampaign.data
 					this._rankConfig.push(new RankVO(this._ranks[_local_2], SupporterCampaignModel.RANKS_NAMES[_local_2]));
 					_local_2++;
 				}
+                this._picUrls = new Vector.<String>(0);
+                var _local_3:XMLList = XML(_arg_1.CampaignConfig.PicUrls).children();
+                for each (_local_4 in _local_3)
+                {
+                    this._picUrls.push(_local_4);
+                }
 			}
 
 			private function parseConfigStatus(_arg_1:XML):void
@@ -139,6 +149,16 @@ package io.decagames.rotmg.supportCampaign.data
 				}
 				return ("");
 			}
+
+            public function getCampaignPictureUrl():String
+            {
+                var _local_1:* = "";
+                if (((this._picUrls) && (this._picUrls.length > 0)))
+                {
+                    _local_1 = this._picUrls[(this.getRankByPoints(this._points) - 1)];
+                };
+                return (_local_1);
+            }
 
 			public function get isStarted():Boolean
 			{
@@ -277,6 +297,11 @@ package io.decagames.rotmg.supportCampaign.data
 			{
 				return (this._startDate);
 			}
+
+            public function get campaignTitle():String
+            {
+                return (this._campaignTitle);
+            }
 
 
 		}

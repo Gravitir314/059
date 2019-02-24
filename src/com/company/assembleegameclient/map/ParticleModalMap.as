@@ -2,20 +2,20 @@
 
 package com.company.assembleegameclient.map
 	{
-	import com.company.assembleegameclient.objects.BasicObject;
-	import com.company.assembleegameclient.objects.GameObject;
-	import com.company.assembleegameclient.objects.particles.ConfettiEffect;
-	import com.company.assembleegameclient.objects.particles.LightningEffect;
-	import com.company.assembleegameclient.objects.particles.NovaEffect;
+    import com.company.assembleegameclient.objects.BasicObject;
+    import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.objects.particles.ConfettiEffect;
+    import com.company.assembleegameclient.objects.particles.LightningEffect;
+    import com.company.assembleegameclient.objects.particles.NovaEffect;
 
-	import flash.display.IGraphicsData;
-	import flash.events.Event;
-	import flash.utils.Dictionary;
-	import flash.utils.getTimer;
+    import flash.display.IGraphicsData;
+    import flash.events.Event;
+    import flash.utils.Dictionary;
+    import flash.utils.getTimer;
 
-	import kabam.rotmg.messaging.impl.data.WorldPosData;
+    import kabam.rotmg.messaging.impl.data.WorldPosData;
 
-	public class ParticleModalMap extends Map
+    public class ParticleModalMap extends Map
 		{
 
 			public static const MODE_SNOW:int = 1;

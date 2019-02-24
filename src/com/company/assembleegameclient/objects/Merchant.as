@@ -2,27 +2,27 @@
 
 package com.company.assembleegameclient.objects
 	{
-	import com.company.assembleegameclient.constants.InventoryOwnerTypes;
-	import com.company.assembleegameclient.map.Camera;
-	import com.company.assembleegameclient.map.Map;
-	import com.company.assembleegameclient.ui.tooltip.EquipmentToolTip;
-	import com.company.assembleegameclient.ui.tooltip.ToolTip;
-	import com.company.ui.BaseSimpleText;
-	import com.company.util.IntPoint;
-	import com.gskinner.motion.GTween;
-	import com.gskinner.motion.easing.Sine;
+    import com.company.assembleegameclient.constants.InventoryOwnerTypes;
+    import com.company.assembleegameclient.map.Camera;
+    import com.company.assembleegameclient.map.Map;
+    import com.company.assembleegameclient.ui.tooltip.EquipmentToolTip;
+    import com.company.assembleegameclient.ui.tooltip.ToolTip;
+    import com.company.ui.BaseSimpleText;
+    import com.company.util.IntPoint;
+    import com.gskinner.motion.GTween;
+    import com.gskinner.motion.easing.Sine;
 
-	import flash.display.BitmapData;
-	import flash.geom.ColorTransform;
-	import flash.geom.Matrix;
+    import flash.display.BitmapData;
+    import flash.geom.ColorTransform;
+    import flash.geom.Matrix;
 
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.game.model.AddSpeechBalloonVO;
-	import kabam.rotmg.game.signals.AddSpeechBalloonSignal;
-	import kabam.rotmg.language.model.StringMap;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.game.model.AddSpeechBalloonVO;
+    import kabam.rotmg.game.signals.AddSpeechBalloonSignal;
+    import kabam.rotmg.language.model.StringMap;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	public class Merchant extends SellableObject implements IInteractiveObject
+    public class Merchant extends SellableObject implements IInteractiveObject
 		{
 
 			private static const NONE_MESSAGE:int = 0;

@@ -2,16 +2,16 @@
 
 package kabam.lib.console.view
 	{
-	import com.company.util.KeyCodes;
+    import com.company.util.KeyCodes;
 
-	import flash.display.DisplayObjectContainer;
-	import flash.events.KeyboardEvent;
+    import flash.display.DisplayObjectContainer;
+    import flash.events.KeyboardEvent;
 
-	import kabam.lib.console.signals.ToggleConsoleSignal;
+    import kabam.lib.console.signals.ToggleConsoleSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class ConsoleKeyMediator extends Mediator
+    public class ConsoleKeyMediator extends Mediator
 		{
 
 			private const TRIGGER:uint = KeyCodes.F12;//KeyCodes.ESCAPE

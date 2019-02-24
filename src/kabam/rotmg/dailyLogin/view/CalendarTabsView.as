@@ -2,21 +2,21 @@
 
 package kabam.rotmg.dailyLogin.view
 	{
-	import com.company.util.GraphicsUtil;
+    import com.company.util.GraphicsUtil;
 
-	import flash.display.CapsStyle;
-	import flash.display.GraphicsPath;
-	import flash.display.GraphicsSolidFill;
-	import flash.display.GraphicsStroke;
-	import flash.display.IGraphicsData;
-	import flash.display.JointStyle;
-	import flash.display.LineScaleMode;
-	import flash.display.Sprite;
-	import flash.geom.Rectangle;
+    import flash.display.CapsStyle;
+    import flash.display.GraphicsPath;
+    import flash.display.GraphicsSolidFill;
+    import flash.display.GraphicsStroke;
+    import flash.display.IGraphicsData;
+    import flash.display.JointStyle;
+    import flash.display.LineScaleMode;
+    import flash.display.Sprite;
+    import flash.geom.Rectangle;
 
-	import kabam.rotmg.dailyLogin.config.CalendarSettings;
+    import kabam.rotmg.dailyLogin.config.CalendarSettings;
 
-	public class CalendarTabsView extends Sprite
+    public class CalendarTabsView extends Sprite
 		{
 
 			private var fill_:GraphicsSolidFill = new GraphicsSolidFill(0x363636, 1);

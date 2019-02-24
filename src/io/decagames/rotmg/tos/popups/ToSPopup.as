@@ -2,14 +2,14 @@
 
 package io.decagames.rotmg.tos.popups
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import io.decagames.rotmg.tos.popups.buttons.AcceptButton;
-	import io.decagames.rotmg.tos.popups.buttons.RefuseButton;
-	import io.decagames.rotmg.ui.buttons.BaseButton;
-	import io.decagames.rotmg.ui.popups.modal.TextModal;
+    import io.decagames.rotmg.tos.popups.buttons.AcceptButton;
+    import io.decagames.rotmg.tos.popups.buttons.RefuseButton;
+    import io.decagames.rotmg.ui.buttons.BaseButton;
+    import io.decagames.rotmg.ui.popups.modal.TextModal;
 
-	public class ToSPopup extends TextModal
+    public class ToSPopup extends TextModal
 		{
 
 			public function ToSPopup()

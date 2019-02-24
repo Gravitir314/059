@@ -2,25 +2,25 @@
 
 package com.company.assembleegameclient.mapeditor
 	{
-	import com.company.assembleegameclient.map.GroundLibrary;
-	import com.company.assembleegameclient.map.RegionLibrary;
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.ui.BaseSimpleText;
-	import com.company.util.GraphicsUtil;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.map.GroundLibrary;
+    import com.company.assembleegameclient.map.RegionLibrary;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.ui.BaseSimpleText;
+    import com.company.util.GraphicsUtil;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.CapsStyle;
-	import flash.display.GraphicsPath;
-	import flash.display.GraphicsSolidFill;
-	import flash.display.GraphicsStroke;
-	import flash.display.IGraphicsData;
-	import flash.display.JointStyle;
-	import flash.display.LineScaleMode;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.geom.Rectangle;
+    import flash.display.CapsStyle;
+    import flash.display.GraphicsPath;
+    import flash.display.GraphicsSolidFill;
+    import flash.display.GraphicsStroke;
+    import flash.display.IGraphicsData;
+    import flash.display.JointStyle;
+    import flash.display.LineScaleMode;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.geom.Rectangle;
 
-	public class InfoPane extends Sprite
+    public class InfoPane extends Sprite
 		{
 
 			public static const WIDTH:int = 134;

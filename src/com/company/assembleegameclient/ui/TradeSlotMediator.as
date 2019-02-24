@@ -2,11 +2,11 @@
 
 package com.company.assembleegameclient.ui
 	{
-	import kabam.rotmg.text.view.BitmapTextFactory;
+    import kabam.rotmg.text.view.BitmapTextFactory;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class TradeSlotMediator extends Mediator
+    public class TradeSlotMediator extends Mediator
 		{
 
 			[Inject]

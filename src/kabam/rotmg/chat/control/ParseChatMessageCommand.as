@@ -2,50 +2,50 @@
 
 package kabam.rotmg.chat.control
 	{
-	import com.company.assembleegameclient.appengine.SavedCharacter;
-	import com.company.assembleegameclient.game.MapUserInput;
-	import com.company.assembleegameclient.game.events.ReconnectEvent;
-	import com.company.assembleegameclient.map.Map;
-	import com.company.assembleegameclient.objects.GameObject;
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.screens.charrects.CurrentCharacterRect;
-	import com.company.assembleegameclient.ui.dialogs.HelpDialog;
-	import com.company.util.MoreObjectUtil;
+    import com.company.assembleegameclient.appengine.SavedCharacter;
+    import com.company.assembleegameclient.game.MapUserInput;
+    import com.company.assembleegameclient.game.events.ReconnectEvent;
+    import com.company.assembleegameclient.map.Map;
+    import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.screens.charrects.CurrentCharacterRect;
+    import com.company.assembleegameclient.ui.dialogs.HelpDialog;
+    import com.company.util.MoreObjectUtil;
 
-	import flash.display.StageScaleMode;
-	import flash.events.Event;
-	import flash.geom.Point;
-	import flash.net.FileReference;
-	import flash.net.URLRequest;
-	import flash.net.navigateToURL;
-	import flash.utils.ByteArray;
-	import flash.utils.getTimer;
+    import flash.display.StageScaleMode;
+    import flash.events.Event;
+    import flash.geom.Point;
+    import flash.net.FileReference;
+    import flash.net.URLRequest;
+    import flash.net.navigateToURL;
+    import flash.utils.ByteArray;
+    import flash.utils.getTimer;
 
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.appengine.api.AppEngineClient;
-	import kabam.rotmg.assets.EmbeddedData;
-	import kabam.rotmg.build.api.BuildData;
-	import kabam.rotmg.chat.model.ChatMessage;
-	import kabam.rotmg.core.model.PlayerModel;
-	import kabam.rotmg.dailyLogin.model.DailyLoginModel;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.dialogs.model.PopupNamesConfig;
-	import kabam.rotmg.game.commands.PlayGameCommand;
-	import kabam.rotmg.game.model.GameInitData;
-	import kabam.rotmg.game.signals.AddTextLineSignal;
-	import kabam.rotmg.game.signals.PlayGameSignal;
-	import kabam.rotmg.messaging.impl.GameServerConnection;
-	import kabam.rotmg.servers.api.Server;
-	import kabam.rotmg.servers.api.ServerModel;
-	import kabam.rotmg.text.model.TextKey;
-	import kabam.rotmg.ui.model.HUDModel;
-	import kabam.rotmg.ui.signals.EnterGameSignal;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.appengine.api.AppEngineClient;
+    import kabam.rotmg.assets.EmbeddedData;
+    import kabam.rotmg.build.api.BuildData;
+    import kabam.rotmg.chat.model.ChatMessage;
+    import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.dailyLogin.model.DailyLoginModel;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.dialogs.model.PopupNamesConfig;
+    import kabam.rotmg.game.commands.PlayGameCommand;
+    import kabam.rotmg.game.model.GameInitData;
+    import kabam.rotmg.game.signals.AddTextLineSignal;
+    import kabam.rotmg.game.signals.PlayGameSignal;
+    import kabam.rotmg.messaging.impl.GameServerConnection;
+    import kabam.rotmg.servers.api.Server;
+    import kabam.rotmg.servers.api.ServerModel;
+    import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.ui.model.HUDModel;
+    import kabam.rotmg.ui.signals.EnterGameSignal;
 
-	import zfn.sound.SoundCustom;
+    import zfn.sound.SoundCustom;
 
-	public class ParseChatMessageCommand
+    public class ParseChatMessageCommand
 		{
 
 			[Inject]
@@ -392,9 +392,13 @@ package kabam.rotmg.chat.control
 						Parameters.blendType_ = (Parameters.blendType_ == 0 ? 1 : 0);
 						this.addTextLine.dispatch(ChatMessage.make("BlendType", Parameters.blendType_.toString(), true));
 						return (true);
+                    case "/tradedelay":
+                        player.textNotification(((Parameters.data_.TradeDelay) ? "Trade Delay on" : "Trade Delay off"));
+                        Parameters.data_.TradeDelay = !Parameters.data_.TradeDelay;
+						return (true);
 					case "/abi":
 						Parameters.abi = !Parameters.abi;
-						this.addTextLine.dispatch(ChatMessage.make("@Auto Ability", ((Parameters.abi) ? "On" : "Off"), true));
+						this.addTextLine.dispatch(ChatMessage.make("@Auto Ability", ((Parameters.abi) ? "AA On" : "AA Off"), true));
 						return (true);
 					case "/lowcpu":
 						Parameters.lowCPUMode = !Parameters.lowCPUMode;

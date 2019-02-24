@@ -2,11 +2,11 @@
 
 package kabam.rotmg.news.view
 	{
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class NewsTickerMediator extends Mediator
+    public class NewsTickerMediator extends Mediator
 		{
 
 			[Inject]

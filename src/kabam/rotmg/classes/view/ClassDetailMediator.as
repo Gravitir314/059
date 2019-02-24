@@ -2,22 +2,22 @@
 
 package kabam.rotmg.classes.view
 	{
-	import com.company.assembleegameclient.util.FameUtil;
+    import com.company.assembleegameclient.util.FameUtil;
 
-	import flash.events.TimerEvent;
-	import flash.utils.Timer;
+    import flash.events.TimerEvent;
+    import flash.utils.Timer;
 
-	import kabam.rotmg.assets.model.Animation;
-	import kabam.rotmg.assets.services.CharacterFactory;
-	import kabam.rotmg.classes.control.FocusCharacterSkinSignal;
-	import kabam.rotmg.classes.model.CharacterClass;
-	import kabam.rotmg.classes.model.CharacterSkin;
-	import kabam.rotmg.classes.model.ClassesModel;
-	import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.assets.model.Animation;
+    import kabam.rotmg.assets.services.CharacterFactory;
+    import kabam.rotmg.classes.control.FocusCharacterSkinSignal;
+    import kabam.rotmg.classes.model.CharacterClass;
+    import kabam.rotmg.classes.model.CharacterSkin;
+    import kabam.rotmg.classes.model.ClassesModel;
+    import kabam.rotmg.core.model.PlayerModel;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class ClassDetailMediator extends Mediator
+    public class ClassDetailMediator extends Mediator
 		{
 
 			private const skins:Object = {};

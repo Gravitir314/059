@@ -2,13 +2,13 @@
 
 package kabam.rotmg.text.model
 	{
-	import flash.display.BitmapData;
-	import flash.geom.Rectangle;
-	import flash.text.TextField;
-	import flash.text.TextFieldAutoSize;
-	import flash.text.TextFormat;
+    import flash.display.BitmapData;
+    import flash.geom.Rectangle;
+    import flash.text.TextField;
+    import flash.text.TextFieldAutoSize;
+    import flash.text.TextFormat;
 
-	public class FontInfo
+    public class FontInfo
 		{
 
 			private static const renderingFontSize:Number = 200;

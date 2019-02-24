@@ -2,11 +2,11 @@
 
 package kabam.rotmg.game.view.components
 	{
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	import kabam.rotmg.ui.model.TabStripModel;
+    import kabam.rotmg.ui.model.TabStripModel;
 
-	public class StatsTabContent extends Sprite
+    public class StatsTabContent extends Sprite
 		{
 
 			private var stats:StatsView = new StatsView();

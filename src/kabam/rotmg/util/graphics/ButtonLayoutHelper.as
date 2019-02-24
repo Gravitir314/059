@@ -2,11 +2,11 @@
 
 package kabam.rotmg.util.graphics
 	{
-	import flash.display.DisplayObject;
-	import flash.errors.IllegalOperationError;
-	import flash.geom.Rectangle;
+    import flash.display.DisplayObject;
+    import flash.errors.IllegalOperationError;
+    import flash.geom.Rectangle;
 
-	public class ButtonLayoutHelper
+    public class ButtonLayoutHelper
 		{
 
 

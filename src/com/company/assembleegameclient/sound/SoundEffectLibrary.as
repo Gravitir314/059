@@ -2,23 +2,19 @@
 
 package com.company.assembleegameclient.sound
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import flash.events.Event;
-	import flash.events.IOErrorEvent;
-	import flash.media.Sound;
-	import flash.media.SoundChannel;
-	import flash.media.SoundTransform;
-	import flash.net.URLRequest;
-	import flash.utils.Dictionary;
+    import flash.events.Event;
+    import flash.events.IOErrorEvent;
+    import flash.media.Sound;
+    import flash.media.SoundChannel;
+    import flash.media.SoundTransform;
+    import flash.utils.Dictionary;
 
-	import kabam.rotmg.application.api.ApplicationSetup;
-	import kabam.rotmg.core.StaticInjectorContext;
+    import zfn.sound.SoundAssets;
+    import zfn.sound.SoundCustom;
 
-	import zfn.sound.SoundAssets;
-	import zfn.sound.SoundCustom;
-
-	public class SoundEffectLibrary
+    public class SoundEffectLibrary
 		{
 			private static var urlBase:String;
 			private static const URL_PATTERN:String = "{URLBASE}/sfx/{NAME}.mp3";

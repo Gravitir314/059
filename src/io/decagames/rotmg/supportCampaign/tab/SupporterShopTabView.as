@@ -2,24 +2,24 @@
 
 package io.decagames.rotmg.supportCampaign.tab
 	{
-	import flash.display.Bitmap;
-	import flash.display.Sprite;
-	import flash.text.TextFormatAlign;
+	//import flash.display.Bitmap;
+    import flash.display.Sprite;
+    import flash.text.TextFormatAlign;
 
-	import io.decagames.rotmg.shop.ShopBuyButton;
-	import io.decagames.rotmg.supportCampaign.data.vo.RankVO;
-	import io.decagames.rotmg.supportCampaign.tab.donate.DonatePanel;
-	import io.decagames.rotmg.supportCampaign.tab.tiers.preview.TiersPreview;
-	import io.decagames.rotmg.supportCampaign.tab.tiers.progressBar.TiersProgressBar;
-	import io.decagames.rotmg.ui.buttons.SliceScalingButton;
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.labels.UILabel;
-	import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
-	import io.decagames.rotmg.ui.tabs.UITab;
-	import io.decagames.rotmg.ui.texture.TextureParser;
-	import io.decagames.rotmg.utils.date.TimeSpan;
+    import io.decagames.rotmg.shop.ShopBuyButton;
+    import io.decagames.rotmg.supportCampaign.data.vo.RankVO;
+    import io.decagames.rotmg.supportCampaign.tab.donate.DonatePanel;
+    import io.decagames.rotmg.supportCampaign.tab.tiers.preview.TiersPreview;
+    import io.decagames.rotmg.supportCampaign.tab.tiers.progressBar.TiersProgressBar;
+    import io.decagames.rotmg.ui.buttons.SliceScalingButton;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+    import io.decagames.rotmg.ui.tabs.UITab;
+    import io.decagames.rotmg.ui.texture.TextureParser;
+    import io.decagames.rotmg.utils.date.TimeSpan;
 
-	public class SupporterShopTabView extends UITab
+    public class SupporterShopTabView extends UITab
 		{
 
 			private var backgroundWidth:int = 561;
@@ -34,13 +34,13 @@ package io.decagames.rotmg.supportCampaign.tab
 			private var fieldBackground:SliceScalingBitmap;
 			private var endDateInfo:UILabel;
 			private var tiersPreview:TiersPreview;
-			private var pointsBitmap:Bitmap;
+			//private var pointsBitmap:Bitmap;
 			private var progressBar:TiersProgressBar;
 			private var pName:String;
 
-			public function SupporterShopTabView()
+			public function SupporterShopTabView(_arg_1:String)
 			{
-				super("Supporter");
+                super(_arg_1);
 				this._countdown = new UILabel();
 				this._campaignTimer = new UILabel();
 			}
@@ -130,16 +130,16 @@ package io.decagames.rotmg.supportCampaign.tab
 				this.endDateInfo.y = ((this.background.y + this.background.height) - 115);
 			}
 
-			public function showTier(_arg_1:int, _arg_2:Array, _arg_3:int, _arg_4:int):void
+			public function showTier(_arg_1:int, _arg_2:Array, _arg_3:int, _arg_4:int, _arg_5:String):void
 			{
 				if (!this.tiersPreview)
 				{
-					this.tiersPreview = new TiersPreview(_arg_1, _arg_2, _arg_3, _arg_4, 530);
+                    this.tiersPreview = new TiersPreview(_arg_1, _arg_2, _arg_3, _arg_4, 530, _arg_5);//this.tiersPreview = new TiersPreview(_arg_1, _arg_2, _arg_3, _arg_4, 530);
 					this.tiersPreview.x = (this.background.x + 15);
 					this.tiersPreview.y = (this.background.y + 20);
 					addChild(this.tiersPreview);
 				}
-				this.tiersPreview.showTier(_arg_1, _arg_3, _arg_4);
+                this.tiersPreview.showTier(_arg_1, _arg_3, _arg_4, _arg_5);//this.tiersPreview.showTier(_arg_1, _arg_3, _arg_4);
 			}
 
 			public function drawProgress(_arg_1:int, _arg_2:Vector.<RankVO>, _arg_3:int, _arg_4:int):void

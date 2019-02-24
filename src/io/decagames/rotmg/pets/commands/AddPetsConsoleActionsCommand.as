@@ -2,12 +2,12 @@
 
 package io.decagames.rotmg.pets.commands
 	{
-	import io.decagames.rotmg.pets.signals.OpenCaretakerQueryDialogSignal;
+    import io.decagames.rotmg.pets.signals.OpenCaretakerQueryDialogSignal;
 
-	import kabam.lib.console.signals.RegisterConsoleActionSignal;
-	import kabam.lib.console.vo.ConsoleAction;
+    import kabam.lib.console.signals.RegisterConsoleActionSignal;
+    import kabam.lib.console.vo.ConsoleAction;
 
-	public class AddPetsConsoleActionsCommand
+    public class AddPetsConsoleActionsCommand
 		{
 
 			[Inject]

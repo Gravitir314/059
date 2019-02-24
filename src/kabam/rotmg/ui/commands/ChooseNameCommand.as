@@ -2,15 +2,15 @@
 
 package kabam.rotmg.ui.commands
 	{
-	import com.company.assembleegameclient.account.ui.NewChooseNameFrame;
+    import com.company.assembleegameclient.account.ui.NewChooseNameFrame;
 
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.ui.view.ChooseNameRegisterDialog;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.dialogs.control.OpenDialogSignal;
+    import kabam.rotmg.ui.view.ChooseNameRegisterDialog;
 
-	public class ChooseNameCommand
+    public class ChooseNameCommand
 		{
 
 			[Inject]

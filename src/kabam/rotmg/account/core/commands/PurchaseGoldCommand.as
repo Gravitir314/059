@@ -2,15 +2,15 @@
 
 package kabam.rotmg.account.core.commands
 	{
-	import kabam.lib.tasks.DispatchSignalTask;
-	import kabam.lib.tasks.TaskMonitor;
-	import kabam.lib.tasks.TaskSequence;
-	import kabam.rotmg.account.core.services.PurchaseGoldTask;
-	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
+    import kabam.lib.tasks.DispatchSignalTask;
+    import kabam.lib.tasks.TaskMonitor;
+    import kabam.lib.tasks.TaskSequence;
+    import kabam.rotmg.account.core.services.PurchaseGoldTask;
+    import kabam.rotmg.dialogs.control.CloseDialogsSignal;
 
-	import robotlegs.bender.framework.api.ILogger;
+    import robotlegs.bender.framework.api.ILogger;
 
-	public class PurchaseGoldCommand
+    public class PurchaseGoldCommand
 		{
 
 			[Inject]

@@ -2,12 +2,12 @@
 
 package com.greensock.plugins
 	{
-	import com.greensock.TweenLite;
+    import com.greensock.TweenLite;
 
-	import flash.geom.Point;
-	import flash.geom.Rectangle;
+    import flash.geom.Point;
+    import flash.geom.Rectangle;
 
-	public class TransformAroundCenterPlugin extends TransformAroundPointPlugin
+    public class TransformAroundCenterPlugin extends TransformAroundPointPlugin
 		{
 
 			public static const API:Number = 2;

@@ -2,29 +2,29 @@
 
 package io.decagames.rotmg.pets.components.tooltip
 	{
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.assembleegameclient.ui.LineBreakDesign;
-	import com.company.assembleegameclient.ui.tooltip.ToolTip;
-	import com.company.assembleegameclient.ui.tooltip.TooltipHelper;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.assembleegameclient.ui.LineBreakDesign;
+    import com.company.assembleegameclient.ui.tooltip.ToolTip;
+    import com.company.assembleegameclient.ui.tooltip.TooltipHelper;
 
-	import flash.display.Bitmap;
-	import flash.display.Sprite;
+    import flash.display.Bitmap;
+    import flash.display.Sprite;
 
-	import io.decagames.rotmg.pets.components.petStatsGrid.PetStatsGrid;
-	import io.decagames.rotmg.pets.data.family.PetFamilyColors;
-	import io.decagames.rotmg.pets.data.family.PetFamilyKeys;
-	import io.decagames.rotmg.pets.data.rarity.PetRarityEnum;
-	import io.decagames.rotmg.pets.data.vo.AbilityVO;
-	import io.decagames.rotmg.pets.data.vo.IPetVO;
-	import io.decagames.rotmg.pets.utils.PetsConstants;
-	import io.decagames.rotmg.pets.utils.PetsViewAssetFactory;
-	import io.decagames.rotmg.ui.gird.UIGrid;
+    import io.decagames.rotmg.pets.components.petStatsGrid.PetStatsGrid;
+    import io.decagames.rotmg.pets.data.family.PetFamilyColors;
+    import io.decagames.rotmg.pets.data.family.PetFamilyKeys;
+    import io.decagames.rotmg.pets.data.rarity.PetRarityEnum;
+    import io.decagames.rotmg.pets.data.vo.AbilityVO;
+    import io.decagames.rotmg.pets.data.vo.IPetVO;
+    import io.decagames.rotmg.pets.utils.PetsConstants;
+    import io.decagames.rotmg.pets.utils.PetsViewAssetFactory;
+    import io.decagames.rotmg.ui.gird.UIGrid;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.ui.model.TabStripModel;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.ui.model.TabStripModel;
 
-	public class PetTooltip extends ToolTip
+    public class PetTooltip extends ToolTip
 		{
 
 			private const petsContent:Sprite = new Sprite();

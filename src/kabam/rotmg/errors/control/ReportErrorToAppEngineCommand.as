@@ -2,15 +2,15 @@
 
 package kabam.rotmg.errors.control
 	{
-	import com.company.util.CapabilitiesUtil;
+    import com.company.util.CapabilitiesUtil;
 
-	import flash.events.ErrorEvent;
+    import flash.events.ErrorEvent;
 
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.appengine.api.AppEngineClient;
-	import kabam.rotmg.application.api.ApplicationSetup;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.appengine.api.AppEngineClient;
+    import kabam.rotmg.application.api.ApplicationSetup;
 
-	public class ReportErrorToAppEngineCommand
+    public class ReportErrorToAppEngineCommand
 		{
 
 			[Inject]

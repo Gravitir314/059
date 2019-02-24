@@ -2,16 +2,16 @@
 
 package com.company.assembleegameclient.util
 	{
-	import com.company.assembleegameclient.objects.ObjectLibrary;
-	import com.company.rotmg.graphics.StarGraphic;
-	import com.company.util.AssetLibrary;
+    import com.company.assembleegameclient.objects.ObjectLibrary;
+    import com.company.rotmg.graphics.StarGraphic;
+    import com.company.util.AssetLibrary;
 
-	import flash.display.BitmapData;
-	import flash.display.Sprite;
-	import flash.filters.DropShadowFilter;
-	import flash.geom.ColorTransform;
+    import flash.display.BitmapData;
+    import flash.display.Sprite;
+    import flash.filters.DropShadowFilter;
+    import flash.geom.ColorTransform;
 
-	public class FameUtil
+    public class FameUtil
 		{
 
 			public static const MAX_STARS:int = 75;

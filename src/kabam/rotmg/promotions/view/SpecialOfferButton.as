@@ -2,22 +2,22 @@
 
 package kabam.rotmg.promotions.view
 	{
-	import flash.display.Bitmap;
-	import flash.display.DisplayObject;
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
+    import flash.display.Bitmap;
+    import flash.display.DisplayObject;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
+    import flash.filters.DropShadowFilter;
 
-	import kabam.rotmg.assets.services.IconFactory;
-	import kabam.rotmg.packages.view.BasePackageButton;
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-	import kabam.rotmg.ui.UIUtils;
+    import kabam.rotmg.assets.services.IconFactory;
+    import kabam.rotmg.packages.view.BasePackageButton;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.ui.UIUtils;
 
-	import org.osflash.signals.Signal;
-	import org.osflash.signals.natives.NativeMappedSignal;
+    import org.osflash.signals.Signal;
+    import org.osflash.signals.natives.NativeMappedSignal;
 
-	public class SpecialOfferButton extends BasePackageButton
+    public class SpecialOfferButton extends BasePackageButton
 		{
 
 			public static const NOTIFICATION_BACKGROUND_WIDTH:Number = 120;

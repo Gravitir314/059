@@ -2,11 +2,11 @@
 
 package zfn.screens.vault
 	{
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.core.model.PlayerModel;
 
-	public class VaultList extends Sprite
+    public class VaultList extends Sprite
 		{
 
 			private const AMOUNT_IN_ROW:int = 2;

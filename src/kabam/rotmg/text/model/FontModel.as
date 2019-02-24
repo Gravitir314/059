@@ -2,11 +2,11 @@
 
 package kabam.rotmg.text.model
 	{
-	import flash.text.Font;
-	import flash.text.TextField;
-	import flash.text.TextFormat;
+    import flash.text.Font;
+    import flash.text.TextField;
+    import flash.text.TextFormat;
 
-	public class FontModel
+    public class FontModel
 		{
 
 			public static const MyriadPro:Class = FontModel_MyriadPro;

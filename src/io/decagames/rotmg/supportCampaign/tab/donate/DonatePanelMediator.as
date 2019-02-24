@@ -2,16 +2,16 @@
 
 package io.decagames.rotmg.supportCampaign.tab.donate
 	{
-	import flash.events.Event;
+    import flash.events.Event;
 
-	import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
-	import io.decagames.rotmg.supportCampaign.tab.donate.popup.DonateConfirmationPopup;
-	import io.decagames.rotmg.ui.buttons.BaseButton;
-	import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+    import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
+    import io.decagames.rotmg.supportCampaign.tab.donate.popup.DonateConfirmationPopup;
+    import io.decagames.rotmg.ui.buttons.BaseButton;
+    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class DonatePanelMediator extends Mediator
+    public class DonatePanelMediator extends Mediator
 		{
 
 			[Inject]

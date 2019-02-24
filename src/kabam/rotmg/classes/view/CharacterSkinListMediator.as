@@ -2,14 +2,14 @@
 
 package kabam.rotmg.classes.view
 	{
-	import flash.display.DisplayObject;
+    import flash.display.DisplayObject;
 
-	import kabam.rotmg.classes.model.CharacterClass;
-	import kabam.rotmg.classes.model.ClassesModel;
+    import kabam.rotmg.classes.model.CharacterClass;
+    import kabam.rotmg.classes.model.ClassesModel;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class CharacterSkinListMediator extends Mediator
+    public class CharacterSkinListMediator extends Mediator
 		{
 
 			[Inject]

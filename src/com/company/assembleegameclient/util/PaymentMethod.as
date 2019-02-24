@@ -2,16 +2,16 @@
 
 package com.company.assembleegameclient.util
 	{
-	import com.company.assembleegameclient.util.offer.Offer;
+    import com.company.assembleegameclient.util.offer.Offer;
 
-	import flash.net.URLVariables;
+    import flash.net.URLVariables;
 
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.application.api.ApplicationSetup;
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.text.model.TextKey;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.application.api.ApplicationSetup;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.text.model.TextKey;
 
-	public class PaymentMethod
+    public class PaymentMethod
 		{
 
 			public static const GO_METHOD:PaymentMethod = new PaymentMethod(TextKey.PAYMENTS_GOOGLE_CHECKOUT, "co", "");

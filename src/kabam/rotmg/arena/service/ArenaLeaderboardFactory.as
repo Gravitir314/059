@@ -2,18 +2,18 @@
 
 package kabam.rotmg.arena.service
 	{
-	import com.company.util.ConversionUtil;
+    import com.company.util.ConversionUtil;
 
-	import io.decagames.rotmg.pets.data.vo.PetVO;
+    import io.decagames.rotmg.pets.data.vo.PetVO;
 
-	import kabam.rotmg.arena.model.ArenaLeaderboardEntry;
-	import kabam.rotmg.arena.model.CurrentArenaRunModel;
-	import kabam.rotmg.assets.services.CharacterFactory;
-	import kabam.rotmg.classes.model.CharacterClass;
-	import kabam.rotmg.classes.model.CharacterSkin;
-	import kabam.rotmg.classes.model.ClassesModel;
+    import kabam.rotmg.arena.model.ArenaLeaderboardEntry;
+    import kabam.rotmg.arena.model.CurrentArenaRunModel;
+    import kabam.rotmg.assets.services.CharacterFactory;
+    import kabam.rotmg.classes.model.CharacterClass;
+    import kabam.rotmg.classes.model.CharacterSkin;
+    import kabam.rotmg.classes.model.ClassesModel;
 
-	public class ArenaLeaderboardFactory
+    public class ArenaLeaderboardFactory
 		{
 
 			[Inject]

@@ -2,22 +2,22 @@
 
 package com.company.assembleegameclient.tutorial
 	{
-	import com.company.assembleegameclient.game.GameSprite;
-	import com.company.assembleegameclient.objects.GameObject;
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.util.PointUtil;
+    import com.company.assembleegameclient.game.GameSprite;
+    import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.util.PointUtil;
 
-	import flash.display.Graphics;
-	import flash.display.Shape;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.filters.BlurFilter;
-	import flash.utils.getTimer;
+    import flash.display.Graphics;
+    import flash.display.Shape;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.filters.BlurFilter;
+    import flash.utils.getTimer;
 
-	import kabam.rotmg.assets.EmbeddedData;
+    import kabam.rotmg.assets.EmbeddedData;
 
-	public class Tutorial extends Sprite
+    public class Tutorial extends Sprite
 		{
 
 			public static const NEXT_ACTION:String = "Next";

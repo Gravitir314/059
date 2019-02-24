@@ -2,11 +2,11 @@
 
 package kabam.rotmg.mysterybox.services
 	{
-	import kabam.rotmg.mysterybox.model.MysteryBoxInfo;
+    import kabam.rotmg.mysterybox.model.MysteryBoxInfo;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class MysteryBoxModel
+    public class MysteryBoxModel
 		{
 			public const updateSignal:Signal = new Signal();
 

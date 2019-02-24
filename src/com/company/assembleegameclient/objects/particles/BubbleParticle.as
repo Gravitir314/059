@@ -2,9 +2,9 @@
 
 package com.company.assembleegameclient.objects.particles
 	{
-	import com.company.assembleegameclient.util.FreeList;
+    import com.company.assembleegameclient.util.FreeList;
 
-	public class BubbleParticle extends Particle
+    public class BubbleParticle extends Particle
 		{
 
 			private const SPREAD_DAMPER:Number = 0.0025;

@@ -2,28 +2,28 @@
 
 package kabam.rotmg.chat.view
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.util.FameUtil;
-	import com.company.assembleegameclient.util.StageProxy;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.util.FameUtil;
+    import com.company.assembleegameclient.util.StageProxy;
 
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.DisplayObject;
-	import flash.display.StageQuality;
-	import flash.geom.Matrix;
-	import flash.text.TextField;
-	import flash.text.TextFormat;
+    import flash.display.Bitmap;
+    import flash.display.BitmapData;
+    import flash.display.DisplayObject;
+    import flash.display.StageQuality;
+    import flash.geom.Matrix;
+    import flash.text.TextField;
+    import flash.text.TextFormat;
 
-	import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
+    import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
 
-	import kabam.rotmg.chat.model.ChatMessage;
-	import kabam.rotmg.chat.model.ChatModel;
-	import kabam.rotmg.text.model.FontModel;
-	import kabam.rotmg.text.view.BitmapTextFactory;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StringBuilder;
+    import kabam.rotmg.chat.model.ChatMessage;
+    import kabam.rotmg.chat.model.ChatModel;
+    import kabam.rotmg.text.model.FontModel;
+    import kabam.rotmg.text.view.BitmapTextFactory;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StringBuilder;
 
-	public class ChatListItemFactory
+    public class ChatListItemFactory
 		{
 
 			private static const IDENTITY_MATRIX:Matrix = new Matrix();

@@ -2,21 +2,21 @@
 
 package com.company.assembleegameclient.ui
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
+    import flash.filters.DropShadowFilter;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
-	import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class StatusBar extends Sprite
+    public class StatusBar extends Sprite
 		{
 
 			public static var barTextSignal:Signal = new Signal(int);

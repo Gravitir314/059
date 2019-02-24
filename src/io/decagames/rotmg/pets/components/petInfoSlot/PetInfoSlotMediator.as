@@ -2,13 +2,13 @@
 
 package io.decagames.rotmg.pets.components.petInfoSlot
 	{
-	import io.decagames.rotmg.pets.data.PetsModel;
-	import io.decagames.rotmg.pets.data.vo.IPetVO;
-	import io.decagames.rotmg.pets.signals.ChangePetSkinSignal;
+    import io.decagames.rotmg.pets.data.PetsModel;
+    import io.decagames.rotmg.pets.data.vo.IPetVO;
+    import io.decagames.rotmg.pets.signals.ChangePetSkinSignal;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class PetInfoSlotMediator extends Mediator
+    public class PetInfoSlotMediator extends Mediator
 		{
 
 			[Inject]

@@ -2,11 +2,11 @@
 
 package io.decagames.rotmg.ui.tabs
 	{
-	import flash.events.Event;
+    import flash.events.Event;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class UITabMediator extends Mediator
+    public class UITabMediator extends Mediator
 		{
 
 			[Inject]

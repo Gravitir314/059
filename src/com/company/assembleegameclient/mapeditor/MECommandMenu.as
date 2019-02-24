@@ -2,16 +2,16 @@
 
 package com.company.assembleegameclient.mapeditor
 	{
-	import com.company.assembleegameclient.editor.CommandEvent;
-	import com.company.assembleegameclient.editor.CommandMenu;
-	import com.company.assembleegameclient.editor.CommandMenuItem;
-	import com.company.util.KeyCodes;
+    import com.company.assembleegameclient.editor.CommandEvent;
+    import com.company.assembleegameclient.editor.CommandMenu;
+    import com.company.assembleegameclient.editor.CommandMenuItem;
+    import com.company.util.KeyCodes;
 
-	import kabam.rotmg.application.DynamicSettings;
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.application.DynamicSettings;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.core.model.PlayerModel;
 
-	public class MECommandMenu extends CommandMenu
+    public class MECommandMenu extends CommandMenu
 		{
 
 			public static const NONE_COMMAND:int = 0;

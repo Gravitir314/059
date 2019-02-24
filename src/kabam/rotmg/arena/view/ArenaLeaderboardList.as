@@ -2,14 +2,14 @@
 
 package kabam.rotmg.arena.view
 	{
-	import flash.display.DisplayObject;
-	import flash.display.Sprite;
+    import flash.display.DisplayObject;
+    import flash.display.Sprite;
 
-	import kabam.lib.ui.api.Size;
-	import kabam.rotmg.arena.model.ArenaLeaderboardEntry;
-	import kabam.rotmg.util.components.VerticalScrollingList;
+    import kabam.lib.ui.api.Size;
+    import kabam.rotmg.arena.model.ArenaLeaderboardEntry;
+    import kabam.rotmg.util.components.VerticalScrollingList;
 
-	public class ArenaLeaderboardList extends Sprite
+    public class ArenaLeaderboardList extends Sprite
 		{
 
 			private const MAX_SIZE:int = 20;

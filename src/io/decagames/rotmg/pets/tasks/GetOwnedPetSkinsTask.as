@@ -2,17 +2,17 @@
 
 package io.decagames.rotmg.pets.tasks
 	{
-	import com.company.util.MoreObjectUtil;
+    import com.company.util.MoreObjectUtil;
 
-	import io.decagames.rotmg.pets.data.PetsModel;
+    import io.decagames.rotmg.pets.data.PetsModel;
 
-	import kabam.lib.tasks.BaseTask;
-	import kabam.rotmg.account.core.Account;
-	import kabam.rotmg.appengine.api.AppEngineClient;
+    import kabam.lib.tasks.BaseTask;
+    import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.appengine.api.AppEngineClient;
 
-	import robotlegs.bender.framework.api.ILogger;
+    import robotlegs.bender.framework.api.ILogger;
 
-	public class GetOwnedPetSkinsTask extends BaseTask
+    public class GetOwnedPetSkinsTask extends BaseTask
 		{
 
 			[Inject]

@@ -2,17 +2,17 @@
 
 package kabam.rotmg.news.view
 	{
-	import com.company.assembleegameclient.game.events.DisplayAreaChangedSignal;
+    import com.company.assembleegameclient.game.events.DisplayAreaChangedSignal;
 
-	import flash.display.Sprite;
-	import flash.events.TimerEvent;
-	import flash.text.TextField;
-	import flash.utils.Timer;
+    import flash.display.Sprite;
+    import flash.events.TimerEvent;
+    import flash.text.TextField;
+    import flash.utils.Timer;
 
-	import kabam.rotmg.core.StaticInjectorContext;
-	import kabam.rotmg.text.model.FontModel;
+    import kabam.rotmg.core.StaticInjectorContext;
+    import kabam.rotmg.text.model.FontModel;
 
-	public class NewsTicker extends Sprite
+    public class NewsTicker extends Sprite
 		{
 
 			private static var pendingScrollText:String = "";

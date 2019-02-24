@@ -2,15 +2,15 @@
 
 package io.decagames.rotmg.pets.data.vo
 	{
-	import com.company.assembleegameclient.util.MaskedImage;
+    import com.company.assembleegameclient.util.MaskedImage;
 
-	import flash.display.Bitmap;
+    import flash.display.Bitmap;
 
-	import io.decagames.rotmg.pets.data.rarity.PetRarityEnum;
+    import io.decagames.rotmg.pets.data.rarity.PetRarityEnum;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public interface IPetVO
+    public interface IPetVO
 		{
 
 			function get updated():Signal;

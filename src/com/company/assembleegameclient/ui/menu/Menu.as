@@ -2,28 +2,28 @@
 
 package com.company.assembleegameclient.ui.menu
 	{
-	import com.company.assembleegameclient.game.GameSprite;
-	import com.company.assembleegameclient.objects.Player;
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.util.GraphicsUtil;
-	import com.company.util.RectangleUtil;
+    import com.company.assembleegameclient.game.GameSprite;
+    import com.company.assembleegameclient.objects.Player;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.util.GraphicsUtil;
+    import com.company.util.RectangleUtil;
 
-	import flash.display.CapsStyle;
-	import flash.display.DisplayObject;
-	import flash.display.GraphicsPath;
-	import flash.display.GraphicsSolidFill;
-	import flash.display.GraphicsStroke;
-	import flash.display.IGraphicsData;
-	import flash.display.JointStyle;
-	import flash.display.LineScaleMode;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
+    import flash.display.CapsStyle;
+    import flash.display.DisplayObject;
+    import flash.display.GraphicsPath;
+    import flash.display.GraphicsSolidFill;
+    import flash.display.GraphicsStroke;
+    import flash.display.IGraphicsData;
+    import flash.display.JointStyle;
+    import flash.display.LineScaleMode;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.events.MouseEvent;
+    import flash.filters.DropShadowFilter;
 
-	import kabam.rotmg.ui.view.UnFocusAble;
+    import kabam.rotmg.ui.view.UnFocusAble;
 
-	public class Menu extends Sprite implements UnFocusAble
+    public class Menu extends Sprite implements UnFocusAble
 		{
 
 			private var background_:uint;

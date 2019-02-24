@@ -2,15 +2,15 @@
 
 package io.decagames.rotmg.pets.commands
 	{
-	import com.company.assembleegameclient.editor.Command;
+    import com.company.assembleegameclient.editor.Command;
 
-	import io.decagames.rotmg.pets.data.PetsModel;
-	import io.decagames.rotmg.pets.data.vo.HatchPetVO;
-	import io.decagames.rotmg.pets.data.vo.SkinVO;
-	import io.decagames.rotmg.pets.popup.hatching.PetHatchingDialog;
-	import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
+    import io.decagames.rotmg.pets.data.PetsModel;
+    import io.decagames.rotmg.pets.data.vo.HatchPetVO;
+    import io.decagames.rotmg.pets.data.vo.SkinVO;
+    import io.decagames.rotmg.pets.popup.hatching.PetHatchingDialog;
+    import io.decagames.rotmg.ui.popups.signals.ShowPopupSignal;
 
-	public class HatchPetCommand extends Command
+    public class HatchPetCommand extends Command
 		{
 
 			[Inject]

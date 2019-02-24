@@ -2,16 +2,16 @@
 
 package com.company.assembleegameclient.ui
 	{
-	import com.company.assembleegameclient.sound.SoundEffectLibrary;
-	import com.greensock.plugins.DropShadowFilterPlugin;
+    import com.company.assembleegameclient.sound.SoundEffectLibrary;
+    import com.greensock.plugins.DropShadowFilterPlugin;
 
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
+    import kabam.rotmg.text.view.TextFieldDisplayConcrete;
+    import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
-	public class ClickableTextBase extends Sprite
+    public class ClickableTextBase extends Sprite
 		{
 
 			public var text_:TextFieldDisplayConcrete;

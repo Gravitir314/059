@@ -2,15 +2,15 @@
 
 package kabam.rotmg.account.web
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
-	import com.company.assembleegameclient.util.GUID;
+    import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.util.GUID;
 
-	import flash.external.ExternalInterface;
-	import flash.net.SharedObject;
+    import flash.external.ExternalInterface;
+    import flash.net.SharedObject;
 
-	import kabam.rotmg.account.core.Account;
+    import kabam.rotmg.account.core.Account;
 
-	public class WebAccount implements Account
+    public class WebAccount implements Account
 		{
 
 			public static const NETWORK_NAME:String = "rotmg";

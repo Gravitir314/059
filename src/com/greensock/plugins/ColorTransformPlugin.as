@@ -2,12 +2,12 @@
 
 package com.greensock.plugins
 	{
-	import com.greensock.TweenLite;
+    import com.greensock.TweenLite;
 
-	import flash.display.DisplayObject;
-	import flash.geom.ColorTransform;
+    import flash.display.DisplayObject;
+    import flash.geom.ColorTransform;
 
-	public class ColorTransformPlugin extends TintPlugin
+    public class ColorTransformPlugin extends TintPlugin
 		{
 
 			public static const API:Number = 2;

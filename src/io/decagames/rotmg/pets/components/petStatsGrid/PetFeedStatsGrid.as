@@ -2,17 +2,17 @@
 
 package io.decagames.rotmg.pets.components.petStatsGrid
 	{
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	import io.decagames.rotmg.pets.data.ability.AbilitiesUtil;
-	import io.decagames.rotmg.pets.data.vo.AbilityVO;
-	import io.decagames.rotmg.pets.data.vo.IPetVO;
-	import io.decagames.rotmg.ui.PetFeedProgressBar;
-	import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
-	import io.decagames.rotmg.ui.gird.UIGrid;
-	import io.decagames.rotmg.ui.labels.UILabel;
+    import io.decagames.rotmg.pets.data.ability.AbilitiesUtil;
+    import io.decagames.rotmg.pets.data.vo.AbilityVO;
+    import io.decagames.rotmg.pets.data.vo.IPetVO;
+    import io.decagames.rotmg.ui.PetFeedProgressBar;
+    import io.decagames.rotmg.ui.defaults.DefaultLabelFormat;
+    import io.decagames.rotmg.ui.gird.UIGrid;
+    import io.decagames.rotmg.ui.labels.UILabel;
 
-	public class PetFeedStatsGrid extends UIGrid
+    public class PetFeedStatsGrid extends UIGrid
 		{
 
 			private var _petVO:IPetVO;

@@ -2,15 +2,15 @@
 
 package kabam.lib.resizing.view
 	{
-	import flash.display.DisplayObject;
-	import flash.display.Stage;
-	import flash.geom.Rectangle;
+    import flash.display.DisplayObject;
+    import flash.display.Stage;
+    import flash.geom.Rectangle;
 
-	import kabam.lib.resizing.signals.Resize;
+    import kabam.lib.resizing.signals.Resize;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class ResizableMediator extends Mediator
+    public class ResizableMediator extends Mediator
 		{
 
 			[Inject]

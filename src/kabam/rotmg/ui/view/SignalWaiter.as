@@ -2,13 +2,13 @@
 
 package kabam.rotmg.ui.view
 	{
-	import com.adobe.utils.DictionaryUtil;
+    import com.adobe.utils.DictionaryUtil;
 
-	import flash.utils.Dictionary;
+    import flash.utils.Dictionary;
 
-	import org.osflash.signals.Signal;
+    import org.osflash.signals.Signal;
 
-	public class SignalWaiter
+    public class SignalWaiter
 		{
 
 			public var complete:Signal = new Signal();

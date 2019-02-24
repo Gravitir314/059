@@ -2,13 +2,13 @@
 
 package com.company.assembleegameclient.screens
 	{
-	import com.company.assembleegameclient.appengine.SavedNewsItem;
+    import com.company.assembleegameclient.appengine.SavedNewsItem;
 
-	import flash.display.Sprite;
+    import flash.display.Sprite;
 
-	import kabam.rotmg.core.model.PlayerModel;
+    import kabam.rotmg.core.model.PlayerModel;
 
-	public class Graveyard extends Sprite
+    public class Graveyard extends Sprite
 		{
 
 			private var lines_:Vector.<GraveyardLine> = new Vector.<GraveyardLine>();

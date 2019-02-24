@@ -2,13 +2,13 @@
 
 package com.company.assembleegameclient.objects.particles
 	{
-	import com.company.assembleegameclient.objects.GameObject;
+    import com.company.assembleegameclient.objects.GameObject;
 
-	import flash.events.TimerEvent;
-	import flash.geom.Point;
-	import flash.utils.Timer;
+    import flash.events.TimerEvent;
+    import flash.geom.Point;
+    import flash.utils.Timer;
 
-	public class RisingFuryEffect extends ParticleEffect
+    public class RisingFuryEffect extends ParticleEffect
 		{
 
 			public var start_:Point;

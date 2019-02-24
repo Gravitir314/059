@@ -2,11 +2,11 @@
 
 package kabam.rotmg.game.view
 	{
-	import kabam.rotmg.game.model.TextPanelData;
+    import kabam.rotmg.game.model.TextPanelData;
 
-	import robotlegs.bender.bundles.mvcs.Mediator;
+    import robotlegs.bender.bundles.mvcs.Mediator;
 
-	public class TextPanelMediator extends Mediator
+    public class TextPanelMediator extends Mediator
 		{
 
 			[Inject]

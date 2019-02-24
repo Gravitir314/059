@@ -2,11 +2,11 @@
 
 package kabam.rotmg.legends.model
 	{
-	import flash.display.BitmapData;
+    import flash.display.BitmapData;
 
-	import kabam.rotmg.fame.model.FameVO;
+    import kabam.rotmg.fame.model.FameVO;
 
-	public class Legend implements FameVO
+    public class Legend implements FameVO
 		{
 
 			public var isOwnLegend:Boolean;

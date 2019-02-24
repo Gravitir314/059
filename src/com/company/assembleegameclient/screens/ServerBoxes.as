@@ -2,14 +2,14 @@
 
 package com.company.assembleegameclient.screens
 	{
-	import com.company.assembleegameclient.parameters.Parameters;
+    import com.company.assembleegameclient.parameters.Parameters;
 
-	import flash.display.Sprite;
-	import flash.events.MouseEvent;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
 
-	import kabam.rotmg.servers.api.Server;
+    import kabam.rotmg.servers.api.Server;
 
-	public class ServerBoxes extends Sprite
+    public class ServerBoxes extends Sprite
 		{
 
 			private var boxes_:Vector.<ServerBox> = new Vector.<ServerBox>();
