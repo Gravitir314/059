@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <Objects>
+   <Object type="0x1a50" id="Snowy Spawner">
+      <DisplayId>Snowy Spawner</DisplayId>
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>oryxHordeObjects8x8</File>
+         <Index>0x29</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Use this to spawn Snowy for testing purposes!</Description>
+      <Sound>use_potion</Sound>
+      <Activate id="Spawner">Create</Activate>
+      <InvUse/>
+      <BagType>8</BagType>
+      <Soulbound/>
+      <feedPower>10</feedPower>
+   </Object>
    <Object type="0x705e" id="InvinceMe">
       <Class>Equipment</Class>
       <Item/>
@@ -1618,6 +1635,34 @@
       <AnimatedTexture>
          <File>playerskins16</File>
          <Index>20</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x1e49" id="Testing Gift ST Archer">
+      <Group>Testing Gifts ST</Group>
+      <Class>Character</Class>
+      <StasisImmune/>
+      <Enemy/>
+      <NoMiniMap/>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Exp>0</Exp>
+      <Size>40</Size>
+      <AnimatedTexture>
+         <File>playerskins16</File>
+         <Index>20</Index>
+      </AnimatedTexture>
+   </Object>
+   <Object type="0x1e53" id="Testing Gift ST Ninja">
+      <Group>Testing Gifts ST</Group>
+      <Class>Character</Class>
+      <StasisImmune/>
+      <Enemy/>
+      <NoMiniMap/>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Exp>0</Exp>
+      <Size>140</Size>
+      <AnimatedTexture>
+         <File>players</File>
+         <Index>13</Index>
       </AnimatedTexture>
    </Object>
 </Objects>

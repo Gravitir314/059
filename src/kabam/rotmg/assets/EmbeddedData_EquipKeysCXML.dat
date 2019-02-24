@@ -521,12 +521,12 @@
          <Index>0x4B9</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A key which opens an entrance to Belladonna's Garden.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Description>A key which opens an entrance to Belladonna's Garden.\n\nKeys can only be used once you have 10 or more stars!\n\nOnly usable in the Realm, Vault, Guildhall and Belladonna's Garden areas.</Description>
       <Sound>use_key</Sound>
       <Consumable/>
       <Soulbound/>
-      <Activate id="Belladonna's Garden Portal">CreatePortal</Activate>
-      <feedPower>200</feedPower>
+      <Activate onlyInArea="Vault,Realm of the Mad God,Guild Hall,Guild Hall 2,Guild Hall 3,Guild Hall 4,Belladonna's Garden" id="Belladonna's Garden Portal">CreatePortal</Activate>
+      <feedPower>50</feedPower>
       <BagType>8</BagType>
       <Track/>
    </Object>

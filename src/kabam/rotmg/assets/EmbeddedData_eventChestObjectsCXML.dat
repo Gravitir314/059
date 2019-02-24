@@ -1292,13 +1292,13 @@
          <MultiHit/>
       </Projectile>
    </Object>
-   <Object type="0x226d" id="Dimitus">
-      <DisplayId>Dimitus</DisplayId>
+   <Object type="0x226d" id="Succubus Dungeon">
+      <DisplayId>Succubus</DisplayId>
       <Class>Character</Class>
       <Enemy/>
       <AnimatedTexture>
          <File>chars16x16dEncounters</File>
-         <Index>39</Index>
+         <Index>40</Index>
       </AnimatedTexture>
       <HitSound>weapon/dirk</HitSound>
       <DeathSound>monster/archdemon_death</DeathSound>
@@ -1571,13 +1571,13 @@
       <Defense>0</Defense>
       <Exp>0</Exp>
       <StasisImmune/>
+      <ParalyzeImmune/>
       <Projectile id="0">
          <ObjectId>Invisible</ObjectId>
          <Damage>100</Damage>
          <Speed>0</Speed>
          <Size>80</Size>
          <LifetimeMS>100</LifetimeMS>
-         <ConditionEffect duration="3">Armor Broken</ConditionEffect>
          <ConditionEffect duration="3">Weak</ConditionEffect>
       </Projectile>
    </Object>
@@ -1601,6 +1601,7 @@
          <Size>80</Size>
          <LifetimeMS>100</LifetimeMS>
          <ConditionEffect duration="1">Slowed</ConditionEffect>
+         <ConditionEffect duration="2" target="1">Stasis</ConditionEffect>
       </Projectile>
    </Object>
    <Object type="0x640c" id="Presentenichko">
@@ -1621,14 +1622,15 @@
       <Group>Snowmonsters</Group>
       <Enemy/>
       <Class>Character</Class>
-      <Texture>
-         <File>santaWorkshopObjects8x8</File>
-         <Index>0x0b</Index>
-      </Texture>
+      <AnimatedTexture>
+         <File>chars8x8rEncounters</File>
+         <Index>144</Index>
+      </AnimatedTexture>
       <Size>100</Size>
-      <MaxHitPoints>3000</MaxHitPoints>
+      <MaxHitPoints>2000</MaxHitPoints>
       <Defense>0</Defense>
       <Exp>0</Exp>
+      <StunImmune/>
       <StasisImmune/>
       <Projectile id="0">
          <ObjectId>snow flakes</ObjectId>
@@ -1680,11 +1682,12 @@
       </AnimatedTexture>
       <MaxHitPoints>60000</MaxHitPoints>
       <Defense>0</Defense>
-      <Size>240</Size>
+      <Size>200</Size>
       <ShadowSize>0</ShadowSize>
       <Exp>1000</Exp>
       <StasisImmune/>
       <StunImmune/>
+      <ParalyzeImmune/>
    </Object>
    <Object type="0x640e" id="Snowball Thrower">
       <DisplayId>Snowball Thrower</DisplayId>
@@ -1692,12 +1695,41 @@
       <Group>Snowmonsters</Group>
       <Enemy/>
       <Texture>
-         <File>lofiObjBig</File>
-         <Index>0x149</Index>
+         <File>santaWorkshopObjects16x16</File>
+         <Index>0x7a</Index>
       </Texture>
-      <MaxHitPoints>10000</MaxHitPoints>
+      <Animation prob="1" period="0.4">
+         <Frame time="0.1">
+            <Texture>
+               <File>santaWorkshopObjects16x16</File>
+               <Index>0x7a</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.1">
+            <Texture>
+               <File>santaWorkshopObjects16x16</File>
+               <Index>0x7b</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.1">
+            <Texture>
+               <File>santaWorkshopObjects16x16</File>
+               <Index>0x7c</Index>
+            </Texture>
+         </Frame>
+         <Frame time="0.1">
+            <Texture>
+               <File>santaWorkshopObjects16x16</File>
+               <Index>0x7d</Index>
+            </Texture>
+         </Frame>
+      </Animation>
+      <Size>100</Size>
+      <MaxHitPoints>6000</MaxHitPoints>
       <Defense>10</Defense>
       <Exp>0</Exp>
+      <StunImmune/>
+      <ParalyzeImmune/>
       <Projectile id="0">
          <ObjectId>Snowball Bullet</ObjectId>
          <Speed>30</Speed>
@@ -1705,6 +1737,37 @@
          <Damage>150</Damage>
          <LifetimeMS>6000</LifetimeMS>
          <MultiHit/>
+      </Projectile>
+   </Object>
+   <Object type="0x1a51" id="Spawner">
+      <Group>Snowmonsters</Group>
+      <Enemy/>
+      <Class>Character</Class>
+      <Texture>
+         <File>santaWorkshopObjects8x8</File>
+         <Index>0x5b</Index>
+      </Texture>
+      <Size>150</Size>
+      <MaxHitPoints>100</MaxHitPoints>
+   </Object>
+   <Object type="0x1a52" id="Snowy Bullet Split">
+      <DisplayId>Snowy The Frost God</DisplayId>
+      <Class>GameObject</Class>
+      <Texture>
+         <File>lofiChar8x8</File>
+         <Index>0xb4</Index>
+      </Texture>
+      <Size>0</Size>
+      <Enemy/>
+      <Invincible/>
+      <Projectile id="0">
+         <ObjectId>Snowy God Bullet 2</ObjectId>
+         <Damage>100</Damage>
+         <Speed>65</Speed>
+         <LifetimeMS>2000</LifetimeMS>
+         <Size>100</Size>
+         <MultiHit/>
+         <ArmorPiercing/>
       </Projectile>
    </Object>
 </Objects>

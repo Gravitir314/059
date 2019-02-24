@@ -130,12 +130,12 @@ package kabam.rotmg.ui
 	import kabam.rotmg.ui.signals.RealmHeroesSignal;
 	import kabam.rotmg.ui.signals.RealmOryxSignal;
 	import kabam.rotmg.ui.signals.RealmQuestLevelSignal;
+	import kabam.rotmg.ui.signals.RealmServerNameSignal;
 	import kabam.rotmg.ui.signals.RefreshScreenAfterLoginSignal;
 	import kabam.rotmg.ui.signals.ShowHideKeyUISignal;
 	import kabam.rotmg.ui.signals.ShowKeySignal;
 	import kabam.rotmg.ui.signals.ShowLoadingUISignal;
 	import kabam.rotmg.ui.signals.ShowTitleUISignal;
-	import kabam.rotmg.ui.signals.RealmServerNameSignal;
 	import kabam.rotmg.ui.signals.ToggleRealmQuestsDisplaySignal;
 	import kabam.rotmg.ui.signals.ToggleShowTierTagSignal;
 	import kabam.rotmg.ui.signals.UpdateBackpackTabSignal;

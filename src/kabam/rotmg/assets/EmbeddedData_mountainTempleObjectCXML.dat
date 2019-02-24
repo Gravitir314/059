@@ -3433,6 +3433,7 @@
       <Size>100</Size>
       <MaxHitPoints>30000</MaxHitPoints>
       <Defense>12</Defense>
+      <Exp>2000</Exp>
       <Flying/>
       <Hero/>
       <Quest/>
@@ -3493,6 +3494,7 @@
       <Size>100</Size>
       <MaxHitPoints>30000</MaxHitPoints>
       <Defense>12</Defense>
+      <Exp>2000</Exp>
       <Flying/>
       <Hero/>
       <Quest/>

@@ -140,7 +140,6 @@ import flash.display.Sprite;
 import flash.filters.DropShadowFilter;
 
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
-
 import kabam.rotmg.text.view.stringBuilder.StaticStringBuilder;
 
 class HelpContainer extends Sprite

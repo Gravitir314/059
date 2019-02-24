@@ -19,7 +19,7 @@
       <MaxHitPoints>150000</MaxHitPoints>
       <Size>200</Size>
       <Defense>90</Defense>
-      <Exp>1000</Exp>
+      <Exp>6000</Exp>
       <AnimatedTexture>
          <File>chars16x16dEncounters2</File>
          <Index>88</Index>
@@ -393,6 +393,7 @@
       <DeathSound>monster/bats_death</DeathSound>
       <MaxHitPoints>18000</MaxHitPoints>
       <Defense>50</Defense>
+      <Exp>4000</Exp>
       <Size>120</Size>
       <Flying/>
       <Z>0.34</Z>
@@ -1026,7 +1027,7 @@
       </Projectile>
       <Size>140</Size>
       <Defense>30</Defense>
-      <Exp>58</Exp>
+      <Exp>4000</Exp>
    </Object>
    <Object type="0x0d51" id="Protection Crystal">
       <Group>Knights of the Lost Lands</Group>
@@ -1121,7 +1122,7 @@
       <Quest/>
       <Encounter/>
       <Level>20</Level>
-      <Exp>58</Exp>
+      <Exp>4000</Exp>
       <PerRealmMax>1</PerRealmMax>
       <Projectile id="0">
          <ObjectId>Fireball</ObjectId>
@@ -1202,6 +1203,7 @@
       <DeathSound>monster/skull_shrine_death</DeathSound>
       <Size>120</Size>
       <MaxHitPoints>16000</MaxHitPoints>
+      <Exp>2000</Exp>
       <Defense>40</Defense>
       <Enemy/>
       <Hero/>
@@ -1273,6 +1275,7 @@
       <DeathSound>monster/skull_shrine_death</DeathSound>
       <Size>120</Size>
       <MaxHitPoints>16000</MaxHitPoints>
+      <Exp>2000</Exp>
       <Defense>40</Defense>
       <Enemy/>
       <Hero/>
@@ -1333,15 +1336,15 @@
    </Object>
    <Object type="0x0d59" id="Cube God">
       <Class>Character</Class>
-      <DisplayId>Ice Cube God</DisplayId>
       <Texture>
-         <File>oryxHordeObjects16x16</File>
-         <Index>0x0f</Index>
+         <File>lofiChar216x16</File>
+         <Index>0x37</Index>
       </Texture>
       <HitSound>monster/cubes_hit</HitSound>
       <DeathSound>monster/cubes_death</DeathSound>
       <Size>120</Size>
       <MaxHitPoints>16000</MaxHitPoints>
+      <Exp>2000</Exp>
       <Hero/>
       <Quest/>
       <God/>
@@ -1451,6 +1454,7 @@
       <DeathSound>monster/cubes_death</DeathSound>
       <Size>120</Size>
       <MaxHitPoints>16000</MaxHitPoints>
+      <Exp>2000</Exp>
       <Hero/>
       <Quest/>
       <God/>
@@ -1652,6 +1656,7 @@
       <God/>
       <Encounter/>
       <Level>20</Level>
+      <Exp>2000</Exp>
       <Invincible/>
    </Object>
    <Object type="0x0d60" id="Pentaract Tower Corpse">
@@ -1791,7 +1796,7 @@
       <HitSound>monster/skeletons_hit</HitSound>
       <DeathSound>monster/dwarves_death</DeathSound>
       <MaxHitPoints>50000</MaxHitPoints>
-      <Exp>58</Exp>
+      <Exp>4000</Exp>
       <Size>140</Size>
       <Defense>35</Defense>
       <Projectile id="0">
@@ -2307,6 +2312,7 @@
       <ShadowSize>100</ShadowSize>
       <MaxHitPoints>50000</MaxHitPoints>
       <Defense>40</Defense>
+      <Exp>4000</Exp>
       <Flying/>
       <Hero/>
       <Level>20</Level>

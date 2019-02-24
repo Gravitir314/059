@@ -3723,7 +3723,7 @@
       <DeathSound>monster/snake_queen_death</DeathSound>
       <MaxHitPoints>75000</MaxHitPoints>
       <Defense>25</Defense>
-      <Exp>1000</Exp>
+      <Exp>2000</Exp>
       <Flying/>
       <God/>
       <KeepDamageRecord/>
@@ -3788,7 +3788,7 @@
       <DeathSound>monster/snake_queen_death</DeathSound>
       <MaxHitPoints>75000</MaxHitPoints>
       <Defense>25</Defense>
-      <Exp>1000</Exp>
+      <Exp>2000</Exp>
       <Flying/>
       <Z>0.24</Z>
       <God/>
@@ -3844,7 +3844,7 @@
       <DeathSound>monster/snake_queen_death</DeathSound>
       <MaxHitPoints>75000</MaxHitPoints>
       <Defense>25</Defense>
-      <Exp>1000</Exp>
+      <Exp>2000</Exp>
       <Flying/>
       <Z>0.24</Z>
       <God/>

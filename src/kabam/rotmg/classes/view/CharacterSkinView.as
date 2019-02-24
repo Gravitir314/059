@@ -122,7 +122,9 @@ package kabam.rotmg.classes.view
 
 		private function makeClassDetailView():ClassDetailView
 		{
-			var _local_1:ClassDetailView = new ClassDetailView();
+			var _local_1:ClassDetailView;
+			_local_1 = new ClassDetailView();
+			//var _local_1:ClassDetailView = new ClassDetailView();
 			_local_1.x = 5;
 			_local_1.y = 110;
 			addChild(_local_1);

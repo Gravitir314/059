@@ -7394,4 +7394,79 @@
       <Soulbound/>
       <feedPower>2000</feedPower>
    </Object>
+   <Object type="0x5eb7" id="Spellmaster Wizard Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>432</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>It's said that well-skilled wizards can cast multiple spells in a blink of an eye.\n\nSkin Class: Wizard\nSprite Credits: Nazoado</Description>
+      <Activate skinType="24246">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>8</BagType>
+      <Soulbound/>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x5eb9" id="Archbishop Priest Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>433</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Ask, and it shall be given to you.\n\nSkin Class: Priest\nSprite Credits: Nazoado</Description>
+      <Activate skinType="24248">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>8</BagType>
+      <Soulbound/>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x5ebb" id="Hero Paladin Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>434</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Defeat the evil and change fate!\n\nSkin Class: Paladin\nSprite Credits: Nazoado</Description>
+      <Activate skinType="24250">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x5ebd" id="Scorpion Hunter Rogue Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>435</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>Being invisible really helps me catch these little critters.\n\nSkin Class: Rogue\nSprite Credits: Tero</Description>
+      <Activate skinType="24252">UnlockSkin</Activate>
+      <Consumable/>
+      <Soulbound/>
+      <BagType>8</BagType>
+      <feedPower>2000</feedPower>
+   </Object>
+   <Object type="0x5ebf" id="Night Elf Queen Trickster Skin">
+      <Class>Equipment</Class>
+      <Item/>
+      <AnimatedTexture>
+         <File>playerskins</File>
+         <Index>436</Index>
+      </AnimatedTexture>
+      <SlotType>10</SlotType>
+      <Description>A mischievous thief, none would have guessed she would grow up to be queen.\n\nSkin Class: Trickster\nSprite Credits: Aurum</Description>
+      <Activate skinType="24254">UnlockSkin</Activate>
+      <Consumable/>
+      <BagType>8</BagType>
+      <Soulbound/>
+      <feedPower>2000</feedPower>
+   </Object>
 </Objects>

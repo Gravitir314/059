@@ -880,7 +880,7 @@ package com.company.assembleegameclient.parameters
 						return;
 				}
 			}
-			setDefault("gameVersion", "X31.2.3");
+			setDefault("gameVersion", "X31.3.1"); //X31.2.3
 			setDefault("AABoundingDist", 4);
 			setDefault("AAException", DefaultAAException);
 			setDefault("AAIgnore", DefaultAAIgnore);
@@ -937,7 +937,7 @@ package com.company.assembleegameclient.parameters
 			setDefault("chatLength", 10);
 			setDefault("cNameBypass", false);
 			setDefault("customSounds", true);
-			setDefault("customUI", true);
+			setDefault("customUI", false);
 			setDefault("customVolume", 1);
 			setDefault("damageIgnored", false);
 			setDefault("densityThreshold", 625);
@@ -1052,7 +1052,7 @@ package com.company.assembleegameclient.parameters
 			setDefault("tiltCam", false);
 			setDefault("TombCycleBoss", 3368);
 			setDefault("traceMessage", false);
-			setDefault("TradeDelay", true);
+			setDefault("TradeDelay", false);
 			setDefault("trainOffset", 500);
 			setDefault("uiscale", false);
 			setDefault("useControllerNumber", 0);

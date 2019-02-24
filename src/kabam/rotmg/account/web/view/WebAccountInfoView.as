@@ -12,8 +12,6 @@ package kabam.rotmg.account.web.view
 	import flash.text.TextFieldAutoSize;
 
 	import kabam.rotmg.account.core.view.AccountInfoView;
-	import kabam.rotmg.build.api.BuildData;
-	import kabam.rotmg.core.StaticInjectorContext;
 	import kabam.rotmg.text.model.TextKey;
 	import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 	import kabam.rotmg.text.view.stringBuilder.LineBuilder;

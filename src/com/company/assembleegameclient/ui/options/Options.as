@@ -17,6 +17,7 @@ package com.company.assembleegameclient.ui.options
 	import com.greensock.plugins.DropShadowFilterPlugin;
 
 	import flash.display.BitmapData;
+	import flash.display.Shape;
 	import flash.display.Sprite;
 	import flash.display.StageDisplayState;
 	import flash.events.Event;
@@ -31,7 +32,6 @@ package com.company.assembleegameclient.ui.options
 	import flash.ui.Mouse;
 	import flash.ui.MouseCursor;
 	import flash.ui.MouseCursorData;
-	import flash.display.Shape;
 
 	import io.decagames.rotmg.ui.scroll.UIScrollbar;
 

@@ -7,8 +7,6 @@ package com.company.assembleegameclient.screens
 	import com.company.assembleegameclient.ui.DeprecatedClickableText;
 	import com.company.assembleegameclient.ui.Scrollbar;
 
-	import flash.display.DisplayObject;
-
 	import flash.display.Shape;
 	import flash.display.Sprite;
 	import flash.events.Event;

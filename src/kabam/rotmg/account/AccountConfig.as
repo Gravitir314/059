@@ -1,4 +1,4 @@
-﻿//kabam.rotmg.account.AccountConfig
+﻿﻿//kabam.rotmg.account.AccountConfig
 
 package kabam.rotmg.account
 {

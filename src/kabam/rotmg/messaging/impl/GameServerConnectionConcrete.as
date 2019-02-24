@@ -2614,15 +2614,15 @@ package kabam.rotmg.messaging.impl
 					}
 				}
 				/*else
-				{
-					if (Parameters.needsMapCheck == 3)
 					{
-						if (this.gs_.hudView.miniMap.checkForMap(AssetLoader.nexusMaps))
+						if (Parameters.needsMapCheck == 3)
 						{
-							Parameters.needsMapCheck = 0;
+							if (this.gs_.hudView.miniMap.checkForMap(AssetLoader.nexusMaps))
+							{
+								Parameters.needsMapCheck = 0;
+							}
 						}
-					}
-				}*/
+					}*/
 			}
 		}
 
@@ -2857,7 +2857,7 @@ package kabam.rotmg.messaging.impl
 			var _local_3:Boolean = (this.player.distTo(_arg_1.pos_) < _arg_1.radius_);
 			if (_local_3)
 			{
-				_local_4 = GameObject.damageWithDefense(_arg_1.damage_, this.player.defense_, false, this.player.condition_);
+				_local_4 = GameObject.damageWithDefense(_arg_1.damage_, this.player.defense_, _arg_1.armorPierce_, this.player.condition_);//_local_4 = GameObject.damageWithDefense(_arg_1.damage_, this.player.defense_, false, this.player.condition_);
 				_local_5 = null;
 				if (_arg_1.effect_ != 0)
 				{
@@ -2868,7 +2868,7 @@ package kabam.rotmg.messaging.impl
 				{
 					return;
 				}
-				this.player.damage(true, _local_4, _local_5, false, null);
+				this.player.damage(true, _local_4, _local_5, false, null, _arg_1.armorPierce_);//this.player.damage(true, _local_4, _local_5, false, null);
 			}
 			this.aoeAck(gs_.lastUpdate_, this.player.x_, this.player.y_);
 		}

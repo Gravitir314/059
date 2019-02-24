@@ -1504,7 +1504,7 @@
       <InvUse/>
       <Activate objectId="Valentine Heart" cooldown="1" hideEffect="true">PermaPet</Activate>
       <Soulbound/>
-      <feedPower>500</feedPower>
+      <feedPower>100</feedPower>
    </Object>
    <Object type="0x16f5" id="Valentine Heart">
       <Class>Character</Class>
@@ -1581,7 +1581,7 @@
       <Sound>use_potion</Sound>
       <Activate hideEffect="true" objectId="Hearticles">Pet</Activate>
       <Consumable/>
-      <BagType>8</BagType>
+      <BagType>2</BagType>
       <Soulbound/>
    </Object>
    <Object type="0x222" id="Hearticles">
