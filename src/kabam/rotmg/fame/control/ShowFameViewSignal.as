@@ -1,19 +1,19 @@
 ﻿//kabam.rotmg.fame.control.ShowFameViewSignal
 
 package kabam.rotmg.fame.control
-	{
+{
 	import kabam.rotmg.fame.model.FameVO;
 
 	import org.osflash.signals.Signal;
 
 	public class ShowFameViewSignal extends Signal
+	{
+
+		public function ShowFameViewSignal()
 		{
-
-			public function ShowFameViewSignal()
-			{
-				super(FameVO);
-			}
-
+			super(FameVO);
 		}
-	}//package kabam.rotmg.fame.control
+
+	}
+}//package kabam.rotmg.fame.control
 

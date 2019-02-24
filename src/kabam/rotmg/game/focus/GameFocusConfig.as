@@ -1,7 +1,7 @@
 ﻿//kabam.rotmg.game.focus.GameFocusConfig
 
 package kabam.rotmg.game.focus
-	{
+{
 	import com.company.assembleegameclient.game.GameSprite;
 
 	import kabam.rotmg.game.focus.control.AddGameFocusConsoleActionCommand;
@@ -18,32 +18,30 @@ package kabam.rotmg.game.focus
 	import robotlegs.bender.framework.api.IContext;
 
 	public class GameFocusConfig implements IConfig
+	{
+
+		[Inject]
+		public var context:IContext;
+		[Inject]
+		public var injector:Injector;
+		[Inject]
+		public var commandMap:ISignalCommandMap;
+		[Inject]
+		public var mediatorMap:IMediatorMap;
+
+		public function configure():void
 		{
-
-			[Inject]
-			public var context:IContext;
-			[Inject]
-			public var injector:Injector;
-			[Inject]
-			public var commandMap:ISignalCommandMap;
-			[Inject]
-			public var mediatorMap:IMediatorMap;
-
-
-			public function configure():void
-			{
-				this.injector.map(SetGameFocusSignal).asSingleton();
-				this.commandMap.map(AddGameFocusConsoleActionSignal).toCommand(AddGameFocusConsoleActionCommand);
-				this.mediatorMap.map(GameSprite).toMediator(GameFocusMediator);
-				this.context.lifecycle.afterInitializing(this.init);
-			}
-
-			private function init():void
-			{
-				Signal(this.injector.getInstance(AddGameFocusConsoleActionSignal)).dispatch();
-			}
-
-
+			this.injector.map(SetGameFocusSignal).asSingleton();
+			this.commandMap.map(AddGameFocusConsoleActionSignal).toCommand(AddGameFocusConsoleActionCommand);
+			this.mediatorMap.map(GameSprite).toMediator(GameFocusMediator);
+			this.context.lifecycle.afterInitializing(this.init);
 		}
-	}//package kabam.rotmg.game.focus
+
+		private function init():void
+		{
+			Signal(this.injector.getInstance(AddGameFocusConsoleActionSignal)).dispatch();
+		}
+
+	}
+}//package kabam.rotmg.game.focus
 

@@ -1,13 +1,12 @@
 ﻿//kabam.rotmg.language.control.ReloadCurrentScreenSignal
 
 package kabam.rotmg.language.control
-	{
+{
 	import org.osflash.signals.Signal;
 
 	public class ReloadCurrentScreenSignal extends Signal
-		{
+	{
 
-
-		}
-	}//package kabam.rotmg.language.control
+	}
+}//package kabam.rotmg.language.control
 

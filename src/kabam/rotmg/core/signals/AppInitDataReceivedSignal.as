@@ -1,17 +1,17 @@
 ﻿//kabam.rotmg.core.signals.AppInitDataReceivedSignal
 
 package kabam.rotmg.core.signals
-	{
+{
 	import org.osflash.signals.Signal;
 
 	public class AppInitDataReceivedSignal extends Signal
+	{
+
+		public function AppInitDataReceivedSignal()
 		{
-
-			public function AppInitDataReceivedSignal()
-			{
-				super(XML);
-			}
-
+			super(XML);
 		}
-	}//package kabam.rotmg.core.signals
+
+	}
+}//package kabam.rotmg.core.signals
 

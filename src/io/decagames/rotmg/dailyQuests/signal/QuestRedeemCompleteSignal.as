@@ -1,19 +1,19 @@
 ﻿//io.decagames.rotmg.dailyQuests.signal.QuestRedeemCompleteSignal
 
 package io.decagames.rotmg.dailyQuests.signal
-	{
+{
 	import kabam.rotmg.messaging.impl.incoming.QuestRedeemResponse;
 
 	import org.osflash.signals.Signal;
 
 	public class QuestRedeemCompleteSignal extends Signal
+	{
+
+		public function QuestRedeemCompleteSignal()
 		{
-
-			public function QuestRedeemCompleteSignal()
-			{
-				super(QuestRedeemResponse);
-			}
-
+			super(QuestRedeemResponse);
 		}
-	}//package io.decagames.rotmg.dailyQuests.signal
+
+	}
+}//package io.decagames.rotmg.dailyQuests.signal
 

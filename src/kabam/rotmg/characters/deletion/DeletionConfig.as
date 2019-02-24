@@ -1,7 +1,7 @@
 ﻿//kabam.rotmg.characters.deletion.DeletionConfig
 
 package kabam.rotmg.characters.deletion
-	{
+{
 	import kabam.rotmg.characters.deletion.control.DeleteCharacterCommand;
 	import kabam.rotmg.characters.deletion.control.DeleteCharacterSignal;
 	import kabam.rotmg.characters.deletion.service.DeleteCharacterTask;
@@ -15,24 +15,22 @@ package kabam.rotmg.characters.deletion
 	import robotlegs.bender.framework.api.IConfig;
 
 	public class DeletionConfig implements IConfig
+	{
+
+		[Inject]
+		public var injector:Injector;
+		[Inject]
+		public var mediatorMap:IMediatorMap;
+		[Inject]
+		public var commandMap:ISignalCommandMap;
+
+		public function configure():void
 		{
-
-			[Inject]
-			public var injector:Injector;
-			[Inject]
-			public var mediatorMap:IMediatorMap;
-			[Inject]
-			public var commandMap:ISignalCommandMap;
-
-
-			public function configure():void
-			{
-				this.injector.map(DeleteCharacterTask);
-				this.mediatorMap.map(ConfirmDeleteCharacterDialog).toMediator(ConfirmDeleteCharacterMediator);
-				this.commandMap.map(DeleteCharacterSignal).toCommand(DeleteCharacterCommand);
-			}
-
-
+			this.injector.map(DeleteCharacterTask);
+			this.mediatorMap.map(ConfirmDeleteCharacterDialog).toMediator(ConfirmDeleteCharacterMediator);
+			this.commandMap.map(DeleteCharacterSignal).toCommand(DeleteCharacterCommand);
 		}
-	}//package kabam.rotmg.characters.deletion
+
+	}
+}//package kabam.rotmg.characters.deletion
 

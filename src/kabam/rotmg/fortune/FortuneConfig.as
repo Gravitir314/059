@@ -1,7 +1,7 @@
 ﻿//kabam.rotmg.fortune.FortuneConfig
 
 package kabam.rotmg.fortune
-	{
+{
 	import kabam.rotmg.fortune.services.FortuneModel;
 	import kabam.rotmg.startup.control.StartupSequence;
 
@@ -12,24 +12,22 @@ package kabam.rotmg.fortune
 	import robotlegs.bender.framework.api.IConfig;
 
 	public class FortuneConfig implements IConfig
+	{
+
+		[Inject]
+		public var injector:Injector;
+		[Inject]
+		public var mediatorMap:IMediatorMap;
+		[Inject]
+		public var commandMap:ISignalCommandMap;
+		[Inject]
+		public var sequence:StartupSequence;
+
+		public function configure():void
 		{
-
-			[Inject]
-			public var injector:Injector;
-			[Inject]
-			public var mediatorMap:IMediatorMap;
-			[Inject]
-			public var commandMap:ISignalCommandMap;
-			[Inject]
-			public var sequence:StartupSequence;
-
-
-			public function configure():void
-			{
-				this.injector.map(FortuneModel).asSingleton();
-			}
-
-
+			this.injector.map(FortuneModel).asSingleton();
 		}
-	}//package kabam.rotmg.fortune
+
+	}
+}//package kabam.rotmg.fortune
 

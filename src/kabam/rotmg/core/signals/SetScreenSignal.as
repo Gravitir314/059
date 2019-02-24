@@ -1,19 +1,19 @@
 ﻿//kabam.rotmg.core.signals.SetScreenSignal
 
 package kabam.rotmg.core.signals
-	{
+{
 	import flash.display.Sprite;
 
 	import org.osflash.signals.Signal;
 
 	public class SetScreenSignal extends Signal
+	{
+
+		public function SetScreenSignal()
 		{
-
-			public function SetScreenSignal()
-			{
-				super(Sprite);
-			}
-
+			super(Sprite);
 		}
-	}//package kabam.rotmg.core.signals
+
+	}
+}//package kabam.rotmg.core.signals
 

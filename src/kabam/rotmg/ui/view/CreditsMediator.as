@@ -1,7 +1,7 @@
 ﻿//kabam.rotmg.ui.view.CreditsMediator
 
 package kabam.rotmg.ui.view
-	{
+{
 	import com.company.assembleegameclient.screens.CreditsScreen;
 
 	import kabam.rotmg.core.signals.SetScreenSignal;
@@ -9,31 +9,29 @@ package kabam.rotmg.ui.view
 	import robotlegs.bender.bundles.mvcs.Mediator;
 
 	public class CreditsMediator extends Mediator
+	{
+
+		[Inject]
+		public var view:CreditsScreen;
+		[Inject]
+		public var setScreen:SetScreenSignal;
+
+		override public function initialize():void
 		{
-
-			[Inject]
-			public var view:CreditsScreen;
-			[Inject]
-			public var setScreen:SetScreenSignal;
-
-
-			override public function initialize():void
-			{
-				this.view.close.add(this.onCreditsScreenDone);
-				this.view.initialize();
-			}
-
-			override public function destroy():void
-			{
-				this.view.close.remove(this.onCreditsScreenDone);
-			}
-
-			private function onCreditsScreenDone():void
-			{
-				this.setScreen.dispatch(new TitleView());
-			}
-
-
+			this.view.close.add(this.onCreditsScreenDone);
+			this.view.initialize();
 		}
-	}//package kabam.rotmg.ui.view
+
+		override public function destroy():void
+		{
+			this.view.close.remove(this.onCreditsScreenDone);
+		}
+
+		private function onCreditsScreenDone():void
+		{
+			this.setScreen.dispatch(new TitleView());
+		}
+
+	}
+}//package kabam.rotmg.ui.view
 

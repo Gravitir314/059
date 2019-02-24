@@ -1,7 +1,7 @@
 ﻿//kabam.rotmg.appengine.AppEngineConfig
 
 package kabam.rotmg.appengine
-	{
+{
 	import kabam.rotmg.appengine.api.AppEngineClient;
 	import kabam.rotmg.appengine.api.RetryLoader;
 	import kabam.rotmg.appengine.impl.AppEngineRequestStats;
@@ -16,47 +16,44 @@ package kabam.rotmg.appengine
 	import robotlegs.bender.framework.api.IContext;
 
 	public class AppEngineConfig implements IConfig
+	{
+
+		[Inject]
+		public var context:IContext;
+		[Inject]
+		public var setup:ApplicationSetup;
+		[Inject]
+		public var injector:Injector;
+
+		public function configure():void
 		{
-
-			[Inject]
-			public var context:IContext;
-			[Inject]
-			public var setup:ApplicationSetup;
-			[Inject]
-			public var injector:Injector;
-
-
-			public function configure():void
+			this.configureCoreDependencies();
+			if (this.setup.isToolingEnabled())
 			{
-				this.configureCoreDependencies();
-				if (this.setup.isToolingEnabled())
-				{
-					this.configureForTesting();
-				}
-				else
-				{
-					this.configureForSimplicity();
-				}
-			}
-
-			private function configureCoreDependencies():void
+				this.configureForTesting();
+			} else
 			{
-				this.injector.map(RetryLoader).toType(AppEngineRetryLoader);
+				this.configureForSimplicity();
 			}
-
-			private function configureForTesting():void
-			{
-				this.injector.map(AppEngineRequestStats).asSingleton();
-				this.injector.map(SimpleAppEngineClient);
-				this.injector.map(AppEngineClient).toType(StatsRecorderAppEngineClient);
-			}
-
-			private function configureForSimplicity():void
-			{
-				this.injector.map(AppEngineClient).toType(SimpleAppEngineClient);
-			}
-
-
 		}
-	}//package kabam.rotmg.appengine
+
+		private function configureCoreDependencies():void
+		{
+			this.injector.map(RetryLoader).toType(AppEngineRetryLoader);
+		}
+
+		private function configureForTesting():void
+		{
+			this.injector.map(AppEngineRequestStats).asSingleton();
+			this.injector.map(SimpleAppEngineClient);
+			this.injector.map(AppEngineClient).toType(StatsRecorderAppEngineClient);
+		}
+
+		private function configureForSimplicity():void
+		{
+			this.injector.map(AppEngineClient).toType(SimpleAppEngineClient);
+		}
+
+	}
+}//package kabam.rotmg.appengine
 

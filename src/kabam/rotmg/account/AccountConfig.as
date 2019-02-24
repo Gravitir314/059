@@ -1,7 +1,7 @@
 ﻿//kabam.rotmg.account.AccountConfig
 
 package kabam.rotmg.account
-	{
+{
 	import com.company.assembleegameclient.account.ui.MoneyFrameMediator;
 
 	import flash.display.DisplayObjectContainer;
@@ -46,102 +46,97 @@ package kabam.rotmg.account
 	import robotlegs.bender.framework.api.ILogger;
 
 	public class AccountConfig implements IConfig
+	{
+
+		[Inject]
+		public var root:DisplayObjectContainer;
+		[Inject]
+		public var injector:Injector;
+		[Inject]
+		public var commandMap:ISignalCommandMap;
+		[Inject]
+		public var mediatorMap:IMediatorMap;
+		[Inject]
+		public var context:IContext;
+		[Inject]
+		public var info:LoaderInfo;
+		[Inject]
+		public var logger:ILogger;
+
+		public function configure():void
 		{
-
-			[Inject]
-			public var root:DisplayObjectContainer;
-			[Inject]
-			public var injector:Injector;
-			[Inject]
-			public var commandMap:ISignalCommandMap;
-			[Inject]
-			public var mediatorMap:IMediatorMap;
-			[Inject]
-			public var context:IContext;
-			[Inject]
-			public var info:LoaderInfo;
-			[Inject]
-			public var logger:ILogger;
-
-
-			public function configure():void
-			{
-				this.configureCommonFunctionality();
-				this.configureAccountSpecificFunctionality();
-				this.context.lifecycle.afterInitializing(this.init);
-			}
-
-			private function configureCommonFunctionality():void
-			{
-				this.injector.map(TaskErrorSignal).asSingleton();
-				this.injector.map(UpdateAccountInfoSignal).asSingleton();
-				this.injector.map(VerifyAgeTask);
-				this.injector.map(GetCharListTask);
-				this.injector.map(MoneyFrameEnableCancelSignal).asSingleton();
-				this.injector.map(SecurityQuestionsModel).asSingleton();
-				this.injector.map(OfferModel).asSingleton();
-				this.injector.map(SaveSecurityQuestionsTask);
-				this.mediatorMap.map(MoneyFrame).toMediator(MoneyFrameMediator);
-				this.mediatorMap.map(SecurityQuestionsDialog).toMediator(SecurityQuestionsMediator);
-				this.mediatorMap.map(SecurityQuestionsInfoDialog).toMediator(SecurityQuestionsMediator);
-				this.mediatorMap.map(SecurityQuestionsConfirmDialog).toMediator(SecurityQuestionsMediator);
-				this.mediatorMap.map(PurchaseConfirmationDialog).toMediator(PurchaseConfirmationMediator);
-				this.commandMap.map(BuyCharacterSlotSignal).toCommand(BuyCharacterSlotCommand).withGuards(IsAccountRegisteredToBuyGoldGuard);
-				this.commandMap.map(PurchaseGoldSignal).toCommand(PurchaseGoldCommand);
-				this.commandMap.map(VerifyAgeSignal).toCommand(VerifyAgeCommand);
-				this.commandMap.map(SaveSecurityQuestionsSignal).toCommand(SaveSecurityQuestionsCommand);
-			}
-
-			private function configureAccountSpecificFunctionality():void
-			{
-				if (this.isKongregate())
-				{
-					this.context.configure(KongregateAccountConfig);
-				}
-				else
-				{
-					if (this.isSteam())
-					{
-						this.context.configure(SteamAccountConfig);
-					}
-					else
-					{
-						if (this.isKabam())
-						{
-							this.context.configure(KabamAccountConfig);
-						}
-						else
-						{
-							this.context.configure(WebAccountConfig);
-						}
-					}
-				}
-				this.context.configure(TransferAccountConfig);
-			}
-
-			private function isKongregate():Boolean
-			{
-				return (!(this.info.parameters.kongregate_api_path == null));
-			}
-
-			private function isSteam():Boolean
-			{
-				return (!(this.info.parameters.steam_api_path == null));
-			}
-
-			private function isKabam():Boolean
-			{
-				return (!(this.info.parameters.kabam_signed_request == null));
-			}
-
-			private function init():void
-			{
-				this.logger.info("isKongregate {0}", [this.isKongregate()]);
-				this.logger.info("isSteam {0}", [this.isSteam()]);
-				this.logger.info("isKabam {0}", [this.isKabam()]);
-			}
-
-
+			this.configureCommonFunctionality();
+			this.configureAccountSpecificFunctionality();
+			this.context.lifecycle.afterInitializing(this.init);
 		}
-	}//package kabam.rotmg.account
+
+		private function configureCommonFunctionality():void
+		{
+			this.injector.map(TaskErrorSignal).asSingleton();
+			this.injector.map(UpdateAccountInfoSignal).asSingleton();
+			this.injector.map(VerifyAgeTask);
+			this.injector.map(GetCharListTask);
+			this.injector.map(MoneyFrameEnableCancelSignal).asSingleton();
+			this.injector.map(SecurityQuestionsModel).asSingleton();
+			this.injector.map(OfferModel).asSingleton();
+			this.injector.map(SaveSecurityQuestionsTask);
+			this.mediatorMap.map(MoneyFrame).toMediator(MoneyFrameMediator);
+			this.mediatorMap.map(SecurityQuestionsDialog).toMediator(SecurityQuestionsMediator);
+			this.mediatorMap.map(SecurityQuestionsInfoDialog).toMediator(SecurityQuestionsMediator);
+			this.mediatorMap.map(SecurityQuestionsConfirmDialog).toMediator(SecurityQuestionsMediator);
+			this.mediatorMap.map(PurchaseConfirmationDialog).toMediator(PurchaseConfirmationMediator);
+			this.commandMap.map(BuyCharacterSlotSignal).toCommand(BuyCharacterSlotCommand).withGuards(IsAccountRegisteredToBuyGoldGuard);
+			this.commandMap.map(PurchaseGoldSignal).toCommand(PurchaseGoldCommand);
+			this.commandMap.map(VerifyAgeSignal).toCommand(VerifyAgeCommand);
+			this.commandMap.map(SaveSecurityQuestionsSignal).toCommand(SaveSecurityQuestionsCommand);
+		}
+
+		private function configureAccountSpecificFunctionality():void
+		{
+			if (this.isKongregate())
+			{
+				this.context.configure(KongregateAccountConfig);
+			} else
+			{
+				if (this.isSteam())
+				{
+					this.context.configure(SteamAccountConfig);
+				} else
+				{
+					if (this.isKabam())
+					{
+						this.context.configure(KabamAccountConfig);
+					} else
+					{
+						this.context.configure(WebAccountConfig);
+					}
+				}
+			}
+			this.context.configure(TransferAccountConfig);
+		}
+
+		private function isKongregate():Boolean
+		{
+			return (!(this.info.parameters.kongregate_api_path == null));
+		}
+
+		private function isSteam():Boolean
+		{
+			return (!(this.info.parameters.steam_api_path == null));
+		}
+
+		private function isKabam():Boolean
+		{
+			return (!(this.info.parameters.kabam_signed_request == null));
+		}
+
+		private function init():void
+		{
+			this.logger.info("isKongregate {0}", [this.isKongregate()]);
+			this.logger.info("isSteam {0}", [this.isSteam()]);
+			this.logger.info("isKabam {0}", [this.isKabam()]);
+		}
+
+	}
+}//package kabam.rotmg.account
 

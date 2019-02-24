@@ -1,17 +1,17 @@
 ﻿//kabam.rotmg.game.signals.SetWorldInteractionSignal
 
 package kabam.rotmg.game.signals
-	{
+{
 	import org.osflash.signals.Signal;
 
 	public class SetWorldInteractionSignal extends Signal
+	{
+
+		public function SetWorldInteractionSignal()
 		{
-
-			public function SetWorldInteractionSignal()
-			{
-				super(Boolean);
-			}
-
+			super(Boolean);
 		}
-	}//package kabam.rotmg.game.signals
+
+	}
+}//package kabam.rotmg.game.signals
 

@@ -1,7 +1,7 @@
 ﻿//kabam.rotmg.packages.view.PackageOfferDialogMediator
 
 package kabam.rotmg.packages.view
-	{
+{
 	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
 	import kabam.rotmg.dialogs.control.FlushPopupStartupQueueSignal;
 	import kabam.rotmg.dialogs.control.OpenDialogSignal;
@@ -11,48 +11,46 @@ package kabam.rotmg.packages.view
 	import robotlegs.bender.bundles.mvcs.Mediator;
 
 	public class PackageOfferDialogMediator extends Mediator
+	{
+
+		[Inject]
+		public var getPackageTask:GetPackagesTask;
+		[Inject]
+		public var view:PackageOfferDialog;
+		[Inject]
+		public var closeDialogsSignal:CloseDialogsSignal;
+		[Inject]
+		public var buyPackageSignal:BuyPackageSignal;
+		[Inject]
+		public var openDialog:OpenDialogSignal;
+		[Inject]
+		public var flushStartupQueue:FlushPopupStartupQueueSignal;
+
+		override public function initialize():void
 		{
-
-			[Inject]
-			public var getPackageTask:GetPackagesTask;
-			[Inject]
-			public var view:PackageOfferDialog;
-			[Inject]
-			public var closeDialogsSignal:CloseDialogsSignal;
-			[Inject]
-			public var buyPackageSignal:BuyPackageSignal;
-			[Inject]
-			public var openDialog:OpenDialogSignal;
-			[Inject]
-			public var flushStartupQueue:FlushPopupStartupQueueSignal;
-
-
-			override public function initialize():void
-			{
-				this.view.buy.add(this.onBuy);
-				this.view.close.add(this.onClose);
-			}
-
-			override public function destroy():void
-			{
-				this.view.close.remove(this.onClose);
-				this.view.close.remove(this.onBuy);
-				this.view.destroy();
-			}
-
-			private function onBuy():void
-			{
-				this.closeDialogsSignal.dispatch();
-				this.buyPackageSignal.dispatch(this.view.getPackage());
-			}
-
-			private function onClose():void
-			{
-				this.closeDialogsSignal.dispatch();
-				this.flushStartupQueue.dispatch();
-			}
-
-
+			this.view.buy.add(this.onBuy);
+			this.view.close.add(this.onClose);
 		}
-	}//package kabam.rotmg.packages.view
+
+		override public function destroy():void
+		{
+			this.view.close.remove(this.onClose);
+			this.view.close.remove(this.onBuy);
+			this.view.destroy();
+		}
+
+		private function onBuy():void
+		{
+			this.closeDialogsSignal.dispatch();
+			this.buyPackageSignal.dispatch(this.view.getPackage());
+		}
+
+		private function onClose():void
+		{
+			this.closeDialogsSignal.dispatch();
+			this.flushStartupQueue.dispatch();
+		}
+
+	}
+}//package kabam.rotmg.packages.view
 

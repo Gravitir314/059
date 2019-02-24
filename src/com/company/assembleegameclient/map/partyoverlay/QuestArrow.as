@@ -1,7 +1,7 @@
 ﻿//com.company.assembleegameclient.map.partyoverlay.QuestArrow
 
 package com.company.assembleegameclient.map.partyoverlay
-	{
+{
 	import com.company.assembleegameclient.map.Camera;
 	import com.company.assembleegameclient.map.Map;
 	import com.company.assembleegameclient.map.Quest;
@@ -22,121 +22,114 @@ package com.company.assembleegameclient.map.partyoverlay
 	import kabam.rotmg.game.model.QuestModel;
 
 	public class QuestArrow extends GameObjectArrow
+	{
+		private var questArrowTween:TimelineMax;
+		private var questModel:QuestModel;
+
+		public function QuestArrow(_arg_1:Map)
 		{
-			private var questArrowTween:TimelineMax;
-			private var questModel:QuestModel;
+			super(16352321, 12919330, true);
+			this.mouseEnabled = false;
+			this.map_ = _arg_1;
+			this.questModel = StaticInjectorContext.getInjector().getInstance(QuestModel);
+		}
 
-			public function QuestArrow(_arg_1:Map)
+		public function refreshToolTip():void
+		{
+			if (TweenMax.isTweening(this))
 			{
-				super(16352321, 12919330, true);
-				this.mouseEnabled = false;
-				this.map_ = _arg_1;
-				this.questModel = StaticInjectorContext.getInjector().getInstance(QuestModel);
+				TweenMax.killTweensOf(this);
+				this.questArrowTween.pause(0);
 			}
+			setToolTip(this.getToolTip(go_, getTimer()));
+		}
 
-			public function refreshToolTip():void
-			{
-				if (TweenMax.isTweening(this))
-				{
-					TweenMax.killTweensOf(this);
-					this.questArrowTween.pause(0);
-				}
-				setToolTip(this.getToolTip(go_, getTimer()));
-			}
+		override protected function onMouseOver(_arg_1:MouseEvent):void
+		{
+			super.onMouseOver(_arg_1);
+			this.refreshToolTip();
+		}
 
-			override protected function onMouseOver(_arg_1:MouseEvent):void
-			{
-				super.onMouseOver(_arg_1);
-				this.refreshToolTip();
-			}
+		override protected function onMouseOut(_arg_1:MouseEvent):void
+		{
+			super.onMouseOut(_arg_1);
+			this.refreshToolTip();
+		}
 
-			override protected function onMouseOut(_arg_1:MouseEvent):void
+		private function getToolTip(_arg_1:GameObject, _arg_2:int):ToolTip
+		{
+			if (((_arg_1 == null) || (_arg_1.texture_ == null)))
 			{
-				super.onMouseOut(_arg_1);
-				this.refreshToolTip();
-			}
-
-			private function getToolTip(_arg_1:GameObject, _arg_2:int):ToolTip
-			{
-				if (((_arg_1 == null) || (_arg_1.texture_ == null)))
-				{
-					return (null);
-				}
-				if (this.shouldShowFullQuest(_arg_2))
-				{
-					return (new QuestToolTip(go_));
-				}
-				if (Parameters.data_.showQuestPortraits)
-				{
-					return (new PortraitToolTip(_arg_1));
-				}
 				return (null);
 			}
-
-			private function shouldShowFullQuest(_arg_1:int):Boolean
+			if (this.shouldShowFullQuest(_arg_2))
 			{
-				var _local_2:Quest = this.map_.quest_;
-				return ((mouseOver_) || (_local_2.isNew(_arg_1)));
+				return (new QuestToolTip(go_));
 			}
-
-			override public function draw(_arg_1:int, _arg_2:Camera):void
+			if (Parameters.data_.showQuestPortraits)
 			{
-				var _local_4:Character;
-				var _local_5:String;
-				var _local_6:Boolean;
-				var _local_7:Boolean;
-				var _local_3:GameObject = map_.quest_.getObject();
-				if (_local_3 && _local_3 is Character)
-				{
-					_local_4 = (_local_3 as Character);
-					_local_5 = _local_4.getName();
-					if (_local_5 != this.questModel.currentQuestHero)
-					{
-						this.questModel.currentQuestHero = _local_5;
-					}
-				}
-				if (_local_3 != go_)
-				{
-					setGameObject(_local_3);
-					setToolTip(this.getToolTip(_local_3, _arg_1));
-					if (!this.questArrowTween)
-					{
-						this.questArrowTween = new TimelineMax();
-						this.questArrowTween.add(TweenMax.to(this, 0.15, {
-							"scaleX": 1.6,
-							"scaleY": 1.6
-						}));
-						this.questArrowTween.add(TweenMax.to(this, 0.05, {
-							"scaleX": 1.8,
-							"scaleY": 1.8
-						}));
-						this.questArrowTween.add(TweenMax.to(this, 0.3, {
-							"scaleX": 1,
-							"scaleY": 1,
-							"ease": Expo.easeOut
-						}));
-					}
-					else
-					{
-						this.questArrowTween.play(0);
-					}
-				}
-				else
-				{
-					if (go_ != null)
-					{
-						_local_6 = (tooltip_ is QuestToolTip);
-						_local_7 = this.shouldShowFullQuest(_arg_1);
-						if (_local_6 != _local_7)
-						{
-							setToolTip(this.getToolTip(_local_3, _arg_1));
-						}
-					}
-				}
-				super.draw(_arg_1, _arg_2);
+				return (new PortraitToolTip(_arg_1));
 			}
-
-
+			return (null);
 		}
-	}//package com.company.assembleegameclient.map.partyoverlay
+
+		private function shouldShowFullQuest(_arg_1:int):Boolean
+		{
+			var _local_2:Quest = this.map_.quest_;
+			return ((mouseOver_) || (_local_2.isNew(_arg_1)));
+		}
+
+		override public function draw(_arg_1:int, _arg_2:Camera):void
+		{
+			var _local_4:Character;
+			var _local_5:String;
+			var _local_6:Boolean;
+			var _local_7:Boolean;
+			var _local_3:GameObject = map_.quest_.getObject();
+			if (_local_3 && _local_3 is Character)
+			{
+				_local_4 = (_local_3 as Character);
+				_local_5 = _local_4.getName();
+				if (_local_5 != this.questModel.currentQuestHero)
+				{
+					this.questModel.currentQuestHero = _local_5;
+				}
+			}
+			if (_local_3 != go_)
+			{
+				setGameObject(_local_3);
+				setToolTip(this.getToolTip(_local_3, _arg_1));
+				if (!this.questArrowTween)
+				{
+					this.questArrowTween = new TimelineMax();
+					this.questArrowTween.add(TweenMax.to(this, 0.15, {
+						"scaleX": 1.6, "scaleY": 1.6
+					}));
+					this.questArrowTween.add(TweenMax.to(this, 0.05, {
+						"scaleX": 1.8, "scaleY": 1.8
+					}));
+					this.questArrowTween.add(TweenMax.to(this, 0.3, {
+						"scaleX": 1, "scaleY": 1, "ease": Expo.easeOut
+					}));
+				} else
+				{
+					this.questArrowTween.play(0);
+				}
+			} else
+			{
+				if (go_ != null)
+				{
+					_local_6 = (tooltip_ is QuestToolTip);
+					_local_7 = this.shouldShowFullQuest(_arg_1);
+					if (_local_6 != _local_7)
+					{
+						setToolTip(this.getToolTip(_local_3, _arg_1));
+					}
+				}
+			}
+			super.draw(_arg_1, _arg_2);
+		}
+
+	}
+}//package com.company.assembleegameclient.map.partyoverlay
 

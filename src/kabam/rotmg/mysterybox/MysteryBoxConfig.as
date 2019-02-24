@@ -1,7 +1,7 @@
 ﻿//kabam.rotmg.mysterybox.MysteryBoxConfig
 
 package kabam.rotmg.mysterybox
-	{
+{
 	import kabam.rotmg.mysterybox.services.GetMysteryBoxesTask;
 	import kabam.rotmg.mysterybox.services.MysteryBoxModel;
 	import kabam.rotmg.startup.control.StartupSequence;
@@ -13,26 +13,24 @@ package kabam.rotmg.mysterybox
 	import robotlegs.bender.framework.api.IConfig;
 
 	public class MysteryBoxConfig implements IConfig
+	{
+
+		[Inject]
+		public var injector:Injector;
+		[Inject]
+		public var mediatorMap:IMediatorMap;
+		[Inject]
+		public var commandMap:ISignalCommandMap;
+		[Inject]
+		public var sequence:StartupSequence;
+
+		public function configure():void
 		{
-
-			[Inject]
-			public var injector:Injector;
-			[Inject]
-			public var mediatorMap:IMediatorMap;
-			[Inject]
-			public var commandMap:ISignalCommandMap;
-			[Inject]
-			public var sequence:StartupSequence;
-
-
-			public function configure():void
-			{
-				this.injector.map(MysteryBoxModel).asSingleton();
-				this.injector.map(GetMysteryBoxesTask).asSingleton();
-				this.sequence.addTask(GetMysteryBoxesTask);
-			}
-
-
+			this.injector.map(MysteryBoxModel).asSingleton();
+			this.injector.map(GetMysteryBoxesTask).asSingleton();
+			this.sequence.addTask(GetMysteryBoxesTask);
 		}
-	}//package kabam.rotmg.mysterybox
+
+	}
+}//package kabam.rotmg.mysterybox
 

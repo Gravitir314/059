@@ -1,7 +1,7 @@
 ﻿//kabam.rotmg.chat.view.ChatList
 
 package kabam.rotmg.chat.view
-	{
+{
 	import com.company.assembleegameclient.parameters.Parameters;
 
 	import flash.display.Sprite;
@@ -13,331 +13,322 @@ package kabam.rotmg.chat.view
 	import zfn.IDisposable;
 
 	public class ChatList extends Sprite implements IDisposable
+	{
+
+		private const timer:Timer = new Timer(1000);
+		private const itemsToRemove:Vector.<ChatListItem> = new Vector.<ChatListItem>();
+
+		private var listItems:Vector.<ChatListItem>;
+		private var visibleItems:Vector.<ChatListItem>;
+		private var visibleItemCount:int;
+		private var index:int;
+		private var isCurrent:Boolean;
+		private var ignoreTimeOuts:Boolean = false;
+		private var maxLength:int;
+
+		public function ChatList(_arg_1:int = 5, _arg_2:uint = 150)
 		{
-
-			private const timer:Timer = new Timer(1000);
-			private const itemsToRemove:Vector.<ChatListItem> = new Vector.<ChatListItem>();
-
-			private var listItems:Vector.<ChatListItem>;
-			private var visibleItems:Vector.<ChatListItem>;
-			private var visibleItemCount:int;
-			private var index:int;
-			private var isCurrent:Boolean;
-			private var ignoreTimeOuts:Boolean = false;
-			private var maxLength:int;
-
-			public function ChatList(_arg_1:int = 5, _arg_2:uint = 150)
+			mouseEnabled = true;
+			mouseChildren = true;
+			this.listItems = new Vector.<ChatListItem>();
+			this.visibleItems = new Vector.<ChatListItem>();
+			if (!Parameters.ssmode)
 			{
-				mouseEnabled = true;
-				mouseChildren = true;
-				this.listItems = new Vector.<ChatListItem>();
-				this.visibleItems = new Vector.<ChatListItem>();
-				if (!Parameters.ssmode)
-				{
-					this.visibleItemCount = Parameters.data_.chatLength;
-				}
-				else
-				{
-					this.visibleItemCount = _arg_1;
-				}
-				this.maxLength = _arg_2;
-				this.index = 0;
-				this.isCurrent = true;
-				this.timer.addEventListener(TimerEvent.TIMER, this.onCheckTimeout);
-				this.timer.start();
+				this.visibleItemCount = Parameters.data_.chatLength;
+			} else
+			{
+				this.visibleItemCount = _arg_1;
 			}
+			this.maxLength = _arg_2;
+			this.index = 0;
+			this.isCurrent = true;
+			this.timer.addEventListener(TimerEvent.TIMER, this.onCheckTimeout);
+			this.timer.start();
+		}
 
-			private function onCheckTimeout(_arg_1:TimerEvent):void
+		private function onCheckTimeout(_arg_1:TimerEvent):void
+		{
+			var _local_2:ChatListItem;
+			var _local_3:ChatListItem;
+			for each (_local_2 in this.visibleItems)
 			{
-				var _local_2:ChatListItem;
-				var _local_3:ChatListItem;
-				for each (_local_2 in this.visibleItems)
+				if (((_local_2.isTimedOut()) && (!(this.ignoreTimeOuts))))
 				{
-					if (((_local_2.isTimedOut()) && (!(this.ignoreTimeOuts))))
-					{
-						this.itemsToRemove.push(_local_2);
-					}
-					else
-					{
-						break;
-					}
+					this.itemsToRemove.push(_local_2);
+				} else
+				{
+					break;
 				}
-				while (this.itemsToRemove.length > 0)
+			}
+			while (this.itemsToRemove.length > 0)
+			{
+				this.onItemTimedOut(this.itemsToRemove.pop());
+				if (!this.isCurrent)
 				{
-					this.onItemTimedOut(this.itemsToRemove.pop());
-					if (!this.isCurrent)
+					_local_3 = this.listItems[this.index++];
+					if (!_local_3.isTimedOut())
 					{
-						_local_3 = this.listItems[this.index++];
-						if (!_local_3.isTimedOut())
-						{
-							this.addNewItem(_local_3);
-							this.isCurrent = (this.index == this.listItems.length);
-							this.positionItems();
-						}
+						this.addNewItem(_local_3);
+						this.isCurrent = (this.index == this.listItems.length);
+						this.positionItems();
 					}
 				}
 			}
+		}
 
-			public function setup(_arg_1:ChatModel):void
-			{
-				this.visibleItemCount = _arg_1.visibleItemCount;
-			}
+		public function setup(_arg_1:ChatModel):void
+		{
+			this.visibleItemCount = _arg_1.visibleItemCount;
+		}
 
-			public function addMessage(_arg_1:ChatListItem):void
+		public function addMessage(_arg_1:ChatListItem):void
+		{
+			var _local_2:ChatListItem;
+			if (this.listItems.length > this.maxLength)
 			{
-				var _local_2:ChatListItem;
-				if (this.listItems.length > this.maxLength)
+				_local_2 = this.listItems.shift();
+				this.onItemTimedOut(_local_2);
+				this.index--;
+				if (((!(this.isCurrent)) && (this.index < this.visibleItemCount)))
 				{
-					_local_2 = this.listItems.shift();
-					this.onItemTimedOut(_local_2);
-					this.index--;
-					if (((!(this.isCurrent)) && (this.index < this.visibleItemCount)))
-					{
-						this.pageDown();
-					}
-				}
-				this.listItems.push(_arg_1);
-				if (this.isCurrent)
-				{
-					this.displayNewItem(_arg_1);
+					this.pageDown();
 				}
 			}
-
-			private function onItemTimedOut(_arg_1:ChatListItem):void
+			this.listItems.push(_arg_1);
+			if (this.isCurrent)
 			{
-				var _local_2:int = this.visibleItems.indexOf(_arg_1);
-				if (_local_2 != -1)
-				{
-					removeChild(_arg_1);
-					this.visibleItems.splice(_local_2, 1);
-					this.isCurrent = (this.index == this.listItems.length);
-				}
+				this.displayNewItem(_arg_1);
 			}
+		}
 
-			private function displayNewItem(_arg_1:ChatListItem):void
+		private function onItemTimedOut(_arg_1:ChatListItem):void
+		{
+			var _local_2:int = this.visibleItems.indexOf(_arg_1);
+			if (_local_2 != -1)
 			{
-				this.index++;
-				this.addNewItem(_arg_1);
-				this.removeOldestVisibleIfNeeded();
-				this.positionItems();
+				removeChild(_arg_1);
+				this.visibleItems.splice(_local_2, 1);
+				this.isCurrent = (this.index == this.listItems.length);
 			}
+		}
 
-			public function scrollUp():void
+		private function displayNewItem(_arg_1:ChatListItem):void
+		{
+			this.index++;
+			this.addNewItem(_arg_1);
+			this.removeOldestVisibleIfNeeded();
+			this.positionItems();
+		}
+
+		public function scrollUp():void
+		{
+			if (((this.ignoreTimeOuts) && (this.canScrollUp())))
 			{
-				if (((this.ignoreTimeOuts) && (this.canScrollUp())))
-				{
-					this.scrollItemsUp();
-				}
-				else
-				{
-					this.showAvailable();
-				}
-				this.ignoreTimeOuts = true;
-			}
-
-			public function showAvailable():void
+				this.scrollItemsUp();
+			} else
 			{
-				var _local_4:ChatListItem;
-				var _local_1:int = ((this.index - this.visibleItems.length) - 1);
-				var _local_2:int = Math.max(0, ((this.index - this.visibleItemCount) - 1));
-				var _local_3:int = _local_1;
-				while (_local_3 > _local_2)
-				{
-					_local_4 = this.listItems[_local_3];
-					if (this.visibleItems.indexOf(_local_4) == -1)
-					{
-						this.addOldItem(_local_4);
-					}
-					_local_3--;
-				}
-				this.positionItems();
+				this.showAvailable();
 			}
+			this.ignoreTimeOuts = true;
+		}
 
-			public function scrollDown():void
+		public function showAvailable():void
+		{
+			var _local_4:ChatListItem;
+			var _local_1:int = ((this.index - this.visibleItems.length) - 1);
+			var _local_2:int = Math.max(0, ((this.index - this.visibleItemCount) - 1));
+			var _local_3:int = _local_1;
+			while (_local_3 > _local_2)
+			{
+				_local_4 = this.listItems[_local_3];
+				if (this.visibleItems.indexOf(_local_4) == -1)
+				{
+					this.addOldItem(_local_4);
+				}
+				_local_3--;
+			}
+			this.positionItems();
+		}
+
+		public function scrollDown():void
+		{
+			if (this.ignoreTimeOuts)
+			{
+				this.ignoreTimeOuts = false;
+				this.scrollToCurrent();
+				this.onCheckTimeout(null);
+			}
+			if (!this.isCurrent)
+			{
+				this.scrollItemsDown();
+			} else
 			{
 				if (this.ignoreTimeOuts)
 				{
 					this.ignoreTimeOuts = false;
-					this.scrollToCurrent();
-					this.onCheckTimeout(null);
-				}
-				if (!this.isCurrent)
-				{
-					this.scrollItemsDown();
-				}
-				else
-				{
-					if (this.ignoreTimeOuts)
-					{
-						this.ignoreTimeOuts = false;
-					}
 				}
 			}
+		}
 
-			public function scrollToCurrent():void
+		public function scrollToCurrent():void
+		{
+			while ((!(this.isCurrent)))
 			{
-				while ((!(this.isCurrent)))
-				{
-					this.scrollItemsDown();
-				}
+				this.scrollItemsDown();
 			}
+		}
 
-			public function pageUp():void
+		public function pageUp():void
+		{
+			var _local_1:int;
+			if (!this.ignoreTimeOuts)
 			{
-				var _local_1:int;
-				if (!this.ignoreTimeOuts)
-				{
-					this.showAvailable();
-					this.ignoreTimeOuts = true;
-				}
-				else
-				{
-					_local_1 = 0;
-					while (_local_1 < this.visibleItemCount)
-					{
-						if (this.canScrollUp())
-						{
-							this.scrollItemsUp();
-						}
-						else
-						{
-							return;
-						}
-						_local_1++;
-					}
-				}
-			}
-
-			public function pageDown():void
+				this.showAvailable();
+				this.ignoreTimeOuts = true;
+			} else
 			{
-				var _local_1:int;
+				_local_1 = 0;
 				while (_local_1 < this.visibleItemCount)
 				{
-					if (!this.isCurrent)
+					if (this.canScrollUp())
 					{
-						this.scrollItemsDown();
-					}
-					else
+						this.scrollItemsUp();
+					} else
 					{
-						this.ignoreTimeOuts = false;
 						return;
 					}
 					_local_1++;
 				}
 			}
-
-			private function addNewItem(_arg_1:ChatListItem):void
-			{
-				this.visibleItems.push(_arg_1);
-				addChild(_arg_1);
-			}
-
-			private function removeOldestVisibleIfNeeded():void
-			{
-				if (this.visibleItems.length > this.visibleItemCount)
-				{
-					removeChild(this.visibleItems.shift());
-				}
-			}
-
-			public function removeOldestExcessVisible():void
-			{
-				while (this.visibleItems.length > this.visibleItemCount)
-				{
-					removeChild(this.visibleItems.shift());
-				}
-			}
-
-			public function removeBadMessages():void
-			{
-				var _local_1:ChatListItem;
-				for each (_local_1 in this.visibleItems)
-				{
-					if (_local_1.bad)
-					{
-						removeChild(_local_1);
-						this.visibleItems.splice(this.visibleItems.indexOf(_local_1), 1);
-						removeBadMessages();
-						return;
-					}
-				}
-				this.positionItems();
-			}
-
-			private function canScrollUp():Boolean
-			{
-				return (this.index > this.visibleItemCount);
-			}
-
-			private function scrollItemsUp():void
-			{
-				var _local_1:ChatListItem = this.listItems[(--this.index - this.visibleItemCount)];
-				this.addOldItem(_local_1);
-				this.removeNewestVisibleIfNeeded();
-				this.positionItems();
-				this.isCurrent = false;
-			}
-
-			private function scrollItemsDown():void
-			{
-				if (this.index < 0)
-				{
-					this.index = 0;
-				}
-				var _local_1:ChatListItem = this.listItems[this.index];
-				this.index++;
-				this.addNewItem(_local_1);
-				this.removeOldestVisibleIfNeeded();
-				this.isCurrent = (this.index == this.listItems.length);
-				this.positionItems();
-			}
-
-			private function addOldItem(_arg_1:ChatListItem):void
-			{
-				this.visibleItems.unshift(_arg_1);
-				addChild(_arg_1);
-			}
-
-			private function removeNewestVisibleIfNeeded():void
-			{
-				while (this.visibleItems.length > this.visibleItemCount)
-				{
-					removeChild(this.visibleItems.pop());
-				}
-			}
-
-			public function setVisibleItemCount():void
-			{
-				if (!Parameters.ssmode)
-				{
-					this.visibleItemCount = Parameters.data_.chatLength;
-				}
-				else
-				{
-					this.visibleItemCount = 5;
-				}
-			}
-
-			private function positionItems():void
-			{
-				var _local_3:ChatListItem;
-				var _local_1:int;
-				var _local_2:int = this.visibleItems.length;
-				while (_local_2--)
-				{
-					_local_3 = this.visibleItems[_local_2];
-					_local_3.y = _local_1;
-					_local_1 = (_local_1 - _local_3.height);
-				}
-			}
-
-			public function dispose():void
-			{
-				this.timer.removeEventListener(TimerEvent.TIMER, this.onCheckTimeout);
-				this.timer.stop();
-			}
-
-
 		}
-	}//package kabam.rotmg.chat.view
+
+		public function pageDown():void
+		{
+			var _local_1:int;
+			while (_local_1 < this.visibleItemCount)
+			{
+				if (!this.isCurrent)
+				{
+					this.scrollItemsDown();
+				} else
+				{
+					this.ignoreTimeOuts = false;
+					return;
+				}
+				_local_1++;
+			}
+		}
+
+		private function addNewItem(_arg_1:ChatListItem):void
+		{
+			this.visibleItems.push(_arg_1);
+			addChild(_arg_1);
+		}
+
+		private function removeOldestVisibleIfNeeded():void
+		{
+			if (this.visibleItems.length > this.visibleItemCount)
+			{
+				removeChild(this.visibleItems.shift());
+			}
+		}
+
+		public function removeOldestExcessVisible():void
+		{
+			while (this.visibleItems.length > this.visibleItemCount)
+			{
+				removeChild(this.visibleItems.shift());
+			}
+		}
+
+		public function removeBadMessages():void
+		{
+			var _local_1:ChatListItem;
+			for each (_local_1 in this.visibleItems)
+			{
+				if (_local_1.bad)
+				{
+					removeChild(_local_1);
+					this.visibleItems.splice(this.visibleItems.indexOf(_local_1), 1);
+					removeBadMessages();
+					return;
+				}
+			}
+			this.positionItems();
+		}
+
+		private function canScrollUp():Boolean
+		{
+			return (this.index > this.visibleItemCount);
+		}
+
+		private function scrollItemsUp():void
+		{
+			var _local_1:ChatListItem = this.listItems[(--this.index - this.visibleItemCount)];
+			this.addOldItem(_local_1);
+			this.removeNewestVisibleIfNeeded();
+			this.positionItems();
+			this.isCurrent = false;
+		}
+
+		private function scrollItemsDown():void
+		{
+			if (this.index < 0)
+			{
+				this.index = 0;
+			}
+			var _local_1:ChatListItem = this.listItems[this.index];
+			this.index++;
+			this.addNewItem(_local_1);
+			this.removeOldestVisibleIfNeeded();
+			this.isCurrent = (this.index == this.listItems.length);
+			this.positionItems();
+		}
+
+		private function addOldItem(_arg_1:ChatListItem):void
+		{
+			this.visibleItems.unshift(_arg_1);
+			addChild(_arg_1);
+		}
+
+		private function removeNewestVisibleIfNeeded():void
+		{
+			while (this.visibleItems.length > this.visibleItemCount)
+			{
+				removeChild(this.visibleItems.pop());
+			}
+		}
+
+		public function setVisibleItemCount():void
+		{
+			if (!Parameters.ssmode)
+			{
+				this.visibleItemCount = Parameters.data_.chatLength;
+			} else
+			{
+				this.visibleItemCount = 5;
+			}
+		}
+
+		private function positionItems():void
+		{
+			var _local_3:ChatListItem;
+			var _local_1:int;
+			var _local_2:int = this.visibleItems.length;
+			while (_local_2--)
+			{
+				_local_3 = this.visibleItems[_local_2];
+				_local_3.y = _local_1;
+				_local_1 = (_local_1 - _local_3.height);
+			}
+		}
+
+		public function dispose():void
+		{
+			this.timer.removeEventListener(TimerEvent.TIMER, this.onCheckTimeout);
+			this.timer.stop();
+		}
+
+	}
+}//package kabam.rotmg.chat.view
 

@@ -1,7 +1,7 @@
 ﻿//io.decagames.rotmg.social.config.SocialConfig
 
 package io.decagames.rotmg.social.config
-	{
+{
 	import io.decagames.rotmg.social.SocialPopupMediator;
 	import io.decagames.rotmg.social.SocialPopupView;
 	import io.decagames.rotmg.social.commands.FriendActionCommand;
@@ -27,33 +27,31 @@ package io.decagames.rotmg.social.config
 	import robotlegs.bender.framework.api.IConfig;
 
 	public class SocialConfig implements IConfig
+	{
+
+		public static const MAX_FRIENDS:int = 100;
+
+		[Inject]
+		public var injector:Injector;
+		[Inject]
+		public var mediatorMap:IMediatorMap;
+		[Inject]
+		public var commandMap:ISignalCommandMap;
+
+		public function configure():void
 		{
-
-			public static const MAX_FRIENDS:int = 100;
-
-			[Inject]
-			public var injector:Injector;
-			[Inject]
-			public var mediatorMap:IMediatorMap;
-			[Inject]
-			public var commandMap:ISignalCommandMap;
-
-
-			public function configure():void
-			{
-				this.injector.map(RefreshListSignal).asSingleton();
-				this.injector.map(FriendDataRequestTask).asSingleton();
-				this.injector.map(GuildDataRequestTask).asSingleton();
-				this.injector.map(SocialModel).asSingleton();
-				this.mediatorMap.map(SocialPopupView).toMediator(SocialPopupMediator);
-				this.mediatorMap.map(FriendListItem).toMediator(FriendListItemMediator);
-				this.mediatorMap.map(GuildListItem).toMediator(GuildListItemMediator);
-				this.mediatorMap.map(InviteFriendPopup).toMediator(InviteFriendPopupMediator);
-				this.mediatorMap.map(FriendListView).toMediator(FriendListMediator);
-				this.commandMap.map(FriendActionSignal).toCommand(FriendActionCommand);
-			}
-
-
+			this.injector.map(RefreshListSignal).asSingleton();
+			this.injector.map(FriendDataRequestTask).asSingleton();
+			this.injector.map(GuildDataRequestTask).asSingleton();
+			this.injector.map(SocialModel).asSingleton();
+			this.mediatorMap.map(SocialPopupView).toMediator(SocialPopupMediator);
+			this.mediatorMap.map(FriendListItem).toMediator(FriendListItemMediator);
+			this.mediatorMap.map(GuildListItem).toMediator(GuildListItemMediator);
+			this.mediatorMap.map(InviteFriendPopup).toMediator(InviteFriendPopupMediator);
+			this.mediatorMap.map(FriendListView).toMediator(FriendListMediator);
+			this.commandMap.map(FriendActionSignal).toCommand(FriendActionCommand);
 		}
-	}//package io.decagames.rotmg.social.config
+
+	}
+}//package io.decagames.rotmg.social.config
 

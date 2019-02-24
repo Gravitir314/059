@@ -1,7 +1,7 @@
 ﻿//kabam.rotmg.dailyLogin.controller.CalendarViewMediator
 
 package kabam.rotmg.dailyLogin.controller
-	{
+{
 	import com.company.assembleegameclient.objects.ObjectLibrary;
 	import com.company.assembleegameclient.parameters.Parameters;
 
@@ -17,52 +17,49 @@ package kabam.rotmg.dailyLogin.controller
 	import robotlegs.bender.bundles.mvcs.Mediator;
 
 	public class CalendarViewMediator extends Mediator
+	{
+
+		[Inject]
+		public var view:CalendarView;
+		[Inject]
+		public var model:DailyLoginModel;
+		[Inject]
+		public var addTextLine:AddTextLineSignal;
+		[Inject]
+		public var claimRewardSignal:ClaimDailyRewardResponseSignal;
+		[Inject]
+		public var hudModel:HUDModel;
+
+		override public function initialize():void
 		{
-
-			[Inject]
-			public var view:CalendarView;
-			[Inject]
-			public var model:DailyLoginModel;
-			[Inject]
-			public var addTextLine:AddTextLineSignal;
-			[Inject]
-			public var claimRewardSignal:ClaimDailyRewardResponseSignal;
-			[Inject]
-			public var hudModel:HUDModel;
-
-
-			override public function initialize():void
-			{
-				this.view.init(this.model.getDaysConfig(this.model.currentDisplayedCaledar), this.model.getMaxDays(this.model.currentDisplayedCaledar), this.model.getCurrentDay(this.model.currentDisplayedCaledar));
-				this.claimRewardSignal.add(this.onClaimReward);
-			}
-
-			override public function destroy():void
-			{
-				this.claimRewardSignal.remove(this.onClaimReward);
-				super.destroy();
-			}
-
-			private function onClaimReward(_arg_1:ClaimDailyRewardResponse):void
-			{
-				var _local_2:* = "";
-				if (_arg_1.gold > 0)
-				{
-					_local_2 = "gold";
-					this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, (_arg_1.gold > 0) ? _arg_1.gold.toString() : _arg_1.quantity + "x " + _local_2 + " was claimed."));
-					if (this.hudModel.gameSprite.map.player_ != null)
-					{
-						this.hudModel.gameSprite.map.player_.credits_ = (this.hudModel.gameSprite.map.player_.credits_ + _arg_1.gold);
-					}
-				}
-				else
-				{
-					_local_2 = LineBuilder.getLocalizedStringFromKey(ObjectLibrary.typeToDisplayId_[_arg_1.itemId]);
-					this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, (_arg_1.gold > 0) ? _arg_1.gold.toString() : _arg_1.quantity + "x " + _local_2 + " was claimed and will be sent to the gift chests in your vault."));
-				}
-			}
-
-
+			this.view.init(this.model.getDaysConfig(this.model.currentDisplayedCaledar), this.model.getMaxDays(this.model.currentDisplayedCaledar), this.model.getCurrentDay(this.model.currentDisplayedCaledar));
+			this.claimRewardSignal.add(this.onClaimReward);
 		}
-	}//package kabam.rotmg.dailyLogin.controller
+
+		override public function destroy():void
+		{
+			this.claimRewardSignal.remove(this.onClaimReward);
+			super.destroy();
+		}
+
+		private function onClaimReward(_arg_1:ClaimDailyRewardResponse):void
+		{
+			var _local_2:* = "";
+			if (_arg_1.gold > 0)
+			{
+				_local_2 = "gold";
+				this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, (_arg_1.gold > 0) ? _arg_1.gold.toString() : _arg_1.quantity + "x " + _local_2 + " was claimed."));
+				if (this.hudModel.gameSprite.map.player_ != null)
+				{
+					this.hudModel.gameSprite.map.player_.credits_ = (this.hudModel.gameSprite.map.player_.credits_ + _arg_1.gold);
+				}
+			} else
+			{
+				_local_2 = LineBuilder.getLocalizedStringFromKey(ObjectLibrary.typeToDisplayId_[_arg_1.itemId]);
+				this.addTextLine.dispatch(ChatMessage.make(Parameters.SERVER_CHAT_NAME, (_arg_1.gold > 0) ? _arg_1.gold.toString() : _arg_1.quantity + "x " + _local_2 + " was claimed and will be sent to the gift chests in your vault."));
+			}
+		}
+
+	}
+}//package kabam.rotmg.dailyLogin.controller
 

@@ -1,19 +1,19 @@
 ﻿//kabam.rotmg.dialogs.control.OpenDialogSignal
 
 package kabam.rotmg.dialogs.control
-	{
+{
 	import flash.display.Sprite;
 
 	import org.osflash.signals.Signal;
 
 	public class OpenDialogSignal extends Signal
+	{
+
+		public function OpenDialogSignal()
 		{
-
-			public function OpenDialogSignal()
-			{
-				super(Sprite);
-			}
-
+			super(Sprite);
 		}
-	}//package kabam.rotmg.dialogs.control
+
+	}
+}//package kabam.rotmg.dialogs.control
 

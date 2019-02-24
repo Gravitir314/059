@@ -1,17 +1,17 @@
 ﻿//kabam.rotmg.dialogs.control.AddPopupToStartupQueueSignal
 
 package kabam.rotmg.dialogs.control
-	{
+{
 	import org.osflash.signals.Signal;
 
 	public class AddPopupToStartupQueueSignal extends Signal
+	{
+
+		public function AddPopupToStartupQueueSignal()
 		{
-
-			public function AddPopupToStartupQueueSignal()
-			{
-				super(String, Signal, int, Object);
-			}
-
+			super(String, Signal, int, Object);
 		}
-	}//package kabam.rotmg.dialogs.control
+
+	}
+}//package kabam.rotmg.dialogs.control
 

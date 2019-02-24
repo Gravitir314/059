@@ -1,7 +1,7 @@
 ﻿//kabam.rotmg.errors.ErrorConfig
 
 package kabam.rotmg.errors
-	{
+{
 	import kabam.rotmg.application.api.ApplicationSetup;
 	import kabam.rotmg.errors.control.ErrorSignal;
 	import kabam.rotmg.errors.control.LogErrorCommand;
@@ -15,37 +15,34 @@ package kabam.rotmg.errors
 	import robotlegs.bender.framework.api.IConfig;
 
 	public class ErrorConfig implements IConfig
+	{
+
+		[Inject]
+		public var injector:Injector;
+		[Inject]
+		public var mediatorMap:IMediatorMap;
+		[Inject]
+		public var commandMap:ISignalCommandMap;
+		[Inject]
+		public var setup:ApplicationSetup;
+
+		public function configure():void
 		{
-
-			[Inject]
-			public var injector:Injector;
-			[Inject]
-			public var mediatorMap:IMediatorMap;
-			[Inject]
-			public var commandMap:ISignalCommandMap;
-			[Inject]
-			public var setup:ApplicationSetup;
-
-
-			public function configure():void
-			{
-				this.mediatorMap.map(ROTMG).toMediator(ErrorMediator);
-				this.mapErrorCommand();
-			}
-
-			private function mapErrorCommand():void
-			{
-				if (this.setup.areErrorsReported())
-				{
-					this.commandMap.map(ErrorSignal).toCommand(ReportErrorToAppEngineCommand);
-				}
-				else
-				{
-					this.commandMap.map(ErrorSignal).toCommand(LogErrorCommand);
-				}
-			}
-
-
+			this.mediatorMap.map(ROTMG).toMediator(ErrorMediator);
+			this.mapErrorCommand();
 		}
-	}//package kabam.rotmg.errors
+
+		private function mapErrorCommand():void
+		{
+			if (this.setup.areErrorsReported())
+			{
+				this.commandMap.map(ErrorSignal).toCommand(ReportErrorToAppEngineCommand);
+			} else
+			{
+				this.commandMap.map(ErrorSignal).toCommand(LogErrorCommand);
+			}
+		}
+
+	}
+}//package kabam.rotmg.errors
 

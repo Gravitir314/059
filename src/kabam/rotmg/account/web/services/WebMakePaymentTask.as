@@ -1,7 +1,7 @@
 ﻿//kabam.rotmg.account.web.services.WebMakePaymentTask
 
 package kabam.rotmg.account.web.services
-	{
+{
 	import com.company.assembleegameclient.parameters.Parameters;
 	import com.company.assembleegameclient.util.PaymentMethod;
 
@@ -14,25 +14,23 @@ package kabam.rotmg.account.web.services
 	import kabam.rotmg.account.core.services.MakePaymentTask;
 
 	public class WebMakePaymentTask extends BaseTask implements MakePaymentTask
+	{
+
+		[Inject]
+		public var data:PaymentData;
+		[Inject]
+		public var model:OfferModel;
+
+		override protected function startTask():void
 		{
-
-			[Inject]
-			public var data:PaymentData;
-			[Inject]
-			public var model:OfferModel;
-
-
-			override protected function startTask():void
-			{
-				Parameters.data_.paymentMethod = this.data.paymentMethod;
-				Parameters.save();
-				var _local_1:PaymentMethod = PaymentMethod.getPaymentMethodByLabel(this.data.paymentMethod);
-				var _local_2:String = _local_1.getURL(this.model.offers.tok, this.model.offers.exp, this.data.offer);
-				navigateToURL(new URLRequest(_local_2), "_blank");
-				completeTask(true);
-			}
-
-
+			Parameters.data_.paymentMethod = this.data.paymentMethod;
+			Parameters.save();
+			var _local_1:PaymentMethod = PaymentMethod.getPaymentMethodByLabel(this.data.paymentMethod);
+			var _local_2:String = _local_1.getURL(this.model.offers.tok, this.model.offers.exp, this.data.offer);
+			navigateToURL(new URLRequest(_local_2), "_blank");
+			completeTask(true);
 		}
-	}//package kabam.rotmg.account.web.services
+
+	}
+}//package kabam.rotmg.account.web.services
 

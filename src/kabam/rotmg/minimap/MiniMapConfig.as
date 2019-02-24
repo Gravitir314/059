@@ -1,7 +1,7 @@
 ﻿//kabam.rotmg.minimap.MiniMapConfig
 
 package kabam.rotmg.minimap
-	{
+{
 	import io.decagames.rotmg.classes.NewClassUnlockNotification;
 	import io.decagames.rotmg.classes.NewClassUnlockNotificationMediator;
 	import io.decagames.rotmg.classes.NewClassUnlockSignal;
@@ -20,28 +20,26 @@ package kabam.rotmg.minimap
 	import robotlegs.bender.framework.api.IContext;
 
 	public class MiniMapConfig implements IConfig
+	{
+
+		[Inject]
+		public var context:IContext;
+		[Inject]
+		public var injector:Injector;
+		[Inject]
+		public var mediatorMap:IMediatorMap;
+
+		public function configure():void
 		{
-
-			[Inject]
-			public var context:IContext;
-			[Inject]
-			public var injector:Injector;
-			[Inject]
-			public var mediatorMap:IMediatorMap;
-
-
-			public function configure():void
-			{
-				this.injector.map(MiniMapZoomSignal).asSingleton();
-				this.injector.map(SetMiniMapMapSignal).asSingleton();
-				this.injector.map(UpdateGameObjectTileSignal).asSingleton();
-				this.injector.map(UpdateGroundTileSignal).asSingleton();
-				this.injector.map(NewClassUnlockSignal).asSingleton();
-				this.mediatorMap.map(MiniMap).toMediator(MiniMapMediator);
-				this.mediatorMap.map(NewClassUnlockNotification).toMediator(NewClassUnlockNotificationMediator);
-			}
-
-
+			this.injector.map(MiniMapZoomSignal).asSingleton();
+			this.injector.map(SetMiniMapMapSignal).asSingleton();
+			this.injector.map(UpdateGameObjectTileSignal).asSingleton();
+			this.injector.map(UpdateGroundTileSignal).asSingleton();
+			this.injector.map(NewClassUnlockSignal).asSingleton();
+			this.mediatorMap.map(MiniMap).toMediator(MiniMapMediator);
+			this.mediatorMap.map(NewClassUnlockNotification).toMediator(NewClassUnlockNotificationMediator);
 		}
-	}//package kabam.rotmg.minimap
+
+	}
+}//package kabam.rotmg.minimap
 

@@ -1,7 +1,7 @@
 ﻿//io.decagames.rotmg.dailyQuests.view.list.DailyQuestListElementMediator
 
 package io.decagames.rotmg.dailyQuests.view.list
-	{
+{
 	import flash.events.MouseEvent;
 
 	import io.decagames.rotmg.dailyQuests.signal.ShowQuestInfoSignal;
@@ -9,37 +9,35 @@ package io.decagames.rotmg.dailyQuests.view.list
 	import robotlegs.bender.bundles.mvcs.Mediator;
 
 	public class DailyQuestListElementMediator extends Mediator
+	{
+
+		[Inject]
+		public var view:DailyQuestListElement;
+		[Inject]
+		public var showInfoSignal:ShowQuestInfoSignal;
+
+		override public function initialize():void
 		{
-
-			[Inject]
-			public var view:DailyQuestListElement;
-			[Inject]
-			public var showInfoSignal:ShowQuestInfoSignal;
-
-
-			override public function initialize():void
-			{
-				this.showInfoSignal.add(this.resetElement);
-				this.view.addEventListener(MouseEvent.CLICK, this.onClickHandler);
-			}
-
-			private function resetElement(_arg_1:int):void
-			{
-				this.view.isSelected = false;
-			}
-
-			override public function destroy():void
-			{
-				this.view.removeEventListener(MouseEvent.CLICK, this.onClickHandler);
-			}
-
-			private function onClickHandler(_arg_1:MouseEvent):void
-			{
-				this.showInfoSignal.dispatch(this.view.id);
-				this.view.isSelected = true;
-			}
-
-
+			this.showInfoSignal.add(this.resetElement);
+			this.view.addEventListener(MouseEvent.CLICK, this.onClickHandler);
 		}
-	}//package io.decagames.rotmg.dailyQuests.view.list
+
+		private function resetElement(_arg_1:int):void
+		{
+			this.view.isSelected = false;
+		}
+
+		override public function destroy():void
+		{
+			this.view.removeEventListener(MouseEvent.CLICK, this.onClickHandler);
+		}
+
+		private function onClickHandler(_arg_1:MouseEvent):void
+		{
+			this.showInfoSignal.dispatch(this.view.id);
+			this.view.isSelected = true;
+		}
+
+	}
+}//package io.decagames.rotmg.dailyQuests.view.list
 

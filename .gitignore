@@ -1,7 +1,8 @@
 # Output folder
 out/
+output/
 
 # IDEA files
 .idea
-059.iml
-059.ipr
+*.iml
+*.ipr

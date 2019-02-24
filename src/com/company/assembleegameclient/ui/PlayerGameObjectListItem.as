@@ -1,7 +1,7 @@
 ﻿//com.company.assembleegameclient.ui.PlayerGameObjectListItem
 
 package com.company.assembleegameclient.ui
-	{
+{
 	import com.company.assembleegameclient.map.Map;
 	import com.company.assembleegameclient.objects.GameObject;
 	import com.company.assembleegameclient.objects.Player;
@@ -18,102 +18,100 @@ package com.company.assembleegameclient.ui
 	import kabam.rotmg.tooltips.TooltipAble;
 
 	public class PlayerGameObjectListItem extends GameObjectListItem implements TooltipAble
+	{
+
+		public const hoverTooltipDelegate:HoverTooltipDelegate = new HoverTooltipDelegate();
+
+		private var enabled:Boolean = true;
+		private var starred:Boolean = false;
+
+		public function PlayerGameObjectListItem(_arg_1:uint, _arg_2:Boolean, _arg_3:GameObject)
 		{
-
-			public const hoverTooltipDelegate:HoverTooltipDelegate = new HoverTooltipDelegate();
-
-			private var enabled:Boolean = true;
-			private var starred:Boolean = false;
-
-			public function PlayerGameObjectListItem(_arg_1:uint, _arg_2:Boolean, _arg_3:GameObject)
+			super(_arg_1, _arg_2, _arg_3);
+			var _local_4:Player = (_arg_3 as Player);
+			if (_local_4)
 			{
-				super(_arg_1, _arg_2, _arg_3);
-				var _local_4:Player = (_arg_3 as Player);
-				if (_local_4)
-				{
-					this.starred = _local_4.starred_;
-				}
-				addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
-				addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
+				this.starred = _local_4.starred_;
 			}
-
-			private function onAddedToStage(_arg_1:Event):void
-			{
-				addEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
-				this.hoverTooltipDelegate.setDisplayObject(this);
-				addEventListener(MouseEvent.RIGHT_CLICK, this.onRightClick);
-			}
-
-			private function onRemovedFromStage(_arg_1:Event):void
-			{
-				removeEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
-				removeEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
-				removeEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
-				removeEventListener(MouseEvent.RIGHT_CLICK, this.onRightClick);
-			}
-
-			private function onRightClick(_arg_1:MouseEvent):void
-			{
-				if (this.go.map_.name_ == Map.NEXUS)
-				{
-					this.go.map_.gs_.gsc_.requestTrade(go.name_);
-				}
-				else
-				{
-					this.go.map_.gs_.gsc_.teleport(go.objectId_);
-				}
-			}
-
-			private function onMouseOver(_arg_1:MouseEvent):void
-			{
-				this.hoverTooltipDelegate.tooltip = ((this.enabled) ? new PlayerToolTip(Player(go)) : null);
-			}
-
-			public function setEnabled(_arg_1:Boolean):void
-			{
-				if (((!(this.enabled == _arg_1)) && (!(Player(go) == null))))
-				{
-					this.enabled = _arg_1;
-					this.hoverTooltipDelegate.tooltip = ((this.enabled) ? new PlayerToolTip(Player(go)) : null);
-					if (!this.enabled)
-					{
-						this.hoverTooltipDelegate.getShowToolTip().dispatch(this.hoverTooltipDelegate.tooltip);
-					}
-				}
-			}
-
-			override public function draw(_arg_1:GameObject, _arg_2:ColorTransform = null):void
-			{
-				var _local_3:Player = (_arg_1 as Player);
-				if (((_local_3) && (!(this.starred == _local_3.starred_))))
-				{
-					transform.colorTransform = ((_arg_2) || (MoreColorUtil.identity));
-					this.starred = _local_3.starred_;
-				}
-				super.draw(_arg_1, _arg_2);
-			}
-
-			public function setShowToolTipSignal(_arg_1:ShowTooltipSignal):void
-			{
-				this.hoverTooltipDelegate.setShowToolTipSignal(_arg_1);
-			}
-
-			public function getShowToolTip():ShowTooltipSignal
-			{
-				return (this.hoverTooltipDelegate.getShowToolTip());
-			}
-
-			public function setHideToolTipsSignal(_arg_1:HideTooltipsSignal):void
-			{
-				this.hoverTooltipDelegate.setHideToolTipsSignal(_arg_1);
-			}
-
-			public function getHideToolTips():HideTooltipsSignal
-			{
-				return (this.hoverTooltipDelegate.getHideToolTips());
-			}
-
-
+			addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
+			addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
 		}
-	}//package com.company.assembleegameclient.ui
+
+		private function onAddedToStage(_arg_1:Event):void
+		{
+			addEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
+			this.hoverTooltipDelegate.setDisplayObject(this);
+			addEventListener(MouseEvent.RIGHT_CLICK, this.onRightClick);
+		}
+
+		private function onRemovedFromStage(_arg_1:Event):void
+		{
+			removeEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver);
+			removeEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
+			removeEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
+			removeEventListener(MouseEvent.RIGHT_CLICK, this.onRightClick);
+		}
+
+		private function onRightClick(_arg_1:MouseEvent):void
+		{
+			if (this.go.map_.name_ == Map.NEXUS)
+			{
+				this.go.map_.gs_.gsc_.requestTrade(go.name_);
+			} else
+			{
+				this.go.map_.gs_.gsc_.teleport(go.objectId_);
+			}
+		}
+
+		private function onMouseOver(_arg_1:MouseEvent):void
+		{
+			this.hoverTooltipDelegate.tooltip = ((this.enabled) ? new PlayerToolTip(Player(go)) : null);
+		}
+
+		public function setEnabled(_arg_1:Boolean):void
+		{
+			if (((!(this.enabled == _arg_1)) && (!(Player(go) == null))))
+			{
+				this.enabled = _arg_1;
+				this.hoverTooltipDelegate.tooltip = ((this.enabled) ? new PlayerToolTip(Player(go)) : null);
+				if (!this.enabled)
+				{
+					this.hoverTooltipDelegate.getShowToolTip().dispatch(this.hoverTooltipDelegate.tooltip);
+				}
+			}
+		}
+
+		override public function draw(_arg_1:GameObject, _arg_2:ColorTransform = null):void
+		{
+			var _local_3:Player = (_arg_1 as Player);
+			if (((_local_3) && (!(this.starred == _local_3.starred_))))
+			{
+				transform.colorTransform = ((_arg_2) || (MoreColorUtil.identity));
+				this.starred = _local_3.starred_;
+			}
+			super.draw(_arg_1, _arg_2);
+		}
+
+		public function setShowToolTipSignal(_arg_1:ShowTooltipSignal):void
+		{
+			this.hoverTooltipDelegate.setShowToolTipSignal(_arg_1);
+		}
+
+		public function getShowToolTip():ShowTooltipSignal
+		{
+			return (this.hoverTooltipDelegate.getShowToolTip());
+		}
+
+		public function setHideToolTipsSignal(_arg_1:HideTooltipsSignal):void
+		{
+			this.hoverTooltipDelegate.setHideToolTipsSignal(_arg_1);
+		}
+
+		public function getHideToolTips():HideTooltipsSignal
+		{
+			return (this.hoverTooltipDelegate.getHideToolTips());
+		}
+
+	}
+}//package com.company.assembleegameclient.ui
 

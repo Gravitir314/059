@@ -1,7 +1,7 @@
 ﻿//kabam.rotmg.arena.ArenaConfig
 
 package kabam.rotmg.arena
-	{
+{
 	import kabam.rotmg.arena.control.ArenaDeathCommand;
 	import kabam.rotmg.arena.control.ArenaDeathSignal;
 	import kabam.rotmg.arena.control.ClearCurrentRunCommand;
@@ -41,41 +41,39 @@ package kabam.rotmg.arena
 	import robotlegs.bender.framework.api.IConfig;
 
 	public class ArenaConfig implements IConfig
+	{
+
+		[Inject]
+		public var injector:Injector;
+		[Inject]
+		public var mediatorMap:IMediatorMap;
+		[Inject]
+		public var commandMap:ISignalCommandMap;
+		[Inject]
+		public var commandCenter:ICommandCenter;
+
+		public function configure():void
 		{
-
-			[Inject]
-			public var injector:Injector;
-			[Inject]
-			public var mediatorMap:IMediatorMap;
-			[Inject]
-			public var commandMap:ISignalCommandMap;
-			[Inject]
-			public var commandCenter:ICommandCenter;
-
-
-			public function configure():void
-			{
-				this.injector.map(GetArenaLeaderboardTask);
-				this.injector.map(GetBestArenaRunTask);
-				this.injector.map(CurrentArenaRunModel).asSingleton();
-				this.injector.map(BestArenaRunModel).asSingleton();
-				this.injector.map(ReloadLeaderboard).asSingleton();
-				this.injector.map(ArenaLeaderboardModel).asSingleton();
-				this.commandMap.map(ArenaDeathSignal).toCommand(ArenaDeathCommand);
-				this.commandMap.map(ImminentArenaWaveSignal).toCommand(ImminentArenaWaveCommand);
-				this.commandMap.map(GameClosedSignal).toCommand(ClearCurrentRunCommand);
-				this.mediatorMap.map(ContinueOrQuitDialog).toMediator(ContinueOrQuitMediator);
-				this.mediatorMap.map(HostQueryDialog).toMediator(HostQueryDialogMediator);
-				this.mediatorMap.map(ArenaQueryPanel).toMediator(ArenaQueryPanelMediator);
-				this.mediatorMap.map(ArenaLeaderboard).toMediator(ArenaLeaderboardMediator);
-				this.mediatorMap.map(ArenaLeaderboardListItem).toMediator(ArenaLeaderboardListItemMediator);
-				this.mediatorMap.map(ImminentWaveCountdownClock).toMediator(ImminentWaveCountdownClockMediator);
-				this.mediatorMap.map(ArenaTimer).toMediator(ArenaTimerMediator);
-				this.mediatorMap.map(BattleSummaryDialog).toMediator(BattleSummaryDialogMediator);
-				this.mediatorMap.map(ArenaWaveCounter).toMediator(ArenaWaveCounterMediator);
-			}
-
-
+			this.injector.map(GetArenaLeaderboardTask);
+			this.injector.map(GetBestArenaRunTask);
+			this.injector.map(CurrentArenaRunModel).asSingleton();
+			this.injector.map(BestArenaRunModel).asSingleton();
+			this.injector.map(ReloadLeaderboard).asSingleton();
+			this.injector.map(ArenaLeaderboardModel).asSingleton();
+			this.commandMap.map(ArenaDeathSignal).toCommand(ArenaDeathCommand);
+			this.commandMap.map(ImminentArenaWaveSignal).toCommand(ImminentArenaWaveCommand);
+			this.commandMap.map(GameClosedSignal).toCommand(ClearCurrentRunCommand);
+			this.mediatorMap.map(ContinueOrQuitDialog).toMediator(ContinueOrQuitMediator);
+			this.mediatorMap.map(HostQueryDialog).toMediator(HostQueryDialogMediator);
+			this.mediatorMap.map(ArenaQueryPanel).toMediator(ArenaQueryPanelMediator);
+			this.mediatorMap.map(ArenaLeaderboard).toMediator(ArenaLeaderboardMediator);
+			this.mediatorMap.map(ArenaLeaderboardListItem).toMediator(ArenaLeaderboardListItemMediator);
+			this.mediatorMap.map(ImminentWaveCountdownClock).toMediator(ImminentWaveCountdownClockMediator);
+			this.mediatorMap.map(ArenaTimer).toMediator(ArenaTimerMediator);
+			this.mediatorMap.map(BattleSummaryDialog).toMediator(BattleSummaryDialogMediator);
+			this.mediatorMap.map(ArenaWaveCounter).toMediator(ArenaWaveCounterMediator);
 		}
-	}//package kabam.rotmg.arena
+
+	}
+}//package kabam.rotmg.arena
 

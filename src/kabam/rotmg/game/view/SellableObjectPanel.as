@@ -1,7 +1,7 @@
 ﻿//kabam.rotmg.game.view.SellableObjectPanel
 
 package kabam.rotmg.game.view
-	{
+{
 	import com.company.assembleegameclient.game.GameSprite;
 	import com.company.assembleegameclient.objects.Merchant;
 	import com.company.assembleegameclient.objects.Player;
@@ -40,230 +40,226 @@ package kabam.rotmg.game.view
 	import org.swiftsuspenders.Injector;
 
 	public class SellableObjectPanel extends Panel implements TooltipAble
+	{
+
+		private const BUTTON_OFFSET:int = 17;
+
+		[Inject]
+		public var showPopupSignal:ShowPopupSignal;
+		[Inject]
+		public var closePopupByClassSignal:ClosePopupByClassSignal;
+		public var hoverTooltipDelegate:HoverTooltipDelegate = new HoverTooltipDelegate();
+		public var buyItem:Signal = new Signal(SellableObject);
+		private var owner_:SellableObject;
+		private var nameText_:TextFieldDisplayConcrete;
+		private var buyButton_:LegacyBuyButton;
+		private var rankReqText_:Sprite;
+		private var guildRankReqText_:TextFieldDisplayConcrete;
+		private var icon_:Sprite;
+		private var bitmap_:Bitmap;
+		private var confirmBuyModal:ConfirmBuyModal;
+		private var availableInventoryNumber:int;
+
+		public function SellableObjectPanel(_arg_1:GameSprite, _arg_2:SellableObject)
 		{
+			super(_arg_1);
+			this.nameText_ = new TextFieldDisplayConcrete().setSize(16).setColor(0xFFFFFF).setTextWidth((WIDTH - 44));
+			this.nameText_.setBold(true);
+			this.nameText_.setStringBuilder(new LineBuilder().setParams(TextKey.SELLABLEOBJECTPANEL_TEXT));
+			this.nameText_.setWordWrap(true);
+			this.nameText_.setMultiLine(true);
+			this.nameText_.setAutoSize(TextFieldAutoSize.CENTER);
+			this.nameText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
+			addChild(this.nameText_);
+			this.icon_ = new Sprite();
+			addChild(this.icon_);
+			this.bitmap_ = new Bitmap(null);
+			this.icon_.addChild(this.bitmap_);
+			this.buyButton_ = new LegacyBuyButton(TextKey.SELLABLEOBJECTPANEL_BUY, 16, 0, Currency.INVALID);
+			this.buyButton_.addEventListener(MouseEvent.CLICK, this.onBuyButtonClick);
+			addChild(this.buyButton_);
+			this.setOwner(_arg_2);
+			addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
+			addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
+			this.hoverTooltipDelegate.setDisplayObject(this);
+			this.hoverTooltipDelegate.tooltip = _arg_2.getTooltip();
+		}
 
-			private const BUTTON_OFFSET:int = 17;
-
-			[Inject]
-			public var showPopupSignal:ShowPopupSignal;
-			[Inject]
-			public var closePopupByClassSignal:ClosePopupByClassSignal;
-			public var hoverTooltipDelegate:HoverTooltipDelegate = new HoverTooltipDelegate();
-			public var buyItem:Signal = new Signal(SellableObject);
-			private var owner_:SellableObject;
-			private var nameText_:TextFieldDisplayConcrete;
-			private var buyButton_:LegacyBuyButton;
-			private var rankReqText_:Sprite;
-			private var guildRankReqText_:TextFieldDisplayConcrete;
-			private var icon_:Sprite;
-			private var bitmap_:Bitmap;
-			private var confirmBuyModal:ConfirmBuyModal;
-			private var availableInventoryNumber:int;
-
-			public function SellableObjectPanel(_arg_1:GameSprite, _arg_2:SellableObject)
+		private static function createRankReqText(rankReq:int):Sprite
+		{
+			var requiredText:TextFieldDisplayConcrete;
+			var rankText:Sprite;
+			var rankReqText:Sprite = new Sprite();
+			requiredText = new TextFieldDisplayConcrete().setSize(16).setColor(0xFFFFFF).setBold(true).setAutoSize(TextFieldAutoSize.CENTER);
+			requiredText.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
+			rankReqText.addChild(requiredText);
+			rankText = new RankText(rankReq, false, false);
+			rankReqText.addChild(rankText);
+			requiredText.textChanged.addOnce(function ():void
 			{
-				super(_arg_1);
-				this.nameText_ = new TextFieldDisplayConcrete().setSize(16).setColor(0xFFFFFF).setTextWidth((WIDTH - 44));
-				this.nameText_.setBold(true);
-				this.nameText_.setStringBuilder(new LineBuilder().setParams(TextKey.SELLABLEOBJECTPANEL_TEXT));
-				this.nameText_.setWordWrap(true);
-				this.nameText_.setMultiLine(true);
-				this.nameText_.setAutoSize(TextFieldAutoSize.CENTER);
-				this.nameText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
-				addChild(this.nameText_);
-				this.icon_ = new Sprite();
-				addChild(this.icon_);
-				this.bitmap_ = new Bitmap(null);
-				this.icon_.addChild(this.bitmap_);
-				this.buyButton_ = new LegacyBuyButton(TextKey.SELLABLEOBJECTPANEL_BUY, 16, 0, Currency.INVALID);
-				this.buyButton_.addEventListener(MouseEvent.CLICK, this.onBuyButtonClick);
-				addChild(this.buyButton_);
-				this.setOwner(_arg_2);
-				addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
-				addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
-				this.hoverTooltipDelegate.setDisplayObject(this);
-				this.hoverTooltipDelegate.tooltip = _arg_2.getTooltip();
+				rankText.x = ((requiredText.width * 0.5) + 4);
+				rankText.y = (-(rankText.height) / 2);
+			});
+			requiredText.setStringBuilder(new LineBuilder().setParams(TextKey.SELLABLE_OBJECT_PANEL_RANK_REQUIRED));
+			return (rankReqText);
+		}
+
+		private static function createGuildRankReqText(_arg_1:int):TextFieldDisplayConcrete
+		{
+			var _local_2:TextFieldDisplayConcrete;
+			_local_2 = new TextFieldDisplayConcrete().setSize(16).setColor(0xFF0000).setBold(true).setAutoSize(TextFieldAutoSize.CENTER);
+			var _local_3:String = GuildUtil.rankToString(_arg_1);
+			_local_2.setStringBuilder(new LineBuilder().setParams(TextKey.SELLABLE_OBJECT_PANEL_GUILD_RANK, {"amount": _local_3}));
+			_local_2.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
+			return (_local_2);
+		}
+
+		public function setOwner(_arg_1:SellableObject):void
+		{
+			if (_arg_1 == this.owner_)
+			{
+				return;
 			}
+			this.owner_ = _arg_1;
+			this.buyButton_.setPrice(this.owner_.price_, this.owner_.currency_);
+			var _local_2:String = this.owner_.soldObjectName();
+			this.nameText_.setStringBuilder(new LineBuilder().setParams(_local_2));
+			this.bitmap_.bitmapData = this.owner_.getIcon();
+		}
 
-			private static function createRankReqText(rankReq:int):Sprite
+		public function setInventorySpaceAmount(_arg_1:int):void
+		{
+			this.availableInventoryNumber = _arg_1;
+		}
+
+		private function onAddedToStage(_arg_1:Event):void
+		{
+			stage.addEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown);
+			this.icon_.x = -4;
+			this.icon_.y = -8;
+			this.nameText_.x = 44;
+		}
+
+		private function onRemovedFromStage(_arg_1:Event):void
+		{
+			var _local_2:Injector;
+			var _local_3:ClosePopupByClassSignal;
+			stage.removeEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown);
+			if (NexusShopPopupView != null)
 			{
-				var requiredText:TextFieldDisplayConcrete;
-				var rankText:Sprite;
-				var rankReqText:Sprite = new Sprite();
-				requiredText = new TextFieldDisplayConcrete().setSize(16).setColor(0xFFFFFF).setBold(true).setAutoSize(TextFieldAutoSize.CENTER);
-				requiredText.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
-				rankReqText.addChild(requiredText);
-				rankText = new RankText(rankReq, false, false);
-				rankReqText.addChild(rankText);
-				requiredText.textChanged.addOnce(function ():void {
-					rankText.x = ((requiredText.width * 0.5) + 4);
-					rankText.y = (-(rankText.height) / 2);
-				});
-				requiredText.setStringBuilder(new LineBuilder().setParams(TextKey.SELLABLE_OBJECT_PANEL_RANK_REQUIRED));
-				return (rankReqText);
+				_local_2 = StaticInjectorContext.getInjector();
+				_local_3 = _local_2.getInstance(ClosePopupByClassSignal);
+				_local_3.dispatch(NexusShopPopupView);
 			}
-
-			private static function createGuildRankReqText(_arg_1:int):TextFieldDisplayConcrete
+			if ((((!(parent == null)) && (!(this.confirmBuyModal == null))) && (this.confirmBuyModal.open)))
 			{
-				var _local_2:TextFieldDisplayConcrete;
-				_local_2 = new TextFieldDisplayConcrete().setSize(16).setColor(0xFF0000).setBold(true).setAutoSize(TextFieldAutoSize.CENTER);
-				var _local_3:String = GuildUtil.rankToString(_arg_1);
-				_local_2.setStringBuilder(new LineBuilder().setParams(TextKey.SELLABLE_OBJECT_PANEL_GUILD_RANK, {"amount": _local_3}));
-				_local_2.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
-				return (_local_2);
+				parent.removeChild(this.confirmBuyModal);
 			}
+		}
 
-
-			public function setOwner(_arg_1:SellableObject):void
+		private function onBuyButtonClick(_arg_1:MouseEvent):void
+		{
+			if (ConfirmBuyModal.free)
 			{
-				if (_arg_1 == this.owner_)
+				this.buyEvent();
+			}
+		}
+
+		private function onKeyDown(_arg_1:KeyboardEvent):void
+		{
+			if ((((_arg_1.keyCode == Parameters.data_.interact) && (stage.focus == null)) && (ConfirmBuyModal.free)))
+			{
+				this.buyEvent();
+			}
+		}
+
+		private function buyEvent():void
+		{
+			var _local_1:Injector;
+			var _local_2:ShowPopupSignal;
+			var _local_3:Account = StaticInjectorContext.getInjector().getInstance(Account);
+			if (parent != null && _local_3.isRegistered() && this.owner_ is Merchant)
+			{
+				_local_1 = StaticInjectorContext.getInjector();
+				_local_2 = _local_1.getInstance(ShowPopupSignal);
+				_local_2.dispatch(new NexusShopPopupView(this.buyItem, this.owner_, this.buyButton_.width, this.availableInventoryNumber));
+			} else
+			{
+				this.buyItem.dispatch(this.owner_);
+			}
+		}
+
+		override public function draw():void
+		{
+			var _local_1:Player = gs_.map.player_;
+			this.nameText_.y = ((this.nameText_.height > 30) ? 0 : 12);
+			var _local_2:int = this.owner_.rankReq_;
+			if (_local_1.numStars_ < _local_2)
+			{
+				if (contains(this.buyButton_))
 				{
-					return;
+					removeChild(this.buyButton_);
 				}
-				this.owner_ = _arg_1;
-				this.buyButton_.setPrice(this.owner_.price_, this.owner_.currency_);
-				var _local_2:String = this.owner_.soldObjectName();
-				this.nameText_.setStringBuilder(new LineBuilder().setParams(_local_2));
-				this.bitmap_.bitmapData = this.owner_.getIcon();
-			}
-
-			public function setInventorySpaceAmount(_arg_1:int):void
-			{
-				this.availableInventoryNumber = _arg_1;
-			}
-
-			private function onAddedToStage(_arg_1:Event):void
-			{
-				stage.addEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown);
-				this.icon_.x = -4;
-				this.icon_.y = -8;
-				this.nameText_.x = 44;
-			}
-
-			private function onRemovedFromStage(_arg_1:Event):void
-			{
-				var _local_2:Injector;
-				var _local_3:ClosePopupByClassSignal;
-				stage.removeEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown);
-				if (NexusShopPopupView != null)
+				if (((this.rankReqText_ == null) || (!(contains(this.rankReqText_)))))
 				{
-					_local_2 = StaticInjectorContext.getInjector();
-					_local_3 = _local_2.getInstance(ClosePopupByClassSignal);
-					_local_3.dispatch(NexusShopPopupView);
+					this.rankReqText_ = createRankReqText(_local_2);
+					this.rankReqText_.x = ((WIDTH / 2) - (this.rankReqText_.width / 2));
+					this.rankReqText_.y = ((HEIGHT - (this.rankReqText_.height / 2)) - 20);
+					addChild(this.rankReqText_);
 				}
-				if ((((!(parent == null)) && (!(this.confirmBuyModal == null))) && (this.confirmBuyModal.open)))
-				{
-					parent.removeChild(this.confirmBuyModal);
-				}
-			}
-
-			private function onBuyButtonClick(_arg_1:MouseEvent):void
+			} else
 			{
-				if (ConfirmBuyModal.free)
-				{
-					this.buyEvent();
-				}
-			}
-
-			private function onKeyDown(_arg_1:KeyboardEvent):void
-			{
-				if ((((_arg_1.keyCode == Parameters.data_.interact) && (stage.focus == null)) && (ConfirmBuyModal.free)))
-				{
-					this.buyEvent();
-				}
-			}
-
-			private function buyEvent():void
-			{
-				var _local_1:Injector;
-				var _local_2:ShowPopupSignal;
-				var _local_3:Account = StaticInjectorContext.getInjector().getInstance(Account);
-				if (parent != null && _local_3.isRegistered() && this.owner_ is Merchant)
-				{
-					_local_1 = StaticInjectorContext.getInjector();
-					_local_2 = _local_1.getInstance(ShowPopupSignal);
-					_local_2.dispatch(new NexusShopPopupView(this.buyItem, this.owner_, this.buyButton_.width, this.availableInventoryNumber));
-				}
-				else
-				{
-					this.buyItem.dispatch(this.owner_);
-				}
-			}
-
-			override public function draw():void
-			{
-				var _local_1:Player = gs_.map.player_;
-				this.nameText_.y = ((this.nameText_.height > 30) ? 0 : 12);
-				var _local_2:int = this.owner_.rankReq_;
-				if (_local_1.numStars_ < _local_2)
+				if (_local_1.guildRank_ < this.owner_.guildRankReq_)
 				{
 					if (contains(this.buyButton_))
 					{
 						removeChild(this.buyButton_);
 					}
-					if (((this.rankReqText_ == null) || (!(contains(this.rankReqText_)))))
+					if (((this.guildRankReqText_ == null) || (!(contains(this.guildRankReqText_)))))
 					{
-						this.rankReqText_ = createRankReqText(_local_2);
-						this.rankReqText_.x = ((WIDTH / 2) - (this.rankReqText_.width / 2));
-						this.rankReqText_.y = ((HEIGHT - (this.rankReqText_.height / 2)) - 20);
-						addChild(this.rankReqText_);
+						this.guildRankReqText_ = createGuildRankReqText(this.owner_.guildRankReq_);
+						this.guildRankReqText_.x = ((WIDTH / 2) - (this.guildRankReqText_.width / 2));
+						this.guildRankReqText_.y = ((HEIGHT - (this.guildRankReqText_.height / 2)) - 20);
+						addChild(this.guildRankReqText_);
 					}
-				}
-				else
+				} else
 				{
-					if (_local_1.guildRank_ < this.owner_.guildRankReq_)
+					this.buyButton_.setPrice(this.owner_.price_, this.owner_.currency_);
+					this.buyButton_.setEnabled((gs_.gsc_.outstandingBuy_ == null));
+					this.buyButton_.x = int(((WIDTH / 2) - (this.buyButton_.width / 2)));
+					this.buyButton_.y = ((HEIGHT - (this.buyButton_.height / 2)) - this.BUTTON_OFFSET);
+					if (!contains(this.buyButton_))
 					{
-						if (contains(this.buyButton_))
-						{
-							removeChild(this.buyButton_);
-						}
-						if (((this.guildRankReqText_ == null) || (!(contains(this.guildRankReqText_)))))
-						{
-							this.guildRankReqText_ = createGuildRankReqText(this.owner_.guildRankReq_);
-							this.guildRankReqText_.x = ((WIDTH / 2) - (this.guildRankReqText_.width / 2));
-							this.guildRankReqText_.y = ((HEIGHT - (this.guildRankReqText_.height / 2)) - 20);
-							addChild(this.guildRankReqText_);
-						}
+						addChild(this.buyButton_);
 					}
-					else
+					if (((!(this.rankReqText_ == null)) && (contains(this.rankReqText_))))
 					{
-						this.buyButton_.setPrice(this.owner_.price_, this.owner_.currency_);
-						this.buyButton_.setEnabled((gs_.gsc_.outstandingBuy_ == null));
-						this.buyButton_.x = int(((WIDTH / 2) - (this.buyButton_.width / 2)));
-						this.buyButton_.y = ((HEIGHT - (this.buyButton_.height / 2)) - this.BUTTON_OFFSET);
-						if (!contains(this.buyButton_))
-						{
-							addChild(this.buyButton_);
-						}
-						if (((!(this.rankReqText_ == null)) && (contains(this.rankReqText_))))
-						{
-							removeChild(this.rankReqText_);
-						}
+						removeChild(this.rankReqText_);
 					}
 				}
 			}
-
-			public function setShowToolTipSignal(_arg_1:ShowTooltipSignal):void
-			{
-				this.hoverTooltipDelegate.setShowToolTipSignal(_arg_1);
-			}
-
-			public function getShowToolTip():ShowTooltipSignal
-			{
-				return (this.hoverTooltipDelegate.getShowToolTip());
-			}
-
-			public function setHideToolTipsSignal(_arg_1:HideTooltipsSignal):void
-			{
-				this.hoverTooltipDelegate.setHideToolTipsSignal(_arg_1);
-			}
-
-			public function getHideToolTips():HideTooltipsSignal
-			{
-				return (this.hoverTooltipDelegate.getHideToolTips());
-			}
-
-
 		}
-	}//package kabam.rotmg.game.view
+
+		public function setShowToolTipSignal(_arg_1:ShowTooltipSignal):void
+		{
+			this.hoverTooltipDelegate.setShowToolTipSignal(_arg_1);
+		}
+
+		public function getShowToolTip():ShowTooltipSignal
+		{
+			return (this.hoverTooltipDelegate.getShowToolTip());
+		}
+
+		public function setHideToolTipsSignal(_arg_1:HideTooltipsSignal):void
+		{
+			this.hoverTooltipDelegate.setHideToolTipsSignal(_arg_1);
+		}
+
+		public function getHideToolTips():HideTooltipsSignal
+		{
+			return (this.hoverTooltipDelegate.getHideToolTips());
+		}
+
+	}
+}//package kabam.rotmg.game.view
 

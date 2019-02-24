@@ -2,15 +2,15 @@
 
 package kabam.rotmg.ui.signals
 {
-import org.osflash.signals.Signal;
+	import org.osflash.signals.Signal;
 
-public class RealmServerNameSignal extends Signal
-{
+	public class RealmServerNameSignal extends Signal
+	{
 
-    public function RealmServerNameSignal()
-    {
-        super(String);
-    }
+		public function RealmServerNameSignal()
+		{
+			super(String);
+		}
 
-}
+	}
 }//package kabam.rotmg.ui.signals

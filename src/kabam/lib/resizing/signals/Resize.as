@@ -1,19 +1,19 @@
 ﻿//kabam.lib.resizing.signals.Resize
 
 package kabam.lib.resizing.signals
-	{
+{
 	import flash.geom.Rectangle;
 
 	import org.osflash.signals.Signal;
 
 	public class Resize extends Signal
+	{
+
+		public function Resize()
 		{
-
-			public function Resize()
-			{
-				super(Rectangle);
-			}
-
+			super(Rectangle);
 		}
-	}//package kabam.lib.resizing.signals
+
+	}
+}//package kabam.lib.resizing.signals
 

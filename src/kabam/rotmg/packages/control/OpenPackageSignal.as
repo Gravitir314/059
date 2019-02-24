@@ -1,17 +1,17 @@
 ﻿//kabam.rotmg.packages.control.OpenPackageSignal
 
 package kabam.rotmg.packages.control
-	{
+{
 	import org.osflash.signals.Signal;
 
 	public class OpenPackageSignal extends Signal
+	{
+
+		public function OpenPackageSignal()
 		{
-
-			public function OpenPackageSignal()
-			{
-				super(int);
-			}
-
+			super(int);
 		}
-	}//package kabam.rotmg.packages.control
+
+	}
+}//package kabam.rotmg.packages.control
 

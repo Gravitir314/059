@@ -1,17 +1,17 @@
 ﻿//kabam.rotmg.account.core.signals.CharListDataSignal
 
 package kabam.rotmg.account.core.signals
-	{
+{
 	import org.osflash.signals.Signal;
 
 	public class CharListDataSignal extends Signal
+	{
+
+		public function CharListDataSignal()
 		{
-
-			public function CharListDataSignal()
-			{
-				super(XML);
-			}
-
+			super(XML);
 		}
-	}//package kabam.rotmg.account.core.signals
+
+	}
+}//package kabam.rotmg.account.core.signals
 

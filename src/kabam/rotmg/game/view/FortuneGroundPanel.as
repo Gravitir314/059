@@ -1,7 +1,7 @@
 ﻿//kabam.rotmg.game.view.FortuneGroundPanel
 
 package kabam.rotmg.game.view
-	{
+{
 	import com.company.assembleegameclient.game.GameSprite;
 	import com.company.assembleegameclient.objects.SellableObject;
 	import com.company.assembleegameclient.parameters.Parameters;
@@ -36,179 +36,175 @@ package kabam.rotmg.game.view
 	import org.swiftsuspenders.Injector;
 
 	public class FortuneGroundPanel extends Panel
+	{
+
+		private static var hovering:Boolean;
+
+		private const BUTTON_OFFSET:int = 17;
+
+		public var buyItem:Signal = new Signal(SellableObject);
+		private var owner_:SellableObject;
+		private var nameText_:TextFieldDisplayConcrete;
+		private var buyButton_:LegacyBuyButton;
+		private var infoButton_:DeprecatedTextButton;
+		private var icon_:Sprite;
+		private var bitmap_:Bitmap;
+		private var onHoverPanel:Sprite;
+
+		public function FortuneGroundPanel(_arg_1:GameSprite, _arg_2:uint)
 		{
-
-			private static var hovering:Boolean;
-
-			private const BUTTON_OFFSET:int = 17;
-
-			public var buyItem:Signal = new Signal(SellableObject);
-			private var owner_:SellableObject;
-			private var nameText_:TextFieldDisplayConcrete;
-			private var buyButton_:LegacyBuyButton;
-			private var infoButton_:DeprecatedTextButton;
-			private var icon_:Sprite;
-			private var bitmap_:Bitmap;
-			private var onHoverPanel:Sprite;
-
-			public function FortuneGroundPanel(_arg_1:GameSprite, _arg_2:uint)
+			var _local_3:Injector = StaticInjectorContext.getInjector();
+			var _local_4:GetMysteryBoxesTask = _local_3.getInstance(GetMysteryBoxesTask);
+			_local_4.start();
+			super(_arg_1);
+			this.nameText_ = new TextFieldDisplayConcrete().setSize(16).setColor(0xFFFFFF).setTextWidth((WIDTH - 44));
+			this.nameText_.setBold(true);
+			this.nameText_.setStringBuilder(new LineBuilder().setParams(TextKey.SELLABLEOBJECTPANEL_TEXT));
+			this.nameText_.setWordWrap(true);
+			this.nameText_.setMultiLine(true);
+			this.nameText_.setAutoSize(TextFieldAutoSize.CENTER);
+			this.nameText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
+			addChild(this.nameText_);
+			this.icon_ = new Sprite();
+			addChild(this.icon_);
+			this.bitmap_ = new Bitmap(null);
+			this.icon_.addChild(this.bitmap_);
+			var _local_5:String = "FortuneGroundPanel.play";
+			var _local_6:String = "MysteryBoxPanel.checkBackLater";
+			var _local_7:String = "FortuneGroundPanel.alchemist";
+			var _local_8:FortuneModel = _local_3.getInstance(FortuneModel);
+			var _local_9:Account = _local_3.getInstance(Account);
+			if (((FortuneModel.HAS_FORTUNES) && (_local_9.isRegistered())))
 			{
-				var _local_3:Injector = StaticInjectorContext.getInjector();
-				var _local_4:GetMysteryBoxesTask = _local_3.getInstance(GetMysteryBoxesTask);
-				_local_4.start();
-				super(_arg_1);
-				this.nameText_ = new TextFieldDisplayConcrete().setSize(16).setColor(0xFFFFFF).setTextWidth((WIDTH - 44));
-				this.nameText_.setBold(true);
-				this.nameText_.setStringBuilder(new LineBuilder().setParams(TextKey.SELLABLEOBJECTPANEL_TEXT));
-				this.nameText_.setWordWrap(true);
-				this.nameText_.setMultiLine(true);
-				this.nameText_.setAutoSize(TextFieldAutoSize.CENTER);
-				this.nameText_.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
-				addChild(this.nameText_);
-				this.icon_ = new Sprite();
-				addChild(this.icon_);
-				this.bitmap_ = new Bitmap(null);
-				this.icon_.addChild(this.bitmap_);
-				var _local_5:String = "FortuneGroundPanel.play";
-				var _local_6:String = "MysteryBoxPanel.checkBackLater";
-				var _local_7:String = "FortuneGroundPanel.alchemist";
-				var _local_8:FortuneModel = _local_3.getInstance(FortuneModel);
-				var _local_9:Account = _local_3.getInstance(Account);
-				if (((FortuneModel.HAS_FORTUNES) && (_local_9.isRegistered())))
-				{
-					this.infoButton_ = new DeprecatedTextButton(16, _local_5);
-					addChild(this.infoButton_);
-				}
-				else
-				{
-					this.infoButton_ = new DeprecatedTextButton(16, _local_6);
-					addChild(this.infoButton_);
-				}
-				this.nameText_.setStringBuilder(new LineBuilder().setParams(_local_7));
-				this.bitmap_.bitmapData = ArenaViewAssetFactory.returnHostBitmap(_arg_2).bitmapData;
-				addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
-				addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
-				if (!FortuneModal.modalIsOpen)
-				{
-					this.infoButton_.addEventListener(MouseEvent.CLICK, this.onInfoButtonClick);
-					ROTMG.STAGE.addEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown);
-				}
-				else
-				{
-					FortuneModal.closed.add(this.enableInteract);
-				}
+				this.infoButton_ = new DeprecatedTextButton(16, _local_5);
+				addChild(this.infoButton_);
+			} else
+			{
+				this.infoButton_ = new DeprecatedTextButton(16, _local_6);
+				addChild(this.infoButton_);
 			}
-
-			private function enableInteract():void
+			this.nameText_.setStringBuilder(new LineBuilder().setParams(_local_7));
+			this.bitmap_.bitmapData = ArenaViewAssetFactory.returnHostBitmap(_arg_2).bitmapData;
+			addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
+			addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
+			if (!FortuneModal.modalIsOpen)
 			{
 				this.infoButton_.addEventListener(MouseEvent.CLICK, this.onInfoButtonClick);
 				ROTMG.STAGE.addEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown);
-				FortuneModal.closed.remove(this.enableInteract);
-			}
-
-			private function onHoverEnter(_arg_1:MouseEvent):void
+			} else
 			{
-				var _local_2:FortuneInfo;
-				if (this.onHoverPanel == null)
+				FortuneModal.closed.add(this.enableInteract);
+			}
+		}
+
+		private function enableInteract():void
+		{
+			this.infoButton_.addEventListener(MouseEvent.CLICK, this.onInfoButtonClick);
+			ROTMG.STAGE.addEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown);
+			FortuneModal.closed.remove(this.enableInteract);
+		}
+
+		private function onHoverEnter(_arg_1:MouseEvent):void
+		{
+			var _local_2:FortuneInfo;
+			if (this.onHoverPanel == null)
+			{
+				_local_2 = StaticInjectorContext.getInjector().getInstance(FortuneModel).getFortune();
+				this.onHoverPanel = InfoHoverPaneFactory.make(_local_2.infoImage);
+				this.onHoverPanel.x = (this.onHoverPanel.x - (this.onHoverPanel.width + 10));
+				this.onHoverPanel.y = (this.onHoverPanel.y - (this.onHoverPanel.height - this.height));
+				if (this.onHoverPanel != null)
 				{
-					_local_2 = StaticInjectorContext.getInjector().getInstance(FortuneModel).getFortune();
-					this.onHoverPanel = InfoHoverPaneFactory.make(_local_2.infoImage);
-					this.onHoverPanel.x = (this.onHoverPanel.x - (this.onHoverPanel.width + 10));
-					this.onHoverPanel.y = (this.onHoverPanel.y - (this.onHoverPanel.height - this.height));
-					if (this.onHoverPanel != null)
-					{
-						addChild(this.onHoverPanel);
-					}
+					addChild(this.onHoverPanel);
 				}
 			}
+		}
 
-			private function onHoverExit(_arg_1:MouseEvent):void
+		private function onHoverExit(_arg_1:MouseEvent):void
+		{
+			if (((!(this.onHoverPanel == null)) && (this.onHoverPanel.parent)))
 			{
-				if (((!(this.onHoverPanel == null)) && (this.onHoverPanel.parent)))
-				{
-					removeChild(this.onHoverPanel);
-					this.onHoverPanel = null;
-				}
+				removeChild(this.onHoverPanel);
+				this.onHoverPanel = null;
 			}
+		}
 
-			public function setOwner(_arg_1:SellableObject):void
+		public function setOwner(_arg_1:SellableObject):void
+		{
+			if (_arg_1 == this.owner_)
 			{
-				if (_arg_1 == this.owner_)
-				{
-					return;
-				}
-				this.owner_ = _arg_1;
-				this.buyButton_.setPrice(this.owner_.price_, this.owner_.currency_);
-				var _local_2:String = this.owner_.soldObjectName();
-				this.nameText_.setStringBuilder(new LineBuilder().setParams(_local_2));
-				this.bitmap_.bitmapData = this.owner_.getIcon();
+				return;
 			}
+			this.owner_ = _arg_1;
+			this.buyButton_.setPrice(this.owner_.price_, this.owner_.currency_);
+			var _local_2:String = this.owner_.soldObjectName();
+			this.nameText_.setStringBuilder(new LineBuilder().setParams(_local_2));
+			this.bitmap_.bitmapData = this.owner_.getIcon();
+		}
 
-			private function onAddedToStage(_arg_1:Event):void
+		private function onAddedToStage(_arg_1:Event):void
+		{
+			this.icon_.x = -4;
+			this.icon_.y = -8;
+			this.nameText_.x = 44;
+		}
+
+		private function onRemovedFromStage(_arg_1:Event):void
+		{
+			stage.removeEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown);
+			this.infoButton_.removeEventListener(MouseEvent.CLICK, this.onInfoButtonClick);
+			FortuneModal.closed.remove(this.enableInteract);
+		}
+
+		private function onInfoButtonClick(_arg_1:MouseEvent):void
+		{
+			this.onInfoButton();
+		}
+
+		private function onInfoButton():void
+		{
+			if (FortuneModal.modalIsOpen)
 			{
-				this.icon_.x = -4;
-				this.icon_.y = -8;
-				this.nameText_.x = 44;
+				return;
 			}
-
-			private function onRemovedFromStage(_arg_1:Event):void
+			var _local_1:Injector = StaticInjectorContext.getInjector();
+			var _local_2:FortuneModel = _local_1.getInstance(FortuneModel);
+			var _local_3:Account = _local_1.getInstance(Account);
+			var _local_4:OpenDialogSignal = _local_1.getInstance(OpenDialogSignal);
+			if (((_local_2.isInitialized()) && (_local_3.isRegistered())))
 			{
+				_local_4.dispatch(new FortuneModal());
 				stage.removeEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown);
 				this.infoButton_.removeEventListener(MouseEvent.CLICK, this.onInfoButtonClick);
-				FortuneModal.closed.remove(this.enableInteract);
+				FortuneModal.closed.add(this.enableInteract);
+			} else
+			{
+				if (!_local_3.isRegistered())
+				{
+					_local_4.dispatch(new RegisterPromptDialog("SellableObjectPanelMediator.text", {"type": Currency.typeToName(Currency.GOLD)}));
+				}
 			}
+		}
 
-			private function onInfoButtonClick(_arg_1:MouseEvent):void
+		private function onKeyDown(_arg_1:KeyboardEvent):void
+		{
+			if (((_arg_1.keyCode == Parameters.data_.interact) && (stage.focus == null)))
 			{
 				this.onInfoButton();
 			}
-
-			private function onInfoButton():void
-			{
-				if (FortuneModal.modalIsOpen)
-				{
-					return;
-				}
-				var _local_1:Injector = StaticInjectorContext.getInjector();
-				var _local_2:FortuneModel = _local_1.getInstance(FortuneModel);
-				var _local_3:Account = _local_1.getInstance(Account);
-				var _local_4:OpenDialogSignal = _local_1.getInstance(OpenDialogSignal);
-				if (((_local_2.isInitialized()) && (_local_3.isRegistered())))
-				{
-					_local_4.dispatch(new FortuneModal());
-					stage.removeEventListener(KeyboardEvent.KEY_DOWN, this.onKeyDown);
-					this.infoButton_.removeEventListener(MouseEvent.CLICK, this.onInfoButtonClick);
-					FortuneModal.closed.add(this.enableInteract);
-				}
-				else
-				{
-					if (!_local_3.isRegistered())
-					{
-						_local_4.dispatch(new RegisterPromptDialog("SellableObjectPanelMediator.text", {"type": Currency.typeToName(Currency.GOLD)}));
-					}
-				}
-			}
-
-			private function onKeyDown(_arg_1:KeyboardEvent):void
-			{
-				if (((_arg_1.keyCode == Parameters.data_.interact) && (stage.focus == null)))
-				{
-					this.onInfoButton();
-				}
-			}
-
-			override public function draw():void
-			{
-				this.nameText_.y = ((this.nameText_.height > 30) ? 0 : 12);
-				this.infoButton_.x = ((WIDTH / 2) - (this.infoButton_.width / 2));
-				this.infoButton_.y = ((HEIGHT - (this.infoButton_.height / 2)) - this.BUTTON_OFFSET);
-				if (!contains(this.infoButton_))
-				{
-					addChild(this.infoButton_);
-				}
-			}
-
-
 		}
-	}//package kabam.rotmg.game.view
+
+		override public function draw():void
+		{
+			this.nameText_.y = ((this.nameText_.height > 30) ? 0 : 12);
+			this.infoButton_.x = ((WIDTH / 2) - (this.infoButton_.width / 2));
+			this.infoButton_.y = ((HEIGHT - (this.infoButton_.height / 2)) - this.BUTTON_OFFSET);
+			if (!contains(this.infoButton_))
+			{
+				addChild(this.infoButton_);
+			}
+		}
+
+	}
+}//package kabam.rotmg.game.view
 

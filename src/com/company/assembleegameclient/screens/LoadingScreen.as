@@ -1,7 +1,7 @@
 ﻿//com.company.assembleegameclient.screens.LoadingScreen
 
 package com.company.assembleegameclient.screens
-	{
+{
 	import com.company.rotmg.graphics.ScreenGraphic;
 
 	import flash.display.Sprite;
@@ -15,35 +15,34 @@ package com.company.assembleegameclient.screens
 	import kabam.rotmg.ui.view.components.ScreenBase;
 
 	public class LoadingScreen extends Sprite
+	{
+		private static const DEFAULT_FILTER:DropShadowFilter = new DropShadowFilter(0, 0, 0, 1, 4, 4);
+
+		private var text:TextFieldDisplayConcrete = new TextFieldDisplayConcrete();
+
+		public function LoadingScreen()
 		{
-			private static const DEFAULT_FILTER:DropShadowFilter = new DropShadowFilter(0, 0, 0, 1, 4, 4);
-
-			private var text:TextFieldDisplayConcrete = new TextFieldDisplayConcrete();
-
-			public function LoadingScreen()
-			{
-				addChild(new ScreenBase());
-				addChild(new ScreenGraphic());
-				this.text.setSize(30).setColor(0xFFFFFF).setVerticalAlign(TextFieldDisplayConcrete.MIDDLE).setAutoSize(TextFieldAutoSize.CENTER).setBold(true);
-				this.text.y = 550;
-				addEventListener(Event.ADDED_TO_STAGE, this.onAdded);
-				this.text.setStringBuilder(new LineBuilder().setParams(TextKey.LOADING_TEXT));
-				this.text.filters = [DEFAULT_FILTER];
-				addChild(this.text);
-			}
-
-			private function onAdded(_arg_1:Event):void
-			{
-				removeEventListener(Event.ADDED_TO_STAGE, this.onAdded);
-				this.text.x = (800 / 2);
-			}
-
-			public function setTextKey(_arg_1:String):void
-			{
-				this.text.setStringBuilder(new LineBuilder().setParams(_arg_1));
-			}
-
-
+			addChild(new ScreenBase());
+			addChild(new ScreenGraphic());
+			this.text.setSize(30).setColor(0xFFFFFF).setVerticalAlign(TextFieldDisplayConcrete.MIDDLE).setAutoSize(TextFieldAutoSize.CENTER).setBold(true);
+			this.text.y = 550;
+			addEventListener(Event.ADDED_TO_STAGE, this.onAdded);
+			this.text.setStringBuilder(new LineBuilder().setParams(TextKey.LOADING_TEXT));
+			this.text.filters = [DEFAULT_FILTER];
+			addChild(this.text);
 		}
-	}//package com.company.assembleegameclient.screens
+
+		private function onAdded(_arg_1:Event):void
+		{
+			removeEventListener(Event.ADDED_TO_STAGE, this.onAdded);
+			this.text.x = (800 / 2);
+		}
+
+		public function setTextKey(_arg_1:String):void
+		{
+			this.text.setStringBuilder(new LineBuilder().setParams(_arg_1));
+		}
+
+	}
+}//package com.company.assembleegameclient.screens
 

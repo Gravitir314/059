@@ -1,17 +1,17 @@
 ﻿//kabam.rotmg.ui.signals.NameChangedSignal
 
 package kabam.rotmg.ui.signals
-	{
+{
 	import org.osflash.signals.Signal;
 
 	public class NameChangedSignal extends Signal
+	{
+
+		public function NameChangedSignal()
 		{
-
-			public function NameChangedSignal()
-			{
-				super(String);
-			}
-
+			super(String);
 		}
-	}//package kabam.rotmg.ui.signals
+
+	}
+}//package kabam.rotmg.ui.signals
 

@@ -1,17 +1,17 @@
 ﻿//kabam.rotmg.game.view.components.StatsUndockedSignal
 
 package kabam.rotmg.game.view.components
-	{
+{
 	import org.osflash.signals.Signal;
 
 	public class StatsUndockedSignal extends Signal
+	{
+
+		public function StatsUndockedSignal()
 		{
-
-			public function StatsUndockedSignal()
-			{
-				super(StatsView);
-			}
-
+			super(StatsView);
 		}
-	}//package kabam.rotmg.game.view.components
+
+	}
+}//package kabam.rotmg.game.view.components
 

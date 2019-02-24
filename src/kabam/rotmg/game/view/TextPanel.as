@@ -1,7 +1,7 @@
 ﻿//kabam.rotmg.game.view.TextPanel
 
 package kabam.rotmg.game.view
-	{
+{
 	import com.company.assembleegameclient.game.GameSprite;
 	import com.company.assembleegameclient.ui.panels.Panel;
 	import com.greensock.plugins.DropShadowFilterPlugin;
@@ -13,36 +13,35 @@ package kabam.rotmg.game.view
 	import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 
 	public class TextPanel extends Panel
+	{
+
+		private var textField:TextFieldDisplayConcrete;
+		private var virtualWidth:Number;
+		private var virtualHeight:Number;
+
+		public function TextPanel(_arg_1:GameSprite)
 		{
-
-			private var textField:TextFieldDisplayConcrete;
-			private var virtualWidth:Number;
-			private var virtualHeight:Number;
-
-			public function TextPanel(_arg_1:GameSprite)
-			{
-				super(_arg_1);
-				this.initTextfield();
-			}
-
-			public function init(_arg_1:String):void
-			{
-				this.textField.setStringBuilder(new LineBuilder().setParams(_arg_1));
-				this.textField.setAutoSize(TextFieldAutoSize.CENTER).setVerticalAlign(TextFieldDisplayConcrete.MIDDLE);
-				this.textField.x = (WIDTH / 2);
-				this.textField.y = (HEIGHT / 2);
-			}
-
-			private function initTextfield():void
-			{
-				this.textField = new TextFieldDisplayConcrete().setSize(16).setColor(0xFFFFFF);
-				this.textField.setBold(true);
-				this.textField.setStringBuilder(new LineBuilder().setParams(TextKey.TEXTPANEL_GIFTCHESTISEMPTY));
-				this.textField.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
-				addChild(this.textField);
-			}
-
-
+			super(_arg_1);
+			this.initTextfield();
 		}
-	}//package kabam.rotmg.game.view
+
+		public function init(_arg_1:String):void
+		{
+			this.textField.setStringBuilder(new LineBuilder().setParams(_arg_1));
+			this.textField.setAutoSize(TextFieldAutoSize.CENTER).setVerticalAlign(TextFieldDisplayConcrete.MIDDLE);
+			this.textField.x = (WIDTH / 2);
+			this.textField.y = (HEIGHT / 2);
+		}
+
+		private function initTextfield():void
+		{
+			this.textField = new TextFieldDisplayConcrete().setSize(16).setColor(0xFFFFFF);
+			this.textField.setBold(true);
+			this.textField.setStringBuilder(new LineBuilder().setParams(TextKey.TEXTPANEL_GIFTCHESTISEMPTY));
+			this.textField.filters = [DropShadowFilterPlugin.DEFAULT_FILTER];
+			addChild(this.textField);
+		}
+
+	}
+}//package kabam.rotmg.game.view
 

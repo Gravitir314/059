@@ -1,7 +1,7 @@
 ﻿//kabam.rotmg.ui.commands.ChooseNameCommand
 
 package kabam.rotmg.ui.commands
-	{
+{
 	import com.company.assembleegameclient.account.ui.NewChooseNameFrame;
 
 	import flash.display.Sprite;
@@ -11,29 +11,26 @@ package kabam.rotmg.ui.commands
 	import kabam.rotmg.ui.view.ChooseNameRegisterDialog;
 
 	public class ChooseNameCommand
+	{
+
+		[Inject]
+		public var account:Account;
+		[Inject]
+		public var openDialog:OpenDialogSignal;
+
+		public function execute():void
 		{
-
-			[Inject]
-			public var account:Account;
-			[Inject]
-			public var openDialog:OpenDialogSignal;
-
-
-			public function execute():void
+			var _local_1:Sprite;
+			if (this.account.isRegistered())
 			{
-				var _local_1:Sprite;
-				if (this.account.isRegistered())
-				{
-					_local_1 = new NewChooseNameFrame();
-				}
-				else
-				{
-					_local_1 = new ChooseNameRegisterDialog();
-				}
-				this.openDialog.dispatch(_local_1);
+				_local_1 = new NewChooseNameFrame();
+			} else
+			{
+				_local_1 = new ChooseNameRegisterDialog();
 			}
-
-
+			this.openDialog.dispatch(_local_1);
 		}
-	}//package kabam.rotmg.ui.commands
+
+	}
+}//package kabam.rotmg.ui.commands
 

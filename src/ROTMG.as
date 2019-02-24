@@ -1,7 +1,7 @@
 ﻿//WebMain
 
 package
-	{
+{
 	import com.company.assembleegameclient.parameters.Parameters;
 	import com.company.assembleegameclient.util.AssetLoader;
 	import com.company.assembleegameclient.util.StageProxy;
@@ -68,129 +68,126 @@ package
 	import zfn.xinput.ControllerHandler;
 
 	public class ROTMG extends Sprite
+	{
+
+		public static var STAGE:Stage;
+		public static var USER_AGENT:String = "None";
+		public static var sWidth:Number = 800;
+		public static var sHeight:Number = 600;
+		public static var focus:Boolean = true;
+
+		protected var context:IContext;
+
+		public function ROTMG()
 		{
-
-			public static var STAGE:Stage;
-			public static var USER_AGENT:String = "None";
-			public static var sWidth:Number = 800;
-			public static var sHeight:Number = 600;
-			public static var focus:Boolean = true;
-
-			protected var context:IContext;
-
-			public function ROTMG()
+			if (stage)
 			{
-				if (stage)
-				{
-					stage.addEventListener(Event.RESIZE, this.onStageResize, false, 0, true);
-					this.setup();
-				}
-				else
-				{
-					addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage, false, 0, true);
-				}
-			}
-
-			private function onAddedToStage(_arg_1:Event):void
-			{
-				removeEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
 				stage.addEventListener(Event.RESIZE, this.onStageResize, false, 0, true);
 				this.setup();
-			}
-
-			public function onStageResize(_arg_1:Event):void
+			} else
 			{
-				if (stage.scaleMode == StageScaleMode.NO_SCALE)
-				{
-					this.scaleX = (stage.stageWidth / 800);
-					this.scaleY = (stage.stageHeight / 600);
-					this.x = ((800 - stage.stageWidth) >> 1);
-					this.y = ((600 - stage.stageHeight) >> 1);
-				}
-				else
-				{
-					this.scaleX = 1;
-					this.scaleY = 1;
-					this.x = 0;
-					this.y = 0;
-				}
-				sWidth = stage.stageWidth;
-				sHeight = stage.stageHeight;
+				addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage, false, 0, true);
 			}
-
-			private function setup():void
-			{
-				STAGE = stage;
-				stage.scaleMode = StageScaleMode.NO_SCALE;
-				this.hackParameters();
-				GameServerConnectionConcrete.parsePackets();
-				this.createContext();
-				new AssetLoader().load();
-				setupController();
-				this.context.injector.getInstance(StartupSignal).dispatch();
-				this.configureForAirIfDesktopPlayer();
-				UIUtils.toggleQuality(Parameters.data_.uiQuality);
-				addFocusListeners();
-			}
-
-			private function setupController():void
-			{
-				ControllerHandler.instance = new ControllerHandler();
-				ControllerHandler.instance.gameInput = new GameInput();
-				ControllerHandler.instance.gameInput.addEventListener("deviceAdded", ControllerHandler.instance.deviceAdded);
-				ControllerHandler.instance.gameInput.addEventListener("deviceRemoved", ControllerHandler.instance.deviceRemoved);
-				if (Parameters.data_.useControllerNumber > GameInput.numDevices)
-				{
-					Parameters.data_.useControllerNumber = 0;
-				}
-				if (GameInput.numDevices > 0)
-				{
-					ControllerHandler.instance.controller = GameInput.getDeviceAt(0);
-					ControllerHandler.instance.controls = new Vector.<Number>();
-				}
-			}
-
-			private function addFocusListeners():void
-			{
-				stage.addEventListener(Event.ACTIVATE, this.onActivate, false, 0, true);
-				stage.addEventListener(Event.DEACTIVATE, this.onDeactivate, false, 0, true);
-			}
-
-			private function onActivate(_arg_1:Event):void
-			{
-				focus = true;
-			}
-
-			private function onDeactivate(_arg_1:Event):void
-			{
-				focus = false;
-			}
-
-			private function hackParameters():void
-			{
-				Parameters.root = stage.root;
-			}
-
-			private function createContext():void
-			{
-				this.context = new StaticInjectorContext();
-				this.context.injector.map(LoaderInfo).toValue(root.stage.root.loaderInfo);
-				var _local_1:StageProxy = new StageProxy(this);
-				this.context.injector.map(StageProxy).toValue(_local_1);
-				this.context.extend(MVCSBundle).extend(SignalCommandMapExtension).configure(BuildConfig).configure(StartupConfig).configure(NetConfig).configure(AssetsConfig).configure(DialogsConfig).configure(EnvironmentConfig).configure(ApplicationConfig).configure(LanguageConfig).configure(TextConfig).configure(AppEngineConfig).configure(AccountConfig).configure(ErrorConfig).configure(CoreConfig).configure(ApplicationSpecificConfig).configure(DeathConfig).configure(CharactersConfig).configure(ServersConfig).configure(GameConfig).configure(UIConfig).configure(MiniMapConfig).configure(LegendsConfig).configure(NewsConfig).configure(FameConfig).configure(TooltipsConfig).configure(PromotionsConfig).configure(ProTipConfig).configure(MapLoadingConfig).configure(ClassesConfig).configure(PackageConfig).configure(PetsConfig).configure(DailyLoginConfig).configure(Stage3DConfig).configure(ArenaConfig).configure(ExternalConfig).configure(MysteryBoxConfig).configure(FortuneConfig).configure(DailyQuestsConfig).configure(SocialConfig).configure(NexusShopConfig).configure(ToSConfig).configure(SupportCampaignConfig).configure(this);
-				this.context.logLevel = 32;
-			}
-
-			private function configureForAirIfDesktopPlayer():void
-			{
-				if (Capabilities.playerType == "Desktop")
-				{
-					Parameters.data_.fullscreenMode = false;
-					Parameters.save();
-				}
-			}
-
-
 		}
-	}//package
+
+		private function onAddedToStage(_arg_1:Event):void
+		{
+			removeEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
+			stage.addEventListener(Event.RESIZE, this.onStageResize, false, 0, true);
+			this.setup();
+		}
+
+		public function onStageResize(_arg_1:Event):void
+		{
+			if (stage.scaleMode == StageScaleMode.NO_SCALE)
+			{
+				this.scaleX = (stage.stageWidth / 800);
+				this.scaleY = (stage.stageHeight / 600);
+				this.x = ((800 - stage.stageWidth) >> 1);
+				this.y = ((600 - stage.stageHeight) >> 1);
+			} else
+			{
+				this.scaleX = 1;
+				this.scaleY = 1;
+				this.x = 0;
+				this.y = 0;
+			}
+			sWidth = stage.stageWidth;
+			sHeight = stage.stageHeight;
+		}
+
+		private function setup():void
+		{
+			STAGE = stage;
+			stage.scaleMode = StageScaleMode.NO_SCALE;
+			this.hackParameters();
+			GameServerConnectionConcrete.parsePackets();
+			this.createContext();
+			new AssetLoader().load();
+			setupController();
+			this.context.injector.getInstance(StartupSignal).dispatch();
+			this.configureForAirIfDesktopPlayer();
+			UIUtils.toggleQuality(Parameters.data_.uiQuality);
+			addFocusListeners();
+		}
+
+		private function setupController():void
+		{
+			ControllerHandler.instance = new ControllerHandler();
+			ControllerHandler.instance.gameInput = new GameInput();
+			ControllerHandler.instance.gameInput.addEventListener("deviceAdded", ControllerHandler.instance.deviceAdded);
+			ControllerHandler.instance.gameInput.addEventListener("deviceRemoved", ControllerHandler.instance.deviceRemoved);
+			if (Parameters.data_.useControllerNumber > GameInput.numDevices)
+			{
+				Parameters.data_.useControllerNumber = 0;
+			}
+			if (GameInput.numDevices > 0)
+			{
+				ControllerHandler.instance.controller = GameInput.getDeviceAt(0);
+				ControllerHandler.instance.controls = new Vector.<Number>();
+			}
+		}
+
+		private function addFocusListeners():void
+		{
+			stage.addEventListener(Event.ACTIVATE, this.onActivate, false, 0, true);
+			stage.addEventListener(Event.DEACTIVATE, this.onDeactivate, false, 0, true);
+		}
+
+		private function onActivate(_arg_1:Event):void
+		{
+			focus = true;
+		}
+
+		private function onDeactivate(_arg_1:Event):void
+		{
+			focus = false;
+		}
+
+		private function hackParameters():void
+		{
+			Parameters.root = stage.root;
+		}
+
+		private function createContext():void
+		{
+			this.context = new StaticInjectorContext();
+			this.context.injector.map(LoaderInfo).toValue(root.stage.root.loaderInfo);
+			var _local_1:StageProxy = new StageProxy(this);
+			this.context.injector.map(StageProxy).toValue(_local_1);
+			this.context.extend(MVCSBundle).extend(SignalCommandMapExtension).configure(BuildConfig).configure(StartupConfig).configure(NetConfig).configure(AssetsConfig).configure(DialogsConfig).configure(EnvironmentConfig).configure(ApplicationConfig).configure(LanguageConfig).configure(TextConfig).configure(AppEngineConfig).configure(AccountConfig).configure(ErrorConfig).configure(CoreConfig).configure(ApplicationSpecificConfig).configure(DeathConfig).configure(CharactersConfig).configure(ServersConfig).configure(GameConfig).configure(UIConfig).configure(MiniMapConfig).configure(LegendsConfig).configure(NewsConfig).configure(FameConfig).configure(TooltipsConfig).configure(PromotionsConfig).configure(ProTipConfig).configure(MapLoadingConfig).configure(ClassesConfig).configure(PackageConfig).configure(PetsConfig).configure(DailyLoginConfig).configure(Stage3DConfig).configure(ArenaConfig).configure(ExternalConfig).configure(MysteryBoxConfig).configure(FortuneConfig).configure(DailyQuestsConfig).configure(SocialConfig).configure(NexusShopConfig).configure(ToSConfig).configure(SupportCampaignConfig).configure(this);
+			this.context.logLevel = 32;
+		}
+
+		private function configureForAirIfDesktopPlayer():void
+		{
+			if (Capabilities.playerType == "Desktop")
+			{
+				Parameters.data_.fullscreenMode = false;
+				Parameters.save();
+			}
+		}
+
+	}
+}//package
 

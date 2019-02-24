@@ -1,7 +1,7 @@
 ﻿//kabam.rotmg.dailyLogin.config.DailyLoginConfig
 
 package kabam.rotmg.dailyLogin.config
-	{
+{
 	import io.decagames.rotmg.pets.tasks.GetOwnedPetSkinsTask;
 
 	import kabam.rotmg.dailyLogin.commands.ShowDailyCalendarPopupCommand;
@@ -27,31 +27,29 @@ package kabam.rotmg.dailyLogin.config
 	import robotlegs.bender.framework.api.IConfig;
 
 	public class DailyLoginConfig implements IConfig
+	{
+
+		[Inject]
+		public var injector:Injector;
+		[Inject]
+		public var mediatorMap:IMediatorMap;
+		[Inject]
+		public var commandMap:ISignalCommandMap;
+
+		public function configure():void
 		{
-
-			[Inject]
-			public var injector:Injector;
-			[Inject]
-			public var mediatorMap:IMediatorMap;
-			[Inject]
-			public var commandMap:ISignalCommandMap;
-
-
-			public function configure():void
-			{
-				this.mediatorMap.map(DailyLoginPanel).toMediator(DailyLoginPanelMediator);
-				this.mediatorMap.map(DailyLoginModal).toMediator(DailyLoginModalMediator);
-				this.mediatorMap.map(CalendarView).toMediator(CalendarViewMediator);
-				this.mediatorMap.map(CalendarDayBox).toMediator(CalendarDayBoxMediator);
-				this.mediatorMap.map(CalendarTabsView).toMediator(CalendarTabsViewMediator);
-				this.injector.map(FetchPlayerCalendarTask);
-				this.injector.map(GetOwnedPetSkinsTask);
-				this.injector.map(DailyLoginModel).asSingleton();
-				this.injector.map(ClaimDailyRewardResponseSignal).asSingleton();
-				this.commandMap.map(ShowDailyCalendarPopupSignal).toCommand(ShowDailyCalendarPopupCommand);
-			}
-
-
+			this.mediatorMap.map(DailyLoginPanel).toMediator(DailyLoginPanelMediator);
+			this.mediatorMap.map(DailyLoginModal).toMediator(DailyLoginModalMediator);
+			this.mediatorMap.map(CalendarView).toMediator(CalendarViewMediator);
+			this.mediatorMap.map(CalendarDayBox).toMediator(CalendarDayBoxMediator);
+			this.mediatorMap.map(CalendarTabsView).toMediator(CalendarTabsViewMediator);
+			this.injector.map(FetchPlayerCalendarTask);
+			this.injector.map(GetOwnedPetSkinsTask);
+			this.injector.map(DailyLoginModel).asSingleton();
+			this.injector.map(ClaimDailyRewardResponseSignal).asSingleton();
+			this.commandMap.map(ShowDailyCalendarPopupSignal).toCommand(ShowDailyCalendarPopupCommand);
 		}
-	}//package kabam.rotmg.dailyLogin.config
+
+	}
+}//package kabam.rotmg.dailyLogin.config
 

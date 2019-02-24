@@ -1,7 +1,7 @@
 ﻿//kabam.rotmg.text.TextConfig
 
 package kabam.rotmg.text
-	{
+{
 	import com.company.ui.BaseSimpleText;
 
 	import kabam.rotmg.application.api.ApplicationSetup;
@@ -19,31 +19,29 @@ package kabam.rotmg.text
 	import robotlegs.bender.framework.api.IConfig;
 
 	public class TextConfig implements IConfig
+	{
+
+		[Inject]
+		public var injector:Injector;
+		[Inject]
+		public var mediatorMap:IMediatorMap;
+		[Inject]
+		public var applicationSetup:ApplicationSetup;
+
+		public function configure():void
 		{
-
-			[Inject]
-			public var injector:Injector;
-			[Inject]
-			public var mediatorMap:IMediatorMap;
-			[Inject]
-			public var applicationSetup:ApplicationSetup;
-
-
-			public function configure():void
-			{
-				this.injector.map(FontModel).asSingleton();
-				this.mapTextFieldProvider();
-				this.mediatorMap.map(TextFieldDisplay).toMediator(TextFieldDisplayMediator);
-				this.mediatorMap.map(BaseSimpleText).toMediator(BaseSimpleTextMediator);
-				this.injector.map(BitmapTextFactory);
-			}
-
-			private function mapTextFieldProvider():void
-			{
-				this.injector.map(TextAndMapProvider).toType(DebugTextAndMapProvider);
-			}
-
-
+			this.injector.map(FontModel).asSingleton();
+			this.mapTextFieldProvider();
+			this.mediatorMap.map(TextFieldDisplay).toMediator(TextFieldDisplayMediator);
+			this.mediatorMap.map(BaseSimpleText).toMediator(BaseSimpleTextMediator);
+			this.injector.map(BitmapTextFactory);
 		}
-	}//package kabam.rotmg.text
+
+		private function mapTextFieldProvider():void
+		{
+			this.injector.map(TextAndMapProvider).toType(DebugTextAndMapProvider);
+		}
+
+	}
+}//package kabam.rotmg.text
 

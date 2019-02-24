@@ -1,7 +1,7 @@
 ﻿//kabam.rotmg.protip.ProTipConfig
 
 package kabam.rotmg.protip
-	{
+{
 	import kabam.rotmg.protip.commands.ShowProTipCommand;
 	import kabam.rotmg.protip.model.EmbeddedProTipModel;
 	import kabam.rotmg.protip.model.IProTipModel;
@@ -14,22 +14,20 @@ package kabam.rotmg.protip
 	import robotlegs.bender.framework.api.IConfig;
 
 	public class ProTipConfig implements IConfig
+	{
+
+		[Inject]
+		public var injector:Injector;
+		[Inject]
+		public var commandMap:ISignalCommandMap;
+
+		public function configure():void
 		{
-
-			[Inject]
-			public var injector:Injector;
-			[Inject]
-			public var commandMap:ISignalCommandMap;
-
-
-			public function configure():void
-			{
-				this.injector.map(ProTipView).asSingleton();
-				this.injector.map(IProTipModel).toSingleton(EmbeddedProTipModel);
-				this.commandMap.map(ShowProTipSignal).toCommand(ShowProTipCommand);
-			}
-
-
+			this.injector.map(ProTipView).asSingleton();
+			this.injector.map(IProTipModel).toSingleton(EmbeddedProTipModel);
+			this.commandMap.map(ShowProTipSignal).toCommand(ShowProTipCommand);
 		}
-	}//package kabam.rotmg.protip
+
+	}
+}//package kabam.rotmg.protip
 

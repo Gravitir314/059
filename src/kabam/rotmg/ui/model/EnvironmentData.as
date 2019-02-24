@@ -1,15 +1,14 @@
 ﻿//kabam.rotmg.ui.model.EnvironmentData
 
 package kabam.rotmg.ui.model
-	{
+{
 	public class EnvironmentData
-		{
+	{
 
-			public var isDesktop:Boolean;
-			public var canMapEdit:Boolean;
-			public var buildLabel:String;
+		public var isDesktop:Boolean;
+		public var canMapEdit:Boolean;
+		public var buildLabel:String;
 
-
-		}
-	}//package kabam.rotmg.ui.model
+	}
+}//package kabam.rotmg.ui.model
 

@@ -1,7 +1,7 @@
 ﻿//io.decagames.rotmg.nexusShop.NexusShopPopupView
 
 package io.decagames.rotmg.nexusShop
-	{
+{
 	import com.company.assembleegameclient.objects.SellableObject;
 	import com.company.assembleegameclient.util.FilterUtil;
 
@@ -24,162 +24,159 @@ package io.decagames.rotmg.nexusShop
 	import org.osflash.signals.Signal;
 
 	public class NexusShopPopupView extends ModalPopup
+	{
+
+		public static const TITLE:String = "Purchase";
+		public static const WIDTH:int = 300;
+		public static const HEIGHT:int = 170;
+
+		private var availableInventoryNumber:int;
+		private var owner_:SellableObject;
+		public var buyItem:Signal;
+		public var buttonWidth:int;
+		public var descriptionLabel:UILabel;
+		private var nameText_:TextFieldDisplayConcrete;
+		public var itemLabel:UILabel;
+		private var quantity_:int = 1;
+		private var buySectionContainer:Sprite;
+		public var buyButton:ShopBuyButton;
+		public var spinner:FixedNumbersSpinner;
+		private var buyButtonBackground:SliceScalingBitmap;
+
+		public function NexusShopPopupView(_arg_1:Signal, _arg_2:SellableObject, _arg_3:Number, _arg_4:int)
 		{
-
-			public static const TITLE:String = "Purchase";
-			public static const WIDTH:int = 300;
-			public static const HEIGHT:int = 170;
-
-			private var availableInventoryNumber:int;
-			private var owner_:SellableObject;
-			public var buyItem:Signal;
-			public var buttonWidth:int;
-			public var descriptionLabel:UILabel;
-			private var nameText_:TextFieldDisplayConcrete;
-			public var itemLabel:UILabel;
-			private var quantity_:int = 1;
-			private var buySectionContainer:Sprite;
-			public var buyButton:ShopBuyButton;
-			public var spinner:FixedNumbersSpinner;
-			private var buyButtonBackground:SliceScalingBitmap;
-
-			public function NexusShopPopupView(_arg_1:Signal, _arg_2:SellableObject, _arg_3:Number, _arg_4:int)
-			{
-				super(300, 170, "Purchase", DefaultLabelFormat.defaultSmallPopupTitle, new Rectangle(0, 0, 525, 230), 0);
-				this.buyItem = _arg_1;
-				this.owner_ = _arg_2;
-				this.buttonWidth = _arg_3;
-				this.availableInventoryNumber = _arg_4;
-				this.descriptionLabel = new UILabel();
-				DefaultLabelFormat.infoTooltipText(this.descriptionLabel, 0x999999);
-				this.descriptionLabel.text = "Are you sure that you want to buy this item?";
-				addChild(this.descriptionLabel);
-				this.descriptionLabel.x = ((300 / 2) - (this.descriptionLabel.width / 2));
-				this.descriptionLabel.y = 10;
-				this.addItemContainer();
-				this.addBuyButton();
-				this.filters = FilterUtil.getStandardDropShadowFilter();
-			}
-
-			private function addItemContainer():void
-			{
-				var _local_1:ItemWithTooltip;
-				if (this.owner_.getSellableType() != -1)
-				{
-					_local_1 = new ItemWithTooltip(this.owner_.getSellableType(), 80);
-				}
-				_local_1.x = ((300 / 2) - (_local_1.width / 2));
-				_local_1.y = (((170 / 2) - _local_1.height) + 5);
-				addChild(_local_1);
-				var _local_2:String = this.owner_.soldObjectName();
-				this.nameText_ = new TextFieldDisplayConcrete().setSize(14).setColor(0xFFFFFF);
-				this.nameText_.setBold(true);
-				this.nameText_.setStringBuilder(new LineBuilder().setParams(_local_2));
-				this.nameText_.setAutoSize("center");
-				addChild(this.nameText_);
-				this.nameText_.x = ((300 / 2) - (this.nameText_.width / 2));
-				this.nameText_.y = (_local_1.y + 55);
-			}
-
-			private function addBuyButton():void
-			{
-				var _local_1:int;
-				this.buySectionContainer = new Sprite();
-				this.buySectionContainer.alpha = 1;
-				this.buyButton = new ShopBuyButton(this.owner_.price_, this.owner_.currency_);
-				this.buyButton.showCampaignTooltip = true;
-				this.buyButton.width = 95;
-				this.buyButtonBackground = TextureParser.instance.getSliceScalingBitmap("UI", "buy_button_background", (this.buyButton.width + 60));
-				var _local_2:Vector.<int> = new Vector.<int>();
-				if (this.availableInventoryNumber != 0)
-				{
-					_local_1 = 1;
-					while (_local_1 <= this.availableInventoryNumber)
-					{
-						_local_2.push(_local_1);
-						_local_1++;
-					}
-				}
-				else
-				{
-					_local_2.push(1);
-					this.buyButton.disabled = true;
-				}
-				this.spinner = new FixedNumbersSpinner(TextureParser.instance.getSliceScalingBitmap("UI", "spinner_up_arrow"), 0, _local_2, "x");
-				this.buySectionContainer.addChild(this.buyButtonBackground);
-				this.buySectionContainer.addChild(this.spinner);
-				this.buySectionContainer.addChild(this.buyButton);
-				this.buySectionContainer.x = 100;
-				this.buySectionContainer.y = (170 - 45);
-				this.buyButton.x = ((this.buyButtonBackground.width - this.buyButton.width) - 6);
-				this.buyButton.y = 4;
-				this.spinner.y = -2;
-				this.spinner.x = 32;
-				addChild(this.buySectionContainer);
-				this.buySectionContainer.x = Math.round(((300 - this.buySectionContainer.width) / 2));
-				this.spinner.upArrow.addEventListener("click", this.countUp);
-				this.spinner.downArrow.addEventListener("click", this.countDown);
-				this.refreshArrowDisable();
-			}
-
-			private function refreshArrowDisable():void
-			{
-				this.spinner.downArrow.alpha = ((this.quantity_ == 1) ? 0.5 : 1);
-				if (this.availableInventoryNumber != 0)
-				{
-					this.spinner.upArrow.alpha = ((this.quantity_ == this.availableInventoryNumber) ? 0.5 : 1);
-				}
-				else
-				{
-					this.spinner.upArrow.alpha = 0.5;
-				}
-			}
-
-			private function countUp(_arg_1:MouseEvent):void
-			{
-				if (this.quantity_ < this.availableInventoryNumber)
-				{
-					this.quantity_ = (this.quantity_ + 1);
-				}
-				this.refreshValues();
-			}
-
-			private function countDown(_arg_1:MouseEvent):void
-			{
-				if (this.quantity_ > 1)
-				{
-					this.quantity_ = (this.quantity_ - 1);
-				}
-				this.refreshValues();
-			}
-
-			private function refreshValues():void
-			{
-				this.refreshArrowDisable();
-				this.buyButton.price = (this.owner_.price_ * this.quantity_);
-			}
-
-			public function get getBuyButton():ShopBuyButton
-			{
-				return (this.buyButton);
-			}
-
-			public function get getBuyItem():Signal
-			{
-				return (this.buyItem);
-			}
-
-			public function get getOwner():SellableObject
-			{
-				return (this.owner_);
-			}
-
-			public function get getQuantity():int
-			{
-				return (this.quantity_);
-			}
-
-
+			super(300, 170, "Purchase", DefaultLabelFormat.defaultSmallPopupTitle, new Rectangle(0, 0, 525, 230), 0);
+			this.buyItem = _arg_1;
+			this.owner_ = _arg_2;
+			this.buttonWidth = _arg_3;
+			this.availableInventoryNumber = _arg_4;
+			this.descriptionLabel = new UILabel();
+			DefaultLabelFormat.infoTooltipText(this.descriptionLabel, 0x999999);
+			this.descriptionLabel.text = "Are you sure that you want to buy this item?";
+			addChild(this.descriptionLabel);
+			this.descriptionLabel.x = ((300 / 2) - (this.descriptionLabel.width / 2));
+			this.descriptionLabel.y = 10;
+			this.addItemContainer();
+			this.addBuyButton();
+			this.filters = FilterUtil.getStandardDropShadowFilter();
 		}
-	}//package io.decagames.rotmg.nexusShop
+
+		private function addItemContainer():void
+		{
+			var _local_1:ItemWithTooltip;
+			if (this.owner_.getSellableType() != -1)
+			{
+				_local_1 = new ItemWithTooltip(this.owner_.getSellableType(), 80);
+			}
+			_local_1.x = ((300 / 2) - (_local_1.width / 2));
+			_local_1.y = (((170 / 2) - _local_1.height) + 5);
+			addChild(_local_1);
+			var _local_2:String = this.owner_.soldObjectName();
+			this.nameText_ = new TextFieldDisplayConcrete().setSize(14).setColor(0xFFFFFF);
+			this.nameText_.setBold(true);
+			this.nameText_.setStringBuilder(new LineBuilder().setParams(_local_2));
+			this.nameText_.setAutoSize("center");
+			addChild(this.nameText_);
+			this.nameText_.x = ((300 / 2) - (this.nameText_.width / 2));
+			this.nameText_.y = (_local_1.y + 55);
+		}
+
+		private function addBuyButton():void
+		{
+			var _local_1:int;
+			this.buySectionContainer = new Sprite();
+			this.buySectionContainer.alpha = 1;
+			this.buyButton = new ShopBuyButton(this.owner_.price_, this.owner_.currency_);
+			this.buyButton.showCampaignTooltip = true;
+			this.buyButton.width = 95;
+			this.buyButtonBackground = TextureParser.instance.getSliceScalingBitmap("UI", "buy_button_background", (this.buyButton.width + 60));
+			var _local_2:Vector.<int> = new Vector.<int>();
+			if (this.availableInventoryNumber != 0)
+			{
+				_local_1 = 1;
+				while (_local_1 <= this.availableInventoryNumber)
+				{
+					_local_2.push(_local_1);
+					_local_1++;
+				}
+			} else
+			{
+				_local_2.push(1);
+				this.buyButton.disabled = true;
+			}
+			this.spinner = new FixedNumbersSpinner(TextureParser.instance.getSliceScalingBitmap("UI", "spinner_up_arrow"), 0, _local_2, "x");
+			this.buySectionContainer.addChild(this.buyButtonBackground);
+			this.buySectionContainer.addChild(this.spinner);
+			this.buySectionContainer.addChild(this.buyButton);
+			this.buySectionContainer.x = 100;
+			this.buySectionContainer.y = (170 - 45);
+			this.buyButton.x = ((this.buyButtonBackground.width - this.buyButton.width) - 6);
+			this.buyButton.y = 4;
+			this.spinner.y = -2;
+			this.spinner.x = 32;
+			addChild(this.buySectionContainer);
+			this.buySectionContainer.x = Math.round(((300 - this.buySectionContainer.width) / 2));
+			this.spinner.upArrow.addEventListener("click", this.countUp);
+			this.spinner.downArrow.addEventListener("click", this.countDown);
+			this.refreshArrowDisable();
+		}
+
+		private function refreshArrowDisable():void
+		{
+			this.spinner.downArrow.alpha = ((this.quantity_ == 1) ? 0.5 : 1);
+			if (this.availableInventoryNumber != 0)
+			{
+				this.spinner.upArrow.alpha = ((this.quantity_ == this.availableInventoryNumber) ? 0.5 : 1);
+			} else
+			{
+				this.spinner.upArrow.alpha = 0.5;
+			}
+		}
+
+		private function countUp(_arg_1:MouseEvent):void
+		{
+			if (this.quantity_ < this.availableInventoryNumber)
+			{
+				this.quantity_ = (this.quantity_ + 1);
+			}
+			this.refreshValues();
+		}
+
+		private function countDown(_arg_1:MouseEvent):void
+		{
+			if (this.quantity_ > 1)
+			{
+				this.quantity_ = (this.quantity_ - 1);
+			}
+			this.refreshValues();
+		}
+
+		private function refreshValues():void
+		{
+			this.refreshArrowDisable();
+			this.buyButton.price = (this.owner_.price_ * this.quantity_);
+		}
+
+		public function get getBuyButton():ShopBuyButton
+		{
+			return (this.buyButton);
+		}
+
+		public function get getBuyItem():Signal
+		{
+			return (this.buyItem);
+		}
+
+		public function get getOwner():SellableObject
+		{
+			return (this.owner_);
+		}
+
+		public function get getQuantity():int
+		{
+			return (this.quantity_);
+		}
+
+	}
+}//package io.decagames.rotmg.nexusShop
 

@@ -1,17 +1,17 @@
 ﻿//io.decagames.rotmg.supportCampaign.signals.TierSelectedSignal
 
 package io.decagames.rotmg.supportCampaign.signals
-	{
+{
 	import org.osflash.signals.Signal;
 
 	public class TierSelectedSignal extends Signal
+	{
+
+		public function TierSelectedSignal()
 		{
-
-			public function TierSelectedSignal()
-			{
-				super(int);
-			}
-
+			super(int);
 		}
-	}//package io.decagames.rotmg.supportCampaign.signals
+
+	}
+}//package io.decagames.rotmg.supportCampaign.signals
 

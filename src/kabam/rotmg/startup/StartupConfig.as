@@ -1,7 +1,7 @@
 ﻿//kabam.rotmg.startup.StartupConfig
 
 package kabam.rotmg.startup
-	{
+{
 	import kabam.rotmg.startup.control.StartupCommand;
 	import kabam.rotmg.startup.control.StartupSequence;
 	import kabam.rotmg.startup.control.StartupSignal;
@@ -12,21 +12,19 @@ package kabam.rotmg.startup
 	import robotlegs.bender.framework.api.IConfig;
 
 	public class StartupConfig implements IConfig
+	{
+
+		[Inject]
+		public var injector:Injector;
+		[Inject]
+		public var commandMap:ISignalCommandMap;
+
+		public function configure():void
 		{
-
-			[Inject]
-			public var injector:Injector;
-			[Inject]
-			public var commandMap:ISignalCommandMap;
-
-
-			public function configure():void
-			{
-				this.injector.map(StartupSequence).asSingleton();
-				this.commandMap.map(StartupSignal).toCommand(StartupCommand);
-			}
-
-
+			this.injector.map(StartupSequence).asSingleton();
+			this.commandMap.map(StartupSignal).toCommand(StartupCommand);
 		}
-	}//package kabam.rotmg.startup
+
+	}
+}//package kabam.rotmg.startup
 

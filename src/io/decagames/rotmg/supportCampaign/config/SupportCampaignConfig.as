@@ -1,7 +1,7 @@
 ﻿//io.decagames.rotmg.supportCampaign.config.SupportCampaignConfig
 
 package io.decagames.rotmg.supportCampaign.config
-	{
+{
 	import io.decagames.rotmg.supportCampaign.data.SupporterCampaignModel;
 	import io.decagames.rotmg.supportCampaign.signals.TierSelectedSignal;
 	import io.decagames.rotmg.supportCampaign.signals.UpdateCampaignProgress;
@@ -25,29 +25,27 @@ package io.decagames.rotmg.supportCampaign.config
 	import robotlegs.bender.framework.api.IConfig;
 
 	public class SupportCampaignConfig implements IConfig
+	{
+
+		[Inject]
+		public var mediatorMap:IMediatorMap;
+		[Inject]
+		public var injector:Injector;
+
+		public function configure():void
 		{
-
-			[Inject]
-			public var mediatorMap:IMediatorMap;
-			[Inject]
-			public var injector:Injector;
-
-
-			public function configure():void
-			{
-				this.injector.map(SupporterCampaignModel).asSingleton();
-				this.injector.map(GetCampaignStatusTask);
-				this.injector.map(UpdateCampaignProgress).asSingleton();
-				this.injector.map(TierSelectedSignal).asSingleton();
-				this.mediatorMap.map(SupporterShopTabView).toMediator(SupporterShopTabMediator);
-				this.mediatorMap.map(DonatePanel).toMediator(DonatePanelMediator);
-				this.mediatorMap.map(DonateConfirmationPopup).toMediator(DonateConfirmationPopupMediator);
-				this.mediatorMap.map(TiersPreview).toMediator(TiersPreviewMediator);
-				this.mediatorMap.map(TierButton).toMediator(TierButtonMediator);
-				this.mediatorMap.map(PointsTooltip).toMediator(PointsTooltipMediator);
-			}
-
-
+			this.injector.map(SupporterCampaignModel).asSingleton();
+			this.injector.map(GetCampaignStatusTask);
+			this.injector.map(UpdateCampaignProgress).asSingleton();
+			this.injector.map(TierSelectedSignal).asSingleton();
+			this.mediatorMap.map(SupporterShopTabView).toMediator(SupporterShopTabMediator);
+			this.mediatorMap.map(DonatePanel).toMediator(DonatePanelMediator);
+			this.mediatorMap.map(DonateConfirmationPopup).toMediator(DonateConfirmationPopupMediator);
+			this.mediatorMap.map(TiersPreview).toMediator(TiersPreviewMediator);
+			this.mediatorMap.map(TierButton).toMediator(TierButtonMediator);
+			this.mediatorMap.map(PointsTooltip).toMediator(PointsTooltipMediator);
 		}
-	}//package io.decagames.rotmg.supportCampaign.config
+
+	}
+}//package io.decagames.rotmg.supportCampaign.config
 
