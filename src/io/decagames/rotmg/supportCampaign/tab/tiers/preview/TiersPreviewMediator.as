@@ -144,7 +144,6 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
 				this.view.rightArrow.alpha = 0.2;
 			}
 			this.showTier(_arg_1);
-			//this.view.showTier(_arg_1, this.model.rank, this.model.claimed);
 			this.view.selectAnimation();
 			this.checkClaimedTiers();
 		}
@@ -168,7 +167,7 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
 				this.view.leftArrow.disabled = true;
 				this.view.leftArrow.alpha = 0.2;
 			}
-			this.showTier(this.displayedTier);//this.view.showTier(this.displayedTier, this.model.rank, this.model.claimed);
+			this.showTier(this.displayedTier);
 			this.view.selectAnimation();
 			this.checkClaimedTiers();
 			this.selectedSignal.dispatch(this.displayedTier);
@@ -188,7 +187,7 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
 				this.view.rightArrow.disabled = true;
 				this.view.rightArrow.alpha = 0.2;
 			}
-			this.showTier(this.displayedTier);//this.view.showTier(this.displayedTier, this.model.rank, this.model.claimed);
+			this.showTier(this.displayedTier);
 			this.view.selectAnimation();
 			this.checkClaimedTiers();
 			this.selectedSignal.dispatch(this.displayedTier);

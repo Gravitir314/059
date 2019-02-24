@@ -69,7 +69,7 @@ package io.decagames.rotmg.supportCampaign.tab
 		override public function initialize():void
 		{
 			this.updatePointsSignal.add(this.onPointsUpdate);
-			this.showView();//this.view.show(this.hudModel.getPlayerName(), this.model.isUnlocked, this.model.isStarted, this.model.unlockPrice, this.model.donatePointsRatio, this.model.isEnded);
+			this.showView();
 			if (!this.model.isStarted)
 			{
 				this.view.addEventListener("enterFrame", this.updateStartCountdown);
@@ -94,7 +94,7 @@ package io.decagames.rotmg.supportCampaign.tab
 			this.view.updatePoints(this.model.points, this.model.rank);
 			this.view.drawProgress(this.model.points, this.model.rankConfig, this.model.rank, this.model.claimed);
 			this.updateTooltip();
-			this.showTier();//this.view.showTier(this.model.nextClaimableTier, this.model.ranks, this.model.rank, this.model.claimed);
+			this.showTier();
 			this.view.updateTime((this.model.endDate.time - new Date().time));
 		}
 
@@ -127,7 +127,7 @@ package io.decagames.rotmg.supportCampaign.tab
 		private function onPointsUpdate():void
 		{
 			this.view.updatePoints(this.model.points, this.model.rank);
-			this.showTier();//this.view.showTier(this.model.nextClaimableTier, this.model.ranks, this.model.rank, this.model.claimed);
+			this.showTier();
 			this.view.drawProgress(this.model.points, this.model.rankConfig, this.model.rank, this.model.claimed);
 			this.updateTooltip();
 			this.selectedSignal.dispatch(this.model.nextClaimableTier);
@@ -188,14 +188,13 @@ package io.decagames.rotmg.supportCampaign.tab
 					{
 						this.updateUserGold(_local_4.Gold);
 					}
-					this.showView();//this.view.show(null, true, this.model.isStarted, this.model.unlockPrice, this.model.donatePointsRatio, this.model.isEnded);
+					this.showView();/
 					this.model.parseUpdateData(_local_4);
 					this.updateCampaignInformation();
 				}
 				catch (e:Error)
 				{
 					showPopup.dispatch(new ErrorModal(300, "Campaign Error", "General campaign error."));
-					//return;
 				}
 			} else
 			{

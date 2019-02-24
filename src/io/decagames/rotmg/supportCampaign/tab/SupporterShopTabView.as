@@ -34,7 +34,6 @@ package io.decagames.rotmg.supportCampaign.tab
 		private var fieldBackground:SliceScalingBitmap;
 		private var endDateInfo:UILabel;
 		private var tiersPreview:TiersPreview;
-		//private var pointsBitmap:Bitmap;
 		private var progressBar:TiersProgressBar;
 		private var pName:String;
 
@@ -132,12 +131,12 @@ package io.decagames.rotmg.supportCampaign.tab
 		{
 			if (!this.tiersPreview)
 			{
-				this.tiersPreview = new TiersPreview(_arg_1, _arg_2, _arg_3, _arg_4, 530, _arg_5);//this.tiersPreview = new TiersPreview(_arg_1, _arg_2, _arg_3, _arg_4, 530);
+				this.tiersPreview = new TiersPreview(_arg_1, _arg_2, _arg_3, _arg_4, 530, _arg_5);
 				this.tiersPreview.x = (this.background.x + 15);
 				this.tiersPreview.y = (this.background.y + 20);
 				addChild(this.tiersPreview);
 			}
-			this.tiersPreview.showTier(_arg_1, _arg_3, _arg_4, _arg_5);//this.tiersPreview.showTier(_arg_1, _arg_3, _arg_4);
+			this.tiersPreview.showTier(_arg_1, _arg_3, _arg_4, _arg_5);
 		}
 
 		public function drawProgress(_arg_1:int, _arg_2:Vector.<RankVO>, _arg_3:int, _arg_4:int):void

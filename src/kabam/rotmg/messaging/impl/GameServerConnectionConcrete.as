@@ -2868,7 +2868,7 @@ package kabam.rotmg.messaging.impl
 				{
 					return;
 				}
-				this.player.damage(true, _local_4, _local_5, false, null, _arg_1.armorPierce_);//this.player.damage(true, _local_4, _local_5, false, null);
+				this.player.damage(true, _local_4, _local_5, false, null, _arg_1.armorPierce_);
 			}
 			this.aoeAck(gs_.lastUpdate_, this.player.x_, this.player.y_);
 		}

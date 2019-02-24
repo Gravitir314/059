@@ -48,7 +48,6 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
 			this._claimButton = new SliceScalingButton(TextureParser.instance.getSliceScalingBitmap("UI", "generic_green_button"));
 			this._claimButton.setLabel("Claim", DefaultLabelFormat.defaultButtonLabel);
 			this.showTier(_arg_1, _arg_3, _arg_4, _arg_6);
-			//this.showTier(_arg_1, _arg_3, _arg_4)
 			this._rightArrow = new SliceScalingButton(TextureParser.instance.getSliceScalingBitmap("UI", "tier_arrow"));
 			addChild(this._rightArrow);
 			this._rightArrow.x = 533;

@@ -143,7 +143,6 @@ package io.decagames.rotmg.shop
 			this.tabs = new UITabs(590);
 			if (this.supporterModel.hasValidData)
 			{
-				//this.tabs.addTab(new SupporterShopTabView(), true);
 				this.tabs.addTab(new SupporterShopTabView(this.supporterModel.campaignTitle), true);
 			}
 			this.tabs.addTab(this.createMysteryBoxTab(), (!(this.supporterModel.hasValidData)));
