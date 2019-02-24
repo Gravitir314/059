@@ -8,7 +8,6 @@ package kabam.rotmg.game.view
 	import com.company.assembleegameclient.objects.Player;
 
 	import flash.system.System;
-
 	import flash.utils.getTimer;
 
 	import io.decagames.rotmg.pets.signals.ShowPetTooltip;

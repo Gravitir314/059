@@ -1,4 +1,4 @@
-﻿//com.company.assembleegameclient.game.MapUserInput
+﻿﻿//com.company.assembleegameclient.game.MapUserInput
 
 package com.company.assembleegameclient.game
 {

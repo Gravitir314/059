@@ -636,4 +636,32 @@
          <MultiHit/>
       </Projectile>
    </Object>
+   <Object type="0xc51" id="Succubus">
+      <Group>Gods</Group>
+      <Enemy/>
+      <Class>Character</Class>
+      <AnimatedTexture>
+         <File>chars16x16dEncounters</File>
+         <Index>40</Index>
+      </AnimatedTexture>
+      <HitSound>monster/greater_demons_hit</HitSound>
+      <DeathSound>monster/greater_demons_death</DeathSound>
+      <Size>100</Size>
+      <MaxHitPoints>8000</MaxHitPoints>
+      <Defense>12</Defense>
+      <Exp>500</Exp>
+      <Terrain>Mountains</Terrain>
+      <SpawnProb>.3</SpawnProb>
+      <God/>
+      <Flying/>
+      <Projectile id="0">
+         <ObjectId>Succubus Bullet</ObjectId>
+         <Damage>45</Damage>
+         <Speed>50</Speed>
+         <LifetimeMS>2000</LifetimeMS>
+         <Size>60</Size>
+         <ArmorPiercing/>
+         <MultiHit/>
+      </Projectile>
+   </Object>
 </Objects>

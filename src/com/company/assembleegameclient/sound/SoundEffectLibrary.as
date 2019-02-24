@@ -9,11 +9,7 @@ package com.company.assembleegameclient.sound
 	import flash.media.Sound;
 	import flash.media.SoundChannel;
 	import flash.media.SoundTransform;
-	import flash.net.URLRequest;
 	import flash.utils.Dictionary;
-
-	import kabam.rotmg.application.api.ApplicationSetup;
-	import kabam.rotmg.core.StaticInjectorContext;
 
 	import zfn.sound.SoundAssets;
 	import zfn.sound.SoundCustom;

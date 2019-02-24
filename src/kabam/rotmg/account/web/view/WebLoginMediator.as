@@ -10,7 +10,6 @@ package kabam.rotmg.account.web.view
 	import kabam.rotmg.core.signals.TaskErrorSignal;
 	import kabam.rotmg.dialogs.control.CloseDialogsSignal;
 	import kabam.rotmg.dialogs.control.OpenDialogSignal;
-	import kabam.rotmg.language.model.StringMap;
 
 	import robotlegs.bender.bundles.mvcs.Mediator;
 

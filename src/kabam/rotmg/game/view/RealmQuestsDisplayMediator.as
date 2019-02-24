@@ -8,8 +8,8 @@ package kabam.rotmg.game.view
 	import kabam.rotmg.ui.signals.RealmHeroesSignal;
 	import kabam.rotmg.ui.signals.RealmOryxSignal;
 	import kabam.rotmg.ui.signals.RealmQuestLevelSignal;
-	import kabam.rotmg.ui.signals.ToggleRealmQuestsDisplaySignal;
 	import kabam.rotmg.ui.signals.RealmServerNameSignal;
+	import kabam.rotmg.ui.signals.ToggleRealmQuestsDisplaySignal;
 
 	import robotlegs.bender.bundles.mvcs.Mediator;
 

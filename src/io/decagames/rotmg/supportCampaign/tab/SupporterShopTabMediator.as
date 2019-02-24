@@ -1,4 +1,4 @@
-﻿//io.decagames.rotmg.supportCampaign.tab.SupporterShopTabMediator
+﻿﻿//io.decagames.rotmg.supportCampaign.tab.SupporterShopTabMediator
 
 package io.decagames.rotmg.supportCampaign.tab
 {
@@ -69,7 +69,7 @@ package io.decagames.rotmg.supportCampaign.tab
 		override public function initialize():void
 		{
 			this.updatePointsSignal.add(this.onPointsUpdate);
-			this.view.show(this.hudModel.getPlayerName(), this.model.isUnlocked, this.model.isStarted, this.model.unlockPrice, this.model.donatePointsRatio, this.model.isEnded);
+			this.showView();
 			if (!this.model.isStarted)
 			{
 				this.view.addEventListener("enterFrame", this.updateStartCountdown);
@@ -84,13 +84,23 @@ package io.decagames.rotmg.supportCampaign.tab
 			}
 		}
 
+		private function showView():void
+		{
+			this.view.show(this.hudModel.getPlayerName(), this.model.isUnlocked, this.model.isStarted, this.model.unlockPrice, this.model.donatePointsRatio, this.model.isEnded);
+		}
+
 		private function updateCampaignInformation():void
 		{
 			this.view.updatePoints(this.model.points, this.model.rank);
 			this.view.drawProgress(this.model.points, this.model.rankConfig, this.model.rank, this.model.claimed);
 			this.updateTooltip();
-			this.view.showTier(this.model.nextClaimableTier, this.model.ranks, this.model.rank, this.model.claimed);
+			this.showTier();
 			this.view.updateTime((this.model.endDate.time - new Date().time));
+		}
+
+		private function showTier():void
+		{
+			this.view.showTier(this.model.nextClaimableTier, this.model.ranks, this.model.rank, this.model.claimed, this.model.getCampaignPictureUrl());
 		}
 
 		private function updateStartCountdown(_arg_1:Event):void
@@ -117,7 +127,7 @@ package io.decagames.rotmg.supportCampaign.tab
 		private function onPointsUpdate():void
 		{
 			this.view.updatePoints(this.model.points, this.model.rank);
-			this.view.showTier(this.model.nextClaimableTier, this.model.ranks, this.model.rank, this.model.claimed);
+			this.showTier();
 			this.view.drawProgress(this.model.points, this.model.rankConfig, this.model.rank, this.model.claimed);
 			this.updateTooltip();
 			this.selectedSignal.dispatch(this.model.nextClaimableTier);
@@ -178,14 +188,13 @@ package io.decagames.rotmg.supportCampaign.tab
 					{
 						this.updateUserGold(_local_4.Gold);
 					}
-					this.view.show(null, true, this.model.isStarted, this.model.unlockPrice, this.model.donatePointsRatio, this.model.isEnded);
+					this.showView();/
 					this.model.parseUpdateData(_local_4);
 					this.updateCampaignInformation();
 				}
 				catch (e:Error)
 				{
 					showPopup.dispatch(new ErrorModal(300, "Campaign Error", "General campaign error."));
-
 				}
 			} else
 			{

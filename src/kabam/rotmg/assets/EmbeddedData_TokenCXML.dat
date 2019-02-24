@@ -290,1829 +290,718 @@
       <Track/>
       <Consumable/>
    </Object>
-   <Object type="0x6CF7" id="Primal Ice x 1">
+   <Object type="0x641E" id="Heart x 1">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x2d</Index>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x6c</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Description>Collect Hearts and exchange them for Love Letters at the Tinkerer... or share them with others!</Description>
+      <Quantity>1</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
+      </ExtraTooltipData>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x641F" id="Heart x 2">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x6c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Hearts and exchange them for Love Letters at the Tinkerer... or share them with others!</Description>
+      <Quantity>2</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
+      </ExtraTooltipData>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6420" id="Heart x 3">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x6c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Hearts and exchange them for Love Letters at the Tinkerer... or share them with others!</Description>
+      <Quantity>3</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
+      </ExtraTooltipData>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6421" id="Heart x 4">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x6c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Hearts and exchange them for Love Letters at the Tinkerer... or share them with others!</Description>
+      <Quantity>4</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
+      </ExtraTooltipData>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6422" id="Heart x 5">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x6c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Hearts and exchange them for Love Letters at the Tinkerer... or share them with others!</Description>
+      <Quantity>5</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
+      </ExtraTooltipData>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6423" id="Heart x 6">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x6c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Hearts and exchange them for Love Letters at the Tinkerer... or share them with others!</Description>
+      <Quantity>6</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
+      </ExtraTooltipData>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6424" id="Heart x 7">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x6c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Hearts and exchange them for Love Letters at the Tinkerer... or share them with others!</Description>
+      <Quantity>7</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
+      </ExtraTooltipData>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6425" id="Heart x 8">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x6c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Hearts and exchange them for Love Letters at the Tinkerer... or share them with others!</Description>
+      <Quantity>8</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
+      </ExtraTooltipData>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6426" id="Heart x 9">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x6c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Hearts and exchange them for Love Letters at the Tinkerer... or share them with others!</Description>
+      <Quantity>9</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
+      </ExtraTooltipData>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x6427" id="Heart x 10">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x6c</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Collect Hearts and exchange them for Love Letters at the Tinkerer... or share them with others!</Description>
+      <Quantity>10</Quantity>
+      <ExtraTooltipData>
+         <EffectInfo name="Stack limit" description="10"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
+      </ExtraTooltipData>
+      <BagType>7</BagType>
+      <Treasure/>
+   </Object>
+   <Object type="0x5b4c" id="Love Letter x 1">
+      <Class>Equipment</Class>
+      <Item/>
+      <Texture>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x69</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>Bring Love Letters to the Tinkerer and exchange them for exclusive rewards!</Description>
       <Quantity>1</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6CF8" id="Primal Ice x 2">
+   <Object type="0x5b4d" id="Love Letter x 2">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x2d</Index>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x69</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Description>Bring Love Letters to the Tinkerer and exchange them for exclusive rewards!</Description>
       <Quantity>2</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6CF9" id="Primal Ice x 3">
+   <Object type="0x5b4e" id="Love Letter x 3">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x2d</Index>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x69</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Description>Bring Love Letters to the Tinkerer and exchange them for exclusive rewards!</Description>
       <Quantity>3</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6CFA" id="Primal Ice x 4">
+   <Object type="0x5b4f" id="Love Letter x 4">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x2d</Index>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x69</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Description>Bring Love Letters to the Tinkerer and exchange them for exclusive rewards!</Description>
       <Quantity>4</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6CFB" id="Primal Ice x 5">
+   <Object type="0x5b50" id="Love Letter x 5">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x2d</Index>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x69</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Description>Bring Love Letters to the Tinkerer and exchange them for exclusive rewards!</Description>
       <Quantity>5</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6CFC" id="Primal Ice x 6">
+   <Object type="0x5b51" id="Love Letter x 6">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x2d</Index>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x69</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Description>Bring Love Letters to the Tinkerer and exchange them for exclusive rewards!</Description>
       <Quantity>6</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6CFD" id="Primal Ice x 7">
+   <Object type="0x5b52" id="Love Letter x 7">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x2d</Index>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x69</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Description>Bring Love Letters to the Tinkerer and exchange them for exclusive rewards!</Description>
       <Quantity>7</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6CFE" id="Primal Ice x 8">
+   <Object type="0x5b53" id="Love Letter x 8">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x2d</Index>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x69</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Description>Bring Love Letters to the Tinkerer and exchange them for exclusive rewards!</Description>
       <Quantity>8</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6CFF" id="Primal Ice x 9">
+   <Object type="0x5b54" id="Love Letter x 9">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x2d</Index>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x69</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Description>Bring Love Letters to the Tinkerer and exchange them for exclusive rewards!</Description>
       <Quantity>9</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6D00" id="Primal Ice x 10">
+   <Object type="0x5b55" id="Love Letter x 10">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x2d</Index>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x69</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Description>Bring Love Letters to the Tinkerer and exchange them for exclusive rewards!</Description>
       <Quantity>10</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6D01" id="Primal Ice x 11">
+   <Object type="0x5b56" id="Love Letter x 11">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x2d</Index>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x69</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Description>Bring Love Letters to the Tinkerer and exchange them for exclusive rewards!</Description>
       <Quantity>11</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6D02" id="Primal Ice x 12">
+   <Object type="0x5b57" id="Love Letter x 12">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x2d</Index>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x69</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Description>Bring Love Letters to the Tinkerer and exchange them for exclusive rewards!</Description>
       <Quantity>12</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6D03" id="Primal Ice x 13">
+   <Object type="0x5b58" id="Love Letter x 13">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x2d</Index>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x69</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Description>Bring Love Letters to the Tinkerer and exchange them for exclusive rewards!</Description>
       <Quantity>13</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6D04" id="Primal Ice x 14">
+   <Object type="0x5b59" id="Love Letter x 14">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x2d</Index>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x69</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Description>Bring Love Letters to the Tinkerer and exchange them for exclusive rewards!</Description>
       <Quantity>14</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6D05" id="Primal Ice x 15">
+   <Object type="0x5b5a" id="Love Letter x 15">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x2d</Index>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x69</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Description>Bring Love Letters to the Tinkerer and exchange them for exclusive rewards!</Description>
       <Quantity>15</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6D06" id="Primal Ice x 16">
+   <Object type="0x5b5b" id="Love Letter x 16">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x2d</Index>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x69</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Description>Bring Love Letters to the Tinkerer and exchange them for exclusive rewards!</Description>
       <Quantity>16</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6D07" id="Primal Ice x 17">
+   <Object type="0x5b5c" id="Love Letter x 17">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x2d</Index>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x69</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Description>Bring Love Letters to the Tinkerer and exchange them for exclusive rewards!</Description>
       <Quantity>17</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6D08" id="Primal Ice x 18">
+   <Object type="0x5b5d" id="Love Letter x 18">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x2d</Index>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x69</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Description>Bring Love Letters to the Tinkerer and exchange them for exclusive rewards!</Description>
       <Quantity>18</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6D09" id="Primal Ice x 19">
+   <Object type="0x5b5e" id="Love Letter x 19">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x2d</Index>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x69</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Description>Bring Love Letters to the Tinkerer and exchange them for exclusive rewards!</Description>
       <Quantity>19</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6D0A" id="Primal Ice x 20">
+   <Object type="0x5b5f" id="Love Letter x 20">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x2d</Index>
+         <File>d2LofiObjEmbed</File>
+         <Index>0x69</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>Pulsing with energy, this ice rock seems to be worth a lot! Collect 20 and exchange them for a Primal Ice Weapon.</Description>
+      <Description>Bring Love Letters to the Tinkerer and exchange them for exclusive rewards!</Description>
       <Quantity>20</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="20"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
+         <EffectInfo name="Event" description="Valentine's Day"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
    </Object>
-   <Object type="0x6CF1" id="Ice Shard x 1">
+   <Object type="0x4854" id="Chest Coupon x 1">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5e</Index>
+         <File>lofiObj2</File>
+         <Index>0x13e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A mysterious Ice Shard! 5 Ice Shards can be forged into 1 Primal Ice by the Tinkerer.</Description>
+      <Description>Stack Chest Coupons and use them to obtain a Vault Chest Unlocker.</Description>
       <Quantity>1</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="5"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
+      <Track/>
    </Object>
-   <Object type="0x6CF2" id="Ice Shard x 2">
+   <Object type="0x4855" id="Chest Coupon x 2">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5e</Index>
+         <File>lofiObj2</File>
+         <Index>0x13e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A mysterious Ice Shard! 5 Ice Shards can be forged into 1 Primal Ice by the Tinkerer.</Description>
+      <Description>Stack Chest Coupons and use them to obtain a Vault Chest Unlocker.</Description>
       <Quantity>2</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="5"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
+      <Track/>
    </Object>
-   <Object type="0x6CF3" id="Ice Shard x 3">
+   <Object type="0x4856" id="Chest Coupon x 3">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5e</Index>
+         <File>lofiObj2</File>
+         <Index>0x13e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A mysterious Ice Shard! 5 Ice Shards can be forged into 1 Primal Ice by the Tinkerer.</Description>
+      <Description>Stack Chest Coupons and use them to obtain a Vault Chest Unlocker.</Description>
       <Quantity>3</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="5"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
+      <Track/>
    </Object>
-   <Object type="0x6CF4" id="Ice Shard x 4">
+   <Object type="0x4857" id="Chest Coupon x 4">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5e</Index>
+         <File>lofiObj2</File>
+         <Index>0x13e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A mysterious Ice Shard! 5 Ice Shards can be forged into 1 Primal Ice by the Tinkerer.</Description>
+      <Description>Stack Chest Coupons and use them to obtain a Vault Chest Unlocker.</Description>
       <Quantity>4</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="5"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
+      <Track/>
    </Object>
-   <Object type="0x6CF5" id="Ice Shard x 5">
+   <Object type="0x4858" id="Chest Coupon x 5">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5e</Index>
+         <File>lofiObj2</File>
+         <Index>0x13e</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A mysterious Ice Shard! 5 Ice Shards can be forged into 1 Primal Ice by the Tinkerer.</Description>
+      <Description>Use it to obtain a Vault Chest Unlocker!</Description>
       <Quantity>5</Quantity>
       <ExtraTooltipData>
          <EffectInfo name="Stack limit" description="5"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
       </ExtraTooltipData>
       <Soulbound/>
+      <Activate id="Vault Chest Unlocker">Exchange</Activate>
       <BagType>7</BagType>
       <Treasure/>
+      <Track/>
+      <Consumable/>
    </Object>
-   <Object type="0x6CE6" id="Bell x 1">
+   <Object type="0x485a" id="Char Slot Coupon x 1">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5d</Index>
+         <File>lofiObj2</File>
+         <Index>0x13f</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Magic Christmas Bell! Collect 10 to obtain a Reindeer Mystery Bag!</Description>
+      <Description>Stack Char Slot Coupons and use them to obtain a Char Slot Unlocker.</Description>
       <Quantity>1</Quantity>
       <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
+         <EffectInfo name="Stack limit" description="5"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
+      <Track/>
    </Object>
-   <Object type="0x6CE7" id="Bell x 2">
+   <Object type="0x485b" id="Char Slot Coupon x 2">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5d</Index>
+         <File>lofiObj2</File>
+         <Index>0x13f</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Magic Christmas Bell! Collect 10 to obtain a Reindeer Mystery Bag!</Description>
+      <Description>Stack Char Slot Coupons and use them to obtain a Char Slot Unlocker.</Description>
       <Quantity>2</Quantity>
       <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
+         <EffectInfo name="Stack limit" description="5"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
+      <Track/>
    </Object>
-   <Object type="0x6CE8" id="Bell x 3">
+   <Object type="0x485c" id="Char Slot Coupon x 3">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5d</Index>
+         <File>lofiObj2</File>
+         <Index>0x13f</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Magic Christmas Bell! Collect 10 to obtain a Reindeer Mystery Bag!</Description>
+      <Description>Stack Char Slot Coupons and use them to obtain a Char Slot Unlocker.</Description>
       <Quantity>3</Quantity>
       <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
+         <EffectInfo name="Stack limit" description="5"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
+      <Track/>
    </Object>
-   <Object type="0x6CE9" id="Bell x 4">
+   <Object type="0x485d" id="Char Slot Coupon x 4">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5d</Index>
+         <File>lofiObj2</File>
+         <Index>0x13f</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Magic Christmas Bell! Collect 10 to obtain a Reindeer Mystery Bag!</Description>
+      <Description>Stack Char Slot Coupons and use them to obtain a Char Slot Unlocker.</Description>
       <Quantity>4</Quantity>
       <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
+         <EffectInfo name="Stack limit" description="5"/>
       </ExtraTooltipData>
       <Soulbound/>
       <BagType>7</BagType>
       <Treasure/>
+      <Track/>
    </Object>
-   <Object type="0x6CEA" id="Bell x 5">
+   <Object type="0x485e" id="Char Slot Coupon x 5">
       <Class>Equipment</Class>
       <Item/>
       <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5d</Index>
+         <File>lofiObj2</File>
+         <Index>0x13f</Index>
       </Texture>
       <SlotType>10</SlotType>
-      <Description>A Magic Christmas Bell! Collect 10 to obtain a Reindeer Mystery Bag!</Description>
+      <Description>Use it to obtain a Char Slot Unlocker!</Description>
       <Quantity>5</Quantity>
       <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
+         <EffectInfo name="Stack limit" description="5"/>
       </ExtraTooltipData>
       <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CEB" id="Bell x 6">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Bell! Collect 10 to obtain a Reindeer Mystery Bag!</Description>
-      <Quantity>6</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CEC" id="Bell x 7">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Bell! Collect 10 to obtain a Reindeer Mystery Bag!</Description>
-      <Quantity>7</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CED" id="Bell x 8">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Bell! Collect 10 to obtain a Reindeer Mystery Bag!</Description>
-      <Quantity>8</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CEE" id="Bell x 9">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Bell! Collect 10 to obtain a Reindeer Mystery Bag!</Description>
-      <Quantity>9</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CEF" id="Bell x 10">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Bell! Collect 10 to obtain a Reindeer Mystery Bag!</Description>
-      <Quantity>10</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate id="Reindeer Mystery Bag">Exchange</Activate>
-      <BagType>7</BagType>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x6ccc" id="Ornament x 1">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
-      <Quantity>1</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6ccd" id="Ornament x 2">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
-      <Quantity>2</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CCE" id="Ornament x 3">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
-      <Quantity>3</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CCF" id="Ornament x 4">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
-      <Quantity>4</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CD0" id="Ornament x 5">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
-      <Quantity>5</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CD1" id="Ornament x 6">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
-      <Quantity>6</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CD2" id="Ornament x 7">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
-      <Quantity>7</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CD3" id="Ornament x 8">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
-      <Quantity>8</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CD4" id="Ornament x 9">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
-      <Quantity>9</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CD5" id="Ornament x 10">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
-      <Quantity>10</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CD6" id="Ornament x 11">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
-      <Quantity>11</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CD7" id="Ornament x 12">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
-      <Quantity>12</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CD8" id="Ornament x 13">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
-      <Quantity>13</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CD9" id="Ornament x 14">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
-      <Quantity>14</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CDA" id="Ornament x 15">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
-      <Quantity>15</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CDB" id="Ornament x 16">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
-      <Quantity>16</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CDC" id="Ornament x 17">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
-      <Quantity>17</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CDD" id="Ornament x 18">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
-      <Quantity>18</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CDE" id="Ornament x 19">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
-      <Quantity>19</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CDF" id="Ornament x 20">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
-      <Quantity>20</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CE0" id="Ornament x 21">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
-      <Quantity>21</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CE1" id="Ornament x 22">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
-      <Quantity>22</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CE2" id="Ornament x 23">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
-      <Quantity>23</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CE3" id="Ornament x 24">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
-      <Quantity>24</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x6CE4" id="Ornament x 25">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x5c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>A Magic Christmas Ornament! Collect 25 to obtain an exclusive skin!</Description>
-      <Quantity>25</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="25"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Track/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x71a0" id="Lesser Nexus Fragment x 1">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Nexus power radiates from this fragment.</Description>
-      <Quantity>1</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="1">GrantSupporterPoints</Activate>
+      <Activate id="Char Slot Unlocker">Exchange</Activate>
       <BagType>7</BagType>
       <Treasure/>
       <Track/>
       <Consumable/>
-   </Object>
-   <Object type="0x71a1" id="Lesser Nexus Fragment x 2">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Nexus power radiates from this fragment.</Description>
-      <Quantity>2</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="2">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71a2" id="Lesser Nexus Fragment x 3">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Nexus power radiates from this fragment.</Description>
-      <Quantity>3</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="3">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71a3" id="Lesser Nexus Fragment x 4">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Nexus power radiates from this fragment.</Description>
-      <Quantity>4</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="4">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71a4" id="Lesser Nexus Fragment x 5">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Nexus power radiates from this fragment.</Description>
-      <Quantity>5</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="5">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71a5" id="Lesser Nexus Fragment x 6">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Nexus power radiates from this fragment.</Description>
-      <Quantity>6</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="6">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71a6" id="Lesser Nexus Fragment x 7">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Nexus power radiates from this fragment.</Description>
-      <Quantity>7</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="7">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71a7" id="Lesser Nexus Fragment x 8">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Nexus power radiates from this fragment.</Description>
-      <Quantity>8</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="8">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71a8" id="Lesser Nexus Fragment x 9">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Nexus power radiates from this fragment.</Description>
-      <Quantity>9</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="9">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71a9" id="Lesser Nexus Fragment x 10">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13d</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Nexus power radiates from this fragment.\n\nUse it to obtain a Greater Nexus Fragment!</Description>
-      <Quantity>10</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate id="Greater Nexus Fragment x 1">Exchange</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71aa" id="Greater Nexus Fragment x 1">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>This huge fragment sparks with Nexus power.</Description>
-      <Quantity>1</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="10">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71ab" id="Greater Nexus Fragment x 2">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>This huge fragment sparks with Nexus power.</Description>
-      <Quantity>2</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="20">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71ac" id="Greater Nexus Fragment x 3">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>This huge fragment sparks with Nexus power.</Description>
-      <Quantity>3</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="30">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71ad" id="Greater Nexus Fragment x 4">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>This huge fragment sparks with Nexus power.</Description>
-      <Quantity>4</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="40">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71ae" id="Greater Nexus Fragment x 5">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>This huge fragment sparks with Nexus power.</Description>
-      <Quantity>5</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="50">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71af" id="Greater Nexus Fragment x 6">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>This huge fragment sparks with Nexus power.</Description>
-      <Quantity>6</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="60">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71b0" id="Greater Nexus Fragment x 7">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>This huge fragment sparks with Nexus power.</Description>
-      <Quantity>7</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="70">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71b1" id="Greater Nexus Fragment x 8">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>This huge fragment sparks with Nexus power.</Description>
-      <Quantity>8</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="80">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71b2" id="Greater Nexus Fragment x 9">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>This huge fragment sparks with Nexus power.</Description>
-      <Quantity>9</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="90">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71b3" id="Greater Nexus Fragment x 10">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13c</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>This huge fragment sparks with Nexus power.\n\nUse it to obtain a Nexus Crystal!</Description>
-      <Quantity>10</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate id="Nexus Crystal x 1">Exchange</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71b4" id="Nexus Crystal x 1">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13b</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>It is made of pure Nexus power!</Description>
-      <Quantity>1</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="100">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71b5" id="Nexus Crystal x 2">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13b</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>It is made of pure Nexus power!</Description>
-      <Quantity>2</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="200">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71b6" id="Nexus Crystal x 3">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13b</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>It is made of pure Nexus power!</Description>
-      <Quantity>3</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="300">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71b7" id="Nexus Crystal x 4">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13b</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>It is made of pure Nexus power!</Description>
-      <Quantity>4</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="400">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71b8" id="Nexus Crystal x 5">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13b</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>It is made of pure Nexus power!</Description>
-      <Quantity>5</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="500">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71b9" id="Nexus Crystal x 6">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13b</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>It is made of pure Nexus power!</Description>
-      <Quantity>6</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="600">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71ba" id="Nexus Crystal x 7">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13b</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>It is made of pure Nexus power!</Description>
-      <Quantity>7</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="700">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71bb" id="Nexus Crystal x 8">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13b</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>It is made of pure Nexus power!</Description>
-      <Quantity>8</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="800">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71bc" id="Nexus Crystal x 9">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13b</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>It is made of pure Nexus power!</Description>
-      <Quantity>9</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="900">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x71bd" id="Nexus Crystal x 10">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>lofiObj2</File>
-         <Index>0x13b</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>It is made of pure Nexus power!</Description>
-      <Quantity>10</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="10"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <Activate amount="1000">GrantSupporterPoints</Activate>
-      <BagType>7</BagType>
-      <Treasure/>
-      <Track/>
-      <Consumable/>
-   </Object>
-   <Object type="0x484b" id="Oryxmas Advent Token x 1">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x6e</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Drag and drop tokens onto each other to create a stack of 4, 6 or 8 and exchange it for a reward at the Tinkerer!</Description>
-      <Quantity>1</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="8"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x484c" id="Oryxmas Advent Token x 2">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x6e</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Drag and drop tokens onto each other to create a stack of 4, 6 or 8 and exchange it for a reward at the Tinkerer!</Description>
-      <Quantity>2</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="8"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x484d" id="Oryxmas Advent Token x 3">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x6e</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Drag and drop tokens onto each other to create a stack of 4, 6 or 8 and exchange it for a reward at the Tinkerer!</Description>
-      <Quantity>3</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="8"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x484e" id="Oryxmas Advent Token x 4">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x6e</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Drag and drop tokens onto each other to create a stack of 4, 6 or 8 and exchange it for a reward at the Tinkerer!</Description>
-      <Quantity>4</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="8"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x484f" id="Oryxmas Advent Token x 5">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x6e</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Drag and drop tokens onto each other to create a stack of 4, 6 or 8 and exchange it for a reward at the Tinkerer!</Description>
-      <Quantity>5</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="8"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x4850" id="Oryxmas Advent Token x 6">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x6e</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Drag and drop tokens onto each other to create a stack of 4, 6 or 8 and exchange it for a reward at the Tinkerer!</Description>
-      <Quantity>6</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="8"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x4851" id="Oryxmas Advent Token x 7">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x6e</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Drag and drop tokens onto each other to create a stack of 4, 6 or 8 and exchange it for a reward at the Tinkerer!</Description>
-      <Quantity>7</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="8"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
-   </Object>
-   <Object type="0x4852" id="Oryxmas Advent Token x 8">
-      <Class>Equipment</Class>
-      <Item/>
-      <Texture>
-         <File>oryxHordeObjects8x8</File>
-         <Index>0x6e</Index>
-      </Texture>
-      <SlotType>10</SlotType>
-      <Description>Drag and drop tokens onto each other to create a stack of 4, 6 or 8 and exchange it for a reward at the Tinkerer!</Description>
-      <Quantity>8</Quantity>
-      <ExtraTooltipData>
-         <EffectInfo name="Stack limit" description="8"/>
-         <EffectInfo name="Event" description="Oryxmas"/>
-      </ExtraTooltipData>
-      <Soulbound/>
-      <BagType>7</BagType>
-      <Treasure/>
    </Object>
 </Objects>

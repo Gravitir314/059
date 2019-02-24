@@ -46,7 +46,7 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
 		public var hideTooltipSignal:HideTooltipsSignal;
 		private var displayedTier:int;
 		private var inProgressModal:PurchaseInProgressModal;
-		private var toolTip:ToolTip = null;
+		private var toolTip:ToolTip;
 		private var hoverTooltipDelegate:HoverTooltipDelegate;
 
 		override public function initialize():void
@@ -143,9 +143,14 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
 				this.view.rightArrow.disabled = true;
 				this.view.rightArrow.alpha = 0.2;
 			}
-			this.view.showTier(_arg_1, this.model.rank, this.model.claimed);
+			this.showTier(_arg_1);
 			this.view.selectAnimation();
 			this.checkClaimedTiers();
+		}
+
+		private function showTier(_arg_1:int):void
+		{
+			this.view.showTier(_arg_1, this.model.rank, this.model.claimed, this.model.getCampaignPictureUrl());
 		}
 
 		private function onLeftClick(_arg_1:BaseButton):void
@@ -162,7 +167,7 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
 				this.view.leftArrow.disabled = true;
 				this.view.leftArrow.alpha = 0.2;
 			}
-			this.view.showTier(this.displayedTier, this.model.rank, this.model.claimed);
+			this.showTier(this.displayedTier);
 			this.view.selectAnimation();
 			this.checkClaimedTiers();
 			this.selectedSignal.dispatch(this.displayedTier);
@@ -182,7 +187,7 @@ package io.decagames.rotmg.supportCampaign.tab.tiers.preview
 				this.view.rightArrow.disabled = true;
 				this.view.rightArrow.alpha = 0.2;
 			}
-			this.view.showTier(this.displayedTier, this.model.rank, this.model.claimed);
+			this.showTier(this.displayedTier);
 			this.view.selectAnimation();
 			this.checkClaimedTiers();
 			this.selectedSignal.dispatch(this.displayedTier);

@@ -1,4 +1,4 @@
-﻿//kabam.rotmg.chat.control.ParseChatMessageCommand
+﻿﻿//kabam.rotmg.chat.control.ParseChatMessageCommand
 
 package kabam.rotmg.chat.control
 {
@@ -385,9 +385,13 @@ package kabam.rotmg.chat.control
 					Parameters.blendType_ = (Parameters.blendType_ == 0 ? 1 : 0);
 					this.addTextLine.dispatch(ChatMessage.make("BlendType", Parameters.blendType_.toString(), true));
 					return (true);
+				case "/tradedelay":
+					player.textNotification(((Parameters.data_.TradeDelay) ? "Trade Delay on" : "Trade Delay off"));
+					Parameters.data_.TradeDelay = !Parameters.data_.TradeDelay;
+					return (true);
 				case "/abi":
 					Parameters.abi = !Parameters.abi;
-					this.addTextLine.dispatch(ChatMessage.make("@Auto Ability", ((Parameters.abi) ? "On" : "Off"), true));
+					this.addTextLine.dispatch(ChatMessage.make("@Auto Ability", ((Parameters.abi) ? "AA On" : "AA Off"), true));
 					return (true);
 				case "/lowcpu":
 					Parameters.lowCPUMode = !Parameters.lowCPUMode;
