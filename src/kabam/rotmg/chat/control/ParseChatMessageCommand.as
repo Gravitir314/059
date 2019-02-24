@@ -385,7 +385,7 @@ package kabam.rotmg.chat.control
 					Parameters.blendType_ = (Parameters.blendType_ == 0 ? 1 : 0);
 					this.addTextLine.dispatch(ChatMessage.make("BlendType", Parameters.blendType_.toString(), true));
 					return (true);
-				case "/tradedelay": //TODO
+				case "/tradedelay":
 					player.textNotification(((Parameters.data_.TradeDelay) ? "Trade Delay on" : "Trade Delay off"));
 					Parameters.data_.TradeDelay = !Parameters.data_.TradeDelay;
 					return (true);

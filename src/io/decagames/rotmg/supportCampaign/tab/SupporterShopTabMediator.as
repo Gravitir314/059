@@ -101,7 +101,7 @@ package io.decagames.rotmg.supportCampaign.tab
 		private function showTier():void
 		{
 			this.view.showTier(this.model.nextClaimableTier, this.model.ranks, this.model.rank, this.model.claimed, this.model.getCampaignPictureUrl());
-		} //TODO
+		}
 
 		private function updateStartCountdown(_arg_1:Event):void
 		{

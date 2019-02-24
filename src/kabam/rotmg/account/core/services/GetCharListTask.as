@@ -77,7 +77,7 @@ package kabam.rotmg.account.core.services
 
 		private function onComplete(_arg_1:Boolean, _arg_2:*):void
 		{
-			if (_arg_2.indexOf("Error>Internal Error") != -1 || _arg_2.indexOf("Error>Internal error") != -1) //TODO
+			if (_arg_2.indexOf("Error>Internal Error") != -1 || _arg_2.indexOf("Error>Internal error") != -1)
 			{
 				if (Parameters.Cache_CHARLIST_valid && Parameters.data_.cacheCharList)
 				{
